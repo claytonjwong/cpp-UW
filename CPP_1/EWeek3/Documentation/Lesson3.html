@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)https://canvas.uw.edu/courses/1177926/pages/lesson-3?module_item_id=7889522 -->
+<html class="lato-font-loaded" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Lesson 3: CPROGRM 711 A Wi 18: C++ Programming: Introduction</title>
+  <!--[if lte IE 9]> <meta http-equiv=refresh content="0; URL=/ie-9-is-not-supported.html" /> <![endif]-->
+  <link rel="shortcut icon" type="image/x-icon" href="https://instructure-uploads.s3.amazonaws.com/account_100000000083919/attachments/37312004/favicon.ico?AWSAccessKeyId=AKIAJFNFXH2V2O7RPCAA&amp;Expires=1939374366&amp;Signature=lNl7iuCda9spDgRONbwVvr490LM%3D&amp;response-cache-control=Cache-Control%3Amax-age%3D473364000.0%2C%20public&amp;response-expires=473364000.0">
+  <link rel="apple-touch-icon" href="https://instructure-uploads.s3.amazonaws.com/account_100000000083919/attachments/37312005/Canvas-MobileHome.png?AWSAccessKeyId=AKIAJFNFXH2V2O7RPCAA&amp;Expires=1939374366&amp;Signature=jwVDIJvM6uIaOoE%2FSW94uwVcHU0%3D&amp;response-cache-control=Cache-Control%3Amax-age%3D473364000.0%2C%20public&amp;response-expires=473364000.0">
+  
+  <link rel="stylesheet" media="all" href="./Lesson3_files/variables-750d72b9d3e5d522f965bf904110c132.css">
+  <link rel="stylesheet" media="all" href="./Lesson3_files/common-79b981d2d9.css">
+  <script type="text/javascript" async="" src="./Lesson3_files/ga.js.download"></script><script>
+//<![CDATA[
+
+!function(){
+  var o,s,v;
+  if (!(window.Promise && Object.assign && Object.values && [].find && [].includes && (o={},s=Symbol(),v={},o[s]=v,o[s]===v) && (function f(){}).bind().name==='bound f')) {
+    s = 's', document.write('<'+s+'cr'+'ipt src="https://du11hjcvx0uqb.cloudfront.net/dist/ie11-polyfill-a0702bf7af.js"></'+s+'c'+'ript>');
+  }
+}();
+      
+//]]>
+</script>
+  <script src="./Lesson3_files/lato-fontfaceobserver-11a14bc0b6.js.download" async="async"></script>
+  
+  <meta name="apple-itunes-app" content="app-id=480883488">
+<link rel="manifest" href="https://canvas.uw.edu/web-app-manifest/manifest.json">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#008EE2">
+  <link rel="stylesheet" media="all" href="./Lesson3_files/wiki_page-46e7e026f6.css">
+  
+  <link rel="stylesheet" media="all" href="./Lesson3_files/custom.css">
+<link rel="stylesheet" media="all" href="./Lesson3_files/custom(1).css">
+  <script>
+    function _earlyClick(e){
+      var c = e.target
+      while (c && c.ownerDocument) {
+        if (c.getAttribute('href') == '#' || c.getAttribute('data-method')) {
+          e.preventDefault()
+          (_earlyClick.clicks = _earlyClick.clicks || []).push(c)
+          break
+        }
+        c = c.parentNode
+      }
+    }
+    document.addEventListener('click', _earlyClick)
+  </script>
+  <script src="./Lesson3_files/variables-750d72b9d3e5d522f965bf904110c132.js.download" defer="defer"></script>
+  <script src="./Lesson3_files/vendor.bundle-128d24e8f6.js.download" defer="defer"></script>
+<script src="./Lesson3_files/Los_Angeles-78b0e93740.js.download" defer="defer"></script>
+<script src="./Lesson3_files/en_US-80a0ce259b.js.download" defer="defer"></script>
+<script src="./Lesson3_files/appBootstrap.bundle-659e6cb04a.js.download" defer="defer"></script>
+<script src="./Lesson3_files/common.bundle-7a4babf662.js.download" defer="defer"></script>
+<script src="./Lesson3_files/wiki_page_show.bundle-6cdff07d81.js.download" defer="defer"></script>
+<style type="text/css"></style></head>
+
+<body class="with-left-side course-menu-expanded padless-content pages primary-nav-transitions context-course_1177926 show webkit chrome touch">
+
+<noscript>
+  &lt;div role="alert" class="ic-flash-static ic-flash-error"&gt;
+    &lt;div class="ic-flash__icon" aria-hidden="true"&gt;
+      &lt;i class="icon-warning"&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;h1&gt;You need to have JavaScript enabled in order to access this site.&lt;/h1&gt;
+  &lt;/div&gt;
+</noscript>
+
+
+
+
+
+<ul id="flash_message_holder"></ul>
+<div id="flash_screenreader_holder" role="alert" aria-live="assertive" aria-relevant="additions" class="screenreader-only" aria-atomic="false"></div>
+
+<div id="application" class="ic-app">
+  
+  <header id="header" class="ic-app-header no-print ">
+    <a href="https://canvas.uw.edu/courses/1177926/pages/lesson-3?module_item_id=7889522#content" id="skip_navigation_link">Skip To Content</a>
+      <div role="region" class="ic-app-header__main-navigation" aria-label="Global Navigation">
+        <div class="ic-app-header__logomark-container">
+          <a href="https://canvas.uw.edu/" class="ic-app-header__logomark">
+            <span class="screenreader-only">Dashboard</span>
+          </a>
+        </div>
+        <ul id="menu" class="ic-app-header__menu-list">
+            <li class="menu-item ic-app-header__menu-list-item ">
+              <a id="global_nav_profile_link" href="https://canvas.uw.edu/profile" class="ic-app-header__menu-list-link">
+                <div class="menu-item-icon-container" aria-hidden="true">
+                  <div class="ic-avatar ">
+                    <img src="./Lesson3_files/mSs2TjTESYscSzrackhgoJvAT79xbNchamHPrSec" alt="Clayton Wong">
+                  </div>
+                </div>
+                <div class="menu-item__text">
+                  Account
+                </div>
+              </a>
+            </li>
+          <li class="ic-app-header__menu-list-item ">
+            <a id="global_nav_dashboard_link" href="https://canvas.uw.edu/" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--dashboard" version="1.1" x="0" y="0" viewBox="0 0 280 200" enable-background="new 0 0 280 200" xml:space="preserve"><path d="M273.09,180.75H197.47V164.47h62.62A122.16,122.16,0,1,0,17.85,142a124,124,0,0,0,2,22.51H90.18v16.29H6.89l-1.5-6.22A138.51,138.51,0,0,1,1.57,142C1.57,65.64,63.67,3.53,140,3.53S278.43,65.64,278.43,142a137.67,137.67,0,0,1-3.84,32.57ZM66.49,87.63,50.24,71.38,61.75,59.86,78,76.12Zm147,0L202,76.12l16.25-16.25,11.51,11.51ZM131.85,53.82v-23h16.29v23Zm15.63,142.3a31.71,31.71,0,0,1-28-16.81c-6.4-12.08-15.73-72.29-17.54-84.25a8.15,8.15,0,0,1,13.58-7.2c8.88,8.21,53.48,49.72,59.88,61.81a31.61,31.61,0,0,1-27.9,46.45ZM121.81,116.2c4.17,24.56,9.23,50.21,12,55.49A15.35,15.35,0,1,0,161,157.3C158.18,152,139.79,133.44,121.81,116.2Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">Dashboard</div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ic-app-header__menu-list-item--active">
+            <a id="global_nav_courses_link" href="https://canvas.uw.edu/courses" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--courses" version="1.1" x="0" y="0" viewBox="0 0 280 259" enable-background="new 0 0 280 259" xml:space="preserve"><path d="M73.31,198c-11.93,0-22.22,8-24,18.73a26.67,26.67,0,0,0-.3,3.63v.3a22,22,0,0,0,5.44,14.65,22.47,22.47,0,0,0,17.22,8H200V228.19h-134V213.08H200V198Zm21-105.74h90.64V62H94.3ZM79.19,107.34V46.92H200v60.42Zm7.55,30.21V122.45H192.49v15.11ZM71.65,16.71A22.72,22.72,0,0,0,49,39.36V190.88a41.12,41.12,0,0,1,24.32-8h157V16.71ZM33.88,39.36A37.78,37.78,0,0,1,71.65,1.6H245.36V198H215.15v45.32h22.66V258.4H71.65a37.85,37.85,0,0,1-37.76-37.76Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Courses
+              </div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_calendar_link" href="https://canvas.uw.edu/calendar" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--calendar" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M197.07,213.38h16.31V197.07H197.07Zm-16.31,16.31V180.76h48.92v48.92Zm-48.92-16.31h16.31V197.07H131.85Zm-16.31,16.31V180.76h48.92v48.92ZM66.62,213.38H82.93V197.07H66.62ZM50.32,229.68V180.76H99.24v48.92Zm146.75-81.53h16.31V131.85H197.07Zm-16.31,16.31V115.54h48.92v48.92Zm-48.92-16.31h16.31V131.85H131.85Zm-16.31,16.31V115.54h48.92v48.92ZM66.62,148.15H82.93V131.85H66.62ZM50.32,164.46V115.54H99.24v48.92ZM34,262.29H246V82.93H34ZM246,66.62V42.16A8.17,8.17,0,0,0,237.84,34H213.38v8.15a8.15,8.15,0,1,1-16.31,0V34H82.93v8.15a8.15,8.15,0,0,1-16.31,0V34H42.16A8.17,8.17,0,0,0,34,42.16V66.62Zm-8.15-48.92a24.49,24.49,0,0,1,24.46,24.46V278.6H17.71V42.16A24.49,24.49,0,0,1,42.16,17.71H66.62V9.55a8.15,8.15,0,0,1,16.31,0v8.15H197.07V9.55a8.15,8.15,0,1,1,16.31,0v8.15Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Calendar
+              </div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_conversations_link" href="https://canvas.uw.edu/conversations" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--inbox" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M91.72,120.75h96.56V104.65H91.72Zm0,48.28h80.47V152.94H91.72Zm0-96.56h80.47V56.37H91.72Zm160.94,34.88H228.52V10.78h-177v96.56H27.34A24.17,24.17,0,0,0,3.2,131.48V244.14a24.17,24.17,0,0,0,24.14,24.14H252.66a24.17,24.17,0,0,0,24.14-24.14V131.48A24.17,24.17,0,0,0,252.66,107.34Zm0,16.09a8.06,8.06,0,0,1,8,8v51.77l-32.19,19.31V123.44ZM67.58,203.91v-177H212.42v177ZM27.34,123.44H51.48v79.13L19.29,183.26V131.48A8.06,8.06,0,0,1,27.34,123.44ZM252.66,252.19H27.34a8.06,8.06,0,0,1-8-8V202l30,18H230.75l30-18v42.12A8.06,8.06,0,0,1,252.66,252.19Z"></path></svg>
+
+                <span class="menu-item__badge" style="display: none">0</span>
+              </div>
+              <div class="menu-item__text">
+                Inbox
+              </div>
+            </a>
+          </li>
+            
+
+
+          <li class="ic-app-header__menu-list-item">
+           <a id="global_nav_help_link" class="ic-app-header__menu-list-link" data-track-category="help system" data-track-label="help button" href="http://help.instructure.com/">
+              <div class="menu-item-icon-container" role="presentation">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg menu-item__icon svg-icon-help" version="1.1" x="0" y="0" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve" fill="currentColor"><path d="M100,127.88A11.15,11.15,0,1,0,111.16,139,11.16,11.16,0,0,0,100,127.88Zm8.82-88.08a33.19,33.19,0,0,1,23.5,23.5,33.54,33.54,0,0,1-24,41.23,3.4,3.4,0,0,0-2.74,3.15v9.06H94.42v-9.06a14.57,14.57,0,0,1,11.13-14,22.43,22.43,0,0,0,13.66-10.27,22.73,22.73,0,0,0,2.31-17.37A21.92,21.92,0,0,0,106,50.59a22.67,22.67,0,0,0-19.68,3.88,22.18,22.18,0,0,0-8.65,17.64H66.54a33.25,33.25,0,0,1,13-26.47A33.72,33.72,0,0,1,108.82,39.8ZM100,5.2A94.8,94.8,0,1,0,194.8,100,94.91,94.91,0,0,0,100,5.2m0,178.45A83.65,83.65,0,1,1,183.65,100,83.73,83.73,0,0,1,100,183.65" transform="translate(-5.2 -5.2)"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Help
+              </div>
+</a>          </li>
+        </ul>
+      </div>
+      <div class="ic-app-header__secondary-navigation">
+        <ul class="ic-app-header__menu-list">
+          <li class="menu-item ic-app-header__menu-list-item">
+            <button id="primaryNavToggle" class="ic-app-header__menu-list-link ic-app-header__menu-list-link--nav-toggle" aria-label="
+                Expand global navigation
+                " title="
+                Expand global navigation
+                ">
+              <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--navtoggle" version="1.1" x="0" y="0" width="40" height="32" viewBox="0 0 40 32" xml:space="preserve">
+  <path d="M39.5,30.28V2.48H37.18v27.8Zm-4.93-13.9L22.17,4,20.53,5.61l9.61,9.61H.5v2.31H30.14l-9.61,9.61,1.64,1.64Z"></path>
+</svg>
+
+            </button>
+          </li>
+        </ul>
+      </div>
+    <div id="global_nav_tray_container"><noscript data-reactid=".0"></noscript></div>
+  </header>
+
+
+  <div id="instructure_ajax_error_box">
+    <div style="text-align: right; background-color: #fff;"><a href="https://canvas.uw.edu/courses/1177926/pages/lesson-3?module_item_id=7889522#" class="close_instructure_ajax_error_box_link">Close</a></div>
+    <iframe id="instructure_ajax_error_result" src="./Lesson3_files/saved_resource.html" style="border: 0;" title="Error"></iframe>
+  </div>
+
+  
+
+  <div id="wrapper" class="ic-Layout-wrapper">
+      <div class="ic-app-nav-toggle-and-crumbs no-print">
+          <button type="button" id="courseMenuToggle" class="Button Button--link ic-app-course-nav-toggle" aria-live="polite" aria-label="Hide Courses Navigation Menu" title="Hide Courses Navigation Menu">
+            <i class="icon-hamburger" aria-hidden="true"></i>
+          </button>
+          <div class="ic-app-crumbs">
+        <nav id="breadcrumbs" role="navigation" aria-label="breadcrumbs"><ul><li class="home"><a href="https://canvas.uw.edu/"><span class="ellipsible">      <i class="icon-home" title="My Dashboard">
+        <span class="screenreader-only">My Dashboard</span>
+      </i>
+</span></a></li><li><a href="https://canvas.uw.edu/courses/1177926"><span class="ellipsible">CPROGRM 711 A</span></a></li><li><a href="https://canvas.uw.edu/courses/1177926/pages"><span class="ellipsible">Pages</span></a></li><li><span class="ellipsible">Lesson 3</span></li></ul></nav>
+        </div>
+      </div>
+    <div id="main" class="ic-Layout-columns">
+        <div class="ic-Layout-watermark"></div>
+        <div id="left-side" class="ic-app-course-menu list-view" style="display: block">
+              <span id="section-tabs-header-subtitle" class="ellipsis">Winter 2018</span>
+            <nav role="navigation" aria-label="Courses Navigation Menu"><ul id="section-tabs"><li class="section"><a href="https://canvas.uw.edu/courses/1177926" title="Home" class="home" tabindex="0">Home</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/announcements" title="Announcements" class="announcements" tabindex="0">Announcements</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/modules" title="Modules" class="modules" tabindex="0">Modules</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/discussion_topics" title="Discussions" class="discussions" tabindex="0">Discussions</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/grades" title="Grades" class="grades" tabindex="0">Grades</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/users" title="People" class="people" tabindex="0">People</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/external_tools/12299" title="UW Libraries" class="context_external_tool_12299" tabindex="0">UW Libraries</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/external_tools/57145" title="Info &amp; Help" class="context_external_tool_57145" tabindex="0">Info &amp; Help</a></li></ul></nav>
+        </div>
+      <div id="not_right_side" class="ic-app-main-content">
+        <div id="content-wrapper" class="ic-Layout-contentWrapper">
+            
+
+          <div id="content" class="ic-Layout-contentMain" role="main">
+            
+
+  
+
+<div id="wiki_page_show">
+<div class="header-bar-outer-container">
+  <div class="header-bar-container sticky-toolbar sticky" data-sticky="">
+    <div class="header-bar flex-container">
+      <div class="header-bar-left header-left-flex">
+        
+          
+        
+      </div>
+      <div class="header-bar-right header-right-flex">
+        
+          
+          
+            
+          
+        
+        
+          
+        
+        
+      </div>
+    </div>
+    <div class="page-changed-alert" role="alert" aria-atomic="true" aria-live="polite"></div>
+  </div>
+</div>
+
+
+<div class="show-content user_content clearfix enhanced">
+  <h1 class="page-title">Lesson 3</h1>
+  
+    <div id="level2">
+<h2>
+<img src="./Lesson3_files/preview" alt="L03.png" width="50" height="50" data-api-endpoint="https://canvas.uw.edu/api/v1/courses/1177926/files/44384336" data-api-returntype="File" style="max-width: 945px;">&nbsp;Functions, Source Files, and Programs</h2>
+<h3>Key Terms</h3>
+<ul>
+<li>class</li>
+<li>instance</li>
+<li>encapsulation</li>
+<li>polymorphism</li>
+<li>data hiding</li>
+<li>signature</li>
+<li>function prototype</li>
+<li>field</li>
+</ul>
+<h3>Introduction to Objects</h3>
+<p>You're taking this course to learn to program. In particular, you're interested in learning to program in C++. What does this really mean? To answer this question, we need to understand several things. Learning to program in C++ is more than simply writing programs using the C++ language. What we're going to be doing is learning how to solve problems using the C++ language and the object paradigm. So what does all that mean?</p>
+<p>Programming is taking a <em>problem</em> such as "Find the area of a rectangle a set of <em>data,</em> in this case the length and width of the rectangle, and a set of functions, such as area = length * width and then applying functions to the data to get an answer. In a procedural approach to programming, the <code>area()</code> function would take the length and width as input parameters, and return the area as a result.</p>
+<p>In C++, we seek to abstract the world, and group data and functions together. The object-centered paradigm encapsulates data and functions in objects. Objects are abstractions; they represent real-world entities such as numbers, character strings, structures, vehicles, and fruits. As we can see, they are usually nouns. In general, objects that share common properties or attributes (adjectives or adverbs) are called classes. We have the class Vehicles or the class Stores. In specific, we have particular objects: my car, her store. These are called instances of a class.</p>
+<p>Let's look at a Rectangle through object-oriented eyes.</p>
+<ul>
+<li>Rectangle
+<ul>
+<li>
+<em>data</em>â€”encapsulated
+<ul>
+<li><em>width</em></li>
+<li><em>length</em></li>
+</ul>
+</li>
+<li>function (called a <em>method or member function</em>)â€”<em>encapsulated</em>
+<ul>
+<li><em>area = length * width</em></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>In an object-oriented program, we have an instance of the class <code>Rectangle.</code> We've been asked to find the area. As we did with the procedural program, we state the problem in a natural language; here, it's English:</p>
+<p>It's important to note that we don't care how area is determined. It could be by algorithm, lottery, or guess, for that matter. In C++, rather than writing a procedure, we define a class. The class encapsulates the knowledge necessary to answer the question, which in this case is "What is the area of the rectangle?" This is our first look at the major difference between procedural and object-centered thinking. Our class now looks like this:</p>
+<p>If we wish to find the area of the rectangle, we send a request to the object instance. The request is a message telling the rectangle to return its area. In C++ we send a message to a particular object by calling a member function of the object.</p>
+<pre>class Rectangle
+{
+public:
+    // Constructor to initialize the class data
+    Rectangle() { length = 10; width = 22;}
+    // Encapsulated member function to compute the
+    area unsigned int getArea() { return length * width;}
+
+private:
+    // The encapsulated data
+    unsigned int length;
+    unsigned int width;
+};</pre>
+<p>The exact meaning of some of the key words and functions isn't important right now. We're simply showing the structure of the class. (If you know C, and you notice a lot of similarity between the C++ class and the C struct, you're right.) They're almost identical. We'll discuss the differences shortly.</p>
+<p>Here we have one particular class of rectangle, one with a fixed area of 220 units. We will see shortly how to make a more general class. In C++, we create an instance of our class by declaring</p>
+<p><code>Rectangle aRectangle;</code></p>
+<p>We can request the rectangle's area by writing.</p>
+<p><code>aRectangle.getArea();</code></p>
+<p>and <code>aRectangle</code> will return the answer. Note once again that there are many ways of computing the area; the requester will not know which is used. Observe, the class <code>Rectangle</code> has encapsulated <em>data</em> (width and length) and<br><code><em>function </em>(area()</code> = <code>length * width</code>).</p>
+<p>In this case, the class is <code>Rectangle</code>, the instance is <code>aRectangle</code>. A message is being retrieve the area of the rectangle by calling the <code>getArea()</code> member function.</p>
+<h3>Definitions</h3>
+<p>Now that we've come this far, we ask, "what is object-oriented programming?" Let's begin with what it's <span class="bold">not</span>. It's not programming with objects, programming with an object-oriented language, or moving objects around on a screen with a mouse. (That last one is how a fellow I interviewed once explained it.) Object-oriented programming must meet four fundamental criteria:</p>
+<ul>
+<li>It must support <em>abstraction.</em> This is the ability to focus on essential details while ignoring non-essential ones.</li>
+<li>It must support <em>abstract data types.</em> An ADT is a model. It encompasses a type (int, char, string) and a set of operations. These characterize the behavior of the type.</li>
+<li>It must support <em>inheritance.</em> Inheritance is the ability to derive new objects from old. It makes the language extensible.</li>
+<li>It must support <em>polymorphism.</em> Polymorphism allows different object to respond in different ways to the same message. For example we could have a polymorphic member function named <code>draw</code>. If <code>draw</code> was called on a <code>rectangle</code> instance a rectangle would be drawn. If draw was called on a <code>circle</code> instance, a circle would be draw.</li>
+</ul>
+<h3>Functions</h3>
+<p>C++ introduced the concept of function prototypes. Function prototypes were so convenient they then became a part of the ANSI C language. Although the use of function prototypes is optional in C, function prototypes are required in C++. <span class="keyterm">Function prototypes</span> identify for the compiler the functions to be used throughout a program. Each prototype specifies the name of a function, the number and type of its parameters, and its return type. The function's parameter list is called its<span class="keyterm"> signature</span>. The prototype is used during compile time to ensure proper invocation of each function. This checking prevents what used to be a common programming mistake in C. That mistake was passing the wrong number or type of parameter to a function.</p>
+<p>The syntax for a function prototype is as follows:</p>
+<p><code>returnType functionName (arg<sub>0</sub> . . . arg<sub>n-1</sub>);</code></p>
+<p>The function prototype is written exactly as the first line in the definition of the function. Note that it is terminated with a semicolon.</p>
+<p class="bold">Function Prototype</p>
+<pre>void aFunction(int, char*, float);</pre>
+<p class="bold">Definition</p>
+<pre>void aFunction(int anInt, char* aCharPtr, float aFloat)
+{
+    . . .
+}</pre>
+<p>Notice that parameter names are not necessary in the prototype. Good style, however, suggests using them. We prefer</p>
+<p><code>void myFunction(int first, char* second, float third);</code></p>
+<h4>Default Parameters</h4>
+<p>C++ extends function prototypes by permitting parameters to be assigned default values. Starting from the right and moving to the left, in sequence, you can provide each parameter with a default value, which will then be used if the function is invoked with fewer parameters than specified in the prototype.</p>
+<p><code>returnType functionName (type<sub>0</sub> arg<sub>0</sub>=value<sub>0</sub> . . . type<sub>n</sub> arg<sub>n</sub>=value<sub>n</sub>);</code></p>
+<p>When the function is called, the compiler first matches the function name against the prototype. Then, starting from the left, it binds each argument to the value given in the user's call. If fewer than the specified number of parameters are used, the remainder are bound to the default values in the prototype. Here are a couple of examples:</p>
+<pre>void myFunction (int earth, int moon = 10, int stars = 20);
+
+// Legal
+aFunction (5, 10);
+
+// Illegal
+aFunction (5, ,30); // Illegal myFunction (,15,);
+</pre>
+<p>Here's another exmaple.</p>
+<pre>//
+// C to C++ - Functions - Using Default Parameters 3.0 *
+// In the function printThings(), the second and
+// third parameters have been assigned default values.
+//
+
+#include &lt;iostream&gt;
+using namespace std;
+
+void printThings(int earth, int moon = 1, int stars = 2);
+
+int main(void)
+{
+    printThings(10);         // Prints 10 1 2
+    printThings(10,20);      // Prints 10 20 2
+    printThings(10, 20, 30); // Prints 10 20 30
+    return 0;
+}
+
+void printThings (int earth, int moon, int stars)
+{
+    std::cout &lt;&lt; earth &lt;&lt; " " &lt;&lt; moon &lt;&lt; " " &lt;&lt; stars &lt;&lt; endl;
+}</pre>
+<h4>Reference types as function parameters</h4>
+<p>Reference types can be used as parameters in a function call. In fact, this is one of their primary uses. When we call a function, we pass parameters in two ways. We can pass the value of the parameter (pass-by-value), which requires making a copy, or we can pass the address of the actual object (pass-by-reference).</p>
+<p>When using pass-by-value, the function never accesses the actual arguments. It manipulates a local copy that has been stored on the stack. Any changes made to the local copies do not affect the actual arguments. Such behavior is not always suitable. For example, when large objects are passed or when the arguments must be modified. Under these circumstances, we prefer to use pass-by-reference. Now, the function accesses the actual arguments. In C we pass by reference using pointer variables. In C++ we more often use references. References have the advantage that they must be initialized (no more worrying about whether someone has passed our function a NULL pointer). We can also avoid the ugly pointer syntax in the function body.</p>
+<p>Using a reference type, the address of the argument is passed rather than a copy of the value. If the argument is not to be changed, we use the const specifier. The function call prototype becomes</p>
+<pre>void myFunction(const int&amp; x);</pre>
+<p>and the invocation is</p>
+<pre>int x = 10;
+myFunction(x);</pre>
+<p>The ampersand (<code>&amp;</code>) tells the compiler to treat the variable as a reference. This means the address of the variable is passed to the function. than invoking the copy mechanism. Let's look at a few examples:</p>
+<p class="title"><span class="bold">Example 4.7</span></p>
+<pre>// C to C++ Reference Types
+// Pass-by-Reference using Reference Types
+//
+
+#include &lt;iostream&gt;
+ 
+using namespace std;
+
+void incrementR(int&amp;number);
+void incrementV(int number);
+
+int main()
+{
+    int number = 10;
+    int number1 = 20;
+    incrementR(number);
+    cout &lt;&lt; number &lt;&lt; endl;     //  Will print 11
+
+    incrementV (number1);
+    cout &lt;&lt; number1 &lt;&lt; endl;    //  Will print 20
+
+    return 0;
+}
+void incrementR(int&amp; aNumber)
+{
+    aNumber++;                  //  Passed by reference
+}
+void incrementV(int aNumber)
+{
+    aNumber++;                  //  Passed by value
+}</pre>
+<p class="title"><span class="bold">Example 4.8</span></p>
+<pre>// C to C++ - Reference Types - A Reference to a Pointer                   
+//
+
+#include &lt;iostream&gt;
+using namespace std;
+
+//  We cannot have a pointer to a reference,
+//  but we can have a reference to a pointer
+
+void increment (int* &amp;i) {i++;}
+
+int main()
+{
+    int* iPtr = 0;
+     
+    cout &lt;&lt; "iPtr = " &lt;&lt; iPtr &lt;&lt; endl;  //  Prints 0x00000000 
+    increment (iPtr);
+    cout &lt;&lt; "iPtr = " &lt;&lt; iPtr &lt;&lt; endl;  //  Prints 0x00000002
+    return 0;
+}</pre>
+<p class="title"><span class="bold">Example 4.9</span></p>
+<pre>#include &lt;iostream&gt;
+//
+
+// One cannot define pointers to references and
+// consequently to arrays of references. The latter
+// is true since int &amp; v[ ] will implicitly create
+// a pointer to a reference: v[1] -&gt; *(v+1) thus a
+// pointer to a reference.
+//
+// If the reference refers to a const, (const int&amp;
+// myRef=10), a temporary object is created and
+// initialized to 10. The reference becomes a name
+// for that object.
+//
+// In this example, if one tries to use number as
+// the reference, a temporary would be created
+// since an array is implicitly a const.
+//
+void get(char*&amp; number);
+int main()
+{
+    char number[5];
+    char *numPtr = number;
+      	
+    get(numPtr);
+    cout &lt;&lt; number &lt;&lt; endl;
+    
+    // note if we don't provide a return from main, then 
+    // main implicitly returns 0. main is the only function
+    // in C++ that does this.
+}
+
+void get(char* &amp;number)
+{
+    cout &lt;&lt; "Enter a number" &lt;&lt; endl;
+    cin &gt;&gt; number;
+}</pre>
+<h4>Overloading Function Names</h4>
+<p>In C++, functions can use the same names, within the same scope, if each can be distinguished by its name <span class="bold">and</span> signature. The signature specifies the number and type of the parameters expressed as a comma-separated list of argument types. The combination of name plus signature, then, uniquely identifies a function. When a function is declared more than once, the compiler interprets subsequent declarations as one of the following:</p>
+<ul>
+<li>a <span class="italics">redeclaration,</span> if return type and signatures match Note that the argument names are irrelevant, and may be omitted.</li>
+</ul>
+<pre>extern void print (int a, int b);
+void print (int c, int d);</pre>
+<ul>
+<li>an erroneous <em>redeclaration,</em> if signatures match and return types differ This is a compile-time error. The return type is not considered when distinguishing between overloaded functions.</li>
+</ul>
+<pre>char print(int a, int b);
+void print(int c, int d);</pre>
+<ul>
+<li>
+<em>overloaded,</em> if signatures differ (that is, the number, type, or order of arguments differ)</li>
+</ul>
+<p>In Example below we overload the function name<code> printThings</code> to accept three different types of argument: an <code>int</code>, a <code>char</code>, and a pointer to a <code>char</code>.</p>
+<pre>//
+// C to C++ - Functions - Overloading Function Names 3.1
+// Functions names can be overloaded if each can
+// be distinguished by its signature
+//
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+void printThings(int i);
+void printThings(char c);
+void printThings(char *s);
+int main(void)
+{
+    char *s = "This is a string";
+    printThings (10); // Print an int
+    printThings('a'); // Print a char
+    printThings (s); // Print a string
+    return 0;
+}
+
+void printThings (int i)
+{
+    cout &lt;&lt; "integer: \t" &lt;&lt; i &lt;&lt; endl;
+}
+void printThings (char c)
+{
+    cout &lt;&lt; "character: \t" &lt;&lt; c &lt;&lt; endl;
+}
+void printThings (char *s)
+{
+    cout &lt;&lt; "string: \t" &lt;&lt; s &lt;&lt; endl;
+}</pre>
+<p>Note that an overloaded function may have default parameters, as long as the function, both with and without the default arguments, can be identified uniquely.</p>
+<h4>Lambda functions</h4>
+<pre>TEST(nolambda, lambdas)
+{
+    std::vector testScores{ 89, 98, 45, 67, 66, 22 };
+
+    std::stringstream ss;
+    for (int&amp; i : testScores)
+    {
+        ss &lt;&lt; i &lt;&lt; " ";
+    }
+
+    CHECK_EQUAL("89 98 45 67 66 22 ", ss.str());
+}
+
+// A lambda function is an unnamed inline function which can allow access to names in the calling environment.
+
+// A lambda function has three parts
+// 1) The lambda introducer which defines whether and how to access names in the calling environment.
+//    This is enclosed in square brackets [].
+// 2) A declaration of the function parameters. These are enclosed in parenthesis ().
+// 3) Executable code which define the lambda function body. These are enclosed in curly braces {}.
+// 
+// So each lambda function follows the pattern [introducer](args){body}
+TEST(basicLambdaSyntax, lambdas)
+{
+    // func is a variable containing a lambda function. 
+    // The type of func is deduced through use of auto
+    // The empty lambda introducer does not allow the function to refer to any names in the calling environment.
+    //
+    // A single parameter of type std::ostream&amp; is passed.
+    auto func = [](std::ostream&amp; os)
+    {
+        os &lt;&lt; "Hello World";
+    };
+
+    std::stringstream ss;
+    // Call the lambda with a stringstream
+    func(ss);
+
+    // call the lambda with cout
+    func(std::cout);
+
+    // call the lambda with a file argument
+    std::fstream file("file.txt");
+    func(file);
+
+    CHECK_EQUAL("Hello World", ss.str());
+}
+
+// This shows a most common usage of lambda functions. That usage is to define the function used
+// by an STL algorithm to operate on each of the elements in a collection. In this case the
+// algorithm is std::for_each which simply applies its function to each element.
+TEST(loopLambdaCpp11, lambdas)
+{
+    std::vector testScores{ 89, 98, 45, 67, 66, 22 };
+    std::stringstream ss;
+
+    // [] The lambda introducer [&amp;] says to access any names from the calling environment as references.
+    // () A single int argument is passed to the lambda. This is a particular element from the testScores collection
+    // {} In the function body the name ss is accessed from the calling environment. Since we used the[&amp;] lambda
+    //    introducer, ss is treated as if it was implicitly passed to the lambda function by reference.
+    std::for_each(testScores.begin(), testScores.end(), [&amp;](int v)
+    {
+        ss &lt;&lt; v &lt;&lt; " ";
+    });
+
+    CHECK_EQUAL("89 98 45 67 66 22 ", ss.str());
+}</pre>
+<h3>Enumeration Types</h3>
+<h4>Enums</h4>
+<p>An enum is a type that can be set to one out of a set a finite integer values. The integer values are given symbolic names. For example, a color enum might contain the possible values red, green, and blue.</p>
+<p>&nbsp;For historical reasons C++ provides two types of enum. The older enum type is a plain enum in which enumerator names are in the same scope as the enum. Here's an example:</p>
+<pre>enum Color
+{
+    Red,
+    Green,
+    Blue
+};
+
+TEST(enum, Color)
+{
+    Color c = Red;
+}</pre>
+<p>A consequence of the older enum type is we cannot use the same enum value in different enums. For example</p>
+<pre>enum Color
+{
+    Red,
+    Green,
+    Blue,
+};
+
+enum Mood
+{
+    Blue, // won't compile as name collides with Blue from the Color enum
+    Chuft,
+};
+
+TEST(enum, Color)
+{
+    Color c = Red;
+}</pre>
+<p>The newer class enum places each enumerator name within its scope. Thus its enumerator names will not collide with other enumerator names.</p>
+<pre>enum class Color
+{
+    Red,
+    Green,
+    Blue,
+};
+
+enum class Mood
+{
+    Blue,
+    Chuft,
+};
+
+TEST(enum, Color)
+{
+    Color c = Color::Blue;
+    Mood m = Mood::Blue;
+}</pre>
+<p>Prefer enum classes because of the better scope resolution.</p>
+<h3>Input/Output Stream Operations</h3>
+<p>In C++ input and output capabilities are provided in the Standard Library. We bring the library in with the include file <code>&lt;iostream&gt;</code>. At the lowest level input and output data in C++ are streams. The <code>iostream</code> library (<code>istream</code> and <code>ostream</code>) provide a rich set of operations and functions for using streams at the byte level as well as providing higher level formatted I/O capabilities.</p>
+<p class="title"><span class="bold">Figure 3.1</span> The <code>iostream</code> Class</p>
+<p class="title"><img src="./Lesson3_files/preview(1)" alt="figure 3.1" width="278" height="158" data-api-endpoint="https://canvas.uw.edu/api/v1/courses/1177926/files/44384294" data-api-returntype="File" style="max-width: 945px;"></p>
+<p>Input and output stream operations are supported by the classes<code> istream</code>, <code>ifstream</code>, <code>istrstream</code> for input from standard input, files, or strings, and <code>ostream</code>, <code>ofstream</code>, <code>ostrstream</code> for output to standard output, files, or strings. The <code>iostream</code> class, derived from <code>istream</code> and <code>ostream</code> as shown in figure 3.1, allows for bi-directional input and output.</p>
+<h4>ostream</h4>
+<p>In C++, an output operation inserts objects into an output stream. The operation is signified by the insertion operator, <code>&lt;&lt;</code>, which is the overloaded left-shift operator. (Operator overloading will be covered in a later lesson.)</p>
+<h4>istream</h4>
+<p>In C++, an input operation extracts objects from an input stream. Extraction is signified by the extraction operator, <code>&gt;&gt;</code>, which is the overloaded right-shift operator.</p>
+<h4>Predefined Stream Objects</h4>
+<p>C++ has a number of predefined stream objects we can use. Although they may appear to be somewhat different from what we're used to, they have really changed little from what we know in C. The following are the predefined objects:</p>
+<ul>
+<li>
+<code>cin</code>: An <code>istream </code>class object that is connected to standard input.</li>
+<li>
+<code>cout</code>: An <code>ostream</code> class object that is connected to standard output.</li>
+<li>
+<code>cerr</code>: An<code> istream</code> class object that is connected to standard error; <code>cerr </code>provides unbuffered output.</li>
+<li>
+<code>clog</code>: An ostream class object that is connected to standard error; <code>clog</code> provides buffered output.</li>
+</ul>
+<p>The predefined names in the Standard C++ Library, such as <code>istream</code>, <code>ostream</code>, <code>cin</code>, and <code>cout</code> are defined in the <code>std</code> namespace. To use them in your programs, you may need to include a statement like the following:</p>
+<pre>using namespace std;</pre>
+<p>Let's now look at the basic I/O operations in C++. We'll begin with output.</p>
+<h4>Output</h4>
+<p>To send something to standard output, we apply the insertion operator to the <code>ostream</code> class object connected to standard output, which is <code>cout</code>:</p>
+<pre>cout &lt;&lt; stuff;</pre>
+<p>As in C, certain predefined strings are recognized. These include the familiar <code> \n</code> for a newline and <code>\t</code> for a horizontal tab. In C++, however, we use the keyword <code>endl </code>rather than <code>\n</code>. This keyword provides a predefined operation that flushes the output buffer and inserts a newline into the output stream.</p>
+<p>The insertion operator, <code>&lt;&lt;</code>, can accept any of the built-in data types as well as any complex expression that evaluates to a data type. It can also be overloaded to accept user-defined types. We'll see what this means in the next lesson.</p>
+<pre>//
+// C to C++ - iostream 3.0
+//
+// Using ostream to write to stdout
+//
+#include &lt;string&gt;
+using namespace std;
+
+int main()
+{
+    std::string city("Seattle");
+    
+    // Insert a string into ostream
+    cout &lt;&lt; "The length of Seattle is: \t";
+
+    // Insert an int and a newline (via endl)
+    cout &lt;&lt; city.size() &lt;&lt; endl;
+
+    // We can also insert all of the objects
+    // into the ostream in one statement
+
+    cout &lt;&lt; "The length of Seattle is: \t" &lt;&lt; city.size() &lt;&lt; endl;
+
+    return 0;
+}</pre>
+<h4>Input</h4>
+<p>To read something from standard input, we apply the extraction operator to the istream class object connected to the standard input, which is <code>cin</code>:</p>
+<pre>cin &gt;&gt; place to put stuff;</pre>
+<p>The extraction operator, <code>&gt;&gt;</code>, can accept any of the built-in data types or any complex expression that evaluates to such a data type. Like the insertion operator, the extraction operator can be overloaded to accept user-defined types. As with C, white space, blanks, newlines, and tabs separates values on the input stream (with the basic <code>&gt;&gt;</code>). These are not read as characters. If it is necessary to read white space, we must use other member functions.</p>
+<p>Here is an example:</p>
+<pre>//
+// C to C++ - iostream 3.1
+// Using istream to read from stdin
+//
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main()
+{
+    long id;
+
+    cout &lt;&lt; "Please enter your Social Security Number: " &lt;&lt; endl;
+
+    // Read the user's input and assign it to the variable id. cin &gt;&gt; id;
+
+    cout &lt;&lt; "Your Social Security Number is: " &lt;&lt; id &lt;&lt; endl;
+
+    return 0;
+}</pre>
+<p>Here's another:</p>
+<pre>//
+// C to C++ - iostream 3.2
+//
+// Using istream to read strings from stdin
+//
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main()
+{
+    string token;
+    while (cin &gt;&gt; myBuf)
+    {
+        cout &lt;&lt; myBuf&lt;&lt; endl;
+    }
+
+    return 0;
+}</pre>
+<p>Notice that if we enter <code>Seattle</code>, our program prints <code>Seattle</code>. If we enter <code>Seattle is in Washington</code>, our program prints</p>
+<pre>Seattle
+is
+in
+Washington</pre>
+<p>Notice also that white space is used to delimit the tokens in the input. Once a token is found the separating whitespace is discarded.</p>
+<h3>Output Formatting</h3>
+<p>The standard output format is predefined so that basic output can be done easily. There are applications for which a program's output must appear in a different format. The <code>iostream</code> class in C++ offers a rich set of functionality for input and output formatting. Examples of output parameters that may be specified by the user are the width of a display field, the justification of the text (left or right) within the field, and the numeric base and precision.</p>
+<p>The state of an <code>iostream</code> class object (<code>cout</code>, for example) is held in several private data members within the object. These members are referred to as <em class="keyterm">fields</em> (for example, basefield for numeric base and adjustfield for justification). The user of an <code>iostream</code> is given the ability to control the format by setting (or unsetting) certain format flags or bits within a named field. We set or retrieve format flags using the <code>setf()</code> member function and unset them using the <code>unsetf()</code> member function.</p>
+<p>As an alternate means for controlling formatting, the language also supports what are called <span class="keyterm">manipulators</span>. To use manipulators, we must include <code>&lt;iomanip&gt;</code>.</p>
+Let's look at a couple of the features.
+<h4>Precision</h4>
+<p>We can alter the precision of the output data by using the <code>precision()</code> access function of <code>cout</code>. The member function <code>precision()</code>, with no arguments, returns the current precision:</p>
+<pre>cout.precision();</pre>
+<p>When invoked with an argument, precision() sets the precision.</p>
+<pre>cout.precision(int aPrecision);</pre>
+<p>In C++, a float normally has six digits, five of which are after the decimal point.</p>
+<pre>//
+// C to C++ - iostream 3.3
+//
+// Specifying the output precision - will print the
+// decimal point and i-1 digits of precision
+//
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;iomanip&gt;
+using namespace std;
+
+int main()
+{
+    for (int i = 1; i&lt;6; i++)
+    {
+        cout.precision(i);
+        cout &lt;&lt; "The precision is: " &lt;&lt; cout.precision() &lt;&lt; "\t" &lt;&lt; 9.87654321 &lt;&lt; endl;
+    }
+
+    return 0;
+}
+
+//
+// Prints:
+//
+// The precision is: 1 10.
+// The precision is: 2 9.9
+// The precision is: 3 9.88
+// The precision is: 4 9.877
+// The precision is: 5 9.8765
+//</pre>
+<p>Let's look at several other examples of things supported by the iostream library.</p>
+<h4>Output</h4>
+<code>put (char c)</code>outputs a single character.
+<pre>cout.put('a');</pre>
+<code>write(char *s, int n)</code> outputs n characters from the string <code>*s</code>. For example:
+<pre>char *s = "my name is";</pre>
+<pre>cout.write(s, 6)</pre>
+gives
+<pre>my nam</pre>
+<p>Notice that white space counts as a character. We can change the input or output format either by setting (unsetting) the appropriate flag or by using manipulators including the following: <code>oct</code>, <code>dec</code>, <code>hex</code>, <code> scientific</code>, <code>fixed</code>, <code>setprecision(int n)</code>. The following changes the output base to <code>hex</code> then <code>octal</code>:</p>
+<pre>cout.setf(ios::hex, ios::basefield);
+cout &lt;&lt; 256; // prints 100
+cout &lt;&lt; oct &lt;&lt; 80; // prints 120</pre>
+<p>The change will remain in effect until changed again.</p>
+<h4>Input</h4>
+<p><code>get(char c)</code> inputs a single character.</p>
+<pre>char a;
+cin.get(&amp;a); // Enter an 'f'
+cout &lt;&lt; a;   // Prints an 'f'</pre>
+<p><code>read (char *s, int n)</code> retrieves <code>n</code> contiguous bytes from standard input and copies to <code>s</code>.</p>
+<p><code>getline (char *s, int n)</code> reads up to <code>n</code> characters (or until a newline is encountered) from standard input and copies them to <code>s</code>.</p>
+<pre>//
+// C to C++ - iostream
+//
+// Output Formatting - Change of Base
+// and Case for Numbers
+// Character, String, Line Input and Output
+//
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;iomanip&gt; using namespace std;
+
+int main()
+{
+    // Set case to upper for numbers
+    cout.setf(ios::uppercase);
+
+    // character out prints a
+    cout.put('a') &lt;&lt; endl;
+
+    // string out prints My na
+    char *s = "My name is";
+    cout.write (s, 5) &lt;&lt; endl;
+
+    // change of base prints FD
+    cout.setf(ios::hex, ios::basefield);
+    cout &lt;&lt; 253 &lt;&lt; endl;
+
+    // Set case to lower for numbers prints 6d 157
+    cout.unsetf(ios::uppercase);
+    cout &lt;&lt; 109 &lt;&lt; endl;
+
+    cout.setf(ios::oct, ios::basefield);
+    cout &lt;&lt; 111 &lt;&lt; endl;
+
+    // input a character prints input character
+    char a;
+    cin.get(a);
+    cout &lt;&lt; a &lt;&lt; endl;
+
+    // input a string puts 8 bytes of input string
+    // into buffer b. no '\0'
+    char b[80];
+    cin.read(b, 8);
+    b[8] = NULL;
+    cout &lt;&lt; b &lt;&lt; endl;
+
+    // input a line puts characters upto
+    // the delimiter ('|')
+    // of input line into buffer c. adds '\0'
+    //
+    char c[80];
+    cin.getline(c,80, '|');
+    cout &lt;&lt; c &lt;&lt; endl;
+
+    return 0;
+}</pre>
+<h3>Summary</h3>
+<p>In this lesson, we have learned several ways in which the C++ language has extended C, including a new library of <code>iostream</code> functions to get data into and out of our programs.</p>
+<h3>Practice&nbsp;Questions</h3>
+<p>Test your understanding of the concepts presented in this lesson by working through the following practice questions, then check your answers with <a class="" title="Answers to Practice Questions for Lesson 3" href="https://canvas.uw.edu/courses/1177926/pages/answers-to-practice-questions-for-lesson-3" data-api-endpoint="https://canvas.uw.edu/api/v1/courses/1177926/pages/answers-to-practice-questions-for-lesson-3" data-api-returntype="Page">Answers to Practice Questions for Lesson 3</a>.</p>
+<ol>
+<li>What is the purpose of a function prototype?</li>
+<li>Can I choose which function parameters have default values?</li>
+<li>Can an overloaded function have default parameters?</li>
+<li>What is the difference between #define and const?</li>
+</ol>
+</div>
+  
+</div>
+<div style=""><div class="module-sequence-padding"></div>
+<div class="module-sequence-footer" role="navigation" aria-label="Module Navigation">
+  <div class="module-sequence-footer-content">
+    
+      <a href="https://canvas.uw.edu/courses/1177926/modules/items/7889521" role="button" class="Button module-sequence-footer-button--previous" data-tooltip="right" data-html-tooltip-title="&lt;i class=&#39;icon-document&#39;&gt;&lt;/i&gt; Lesson 3 Overview and Materials" aria-describedby="msf0-previous-desc">
+        <i class="icon-mini-arrow-left"></i>Previous
+        <span id="msf0-previous-desc" class="hidden" hidden="">Previous: Lesson 3 Overview and Materials</span>
+      </a>
+    
+
+    
+      <span class="module-sequence-footer-button--next" data-tooltip="left" data-html-tooltip-title="&lt;i class=&#39;icon-discussion&#39;&gt;&lt;/i&gt; Lesson 3 Discussion">
+        <a href="https://canvas.uw.edu/courses/1177926/modules/items/7889523" role="button" class="Button" aria-describedby="msf0-next-desc">
+          Next<i class="icon-mini-arrow-right"></i>
+          <span id="msf0-next-desc" class="hidden" hidden="">Next: Lesson 3 Discussion</span>
+        </a>
+      </span>
+    
+  </div>
+</div>
+</div></div>
+
+          </div>
+        </div>
+        <div id="right-side-wrapper" class="ic-app-main-content__secondary">
+          <aside id="right-side" role="complementary">
+            
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <div style="display:none;"><!-- Everything inside of this should always stay hidden -->
+        <div id="page_view_id">f17c6b65-1a14-46cf-a889-e964d3f8331a</div>
+    </div>
+    
+<div id="cant_record_dialog" style="display: none;">
+  <div>
+    In order to create video or audio recordings your computer needs to be 
+    webcam-enabled.  If you don't have a webcam on your computer, you can still
+    record audio-only messages by first installing the Google Video Chat
+    plugin.
+  </div>
+  <div style="text-align: center; font-size: 1.5em; margin: 10px;">
+    <a href="http://www.google.com/chat/video" target="_blank" rel="noopener" class="btn">Install the Video Plugin</a>
+  </div>
+  <div class="links" style="text-align: right; font-size: 0.8em; display: none;">
+    <a href="https://canvas.uw.edu/courses/1177926/pages/lesson-3?module_item_id=7889522#" class="cant_record_link">Don't have a webcam?</a>
+  </div>
+</div>
+
+  <div id="aria_alerts" class="hide-text affix" role="alert" aria-live="assertive"></div>
+  <div id="StudentTray__Container"></div>
+  <script>
+  INST = {"environment":"production","allowMediaComments":true,"kalturaSettings":{"domain":"nv.instructuremedia.com","resource_domain":"nv.instructuremedia.com","rtmp_domain":"fms-prod.instructuremedia.com","partner_id":"9","subpartner_id":"0","player_ui_conf":"0","kcw_ui_conf":"0","upload_ui_conf":"0","max_file_size_bytes":534773760,"do_analytics":false,"hide_rte_button":false,"js_uploader":true},"googleAnalyticsAccount":"UA-9138420-1","disableScribdPreviews":true,"logPageViews":true,"maxVisibleEditorButtons":3,"editorButtons":[{"name":"","id":21130,"url":"https://uw.hosted.panopto.com/Panopto/Pages/Sessions/embeddedupload.aspx","icon_url":"https://uw.hosted.panopto.com/Panopto/images/panopto_logo_globe.png","canvas_icon_class":null,"width":900,"height":700},{"name":"Modalis","id":52765,"url":"https://uw.modalis.io/lti","icon_url":"https://uw.modalis.io/assets/richicon.png","canvas_icon_class":null,"width":800,"height":600}]};
+  ENV = {"ASSET_HOST":"https://du11hjcvx0uqb.cloudfront.net","active_brand_config_json_url":"https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/2b2842738c86c4f2032e430bd0445cfc/variables-750d72b9d3e5d522f965bf904110c132.json","url_to_what_gets_loaded_inside_the_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/2b2842738c86c4f2032e430bd0445cfc/variables-750d72b9d3e5d522f965bf904110c132.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_normal_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-bb4121d737.css"],"url_for_high_contrast_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/default/variables-high_contrast-750d72b9d3e5d522f965bf904110c132.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_high_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-b61a4bdaa8.css"],"current_user_id":"3757111","current_user":{"id":"3757111","display_name":"Clayton Wong","avatar_image_url":"https://canvas.uw.edu/images/thumbnails/46487823/mSs2TjTESYscSzrackhgoJvAT79xbNchamHPrSec","html_url":"https://canvas.uw.edu/about/3757111"},"current_user_roles":["user","student"],"current_user_disabled_inbox":false,"files_domain":"cluster10-files.instructure.com","DOMAIN_ROOT_ACCOUNT_ID":100000000083919,"k12":false,"use_responsive_layout":false,"help_link_name":"Help","help_link_icon":"help","use_high_contrast":false,"SETTINGS":{"open_registration":false,"eportfolios_enabled":true,"collapse_global_nav":true,"show_feedback_link":true,"enable_profiles":true},"page_view_update_url":"/page_views/f17c6b65-1a14-46cf-a889-e964d3f8331a?page_view_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpIjoiZjE3YzZiNjUtMWExNC00NmNmLWE4ODktZTk2NGQzZjgzMzFhIiwidSI6MTAwMDAwMDAzNzU3MTExLCJjIjoiMjAxOC0wMS0zMVQxOToyMzo0Ny41N1oifQ.8IB_IpfuBNqw0dDf8RSwspk5MdlDT28CHZsgJlLUoZs","context_asset_string":"course_1177926","ping_url":"https://canvas.uw.edu/api/v1/courses/1177926/ping","TIMEZONE":"America/Los_Angeles","CONTEXT_TIMEZONE":"America/Los_Angeles","GRAPHQL_ENABLED":true,"LOCALE":"en","BIGEASY_LOCALE":"en_US","FULLCALENDAR_LOCALE":"en","MOMENT_LOCALE":"en","WIKI_RIGHTS":{"read":true},"PAGE_RIGHTS":{"read":true},"DEFAULT_EDITING_ROLES":"teachers","WIKI_PAGES_PATH":"/courses/1177926/pages","WIKI_PAGE":{"title":"Lesson 3","created_at":"2017-10-18T21:04:14Z","url":"lesson-3","editing_roles":"teachers","page_id":"2573087","published":true,"hide_from_students":false,"front_page":false,"html_url":"https://canvas.uw.edu/courses/1177926/pages/lesson-3","updated_at":"2017-10-18T21:04:14Z","locked_for_user":false,"body":"\u003cdiv id=\"level2\"\u003e\r\n\u003ch2\u003e\n\u003cimg src=\"https://canvas.uw.edu/courses/1177926/files/44384336/preview\" alt=\"L03.png\" width=\"50\" height=\"50\" data-api-endpoint=\"https://canvas.uw.edu/api/v1/courses/1177926/files/44384336\" data-api-returntype=\"File\"\u003e Functions, Source Files, and Programs\u003c/h2\u003e\r\n\u003ch3\u003eKey Terms\u003c/h3\u003e\r\n\u003cul\u003e\n\u003cli\u003eclass\u003c/li\u003e\r\n\u003cli\u003einstance\u003c/li\u003e\r\n\u003cli\u003eencapsulation\u003c/li\u003e\r\n\u003cli\u003epolymorphism\u003c/li\u003e\r\n\u003cli\u003edata hiding\u003c/li\u003e\r\n\u003cli\u003esignature\u003c/li\u003e\r\n\u003cli\u003efunction prototype\u003c/li\u003e\r\n\u003cli\u003efield\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003ch3\u003eIntroduction to Objects\u003c/h3\u003e\r\n\u003cp\u003eYou're taking this course to learn to program. In particular, you're interested in learning to program in C++. What does this really mean? To answer this question, we need to understand several things. Learning to program in C++ is more than simply writing programs using the C++ language. What we're going to be doing is learning how to solve problems using the C++ language and the object paradigm. So what does all that mean?\u003c/p\u003e\r\n\u003cp\u003eProgramming is taking a \u003cem\u003eproblem\u003c/em\u003e such as \"Find the area of a rectangle a set of \u003cem\u003edata,\u003c/em\u003e in this case the length and width of the rectangle, and a set of functions, such as area = length * width and then applying functions to the data to get an answer. In a procedural approach to programming, the \u003ccode\u003earea()\u003c/code\u003e function would take the length and width as input parameters, and return the area as a result.\u003c/p\u003e\r\n\u003cp\u003eIn C++, we seek to abstract the world, and group data and functions together. The object-centered paradigm encapsulates data and functions in objects. Objects are abstractions; they represent real-world entities such as numbers, character strings, structures, vehicles, and fruits. As we can see, they are usually nouns. In general, objects that share common properties or attributes (adjectives or adverbs) are called classes. We have the class Vehicles or the class Stores. In specific, we have particular objects: my car, her store. These are called instances of a class.\u003c/p\u003e\r\n\u003cp\u003eLet's look at a Rectangle through object-oriented eyes.\u003c/p\u003e\r\n\u003cul\u003e\n\u003cli\u003eRectangle\r\n\u003cul\u003e\n\u003cli\u003e\n\u003cem\u003edata\u003c/em\u003eâ€”encapsulated\r\n\u003cul\u003e\n\u003cli\u003e\u003cem\u003ewidth\u003c/em\u003e\u003c/li\u003e\r\n\u003cli\u003e\u003cem\u003elength\u003c/em\u003e\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003c/li\u003e\r\n\u003cli\u003efunction (called a \u003cem\u003emethod or member function\u003c/em\u003e)â€”\u003cem\u003eencapsulated\u003c/em\u003e\r\n\u003cul\u003e\n\u003cli\u003e\u003cem\u003earea = length * width\u003c/em\u003e\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003cp\u003eIn an object-oriented program, we have an instance of the class \u003ccode\u003eRectangle.\u003c/code\u003e We've been asked to find the area. As we did with the procedural program, we state the problem in a natural language; here, it's English:\u003c/p\u003e\r\n\u003cp\u003eIt's important to note that we don't care how area is determined. It could be by algorithm, lottery, or guess, for that matter. In C++, rather than writing a procedure, we define a class. The class encapsulates the knowledge necessary to answer the question, which in this case is \"What is the area of the rectangle?\" This is our first look at the major difference between procedural and object-centered thinking. Our class now looks like this:\u003c/p\u003e\r\n\u003cp\u003eIf we wish to find the area of the rectangle, we send a request to the object instance. The request is a message telling the rectangle to return its area. In C++ we send a message to a particular object by calling a member function of the object.\u003c/p\u003e\r\n\u003cpre\u003eclass Rectangle\r\n{\r\npublic:\r\n    // Constructor to initialize the class data\r\n    Rectangle() { length = 10; width = 22;}\r\n    // Encapsulated member function to compute the\r\n    area unsigned int getArea() { return length * width;}\r\n\r\nprivate:\r\n    // The encapsulated data\r\n    unsigned int length;\r\n    unsigned int width;\r\n};\u003c/pre\u003e\r\n\u003cp\u003eThe exact meaning of some of the key words and functions isn't important right now. We're simply showing the structure of the class. (If you know C, and you notice a lot of similarity between the C++ class and the C struct, you're right.) They're almost identical. We'll discuss the differences shortly.\u003c/p\u003e\r\n\u003cp\u003eHere we have one particular class of rectangle, one with a fixed area of 220 units. We will see shortly how to make a more general class. In C++, we create an instance of our class by declaring\u003c/p\u003e\r\n\u003cp\u003e\u003ccode\u003eRectangle aRectangle;\u003c/code\u003e\u003c/p\u003e\r\n\u003cp\u003eWe can request the rectangle's area by writing.\u003c/p\u003e\r\n\u003cp\u003e\u003ccode\u003eaRectangle.getArea();\u003c/code\u003e\u003c/p\u003e\r\n\u003cp\u003eand \u003ccode\u003eaRectangle\u003c/code\u003e will return the answer. Note once again that there are many ways of computing the area; the requester will not know which is used. Observe, the class \u003ccode\u003eRectangle\u003c/code\u003e has encapsulated \u003cem\u003edata\u003c/em\u003e (width and length) and\u003cbr\u003e\u003ccode\u003e\u003cem\u003efunction \u003c/em\u003e(area()\u003c/code\u003e = \u003ccode\u003elength * width\u003c/code\u003e).\u003c/p\u003e\r\n\u003cp\u003eIn this case, the class is \u003ccode\u003eRectangle\u003c/code\u003e, the instance is \u003ccode\u003eaRectangle\u003c/code\u003e. A message is being retrieve the area of the rectangle by calling the \u003ccode\u003egetArea()\u003c/code\u003e member function.\u003c/p\u003e\r\n\u003ch3\u003eDefinitions\u003c/h3\u003e\r\n\u003cp\u003eNow that we've come this far, we ask, \"what is object-oriented programming?\" Let's begin with what it's \u003cspan class=\"bold\"\u003enot\u003c/span\u003e. It's not programming with objects, programming with an object-oriented language, or moving objects around on a screen with a mouse. (That last one is how a fellow I interviewed once explained it.) Object-oriented programming must meet four fundamental criteria:\u003c/p\u003e\r\n\u003cul\u003e\n\u003cli\u003eIt must support \u003cem\u003eabstraction.\u003c/em\u003e This is the ability to focus on essential details while ignoring non-essential ones.\u003c/li\u003e\r\n\u003cli\u003eIt must support \u003cem\u003eabstract data types.\u003c/em\u003e An ADT is a model. It encompasses a type (int, char, string) and a set of operations. These characterize the behavior of the type.\u003c/li\u003e\r\n\u003cli\u003eIt must support \u003cem\u003einheritance.\u003c/em\u003e Inheritance is the ability to derive new objects from old. It makes the language extensible.\u003c/li\u003e\r\n\u003cli\u003eIt must support \u003cem\u003epolymorphism.\u003c/em\u003e Polymorphism allows different object to respond in different ways to the same message. For example we could have a polymorphic member function named \u003ccode\u003edraw\u003c/code\u003e. If \u003ccode\u003edraw\u003c/code\u003e was called on a \u003ccode\u003erectangle\u003c/code\u003e instance a rectangle would be drawn. If draw was called on a \u003ccode\u003ecircle\u003c/code\u003e instance, a circle would be draw.\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003ch3\u003eFunctions\u003c/h3\u003e\r\n\u003cp\u003eC++ introduced the concept of function prototypes. Function prototypes were so convenient they then became a part of the ANSI C language. Although the use of function prototypes is optional in C, function prototypes are required in C++. \u003cspan class=\"keyterm\"\u003eFunction prototypes\u003c/span\u003e identify for the compiler the functions to be used throughout a program. Each prototype specifies the name of a function, the number and type of its parameters, and its return type. The function's parameter list is called its\u003cspan class=\"keyterm\"\u003e signature\u003c/span\u003e. The prototype is used during compile time to ensure proper invocation of each function. This checking prevents what used to be a common programming mistake in C. That mistake was passing the wrong number or type of parameter to a function.\u003c/p\u003e\r\n\u003cp\u003eThe syntax for a function prototype is as follows:\u003c/p\u003e\r\n\u003cp\u003e\u003ccode\u003ereturnType functionName (arg\u003csub\u003e0\u003c/sub\u003e . . . arg\u003csub\u003en-1\u003c/sub\u003e);\u003c/code\u003e\u003c/p\u003e\r\n\u003cp\u003eThe function prototype is written exactly as the first line in the definition of the function. Note that it is terminated with a semicolon.\u003c/p\u003e\r\n\u003cp class=\"bold\"\u003eFunction Prototype\u003c/p\u003e\r\n\u003cpre\u003evoid aFunction(int, char*, float);\u003c/pre\u003e\r\n\u003cp class=\"bold\"\u003eDefinition\u003c/p\u003e\r\n\u003cpre\u003evoid aFunction(int anInt, char* aCharPtr, float aFloat)\r\n{\r\n    . . .\r\n}\u003c/pre\u003e\r\n\u003cp\u003eNotice that parameter names are not necessary in the prototype. Good style, however, suggests using them. We prefer\u003c/p\u003e\r\n\u003cp\u003e\u003ccode\u003evoid myFunction(int first, char* second, float third);\u003c/code\u003e\u003c/p\u003e\r\n\u003ch4\u003eDefault Parameters\u003c/h4\u003e\r\n\u003cp\u003eC++ extends function prototypes by permitting parameters to be assigned default values. Starting from the right and moving to the left, in sequence, you can provide each parameter with a default value, which will then be used if the function is invoked with fewer parameters than specified in the prototype.\u003c/p\u003e\r\n\u003cp\u003e\u003ccode\u003ereturnType functionName (type\u003csub\u003e0\u003c/sub\u003e arg\u003csub\u003e0\u003c/sub\u003e=value\u003csub\u003e0\u003c/sub\u003e . . . type\u003csub\u003en\u003c/sub\u003e arg\u003csub\u003en\u003c/sub\u003e=value\u003csub\u003en\u003c/sub\u003e);\u003c/code\u003e\u003c/p\u003e\r\n\u003cp\u003eWhen the function is called, the compiler first matches the function name against the prototype. Then, starting from the left, it binds each argument to the value given in the user's call. If fewer than the specified number of parameters are used, the remainder are bound to the default values in the prototype. Here are a couple of examples:\u003c/p\u003e\r\n\u003cpre\u003evoid myFunction (int earth, int moon = 10, int stars = 20);\r\n\r\n// Legal\r\naFunction (5, 10);\r\n\r\n// Illegal\r\naFunction (5, ,30); // Illegal myFunction (,15,);\r\n\u003c/pre\u003e\r\n\u003cp\u003eHere's another exmaple.\u003c/p\u003e\r\n\u003cpre\u003e//\r\n// C to C++ - Functions - Using Default Parameters 3.0 *\r\n// In the function printThings(), the second and\r\n// third parameters have been assigned default values.\r\n//\r\n\r\n#include \u0026lt;iostream\u0026gt;\r\nusing namespace std;\r\n\r\nvoid printThings(int earth, int moon = 1, int stars = 2);\r\n\r\nint main(void)\r\n{\r\n    printThings(10);         // Prints 10 1 2\r\n    printThings(10,20);      // Prints 10 20 2\r\n    printThings(10, 20, 30); // Prints 10 20 30\r\n    return 0;\r\n}\r\n\r\nvoid printThings (int earth, int moon, int stars)\r\n{\r\n    std::cout \u0026lt;\u0026lt; earth \u0026lt;\u0026lt; \" \" \u0026lt;\u0026lt; moon \u0026lt;\u0026lt; \" \" \u0026lt;\u0026lt; stars \u0026lt;\u0026lt; endl;\r\n}\u003c/pre\u003e\r\n\u003ch4\u003eReference types as function parameters\u003c/h4\u003e\r\n\u003cp\u003eReference types can be used as parameters in a function call. In fact, this is one of their primary uses. When we call a function, we pass parameters in two ways. We can pass the value of the parameter (pass-by-value), which requires making a copy, or we can pass the address of the actual object (pass-by-reference).\u003c/p\u003e\r\n\u003cp\u003eWhen using pass-by-value, the function never accesses the actual arguments. It manipulates a local copy that has been stored on the stack. Any changes made to the local copies do not affect the actual arguments. Such behavior is not always suitable. For example, when large objects are passed or when the arguments must be modified. Under these circumstances, we prefer to use pass-by-reference. Now, the function accesses the actual arguments. In C we pass by reference using pointer variables. In C++ we more often use references. References have the advantage that they must be initialized (no more worrying about whether someone has passed our function a NULL pointer). We can also avoid the ugly pointer syntax in the function body.\u003c/p\u003e\r\n\u003cp\u003eUsing a reference type, the address of the argument is passed rather than a copy of the value. If the argument is not to be changed, we use the const specifier. The function call prototype becomes\u003c/p\u003e\r\n\u003cpre\u003evoid myFunction(const int\u0026amp; x);\u003c/pre\u003e\r\n\u003cp\u003eand the invocation is\u003c/p\u003e\r\n\u003cpre\u003eint x = 10;\r\nmyFunction(x);\u003c/pre\u003e\r\n\u003cp\u003eThe ampersand (\u003ccode\u003e\u0026amp;\u003c/code\u003e) tells the compiler to treat the variable as a reference. This means the address of the variable is passed to the function. than invoking the copy mechanism. Let's look at a few examples:\u003c/p\u003e\r\n\u003cp class=\"title\"\u003e\u003cspan class=\"bold\"\u003eExample 4.7\u003c/span\u003e\u003c/p\u003e\r\n\u003cpre\u003e// C to C++ Reference Types\r\n// Pass-by-Reference using Reference Types\r\n//\r\n\r\n#include \u0026lt;iostream\u0026gt;\r\n \r\nusing namespace std;\r\n\r\nvoid incrementR(int\u0026amp;number);\r\nvoid incrementV(int number);\r\n\r\nint main()\r\n{\r\n    int number = 10;\r\n    int number1 = 20;\r\n    incrementR(number);\r\n    cout \u0026lt;\u0026lt; number \u0026lt;\u0026lt; endl;     //  Will print 11\r\n\r\n    incrementV (number1);\r\n    cout \u0026lt;\u0026lt; number1 \u0026lt;\u0026lt; endl;    //  Will print 20\r\n\r\n    return 0;\r\n}\r\nvoid incrementR(int\u0026amp; aNumber)\r\n{\r\n    aNumber++;                  //  Passed by reference\r\n}\r\nvoid incrementV(int aNumber)\r\n{\r\n    aNumber++;                  //  Passed by value\r\n}\u003c/pre\u003e\r\n\u003cp class=\"title\"\u003e\u003cspan class=\"bold\"\u003eExample 4.8\u003c/span\u003e\u003c/p\u003e\r\n\u003cpre\u003e// C to C++ - Reference Types - A Reference to a Pointer                   \r\n//\r\n\r\n#include \u0026lt;iostream\u0026gt;\r\nusing namespace std;\r\n\r\n//  We cannot have a pointer to a reference,\r\n//  but we can have a reference to a pointer\r\n\r\nvoid increment (int* \u0026amp;i) {i++;}\r\n\r\nint main()\r\n{\r\n    int* iPtr = 0;\r\n     \r\n    cout \u0026lt;\u0026lt; \"iPtr = \" \u0026lt;\u0026lt; iPtr \u0026lt;\u0026lt; endl;  //  Prints 0x00000000 \r\n    increment (iPtr);\r\n    cout \u0026lt;\u0026lt; \"iPtr = \" \u0026lt;\u0026lt; iPtr \u0026lt;\u0026lt; endl;  //  Prints 0x00000002\r\n    return 0;\r\n}\u003c/pre\u003e\r\n\u003cp class=\"title\"\u003e\u003cspan class=\"bold\"\u003eExample 4.9\u003c/span\u003e\u003c/p\u003e\r\n\u003cpre\u003e#include \u0026lt;iostream\u0026gt;\r\n//\r\n\r\n// One cannot define pointers to references and\r\n// consequently to arrays of references. The latter\r\n// is true since int \u0026amp; v[ ] will implicitly create\r\n// a pointer to a reference: v[1] -\u0026gt; *(v+1) thus a\r\n// pointer to a reference.\r\n//\r\n// If the reference refers to a const, (const int\u0026amp;\r\n// myRef=10), a temporary object is created and\r\n// initialized to 10. The reference becomes a name\r\n// for that object.\r\n//\r\n// In this example, if one tries to use number as\r\n// the reference, a temporary would be created\r\n// since an array is implicitly a const.\r\n//\r\nvoid get(char*\u0026amp; number);\r\nint main()\r\n{\r\n    char number[5];\r\n    char *numPtr = number;\r\n      \t\r\n    get(numPtr);\r\n    cout \u0026lt;\u0026lt; number \u0026lt;\u0026lt; endl;\r\n    \r\n    // note if we don't provide a return from main, then \r\n    // main implicitly returns 0. main is the only function\r\n    // in C++ that does this.\r\n}\r\n\r\nvoid get(char* \u0026amp;number)\r\n{\r\n    cout \u0026lt;\u0026lt; \"Enter a number\" \u0026lt;\u0026lt; endl;\r\n    cin \u0026gt;\u0026gt; number;\r\n}\u003c/pre\u003e\r\n\u003ch4\u003eOverloading Function Names\u003c/h4\u003e\r\n\u003cp\u003eIn C++, functions can use the same names, within the same scope, if each can be distinguished by its name \u003cspan class=\"bold\"\u003eand\u003c/span\u003e signature. The signature specifies the number and type of the parameters expressed as a comma-separated list of argument types. The combination of name plus signature, then, uniquely identifies a function. When a function is declared more than once, the compiler interprets subsequent declarations as one of the following:\u003c/p\u003e\r\n\u003cul\u003e\n\u003cli\u003ea \u003cspan class=\"italics\"\u003eredeclaration,\u003c/span\u003e if return type and signatures match Note that the argument names are irrelevant, and may be omitted.\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003cpre\u003eextern void print (int a, int b);\r\nvoid print (int c, int d);\u003c/pre\u003e\r\n\u003cul\u003e\n\u003cli\u003ean erroneous \u003cem\u003eredeclaration,\u003c/em\u003e if signatures match and return types differ This is a compile-time error. The return type is not considered when distinguishing between overloaded functions.\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003cpre\u003echar print(int a, int b);\r\nvoid print(int c, int d);\u003c/pre\u003e\r\n\u003cul\u003e\n\u003cli\u003e\n\u003cem\u003eoverloaded,\u003c/em\u003e if signatures differ (that is, the number, type, or order of arguments differ)\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003cp\u003eIn Example below we overload the function name\u003ccode\u003e printThings\u003c/code\u003e to accept three different types of argument: an \u003ccode\u003eint\u003c/code\u003e, a \u003ccode\u003echar\u003c/code\u003e, and a pointer to a \u003ccode\u003echar\u003c/code\u003e.\u003c/p\u003e\r\n\u003cpre\u003e//\r\n// C to C++ - Functions - Overloading Function Names 3.1\r\n// Functions names can be overloaded if each can\r\n// be distinguished by its signature\r\n//\r\n\r\n#include \u0026lt;iostream\u0026gt;\r\n#include \u0026lt;string\u0026gt;\r\nusing namespace std;\r\n\r\nvoid printThings(int i);\r\nvoid printThings(char c);\r\nvoid printThings(char *s);\r\nint main(void)\r\n{\r\n    char *s = \"This is a string\";\r\n    printThings (10); // Print an int\r\n    printThings('a'); // Print a char\r\n    printThings (s); // Print a string\r\n    return 0;\r\n}\r\n\r\nvoid printThings (int i)\r\n{\r\n    cout \u0026lt;\u0026lt; \"integer: \\t\" \u0026lt;\u0026lt; i \u0026lt;\u0026lt; endl;\r\n}\r\nvoid printThings (char c)\r\n{\r\n    cout \u0026lt;\u0026lt; \"character: \\t\" \u0026lt;\u0026lt; c \u0026lt;\u0026lt; endl;\r\n}\r\nvoid printThings (char *s)\r\n{\r\n    cout \u0026lt;\u0026lt; \"string: \\t\" \u0026lt;\u0026lt; s \u0026lt;\u0026lt; endl;\r\n}\u003c/pre\u003e\r\n\u003cp\u003eNote that an overloaded function may have default parameters, as long as the function, both with and without the default arguments, can be identified uniquely.\u003c/p\u003e\r\n\u003ch4\u003eLambda functions\u003c/h4\u003e\r\n\u003cpre\u003eTEST(nolambda, lambdas)\r\n{\r\n    std::vector testScores{ 89, 98, 45, 67, 66, 22 };\r\n\r\n    std::stringstream ss;\r\n    for (int\u0026amp; i : testScores)\r\n    {\r\n        ss \u0026lt;\u0026lt; i \u0026lt;\u0026lt; \" \";\r\n    }\r\n\r\n    CHECK_EQUAL(\"89 98 45 67 66 22 \", ss.str());\r\n}\r\n\r\n// A lambda function is an unnamed inline function which can allow access to names in the calling environment.\r\n\r\n// A lambda function has three parts\r\n// 1) The lambda introducer which defines whether and how to access names in the calling environment.\r\n//    This is enclosed in square brackets [].\r\n// 2) A declaration of the function parameters. These are enclosed in parenthesis ().\r\n// 3) Executable code which define the lambda function body. These are enclosed in curly braces {}.\r\n// \r\n// So each lambda function follows the pattern [introducer](args){body}\r\nTEST(basicLambdaSyntax, lambdas)\r\n{\r\n    // func is a variable containing a lambda function. \r\n    // The type of func is deduced through use of auto\r\n    // The empty lambda introducer does not allow the function to refer to any names in the calling environment.\r\n    //\r\n    // A single parameter of type std::ostream\u0026amp; is passed.\r\n    auto func = [](std::ostream\u0026amp; os)\r\n    {\r\n        os \u0026lt;\u0026lt; \"Hello World\";\r\n    };\r\n\r\n    std::stringstream ss;\r\n    // Call the lambda with a stringstream\r\n    func(ss);\r\n\r\n    // call the lambda with cout\r\n    func(std::cout);\r\n\r\n    // call the lambda with a file argument\r\n    std::fstream file(\"file.txt\");\r\n    func(file);\r\n\r\n    CHECK_EQUAL(\"Hello World\", ss.str());\r\n}\r\n\r\n// This shows a most common usage of lambda functions. That usage is to define the function used\r\n// by an STL algorithm to operate on each of the elements in a collection. In this case the\r\n// algorithm is std::for_each which simply applies its function to each element.\r\nTEST(loopLambdaCpp11, lambdas)\r\n{\r\n    std::vector testScores{ 89, 98, 45, 67, 66, 22 };\r\n    std::stringstream ss;\r\n\r\n    // [] The lambda introducer [\u0026amp;] says to access any names from the calling environment as references.\r\n    // () A single int argument is passed to the lambda. This is a particular element from the testScores collection\r\n    // {} In the function body the name ss is accessed from the calling environment. Since we used the[\u0026amp;] lambda\r\n    //    introducer, ss is treated as if it was implicitly passed to the lambda function by reference.\r\n    std::for_each(testScores.begin(), testScores.end(), [\u0026amp;](int v)\r\n    {\r\n        ss \u0026lt;\u0026lt; v \u0026lt;\u0026lt; \" \";\r\n    });\r\n\r\n    CHECK_EQUAL(\"89 98 45 67 66 22 \", ss.str());\r\n}\u003c/pre\u003e\r\n\u003ch3\u003eEnumeration Types\u003c/h3\u003e\r\n\u003ch4\u003eEnums\u003c/h4\u003e\r\n\u003cp\u003eAn enum is a type that can be set to one out of a set a finite integer values. The integer values are given symbolic names. For example, a color enum might contain the possible values red, green, and blue.\u003c/p\u003e\r\n\u003cp\u003e For historical reasons C++ provides two types of enum. The older enum type is a plain enum in which enumerator names are in the same scope as the enum. Here's an example:\u003c/p\u003e\r\n\u003cpre\u003eenum Color\r\n{\r\n    Red,\r\n    Green,\r\n    Blue\r\n};\r\n\r\nTEST(enum, Color)\r\n{\r\n    Color c = Red;\r\n}\u003c/pre\u003e\r\n\u003cp\u003eA consequence of the older enum type is we cannot use the same enum value in different enums. For example\u003c/p\u003e\r\n\u003cpre\u003eenum Color\r\n{\r\n    Red,\r\n    Green,\r\n    Blue,\r\n};\r\n\r\nenum Mood\r\n{\r\n    Blue, // won't compile as name collides with Blue from the Color enum\r\n    Chuft,\r\n};\r\n\r\nTEST(enum, Color)\r\n{\r\n    Color c = Red;\r\n}\u003c/pre\u003e\r\n\u003cp\u003eThe newer class enum places each enumerator name within its scope. Thus its enumerator names will not collide with other enumerator names.\u003c/p\u003e\r\n\u003cpre\u003eenum class Color\r\n{\r\n    Red,\r\n    Green,\r\n    Blue,\r\n};\r\n\r\nenum class Mood\r\n{\r\n    Blue,\r\n    Chuft,\r\n};\r\n\r\nTEST(enum, Color)\r\n{\r\n    Color c = Color::Blue;\r\n    Mood m = Mood::Blue;\r\n}\u003c/pre\u003e\r\n\u003cp\u003ePrefer enum classes because of the better scope resolution.\u003c/p\u003e\r\n\u003ch3\u003eInput/Output Stream Operations\u003c/h3\u003e\r\n\u003cp\u003eIn C++ input and output capabilities are provided in the Standard Library. We bring the library in with the include file \u003ccode\u003e\u0026lt;iostream\u0026gt;\u003c/code\u003e. At the lowest level input and output data in C++ are streams. The \u003ccode\u003eiostream\u003c/code\u003e library (\u003ccode\u003eistream\u003c/code\u003e and \u003ccode\u003eostream\u003c/code\u003e) provide a rich set of operations and functions for using streams at the byte level as well as providing higher level formatted I/O capabilities.\u003c/p\u003e\r\n\u003cp class=\"title\"\u003e\u003cspan class=\"bold\"\u003eFigure 3.1\u003c/span\u003e The \u003ccode\u003eiostream\u003c/code\u003e Class\u003c/p\u003e\r\n\u003cp class=\"title\"\u003e\u003cimg src=\"https://canvas.uw.edu/courses/1177926/files/44384294/preview\" alt=\"figure 3.1\" width=\"278\" height=\"158\" data-api-endpoint=\"https://canvas.uw.edu/api/v1/courses/1177926/files/44384294\" data-api-returntype=\"File\"\u003e\u003c/p\u003e\r\n\u003cp\u003eInput and output stream operations are supported by the classes\u003ccode\u003e istream\u003c/code\u003e, \u003ccode\u003eifstream\u003c/code\u003e, \u003ccode\u003eistrstream\u003c/code\u003e for input from standard input, files, or strings, and \u003ccode\u003eostream\u003c/code\u003e, \u003ccode\u003eofstream\u003c/code\u003e, \u003ccode\u003eostrstream\u003c/code\u003e for output to standard output, files, or strings. The \u003ccode\u003eiostream\u003c/code\u003e class, derived from \u003ccode\u003eistream\u003c/code\u003e and \u003ccode\u003eostream\u003c/code\u003e as shown in figure 3.1, allows for bi-directional input and output.\u003c/p\u003e\r\n\u003ch4\u003eostream\u003c/h4\u003e\r\n\u003cp\u003eIn C++, an output operation inserts objects into an output stream. The operation is signified by the insertion operator, \u003ccode\u003e\u0026lt;\u0026lt;\u003c/code\u003e, which is the overloaded left-shift operator. (Operator overloading will be covered in a later lesson.)\u003c/p\u003e\r\n\u003ch4\u003eistream\u003c/h4\u003e\r\n\u003cp\u003eIn C++, an input operation extracts objects from an input stream. Extraction is signified by the extraction operator, \u003ccode\u003e\u0026gt;\u0026gt;\u003c/code\u003e, which is the overloaded right-shift operator.\u003c/p\u003e\r\n\u003ch4\u003ePredefined Stream Objects\u003c/h4\u003e\r\n\u003cp\u003eC++ has a number of predefined stream objects we can use. Although they may appear to be somewhat different from what we're used to, they have really changed little from what we know in C. The following are the predefined objects:\u003c/p\u003e\r\n\u003cul\u003e\n\u003cli\u003e\n\u003ccode\u003ecin\u003c/code\u003e: An \u003ccode\u003eistream \u003c/code\u003eclass object that is connected to standard input.\u003c/li\u003e\r\n\u003cli\u003e\n\u003ccode\u003ecout\u003c/code\u003e: An \u003ccode\u003eostream\u003c/code\u003e class object that is connected to standard output.\u003c/li\u003e\r\n\u003cli\u003e\n\u003ccode\u003ecerr\u003c/code\u003e: An\u003ccode\u003e istream\u003c/code\u003e class object that is connected to standard error; \u003ccode\u003ecerr \u003c/code\u003eprovides unbuffered output.\u003c/li\u003e\r\n\u003cli\u003e\n\u003ccode\u003eclog\u003c/code\u003e: An ostream class object that is connected to standard error; \u003ccode\u003eclog\u003c/code\u003e provides buffered output.\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003cp\u003eThe predefined names in the Standard C++ Library, such as \u003ccode\u003eistream\u003c/code\u003e, \u003ccode\u003eostream\u003c/code\u003e, \u003ccode\u003ecin\u003c/code\u003e, and \u003ccode\u003ecout\u003c/code\u003e are defined in the \u003ccode\u003estd\u003c/code\u003e namespace. To use them in your programs, you may need to include a statement like the following:\u003c/p\u003e\r\n\u003cpre\u003eusing namespace std;\u003c/pre\u003e\r\n\u003cp\u003eLet's now look at the basic I/O operations in C++. We'll begin with output.\u003c/p\u003e\r\n\u003ch4\u003eOutput\u003c/h4\u003e\r\n\u003cp\u003eTo send something to standard output, we apply the insertion operator to the \u003ccode\u003eostream\u003c/code\u003e class object connected to standard output, which is \u003ccode\u003ecout\u003c/code\u003e:\u003c/p\u003e\r\n\u003cpre\u003ecout \u0026lt;\u0026lt; stuff;\u003c/pre\u003e\r\n\u003cp\u003eAs in C, certain predefined strings are recognized. These include the familiar \u003ccode\u003e \\n\u003c/code\u003e for a newline and \u003ccode\u003e\\t\u003c/code\u003e for a horizontal tab. In C++, however, we use the keyword \u003ccode\u003eendl \u003c/code\u003erather than \u003ccode\u003e\\n\u003c/code\u003e. This keyword provides a predefined operation that flushes the output buffer and inserts a newline into the output stream.\u003c/p\u003e\r\n\u003cp\u003eThe insertion operator, \u003ccode\u003e\u0026lt;\u0026lt;\u003c/code\u003e, can accept any of the built-in data types as well as any complex expression that evaluates to a data type. It can also be overloaded to accept user-defined types. We'll see what this means in the next lesson.\u003c/p\u003e\r\n\u003cpre\u003e//\r\n// C to C++ - iostream 3.0\r\n//\r\n// Using ostream to write to stdout\r\n//\r\n#include \u0026lt;string\u0026gt;\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n    std::string city(\"Seattle\");\r\n    \r\n    // Insert a string into ostream\r\n    cout \u0026lt;\u0026lt; \"The length of Seattle is: \\t\";\r\n\r\n    // Insert an int and a newline (via endl)\r\n    cout \u0026lt;\u0026lt; city.size() \u0026lt;\u0026lt; endl;\r\n\r\n    // We can also insert all of the objects\r\n    // into the ostream in one statement\r\n\r\n    cout \u0026lt;\u0026lt; \"The length of Seattle is: \\t\" \u0026lt;\u0026lt; city.size() \u0026lt;\u0026lt; endl;\r\n\r\n    return 0;\r\n}\u003c/pre\u003e\r\n\u003ch4\u003eInput\u003c/h4\u003e\r\n\u003cp\u003eTo read something from standard input, we apply the extraction operator to the istream class object connected to the standard input, which is \u003ccode\u003ecin\u003c/code\u003e:\u003c/p\u003e\r\n\u003cpre\u003ecin \u0026gt;\u0026gt; place to put stuff;\u003c/pre\u003e\r\n\u003cp\u003eThe extraction operator, \u003ccode\u003e\u0026gt;\u0026gt;\u003c/code\u003e, can accept any of the built-in data types or any complex expression that evaluates to such a data type. Like the insertion operator, the extraction operator can be overloaded to accept user-defined types. As with C, white space, blanks, newlines, and tabs separates values on the input stream (with the basic \u003ccode\u003e\u0026gt;\u0026gt;\u003c/code\u003e). These are not read as characters. If it is necessary to read white space, we must use other member functions.\u003c/p\u003e\r\n\u003cp\u003eHere is an example:\u003c/p\u003e\r\n\u003cpre\u003e//\r\n// C to C++ - iostream 3.1\r\n// Using istream to read from stdin\r\n//\r\n\r\n#include \u0026lt;iostream\u0026gt;\r\n#include \u0026lt;string\u0026gt;\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n    long id;\r\n\r\n    cout \u0026lt;\u0026lt; \"Please enter your Social Security Number: \" \u0026lt;\u0026lt; endl;\r\n\r\n    // Read the user's input and assign it to the variable id. cin \u0026gt;\u0026gt; id;\r\n\r\n    cout \u0026lt;\u0026lt; \"Your Social Security Number is: \" \u0026lt;\u0026lt; id \u0026lt;\u0026lt; endl;\r\n\r\n    return 0;\r\n}\u003c/pre\u003e\r\n\u003cp\u003eHere's another:\u003c/p\u003e\r\n\u003cpre\u003e//\r\n// C to C++ - iostream 3.2\r\n//\r\n// Using istream to read strings from stdin\r\n//\r\n\r\n#include \u0026lt;iostream\u0026gt;\r\n#include \u0026lt;string\u0026gt;\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n    string token;\r\n    while (cin \u0026gt;\u0026gt; myBuf)\r\n    {\r\n        cout \u0026lt;\u0026lt; myBuf\u0026lt;\u0026lt; endl;\r\n    }\r\n\r\n    return 0;\r\n}\u003c/pre\u003e\r\n\u003cp\u003eNotice that if we enter \u003ccode\u003eSeattle\u003c/code\u003e, our program prints \u003ccode\u003eSeattle\u003c/code\u003e. If we enter \u003ccode\u003eSeattle is in Washington\u003c/code\u003e, our program prints\u003c/p\u003e\r\n\u003cpre\u003eSeattle\r\nis\r\nin\r\nWashington\u003c/pre\u003e\r\n\u003cp\u003eNotice also that white space is used to delimit the tokens in the input. Once a token is found the separating whitespace is discarded.\u003c/p\u003e\r\n\u003ch3\u003eOutput Formatting\u003c/h3\u003e\r\n\u003cp\u003eThe standard output format is predefined so that basic output can be done easily. There are applications for which a program's output must appear in a different format. The \u003ccode\u003eiostream\u003c/code\u003e class in C++ offers a rich set of functionality for input and output formatting. Examples of output parameters that may be specified by the user are the width of a display field, the justification of the text (left or right) within the field, and the numeric base and precision.\u003c/p\u003e\r\n\u003cp\u003eThe state of an \u003ccode\u003eiostream\u003c/code\u003e class object (\u003ccode\u003ecout\u003c/code\u003e, for example) is held in several private data members within the object. These members are referred to as \u003cem class=\"keyterm\"\u003efields\u003c/em\u003e (for example, basefield for numeric base and adjustfield for justification). The user of an \u003ccode\u003eiostream\u003c/code\u003e is given the ability to control the format by setting (or unsetting) certain format flags or bits within a named field. We set or retrieve format flags using the \u003ccode\u003esetf()\u003c/code\u003e member function and unset them using the \u003ccode\u003eunsetf()\u003c/code\u003e member function.\u003c/p\u003e\r\n\u003cp\u003eAs an alternate means for controlling formatting, the language also supports what are called \u003cspan class=\"keyterm\"\u003emanipulators\u003c/span\u003e. To use manipulators, we must include \u003ccode\u003e\u0026lt;iomanip\u0026gt;\u003c/code\u003e.\u003c/p\u003e\r\nLet's look at a couple of the features.\r\n\u003ch4\u003ePrecision\u003c/h4\u003e\r\n\u003cp\u003eWe can alter the precision of the output data by using the \u003ccode\u003eprecision()\u003c/code\u003e access function of \u003ccode\u003ecout\u003c/code\u003e. The member function \u003ccode\u003eprecision()\u003c/code\u003e, with no arguments, returns the current precision:\u003c/p\u003e\r\n\u003cpre\u003ecout.precision();\u003c/pre\u003e\r\n\u003cp\u003eWhen invoked with an argument, precision() sets the precision.\u003c/p\u003e\r\n\u003cpre\u003ecout.precision(int aPrecision);\u003c/pre\u003e\r\n\u003cp\u003eIn C++, a float normally has six digits, five of which are after the decimal point.\u003c/p\u003e\r\n\u003cpre\u003e//\r\n// C to C++ - iostream 3.3\r\n//\r\n// Specifying the output precision - will print the\r\n// decimal point and i-1 digits of precision\r\n//\r\n\r\n#include \u0026lt;iostream\u0026gt;\r\n#include \u0026lt;string\u0026gt;\r\n#include \u0026lt;iomanip\u0026gt;\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n    for (int i = 1; i\u0026lt;6; i++)\r\n    {\r\n        cout.precision(i);\r\n        cout \u0026lt;\u0026lt; \"The precision is: \" \u0026lt;\u0026lt; cout.precision() \u0026lt;\u0026lt; \"\\t\" \u0026lt;\u0026lt; 9.87654321 \u0026lt;\u0026lt; endl;\r\n    }\r\n\r\n    return 0;\r\n}\r\n\r\n//\r\n// Prints:\r\n//\r\n// The precision is: 1 10.\r\n// The precision is: 2 9.9\r\n// The precision is: 3 9.88\r\n// The precision is: 4 9.877\r\n// The precision is: 5 9.8765\r\n//\u003c/pre\u003e\r\n\u003cp\u003eLet's look at several other examples of things supported by the iostream library.\u003c/p\u003e\r\n\u003ch4\u003eOutput\u003c/h4\u003e\r\n\u003ccode\u003eput (char c)\u003c/code\u003eoutputs a single character.\r\n\u003cpre\u003ecout.put('a');\u003c/pre\u003e\r\n\u003ccode\u003ewrite(char *s, int n)\u003c/code\u003e outputs n characters from the string \u003ccode\u003e*s\u003c/code\u003e. For example:\r\n\u003cpre\u003echar *s = \"my name is\";\u003c/pre\u003e\r\n\u003cpre\u003ecout.write(s, 6)\u003c/pre\u003e\r\ngives\r\n\u003cpre\u003emy nam\u003c/pre\u003e\r\n\u003cp\u003eNotice that white space counts as a character. We can change the input or output format either by setting (unsetting) the appropriate flag or by using manipulators including the following: \u003ccode\u003eoct\u003c/code\u003e, \u003ccode\u003edec\u003c/code\u003e, \u003ccode\u003ehex\u003c/code\u003e, \u003ccode\u003e scientific\u003c/code\u003e, \u003ccode\u003efixed\u003c/code\u003e, \u003ccode\u003esetprecision(int n)\u003c/code\u003e. The following changes the output base to \u003ccode\u003ehex\u003c/code\u003e then \u003ccode\u003eoctal\u003c/code\u003e:\u003c/p\u003e\r\n\u003cpre\u003ecout.setf(ios::hex, ios::basefield);\r\ncout \u0026lt;\u0026lt; 256; // prints 100\r\ncout \u0026lt;\u0026lt; oct \u0026lt;\u0026lt; 80; // prints 120\u003c/pre\u003e\r\n\u003cp\u003eThe change will remain in effect until changed again.\u003c/p\u003e\r\n\u003ch4\u003eInput\u003c/h4\u003e\r\n\u003cp\u003e\u003ccode\u003eget(char c)\u003c/code\u003e inputs a single character.\u003c/p\u003e\r\n\u003cpre\u003echar a;\r\ncin.get(\u0026amp;a); // Enter an 'f'\r\ncout \u0026lt;\u0026lt; a;   // Prints an 'f'\u003c/pre\u003e\r\n\u003cp\u003e\u003ccode\u003eread (char *s, int n)\u003c/code\u003e retrieves \u003ccode\u003en\u003c/code\u003e contiguous bytes from standard input and copies to \u003ccode\u003es\u003c/code\u003e.\u003c/p\u003e\r\n\u003cp\u003e\u003ccode\u003egetline (char *s, int n)\u003c/code\u003e reads up to \u003ccode\u003en\u003c/code\u003e characters (or until a newline is encountered) from standard input and copies them to \u003ccode\u003es\u003c/code\u003e.\u003c/p\u003e\r\n\u003cpre\u003e//\r\n// C to C++ - iostream\r\n//\r\n// Output Formatting - Change of Base\r\n// and Case for Numbers\r\n// Character, String, Line Input and Output\r\n//\r\n\r\n#include \u0026lt;iostream\u0026gt;\r\n#include \u0026lt;string\u0026gt;\r\n#include \u0026lt;iomanip\u0026gt; using namespace std;\r\n\r\nint main()\r\n{\r\n    // Set case to upper for numbers\r\n    cout.setf(ios::uppercase);\r\n\r\n    // character out prints a\r\n    cout.put('a') \u0026lt;\u0026lt; endl;\r\n\r\n    // string out prints My na\r\n    char *s = \"My name is\";\r\n    cout.write (s, 5) \u0026lt;\u0026lt; endl;\r\n\r\n    // change of base prints FD\r\n    cout.setf(ios::hex, ios::basefield);\r\n    cout \u0026lt;\u0026lt; 253 \u0026lt;\u0026lt; endl;\r\n\r\n    // Set case to lower for numbers prints 6d 157\r\n    cout.unsetf(ios::uppercase);\r\n    cout \u0026lt;\u0026lt; 109 \u0026lt;\u0026lt; endl;\r\n\r\n    cout.setf(ios::oct, ios::basefield);\r\n    cout \u0026lt;\u0026lt; 111 \u0026lt;\u0026lt; endl;\r\n\r\n    // input a character prints input character\r\n    char a;\r\n    cin.get(a);\r\n    cout \u0026lt;\u0026lt; a \u0026lt;\u0026lt; endl;\r\n\r\n    // input a string puts 8 bytes of input string\r\n    // into buffer b. no '\\0'\r\n    char b[80];\r\n    cin.read(b, 8);\r\n    b[8] = NULL;\r\n    cout \u0026lt;\u0026lt; b \u0026lt;\u0026lt; endl;\r\n\r\n    // input a line puts characters upto\r\n    // the delimiter ('|')\r\n    // of input line into buffer c. adds '\\0'\r\n    //\r\n    char c[80];\r\n    cin.getline(c,80, '|');\r\n    cout \u0026lt;\u0026lt; c \u0026lt;\u0026lt; endl;\r\n\r\n    return 0;\r\n}\u003c/pre\u003e\r\n\u003ch3\u003eSummary\u003c/h3\u003e\r\n\u003cp\u003eIn this lesson, we have learned several ways in which the C++ language has extended C, including a new library of \u003ccode\u003eiostream\u003c/code\u003e functions to get data into and out of our programs.\u003c/p\u003e\r\n\u003ch3\u003ePractice Questions\u003c/h3\u003e\r\n\u003cp\u003eTest your understanding of the concepts presented in this lesson by working through the following practice questions, then check your answers with \u003ca id=\"\" class=\"\" title=\"Answers to Practice Questions for Lesson 3\" href=\"https://canvas.uw.edu/courses/1177926/pages/answers-to-practice-questions-for-lesson-3\" data-api-endpoint=\"https://canvas.uw.edu/api/v1/courses/1177926/pages/answers-to-practice-questions-for-lesson-3\" data-api-returntype=\"Page\"\u003eAnswers to Practice Questions for Lesson 3\u003c/a\u003e.\u003c/p\u003e\r\n\u003col\u003e\n\u003cli\u003eWhat is the purpose of a function prototype?\u003c/li\u003e\r\n\u003cli\u003eCan I choose which function parameters have default values?\u003c/li\u003e\r\n\u003cli\u003eCan an overloaded function have default parameters?\u003c/li\u003e\r\n\u003cli\u003eWhat is the difference between #define and const?\u003c/li\u003e\r\n\u003c/ol\u003e\n\u003c/div\u003e"},"WIKI_PAGE_REVISION":"1","WIKI_PAGE_SHOW_PATH":"/courses/1177926/pages/lesson-3","WIKI_PAGE_EDIT_PATH":"/courses/1177926/pages/lesson-3/edit","WIKI_PAGE_HISTORY_PATH":"/courses/1177926/pages/lesson-3/revisions","COURSE_ID":"1177926","MODULES_PATH":"/courses/1177926/modules","wiki_page_menu_tools":[],"DISPLAY_SHOW_ALL_LINK":false,"badge_counts":{"submissions":0},"notices":[]};
+</script>
+
+<script src="./Lesson3_files/navigation_header.bundle-404806ff60.js.download" defer="defer"></script>
+<script src="./Lesson3_files/default.js.download" defer="defer"></script>
+<script src="./Lesson3_files/custom.js.download" defer="defer"></script>
+
+</div> <!-- #application -->
+
+
+<div class="ReactTrayPortal"><div data-reactid=".1"></div></div></body></html>
