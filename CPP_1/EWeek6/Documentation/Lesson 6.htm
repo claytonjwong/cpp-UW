@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)https://canvas.uw.edu/courses/1177926/pages/lesson-6?module_item_id=7889546 -->
+<html class="" dir="ltr" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Lesson 6: CPROGRM 711 A Wi 18: C++ Programming: Introduction</title>
+  <!--[if lte IE 9]> <meta http-equiv=refresh content="0; URL=/ie-9-is-not-supported.html" /> <![endif]-->
+  <link rel="preload" href="https://du11hjcvx0uqb.cloudfront.net/dist/fonts/lato/latin/LatoLatin-Regular-3cd3657802.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="shortcut icon" type="image/x-icon" href="https://instructure-uploads.s3.amazonaws.com/account_100000000083919/attachments/37312004/favicon.ico?AWSAccessKeyId=AKIAJFNFXH2V2O7RPCAA&amp;Expires=1939374366&amp;Signature=lNl7iuCda9spDgRONbwVvr490LM%3D&amp;response-cache-control=Cache-Control%3Amax-age%3D473364000.0%2C%20public&amp;response-expires=473364000.0">
+  <link rel="apple-touch-icon" href="https://instructure-uploads.s3.amazonaws.com/account_100000000083919/attachments/37312005/Canvas-MobileHome.png?AWSAccessKeyId=AKIAJFNFXH2V2O7RPCAA&amp;Expires=1939374366&amp;Signature=jwVDIJvM6uIaOoE%2FSW94uwVcHU0%3D&amp;response-cache-control=Cache-Control%3Amax-age%3D473364000.0%2C%20public&amp;response-expires=473364000.0">
+  
+  <link rel="stylesheet" media="all" href="./Lesson 6_files/variables-750d72b9d3e5d522f965bf904110c132.css">
+  <link rel="stylesheet" media="all" href="./Lesson 6_files/common-caecc44ef5.css">
+  <script type="text/javascript" async="" src="./Lesson 6_files/ga.js"></script><script>
+//<![CDATA[
+
+!function(){
+  function get(u){document.write('<scr'+'ipt src="'+ u +'"></sc'+'ript>')}
+  var o,s,v;
+  if (!(window.Promise && Object.assign && Object.values && [].find && [].includes && (o={},s=Symbol(),v={},o[s]=v,o[s]===v) && (function f(){}).bind().name==='bound f')) {
+    get("https://du11hjcvx0uqb.cloudfront.net/dist/ie11-polyfill-9f640d24ea.js");
+  }
+  window.fetch || get("https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.4/fetch.min.js");
+}();
+      
+//]]>
+</script>
+  <script src="./Lesson 6_files/lato-fontfaceobserver-ed903d58c4.js" async="async"></script>
+  
+  <meta name="apple-itunes-app" content="app-id=480883488">
+<link rel="manifest" href="https://canvas.uw.edu/web-app-manifest/manifest.json">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#008EE2">
+  <link rel="stylesheet" media="all" href="./Lesson 6_files/wiki_page-46e7e026f6.css">
+  
+  <link rel="stylesheet" media="all" href="./Lesson 6_files/custom.css">
+<link rel="stylesheet" media="all" href="./Lesson 6_files/custom(1).css">
+  <script>
+    function _earlyClick(e){
+      var c = e.target
+      while (c && c.ownerDocument) {
+        if (c.getAttribute('href') == '#' || c.getAttribute('data-method')) {
+          e.preventDefault()
+          (_earlyClick.clicks = _earlyClick.clicks || []).push(c)
+          break
+        }
+        c = c.parentNode
+      }
+    }
+    document.addEventListener('click', _earlyClick)
+  </script>
+  <script src="./Lesson 6_files/variables-750d72b9d3e5d522f965bf904110c132.js" defer="defer"></script>
+  <script src="./Lesson 6_files/vendor.bundle-ab54822ea7.js" defer="defer"></script>
+<script src="./Lesson 6_files/Los_Angeles-d9cac65c52.js" defer="defer"></script>
+<script src="./Lesson 6_files/en_US-80a0ce259b.js" defer="defer"></script>
+<script src="./Lesson 6_files/appBootstrap.bundle-f573a5fc65.js" defer="defer"></script>
+<script src="./Lesson 6_files/common.bundle-81f29f4105.js" defer="defer"></script>
+<script src="./Lesson 6_files/wiki_page_show.bundle-dd5d615b45.js" defer="defer"></script>
+<style type="text/css"></style><style type="text/css">.mejs-offscreen{clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);clip-path:polygon(0px 0,0 0,0 0,0 0);position:absolute!important;height:1px;width:1px;overflow:hidden}.mejs-container{position:relative;background:#000;font-family:Helvetica,Arial,serif;text-align:left;vertical-align:top;text-indent:0}.mejs-fill-container,.mejs-fill-container .mejs-container{width:100%;height:100%}.mejs-fill-container{overflow:hidden}.mejs-container:focus{outline:0}.me-plugin{position:absolute}.mejs-embed,.mejs-embed body{width:100%;height:100%;margin:0;padding:0;background:#000;overflow:hidden}.mejs-fullscreen{overflow:hidden!important}.mejs-container-fullscreen{position:fixed;left:0;top:0;right:0;bottom:0;overflow:hidden;z-index:1000}.mejs-container-fullscreen .mejs-mediaelement,.mejs-container-fullscreen video{width:100%;height:100%}.mejs-clear{clear:both}.mejs-background{position:absolute;top:0;left:0}.mejs-mediaelement{position:absolute;top:0;left:0;width:100%;height:100%}.mejs-poster{position:absolute;top:0;left:0;background-size:contain;background-position:50% 50%;background-repeat:no-repeat}:root .mejs-poster img{display:none}.mejs-poster img{border:0;padding:0}.mejs-overlay{position:absolute;top:0;left:0}.mejs-overlay-play{cursor:pointer}.mejs-overlay-button{position:absolute;top:50%;left:50%;width:100px;height:100px;margin:-50px 0 0 -50px;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/746c3af7a145a09239a36e5ef61cfea0.svg) no-repeat}.no-svg .mejs-overlay-button{background-image:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/716436fb3df0d29e6b37dd62d952676a.png)}.mejs-overlay:hover .mejs-overlay-button{background-position:0 -100px}.mejs-overlay-loading{position:absolute;top:50%;left:50%;width:80px;height:80px;margin:-40px 0 0 -40px;background:#333;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(0,0,0,.9);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(50,50,50,.9)),to(rgba(0,0,0,.9)));background:-webkit-linear-gradient(top,rgba(50,50,50,.9),rgba(0,0,0,.9));background:-moz-linear-gradient(top,rgba(50,50,50,.9),rgba(0,0,0,.9));background:-o-linear-gradient(top,rgba(50,50,50,.9),rgba(0,0,0,.9));background:-ms-linear-gradient(top,rgba(50,50,50,.9),rgba(0,0,0,.9));background:linear-gradient(rgba(50,50,50,.9),rgba(0,0,0,.9))}.mejs-overlay-loading span{display:block;width:80px;height:80px;background:transparent url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/76b326f4d44222126fee21076595bef5.gif) 50% 50% no-repeat}.mejs-container .mejs-controls{position:absolute;list-style-type:none;margin:0;padding:0;bottom:0;left:0;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(0,0,0,.7);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(50,50,50,.7)),to(rgba(0,0,0,.7)));background:-webkit-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-moz-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-o-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-ms-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:linear-gradient(rgba(50,50,50,.7),rgba(0,0,0,.7));height:30px;width:100%}.mejs-container .mejs-controls div{list-style-type:none;background-image:none;display:block;float:left;margin:0;padding:0;width:26px;height:26px;font-size:11px;line-height:11px;font-family:Helvetica,Arial,serif;border:0}.mejs-controls .mejs-button button{cursor:pointer;display:block;font-size:0;line-height:0;text-decoration:none;margin:7px 5px;padding:0;position:absolute;height:16px;width:16px;border:0;background:transparent url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/40f56f5a736da4effeb790cedb8a52f0.svg) no-repeat}.no-svg .mejs-controls .mejs-button button{background-image:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/24a0227fbdd3acfd86ff03fc3fc6c8a4.png)}.mejs-controls .mejs-button button:focus{outline:dotted 1px #999}.mejs-container .mejs-controls .mejs-time{color:#fff;display:block;height:17px;width:auto;padding:10px 3px 0;overflow:hidden;text-align:center;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}.mejs-container .mejs-controls .mejs-time a{color:#fff;font-size:11px;line-height:12px;display:block;float:left;margin:1px 2px 0 0;width:auto}.mejs-controls .mejs-play button{background-position:0 0}.mejs-controls .mejs-pause button{background-position:0 -16px}.mejs-controls .mejs-stop button{background-position:-112px 0}.mejs-controls div.mejs-time-rail{direction:ltr;width:200px;padding-top:5px}.mejs-controls .mejs-time-rail span,.mejs-controls .mejs-time-rail a{display:block;position:absolute;width:180px;height:10px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;cursor:pointer}.mejs-controls .mejs-time-rail .mejs-time-total{margin:5px;background:#333;background:rgba(50,50,50,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(30,30,30,.8)),to(rgba(60,60,60,.8)));background:-webkit-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-moz-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-o-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-ms-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:linear-gradient(rgba(30,30,30,.8),rgba(60,60,60,.8))}.mejs-controls .mejs-time-rail .mejs-time-buffering{width:100%;background-image:-o-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:-webkit-gradient(linear,0 100%,100% 0,color-stop(0.25,rgba(255,255,255,.15)),color-stop(0.25,transparent),color-stop(0.5,transparent),color-stop(0.5,rgba(255,255,255,.15)),color-stop(0.75,rgba(255,255,255,.15)),color-stop(0.75,transparent),to(transparent));background-image:-webkit-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:-moz-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:-ms-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);-webkit-background-size:15px 15px;-moz-background-size:15px 15px;-o-background-size:15px 15px;background-size:15px 15px;-webkit-animation:buffering-stripes 2s linear infinite;-moz-animation:buffering-stripes 2s linear infinite;-ms-animation:buffering-stripes 2s linear infinite;-o-animation:buffering-stripes 2s linear infinite;animation:buffering-stripes 2s linear infinite}@-webkit-keyframes buffering-stripes{from{background-position:0 0}to{background-position:30px 0}}@-moz-keyframes buffering-stripes{from{background-position:0 0}to{background-position:30px 0}}@-ms-keyframes buffering-stripes{from{background-position:0 0}to{background-position:30px 0}}@-o-keyframes buffering-stripes{from{background-position:0 0}to{background-position:30px 0}}@keyframes buffering-stripes{from{background-position:0 0}to{background-position:30px 0}}.mejs-controls .mejs-time-rail .mejs-time-loaded{background:#3caac8;background:rgba(60,170,200,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(44,124,145,.8)),to(rgba(78,183,212,.8)));background:-webkit-linear-gradient(top,rgba(44,124,145,.8),rgba(78,183,212,.8));background:-moz-linear-gradient(top,rgba(44,124,145,.8),rgba(78,183,212,.8));background:-o-linear-gradient(top,rgba(44,124,145,.8),rgba(78,183,212,.8));background:-ms-linear-gradient(top,rgba(44,124,145,.8),rgba(78,183,212,.8));background:linear-gradient(rgba(44,124,145,.8),rgba(78,183,212,.8));width:0}.mejs-controls .mejs-time-rail .mejs-time-current{background:#fff;background:rgba(255,255,255,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(255,255,255,.9)),to(rgba(200,200,200,.8)));background:-webkit-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-moz-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-o-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-ms-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:linear-gradient(rgba(255,255,255,.9),rgba(200,200,200,.8));width:0}.mejs-controls .mejs-time-rail .mejs-time-handle{display:none;position:absolute;margin:0;width:10px;background:#fff;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;cursor:pointer;border:solid 2px #333;top:-2px;text-align:center}.mejs-controls .mejs-time-rail .mejs-time-float{position:absolute;display:none;background:#eee;width:36px;height:17px;border:solid 1px #333;top:-26px;margin-left:-18px;text-align:center;color:#111}.mejs-controls .mejs-time-rail .mejs-time-float-current{margin:2px;width:30px;display:block;text-align:center;left:0}.mejs-controls .mejs-time-rail .mejs-time-float-corner{position:absolute;display:block;width:0;height:0;line-height:0;border:solid 5px #eee;border-color:#eee transparent transparent;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;top:15px;left:13px}.mejs-long-video .mejs-controls .mejs-time-rail .mejs-time-float{width:48px}.mejs-long-video .mejs-controls .mejs-time-rail .mejs-time-float-current{width:44px}.mejs-long-video .mejs-controls .mejs-time-rail .mejs-time-float-corner{left:18px}.mejs-controls .mejs-fullscreen-button button{background-position:-32px 0}.mejs-controls .mejs-unfullscreen button{background-position:-32px -16px}.mejs-controls .mejs-volume-button{}.mejs-controls .mejs-mute button{background-position:-16px -16px}.mejs-controls .mejs-unmute button{background-position:-16px 0}.mejs-controls .mejs-volume-button{position:relative}.mejs-controls .mejs-volume-button .mejs-volume-slider{height:115px;width:25px;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;top:-115px;left:0;z-index:1;position:absolute;margin:0}.mejs-controls .mejs-volume-button:hover{-webkit-border-radius:0 0 4px 4px;-moz-border-radius:0 0 4px 4px;border-radius:0 0 4px 4px}.mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-total{position:absolute;left:11px;top:8px;width:2px;height:100px;background:#ddd;background:rgba(255,255,255,.5);margin:0}.mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-current{position:absolute;left:11px;top:8px;width:2px;height:100px;background:#ddd;background:rgba(255,255,255,.9);margin:0}.mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-handle{position:absolute;left:4px;top:-3px;width:16px;height:6px;background:#ddd;background:rgba(255,255,255,.9);cursor:N-resize;-webkit-border-radius:1px;-moz-border-radius:1px;border-radius:1px;margin:0}.mejs-controls a.mejs-horizontal-volume-slider{height:26px;width:56px;position:relative;display:block;float:left;vertical-align:middle}.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total{position:absolute;left:0;top:11px;width:50px;height:8px;margin:0;padding:0;font-size:1px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background:#333;background:rgba(50,50,50,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(30,30,30,.8)),to(rgba(60,60,60,.8)));background:-webkit-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-moz-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-o-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-ms-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:linear-gradient(rgba(30,30,30,.8),rgba(60,60,60,.8))}.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current{position:absolute;left:0;top:11px;width:50px;height:8px;margin:0;padding:0;font-size:1px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background:#fff;background:rgba(255,255,255,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(255,255,255,.9)),to(rgba(200,200,200,.8)));background:-webkit-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-moz-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-o-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-ms-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:linear-gradient(rgba(255,255,255,.9),rgba(200,200,200,.8))}.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-handle{display:none}.mejs-controls .mejs-captions-button{position:relative}.mejs-controls .mejs-captions-button button{background-position:-48px 0}.mejs-controls .mejs-captions-button .mejs-captions-selector{position:absolute;bottom:26px;right:-51px;width:85px;height:100px;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);border:solid 1px transparent;padding:10px 10px 0;overflow:hidden;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}.mejs-controls .mejs-captions-button .mejs-captions-selector ul{margin:0;padding:0;display:block;list-style-type:none!important;overflow:hidden}.mejs-controls .mejs-captions-button .mejs-captions-selector ul li{margin:0 0 6px;padding:0;list-style-type:none!important;display:block;color:#fff;overflow:hidden}.mejs-controls .mejs-captions-button .mejs-captions-selector ul li input{clear:both;float:left;margin:3px 3px 0 5px}.mejs-controls .mejs-captions-button .mejs-captions-selector ul li label{width:55px;float:left;padding:4px 0 0;line-height:15px;font-family:Helvetica,Arial,serif;font-size:10px}.mejs-controls .mejs-captions-button .mejs-captions-translations{font-size:10px;margin:0 0 5px}.mejs-chapters{position:absolute;top:0;left:0;border-right:solid 1px #fff;width:10000px;z-index:1}.mejs-chapters .mejs-chapter{position:absolute;float:left;background:#222;background:rgba(0,0,0,.7);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(50,50,50,.7)),to(rgba(0,0,0,.7)));background:-webkit-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-moz-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-o-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-ms-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:linear-gradient(rgba(50,50,50,.7),rgba(0,0,0,.7));filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr=#323232, endColorstr=#000000);overflow:hidden;border:0}.mejs-chapters .mejs-chapter .mejs-chapter-block{font-size:11px;color:#fff;padding:5px;display:block;border-right:solid 1px #333;border-bottom:solid 1px #333;cursor:pointer}.mejs-chapters .mejs-chapter .mejs-chapter-block-last{border-right:0}.mejs-chapters .mejs-chapter .mejs-chapter-block:hover{background:#666;background:rgba(102,102,102,.7);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(102,102,102,.7)),to(rgba(50,50,50,.6)));background:-webkit-linear-gradient(top,rgba(102,102,102,.7),rgba(50,50,50,.6));background:-moz-linear-gradient(top,rgba(102,102,102,.7),rgba(50,50,50,.6));background:-o-linear-gradient(top,rgba(102,102,102,.7),rgba(50,50,50,.6));background:-ms-linear-gradient(top,rgba(102,102,102,.7),rgba(50,50,50,.6));background:linear-gradient(rgba(102,102,102,.7),rgba(50,50,50,.6));filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr=#666666, endColorstr=#323232)}.mejs-chapters .mejs-chapter .mejs-chapter-block .ch-title{font-size:12px;font-weight:700;display:block;white-space:nowrap;text-overflow:ellipsis;margin:0 0 3px;line-height:12px}.mejs-chapters .mejs-chapter .mejs-chapter-block .ch-timespan{font-size:12px;line-height:12px;margin:3px 0 4px;display:block;white-space:nowrap;text-overflow:ellipsis}.mejs-captions-layer{position:absolute;bottom:0;left:0;text-align:center;line-height:20px;font-size:16px;color:#fff}.mejs-captions-layer a{color:#fff;text-decoration:underline}.mejs-captions-layer[lang=ar]{font-size:20px;font-weight:400}.mejs-captions-position{position:absolute;width:100%;bottom:15px;left:0}.mejs-captions-position-hover{bottom:35px}.mejs-captions-text,.mejs__captions-text *{padding:0;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(20,20,20,.5);white-space:pre-wrap;-webkit-box-shadow:5px 0 0 rgba(20,20,20,.5),-5px 0 0 rgba(20,20,20,.5);box-shadow:5px 0 0 rgba(20,20,20,.5),-5px 0 0 rgba(20,20,20,.5)}.me-cannotplay{}.me-cannotplay a{color:#fff;font-weight:700}.me-cannotplay span{padding:15px;display:block}.mejs-controls .mejs-loop-off button{background-position:-64px -16px}.mejs-controls .mejs-loop-on button{background-position:-64px 0}.mejs-controls .mejs-backlight-off button{background-position:-80px -16px}.mejs-controls .mejs-backlight-on button{background-position:-80px 0}.mejs-controls .mejs-picturecontrols-button{background-position:-96px 0}.mejs-contextmenu{position:absolute;width:150px;padding:10px;border-radius:4px;top:0;left:0;background:#fff;border:solid 1px #999;z-index:1001}.mejs-contextmenu .mejs-contextmenu-separator{height:1px;font-size:0;margin:5px 6px;background:#333}.mejs-contextmenu .mejs-contextmenu-item{font-family:Helvetica,Arial,serif;font-size:12px;padding:4px 6px;cursor:pointer;color:#333}.mejs-contextmenu .mejs-contextmenu-item:hover{background:#2C7C91;color:#fff}.mejs-controls .mejs-sourcechooser-button{position:relative}.mejs-controls .mejs-sourcechooser-button button{background-position:-128px 0}.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector{position:absolute;bottom:26px;right:-10px;width:130px;height:100px;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);border:solid 1px transparent;padding:10px;overflow:hidden;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul{margin:0;padding:0;display:block;list-style-type:none!important;overflow:hidden}.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul li{margin:0 0 6px;padding:0;list-style-type:none!important;display:block;color:#fff;overflow:hidden}.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul li input{clear:both;float:left;margin:3px 3px 0 5px}.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul li label{width:100px;float:left;padding:4px 0 0;line-height:15px;font-family:Helvetica,Arial,serif;font-size:10px}.mejs-postroll-layer{position:absolute;bottom:0;left:0;width:100%;height:100%;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);z-index:1000;overflow:hidden}.mejs-postroll-layer-content{width:100%;height:100%}.mejs-postroll-close{position:absolute;right:0;top:0;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);color:#fff;padding:4px;z-index:100;cursor:pointer}div.mejs-speed-button{width:46px!important;position:relative}.mejs-controls .mejs-button.mejs-speed-button button{background:transparent;width:36px;font-size:11px;line-height:normal;color:#fff}.mejs-controls .mejs-speed-button .mejs-speed-selector{position:absolute;top:-100px;left:-10px;width:60px;height:100px;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);border:solid 1px transparent;padding:0;overflow:hidden;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}.mejs-controls .mejs-speed-button .mejs-speed-selector ul li label.mejs-speed-selected{color:rgba(33,248,248,1)}.mejs-controls .mejs-speed-button .mejs-speed-selector ul{margin:0;padding:0;display:block;list-style-type:none!important;overflow:hidden}.mejs-controls .mejs-speed-button .mejs-speed-selector ul li{margin:0 0 6px;padding:0 10px;list-style-type:none!important;display:block;color:#fff;overflow:hidden}.mejs-controls .mejs-speed-button .mejs-speed-selector ul li input{clear:both;float:left;margin:3px 3px 0 5px}.mejs-controls .mejs-speed-button .mejs-speed-selector ul li label{width:60px;float:left;padding:4px 0 0;line-height:15px;font-family:Helvetica,Arial,serif;font-size:11px;color:#fff;margin-left:5px;cursor:pointer}.mejs-controls .mejs-speed-button .mejs-speed-selector ul li:hover{background-color:#c8c8c8!important;background-color:rgba(255,255,255,.4)!important}.mejs-controls .mejs-button.mejs-jump-forward-button{background:transparent url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/15e1ac8cbacc2efdf1ac2677de48a253.png) no-repeat 3px 3px}.mejs-controls .mejs-button.mejs-jump-forward-button button{background:transparent;font-size:9px;line-height:normal;color:#fff}.mejs-controls .mejs-button.mejs-skip-back-button{background:transparent url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/cd6dc830eb45b3a5a96bbc936ff54846.png) no-repeat 3px 3px}.mejs-controls .mejs-button.mejs-skip-back-button button{background:transparent;font-size:9px;line-height:normal;color:#fff}</style><style type="text/css">/*
+ * Copyright (C) 2014 - present Instructure, Inc.
+ *
+ * This file is part of Canvas.
+ *
+ * Canvas is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU Affero General Public License as published by the Free
+ * Software Foundation, version 3 of the License.
+ *
+ * Canvas is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+ * A PARTICULAR PURPOSE. See the GNU Affero General Public License for more
+ * details.
+ *
+ * You should have received a copy of the GNU Affero General Public License along
+ * with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/* customizations to mediaelementplayer css */
+
+/* good menu widths */
+.mejs-sourcechooser-selector {
+  width: 160px;
+}
+.mejs-sourcechooser-selector label {
+  width: 160px !important;
+}
+
+.mejs-captions-selector {
+  width: 105px;
+}
+.mejs-captions-selector label {
+  width: 70px !important;
+}
+
+/* Subtitile upload link */
+.mejs-captions-selector .upload-track {
+  color: white;
+  margin: 3px 0 5px 5px;
+  float: direction(left);
+}
+
+/* "x" button to remove a subtitle */
+.mejs-captions-selector a[data-remove] {
+  position: absolute;
+  top: 0; right: 0;
+  color: white;
+}
+
+
+/* style menu items without a radio button */
+.mejs-button [role="menu"] {
+  padding: 0 !important;
+}
+ /* compensate for above 0 padding */
+ .mejs-button [role="menu"] ul li {
+  position: relative;
+  padding: 0 10px !important;
+}
+/* add a hover effect */
+.mejs-button [role="menu"] ul li:hover {
+  background-color: #c8c8c8 !important;
+  background-color: rgba(255, 255, 255, 0.4) !important;
+}
+.mejs-button [role="menu"] ul li input {
+  border: 0;
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+.mejs-button [role="menu"] ul li label {
+  margin-left: 5px;
+  cursor: pointer;
+}
+.mejs-button [role="menu"] label.mejs-selected {
+  color: #21f8f8 !important;
+}
+</style><style type="text/css" data-glamor=""></style><link rel="stylesheet" type="text/css" href="./Lesson 6_files/canvas-561c69e198.css"></head>
+
+<body class="with-left-side course-menu-expanded padless-content pages primary-nav-transitions context-course_1177926 lato-font-not-loaded-yet show webkit chrome no-touch">
+
+<noscript>
+  <div role="alert" class="ic-flash-static ic-flash-error">
+    <div class="ic-flash__icon" aria-hidden="true">
+      <i class="icon-warning"></i>
+    </div>
+    <h1>You need to have JavaScript enabled in order to access this site.</h1>
+  </div>
+</noscript>
+
+
+
+
+
+<ul id="flash_message_holder"></ul>
+<div id="flash_screenreader_holder" role="alert" aria-live="assertive" aria-relevant="additions" class="screenreader-only" aria-atomic="false"></div>
+
+<div id="application" class="ic-app">
+  
+  <header id="header" class="ic-app-header no-print ">
+    <a href="https://canvas.uw.edu/courses/1177926/pages/lesson-6?module_item_id=7889546#content" id="skip_navigation_link">Skip To Content</a>
+      <div role="region" class="ic-app-header__main-navigation" aria-label="Global Navigation">
+        <div class="ic-app-header__logomark-container">
+          <a href="https://canvas.uw.edu/" class="ic-app-header__logomark">
+            <span class="screenreader-only">Dashboard</span>
+          </a>
+        </div>
+        <ul id="menu" class="ic-app-header__menu-list">
+            <li class="menu-item ic-app-header__menu-list-item ">
+              <a id="global_nav_profile_link" href="https://canvas.uw.edu/profile" class="ic-app-header__menu-list-link">
+                <div class="menu-item-icon-container" aria-hidden="true">
+                  <div class="ic-avatar ">
+                    <img src="./Lesson 6_files/mSs2TjTESYscSzrackhgoJvAT79xbNchamHPrSec" alt="Clayton Wong">
+                  </div>
+                </div>
+                <div class="menu-item__text">
+                  Account
+                </div>
+              </a>
+            </li>
+          <li class="ic-app-header__menu-list-item ">
+            <a id="global_nav_dashboard_link" href="https://canvas.uw.edu/" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--dashboard" version="1.1" x="0" y="0" viewBox="0 0 280 200" enable-background="new 0 0 280 200" xml:space="preserve"><path d="M273.09,180.75H197.47V164.47h62.62A122.16,122.16,0,1,0,17.85,142a124,124,0,0,0,2,22.51H90.18v16.29H6.89l-1.5-6.22A138.51,138.51,0,0,1,1.57,142C1.57,65.64,63.67,3.53,140,3.53S278.43,65.64,278.43,142a137.67,137.67,0,0,1-3.84,32.57ZM66.49,87.63,50.24,71.38,61.75,59.86,78,76.12Zm147,0L202,76.12l16.25-16.25,11.51,11.51ZM131.85,53.82v-23h16.29v23Zm15.63,142.3a31.71,31.71,0,0,1-28-16.81c-6.4-12.08-15.73-72.29-17.54-84.25a8.15,8.15,0,0,1,13.58-7.2c8.88,8.21,53.48,49.72,59.88,61.81a31.61,31.61,0,0,1-27.9,46.45ZM121.81,116.2c4.17,24.56,9.23,50.21,12,55.49A15.35,15.35,0,1,0,161,157.3C158.18,152,139.79,133.44,121.81,116.2Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">Dashboard</div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ic-app-header__menu-list-item--active">
+            <a id="global_nav_courses_link" href="https://canvas.uw.edu/courses" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--courses" version="1.1" x="0" y="0" viewBox="0 0 280 259" enable-background="new 0 0 280 259" xml:space="preserve"><path d="M73.31,198c-11.93,0-22.22,8-24,18.73a26.67,26.67,0,0,0-.3,3.63v.3a22,22,0,0,0,5.44,14.65,22.47,22.47,0,0,0,17.22,8H200V228.19h-134V213.08H200V198Zm21-105.74h90.64V62H94.3ZM79.19,107.34V46.92H200v60.42Zm7.55,30.21V122.45H192.49v15.11ZM71.65,16.71A22.72,22.72,0,0,0,49,39.36V190.88a41.12,41.12,0,0,1,24.32-8h157V16.71ZM33.88,39.36A37.78,37.78,0,0,1,71.65,1.6H245.36V198H215.15v45.32h22.66V258.4H71.65a37.85,37.85,0,0,1-37.76-37.76Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Courses
+              </div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_calendar_link" href="https://canvas.uw.edu/calendar" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--calendar" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M197.07,213.38h16.31V197.07H197.07Zm-16.31,16.31V180.76h48.92v48.92Zm-48.92-16.31h16.31V197.07H131.85Zm-16.31,16.31V180.76h48.92v48.92ZM66.62,213.38H82.93V197.07H66.62ZM50.32,229.68V180.76H99.24v48.92Zm146.75-81.53h16.31V131.85H197.07Zm-16.31,16.31V115.54h48.92v48.92Zm-48.92-16.31h16.31V131.85H131.85Zm-16.31,16.31V115.54h48.92v48.92ZM66.62,148.15H82.93V131.85H66.62ZM50.32,164.46V115.54H99.24v48.92ZM34,262.29H246V82.93H34ZM246,66.62V42.16A8.17,8.17,0,0,0,237.84,34H213.38v8.15a8.15,8.15,0,1,1-16.31,0V34H82.93v8.15a8.15,8.15,0,0,1-16.31,0V34H42.16A8.17,8.17,0,0,0,34,42.16V66.62Zm-8.15-48.92a24.49,24.49,0,0,1,24.46,24.46V278.6H17.71V42.16A24.49,24.49,0,0,1,42.16,17.71H66.62V9.55a8.15,8.15,0,0,1,16.31,0v8.15H197.07V9.55a8.15,8.15,0,1,1,16.31,0v8.15Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Calendar
+              </div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_conversations_link" href="https://canvas.uw.edu/conversations" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--inbox" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M91.72,120.75h96.56V104.65H91.72Zm0,48.28h80.47V152.94H91.72Zm0-96.56h80.47V56.37H91.72Zm160.94,34.88H228.52V10.78h-177v96.56H27.34A24.17,24.17,0,0,0,3.2,131.48V244.14a24.17,24.17,0,0,0,24.14,24.14H252.66a24.17,24.17,0,0,0,24.14-24.14V131.48A24.17,24.17,0,0,0,252.66,107.34Zm0,16.09a8.06,8.06,0,0,1,8,8v51.77l-32.19,19.31V123.44ZM67.58,203.91v-177H212.42v177ZM27.34,123.44H51.48v79.13L19.29,183.26V131.48A8.06,8.06,0,0,1,27.34,123.44ZM252.66,252.19H27.34a8.06,8.06,0,0,1-8-8V202l30,18H230.75l30-18v42.12A8.06,8.06,0,0,1,252.66,252.19Z"></path></svg>
+
+                <span class="menu-item__badge" style="display: none">0</span>
+              </div>
+              <div class="menu-item__text">
+                Inbox
+              </div>
+            </a>
+          </li>
+            
+
+
+          <li class="ic-app-header__menu-list-item">
+           <a id="global_nav_help_link" class="ic-app-header__menu-list-link" data-track-category="help system" data-track-label="help button" href="http://help.instructure.com/">
+              <div class="menu-item-icon-container" role="presentation">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg menu-item__icon svg-icon-help" version="1.1" x="0" y="0" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve" fill="currentColor"><path d="M100,127.88A11.15,11.15,0,1,0,111.16,139,11.16,11.16,0,0,0,100,127.88Zm8.82-88.08a33.19,33.19,0,0,1,23.5,23.5,33.54,33.54,0,0,1-24,41.23,3.4,3.4,0,0,0-2.74,3.15v9.06H94.42v-9.06a14.57,14.57,0,0,1,11.13-14,22.43,22.43,0,0,0,13.66-10.27,22.73,22.73,0,0,0,2.31-17.37A21.92,21.92,0,0,0,106,50.59a22.67,22.67,0,0,0-19.68,3.88,22.18,22.18,0,0,0-8.65,17.64H66.54a33.25,33.25,0,0,1,13-26.47A33.72,33.72,0,0,1,108.82,39.8ZM100,5.2A94.8,94.8,0,1,0,194.8,100,94.91,94.91,0,0,0,100,5.2m0,178.45A83.65,83.65,0,1,1,183.65,100,83.73,83.73,0,0,1,100,183.65" transform="translate(-5.2 -5.2)"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Help
+              </div>
+</a>          </li>
+        </ul>
+      </div>
+      <div class="ic-app-header__secondary-navigation">
+        <ul class="ic-app-header__menu-list">
+          <li class="menu-item ic-app-header__menu-list-item">
+            <button id="primaryNavToggle" class="ic-app-header__menu-list-link ic-app-header__menu-list-link--nav-toggle" aria-label="Expand global navigation
+                " title="Expand global navigation
+                ">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--navtoggle" version="1.1" x="0" y="0" width="40" height="32" viewBox="0 0 40 32" xml:space="preserve">
+  <path d="M39.5,30.28V2.48H37.18v27.8Zm-4.93-13.9L22.17,4,20.53,5.61l9.61,9.61H.5v2.31H30.14l-9.61,9.61,1.64,1.64Z"></path>
+</svg>
+
+              </div>
+            </button>
+          </li>
+        </ul>
+      </div>
+    <div id="global_nav_tray_container"><noscript data-reactid=".0"></noscript></div>
+  </header>
+
+
+  <div id="instructure_ajax_error_box">
+    <div style="text-align: right; background-color: #fff;"><a href="https://canvas.uw.edu/courses/1177926/pages/lesson-6?module_item_id=7889546#" class="close_instructure_ajax_error_box_link">Close</a></div>
+    <iframe id="instructure_ajax_error_result" src="./Lesson 6_files/saved_resource.html" style="border: 0;" title="Error"></iframe>
+  </div>
+
+  
+
+  <div id="wrapper" class="ic-Layout-wrapper">
+      <div class="ic-app-nav-toggle-and-crumbs no-print">
+          <button type="button" id="courseMenuToggle" class="Button Button--link ic-app-course-nav-toggle" aria-live="polite" aria-label="Hide Courses Navigation Menu" title="Hide Courses Navigation Menu">
+            <i class="icon-hamburger" aria-hidden="true"></i>
+          </button>
+          <div class="ic-app-crumbs">
+        <nav id="breadcrumbs" role="navigation" aria-label="breadcrumbs"><ul><li class="home"><a href="https://canvas.uw.edu/"><span class="ellipsible">      <i class="icon-home" title="My Dashboard">
+        <span class="screenreader-only">My Dashboard</span>
+      </i>
+</span></a></li><li><a href="https://canvas.uw.edu/courses/1177926"><span class="ellipsible">CPROGRM 711 A</span></a></li><li><a href="https://canvas.uw.edu/courses/1177926/pages"><span class="ellipsible">Pages</span></a></li><li><span class="ellipsible">Lesson 6</span></li></ul></nav>
+        </div>
+      </div>
+    <div id="main" class="ic-Layout-columns">
+        <div class="ic-Layout-watermark"></div>
+        <div id="left-side" class="ic-app-course-menu list-view" style="display: block">
+              <span id="section-tabs-header-subtitle" class="ellipsis">Winter 2018</span>
+            <nav role="navigation" aria-label="Courses Navigation Menu"><ul id="section-tabs"><li class="section"><a href="https://canvas.uw.edu/courses/1177926" title="Home" class="home" tabindex="0">Home</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/announcements" title="Announcements" class="announcements" tabindex="0">Announcements</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/modules" title="Modules" class="modules" tabindex="0">Modules</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/discussion_topics" title="Discussions" class="discussions" tabindex="0">Discussions</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/grades" title="Grades" class="grades" tabindex="0">Grades</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/users" title="People" class="people" tabindex="0">People</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/external_tools/12299" title="UW Libraries" class="context_external_tool_12299" tabindex="0">UW Libraries</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/external_tools/57145" title="Info &amp; Help" class="context_external_tool_57145" tabindex="0">Info &amp; Help</a></li></ul></nav>
+        </div>
+      <div id="not_right_side" class="ic-app-main-content">
+        <div id="content-wrapper" class="ic-Layout-contentWrapper">
+            
+
+          <div id="content" class="ic-Layout-contentMain" role="main">
+            
+
+  
+
+<div id="wiki_page_show">
+<div class="header-bar-outer-container">
+  <div class="header-bar-container sticky-toolbar sticky" data-sticky="">
+    <div class="header-bar flex-container">
+      <div class="header-bar-left header-left-flex">
+        
+          
+        
+      </div>
+      <div class="header-bar-right header-right-flex">
+        
+          
+          
+            
+          
+        
+        
+          
+        
+        
+      </div>
+    </div>
+    <div class="page-changed-alert" role="alert" aria-atomic="true" aria-live="polite"></div>
+  </div>
+</div>
+
+
+<div class="show-content user_content clearfix enhanced">
+  <h1 class="page-title">Lesson 6</h1>
+  
+    
+  
+  
+    <div class="keytermBox" style="background-color: #f3f3e9;">
+<h6>Key Terms</h6>
+<ul>
+<li>inline</li>
+<li>static storage</li>
+<li>declaration</li>
+<li>definition</li>
+<li>linkage</li>
+<li>internal linkage</li>
+<li>pool variable</li>
+</ul>
+</div>
+<h2>
+<img src="./Lesson 6_files/L06.png" alt="L06.png" width="50" height="50" data-api-endpoint="https://canvas.uw.edu/api/v1/courses/1177926/files/44384329" data-api-returntype="File" style="max-width: 1090px;" data-id="44384329">&nbsp;C++ Classes—Data and Member Functions—Part 1</h2>
+<h3>C++ Classes: Data and Member Functions</h3>
+<h4>Class Definition</h4>
+<p>In the last two lessons, we studied the class and its variants, the structure and the union. We learned that we can use such data types to encapsulate both data and functions to represent real-world entities and to model their behavior. Let's now move inside the class and examine its members in greater detail. We'll begin with the class definition. Recall from our last lesson that a typical class is defined as follows:</p>
+<pre>class Name
+{
+public:
+    constructor(s)
+    destructor
+    member functions
+    data members
+
+protected:
+    member functions
+    data members
+
+private:
+    member functions
+    data members
+};</pre>
+<h4>Data Members</h4>
+<p>Let's start with the declaration of an instance of a class. Each such new instance gets distinct copies of all data members. We see that the class definition acts as a prototype. It identifies to the compiler how to put together the pieces that make up the class. After creation, the constructor then initializes each of the data members, as shown below:</p>
+<pre>//  Define a simple class  &nbsp;
+class IntValue
+{
+public:
+    IntValue() : myValue(10) { }
+    int getValue() { return myValue; }
+    void setValue(int value) { myValue = value; }
+
+private:
+    int myValue;
+};
+
+TEST(DataMembers, SimpleClass)
+{
+    //&nbsp;&nbsp;Declare two instances of the class
+    IntValue inst0;
+    IntValue inst1;
+
+    //&nbsp;&nbsp;Change the data member in one of them
+    inst1.setValue(20);
+
+    CHECK_EQUAL(10, inst0.getValue());
+    CHECK_EQUAL(20, inst1.getValue());
+}</pre>
+<h4>Member Functions</h4>
+<p><strong>this Pointer</strong></p>
+<p>Unlike data members, there is only one instance of each member function for a class. One question comes to mind immediately: If there is only a single instance of each member function, how does the member function know which instance member data to manipulate? Like many things in C++, it's done with pointers.</p>
+<p>Remember that C++ class members may be objects from other classes, pointers to objects from other classes, and pointers to objects of their own class. Pointers of the latter type give us self reference.</p>
+<p>Self reference lets us reference a member without explicit reference to the object, as shown:</p>
+<pre>Circle c1;
+c1.getDiameter();</pre>
+<p>In this example, <code>c1</code> is the instance we want the member function <code>getDiameter()</code> to operate on. How does this function know to get the diameter of circle <code>c1</code>? What is not shown is that the member function has a hidden argument. That argument is a pointer to the object receiving the message. The pointer is identified by the keyword <code>this</code>.</p>
+<p>The <code>this</code> pointer has type <code>ClassType</code> and points to the starting address of the object for which the function was called. That is, it contains the address of the class instance through which the member function was invoked. As we've seen with arrays, the starting address is the same as the address of the first variable in the class structure. Every non static class member function has an implicitly passed this pointer, as shown below:</p>
+<pre>ClassName* const this;</pre>
+<p>The pointer, <code>this</code>, is initialized to the address of the object for which the member function was invoked. Because <code>this</code> is declared constant, it cannot be assigned another pointer. The object pointed at can be modified, however. One way to implement such a mechanism is to translate each member function into a non-member function with an additional parameter, the <code>this</code> pointer, as shown below:</p>
+<p><span class="style1">myFunction()</span> <i>translated to our conceptual view becomes</i> <span class="style2">myFunction(MyClass* const this)</span></p>
+<p>Each invocation of the function actually invokes the modified function as follows:</p>
+<p><span class="style2">myInstance.myFunction()</span> <i>translated to our conceptual view becomes</i> <span class="style2">myFunction(&amp;myInstance)</span></p>
+<p>Because this is a pointer to the beginning of the class structure, we can select elements using pointer notation:</p>
+<pre>myFunction() <strong><i>translated to our conceptual view becomes</i></strong> myFunction(MyClass* const this)
+{
+    this-&gt;myElement
+}</pre>
+<p>C++ implicitly passes the this pointer to every non-static class member function. This means you don't need to explicitly pass the this pointer to a member function. C++ does it for you behind the scenes.</p>
+<p>The linked list is made up of a collections of nodes, that is, instances of the class Node. One of Node's two member functions, <code>append</code>, <code>append</code>, is used to attach a new node to the list. The linking process requires a node—L<sub>i</sub>, for example—to set its <code>next </code>pointer to the address of the new node and to tell the new node to set its <code>prev</code> pointer to refer back to L<sub>i</sub>. We accomplish this by sending the message <code>setPrev</code> with an argument of<code> this</code> to the new node. The argument will, of course, be referring to L<sub>i</sub>, which is what we want.</p>
+<pre>class Node
+{
+public:
+    void append(Node* aNode);
+    void setPrev(Node* aNode);
+ 
+private:
+    Node* next;
+    Node* prev;
+};
+ 
+void Node::append(Node* aNode)
+{
+    next = aNode;
+    aNode-&gt;setPrev(this);
+    return;
+}</pre>
+<p>We now see how each class member functions has access to instance data members.</p>
+<h3>General Object Layout Object Layout</h3>
+<p>Let's now look at how a class appears in memory. We can determine the size of the class by using the operator. The size of a class is the amount of storage necessary to represent all of the components of the class, including any unused padding space the compiler adds between or after the the data members to align bytes and words properly. The general rule is that the class must terminate on the same alignment boundary (in memory) on which it started. If it began on an even byte boundary, it must terminate on an even byte boundary. Like each dimension in an array, the variables are laid out in the order in which they are defined in the class. The final size, internal padding, and alignment are compiler-dependent. Code for member functions are not used in calculating the size of a class.</p>
+<h4>Using Access Specifiers</h4>
+<p>In an earlier lesson, we learned about using access specifiers to control access to class members. These are intended to be used at compile time. All information disappears during runtime, and all of the restrictions have been applied. We want to catch things earlier rather than later. At runtime, an object is merely a chunk of storage. When access specifiers are used, the overall organization of the class may change; however, within a particular access block (again like each dimension of an array), variables are guaranteed to be laid out contiguously. Access blocks may not appear in the order declared, and there is no specific rule. Some particular machines may require a special location for private or protected members.</p>
+<h3>Managing Storage</h3>
+<h4>Object Creation</h4>
+<p>When a C++ object is created, two events occur: (1) storage is allocated for the object and (2) the constructor is called to initialize the storage. Storage allocation occurs in several ways and at different times. <span class="keyterm">Static storage</span> is allocated when the program begins and remains at a constant location for the life of the program. Storage is allocated on the <em>stack</em> whenever an execution point is reached (as defined by an opening curly brace) and is released at the complementary execution point (as defined by the closing curly brace).</p>
+<p>Storage may also be dynamically allocated from the <em>heap</em> or <em>free store</em> at runtime. The programmer is responsible for its allocation (<code>new</code>) and deallocation (<code>delete</code>).</p>
+<h4>Declaration</h4>
+<p>A declaration introduces a name into scope and tells the compiler what the name means. Examples include a function prototype or a class declaration. A class declares the class member daa defines the class member Declarations usually go into header files (the .h files) and no storage is allocated.</p>
+<pre>// class declaration - not only member function signatures and member data provided - provided in file "Widget.h"
+class Widget
+{
+public:
+    Widget(const Point&amp; location);
+    ~Widget();
+        
+    void draw();
+        
+private:
+    Point myLocation;
+};
+        </pre>
+<h4>Definition</h4>
+<p>A definition provides the function and member function code. The function definitions usually go into implementation files (the <code>.cpp</code> files).</p>
+<pre>// Widget definitions - provided in Widget.cpp
+#include "Widget.h"
+
+Widget::Widget(const Point&amp; location)
+    : myLocation(location)
+{
+}
+
+Widget::~Widget()
+{
+}
+
+Widget::draw()
+{
+    // draw the widget at its location
+}</pre>
+<p>Get into the habit of creating two source files for each class. Create a .h file for the class declaration. Then create a .cpp file for the class definitions. Name the files with the class name. For example, declare class CellPhone in CellPhone.h and define it in CellPhone.cpp. This convention makes it easy for clients to know which header file to include to use the class as well as making it easy to find the source files each class is defined in.</p>
+<h4>Linkage</h4>
+<p><span class="keyterm">Linkage</span> describes storage, created to represent an identifier, as seen by the linker. Ordinarily, any name at file scope is visible throughout all translation units in a program. Such visibility is often referred to as <span class="keyterm">external linkage</span> because, at link time, the name can be seen by the linker from anywhere, external to that translation unit. We can think of a translation unit as the <code>.cpp</code> file (plus all the files it #includes) where the declaration occurred.</p>
+<p>Variables defined outside of functions (except those declared constant and certain function definitions) default to external linkage. In C++, a const variable defaults to internal linkage and always requires initialization. If we need to reference it from another file, we define it as extern, as shown below:</p>
+<pre>extern const myValue = 2;</pre>
+<p>Initialization forces storage to be allocated and the declaration now becomes a definition. A single piece of storage, to be used for all files being compiled, is accessed from other files by the keyword <code>extern</code>.</p>
+<p>Storage created for an identifier in the file being compiled is said to have <span class="keyterm">internal linkage</span> if the name can be used in other files without conflict. If a variable is explicitly declared as <code>static</code>, it is also given internal linkage. Inline functions have internal linkage and, as noted, so do <code>const</code> variables.</p>
+<p>Automatic (local) variables exist on the stack while a function is being called. The linker does not know about automatic variables. They have no linkage.</p>
+<h4>Inline Functions</h4>
+<p>As we've seen, C++ permits the specification of inline functions. We often use these in place of the old style C <code>#define</code> macros. Such functions are identified by the inline keyword; the definition of the function follows according to the following syntax:</p>
+<pre>inline type functionName (argsi) { body }</pre>
+<p>The code for the inline funtion is not compiled when the inline function is defined. Instead when the compiler encounters a call to the inline function, the compiler replaces the inline function call with the actual code from the function The function must be defined before it can be used.</p>
+<p>Since the code for inline functions is copied every time the function is called the size of the program gets larger. Inline functions results in larger executable files. The inline function declaration is a hint to the compiler. The compiler does not have to honor the hint, but will if it can. If the function gets large or complicated the compiler may choose to not to inline the function.</p>
+<pre>// The function min will be expanded inline
+inline int min(int v1, int v2)
+{
+    return (v1 &lt;= v2 ? v1 : v2);
+}
+
+struct Array
+{
+    Array() : size(10) {}
+    Array(int aValue);           //  Implemented as a function call
+    int getSize() const;         //  Implemented as an inline function call
+    int size;
+};
+
+Array::Array(int aValue)
+{
+    size = aValue;
+}
+ 
+//  The keyword inline requests the compiler
+//  to substitute the body of the function
+//  where ever it appears.
+//
+//  How many times will that be for this function?
+ 
+inline int Array::getSize() const
+{
+    return size;
+}
+ 
+TEST(inline, ClassExample)
+{
+    int i=2, j=3;
+    int minValue = min(i,j);
+    //  Is expanded to:
+    //  int minValue= (i &lt;= j) ? i:j
+ 
+    CHECK_EQUAL(2, minValue)
+ 
+    Array c(3);
+    Array b;
+
+    // call inline function
+    CHECK_EQUAL(3, c.getSize());
+    CHECK_EQUAL(10, b.getSize());
+}</pre>
+<p>Now why would you want to inline? An inline function removes the overhead of a function call. This can in rare instances improve the user perceivable performance of a program. You should only inline when you have measured performance before and after inlining and note a performance improvement that is significant enough to benefit the user of the application.</p>
+<h3>Class Data Members</h3>
+<h4>Static Data Members</h4>
+<p>As we've learned, a class is a type. When an instance of a class is defined, that instance gets a copy of all data members.</p>
+<p>It is sometimes useful to be able to share some data among all instances of a class. When data is shared, we want only a single copy of that data accessible to all class instances.</p>
+<p>If a data member is declared <code>static</code>, then we have only a single copy shared by all instances of the class.</p>
+<p>We may view such sharing graphically. Let's say we have a class, <code>A</code>, with two data members, one a <code>char</code> and the other a <code>static int</code>.</p>
+<p class="title"><img src="./Lesson 6_files/c++711s06fig6-01.gif" alt="c++711s06fig6-01.gif" width="230" height="74" data-api-endpoint="https://canvas.uw.edu/api/v1/courses/1177926/files/44384285" data-api-returntype="File" style="max-width: 1090px;" data-id="44384285"></p>
+<p>If we now create four instances of class A, we have the situation:</p>
+<p class="title"><img src="./Lesson 6_files/c++711s06fig6-02.gif" alt="c++711s06fig6-02.gif" width="169" height="169" data-api-endpoint="https://canvas.uw.edu/api/v1/courses/1177926/files/44384258" data-api-returntype="File" style="max-width: 1090px;" data-id="44384258"></p>
+<p>Each class instance has its own copy of the <code>char</code>, as we'd expect. All classes share the single copy of the integer member.</p>
+<p>A static member exists even if no class instances exist, but it remains in the scope of class. The common variable(s) can only be accessed from outside if declared public. Access must be qualified by the class name. That is, if <code>myStatVar</code> is a static variable in class <code>A</code>, then we must write</p>
+<pre>A::myStatVar</pre>
+<p>to refer to it.</p>
+<h4>Initialization</h4>
+<p>Storage for a static variable must be explicitly reserved and initialized. A static variable can be declared within a class. The definition and initialization (if required) must occur <span class="bold">outside</span> the class. There can be only a single definition. As in C, static (nonclass) variables are initialized to 0 by default. Syntax is as follows:</p>
+<p>Declaration:</p>
+<pre>&nbsp;static varType varName;</pre>
+<p>Definition:</p>
+<pre>&nbsp;varType ClassName :: varName &lt; = value &gt; ;</pre>
+<pre>// Classes: Members - Static Data Members
+// Static data members are shared by all
+// instances of a class
+
+using namespace std;
+
+class SimpleClass
+{
+public:
+    SimpleClass(int aValue) : myValue(aValue) { ourReferenceCount++; }
+    SimpleClass() : myValue(0) { ourReferenceCount++; }
+
+    ~SimpleClass() { ourReferenceCount--; }
+
+    void setValue(int aValue)
+    {
+        myValue = aValue;
+    }
+
+    int getValue() { return myValue; }
+
+    // The static members are not part of a single instance
+    // of the class but is shared by all instances
+    // of the class.
+    //
+    // The declaration of the static variable is
+    // not a definition. The definition is required
+    // to be elsewhere.
+    static int ourReferenceCount;
+
+private:
+    int myValue;
+};
+
+// Define and initialize the static variables
+// We must do this outside of the class (normally in the .cpp file with the
+// class function definitions
+int SimpleClass::ourReferenceCount = 0;
+
+TEST(StaticMemberData, Class)
+{
+SimpleClass myClass;
+    SimpleClass yourClass;
+
+    CHECK_EQUAL(0, myClass.getValue());
+
+    // static members can be accessed
+    // with or without an object instance
+
+    // Access through a class instance - prints a
+    CHECK_EQUAL(2, myClass.ourReferenceCount);
+
+    // Access without a class instance
+    CHECK_EQUAL(2, SimpleClass::ourReferenceCount);
+
+    {
+        SimpleClass anotherOne;
+        CHECK_EQUAL(3, SimpleClass::ourReferenceCount);
+    }
+
+    CHECK_EQUAL(2, SimpleClass::ourReferenceCount);
+}</pre>
+<p>A static data member can appear as a default argument to a member function; a non-static cannot.</p>
+<p>Within a class body we have the following declarations:</p>
+<pre>class XYZ
+{
+public:
+&nbsp;&nbsp;&nbsp;&nbsp;int myValue;
+&nbsp;&nbsp;&nbsp;&nbsp;static int myReferenceCount;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;int f1 (int myValue0 = myValue);&nbsp;&nbsp;          //&nbsp; illegal
+&nbsp;&nbsp;&nbsp;&nbsp;int f2 (int myValue1 = myReferenceCount);&nbsp;&nbsp; //&nbsp; ok
+};</pre>
+<p>A static data member can be an instance of the class of which it is a member; a non-static data member can only point to an instance.</p>
+<p>Let's define the following class:</p>
+<pre>class F1
+{
+public:
+&nbsp;&nbsp;&nbsp;&nbsp;F1* a;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Declare a pointer of type self - ok
+&nbsp;&nbsp;&nbsp;&nbsp;static F1 b;&nbsp; // Declare instance of self - ok, static
+&nbsp;&nbsp;&nbsp;&nbsp;F1 c;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;// Declare instance of self - illegal
+};</pre>
+<p>Why can a static data member of a class be of the same type as the class? Why is this not a recursive definition? Think about how many instances of the static data exist.</p>
+<p>The advantages of static data members include the preservation of information hiding. The variable can be made protected or private. Also, the name is not entered into global name space—there are no name conflicts.</p>
+<h4>Const Data Members</h4>
+<p>A data member can be specified as <code>const</code>. As a consequence, storage always is allocated and must be initialized at the point of definition. For a class, storage is not allocated until the instance is created. That is the point at which the <code>const</code> must be created and initialized. A <code>const</code> variable persists for the lifetime of the instance. Initialization must occur in the constructor, which we accomplish via the initialization list.</p>
+<pre>// Classes Members - const 1.0
+// Const Data Members
+
+using namespace std;
+
+class Count
+{
+public:
+    Count (int limit = 5, int initial = 0) :
+        upper (limit),
+        count (initial)
+    {
+    }
+
+    int count;
+
+    // this is a compile error cannot modify a const member
+    // void incLimit() { upper++; }
+
+bool increment()
+{
+    ++count;
+    return count == upper;
+}
+
+private:
+    const int upper;
+};
+
+TEST(constMembers, Class)
+{
+    int expected[] = { 1, 2, 3, 4 };
+    Count myCount;
+    for (int i = 0; !myCount.increment(); ++i)
+    {
+        CHECK_EQUAL(expected[i], myCount.count);
+    }
+}</pre>
+<h3>Class Member Functions</h3>
+<h4>Static Member Functions</h4>
+<p>Like data members, member functions can be declared static. The major difference between static and non-static functions is that the static member functions have no <code>this</code> pointer. Without such a pointer, a static function can directly access only static members (which exist independent of the class) and enums and typedefs defined in the scope of the class. The enums and typedefs are shared amongst all instances—they are not regular data members in the sense that they are not stored with each instance but in a common area.</p>
+<p>A static function can indirectly access a non-static data member using either the dot or pointer notation through an explicit object. Attempts to directly access non-static members result in a compile error. Like static data members, a static function member can be invoked outside of the class if public. In a similar way, we must use the scope operator.</p>
+<p>If <code>b()</code> is a static function in class <code>A</code>, the function is accessed by writing</p>
+<pre>A::b()</pre>
+<p>Unlike the static data members, the function body does not have to be written outside of the class. Constructors and destructors cannot be static.</p>
+<p>"Why have static functions? They seem rather useless," you might be asking. Not so. Like static data members, the function name is bound to the class. Thus, their use will not pollute global namespace. The visibility of the function name is also controlled by the access specifiers.</p>
+<p>"Okay, I'm convinced—why not just use a regular member function." Keep in mind, this discussion began with static data members—pool variables. Remember, these exist without a class instance being created. Static functions are intended to be used in conjunction with pool variables, not to replace regular member functions. We can then manipulate the shared variables without creating a class instance that may be of no immediate use.</p>
+<p>Let's see how these work.</p>
+<pre>// Classes: Members - Static Data Members
+// Static data members are shared by all
+// instances of a class
+
+using namespace std;
+
+class ReferenceCountedClass
+{
+public:
+    ReferenceCountedClass(int aValue) : myValue(aValue) { ourReferenceCount++; }
+    ReferenceCountedClass() : myValue(0) { ourReferenceCount++; }
+
+    ~ReferenceCountedClass() { ourReferenceCount--; }
+
+    void setValue(int aValue)
+    {
+        myValue = aValue;
+    }
+
+    int getValue() { return myValue; }
+
+    static int getReferenceCount() { return ourReferenceCount; }
+
+private:
+    int myValue;
+
+    // Declare a private static data member
+    static int ourReferenceCount;
+};
+
+// Define and initialize the static variables
+// We must do this outside of the class (normally in the .cpp file with the
+// class function definitions
+int ReferenceCountedClass::ourReferenceCount = 0;
+
+TEST(StaticMemberFunction, Class)
+{
+    ReferenceCountedClass myClass;
+    ReferenceCountedClass yourClass;
+
+    CHECK_EQUAL(0, myClass.getValue());
+
+    // static members functions can be accessed
+    // with or without an object instance
+
+    // Access through a class instance - prints a
+    CHECK_EQUAL(2, myClass.getReferenceCount());
+
+    CHECK_EQUAL(2, ReferenceCountedClass::getReferenceCount());
+
+    {
+        ReferenceCountedClass anotherOne;
+        CHECK_EQUAL(3, ReferenceCountedClass::getReferenceCount());
+    }
+
+    CHECK_EQUAL(2, ReferenceCountedClass::getReferenceCount());
+}</pre>
+<h4>Const Member Functions</h4>
+<p>The keyword <code>const</code> can be placed after the argument list in the member function declaration, using the following syntax:</p>
+<pre>returnType functionName ( argsi ) const { function body }</pre>
+<p>Such a declaration tells the compiler that the function can only read data members—it cannot write them. Member functions declared <code>const</code> can be called for non-<code>const</code> objects, but non-<code>const</code> member functions cannot be called for <code>const</code> objects.</p>
+<pre>// Classes Members - Const 1.1
+// Const Class Instances
+using namespace std;
+
+class Measurement
+{
+public:
+    Measurement(int aValue)
+        : myValue(aValue)
+    {
+    }
+
+    int getValue() const
+    {
+        return myValue;
+    }
+
+    void setValue(
+        int aValue)
+    {
+        myValue = aValue;
+    }
+
+#if 0
+    // won't compile - can not modify member data in const member function
+    void setValue(
+        int aValue) const
+    {
+        myValue = aValue;
+    }
+#endif
+
+private:
+    int myValue;
+};
+
+// common usage of const member functions. Class instance passed to
+// function by const reference. This means function is only allowed to
+// "read" the class. Only const member functions may be called.
+//
+// Passing instances by const reference is very common
+int getMeasurement(
+    const Measurement&amp; measurement)
+{
+#if 0
+    // illegal - can't call non const member function on const instance
+    measurement.setValue(44);
+#endif
+
+    return measurement.getValue();
+}
+
+TEST(constMemberFunctions, Class)
+{
+    Measurement m(1);
+
+    CHECK_EQUAL(1, m.getValue());
+    CHECK_EQUAL(1, getMeasurement(m));
+}</pre>
+<h3>Summary</h3>
+<p>In this lesson, we moved our study inside the C++ class. We took our first look at how the class and its members are put together by the compiler, when variables are initialized, and their visibility within the program at link time. We learned that each class instance has its own copy of all (non-static) class data members and shares a common embodiment of each member function, linked to the instance through the <code>this</code> pointer. We also looked at the two member qualifiers, <code>static</code> and <code>const</code>, and studied how they affect both data and functions.</p>
+<h3>Practice&nbsp;Questions</h3>
+<p>Test your understanding of the concepts in Lesson 6 by working through&nbsp;the following practice questions, then check your answers with <a class="" title="Answers to Practice Questions for Lesson 6" href="https://canvas.uw.edu/courses/1177926/pages/answers-to-practice-questions-for-lesson-6" data-api-endpoint="https://canvas.uw.edu/api/v1/courses/1177926/pages/answers-to-practice-questions-for-lesson-6" data-api-returntype="Page">Answers to Practice Questions for Lesson 6</a>.</p>
+<ol>
+<li>Does each C++ class instance have its own copy of all member functions?</li>
+<li>Can I use the <code>this</code> pointer?</li>
+<li>Can I use the <code>this</code> pointer to point to another object?</li>
+<li>What's the difference between internal and external linkage?</li>
+<li>What kind of linkage do auto variables have?</li>
+<li>Can you make the following declaration in a class?<code><br> static int myVar = 34</code>
+</li>
+<li>Can you make the following declaration in a class?<code>static int myFunc() {return myVal;}</code>
+</li>
+<li>Why doesn't the following result in infinite recursion and consumption of all memory?
+<pre>class F1
+{
+&nbsp;&nbsp;&nbsp;&nbsp;public:
+&nbsp;&nbsp;&nbsp;&nbsp;static F1 b;
+};</pre>
+</li>
+<li>How do you initialize a <code>const</code> variable in a class?</li>
+</ol>
+  
+</div>
+<div style=""><div class="module-sequence-padding"></div>
+<div class="module-sequence-footer" role="navigation" aria-label="Module Navigation">
+  <div class="module-sequence-footer-content">
+    
+      <a href="https://canvas.uw.edu/courses/1177926/modules/items/7889545" role="button" class="Button module-sequence-footer-button--previous" data-tooltip="right" data-html-tooltip-title="&lt;i class=&#39;icon-document&#39;&gt;&lt;/i&gt; Lesson 6 Overview and Materials" aria-describedby="msf0-previous-desc">
+        <i class="icon-mini-arrow-left"></i>Previous
+        <span id="msf0-previous-desc" class="hidden" hidden="">Previous: Lesson 6 Overview and Materials</span>
+      </a>
+    
+
+    
+      <span class="module-sequence-footer-button--next" data-tooltip="left" data-html-tooltip-title="&lt;i class=&#39;icon-discussion&#39;&gt;&lt;/i&gt; Lesson 6 Discussion">
+        <a href="https://canvas.uw.edu/courses/1177926/modules/items/7889547" role="button" class="Button" aria-describedby="msf0-next-desc">
+          Next<i class="icon-mini-arrow-right"></i>
+          <span id="msf0-next-desc" class="hidden" hidden="">Next: Lesson 6 Discussion</span>
+        </a>
+      </span>
+    
+  </div>
+</div>
+</div></div>
+
+          </div>
+        </div>
+        <div id="right-side-wrapper" class="ic-app-main-content__secondary">
+          <aside id="right-side" role="complementary">
+            
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <div style="display:none;"><!-- Everything inside of this should always stay hidden -->
+        <div id="page_view_id">badcb53d-b30a-4246-84e3-3fed48d8f42d</div>
+    </div>
+  <div id="aria_alerts" class="hide-text affix" role="alert" aria-live="assertive"></div>
+  <div id="StudentTray__Container"></div>
+  
+
+<script>
+  INST = {"environment":"production","allowMediaComments":true,"kalturaSettings":{"domain":"nv.instructuremedia.com","resource_domain":"nv.instructuremedia.com","rtmp_domain":"fms-prod.instructuremedia.com","partner_id":"9","subpartner_id":"0","player_ui_conf":"0","kcw_ui_conf":"0","upload_ui_conf":"0","max_file_size_bytes":534773760,"do_analytics":false,"hide_rte_button":false,"js_uploader":true},"googleAnalyticsAccount":"UA-9138420-1","logPageViews":true,"maxVisibleEditorButtons":3,"editorButtons":[{"name":"","id":21130,"url":"https://uw.hosted.panopto.com/Panopto/Pages/Sessions/embeddedupload.aspx","icon_url":"https://uw.hosted.panopto.com/Panopto/images/panopto_logo_globe.png","canvas_icon_class":null,"width":900,"height":700},{"name":"Modalis","id":52765,"url":"https://uw.modalis.io/lti","icon_url":"https://uw.modalis.io/assets/richicon.png","canvas_icon_class":null,"width":800,"height":600}]};
+  ENV = {"ASSET_HOST":"https://du11hjcvx0uqb.cloudfront.net","active_brand_config_json_url":"https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/2c22dc9301cdfeed941152de3164d730/variables-750d72b9d3e5d522f965bf904110c132.json","url_to_what_gets_loaded_inside_the_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/2c22dc9301cdfeed941152de3164d730/variables-750d72b9d3e5d522f965bf904110c132.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_normal_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-53dac18d10.css"],"url_for_high_contrast_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/default/variables-high_contrast-750d72b9d3e5d522f965bf904110c132.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_high_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-b4d65fe883.css"],"current_user_id":"3757111","current_user_roles":["user","student"],"current_user_disabled_inbox":false,"files_domain":"cluster10-files.instructure.com","DOMAIN_ROOT_ACCOUNT_ID":100000000083919,"k12":false,"use_responsive_layout":false,"help_link_name":"Help","help_link_icon":"help","use_high_contrast":false,"LTI_LAUNCH_FRAME_ALLOWANCES":["geolocation *","microphone *","camera *","midi *","encrypted-media *"],"SETTINGS":{"open_registration":false,"eportfolios_enabled":true,"collapse_global_nav":true,"show_feedback_link":true,"enable_profiles":true},"current_user":{"id":"3757111","display_name":"Clayton Wong","avatar_image_url":"https://canvas.uw.edu/images/thumbnails/46487823/mSs2TjTESYscSzrackhgoJvAT79xbNchamHPrSec","html_url":"https://canvas.uw.edu/about/3757111","avatar_is_fallback":false},"page_view_update_url":"/page_views/badcb53d-b30a-4246-84e3-3fed48d8f42d?page_view_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpIjoiYmFkY2I1M2QtYjMwYS00MjQ2LTg0ZTMtM2ZlZDQ4ZDhmNDJkIiwidSI6MTAwMDAwMDAzNzU3MTExLCJjIjoiMjAxOC0xMC0xNlQyMjo0NjowMC41NVoifQ._owvgj42c6tccjoZpCAfuXsxl9VH8z1Iw3rB9Qc0XG8","context_asset_string":"course_1177926","ping_url":"https://canvas.uw.edu/api/v1/courses/1177926/ping","TIMEZONE":"America/Los_Angeles","CONTEXT_TIMEZONE":"America/Los_Angeles","LOCALE":"en","BIGEASY_LOCALE":"en_US","FULLCALENDAR_LOCALE":"en","MOMENT_LOCALE":"en","WIKI_RIGHTS":{"read":true},"PAGE_RIGHTS":{"read":true},"DEFAULT_EDITING_ROLES":"teachers","WIKI_PAGES_PATH":"/courses/1177926/pages","WIKI_PAGE":{"title":"Lesson 6","created_at":"2017-10-18T21:04:14Z","url":"lesson-6","editing_roles":"teachers","page_id":"2573086","last_edited_by":{"id":"616135","display_name":"UW Online","avatar_image_url":"https://canvas.uw.edu/images/thumbnails/48906042/5fiFTncigBVESajokiO6KZAa8tp5cr2EYSaKvX8M","html_url":"https://canvas.uw.edu/courses/1177926/users/616135"},"published":true,"hide_from_students":false,"front_page":false,"html_url":"https://canvas.uw.edu/courses/1177926/pages/lesson-6","todo_date":null,"updated_at":"2018-06-08T23:13:33Z","locked_for_user":false,"body":"\u003cdiv class=\"keytermBox\" style=\"background-color: #f3f3e9;\"\u003e\r\n\u003ch6\u003eKey Terms\u003c/h6\u003e\r\n\u003cul\u003e\r\n\u003cli\u003einline\u003c/li\u003e\r\n\u003cli\u003estatic storage\u003c/li\u003e\r\n\u003cli\u003edeclaration\u003c/li\u003e\r\n\u003cli\u003edefinition\u003c/li\u003e\r\n\u003cli\u003elinkage\u003c/li\u003e\r\n\u003cli\u003einternal linkage\u003c/li\u003e\r\n\u003cli\u003epool variable\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003c/div\u003e\r\n\u003ch2\u003e\n\u003cimg src=\"https://canvas.uw.edu/courses/1177926/files/44384329/preview\" alt=\"L06.png\" width=\"50\" height=\"50\" data-api-endpoint=\"https://canvas.uw.edu/api/v1/courses/1177926/files/44384329\" data-api-returntype=\"File\"\u003e C++ Classes—Data and Member Functions—Part 1\u003c/h2\u003e\r\n\u003ch3\u003eC++ Classes: Data and Member Functions\u003c/h3\u003e\r\n\u003ch4\u003eClass Definition\u003c/h4\u003e\r\n\u003cp\u003eIn the last two lessons, we studied the class and its variants, the structure and the union. We learned that we can use such data types to encapsulate both data and functions to represent real-world entities and to model their behavior. Let's now move inside the class and examine its members in greater detail. We'll begin with the class definition. Recall from our last lesson that a typical class is defined as follows:\u003c/p\u003e\r\n\u003cpre\u003eclass Name\r\n{\r\npublic:\r\n    constructor(s)\r\n    destructor\r\n    member functions\r\n    data members\r\n\r\nprotected:\r\n    member functions\r\n    data members\r\n\r\nprivate:\r\n    member functions\r\n    data members\r\n};\u003c/pre\u003e\r\n\u003ch4\u003eData Members\u003c/h4\u003e\r\n\u003cp\u003eLet's start with the declaration of an instance of a class. Each such new instance gets distinct copies of all data members. We see that the class definition acts as a prototype. It identifies to the compiler how to put together the pieces that make up the class. After creation, the constructor then initializes each of the data members, as shown below:\u003c/p\u003e\r\n\u003cpre\u003e//  Define a simple class   \r\nclass IntValue\r\n{\r\npublic:\r\n    IntValue() : myValue(10) { }\r\n    int getValue() { return myValue; }\r\n    void setValue(int value) { myValue = value; }\r\n\r\nprivate:\r\n    int myValue;\r\n};\r\n\r\nTEST(DataMembers, SimpleClass)\r\n{\r\n    //  Declare two instances of the class\r\n    IntValue inst0;\r\n    IntValue inst1;\r\n\r\n    //  Change the data member in one of them\r\n    inst1.setValue(20);\r\n\r\n    CHECK_EQUAL(10, inst0.getValue());\r\n    CHECK_EQUAL(20, inst1.getValue());\r\n}\u003c/pre\u003e\r\n\u003ch4\u003eMember Functions\u003c/h4\u003e\r\n\u003cp\u003e\u003cstrong\u003ethis Pointer\u003c/strong\u003e\u003c/p\u003e\r\n\u003cp\u003eUnlike data members, there is only one instance of each member function for a class. One question comes to mind immediately: If there is only a single instance of each member function, how does the member function know which instance member data to manipulate? Like many things in C++, it's done with pointers.\u003c/p\u003e\r\n\u003cp\u003eRemember that C++ class members may be objects from other classes, pointers to objects from other classes, and pointers to objects of their own class. Pointers of the latter type give us self reference.\u003c/p\u003e\r\n\u003cp\u003eSelf reference lets us reference a member without explicit reference to the object, as shown:\u003c/p\u003e\r\n\u003cpre\u003eCircle c1;\r\nc1.getDiameter();\u003c/pre\u003e\r\n\u003cp\u003eIn this example, \u003ccode\u003ec1\u003c/code\u003e is the instance we want the member function \u003ccode\u003egetDiameter()\u003c/code\u003e to operate on. How does this function know to get the diameter of circle \u003ccode\u003ec1\u003c/code\u003e? What is not shown is that the member function has a hidden argument. That argument is a pointer to the object receiving the message. The pointer is identified by the keyword \u003ccode\u003ethis\u003c/code\u003e.\u003c/p\u003e\r\n\u003cp\u003eThe \u003ccode\u003ethis\u003c/code\u003e pointer has type \u003ccode\u003eClassType\u003c/code\u003e and points to the starting address of the object for which the function was called. That is, it contains the address of the class instance through which the member function was invoked. As we've seen with arrays, the starting address is the same as the address of the first variable in the class structure. Every non static class member function has an implicitly passed this pointer, as shown below:\u003c/p\u003e\r\n\u003cpre\u003eClassName* const this;\u003c/pre\u003e\r\n\u003cp\u003eThe pointer, \u003ccode\u003ethis\u003c/code\u003e, is initialized to the address of the object for which the member function was invoked. Because \u003ccode\u003ethis\u003c/code\u003e is declared constant, it cannot be assigned another pointer. The object pointed at can be modified, however. One way to implement such a mechanism is to translate each member function into a non-member function with an additional parameter, the \u003ccode\u003ethis\u003c/code\u003e pointer, as shown below:\u003c/p\u003e\r\n\u003cp\u003e\u003cspan class=\"style1\"\u003emyFunction()\u003c/span\u003e \u003ci\u003etranslated to our conceptual view becomes\u003c/i\u003e \u003cspan class=\"style2\"\u003emyFunction(MyClass* const this)\u003c/span\u003e\u003c/p\u003e\r\n\u003cp\u003eEach invocation of the function actually invokes the modified function as follows:\u003c/p\u003e\r\n\u003cp\u003e\u003cspan class=\"style2\"\u003emyInstance.myFunction()\u003c/span\u003e \u003ci\u003etranslated to our conceptual view becomes\u003c/i\u003e \u003cspan class=\"style2\"\u003emyFunction(\u0026amp;myInstance)\u003c/span\u003e\u003c/p\u003e\r\n\u003cp\u003eBecause this is a pointer to the beginning of the class structure, we can select elements using pointer notation:\u003c/p\u003e\r\n\u003cpre\u003emyFunction() \u003cstrong\u003e\u003ci\u003etranslated to our conceptual view becomes\u003c/i\u003e\u003c/strong\u003e myFunction(MyClass* const this)\r\n{\r\n    this-\u0026gt;myElement\r\n}\u003c/pre\u003e\r\n\u003cp\u003eC++ implicitly passes the this pointer to every non-static class member function. This means you don't need to explicitly pass the this pointer to a member function. C++ does it for you behind the scenes.\u003c/p\u003e\r\n\u003cp\u003eThe linked list is made up of a collections of nodes, that is, instances of the class Node. One of Node's two member functions, \u003ccode\u003eappend\u003c/code\u003e, \u003ccode\u003eappend\u003c/code\u003e, is used to attach a new node to the list. The linking process requires a node—L\u003csub\u003ei\u003c/sub\u003e, for example—to set its \u003ccode\u003enext \u003c/code\u003epointer to the address of the new node and to tell the new node to set its \u003ccode\u003eprev\u003c/code\u003e pointer to refer back to L\u003csub\u003ei\u003c/sub\u003e. We accomplish this by sending the message \u003ccode\u003esetPrev\u003c/code\u003e with an argument of\u003ccode\u003e this\u003c/code\u003e to the new node. The argument will, of course, be referring to L\u003csub\u003ei\u003c/sub\u003e, which is what we want.\u003c/p\u003e\r\n\u003cpre\u003eclass Node\r\n{\r\npublic:\r\n    void append(Node* aNode);\r\n    void setPrev(Node* aNode);\r\n \r\nprivate:\r\n    Node* next;\r\n    Node* prev;\r\n};\r\n \r\nvoid Node::append(Node* aNode)\r\n{\r\n    next = aNode;\r\n    aNode-\u0026gt;setPrev(this);\r\n    return;\r\n}\u003c/pre\u003e\r\n\u003cp\u003eWe now see how each class member functions has access to instance data members.\u003c/p\u003e\r\n\u003ch3\u003eGeneral Object Layout Object Layout\u003c/h3\u003e\r\n\u003cp\u003eLet's now look at how a class appears in memory. We can determine the size of the class by using the operator. The size of a class is the amount of storage necessary to represent all of the components of the class, including any unused padding space the compiler adds between or after the the data members to align bytes and words properly. The general rule is that the class must terminate on the same alignment boundary (in memory) on which it started. If it began on an even byte boundary, it must terminate on an even byte boundary. Like each dimension in an array, the variables are laid out in the order in which they are defined in the class. The final size, internal padding, and alignment are compiler-dependent. Code for member functions are not used in calculating the size of a class.\u003c/p\u003e\r\n\u003ch4\u003eUsing Access Specifiers\u003c/h4\u003e\r\n\u003cp\u003eIn an earlier lesson, we learned about using access specifiers to control access to class members. These are intended to be used at compile time. All information disappears during runtime, and all of the restrictions have been applied. We want to catch things earlier rather than later. At runtime, an object is merely a chunk of storage. When access specifiers are used, the overall organization of the class may change; however, within a particular access block (again like each dimension of an array), variables are guaranteed to be laid out contiguously. Access blocks may not appear in the order declared, and there is no specific rule. Some particular machines may require a special location for private or protected members.\u003c/p\u003e\r\n\u003ch3\u003eManaging Storage\u003c/h3\u003e\r\n\u003ch4\u003eObject Creation\u003c/h4\u003e\r\n\u003cp\u003eWhen a C++ object is created, two events occur: (1) storage is allocated for the object and (2) the constructor is called to initialize the storage. Storage allocation occurs in several ways and at different times. \u003cspan class=\"keyterm\"\u003eStatic storage\u003c/span\u003e is allocated when the program begins and remains at a constant location for the life of the program. Storage is allocated on the \u003cem\u003estack\u003c/em\u003e whenever an execution point is reached (as defined by an opening curly brace) and is released at the complementary execution point (as defined by the closing curly brace).\u003c/p\u003e\r\n\u003cp\u003eStorage may also be dynamically allocated from the \u003cem\u003eheap\u003c/em\u003e or \u003cem\u003efree store\u003c/em\u003e at runtime. The programmer is responsible for its allocation (\u003ccode\u003enew\u003c/code\u003e) and deallocation (\u003ccode\u003edelete\u003c/code\u003e).\u003c/p\u003e\r\n\u003ch4\u003eDeclaration\u003c/h4\u003e\r\n\u003cp\u003eA declaration introduces a name into scope and tells the compiler what the name means. Examples include a function prototype or a class declaration. A class declares the class member daa defines the class member Declarations usually go into header files (the .h files) and no storage is allocated.\u003c/p\u003e\r\n\u003cpre\u003e// class declaration - not only member function signatures and member data provided - provided in file \"Widget.h\"\r\nclass Widget\r\n{\r\npublic:\r\n    Widget(const Point\u0026amp; location);\r\n    ~Widget();\r\n        \r\n    void draw();\r\n        \r\nprivate:\r\n    Point myLocation;\r\n};\r\n        \u003c/pre\u003e\r\n\u003ch4\u003eDefinition\u003c/h4\u003e\r\n\u003cp\u003eA definition provides the function and member function code. The function definitions usually go into implementation files (the \u003ccode\u003e.cpp\u003c/code\u003e files).\u003c/p\u003e\r\n\u003cpre\u003e// Widget definitions - provided in Widget.cpp\r\n#include \"Widget.h\"\r\n\r\nWidget::Widget(const Point\u0026amp; location)\r\n    : myLocation(location)\r\n{\r\n}\r\n\r\nWidget::~Widget()\r\n{\r\n}\r\n\r\nWidget::draw()\r\n{\r\n    // draw the widget at its location\r\n}\u003c/pre\u003e\r\n\u003cp\u003eGet into the habit of creating two source files for each class. Create a .h file for the class declaration. Then create a .cpp file for the class definitions. Name the files with the class name. For example, declare class CellPhone in CellPhone.h and define it in CellPhone.cpp. This convention makes it easy for clients to know which header file to include to use the class as well as making it easy to find the source files each class is defined in.\u003c/p\u003e\r\n\u003ch4\u003eLinkage\u003c/h4\u003e\r\n\u003cp\u003e\u003cspan class=\"keyterm\"\u003eLinkage\u003c/span\u003e describes storage, created to represent an identifier, as seen by the linker. Ordinarily, any name at file scope is visible throughout all translation units in a program. Such visibility is often referred to as \u003cspan class=\"keyterm\"\u003eexternal linkage\u003c/span\u003e because, at link time, the name can be seen by the linker from anywhere, external to that translation unit. We can think of a translation unit as the \u003ccode\u003e.cpp\u003c/code\u003e file (plus all the files it #includes) where the declaration occurred.\u003c/p\u003e\r\n\u003cp\u003eVariables defined outside of functions (except those declared constant and certain function definitions) default to external linkage. In C++, a const variable defaults to internal linkage and always requires initialization. If we need to reference it from another file, we define it as extern, as shown below:\u003c/p\u003e\r\n\u003cpre\u003eextern const myValue = 2;\u003c/pre\u003e\r\n\u003cp\u003eInitialization forces storage to be allocated and the declaration now becomes a definition. A single piece of storage, to be used for all files being compiled, is accessed from other files by the keyword \u003ccode\u003eextern\u003c/code\u003e.\u003c/p\u003e\r\n\u003cp\u003eStorage created for an identifier in the file being compiled is said to have \u003cspan class=\"keyterm\"\u003einternal linkage\u003c/span\u003e if the name can be used in other files without conflict. If a variable is explicitly declared as \u003ccode\u003estatic\u003c/code\u003e, it is also given internal linkage. Inline functions have internal linkage and, as noted, so do \u003ccode\u003econst\u003c/code\u003e variables.\u003c/p\u003e\r\n\u003cp\u003eAutomatic (local) variables exist on the stack while a function is being called. The linker does not know about automatic variables. They have no linkage.\u003c/p\u003e\r\n\u003ch4\u003eInline Functions\u003c/h4\u003e\r\n\u003cp\u003eAs we've seen, C++ permits the specification of inline functions. We often use these in place of the old style C \u003ccode\u003e#define\u003c/code\u003e macros. Such functions are identified by the inline keyword; the definition of the function follows according to the following syntax:\u003c/p\u003e\r\n\u003cpre\u003einline type functionName (argsi) { body }\u003c/pre\u003e\r\n\u003cp\u003eThe code for the inline funtion is not compiled when the inline function is defined. Instead when the compiler encounters a call to the inline function, the compiler replaces the inline function call with the actual code from the function The function must be defined before it can be used.\u003c/p\u003e\r\n\u003cp\u003eSince the code for inline functions is copied every time the function is called the size of the program gets larger. Inline functions results in larger executable files. The inline function declaration is a hint to the compiler. The compiler does not have to honor the hint, but will if it can. If the function gets large or complicated the compiler may choose to not to inline the function.\u003c/p\u003e\r\n\u003cpre\u003e// The function min will be expanded inline\r\ninline int min(int v1, int v2)\r\n{\r\n    return (v1 \u0026lt;= v2 ? v1 : v2);\r\n}\r\n\r\nstruct Array\r\n{\r\n    Array() : size(10) {}\r\n    Array(int aValue);           //  Implemented as a function call\r\n    int getSize() const;         //  Implemented as an inline function call\r\n    int size;\r\n};\r\n\r\nArray::Array(int aValue)\r\n{\r\n    size = aValue;\r\n}\r\n \r\n//  The keyword inline requests the compiler\r\n//  to substitute the body of the function\r\n//  where ever it appears.\r\n//\r\n//  How many times will that be for this function?\r\n \r\ninline int Array::getSize() const\r\n{\r\n    return size;\r\n}\r\n \r\nTEST(inline, ClassExample)\r\n{\r\n    int i=2, j=3;\r\n    int minValue = min(i,j);\r\n    //  Is expanded to:\r\n    //  int minValue= (i \u0026lt;= j) ? i:j\r\n \r\n    CHECK_EQUAL(2, minValue)\r\n \r\n    Array c(3);\r\n    Array b;\r\n\r\n    // call inline function\r\n    CHECK_EQUAL(3, c.getSize());\r\n    CHECK_EQUAL(10, b.getSize());\r\n}\u003c/pre\u003e\r\n\u003cp\u003eNow why would you want to inline? An inline function removes the overhead of a function call. This can in rare instances improve the user perceivable performance of a program. You should only inline when you have measured performance before and after inlining and note a performance improvement that is significant enough to benefit the user of the application.\u003c/p\u003e\r\n\u003ch3\u003eClass Data Members\u003c/h3\u003e\r\n\u003ch4\u003eStatic Data Members\u003c/h4\u003e\r\n\u003cp\u003eAs we've learned, a class is a type. When an instance of a class is defined, that instance gets a copy of all data members.\u003c/p\u003e\r\n\u003cp\u003eIt is sometimes useful to be able to share some data among all instances of a class. When data is shared, we want only a single copy of that data accessible to all class instances.\u003c/p\u003e\r\n\u003cp\u003eIf a data member is declared \u003ccode\u003estatic\u003c/code\u003e, then we have only a single copy shared by all instances of the class.\u003c/p\u003e\r\n\u003cp\u003eWe may view such sharing graphically. Let's say we have a class, \u003ccode\u003eA\u003c/code\u003e, with two data members, one a \u003ccode\u003echar\u003c/code\u003e and the other a \u003ccode\u003estatic int\u003c/code\u003e.\u003c/p\u003e\r\n\u003cp class=\"title\"\u003e\u003cimg src=\"https://canvas.uw.edu/courses/1177926/files/44384285/preview\" alt=\"c++711s06fig6-01.gif\" width=\"230\" height=\"74\" data-api-endpoint=\"https://canvas.uw.edu/api/v1/courses/1177926/files/44384285\" data-api-returntype=\"File\"\u003e\u003c/p\u003e\r\n\u003cp\u003eIf we now create four instances of class A, we have the situation:\u003c/p\u003e\r\n\u003cp class=\"title\"\u003e\u003cimg src=\"https://canvas.uw.edu/courses/1177926/files/44384258/preview\" alt=\"c++711s06fig6-02.gif\" width=\"169\" height=\"169\" data-api-endpoint=\"https://canvas.uw.edu/api/v1/courses/1177926/files/44384258\" data-api-returntype=\"File\"\u003e\u003c/p\u003e\r\n\u003cp\u003eEach class instance has its own copy of the \u003ccode\u003echar\u003c/code\u003e, as we'd expect. All classes share the single copy of the integer member.\u003c/p\u003e\r\n\u003cp\u003eA static member exists even if no class instances exist, but it remains in the scope of class. The common variable(s) can only be accessed from outside if declared public. Access must be qualified by the class name. That is, if \u003ccode\u003emyStatVar\u003c/code\u003e is a static variable in class \u003ccode\u003eA\u003c/code\u003e, then we must write\u003c/p\u003e\r\n\u003cpre\u003eA::myStatVar\u003c/pre\u003e\r\n\u003cp\u003eto refer to it.\u003c/p\u003e\r\n\u003ch4\u003eInitialization\u003c/h4\u003e\r\n\u003cp\u003eStorage for a static variable must be explicitly reserved and initialized. A static variable can be declared within a class. The definition and initialization (if required) must occur \u003cspan class=\"bold\"\u003eoutside\u003c/span\u003e the class. There can be only a single definition. As in C, static (nonclass) variables are initialized to 0 by default. Syntax is as follows:\u003c/p\u003e\r\n\u003cp\u003eDeclaration:\u003c/p\u003e\r\n\u003cpre\u003e static varType varName;\u003c/pre\u003e\r\n\u003cp\u003eDefinition:\u003c/p\u003e\r\n\u003cpre\u003e varType ClassName :: varName \u0026lt; = value \u0026gt; ;\u003c/pre\u003e\r\n\u003cpre\u003e// Classes: Members - Static Data Members\r\n// Static data members are shared by all\r\n// instances of a class\r\n\r\nusing namespace std;\r\n\r\nclass SimpleClass\r\n{\r\npublic:\r\n    SimpleClass(int aValue) : myValue(aValue) { ourReferenceCount++; }\r\n    SimpleClass() : myValue(0) { ourReferenceCount++; }\r\n\r\n    ~SimpleClass() { ourReferenceCount--; }\r\n\r\n    void setValue(int aValue)\r\n    {\r\n        myValue = aValue;\r\n    }\r\n\r\n    int getValue() { return myValue; }\r\n\r\n    // The static members are not part of a single instance\r\n    // of the class but is shared by all instances\r\n    // of the class.\r\n    //\r\n    // The declaration of the static variable is\r\n    // not a definition. The definition is required\r\n    // to be elsewhere.\r\n    static int ourReferenceCount;\r\n\r\nprivate:\r\n    int myValue;\r\n};\r\n\r\n// Define and initialize the static variables\r\n// We must do this outside of the class (normally in the .cpp file with the\r\n// class function definitions\r\nint SimpleClass::ourReferenceCount = 0;\r\n\r\nTEST(StaticMemberData, Class)\r\n{\r\nSimpleClass myClass;\r\n    SimpleClass yourClass;\r\n\r\n    CHECK_EQUAL(0, myClass.getValue());\r\n\r\n    // static members can be accessed\r\n    // with or without an object instance\r\n\r\n    // Access through a class instance - prints a\r\n    CHECK_EQUAL(2, myClass.ourReferenceCount);\r\n\r\n    // Access without a class instance\r\n    CHECK_EQUAL(2, SimpleClass::ourReferenceCount);\r\n\r\n    {\r\n        SimpleClass anotherOne;\r\n        CHECK_EQUAL(3, SimpleClass::ourReferenceCount);\r\n    }\r\n\r\n    CHECK_EQUAL(2, SimpleClass::ourReferenceCount);\r\n}\u003c/pre\u003e\r\n\u003cp\u003eA static data member can appear as a default argument to a member function; a non-static cannot.\u003c/p\u003e\r\n\u003cp\u003eWithin a class body we have the following declarations:\u003c/p\u003e\r\n\u003cpre\u003eclass XYZ\r\n{\r\npublic:\r\n    int myValue;\r\n    static int myReferenceCount;\r\n \r\n    int f1 (int myValue0 = myValue);            //  illegal\r\n    int f2 (int myValue1 = myReferenceCount);   //  ok\r\n};\u003c/pre\u003e\r\n\u003cp\u003eA static data member can be an instance of the class of which it is a member; a non-static data member can only point to an instance.\u003c/p\u003e\r\n\u003cp\u003eLet's define the following class:\u003c/p\u003e\r\n\u003cpre\u003eclass F1\r\n{\r\npublic:\r\n    F1* a;        // Declare a pointer of type self - ok\r\n    static F1 b;  // Declare instance of self - ok, static\r\n    F1 c;         // Declare instance of self - illegal\r\n};\u003c/pre\u003e\r\n\u003cp\u003eWhy can a static data member of a class be of the same type as the class? Why is this not a recursive definition? Think about how many instances of the static data exist.\u003c/p\u003e\r\n\u003cp\u003eThe advantages of static data members include the preservation of information hiding. The variable can be made protected or private. Also, the name is not entered into global name space—there are no name conflicts.\u003c/p\u003e\r\n\u003ch4\u003eConst Data Members\u003c/h4\u003e\r\n\u003cp\u003eA data member can be specified as \u003ccode\u003econst\u003c/code\u003e. As a consequence, storage always is allocated and must be initialized at the point of definition. For a class, storage is not allocated until the instance is created. That is the point at which the \u003ccode\u003econst\u003c/code\u003e must be created and initialized. A \u003ccode\u003econst\u003c/code\u003e variable persists for the lifetime of the instance. Initialization must occur in the constructor, which we accomplish via the initialization list.\u003c/p\u003e\r\n\u003cpre\u003e// Classes Members - const 1.0\r\n// Const Data Members\r\n\r\nusing namespace std;\r\n\r\nclass Count\r\n{\r\npublic:\r\n    Count (int limit = 5, int initial = 0) :\r\n        upper (limit),\r\n        count (initial)\r\n    {\r\n    }\r\n\r\n    int count;\r\n\r\n    // this is a compile error cannot modify a const member\r\n    // void incLimit() { upper++; }\r\n\r\nbool increment()\r\n{\r\n    ++count;\r\n    return count == upper;\r\n}\r\n\r\nprivate:\r\n    const int upper;\r\n};\r\n\r\nTEST(constMembers, Class)\r\n{\r\n    int expected[] = { 1, 2, 3, 4 };\r\n    Count myCount;\r\n    for (int i = 0; !myCount.increment(); ++i)\r\n    {\r\n        CHECK_EQUAL(expected[i], myCount.count);\r\n    }\r\n}\u003c/pre\u003e\r\n\u003ch3\u003eClass Member Functions\u003c/h3\u003e\r\n\u003ch4\u003eStatic Member Functions\u003c/h4\u003e\r\n\u003cp\u003eLike data members, member functions can be declared static. The major difference between static and non-static functions is that the static member functions have no \u003ccode\u003ethis\u003c/code\u003e pointer. Without such a pointer, a static function can directly access only static members (which exist independent of the class) and enums and typedefs defined in the scope of the class. The enums and typedefs are shared amongst all instances—they are not regular data members in the sense that they are not stored with each instance but in a common area.\u003c/p\u003e\r\n\u003cp\u003eA static function can indirectly access a non-static data member using either the dot or pointer notation through an explicit object. Attempts to directly access non-static members result in a compile error. Like static data members, a static function member can be invoked outside of the class if public. In a similar way, we must use the scope operator.\u003c/p\u003e\r\n\u003cp\u003eIf \u003ccode\u003eb()\u003c/code\u003e is a static function in class \u003ccode\u003eA\u003c/code\u003e, the function is accessed by writing\u003c/p\u003e\r\n\u003cpre\u003eA::b()\u003c/pre\u003e\r\n\u003cp\u003eUnlike the static data members, the function body does not have to be written outside of the class. Constructors and destructors cannot be static.\u003c/p\u003e\r\n\u003cp\u003e\"Why have static functions? They seem rather useless,\" you might be asking. Not so. Like static data members, the function name is bound to the class. Thus, their use will not pollute global namespace. The visibility of the function name is also controlled by the access specifiers.\u003c/p\u003e\r\n\u003cp\u003e\"Okay, I'm convinced—why not just use a regular member function.\" Keep in mind, this discussion began with static data members—pool variables. Remember, these exist without a class instance being created. Static functions are intended to be used in conjunction with pool variables, not to replace regular member functions. We can then manipulate the shared variables without creating a class instance that may be of no immediate use.\u003c/p\u003e\r\n\u003cp\u003eLet's see how these work.\u003c/p\u003e\r\n\u003cpre\u003e// Classes: Members - Static Data Members\r\n// Static data members are shared by all\r\n// instances of a class\r\n\r\nusing namespace std;\r\n\r\nclass ReferenceCountedClass\r\n{\r\npublic:\r\n    ReferenceCountedClass(int aValue) : myValue(aValue) { ourReferenceCount++; }\r\n    ReferenceCountedClass() : myValue(0) { ourReferenceCount++; }\r\n\r\n    ~ReferenceCountedClass() { ourReferenceCount--; }\r\n\r\n    void setValue(int aValue)\r\n    {\r\n        myValue = aValue;\r\n    }\r\n\r\n    int getValue() { return myValue; }\r\n\r\n    static int getReferenceCount() { return ourReferenceCount; }\r\n\r\nprivate:\r\n    int myValue;\r\n\r\n    // Declare a private static data member\r\n    static int ourReferenceCount;\r\n};\r\n\r\n// Define and initialize the static variables\r\n// We must do this outside of the class (normally in the .cpp file with the\r\n// class function definitions\r\nint ReferenceCountedClass::ourReferenceCount = 0;\r\n\r\nTEST(StaticMemberFunction, Class)\r\n{\r\n    ReferenceCountedClass myClass;\r\n    ReferenceCountedClass yourClass;\r\n\r\n    CHECK_EQUAL(0, myClass.getValue());\r\n\r\n    // static members functions can be accessed\r\n    // with or without an object instance\r\n\r\n    // Access through a class instance - prints a\r\n    CHECK_EQUAL(2, myClass.getReferenceCount());\r\n\r\n    CHECK_EQUAL(2, ReferenceCountedClass::getReferenceCount());\r\n\r\n    {\r\n        ReferenceCountedClass anotherOne;\r\n        CHECK_EQUAL(3, ReferenceCountedClass::getReferenceCount());\r\n    }\r\n\r\n    CHECK_EQUAL(2, ReferenceCountedClass::getReferenceCount());\r\n}\u003c/pre\u003e\r\n\u003ch4\u003eConst Member Functions\u003c/h4\u003e\r\n\u003cp\u003eThe keyword \u003ccode\u003econst\u003c/code\u003e can be placed after the argument list in the member function declaration, using the following syntax:\u003c/p\u003e\r\n\u003cpre\u003ereturnType functionName ( argsi ) const { function body }\u003c/pre\u003e\r\n\u003cp\u003eSuch a declaration tells the compiler that the function can only read data members—it cannot write them. Member functions declared \u003ccode\u003econst\u003c/code\u003e can be called for non-\u003ccode\u003econst\u003c/code\u003e objects, but non-\u003ccode\u003econst\u003c/code\u003e member functions cannot be called for \u003ccode\u003econst\u003c/code\u003e objects.\u003c/p\u003e\r\n\u003cpre\u003e// Classes Members - Const 1.1\r\n// Const Class Instances\r\nusing namespace std;\r\n\r\nclass Measurement\r\n{\r\npublic:\r\n    Measurement(int aValue)\r\n        : myValue(aValue)\r\n    {\r\n    }\r\n\r\n    int getValue() const\r\n    {\r\n        return myValue;\r\n    }\r\n\r\n    void setValue(\r\n        int aValue)\r\n    {\r\n        myValue = aValue;\r\n    }\r\n\r\n#if 0\r\n    // won't compile - can not modify member data in const member function\r\n    void setValue(\r\n        int aValue) const\r\n    {\r\n        myValue = aValue;\r\n    }\r\n#endif\r\n\r\nprivate:\r\n    int myValue;\r\n};\r\n\r\n// common usage of const member functions. Class instance passed to\r\n// function by const reference. This means function is only allowed to\r\n// \"read\" the class. Only const member functions may be called.\r\n//\r\n// Passing instances by const reference is very common\r\nint getMeasurement(\r\n    const Measurement\u0026amp; measurement)\r\n{\r\n#if 0\r\n    // illegal - can't call non const member function on const instance\r\n    measurement.setValue(44);\r\n#endif\r\n\r\n    return measurement.getValue();\r\n}\r\n\r\nTEST(constMemberFunctions, Class)\r\n{\r\n    Measurement m(1);\r\n\r\n    CHECK_EQUAL(1, m.getValue());\r\n    CHECK_EQUAL(1, getMeasurement(m));\r\n}\u003c/pre\u003e\r\n\u003ch3\u003eSummary\u003c/h3\u003e\r\n\u003cp\u003eIn this lesson, we moved our study inside the C++ class. We took our first look at how the class and its members are put together by the compiler, when variables are initialized, and their visibility within the program at link time. We learned that each class instance has its own copy of all (non-static) class data members and shares a common embodiment of each member function, linked to the instance through the \u003ccode\u003ethis\u003c/code\u003e pointer. We also looked at the two member qualifiers, \u003ccode\u003estatic\u003c/code\u003e and \u003ccode\u003econst\u003c/code\u003e, and studied how they affect both data and functions.\u003c/p\u003e\r\n\u003ch3\u003ePractice Questions\u003c/h3\u003e\r\n\u003cp\u003eTest your understanding of the concepts in Lesson 6 by working through the following practice questions, then check your answers with \u003ca id=\"\" class=\"\" title=\"Answers to Practice Questions for Lesson 6\" href=\"https://canvas.uw.edu/courses/1177926/pages/answers-to-practice-questions-for-lesson-6\" data-api-endpoint=\"https://canvas.uw.edu/api/v1/courses/1177926/pages/answers-to-practice-questions-for-lesson-6\" data-api-returntype=\"Page\"\u003eAnswers to Practice Questions for Lesson 6\u003c/a\u003e.\u003c/p\u003e\r\n\u003col\u003e\r\n\u003cli\u003eDoes each C++ class instance have its own copy of all member functions?\u003c/li\u003e\r\n\u003cli\u003eCan I use the \u003ccode\u003ethis\u003c/code\u003e pointer?\u003c/li\u003e\r\n\u003cli\u003eCan I use the \u003ccode\u003ethis\u003c/code\u003e pointer to point to another object?\u003c/li\u003e\r\n\u003cli\u003eWhat's the difference between internal and external linkage?\u003c/li\u003e\r\n\u003cli\u003eWhat kind of linkage do auto variables have?\u003c/li\u003e\r\n\u003cli\u003eCan you make the following declaration in a class?\u003ccode\u003e\u003cbr\u003e static int myVar = 34\u003c/code\u003e\n\u003c/li\u003e\r\n\u003cli\u003eCan you make the following declaration in a class?\u003ccode\u003estatic int myFunc() {return myVal;}\u003c/code\u003e\n\u003c/li\u003e\r\n\u003cli\u003eWhy doesn't the following result in infinite recursion and consumption of all memory?\r\n\u003cpre\u003eclass F1\r\n{\r\n    public:\r\n    static F1 b;\r\n};\u003c/pre\u003e\r\n\u003c/li\u003e\r\n\u003cli\u003eHow do you initialize a \u003ccode\u003econst\u003c/code\u003e variable in a class?\u003c/li\u003e\r\n\u003c/ol\u003e"},"WIKI_PAGE_REVISION":"3","WIKI_PAGE_SHOW_PATH":"/courses/1177926/pages/lesson-6","WIKI_PAGE_EDIT_PATH":"/courses/1177926/pages/lesson-6/edit","WIKI_PAGE_HISTORY_PATH":"/courses/1177926/pages/lesson-6/revisions","COURSE_ID":"1177926","MODULES_PATH":"/courses/1177926/modules","wiki_page_menu_tools":[],"DISPLAY_SHOW_ALL_LINK":false,"STUDENT_PLANNER_ENABLED":true,"badge_counts":{"submissions":0},"notices":[]};
+</script>
+
+<script src="./Lesson 6_files/navigation_header.bundle-017c3050c4.js" defer="defer"></script>
+<script src="./Lesson 6_files/default.js" defer="defer"></script>
+<script src="./Lesson 6_files/custom.js" defer="defer"></script>
+
+</div> <!-- #application -->
+
+
+<div id="nav-tray-portal" style="position: relative; z-index: 99;"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ally-helper-hidden-accessible"></div></body></html>
