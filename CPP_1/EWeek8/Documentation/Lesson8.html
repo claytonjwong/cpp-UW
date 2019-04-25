@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)https://canvas.uw.edu/courses/1177926/pages/lesson-8?module_item_id=7889561 -->
+<html class="" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Lesson 8: CPROGRM 711 A Wi 18: C++ Programming: Introduction</title>
+  <!--[if lte IE 9]> <meta http-equiv=refresh content="0; URL=/ie-9-is-not-supported.html" /> <![endif]-->
+  <link rel="shortcut icon" type="image/x-icon" href="https://instructure-uploads.s3.amazonaws.com/account_100000000083919/attachments/37312004/favicon.ico?AWSAccessKeyId=AKIAJFNFXH2V2O7RPCAA&amp;Expires=1939374366&amp;Signature=lNl7iuCda9spDgRONbwVvr490LM%3D&amp;response-cache-control=Cache-Control%3Amax-age%3D473364000.0%2C%20public&amp;response-expires=473364000.0">
+  <link rel="apple-touch-icon" href="https://instructure-uploads.s3.amazonaws.com/account_100000000083919/attachments/37312005/Canvas-MobileHome.png?AWSAccessKeyId=AKIAJFNFXH2V2O7RPCAA&amp;Expires=1939374366&amp;Signature=jwVDIJvM6uIaOoE%2FSW94uwVcHU0%3D&amp;response-cache-control=Cache-Control%3Amax-age%3D473364000.0%2C%20public&amp;response-expires=473364000.0">
+  
+  <link rel="stylesheet" media="all" href="./Lesson8_files/variables-750d72b9d3e5d522f965bf904110c132.css">
+  <link rel="stylesheet" media="all" href="./Lesson8_files/common-86216310b2.css">
+  <script type="text/javascript" async="" src="./Lesson8_files/ga.js.download"></script><script>
+//<![CDATA[
+
+!function(){
+  var o,s,v;
+  if (!(window.Promise && Object.assign && Object.values && [].find && [].includes && (o={},s=Symbol(),v={},o[s]=v,o[s]===v) && (function f(){}).bind().name==='bound f')) {
+    s = 's', document.write('<'+s+'cr'+'ipt src="https://du11hjcvx0uqb.cloudfront.net/dist/ie11-polyfill-eaf1bda494.js"></'+s+'c'+'ript>');
+  }
+}();
+      
+//]]>
+</script>
+  <script src="./Lesson8_files/lato-fontfaceobserver-c00bea249f.js.download" async="async"></script>
+  
+  <meta name="apple-itunes-app" content="app-id=480883488">
+<link rel="manifest" href="https://canvas.uw.edu/web-app-manifest/manifest.json">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#008EE2">
+  <link rel="stylesheet" media="all" href="./Lesson8_files/wiki_page-46e7e026f6.css">
+  
+  <link rel="stylesheet" media="all" href="./Lesson8_files/custom.css">
+<link rel="stylesheet" media="all" href="./Lesson8_files/custom(1).css">
+  <script>
+    function _earlyClick(e){
+      var c = e.target
+      while (c && c.ownerDocument) {
+        if (c.getAttribute('href') == '#' || c.getAttribute('data-method')) {
+          e.preventDefault()
+          (_earlyClick.clicks = _earlyClick.clicks || []).push(c)
+          break
+        }
+        c = c.parentNode
+      }
+    }
+    document.addEventListener('click', _earlyClick)
+  </script>
+  <script src="./Lesson8_files/variables-750d72b9d3e5d522f965bf904110c132.js.download" defer="defer"></script>
+  <script src="./Lesson8_files/vendor.bundle-16fa28ed31.js.download" defer="defer"></script>
+<script src="./Lesson8_files/Los_Angeles-d9cac65c52.js.download" defer="defer"></script>
+<script src="./Lesson8_files/en_US-80a0ce259b.js.download" defer="defer"></script>
+<script src="./Lesson8_files/appBootstrap.bundle-f039780dee.js.download" defer="defer"></script>
+<script src="./Lesson8_files/common.bundle-8ff48ce8b9.js.download" defer="defer"></script>
+<script src="./Lesson8_files/wiki_page_show.bundle-6315293570.js.download" defer="defer"></script>
+<style type="text/css"></style></head>
+
+<body class="with-left-side course-menu-expanded padless-content pages primary-nav-transitions context-course_1177926 lato-font-not-loaded-yet show webkit chrome touch">
+
+<noscript>
+  &lt;div role="alert" class="ic-flash-static ic-flash-error"&gt;
+    &lt;div class="ic-flash__icon" aria-hidden="true"&gt;
+      &lt;i class="icon-warning"&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;h1&gt;You need to have JavaScript enabled in order to access this site.&lt;/h1&gt;
+  &lt;/div&gt;
+</noscript>
+
+
+
+
+
+<ul id="flash_message_holder"></ul>
+<div id="flash_screenreader_holder" role="alert" aria-live="assertive" aria-relevant="additions" class="screenreader-only" aria-atomic="false"></div>
+
+<div id="application" class="ic-app">
+  
+  <header id="header" class="ic-app-header no-print ">
+    <a href="https://canvas.uw.edu/courses/1177926/pages/lesson-8?module_item_id=7889561#content" id="skip_navigation_link">Skip To Content</a>
+      <div role="region" class="ic-app-header__main-navigation" aria-label="Global Navigation">
+        <div class="ic-app-header__logomark-container">
+          <a href="https://canvas.uw.edu/" class="ic-app-header__logomark">
+            <span class="screenreader-only">Dashboard</span>
+          </a>
+        </div>
+        <ul id="menu" class="ic-app-header__menu-list">
+            <li class="menu-item ic-app-header__menu-list-item ">
+              <a id="global_nav_profile_link" href="https://canvas.uw.edu/profile" class="ic-app-header__menu-list-link">
+                <div class="menu-item-icon-container" aria-hidden="true">
+                  <div class="ic-avatar ">
+                    <img src="./Lesson8_files/mSs2TjTESYscSzrackhgoJvAT79xbNchamHPrSec" alt="Clayton Wong">
+                  </div>
+                </div>
+                <div class="menu-item__text">
+                  Account
+                </div>
+              </a>
+            </li>
+          <li class="ic-app-header__menu-list-item ">
+            <a id="global_nav_dashboard_link" href="https://canvas.uw.edu/" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--dashboard" version="1.1" x="0" y="0" viewBox="0 0 280 200" enable-background="new 0 0 280 200" xml:space="preserve"><path d="M273.09,180.75H197.47V164.47h62.62A122.16,122.16,0,1,0,17.85,142a124,124,0,0,0,2,22.51H90.18v16.29H6.89l-1.5-6.22A138.51,138.51,0,0,1,1.57,142C1.57,65.64,63.67,3.53,140,3.53S278.43,65.64,278.43,142a137.67,137.67,0,0,1-3.84,32.57ZM66.49,87.63,50.24,71.38,61.75,59.86,78,76.12Zm147,0L202,76.12l16.25-16.25,11.51,11.51ZM131.85,53.82v-23h16.29v23Zm15.63,142.3a31.71,31.71,0,0,1-28-16.81c-6.4-12.08-15.73-72.29-17.54-84.25a8.15,8.15,0,0,1,13.58-7.2c8.88,8.21,53.48,49.72,59.88,61.81a31.61,31.61,0,0,1-27.9,46.45ZM121.81,116.2c4.17,24.56,9.23,50.21,12,55.49A15.35,15.35,0,1,0,161,157.3C158.18,152,139.79,133.44,121.81,116.2Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">Dashboard</div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ic-app-header__menu-list-item--active">
+            <a id="global_nav_courses_link" href="https://canvas.uw.edu/courses" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--courses" version="1.1" x="0" y="0" viewBox="0 0 280 259" enable-background="new 0 0 280 259" xml:space="preserve"><path d="M73.31,198c-11.93,0-22.22,8-24,18.73a26.67,26.67,0,0,0-.3,3.63v.3a22,22,0,0,0,5.44,14.65,22.47,22.47,0,0,0,17.22,8H200V228.19h-134V213.08H200V198Zm21-105.74h90.64V62H94.3ZM79.19,107.34V46.92H200v60.42Zm7.55,30.21V122.45H192.49v15.11ZM71.65,16.71A22.72,22.72,0,0,0,49,39.36V190.88a41.12,41.12,0,0,1,24.32-8h157V16.71ZM33.88,39.36A37.78,37.78,0,0,1,71.65,1.6H245.36V198H215.15v45.32h22.66V258.4H71.65a37.85,37.85,0,0,1-37.76-37.76Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Courses
+              </div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_calendar_link" href="https://canvas.uw.edu/calendar" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--calendar" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M197.07,213.38h16.31V197.07H197.07Zm-16.31,16.31V180.76h48.92v48.92Zm-48.92-16.31h16.31V197.07H131.85Zm-16.31,16.31V180.76h48.92v48.92ZM66.62,213.38H82.93V197.07H66.62ZM50.32,229.68V180.76H99.24v48.92Zm146.75-81.53h16.31V131.85H197.07Zm-16.31,16.31V115.54h48.92v48.92Zm-48.92-16.31h16.31V131.85H131.85Zm-16.31,16.31V115.54h48.92v48.92ZM66.62,148.15H82.93V131.85H66.62ZM50.32,164.46V115.54H99.24v48.92ZM34,262.29H246V82.93H34ZM246,66.62V42.16A8.17,8.17,0,0,0,237.84,34H213.38v8.15a8.15,8.15,0,1,1-16.31,0V34H82.93v8.15a8.15,8.15,0,0,1-16.31,0V34H42.16A8.17,8.17,0,0,0,34,42.16V66.62Zm-8.15-48.92a24.49,24.49,0,0,1,24.46,24.46V278.6H17.71V42.16A24.49,24.49,0,0,1,42.16,17.71H66.62V9.55a8.15,8.15,0,0,1,16.31,0v8.15H197.07V9.55a8.15,8.15,0,1,1,16.31,0v8.15Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Calendar
+              </div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_conversations_link" href="https://canvas.uw.edu/conversations" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--inbox" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M91.72,120.75h96.56V104.65H91.72Zm0,48.28h80.47V152.94H91.72Zm0-96.56h80.47V56.37H91.72Zm160.94,34.88H228.52V10.78h-177v96.56H27.34A24.17,24.17,0,0,0,3.2,131.48V244.14a24.17,24.17,0,0,0,24.14,24.14H252.66a24.17,24.17,0,0,0,24.14-24.14V131.48A24.17,24.17,0,0,0,252.66,107.34Zm0,16.09a8.06,8.06,0,0,1,8,8v51.77l-32.19,19.31V123.44ZM67.58,203.91v-177H212.42v177ZM27.34,123.44H51.48v79.13L19.29,183.26V131.48A8.06,8.06,0,0,1,27.34,123.44ZM252.66,252.19H27.34a8.06,8.06,0,0,1-8-8V202l30,18H230.75l30-18v42.12A8.06,8.06,0,0,1,252.66,252.19Z"></path></svg>
+
+                <span class="menu-item__badge" style="display: none">0</span>
+              </div>
+              <div class="menu-item__text">
+                Inbox
+              </div>
+            </a>
+          </li>
+            
+
+
+          <li class="ic-app-header__menu-list-item">
+           <a id="global_nav_help_link" class="ic-app-header__menu-list-link" data-track-category="help system" data-track-label="help button" href="http://help.instructure.com/">
+              <div class="menu-item-icon-container" role="presentation">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg menu-item__icon svg-icon-help" version="1.1" x="0" y="0" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve" fill="currentColor"><path d="M100,127.88A11.15,11.15,0,1,0,111.16,139,11.16,11.16,0,0,0,100,127.88Zm8.82-88.08a33.19,33.19,0,0,1,23.5,23.5,33.54,33.54,0,0,1-24,41.23,3.4,3.4,0,0,0-2.74,3.15v9.06H94.42v-9.06a14.57,14.57,0,0,1,11.13-14,22.43,22.43,0,0,0,13.66-10.27,22.73,22.73,0,0,0,2.31-17.37A21.92,21.92,0,0,0,106,50.59a22.67,22.67,0,0,0-19.68,3.88,22.18,22.18,0,0,0-8.65,17.64H66.54a33.25,33.25,0,0,1,13-26.47A33.72,33.72,0,0,1,108.82,39.8ZM100,5.2A94.8,94.8,0,1,0,194.8,100,94.91,94.91,0,0,0,100,5.2m0,178.45A83.65,83.65,0,1,1,183.65,100,83.73,83.73,0,0,1,100,183.65" transform="translate(-5.2 -5.2)"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Help
+              </div>
+</a>          </li>
+        </ul>
+      </div>
+      <div class="ic-app-header__secondary-navigation">
+        <ul class="ic-app-header__menu-list">
+          <li class="menu-item ic-app-header__menu-list-item">
+            <button id="primaryNavToggle" class="ic-app-header__menu-list-link ic-app-header__menu-list-link--nav-toggle" aria-label="
+                Expand global navigation
+                " title="
+                Expand global navigation
+                ">
+              <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--navtoggle" version="1.1" x="0" y="0" width="40" height="32" viewBox="0 0 40 32" xml:space="preserve">
+  <path d="M39.5,30.28V2.48H37.18v27.8Zm-4.93-13.9L22.17,4,20.53,5.61l9.61,9.61H.5v2.31H30.14l-9.61,9.61,1.64,1.64Z"></path>
+</svg>
+
+            </button>
+          </li>
+        </ul>
+      </div>
+    <div id="global_nav_tray_container"><noscript data-reactid=".0"></noscript></div>
+  </header>
+
+
+  <div id="instructure_ajax_error_box">
+    <div style="text-align: right; background-color: #fff;"><a href="https://canvas.uw.edu/courses/1177926/pages/lesson-8?module_item_id=7889561#" class="close_instructure_ajax_error_box_link">Close</a></div>
+    <iframe id="instructure_ajax_error_result" src="./Lesson8_files/saved_resource.html" style="border: 0;" title="Error"></iframe>
+  </div>
+
+  
+
+  <div id="wrapper" class="ic-Layout-wrapper">
+      <div class="ic-app-nav-toggle-and-crumbs no-print">
+          <button type="button" id="courseMenuToggle" class="Button Button--link ic-app-course-nav-toggle" aria-live="polite" aria-label="Hide Courses Navigation Menu" title="Hide Courses Navigation Menu">
+            <i class="icon-hamburger" aria-hidden="true"></i>
+          </button>
+          <div class="ic-app-crumbs">
+        <nav id="breadcrumbs" role="navigation" aria-label="breadcrumbs"><ul><li class="home"><a href="https://canvas.uw.edu/"><span class="ellipsible">      <i class="icon-home" title="My Dashboard">
+        <span class="screenreader-only">My Dashboard</span>
+      </i>
+</span></a></li><li><a href="https://canvas.uw.edu/courses/1177926"><span class="ellipsible">CPROGRM 711 A</span></a></li><li><a href="https://canvas.uw.edu/courses/1177926/pages"><span class="ellipsible">Pages</span></a></li><li><span class="ellipsible">Lesson 8</span></li></ul></nav>
+        </div>
+      </div>
+    <div id="main" class="ic-Layout-columns">
+        <div class="ic-Layout-watermark"></div>
+        <div id="left-side" class="ic-app-course-menu list-view" style="display: block">
+              <span id="section-tabs-header-subtitle" class="ellipsis">Winter 2018</span>
+            <nav role="navigation" aria-label="Courses Navigation Menu"><ul id="section-tabs"><li class="section"><a href="https://canvas.uw.edu/courses/1177926" title="Home" class="home" tabindex="0">Home</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/announcements" title="Announcements" class="announcements" tabindex="0">Announcements</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/modules" title="Modules" class="modules" tabindex="0">Modules</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/discussion_topics" title="Discussions" class="discussions" tabindex="0">Discussions</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/grades" title="Grades" class="grades" tabindex="0">Grades</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/users" title="People" class="people" tabindex="0">People</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/external_tools/12299" title="UW Libraries" class="context_external_tool_12299" tabindex="0">UW Libraries</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/external_tools/57145" title="Info &amp; Help" class="context_external_tool_57145" tabindex="0">Info &amp; Help</a></li></ul></nav>
+        </div>
+      <div id="not_right_side" class="ic-app-main-content">
+        <div id="content-wrapper" class="ic-Layout-contentWrapper">
+            
+
+          <div id="content" class="ic-Layout-contentMain" role="main">
+            
+
+  
+
+<div id="wiki_page_show">
+<div class="header-bar-outer-container">
+  <div class="header-bar-container sticky-toolbar sticky" data-sticky="">
+    <div class="header-bar flex-container">
+      <div class="header-bar-left header-left-flex">
+        
+          
+        
+      </div>
+      <div class="header-bar-right header-right-flex">
+        
+          
+          
+            
+          
+        
+        
+          
+        
+        
+      </div>
+    </div>
+    <div class="page-changed-alert" role="alert" aria-atomic="true" aria-live="polite"></div>
+  </div>
+</div>
+
+
+<div class="show-content user_content clearfix enhanced">
+  <h1 class="page-title">Lesson 8</h1>
+  
+    <h2>
+<img src="./Lesson8_files/preview" alt="L08.png" width="50" height="50" data-api-endpoint="https://canvas.uw.edu/api/v1/courses/1177926/files/44384321" data-api-returntype="File" style="max-width: 945px;">&nbsp;Extending the Language Through Inheritance—Part 1</h2>
+<h3>Key Terms</h3>
+<ul>
+<li>abstract data type (ADT)</li>
+<li>subclass or derived classes</li>
+<li>single inheritance</li>
+<li>multiple inheritance</li>
+<li>abstract super class or abstract base class (ABC)</li>
+<li>public derivation</li>
+<li>private derivation</li>
+<li>protected derivation</li>
+</ul>
+<h3>Data Abstraction and Abstract Data Types</h3>
+<p>An <span class="keyterm">abstract data type</span> (<span class="keyterm">ADT</span>) is an encapsulated data type that is accessible only through a well-defined interface. Its properties are defined by its interface, not by its internal structure or implementation. The same ADT can be implemented in different ways at different times; the change does not affect the client code that uses it. It is this sense that makes the data type abstract. Its properties are defined by its interface; the implementation details are abstracted away.</p>
+<p>Data abstraction is an effective technique for extending a predefined type system when one has a single clearly defined concept such as complex number, string, or sorted collection. In other cases, an ADT is close to what is needed. If we have a collection of types similar in implementation and meaning, yet not identical, what do we do? We'll see that inheritance is a useful technique for augmenting data abstraction.</p>
+<h3>Inheritance</h3>
+<p>In C++, inheritance is a mechanism for building class types from other class types; that is, for defining new class types to be a specialization or augmentation of existing types. Inheritance is a familiar concept. We inherit characteristics, properties, and capabilities from our parents. In biology, we have</p>
+<ul>
+<li>kingdom
+<ul>
+<li>phylum
+<ul>
+<li>class
+<ul>
+<li>order
+<ul>
+<li>family
+<ul>
+<li>genus
+<ul>
+<li>species</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Consider a vehicle hierarchy. At the top of the hierarchy, we have Vehicles. From these, among others, we derive LandBased Vehicles, and from these, we have Bicycles and Automobiles.</p>
+<p>In C++ we use the class as a means of encapsulating data and functions shared by members of the class. In our Vehicle hierarchy, we see that each entity is also a class. Such subgroupings, with respect to a parent, are called <span class="keyterm">subclasses</span> or <span class="keyterm">derived classes,</span> yet each is still a class. The derived class inherits all the characteristics, properties, and capabilities of the parent. It can modify or extend the inherited abilities as it chooses to.</p>
+<p>Observe that we actually have two hierarchies: one shows the classes (abstractions) and the second shows the instances (concrete). The instance hierarchy, we see, follows the class hierarchy.</p>
+<p><img src="./Lesson8_files/preview(1)" alt="vehicle hierarchy" width="259" height="125" data-api-endpoint="https://canvas.uw.edu/api/v1/courses/1177926/files/44384325" data-api-returntype="File" style="max-width: 945px;"></p>
+<h3>Class and Instance Hierarchy</h3>
+<p>As we've noted, the instance hierarchy follows the class hierarchy. Such a hierarchy may take any one of several forms. The simplest is <span class="keyterm">single inheritance</span>. Each class or instance object has a single parent. LandBased Vehicle has two offspring, but each has only a single parent. Vehicle is a parent, or base, class; LandBased is a derived, or child, class.</p>
+<p><img src="./Lesson8_files/preview(2)" alt="single inheritance" width="421" height="266" data-api-endpoint="https://canvas.uw.edu/api/v1/courses/1177926/files/44384248" data-api-returntype="File" style="max-width: 945px;"></p>
+<p>In a <span class="keyterm">multiple inheritance</span> hierarchy, classes inherit from multiple base classes. Multiple inheritance thereby defines a relationship between several (independent) class types.</p>
+<p>Consider the portion of the Vehicle hierarchy shown in figure 8.3. The derived class AutoBoat inherits attributes and properties from both Automobile and Motor Boat.</p>
+<p>If we look at this hierarchy, we can see a potential problem with multiple inheritance. The derived class AutoBoat inherits attributes and properties from Automobile, Motor Boat, and Vehicle. Thus, it can inherit the same attribute from its various ancestors. Thus in this scenario we need to disambiguate between these attributes. C++ provides virtual inheritance to ensure that only a single copy of inherited members appears in the child. A better solution is to construct class heirarchies which avoid this problem entirely.</p>
+<p>Below we see one case of multiple inheritance. Although at one level there are multiple parents, there is, as we see, also a common ancestor.</p>
+<p><img src="./Lesson8_files/preview(3)" alt="inheritance" width="240" height="289" data-api-endpoint="https://canvas.uw.edu/api/v1/courses/1177926/files/44384267" data-api-returntype="File" style="max-width: 945px;"></p>
+<p>We can also have inheritance without a common parent. In this case, Motor Boat inherits from two independent classes: Vehicle and Taxable Item.</p>
+<p class="title">Inheritance without a Common Parent</p>
+<p><img src="./Lesson8_files/preview(4)" alt="inheritance without a common parent" width="289" height="217" data-api-endpoint="https://canvas.uw.edu/api/v1/courses/1177926/files/44384250" data-api-returntype="File" style="max-width: 945px;"></p>
+<h3>Derivation Hierarchy</h3>
+<p>In the vehicle hierarchy, the class Vehicle is an abstraction. It represents an encapsulation of common properties and attributes. However, we cannot actually create an instance of a Vehicle. Its definition is incomplete. Each derived class adds something to the definition. Its sole purpose is to define a class from which to derive other classes. Such an encapsulation defines a common set of data members and function members. Subsequent derivations may modify the data and function members by refining them, adding new ones, or overriding the existing ones. Such a class is called an <span class="keyterm">abstract super class</span> or <span class="keyterm">abstract base class</span> (<span class="keyterm">ABC</span>).</p>
+<h3>Abstract Super Class</h3>
+<p>A key element in the derivation hierarchy is that all derived classes share a common set of class members inherited from an abstract super class (at the moment, we're talking about single inheritance). These members provide a common public interface to the class hierarchy.</p>
+<p>If we look from the bottom up, an abstract super class can be created when two classes share part of their description. Neither is properly a subclass of the other. In such a case, we have created a mutual superclass that contains the shared aspects. It's not intended to have instances in the traditional sense; rather, it provides a means to hold common members.</p>
+<h3>C++ Class Derivation</h3>
+<p>Any class can serve as a base class, and thus a derived class can also be a base class. We can see, then, that it's worth spending time at the outset of a design to develop a sound definition. In C++, the class derivation specification is written as follows:</p>
+<p>Syntax</p>
+<p>class DerivedClassName : specification BaseClassName</p>
+<p><code>DerivedClassName </code>-the class being derived</p>
+<p>specification - specifies access to the base class members</p>
+<p>public</p>
+<p>protected</p>
+<p>private</p>
+<p>- private by default</p>
+<p>Let</p>
+<p>class A be derived from base class B or C</p>
+<p>class B be public</p>
+<p>class C be private</p>
+<p>We write</p>
+<p>class A : public B</p>
+<p>class A : private C</p>
+<p>The meaning of the specification,</p>
+<pre>class A : public B</pre>
+<p>is: in class A, the inherited public members of B appear as public members of A. If myValue is a public data member of B, myValue can be accessed publicly through instances of A.</p>
+<p>Declare an instance of class A:</p>
+<pre>A d;
+d.myValue;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //&nbsp; ok</pre>
+<p>The specification</p>
+<pre>class A : private B</pre>
+<p>means in class A, the inherited public members of B appear as private members of A. If myValue is a public data member of B, myValue cannot be accessed publicly and directly through instances of A.<br> Declare an instance of class A:</p>
+<pre>A d;
+d.myValue;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //&nbsp; compile error</pre>
+<p>Function members of A can still access public members of B as public.</p>
+<p class="title">Construction of an Instance of Type C</p>
+<p><img src="./Lesson8_files/preview(5)" alt="construction of an instance of type C" width="375" height="228" data-api-endpoint="https://canvas.uw.edu/api/v1/courses/1177926/files/44384326" data-api-returntype="File" style="max-width: 945px;"></p>
+<h4>Deriving Objects</h4>
+<p>In a derivation hierarchy, objects are created from the inside out. Consider the class hierarchy,</p>
+<pre>class A { }
+class B : public A { }
+class C : public B { }</pre>
+<p>The compiler will build the A portion first, then the B, and will complete with the C part. This process is illustrated in figure 8.5.</p>
+<p>Objects are destructed from the outside in. An instance of type C is destructed as we see in figure 8.6, below: first the C part, then the B, and finally the A subobject.</p>
+<p class="title">Destruction of an Instance of Type C</p>
+<p><img src="./Lesson8_files/preview(6)" alt="destruction of an instance of type C" width="341" height="225" data-api-endpoint="https://canvas.uw.edu/api/v1/courses/1177926/files/44384254" data-api-returntype="File" style="max-width: 945px;"></p>
+<p><br> Let's look at an example of a public derivation with the initialization of the base and derived parts within the class declarations.</p>
+<pre>//&nbsp;Classes Derivation - Single Inheritance Example
+//&nbsp;Simple Inheritance
+ 
+class BaseClass1
+{
+public:
+    BaseClass1()
+        : baseValue(20)
+    {
+    }
+
+    int getBaseValue() const
+    {
+        return baseValue;
+    }
+
+    void setBaseValue(int aValue)
+    {
+        baseValue = aValue;
+    }
+
+private:
+    int baseValue;
+};
+ 
+//&nbsp;A public derivation from BaseClass1
+class DerivedClass1 : public BaseClass1
+{
+public:
+    DerivedClass1(int derivedValue)
+        : derivedValue(derivedValue)
+    {
+    }
+
+    int getDerivedValue() const
+    {
+        return derivedValue;
+    }
+
+    void setDerivedValue(int aValue)
+    {
+        derivedValue = aValue;
+    }
+  
+private:
+    int derivedValue;
+};
+
+TEST(Subclass1, Class)
+{
+    //&nbsp;&nbsp;Declare instances of the base and child classes
+    BaseClass1 base;
+    DerivedClass1 derived(10);
+    derived.setBaseValue(15);
+ 
+    CHECK_EQUAL(20, base.getBaseValue());
+    CHECK_EQUAL(15, derived.getBaseValue());
+    CHECK_EQUAL(10, derived.getDerivedValue());
+}
+</pre>
+<h3>Derived Class Constructors and Destructors</h3>
+<p>Constructors and destructors are not inherited. Derived class initialization and deinitialization are implemented as series of base and derived class constructor calls. Different constructors and destructors collaborate to complete the tasks as we saw in the previous section. When a derived object is instantiated, memory is allocated for the base object and the added parts.</p>
+<p>Initialization occurs in two stages: the base class constructors are invoked to initialize the base objects, and the derived class constructor is used to complete the task. The derived class constructor specifies the appropriate base class constructor in the initialization list. If there is no constructor in the base class, the compiler-created default constructor is used. If the base class is derived, the procedure is applied recursively.</p>
+<h4>Inherited Member Initialization</h4>
+<p>To initialize member data in a base class, chain a call to the appropriate base class constructor within the derived class constructor's initializer list. For example:</p>
+<pre>Single Base Class
+ 
+DerivedClass(derivedClass args) : BaseClass (baseClass args)
+{
+    DerivedClass constructor body
+}</pre>
+<p>The set of derived class constructor arguments may contain initialization values for the base class arguments.</p>
+<h4>Simple Public Derivation</h4>
+<p>The example below shows how to use the initialization list to initialize base class members to a default value or to one that is passed in.</p>
+<pre>//&nbsp;Classes Derivation - Single Inheritance Example
+// Chaining base class constructors to derived classes constructors
+ 
+class BaseClass2
+{
+public:
+    BaseClass2(int value)
+        : baseValue(value)
+    {
+    }
+
+    int getBaseValue() const
+    {
+        return baseValue;
+    }
+
+private:
+    int baseValue;
+};
+ 
+//&nbsp;A public derivation from BaseClass2
+class DerivedClass2 : public BaseClass2
+{
+public:
+    DerivedClass2(int baseValue, int derivedValue)
+        : BaseClass2(baseValue),
+        derivedValue(derivedValue)
+    {
+    }
+
+    int getDerivedValue()
+    {
+        return derivedValue;
+    }
+
+    void setDerivedValue(int aValue)
+    {
+        derivedValue = aValue;
+    }
+  
+private:
+    int derivedValue;
+};
+
+TEST(Subclass2, Class)
+{
+    //&nbsp;&nbsp;Declare instances of the base and child classes
+    BaseClass2 base(20);
+    DerivedClass2 derived(15, 10);
+ 
+    CHECK_EQUAL(20, base.getBaseValue());
+    CHECK_EQUAL(15, derived.getBaseValue());
+    CHECK_EQUAL(10, derived.getDerivedValue());
+}</pre>
+<h4>Simple Public Derivation</h4>
+<p>The example below shows how to use the initialization list to initialize the base class—doing the initializing on definition.</p>
+<pre>//&nbsp;Classes Derivation - Single Inheritance Example
+//&nbsp;Simple Inheritance - Base Class Initialization
+  
+class BaseClass3
+{
+public:
+    BaseClass3(int aValue = 20)
+        : baseValue(aValue)
+    {
+    }
+
+    int getBaseValue() const
+    {
+        return baseValue;
+    }
+
+private:
+    int baseValue;
+};
+
+class DerivedClass3 : public BaseClass3
+{
+public:
+    //&nbsp;&nbsp;Declare several different constructors
+    //&nbsp;&nbsp;Use default or passed in value for derived
+    //&nbsp;&nbsp;member initialization.&nbsp; Use default for base
+    
+    DerivedClass3(int aDerivedValue = 10);
+
+    //&nbsp;&nbsp;Pass in value for base and derived
+    //&nbsp;&nbsp;member initialization
+    DerivedClass3(int aDerivedValue, int aBaseValue);
+ 
+    int getDerivedValue() const
+    {
+        return derivedValue;
+    }
+
+    void setDerivedValue(int aValue)
+    {
+        derivedValue = aValue;
+    }
+                        
+private:
+    int derivedValue;
+};
+
+//&nbsp;The constructor for DerivedClass3 is used&nbsp;
+// to initialize the data member baseValue &nbsp; &nbsp;
+//&nbsp;of the base class to the constant value 15.
+DerivedClass3::DerivedClass3(int aValue):BaseClass3(15)
+{
+    derivedValue = aValue;
+}
+
+// The constructor for DerivedClass3 is used&nbsp;
+// to initialize the datamember baseValue of
+// the base class by chaining the BaseClass3 constructor to the DerivedClass3 constructor.
+//
+// This value is passed in as an argument of
+// the derived class constructor
+DerivedClass3::DerivedClass3(int aValue, int aBaseValue)
+    : BaseClass3(aBaseValue),
+    derivedValue(aValue)
+{
+}
+ 
+TEST(Subclass3, Class)
+{
+    BaseClass3 base;
+
+    //&nbsp;5 initializes the instance of the
+    // Derived Class and 35 initializes the
+    //&nbsp;data member inherited from the base class
+    DerivedClass3 child(5, 35);
+
+    CHECK_EQUAL(20, base.getBaseValue());
+    CHECK_EQUAL(35, child.getBaseValue());
+    CHECK_EQUAL(5, child.getDerivedValue());
+}</pre>
+<h4>Simple Public Derivation</h4>
+<p>The example below shows using initialization list to initialize base and derived class to default values or to ones that are passed in.</p>
+<pre>//&nbsp;Classes Derivation - Single Inheritance Example
+//&nbsp;Simple Inheritance - Default Initialization
+class BaseClass4
+{
+public:
+    BaseClass4(int aValue = 20)
+        : baseValue(aValue)
+    {
+    }
+
+    int getBaseValue() const
+    {
+        return baseValue;
+    }
+
+private:
+    int baseValue;
+};
+ 
+class DerivedClass4 : public BaseClass4
+{
+public:
+    DerivedClass4();
+    DerivedClass4(int aValue);
+ 
+    int getDerivedValue() const
+    {
+        return derivedValue;
+    }
+
+    void setDerivedValue(int aValue)
+    {
+        derivedValue = aValue;
+    }
+                       
+private:
+    int derivedValue;
+};
+
+//&nbsp;The constructor for DerivedClass4 is used
+// to supply default values to initialize the
+//&nbsp;DerivedClass4 and CaseClass data&nbsp; members.
+//&nbsp;Note the default constructor has no body.
+DerivedClass4::DerivedClass4() : derivedValue(15), BaseClass4(10)
+{
+};
+ 
+TEST(Subclass4, Class)
+{
+    BaseClass4 base;
+    DerivedClass4 child;
+
+    CHECK_EQUAL(20, base.getBaseValue());
+    CHECK_EQUAL(10, child.getBaseValue());
+    CHECK_EQUAL(15, child.getDerivedValue());
+}</pre>
+<h4>Simple Public Derivation</h4>
+<p>The example below illustrates the initialization chain within a class hierarchy.</p>
+<pre>//&nbsp;Classes Derivation - Single Inheritance Example
+//&nbsp;Simple Inheritance - Default Initialization
+//&nbsp;Inheritance / Initialization Chain
+
+class BaseClass5
+{
+public:
+    BaseClass5()
+    {
+        baseValue = 0;
+    }
+ 
+    BaseClass5(int aValue)
+    {
+    }
+
+    int getBaseValue() const
+    {
+        return baseValue;
+    }
+
+private:
+    int baseValue;
+};
+
+//&nbsp;DerivedClass5 publicly inherits from BaseClass5
+
+class DerivedClass5 : public BaseClass5
+{
+public:
+    DerivedClass5();
+    DerivedClass5(int aValue)
+    {
+        derivedValue1 = aValue;
+    }
+
+    int getDerivedValue1() const
+    {
+        return derivedValue1;
+    }
+
+private:
+    int derivedValue1;
+};
+ 
+//&nbsp;DerivedClass6 publicly inherits from
+//&nbsp;DerivedClass5
+
+class DerivedClass6 : public DerivedClass5
+{
+public:
+    DerivedClass6();
+    DerivedClass6(int aValue)
+    {
+        derivedValue2 = aValue;
+    }
+
+    int getDerivedValue2() const
+    {
+        return derivedValue2;
+    }
+
+private:
+    int derivedValue2;
+};
+ 
+//&nbsp;Default initializatoin of declared
+// and inherited data members of instances
+//&nbsp;of DerivedClass5
+
+DerivedClass5::DerivedClass5() : derivedValue1(11), BaseClass5(1)
+{
+}
+ 
+//&nbsp;Default initialization of declared&nbsp;
+// and inherited data members of
+// instances of DerivedClass6
+
+DerivedClass6::DerivedClass6() : derivedValue2(21),
+DerivedClass5(12)
+{
+}
+ 
+TEST(Subclass5, Class)
+{
+    BaseClass5 base;
+    DerivedClass6 child;
+
+    CHECK_EQUAL(0, base.getBaseValue());
+    CHECK_EQUAL(0, child.getBaseValue());
+    CHECK_EQUAL(12, child.getDerivedValue1());
+    CHECK_EQUAL(21, child.getDerivedValue2());
+}</pre>
+<h3>Member Access Under Derivation</h3>
+<p>We've seen that we use the base class to define the behaviors common to all classes within a hierarchy. There may be occasions, however, when a derived class needs to make slight changes to the inherited functionality. What do we do under such circumstances?</p>
+<p>The derived class can mask an inherited member overriding it. When we override a function, we use the same name and signature, but change the function body. Recall from our earlier discussions, overloading keeps the name, but changes the signature. We can override a data member simply by declaring a local data member with the same name.</p>
+<p>Let's look now at how class members are accessed, particularly if a derived class overrides one of its parents' members. We'll use the three-class hierarchy shown in the figure below.</p>
+<p class="title">A Three-Class Hierarchy</p>
+<p class="title"><img src="./Lesson8_files/preview(7)" alt="a three-class hierarchy" width="258" height="275" data-api-endpoint="https://canvas.uw.edu/api/v1/courses/1177926/files/44384260" data-api-returntype="File" style="max-width: 945px;"></p>
+<ul>
+<li>C1
+<ul>
+<li>Defines the base class members
+<ul>
+<li>Function</li>
+<li>Data</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>C2
+<ul>
+<li>Overrides c ( )</li>
+<li>Defines e ( )</li>
+</ul>
+</li>
+<li>C3
+<ul>
+<li>Overrides d ( )</li>
+</ul>
+</li>
+</ul>
+<p>If an instance of class C3 accesses the data member a, it will start with itself, won't find it, will go to C2, have no luck, then will go to C1, where it will find the value. The same process is followed for each of the other members as we see in Table.</p>
+<table style="width: 480px;" border="1"><tbody><tr>
+<td valign="top">
+<pre>a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;c2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c1
+b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c1
+c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c2
+d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self
+e&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c2</pre>
+</td>
+</tr></tbody></table>
+<p>In Example below, we override an inherited member to alter its behavior in a derived class.</p>
+<pre>//&nbsp;Classes Derivation - Single Inheritance Example
+//&nbsp;Simple Inheritance - Member Over riding
+
+class BaseClass7
+{
+public:
+    BaseClass7()
+        : baseValue0(20),
+        baseValue1(30)
+    {
+    }
+
+    int baseFunction() const
+    {
+        return 15;
+    }
+
+    int getBaseValue0() const
+    {
+        return baseValue0;
+    }
+ 
+    int getBaseValue1() const
+    {
+        return baseValue1;
+    }
+
+private:
+    int baseValue0;
+    int baseValue1;
+};
+ 
+//&nbsp;Instances of Derived Class mask the return
+//&nbsp;value of the inherited inherited function:&nbsp;
+//&nbsp;baseFunction().
+
+class DerivedClass7 : public BaseClass7
+{
+public:
+    DerivedClass7()
+        : derivedValue(10)
+    {
+    }
+ 
+    // Masking a base class member function is a bad idea.
+    // This makes the object behave differently when we access via
+    // a base class pointer.
+    // We'll learn the right way to do this later in the course
+    // with polymorphic (i.e., virtual) functions.
+    int baseFunction() const
+    {
+        return 27;
+    }
+ 
+    //&nbsp; Access DerivedClass7
+    int getDerivedValue() const
+    {
+        return derivedValue;
+    }
+
+    void setDerivedValue(int aValue)
+    {
+        derivedValue = aValue;
+    }
+ 
+private:
+    int derivedValue;
+};
+ 
+TEST(Subclass7, Class)
+{
+    BaseClass7 base;
+    DerivedClass7 child;
+
+    CHECK_EQUAL(20, base.getBaseValue0());
+    CHECK_EQUAL(20, child.getBaseValue0());
+    CHECK_EQUAL(15, base.baseFunction());
+    CHECK_EQUAL(10, child.getDerivedValue());
+
+    // Call member function through derived class
+    CHECK_EQUAL(27, child.baseFunction());
+
+    // Call member function through base class reference
+    // and we get a different result. This is because we've
+    // masked the base class method with a derived class method.
+    //
+    BaseClass7&amp; baseRef = child;
+    CHECK_EQUAL(15, baseRef.baseFunction());
+
+    // For now avoid masking as we want the same result regardless
+    // of whether we access through the derived class or via a base
+    // class reference.
+    //
+    // Later we'll learn how to use polymorphism to help
+    // us with this.
+}</pre>
+<p>The following rules govern member access within a class hierarchy under derivation.</p>
+<ul>
+<li>Access to inherited members by derived members and friends is independent of the base class designation in the derivation specification.
+<ul>
+<li>Access is allowed to all non-private inherited members</li>
+<li>Access is not allowed to private members (of the parent)</li>
+</ul>
+</li>
+<li>Access to inherited members by functions outside the derivation hierarchy is driven by the base class designation in the derivation specification. If the specification is
+<ul>
+<li>public: public members remain public and protected members remain protected.</li>
+<li>protected: inherited non-private members accessible as protected</li>
+<li>private: no outside access</li>
+</ul>
+</li>
+<li>Overriding—An inherited member that is normally visible can be masked
+<ul>
+<li>Define a derived class member with the same name</li>
+<li>This is not good practice with non-virtual functions (we'll talk about these in the next lesson).</li>
+</ul>
+</li>
+</ul>
+<p>Let's use a picture to see how this works. In this derivation, we'll only talk about public class members. In the figure below, we use red (solid) and green (dashed) bars to depict the visibility of public members inherited from the Base Class.</p>
+<p class="title">Member Access within a Class Hierarchy under Derivation</p>
+<p><img src="./Lesson8_files/preview(8)" alt="Member Access within a Class Hierarchy under Derivation" width="145" height="433" data-api-endpoint="https://canvas.uw.edu/api/v1/courses/1177926/files/44384328" data-api-returntype="File" style="max-width: 945px;"></p>
+<p>Observe in Derived Class 1 that the protected derivation blocks are outside the visibility of inherited members--yet they remain visible within the hierarchy. The private derivation of Derived Class 2 shuts off any further visibility of the inherited Base Class members even though Derived Class 3 is designated public. Derived Class 2 will have to provide an access function if one of the subsequently derived classes wishes to access any of the inherited Base Class members.</p>
+<h4>Derivation Guidelines</h4>
+<ul>
+<li>Derivation is not always the best way to extend the system.</li>
+<li>Use <span class="keyterm">public derivation</span> when the derived object is a kind of base class.</li>
+<li>Use <span class="keyterm">private derivation</span> when the derived object is not a kind of base class but derivation makes code development easier.</li>
+</ul>
+<h4>Base Class Member Access Specification Guidelines</h4>
+<p>Classes designed as base classes are the same as ordinary classes. You should declare function and data members intended to be inherited but not intended to be public as protected, and declare function members intended to be implemented by derived classes as virtual. (We'll discuss this in the last lesson.)</p>
+<h3>Member Layout</h3>
+<p>In an earlier lesson, we saw how single classes appeared in memory. Let's see what happens under inheritance. Consider the classes shown in the table below.</p>
+<h4>Single Inheritance</h4>
+<table style="width: 480px;" border="1"><tbody><tr>
+<td valign="top">
+<pre>struct A
+{
+    int a1;
+    void af();
+};</pre>
+</td>
+<td valign="top">
+<pre>struct B : A
+{
+    int b1;
+    void bf1();
+};&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </pre>
+</td>
+</tr></tbody></table>
+<p>As we saw earlier, an A pointer, A*, points to the starting address of the the A instance. If we derive struct B from A, then a B* points to the start of the B instance while A* points to the start of the A part. See Example 8.7, below.</p>
+<h4>Multiple Inheritance</h4>
+<table style="width: 480px;" border="1"><tbody><tr>
+<td valign="top">
+<pre>struct C
+{
+    int c1;
+    void cf ( );
+};</pre>
+</td>
+<td valign="top">
+<pre>struct D : A, C
+{
+    int d1;
+    void df1 ( );
+};</pre>
+</td>
+</tr></tbody></table>
+<p>For the case of multiple inheritance, a D* points to the start of the object, an A* identifies the A part, and a C* points to the C part. See Example 8.8, below.</p>
+<h3>Summary</h3>
+<p>We have begun to look at inheritance, or class derivation, as another tool for developing reusable designs. We looked at the concept of abstraction and then class hierarchies and the idea of derivation. We introduced the idea of abstract classes and discussed their purpose when designing a class hierarchy. Finally, we saw how to implement and use information hiding and encapsulation within a derivation hierarchy.</p>
+<h3>Practice&nbsp;Questions</h3>
+<p>Test your understanding of the concepts in Lesson 8 by working through&nbsp;the following practice questions, then check your answers with <a class="" title="Answers to Practice Questions for Lesson 8" href="https://canvas.uw.edu/courses/1177926/pages/answers-to-practice-questions-for-lesson-8" data-api-endpoint="https://canvas.uw.edu/api/v1/courses/1177926/pages/answers-to-practice-questions-for-lesson-8" data-api-returntype="Page">Answers to Practice Questions for Lesson 8</a>.</p>
+<ol>
+<li>What is a inheritance in C++?</li>
+<li>What is the difference between a class hierarchy and an instance hierarchy?</li>
+<li>What is an ABC?</li>
+<li>What does the derivation specification class A : protected B mean?</li>
+<li>How are base and derived class constructors and destructors invoked?</li>
+</ol>
+  
+</div>
+<div style=""><div class="module-sequence-padding"></div>
+<div class="module-sequence-footer" role="navigation" aria-label="Module Navigation">
+  <div class="module-sequence-footer-content">
+    
+      <a href="https://canvas.uw.edu/courses/1177926/modules/items/7889560" role="button" class="Button module-sequence-footer-button--previous" data-tooltip="right" data-html-tooltip-title="&lt;i class=&#39;icon-document&#39;&gt;&lt;/i&gt; Lesson 8 Overview and Materials" aria-describedby="msf0-previous-desc">
+        <i class="icon-mini-arrow-left"></i>Previous
+        <span id="msf0-previous-desc" class="hidden" hidden="">Previous: Lesson 8 Overview and Materials</span>
+      </a>
+    
+
+    
+      <span class="module-sequence-footer-button--next" data-tooltip="left" data-html-tooltip-title="&lt;i class=&#39;icon-assignment&#39;&gt;&lt;/i&gt; Assignment 8">
+        <a href="https://canvas.uw.edu/courses/1177926/modules/items/7889562" role="button" class="Button" aria-describedby="msf0-next-desc">
+          Next<i class="icon-mini-arrow-right"></i>
+          <span id="msf0-next-desc" class="hidden" hidden="">Next: Assignment 8</span>
+        </a>
+      </span>
+    
+  </div>
+</div>
+</div></div>
+
+          </div>
+        </div>
+        <div id="right-side-wrapper" class="ic-app-main-content__secondary">
+          <aside id="right-side" role="complementary">
+            
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <div style="display:none;"><!-- Everything inside of this should always stay hidden -->
+        <div id="page_view_id">c2c70c93-1805-48e4-90f2-148b3f35f288</div>
+    </div>
+  <div id="aria_alerts" class="hide-text affix" role="alert" aria-live="assertive"></div>
+  <div id="StudentTray__Container"></div>
+  
+
+<script>
+  INST = {"environment":"production","allowMediaComments":true,"kalturaSettings":{"domain":"nv.instructuremedia.com","resource_domain":"nv.instructuremedia.com","rtmp_domain":"fms-prod.instructuremedia.com","partner_id":"9","subpartner_id":"0","player_ui_conf":"0","kcw_ui_conf":"0","upload_ui_conf":"0","max_file_size_bytes":534773760,"do_analytics":false,"hide_rte_button":false,"js_uploader":true},"googleAnalyticsAccount":"UA-9138420-1","disableScribdPreviews":true,"logPageViews":true,"maxVisibleEditorButtons":3,"editorButtons":[{"name":"","id":21130,"url":"https://uw.hosted.panopto.com/Panopto/Pages/Sessions/embeddedupload.aspx","icon_url":"https://uw.hosted.panopto.com/Panopto/images/panopto_logo_globe.png","canvas_icon_class":null,"width":900,"height":700},{"name":"Modalis","id":52765,"url":"https://uw.modalis.io/lti","icon_url":"https://uw.modalis.io/assets/richicon.png","canvas_icon_class":null,"width":800,"height":600}]};
+  ENV = {"ASSET_HOST":"https://du11hjcvx0uqb.cloudfront.net","active_brand_config_json_url":"https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/2b2842738c86c4f2032e430bd0445cfc/variables-750d72b9d3e5d522f965bf904110c132.json","url_to_what_gets_loaded_inside_the_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/2b2842738c86c4f2032e430bd0445cfc/variables-750d72b9d3e5d522f965bf904110c132.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_normal_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-118d6c12e6.css"],"url_for_high_contrast_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/default/variables-high_contrast-750d72b9d3e5d522f965bf904110c132.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_high_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-32adfc2c62.css"],"current_user_id":"3757111","current_user_roles":["user","student"],"current_user_disabled_inbox":false,"files_domain":"cluster10-files.instructure.com","DOMAIN_ROOT_ACCOUNT_ID":100000000083919,"k12":false,"use_responsive_layout":false,"help_link_name":"Help","help_link_icon":"help","use_high_contrast":false,"LTI_LAUNCH_FRAME_ALLOWANCES":["geolocation *","microphone *","camera *","midi *","encrypted-media *"],"SETTINGS":{"open_registration":false,"eportfolios_enabled":true,"collapse_global_nav":true,"show_feedback_link":true,"enable_profiles":true},"current_user":{"id":"3757111","display_name":"Clayton Wong","avatar_image_url":"https://canvas.uw.edu/images/thumbnails/46487823/mSs2TjTESYscSzrackhgoJvAT79xbNchamHPrSec","html_url":"https://canvas.uw.edu/about/3757111"},"page_view_update_url":"/page_views/c2c70c93-1805-48e4-90f2-148b3f35f288?page_view_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpIjoiYzJjNzBjOTMtMTgwNS00OGU0LTkwZjItMTQ4YjNmMzVmMjg4IiwidSI6MTAwMDAwMDAzNzU3MTExLCJjIjoiMjAxOC0wMy0xOVQxODoyNTo1Mi4yNFoifQ.DgWn60_W4EIAiVLqHCysRULzN-wqm-wRVyGVJFI5dCY","context_asset_string":"course_1177926","ping_url":"https://canvas.uw.edu/api/v1/courses/1177926/ping","TIMEZONE":"America/Los_Angeles","CONTEXT_TIMEZONE":"America/Los_Angeles","GRAPHQL_ENABLED":true,"LOCALE":"en","BIGEASY_LOCALE":"en_US","FULLCALENDAR_LOCALE":"en","MOMENT_LOCALE":"en","WIKI_RIGHTS":{"read":true},"PAGE_RIGHTS":{"read":true},"DEFAULT_EDITING_ROLES":"teachers","WIKI_PAGES_PATH":"/courses/1177926/pages","WIKI_PAGE":{"title":"Lesson 8","created_at":"2017-10-18T21:04:15Z","url":"lesson-8","editing_roles":"teachers","page_id":"2573100","published":true,"hide_from_students":false,"front_page":false,"html_url":"https://canvas.uw.edu/courses/1177926/pages/lesson-8","updated_at":"2017-10-18T21:04:15Z","locked_for_user":false,"body":"\u003ch2\u003e\n\u003cimg src=\"https://canvas.uw.edu/courses/1177926/files/44384321/preview\" alt=\"L08.png\" width=\"50\" height=\"50\" data-api-endpoint=\"https://canvas.uw.edu/api/v1/courses/1177926/files/44384321\" data-api-returntype=\"File\"\u003e Extending the Language Through Inheritance—Part 1\u003c/h2\u003e\r\n\u003ch3\u003eKey Terms\u003c/h3\u003e\r\n\u003cul\u003e\n\u003cli\u003eabstract data type (ADT)\u003c/li\u003e\r\n\u003cli\u003esubclass or derived classes\u003c/li\u003e\r\n\u003cli\u003esingle inheritance\u003c/li\u003e\r\n\u003cli\u003emultiple inheritance\u003c/li\u003e\r\n\u003cli\u003eabstract super class or abstract base class (ABC)\u003c/li\u003e\r\n\u003cli\u003epublic derivation\u003c/li\u003e\r\n\u003cli\u003eprivate derivation\u003c/li\u003e\r\n\u003cli\u003eprotected derivation\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003ch3\u003eData Abstraction and Abstract Data Types\u003c/h3\u003e\r\n\u003cp\u003eAn \u003cspan class=\"keyterm\"\u003eabstract data type\u003c/span\u003e (\u003cspan class=\"keyterm\"\u003eADT\u003c/span\u003e) is an encapsulated data type that is accessible only through a well-defined interface. Its properties are defined by its interface, not by its internal structure or implementation. The same ADT can be implemented in different ways at different times; the change does not affect the client code that uses it. It is this sense that makes the data type abstract. Its properties are defined by its interface; the implementation details are abstracted away.\u003c/p\u003e\r\n\u003cp\u003eData abstraction is an effective technique for extending a predefined type system when one has a single clearly defined concept such as complex number, string, or sorted collection. In other cases, an ADT is close to what is needed. If we have a collection of types similar in implementation and meaning, yet not identical, what do we do? We'll see that inheritance is a useful technique for augmenting data abstraction.\u003c/p\u003e\r\n\u003ch3\u003eInheritance\u003c/h3\u003e\r\n\u003cp\u003eIn C++, inheritance is a mechanism for building class types from other class types; that is, for defining new class types to be a specialization or augmentation of existing types. Inheritance is a familiar concept. We inherit characteristics, properties, and capabilities from our parents. In biology, we have\u003c/p\u003e\r\n\u003cul\u003e\n\u003cli\u003ekingdom\r\n\u003cul\u003e\n\u003cli\u003ephylum\r\n\u003cul\u003e\n\u003cli\u003eclass\r\n\u003cul\u003e\n\u003cli\u003eorder\r\n\u003cul\u003e\n\u003cli\u003efamily\r\n\u003cul\u003e\n\u003cli\u003egenus\r\n\u003cul\u003e\n\u003cli\u003especies\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003cp\u003eConsider a vehicle hierarchy. At the top of the hierarchy, we have Vehicles. From these, among others, we derive LandBased Vehicles, and from these, we have Bicycles and Automobiles.\u003c/p\u003e\r\n\u003cp\u003eIn C++ we use the class as a means of encapsulating data and functions shared by members of the class. In our Vehicle hierarchy, we see that each entity is also a class. Such subgroupings, with respect to a parent, are called \u003cspan class=\"keyterm\"\u003esubclasses\u003c/span\u003e or \u003cspan class=\"keyterm\"\u003ederived classes,\u003c/span\u003e yet each is still a class. The derived class inherits all the characteristics, properties, and capabilities of the parent. It can modify or extend the inherited abilities as it chooses to.\u003c/p\u003e\r\n\u003cp\u003eObserve that we actually have two hierarchies: one shows the classes (abstractions) and the second shows the instances (concrete). The instance hierarchy, we see, follows the class hierarchy.\u003c/p\u003e\r\n\u003cp\u003e\u003cimg src=\"https://canvas.uw.edu/courses/1177926/files/44384325/preview\" alt=\"vehicle hierarchy\" width=\"259\" height=\"125\" data-api-endpoint=\"https://canvas.uw.edu/api/v1/courses/1177926/files/44384325\" data-api-returntype=\"File\"\u003e\u003c/p\u003e\r\n\u003ch3\u003eClass and Instance Hierarchy\u003c/h3\u003e\r\n\u003cp\u003eAs we've noted, the instance hierarchy follows the class hierarchy. Such a hierarchy may take any one of several forms. The simplest is \u003cspan class=\"keyterm\"\u003esingle inheritance\u003c/span\u003e. Each class or instance object has a single parent. LandBased Vehicle has two offspring, but each has only a single parent. Vehicle is a parent, or base, class; LandBased is a derived, or child, class.\u003c/p\u003e\r\n\u003cp\u003e\u003cimg src=\"https://canvas.uw.edu/courses/1177926/files/44384248/preview\" alt=\"single inheritance\" width=\"421\" height=\"266\" data-api-endpoint=\"https://canvas.uw.edu/api/v1/courses/1177926/files/44384248\" data-api-returntype=\"File\"\u003e\u003c/p\u003e\r\n\u003cp\u003eIn a \u003cspan class=\"keyterm\"\u003emultiple inheritance\u003c/span\u003e hierarchy, classes inherit from multiple base classes. Multiple inheritance thereby defines a relationship between several (independent) class types.\u003c/p\u003e\r\n\u003cp\u003eConsider the portion of the Vehicle hierarchy shown in figure 8.3. The derived class AutoBoat inherits attributes and properties from both Automobile and Motor Boat.\u003c/p\u003e\r\n\u003cp\u003eIf we look at this hierarchy, we can see a potential problem with multiple inheritance. The derived class AutoBoat inherits attributes and properties from Automobile, Motor Boat, and Vehicle. Thus, it can inherit the same attribute from its various ancestors. Thus in this scenario we need to disambiguate between these attributes. C++ provides virtual inheritance to ensure that only a single copy of inherited members appears in the child. A better solution is to construct class heirarchies which avoid this problem entirely.\u003c/p\u003e\r\n\u003cp\u003eBelow we see one case of multiple inheritance. Although at one level there are multiple parents, there is, as we see, also a common ancestor.\u003c/p\u003e\r\n\u003cp\u003e\u003cimg src=\"https://canvas.uw.edu/courses/1177926/files/44384267/preview\" alt=\"inheritance\" width=\"240\" height=\"289\" data-api-endpoint=\"https://canvas.uw.edu/api/v1/courses/1177926/files/44384267\" data-api-returntype=\"File\"\u003e\u003c/p\u003e\r\n\u003cp\u003eWe can also have inheritance without a common parent. In this case, Motor Boat inherits from two independent classes: Vehicle and Taxable Item.\u003c/p\u003e\r\n\u003cp class=\"title\"\u003eInheritance without a Common Parent\u003c/p\u003e\r\n\u003cp\u003e\u003cimg src=\"https://canvas.uw.edu/courses/1177926/files/44384250/preview\" alt=\"inheritance without a common parent\" width=\"289\" height=\"217\" data-api-endpoint=\"https://canvas.uw.edu/api/v1/courses/1177926/files/44384250\" data-api-returntype=\"File\"\u003e\u003c/p\u003e\r\n\u003ch3\u003eDerivation Hierarchy\u003c/h3\u003e\r\n\u003cp\u003eIn the vehicle hierarchy, the class Vehicle is an abstraction. It represents an encapsulation of common properties and attributes. However, we cannot actually create an instance of a Vehicle. Its definition is incomplete. Each derived class adds something to the definition. Its sole purpose is to define a class from which to derive other classes. Such an encapsulation defines a common set of data members and function members. Subsequent derivations may modify the data and function members by refining them, adding new ones, or overriding the existing ones. Such a class is called an \u003cspan class=\"keyterm\"\u003eabstract super class\u003c/span\u003e or \u003cspan class=\"keyterm\"\u003eabstract base class\u003c/span\u003e (\u003cspan class=\"keyterm\"\u003eABC\u003c/span\u003e).\u003c/p\u003e\r\n\u003ch3\u003eAbstract Super Class\u003c/h3\u003e\r\n\u003cp\u003eA key element in the derivation hierarchy is that all derived classes share a common set of class members inherited from an abstract super class (at the moment, we're talking about single inheritance). These members provide a common public interface to the class hierarchy.\u003c/p\u003e\r\n\u003cp\u003eIf we look from the bottom up, an abstract super class can be created when two classes share part of their description. Neither is properly a subclass of the other. In such a case, we have created a mutual superclass that contains the shared aspects. It's not intended to have instances in the traditional sense; rather, it provides a means to hold common members.\u003c/p\u003e\r\n\u003ch3\u003eC++ Class Derivation\u003c/h3\u003e\r\n\u003cp\u003eAny class can serve as a base class, and thus a derived class can also be a base class. We can see, then, that it's worth spending time at the outset of a design to develop a sound definition. In C++, the class derivation specification is written as follows:\u003c/p\u003e\r\n\u003cp\u003eSyntax\u003c/p\u003e\r\n\u003cp\u003eclass DerivedClassName : specification BaseClassName\u003c/p\u003e\r\n\u003cp\u003e\u003ccode\u003eDerivedClassName \u003c/code\u003e-the class being derived\u003c/p\u003e\r\n\u003cp\u003especification - specifies access to the base class members\u003c/p\u003e\r\n\u003cp\u003epublic\u003c/p\u003e\r\n\u003cp\u003eprotected\u003c/p\u003e\r\n\u003cp\u003eprivate\u003c/p\u003e\r\n\u003cp\u003e- private by default\u003c/p\u003e\r\n\u003cp\u003eLet\u003c/p\u003e\r\n\u003cp\u003eclass A be derived from base class B or C\u003c/p\u003e\r\n\u003cp\u003eclass B be public\u003c/p\u003e\r\n\u003cp\u003eclass C be private\u003c/p\u003e\r\n\u003cp\u003eWe write\u003c/p\u003e\r\n\u003cp\u003eclass A : public B\u003c/p\u003e\r\n\u003cp\u003eclass A : private C\u003c/p\u003e\r\n\u003cp\u003eThe meaning of the specification,\u003c/p\u003e\r\n\u003cpre\u003eclass A : public B\u003c/pre\u003e\r\n\u003cp\u003eis: in class A, the inherited public members of B appear as public members of A. If myValue is a public data member of B, myValue can be accessed publicly through instances of A.\u003c/p\u003e\r\n\u003cp\u003eDeclare an instance of class A:\u003c/p\u003e\r\n\u003cpre\u003eA d;\r\nd.myValue;        //  ok\u003c/pre\u003e\r\n\u003cp\u003eThe specification\u003c/p\u003e\r\n\u003cpre\u003eclass A : private B\u003c/pre\u003e\r\n\u003cp\u003emeans in class A, the inherited public members of B appear as private members of A. If myValue is a public data member of B, myValue cannot be accessed publicly and directly through instances of A.\u003cbr\u003e Declare an instance of class A:\u003c/p\u003e\r\n\u003cpre\u003eA d;\r\nd.myValue;        //  compile error\u003c/pre\u003e\r\n\u003cp\u003eFunction members of A can still access public members of B as public.\u003c/p\u003e\r\n\u003cp class=\"title\"\u003eConstruction of an Instance of Type C\u003c/p\u003e\r\n\u003cp\u003e\u003cimg src=\"https://canvas.uw.edu/courses/1177926/files/44384326/preview\" alt=\"construction of an instance of type C\" width=\"375\" height=\"228\" data-api-endpoint=\"https://canvas.uw.edu/api/v1/courses/1177926/files/44384326\" data-api-returntype=\"File\"\u003e\u003c/p\u003e\r\n\u003ch4\u003eDeriving Objects\u003c/h4\u003e\r\n\u003cp\u003eIn a derivation hierarchy, objects are created from the inside out. Consider the class hierarchy,\u003c/p\u003e\r\n\u003cpre\u003eclass A { }\r\nclass B : public A { }\r\nclass C : public B { }\u003c/pre\u003e\r\n\u003cp\u003eThe compiler will build the A portion first, then the B, and will complete with the C part. This process is illustrated in figure 8.5.\u003c/p\u003e\r\n\u003cp\u003eObjects are destructed from the outside in. An instance of type C is destructed as we see in figure 8.6, below: first the C part, then the B, and finally the A subobject.\u003c/p\u003e\r\n\u003cp class=\"title\"\u003eDestruction of an Instance of Type C\u003c/p\u003e\r\n\u003cp\u003e\u003cimg src=\"https://canvas.uw.edu/courses/1177926/files/44384254/preview\" alt=\"destruction of an instance of type C\" width=\"341\" height=\"225\" data-api-endpoint=\"https://canvas.uw.edu/api/v1/courses/1177926/files/44384254\" data-api-returntype=\"File\"\u003e\u003c/p\u003e\r\n\u003cp\u003e\u003cbr\u003e Let's look at an example of a public derivation with the initialization of the base and derived parts within the class declarations.\u003c/p\u003e\r\n\u003cpre\u003e// Classes Derivation - Single Inheritance Example\r\n// Simple Inheritance\r\n \r\nclass BaseClass1\r\n{\r\npublic:\r\n    BaseClass1()\r\n        : baseValue(20)\r\n    {\r\n    }\r\n\r\n    int getBaseValue() const\r\n    {\r\n        return baseValue;\r\n    }\r\n\r\n    void setBaseValue(int aValue)\r\n    {\r\n        baseValue = aValue;\r\n    }\r\n\r\nprivate:\r\n    int baseValue;\r\n};\r\n \r\n// A public derivation from BaseClass1\r\nclass DerivedClass1 : public BaseClass1\r\n{\r\npublic:\r\n    DerivedClass1(int derivedValue)\r\n        : derivedValue(derivedValue)\r\n    {\r\n    }\r\n\r\n    int getDerivedValue() const\r\n    {\r\n        return derivedValue;\r\n    }\r\n\r\n    void setDerivedValue(int aValue)\r\n    {\r\n        derivedValue = aValue;\r\n    }\r\n  \r\nprivate:\r\n    int derivedValue;\r\n};\r\n\r\nTEST(Subclass1, Class)\r\n{\r\n    //  Declare instances of the base and child classes\r\n    BaseClass1 base;\r\n    DerivedClass1 derived(10);\r\n    derived.setBaseValue(15);\r\n \r\n    CHECK_EQUAL(20, base.getBaseValue());\r\n    CHECK_EQUAL(15, derived.getBaseValue());\r\n    CHECK_EQUAL(10, derived.getDerivedValue());\r\n}\r\n\u003c/pre\u003e\r\n\u003ch3\u003eDerived Class Constructors and Destructors\u003c/h3\u003e\r\n\u003cp\u003eConstructors and destructors are not inherited. Derived class initialization and deinitialization are implemented as series of base and derived class constructor calls. Different constructors and destructors collaborate to complete the tasks as we saw in the previous section. When a derived object is instantiated, memory is allocated for the base object and the added parts.\u003c/p\u003e\r\n\u003cp\u003eInitialization occurs in two stages: the base class constructors are invoked to initialize the base objects, and the derived class constructor is used to complete the task. The derived class constructor specifies the appropriate base class constructor in the initialization list. If there is no constructor in the base class, the compiler-created default constructor is used. If the base class is derived, the procedure is applied recursively.\u003c/p\u003e\r\n\u003ch4\u003eInherited Member Initialization\u003c/h4\u003e\r\n\u003cp\u003eTo initialize member data in a base class, chain a call to the appropriate base class constructor within the derived class constructor's initializer list. For example:\u003c/p\u003e\r\n\u003cpre\u003eSingle Base Class\r\n \r\nDerivedClass(derivedClass args) : BaseClass (baseClass args)\r\n{\r\n    DerivedClass constructor body\r\n}\u003c/pre\u003e\r\n\u003cp\u003eThe set of derived class constructor arguments may contain initialization values for the base class arguments.\u003c/p\u003e\r\n\u003ch4\u003eSimple Public Derivation\u003c/h4\u003e\r\n\u003cp\u003eThe example below shows how to use the initialization list to initialize base class members to a default value or to one that is passed in.\u003c/p\u003e\r\n\u003cpre\u003e// Classes Derivation - Single Inheritance Example\r\n// Chaining base class constructors to derived classes constructors\r\n \r\nclass BaseClass2\r\n{\r\npublic:\r\n    BaseClass2(int value)\r\n        : baseValue(value)\r\n    {\r\n    }\r\n\r\n    int getBaseValue() const\r\n    {\r\n        return baseValue;\r\n    }\r\n\r\nprivate:\r\n    int baseValue;\r\n};\r\n \r\n// A public derivation from BaseClass2\r\nclass DerivedClass2 : public BaseClass2\r\n{\r\npublic:\r\n    DerivedClass2(int baseValue, int derivedValue)\r\n        : BaseClass2(baseValue),\r\n        derivedValue(derivedValue)\r\n    {\r\n    }\r\n\r\n    int getDerivedValue()\r\n    {\r\n        return derivedValue;\r\n    }\r\n\r\n    void setDerivedValue(int aValue)\r\n    {\r\n        derivedValue = aValue;\r\n    }\r\n  \r\nprivate:\r\n    int derivedValue;\r\n};\r\n\r\nTEST(Subclass2, Class)\r\n{\r\n    //  Declare instances of the base and child classes\r\n    BaseClass2 base(20);\r\n    DerivedClass2 derived(15, 10);\r\n \r\n    CHECK_EQUAL(20, base.getBaseValue());\r\n    CHECK_EQUAL(15, derived.getBaseValue());\r\n    CHECK_EQUAL(10, derived.getDerivedValue());\r\n}\u003c/pre\u003e\r\n\u003ch4\u003eSimple Public Derivation\u003c/h4\u003e\r\n\u003cp\u003eThe example below shows how to use the initialization list to initialize the base class—doing the initializing on definition.\u003c/p\u003e\r\n\u003cpre\u003e// Classes Derivation - Single Inheritance Example\r\n// Simple Inheritance - Base Class Initialization\r\n  \r\nclass BaseClass3\r\n{\r\npublic:\r\n    BaseClass3(int aValue = 20)\r\n        : baseValue(aValue)\r\n    {\r\n    }\r\n\r\n    int getBaseValue() const\r\n    {\r\n        return baseValue;\r\n    }\r\n\r\nprivate:\r\n    int baseValue;\r\n};\r\n\r\nclass DerivedClass3 : public BaseClass3\r\n{\r\npublic:\r\n    //  Declare several different constructors\r\n    //  Use default or passed in value for derived\r\n    //  member initialization.  Use default for base\r\n    \r\n    DerivedClass3(int aDerivedValue = 10);\r\n\r\n    //  Pass in value for base and derived\r\n    //  member initialization\r\n    DerivedClass3(int aDerivedValue, int aBaseValue);\r\n \r\n    int getDerivedValue() const\r\n    {\r\n        return derivedValue;\r\n    }\r\n\r\n    void setDerivedValue(int aValue)\r\n    {\r\n        derivedValue = aValue;\r\n    }\r\n                        \r\nprivate:\r\n    int derivedValue;\r\n};\r\n\r\n// The constructor for DerivedClass3 is used \r\n// to initialize the data member baseValue    \r\n// of the base class to the constant value 15.\r\nDerivedClass3::DerivedClass3(int aValue):BaseClass3(15)\r\n{\r\n    derivedValue = aValue;\r\n}\r\n\r\n// The constructor for DerivedClass3 is used \r\n// to initialize the datamember baseValue of\r\n// the base class by chaining the BaseClass3 constructor to the DerivedClass3 constructor.\r\n//\r\n// This value is passed in as an argument of\r\n// the derived class constructor\r\nDerivedClass3::DerivedClass3(int aValue, int aBaseValue)\r\n    : BaseClass3(aBaseValue),\r\n    derivedValue(aValue)\r\n{\r\n}\r\n \r\nTEST(Subclass3, Class)\r\n{\r\n    BaseClass3 base;\r\n\r\n    // 5 initializes the instance of the\r\n    // Derived Class and 35 initializes the\r\n    // data member inherited from the base class\r\n    DerivedClass3 child(5, 35);\r\n\r\n    CHECK_EQUAL(20, base.getBaseValue());\r\n    CHECK_EQUAL(35, child.getBaseValue());\r\n    CHECK_EQUAL(5, child.getDerivedValue());\r\n}\u003c/pre\u003e\r\n\u003ch4\u003eSimple Public Derivation\u003c/h4\u003e\r\n\u003cp\u003eThe example below shows using initialization list to initialize base and derived class to default values or to ones that are passed in.\u003c/p\u003e\r\n\u003cpre\u003e// Classes Derivation - Single Inheritance Example\r\n// Simple Inheritance - Default Initialization\r\nclass BaseClass4\r\n{\r\npublic:\r\n    BaseClass4(int aValue = 20)\r\n        : baseValue(aValue)\r\n    {\r\n    }\r\n\r\n    int getBaseValue() const\r\n    {\r\n        return baseValue;\r\n    }\r\n\r\nprivate:\r\n    int baseValue;\r\n};\r\n \r\nclass DerivedClass4 : public BaseClass4\r\n{\r\npublic:\r\n    DerivedClass4();\r\n    DerivedClass4(int aValue);\r\n \r\n    int getDerivedValue() const\r\n    {\r\n        return derivedValue;\r\n    }\r\n\r\n    void setDerivedValue(int aValue)\r\n    {\r\n        derivedValue = aValue;\r\n    }\r\n                       \r\nprivate:\r\n    int derivedValue;\r\n};\r\n\r\n// The constructor for DerivedClass4 is used\r\n// to supply default values to initialize the\r\n// DerivedClass4 and CaseClass data  members.\r\n// Note the default constructor has no body.\r\nDerivedClass4::DerivedClass4() : derivedValue(15), BaseClass4(10)\r\n{\r\n};\r\n \r\nTEST(Subclass4, Class)\r\n{\r\n    BaseClass4 base;\r\n    DerivedClass4 child;\r\n\r\n    CHECK_EQUAL(20, base.getBaseValue());\r\n    CHECK_EQUAL(10, child.getBaseValue());\r\n    CHECK_EQUAL(15, child.getDerivedValue());\r\n}\u003c/pre\u003e\r\n\u003ch4\u003eSimple Public Derivation\u003c/h4\u003e\r\n\u003cp\u003eThe example below illustrates the initialization chain within a class hierarchy.\u003c/p\u003e\r\n\u003cpre\u003e// Classes Derivation - Single Inheritance Example\r\n// Simple Inheritance - Default Initialization\r\n// Inheritance / Initialization Chain\r\n\r\nclass BaseClass5\r\n{\r\npublic:\r\n    BaseClass5()\r\n    {\r\n        baseValue = 0;\r\n    }\r\n \r\n    BaseClass5(int aValue)\r\n    {\r\n    }\r\n\r\n    int getBaseValue() const\r\n    {\r\n        return baseValue;\r\n    }\r\n\r\nprivate:\r\n    int baseValue;\r\n};\r\n\r\n// DerivedClass5 publicly inherits from BaseClass5\r\n\r\nclass DerivedClass5 : public BaseClass5\r\n{\r\npublic:\r\n    DerivedClass5();\r\n    DerivedClass5(int aValue)\r\n    {\r\n        derivedValue1 = aValue;\r\n    }\r\n\r\n    int getDerivedValue1() const\r\n    {\r\n        return derivedValue1;\r\n    }\r\n\r\nprivate:\r\n    int derivedValue1;\r\n};\r\n \r\n// DerivedClass6 publicly inherits from\r\n// DerivedClass5\r\n\r\nclass DerivedClass6 : public DerivedClass5\r\n{\r\npublic:\r\n    DerivedClass6();\r\n    DerivedClass6(int aValue)\r\n    {\r\n        derivedValue2 = aValue;\r\n    }\r\n\r\n    int getDerivedValue2() const\r\n    {\r\n        return derivedValue2;\r\n    }\r\n\r\nprivate:\r\n    int derivedValue2;\r\n};\r\n \r\n// Default initializatoin of declared\r\n// and inherited data members of instances\r\n// of DerivedClass5\r\n\r\nDerivedClass5::DerivedClass5() : derivedValue1(11), BaseClass5(1)\r\n{\r\n}\r\n \r\n// Default initialization of declared \r\n// and inherited data members of\r\n// instances of DerivedClass6\r\n\r\nDerivedClass6::DerivedClass6() : derivedValue2(21),\r\nDerivedClass5(12)\r\n{\r\n}\r\n \r\nTEST(Subclass5, Class)\r\n{\r\n    BaseClass5 base;\r\n    DerivedClass6 child;\r\n\r\n    CHECK_EQUAL(0, base.getBaseValue());\r\n    CHECK_EQUAL(0, child.getBaseValue());\r\n    CHECK_EQUAL(12, child.getDerivedValue1());\r\n    CHECK_EQUAL(21, child.getDerivedValue2());\r\n}\u003c/pre\u003e\r\n\u003ch3\u003eMember Access Under Derivation\u003c/h3\u003e\r\n\u003cp\u003eWe've seen that we use the base class to define the behaviors common to all classes within a hierarchy. There may be occasions, however, when a derived class needs to make slight changes to the inherited functionality. What do we do under such circumstances?\u003c/p\u003e\r\n\u003cp\u003eThe derived class can mask an inherited member overriding it. When we override a function, we use the same name and signature, but change the function body. Recall from our earlier discussions, overloading keeps the name, but changes the signature. We can override a data member simply by declaring a local data member with the same name.\u003c/p\u003e\r\n\u003cp\u003eLet's look now at how class members are accessed, particularly if a derived class overrides one of its parents' members. We'll use the three-class hierarchy shown in the figure below.\u003c/p\u003e\r\n\u003cp class=\"title\"\u003eA Three-Class Hierarchy\u003c/p\u003e\r\n\u003cp class=\"title\"\u003e\u003cimg src=\"https://canvas.uw.edu/courses/1177926/files/44384260/preview\" alt=\"a three-class hierarchy\" width=\"258\" height=\"275\" data-api-endpoint=\"https://canvas.uw.edu/api/v1/courses/1177926/files/44384260\" data-api-returntype=\"File\"\u003e\u003c/p\u003e\r\n\u003cul\u003e\n\u003cli\u003eC1\r\n\u003cul\u003e\n\u003cli\u003eDefines the base class members\r\n\u003cul\u003e\n\u003cli\u003eFunction\u003c/li\u003e\r\n\u003cli\u003eData\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003c/li\u003e\r\n\u003cli\u003eC2\r\n\u003cul\u003e\n\u003cli\u003eOverrides c ( )\u003c/li\u003e\r\n\u003cli\u003eDefines e ( )\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003c/li\u003e\r\n\u003cli\u003eC3\r\n\u003cul\u003e\n\u003cli\u003eOverrides d ( )\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003cp\u003eIf an instance of class C3 accesses the data member a, it will start with itself, won't find it, will go to C2, have no luck, then will go to C1, where it will find the value. The same process is followed for each of the other members as we see in Table.\u003c/p\u003e\r\n\u003ctable style=\"width: 480px;\" border=\"1\"\u003e\u003ctbody\u003e\u003ctr\u003e\n\u003ctd valign=\"top\"\u003e\r\n\u003cpre\u003ea        self        c2        c1\r\nb        self        c2        c1\r\nc        self        c2\r\nd        self\r\ne        self        c2\u003c/pre\u003e\r\n\u003c/td\u003e\r\n\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\n\u003cp\u003eIn Example below, we override an inherited member to alter its behavior in a derived class.\u003c/p\u003e\r\n\u003cpre\u003e// Classes Derivation - Single Inheritance Example\r\n// Simple Inheritance - Member Over riding\r\n\r\nclass BaseClass7\r\n{\r\npublic:\r\n    BaseClass7()\r\n        : baseValue0(20),\r\n        baseValue1(30)\r\n    {\r\n    }\r\n\r\n    int baseFunction() const\r\n    {\r\n        return 15;\r\n    }\r\n\r\n    int getBaseValue0() const\r\n    {\r\n        return baseValue0;\r\n    }\r\n \r\n    int getBaseValue1() const\r\n    {\r\n        return baseValue1;\r\n    }\r\n\r\nprivate:\r\n    int baseValue0;\r\n    int baseValue1;\r\n};\r\n \r\n// Instances of Derived Class mask the return\r\n// value of the inherited inherited function: \r\n// baseFunction().\r\n\r\nclass DerivedClass7 : public BaseClass7\r\n{\r\npublic:\r\n    DerivedClass7()\r\n        : derivedValue(10)\r\n    {\r\n    }\r\n \r\n    // Masking a base class member function is a bad idea.\r\n    // This makes the object behave differently when we access via\r\n    // a base class pointer.\r\n    // We'll learn the right way to do this later in the course\r\n    // with polymorphic (i.e., virtual) functions.\r\n    int baseFunction() const\r\n    {\r\n        return 27;\r\n    }\r\n \r\n    //  Access DerivedClass7\r\n    int getDerivedValue() const\r\n    {\r\n        return derivedValue;\r\n    }\r\n\r\n    void setDerivedValue(int aValue)\r\n    {\r\n        derivedValue = aValue;\r\n    }\r\n \r\nprivate:\r\n    int derivedValue;\r\n};\r\n \r\nTEST(Subclass7, Class)\r\n{\r\n    BaseClass7 base;\r\n    DerivedClass7 child;\r\n\r\n    CHECK_EQUAL(20, base.getBaseValue0());\r\n    CHECK_EQUAL(20, child.getBaseValue0());\r\n    CHECK_EQUAL(15, base.baseFunction());\r\n    CHECK_EQUAL(10, child.getDerivedValue());\r\n\r\n    // Call member function through derived class\r\n    CHECK_EQUAL(27, child.baseFunction());\r\n\r\n    // Call member function through base class reference\r\n    // and we get a different result. This is because we've\r\n    // masked the base class method with a derived class method.\r\n    //\r\n    BaseClass7\u0026amp; baseRef = child;\r\n    CHECK_EQUAL(15, baseRef.baseFunction());\r\n\r\n    // For now avoid masking as we want the same result regardless\r\n    // of whether we access through the derived class or via a base\r\n    // class reference.\r\n    //\r\n    // Later we'll learn how to use polymorphism to help\r\n    // us with this.\r\n}\u003c/pre\u003e\r\n\u003cp\u003eThe following rules govern member access within a class hierarchy under derivation.\u003c/p\u003e\r\n\u003cul\u003e\n\u003cli\u003eAccess to inherited members by derived members and friends is independent of the base class designation in the derivation specification.\r\n\u003cul\u003e\n\u003cli\u003eAccess is allowed to all non-private inherited members\u003c/li\u003e\r\n\u003cli\u003eAccess is not allowed to private members (of the parent)\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003c/li\u003e\r\n\u003cli\u003eAccess to inherited members by functions outside the derivation hierarchy is driven by the base class designation in the derivation specification. If the specification is\r\n\u003cul\u003e\n\u003cli\u003epublic: public members remain public and protected members remain protected.\u003c/li\u003e\r\n\u003cli\u003eprotected: inherited non-private members accessible as protected\u003c/li\u003e\r\n\u003cli\u003eprivate: no outside access\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003c/li\u003e\r\n\u003cli\u003eOverriding—An inherited member that is normally visible can be masked\r\n\u003cul\u003e\n\u003cli\u003eDefine a derived class member with the same name\u003c/li\u003e\r\n\u003cli\u003eThis is not good practice with non-virtual functions (we'll talk about these in the next lesson).\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003cp\u003eLet's use a picture to see how this works. In this derivation, we'll only talk about public class members. In the figure below, we use red (solid) and green (dashed) bars to depict the visibility of public members inherited from the Base Class.\u003c/p\u003e\r\n\u003cp class=\"title\"\u003eMember Access within a Class Hierarchy under Derivation\u003c/p\u003e\r\n\u003cp\u003e\u003cimg src=\"https://canvas.uw.edu/courses/1177926/files/44384328/preview\" alt=\"Member Access within a Class Hierarchy under Derivation\" width=\"145\" height=\"433\" data-api-endpoint=\"https://canvas.uw.edu/api/v1/courses/1177926/files/44384328\" data-api-returntype=\"File\"\u003e\u003c/p\u003e\r\n\u003cp\u003eObserve in Derived Class 1 that the protected derivation blocks are outside the visibility of inherited members--yet they remain visible within the hierarchy. The private derivation of Derived Class 2 shuts off any further visibility of the inherited Base Class members even though Derived Class 3 is designated public. Derived Class 2 will have to provide an access function if one of the subsequently derived classes wishes to access any of the inherited Base Class members.\u003c/p\u003e\r\n\u003ch4\u003eDerivation Guidelines\u003c/h4\u003e\r\n\u003cul\u003e\n\u003cli\u003eDerivation is not always the best way to extend the system.\u003c/li\u003e\r\n\u003cli\u003eUse \u003cspan class=\"keyterm\"\u003epublic derivation\u003c/span\u003e when the derived object is a kind of base class.\u003c/li\u003e\r\n\u003cli\u003eUse \u003cspan class=\"keyterm\"\u003eprivate derivation\u003c/span\u003e when the derived object is not a kind of base class but derivation makes code development easier.\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003ch4\u003eBase Class Member Access Specification Guidelines\u003c/h4\u003e\r\n\u003cp\u003eClasses designed as base classes are the same as ordinary classes. You should declare function and data members intended to be inherited but not intended to be public as protected, and declare function members intended to be implemented by derived classes as virtual. (We'll discuss this in the last lesson.)\u003c/p\u003e\r\n\u003ch3\u003eMember Layout\u003c/h3\u003e\r\n\u003cp\u003eIn an earlier lesson, we saw how single classes appeared in memory. Let's see what happens under inheritance. Consider the classes shown in the table below.\u003c/p\u003e\r\n\u003ch4\u003eSingle Inheritance\u003c/h4\u003e\r\n\u003ctable style=\"width: 480px;\" border=\"1\"\u003e\u003ctbody\u003e\u003ctr\u003e\n\u003ctd valign=\"top\"\u003e\r\n\u003cpre\u003estruct A\r\n{\r\n    int a1;\r\n    void af();\r\n};\u003c/pre\u003e\r\n\u003c/td\u003e\r\n\u003ctd valign=\"top\"\u003e\r\n\u003cpre\u003estruct B : A\r\n{\r\n    int b1;\r\n    void bf1();\r\n};               \u003c/pre\u003e\r\n\u003c/td\u003e\r\n\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\n\u003cp\u003eAs we saw earlier, an A pointer, A*, points to the starting address of the the A instance. If we derive struct B from A, then a B* points to the start of the B instance while A* points to the start of the A part. See Example 8.7, below.\u003c/p\u003e\r\n\u003ch4\u003eMultiple Inheritance\u003c/h4\u003e\r\n\u003ctable style=\"width: 480px;\" border=\"1\"\u003e\u003ctbody\u003e\u003ctr\u003e\n\u003ctd valign=\"top\"\u003e\r\n\u003cpre\u003estruct C\r\n{\r\n    int c1;\r\n    void cf ( );\r\n};\u003c/pre\u003e\r\n\u003c/td\u003e\r\n\u003ctd valign=\"top\"\u003e\r\n\u003cpre\u003estruct D : A, C\r\n{\r\n    int d1;\r\n    void df1 ( );\r\n};\u003c/pre\u003e\r\n\u003c/td\u003e\r\n\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\n\u003cp\u003eFor the case of multiple inheritance, a D* points to the start of the object, an A* identifies the A part, and a C* points to the C part. See Example 8.8, below.\u003c/p\u003e\r\n\u003ch3\u003eSummary\u003c/h3\u003e\r\n\u003cp\u003eWe have begun to look at inheritance, or class derivation, as another tool for developing reusable designs. We looked at the concept of abstraction and then class hierarchies and the idea of derivation. We introduced the idea of abstract classes and discussed their purpose when designing a class hierarchy. Finally, we saw how to implement and use information hiding and encapsulation within a derivation hierarchy.\u003c/p\u003e\r\n\u003ch3\u003ePractice Questions\u003c/h3\u003e\r\n\u003cp\u003eTest your understanding of the concepts in Lesson 8 by working through the following practice questions, then check your answers with \u003ca id=\"\" class=\"\" title=\"Answers to Practice Questions for Lesson 8\" href=\"https://canvas.uw.edu/courses/1177926/pages/answers-to-practice-questions-for-lesson-8\" data-api-endpoint=\"https://canvas.uw.edu/api/v1/courses/1177926/pages/answers-to-practice-questions-for-lesson-8\" data-api-returntype=\"Page\"\u003eAnswers to Practice Questions for Lesson 8\u003c/a\u003e.\u003c/p\u003e\r\n\u003col\u003e\n\u003cli\u003eWhat is a inheritance in C++?\u003c/li\u003e\r\n\u003cli\u003eWhat is the difference between a class hierarchy and an instance hierarchy?\u003c/li\u003e\r\n\u003cli\u003eWhat is an ABC?\u003c/li\u003e\r\n\u003cli\u003eWhat does the derivation specification class A : protected B mean?\u003c/li\u003e\r\n\u003cli\u003eHow are base and derived class constructors and destructors invoked?\u003c/li\u003e\r\n\u003c/ol\u003e"},"WIKI_PAGE_REVISION":"1","WIKI_PAGE_SHOW_PATH":"/courses/1177926/pages/lesson-8","WIKI_PAGE_EDIT_PATH":"/courses/1177926/pages/lesson-8/edit","WIKI_PAGE_HISTORY_PATH":"/courses/1177926/pages/lesson-8/revisions","COURSE_ID":"1177926","MODULES_PATH":"/courses/1177926/modules","wiki_page_menu_tools":[],"DISPLAY_SHOW_ALL_LINK":false,"badge_counts":{"submissions":0},"notices":[]};
+</script>
+
+<script src="./Lesson8_files/navigation_header.bundle-7a01d727d2.js.download" defer="defer"></script>
+<script src="./Lesson8_files/default.js.download" defer="defer"></script>
+<script src="./Lesson8_files/custom.js.download" defer="defer"></script>
+
+</div> <!-- #application -->
+
+
+<div class="ReactTrayPortal"><div data-reactid=".1"></div></div></body></html>
