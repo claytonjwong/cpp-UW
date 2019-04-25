@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)https://canvas.uw.edu/courses/1177926/pages/lesson-1?module_item_id=7889505 -->
+<html class="lato-font-loaded" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Lesson 1: CPROGRM 711 A Wi 18: C++ Programming: Introduction</title>
+  <!--[if lte IE 9]> <meta http-equiv=refresh content="0; URL=/ie-9-is-not-supported.html" /> <![endif]-->
+  <link rel="shortcut icon" type="image/x-icon" href="https://instructure-uploads.s3.amazonaws.com/account_100000000083919/attachments/37312004/favicon.ico?AWSAccessKeyId=AKIAJFNFXH2V2O7RPCAA&amp;Expires=1939374366&amp;Signature=lNl7iuCda9spDgRONbwVvr490LM%3D&amp;response-cache-control=Cache-Control%3Amax-age%3D473364000.0%2C%20public&amp;response-expires=473364000.0">
+  <link rel="apple-touch-icon" href="https://instructure-uploads.s3.amazonaws.com/account_100000000083919/attachments/37312005/Canvas-MobileHome.png?AWSAccessKeyId=AKIAJFNFXH2V2O7RPCAA&amp;Expires=1939374366&amp;Signature=jwVDIJvM6uIaOoE%2FSW94uwVcHU0%3D&amp;response-cache-control=Cache-Control%3Amax-age%3D473364000.0%2C%20public&amp;response-expires=473364000.0">
+  
+  <link rel="stylesheet" media="all" href="./Lesson1_files/variables-750d72b9d3e5d522f965bf904110c132.css">
+  <link rel="stylesheet" media="all" href="./Lesson1_files/common-79b981d2d9.css">
+  <script type="text/javascript" async="" src="./Lesson1_files/ga.js.download"></script><script>
+//<![CDATA[
+
+!function(){
+  var o,s,v;
+  if (!(window.Promise && Object.assign && Object.values && [].find && [].includes && (o={},s=Symbol(),v={},o[s]=v,o[s]===v) && (function f(){}).bind().name==='bound f')) {
+    s = 's', document.write('<'+s+'cr'+'ipt src="https://du11hjcvx0uqb.cloudfront.net/dist/ie11-polyfill-a0702bf7af.js"></'+s+'c'+'ript>');
+  }
+}();
+      
+//]]>
+</script>
+  <script src="./Lesson1_files/lato-fontfaceobserver-11a14bc0b6.js.download" async="async"></script>
+  
+  <meta name="apple-itunes-app" content="app-id=480883488">
+<link rel="manifest" href="https://canvas.uw.edu/web-app-manifest/manifest.json">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#008EE2">
+  <link rel="stylesheet" media="all" href="./Lesson1_files/wiki_page-46e7e026f6.css">
+  
+  <link rel="stylesheet" media="all" href="./Lesson1_files/custom.css">
+<link rel="stylesheet" media="all" href="./Lesson1_files/custom(1).css">
+  <script>
+    function _earlyClick(e){
+      var c = e.target
+      while (c && c.ownerDocument) {
+        if (c.getAttribute('href') == '#' || c.getAttribute('data-method')) {
+          e.preventDefault()
+          (_earlyClick.clicks = _earlyClick.clicks || []).push(c)
+          break
+        }
+        c = c.parentNode
+      }
+    }
+    document.addEventListener('click', _earlyClick)
+  </script>
+  <script src="./Lesson1_files/variables-750d72b9d3e5d522f965bf904110c132.js.download" defer="defer"></script>
+  <script src="./Lesson1_files/vendor.bundle-128d24e8f6.js.download" defer="defer"></script>
+<script src="./Lesson1_files/Los_Angeles-78b0e93740.js.download" defer="defer"></script>
+<script src="./Lesson1_files/en_US-80a0ce259b.js.download" defer="defer"></script>
+<script src="./Lesson1_files/appBootstrap.bundle-659e6cb04a.js.download" defer="defer"></script>
+<script src="./Lesson1_files/common.bundle-7a4babf662.js.download" defer="defer"></script>
+<script src="./Lesson1_files/wiki_page_show.bundle-6cdff07d81.js.download" defer="defer"></script>
+<style type="text/css"></style></head>
+
+<body class="with-left-side course-menu-expanded padless-content pages primary-nav-transitions context-course_1177926 show webkit chrome touch">
+
+<noscript>
+  &lt;div role="alert" class="ic-flash-static ic-flash-error"&gt;
+    &lt;div class="ic-flash__icon" aria-hidden="true"&gt;
+      &lt;i class="icon-warning"&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;h1&gt;You need to have JavaScript enabled in order to access this site.&lt;/h1&gt;
+  &lt;/div&gt;
+</noscript>
+
+
+
+
+
+<ul id="flash_message_holder"></ul>
+<div id="flash_screenreader_holder" role="alert" aria-live="assertive" aria-relevant="additions" class="screenreader-only" aria-atomic="false"></div>
+
+<div id="application" class="ic-app">
+  
+  <header id="header" class="ic-app-header no-print ">
+    <a href="https://canvas.uw.edu/courses/1177926/pages/lesson-1?module_item_id=7889505#content" id="skip_navigation_link">Skip To Content</a>
+      <div role="region" class="ic-app-header__main-navigation" aria-label="Global Navigation">
+        <div class="ic-app-header__logomark-container">
+          <a href="https://canvas.uw.edu/" class="ic-app-header__logomark">
+            <span class="screenreader-only">Dashboard</span>
+          </a>
+        </div>
+        <ul id="menu" class="ic-app-header__menu-list">
+            <li class="menu-item ic-app-header__menu-list-item ">
+              <a id="global_nav_profile_link" href="https://canvas.uw.edu/profile" class="ic-app-header__menu-list-link">
+                <div class="menu-item-icon-container" aria-hidden="true">
+                  <div class="ic-avatar ">
+                    <img src="./Lesson1_files/mSs2TjTESYscSzrackhgoJvAT79xbNchamHPrSec" alt="Clayton Wong">
+                  </div>
+                </div>
+                <div class="menu-item__text">
+                  Account
+                </div>
+              </a>
+            </li>
+          <li class="ic-app-header__menu-list-item ">
+            <a id="global_nav_dashboard_link" href="https://canvas.uw.edu/" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--dashboard" version="1.1" x="0" y="0" viewBox="0 0 280 200" enable-background="new 0 0 280 200" xml:space="preserve"><path d="M273.09,180.75H197.47V164.47h62.62A122.16,122.16,0,1,0,17.85,142a124,124,0,0,0,2,22.51H90.18v16.29H6.89l-1.5-6.22A138.51,138.51,0,0,1,1.57,142C1.57,65.64,63.67,3.53,140,3.53S278.43,65.64,278.43,142a137.67,137.67,0,0,1-3.84,32.57ZM66.49,87.63,50.24,71.38,61.75,59.86,78,76.12Zm147,0L202,76.12l16.25-16.25,11.51,11.51ZM131.85,53.82v-23h16.29v23Zm15.63,142.3a31.71,31.71,0,0,1-28-16.81c-6.4-12.08-15.73-72.29-17.54-84.25a8.15,8.15,0,0,1,13.58-7.2c8.88,8.21,53.48,49.72,59.88,61.81a31.61,31.61,0,0,1-27.9,46.45ZM121.81,116.2c4.17,24.56,9.23,50.21,12,55.49A15.35,15.35,0,1,0,161,157.3C158.18,152,139.79,133.44,121.81,116.2Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">Dashboard</div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ic-app-header__menu-list-item--active">
+            <a id="global_nav_courses_link" href="https://canvas.uw.edu/courses" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--courses" version="1.1" x="0" y="0" viewBox="0 0 280 259" enable-background="new 0 0 280 259" xml:space="preserve"><path d="M73.31,198c-11.93,0-22.22,8-24,18.73a26.67,26.67,0,0,0-.3,3.63v.3a22,22,0,0,0,5.44,14.65,22.47,22.47,0,0,0,17.22,8H200V228.19h-134V213.08H200V198Zm21-105.74h90.64V62H94.3ZM79.19,107.34V46.92H200v60.42Zm7.55,30.21V122.45H192.49v15.11ZM71.65,16.71A22.72,22.72,0,0,0,49,39.36V190.88a41.12,41.12,0,0,1,24.32-8h157V16.71ZM33.88,39.36A37.78,37.78,0,0,1,71.65,1.6H245.36V198H215.15v45.32h22.66V258.4H71.65a37.85,37.85,0,0,1-37.76-37.76Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Courses
+              </div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_calendar_link" href="https://canvas.uw.edu/calendar" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--calendar" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M197.07,213.38h16.31V197.07H197.07Zm-16.31,16.31V180.76h48.92v48.92Zm-48.92-16.31h16.31V197.07H131.85Zm-16.31,16.31V180.76h48.92v48.92ZM66.62,213.38H82.93V197.07H66.62ZM50.32,229.68V180.76H99.24v48.92Zm146.75-81.53h16.31V131.85H197.07Zm-16.31,16.31V115.54h48.92v48.92Zm-48.92-16.31h16.31V131.85H131.85Zm-16.31,16.31V115.54h48.92v48.92ZM66.62,148.15H82.93V131.85H66.62ZM50.32,164.46V115.54H99.24v48.92ZM34,262.29H246V82.93H34ZM246,66.62V42.16A8.17,8.17,0,0,0,237.84,34H213.38v8.15a8.15,8.15,0,1,1-16.31,0V34H82.93v8.15a8.15,8.15,0,0,1-16.31,0V34H42.16A8.17,8.17,0,0,0,34,42.16V66.62Zm-8.15-48.92a24.49,24.49,0,0,1,24.46,24.46V278.6H17.71V42.16A24.49,24.49,0,0,1,42.16,17.71H66.62V9.55a8.15,8.15,0,0,1,16.31,0v8.15H197.07V9.55a8.15,8.15,0,1,1,16.31,0v8.15Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Calendar
+              </div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_conversations_link" href="https://canvas.uw.edu/conversations" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--inbox" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M91.72,120.75h96.56V104.65H91.72Zm0,48.28h80.47V152.94H91.72Zm0-96.56h80.47V56.37H91.72Zm160.94,34.88H228.52V10.78h-177v96.56H27.34A24.17,24.17,0,0,0,3.2,131.48V244.14a24.17,24.17,0,0,0,24.14,24.14H252.66a24.17,24.17,0,0,0,24.14-24.14V131.48A24.17,24.17,0,0,0,252.66,107.34Zm0,16.09a8.06,8.06,0,0,1,8,8v51.77l-32.19,19.31V123.44ZM67.58,203.91v-177H212.42v177ZM27.34,123.44H51.48v79.13L19.29,183.26V131.48A8.06,8.06,0,0,1,27.34,123.44ZM252.66,252.19H27.34a8.06,8.06,0,0,1-8-8V202l30,18H230.75l30-18v42.12A8.06,8.06,0,0,1,252.66,252.19Z"></path></svg>
+
+                <span class="menu-item__badge" style="display: none">0</span>
+              </div>
+              <div class="menu-item__text">
+                Inbox
+              </div>
+            </a>
+          </li>
+            
+
+
+          <li class="ic-app-header__menu-list-item">
+           <a id="global_nav_help_link" class="ic-app-header__menu-list-link" data-track-category="help system" data-track-label="help button" href="http://help.instructure.com/">
+              <div class="menu-item-icon-container" role="presentation">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg menu-item__icon svg-icon-help" version="1.1" x="0" y="0" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve" fill="currentColor"><path d="M100,127.88A11.15,11.15,0,1,0,111.16,139,11.16,11.16,0,0,0,100,127.88Zm8.82-88.08a33.19,33.19,0,0,1,23.5,23.5,33.54,33.54,0,0,1-24,41.23,3.4,3.4,0,0,0-2.74,3.15v9.06H94.42v-9.06a14.57,14.57,0,0,1,11.13-14,22.43,22.43,0,0,0,13.66-10.27,22.73,22.73,0,0,0,2.31-17.37A21.92,21.92,0,0,0,106,50.59a22.67,22.67,0,0,0-19.68,3.88,22.18,22.18,0,0,0-8.65,17.64H66.54a33.25,33.25,0,0,1,13-26.47A33.72,33.72,0,0,1,108.82,39.8ZM100,5.2A94.8,94.8,0,1,0,194.8,100,94.91,94.91,0,0,0,100,5.2m0,178.45A83.65,83.65,0,1,1,183.65,100,83.73,83.73,0,0,1,100,183.65" transform="translate(-5.2 -5.2)"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Help
+              </div>
+</a>          </li>
+        </ul>
+      </div>
+      <div class="ic-app-header__secondary-navigation">
+        <ul class="ic-app-header__menu-list">
+          <li class="menu-item ic-app-header__menu-list-item">
+            <button id="primaryNavToggle" class="ic-app-header__menu-list-link ic-app-header__menu-list-link--nav-toggle" aria-label="
+                Expand global navigation
+                " title="
+                Expand global navigation
+                ">
+              <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--navtoggle" version="1.1" x="0" y="0" width="40" height="32" viewBox="0 0 40 32" xml:space="preserve">
+  <path d="M39.5,30.28V2.48H37.18v27.8Zm-4.93-13.9L22.17,4,20.53,5.61l9.61,9.61H.5v2.31H30.14l-9.61,9.61,1.64,1.64Z"></path>
+</svg>
+
+            </button>
+          </li>
+        </ul>
+      </div>
+    <div id="global_nav_tray_container"><noscript data-reactid=".0"></noscript></div>
+  </header>
+
+
+  <div id="instructure_ajax_error_box">
+    <div style="text-align: right; background-color: #fff;"><a href="https://canvas.uw.edu/courses/1177926/pages/lesson-1?module_item_id=7889505#" class="close_instructure_ajax_error_box_link">Close</a></div>
+    <iframe id="instructure_ajax_error_result" src="./Lesson1_files/saved_resource.html" style="border: 0;" title="Error"></iframe>
+  </div>
+
+  
+
+  <div id="wrapper" class="ic-Layout-wrapper">
+      <div class="ic-app-nav-toggle-and-crumbs no-print">
+          <button type="button" id="courseMenuToggle" class="Button Button--link ic-app-course-nav-toggle" aria-live="polite" aria-label="Hide Courses Navigation Menu" title="Hide Courses Navigation Menu">
+            <i class="icon-hamburger" aria-hidden="true"></i>
+          </button>
+          <div class="ic-app-crumbs">
+        <nav id="breadcrumbs" role="navigation" aria-label="breadcrumbs"><ul><li class="home"><a href="https://canvas.uw.edu/"><span class="ellipsible">      <i class="icon-home" title="My Dashboard">
+        <span class="screenreader-only">My Dashboard</span>
+      </i>
+</span></a></li><li><a href="https://canvas.uw.edu/courses/1177926"><span class="ellipsible">CPROGRM 711 A</span></a></li><li><a href="https://canvas.uw.edu/courses/1177926/pages"><span class="ellipsible">Pages</span></a></li><li><span class="ellipsible">Lesson 1</span></li></ul></nav>
+        </div>
+      </div>
+    <div id="main" class="ic-Layout-columns">
+        <div class="ic-Layout-watermark"></div>
+        <div id="left-side" class="ic-app-course-menu list-view" style="display: block">
+              <span id="section-tabs-header-subtitle" class="ellipsis">Winter 2018</span>
+            <nav role="navigation" aria-label="Courses Navigation Menu"><ul id="section-tabs"><li class="section"><a href="https://canvas.uw.edu/courses/1177926" title="Home" class="home" tabindex="0">Home</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/announcements" title="Announcements" class="announcements" tabindex="0">Announcements</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/modules" title="Modules" class="modules" tabindex="0">Modules</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/discussion_topics" title="Discussions" class="discussions" tabindex="0">Discussions</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/grades" title="Grades" class="grades" tabindex="0">Grades</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/users" title="People" class="people" tabindex="0">People</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/external_tools/12299" title="UW Libraries" class="context_external_tool_12299" tabindex="0">UW Libraries</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/external_tools/57145" title="Info &amp; Help" class="context_external_tool_57145" tabindex="0">Info &amp; Help</a></li></ul></nav>
+        </div>
+      <div id="not_right_side" class="ic-app-main-content">
+        <div id="content-wrapper" class="ic-Layout-contentWrapper">
+            
+
+          <div id="content" class="ic-Layout-contentMain" role="main">
+            
+
+  
+
+<div id="wiki_page_show">
+<div class="header-bar-outer-container">
+  <div class="header-bar-container sticky-toolbar" data-sticky="">
+    <div class="header-bar flex-container">
+      <div class="header-bar-left header-left-flex">
+        
+          
+        
+      </div>
+      <div class="header-bar-right header-right-flex">
+        
+          
+          
+            
+          
+        
+        
+          
+        
+        
+      </div>
+    </div>
+    <div class="page-changed-alert" role="alert" aria-atomic="true" aria-live="polite"></div>
+  </div>
+</div>
+
+
+<div class="show-content user_content clearfix enhanced">
+  <h1 class="page-title">Lesson 1</h1>
+  
+    <div id="level2">
+<h2>
+<img src="./Lesson1_files/preview" alt="L01.png" width="50" height="50" data-api-endpoint="https://canvas.uw.edu/api/v1/courses/1177926/files/44384333" data-api-returntype="File" style="max-width: 945px;">&nbsp;C++ I/O, Types, Declarations, and CppUnitLite</h2>
+<h2>C++ History and Programming Paradigms</h2>
+<p>As a prelude to exploring C++, let's begin by briefly looking at some of the commonly used programming languages and see how they differ. For our first step, we conclude that paradigm is simply a cool word - much cooler than simply saying model. It sounds impressive and is fun to say - although not like it's spelled. That done, we can move to the task de jour - it ain't soup yet.</p>
+<p>In the software world, we have data and the functions that operate on that data. We describe how we combine or group these two as a programming paradigm. Today, we can find several, including <span class="italics">procedural</span>, <span class="italics"> data-driven</span>, <span class="italics">functional</span>, <span class="italics">logical</span>, <span class="italics">object-based</span>, and <span class="italics">object-oriented</span>. Let's spend some time looking at each.</p>
+<h3>Compatibility with C</h3>
+<p>Let's start with the <span class="keyterm">procedural paradigm</span>. With such an approach, we decide what procedures, or "algorithms" are required to solve our problem. Next, we decompose these large and complex algorithms down into smaller and more manageable pieces (often called modules); collectively, these pieces are our program. When we run the program, it will perform the specified operations (functions) on our data to determine the answer to the original problem. We see that the data and the functions that operate on those data have been combined as procedures. The familiar languages such as C, Basic, Pascal, Fortran, or Cobol are examples of procedural languages.</p>
+<h3>The Data-Driven Paradigm</h3>
+<p>In many cases, the types and structure of data from the problem domain, and relationships between them, are more important than the procedures or algorithms themselves. In this case, the <span class="keyterm">data-driven paradigm</span> is often a better approach. This realization spawned the proliferation of database management programs that are still the foundation of many computer systems. Databases come in many varieties, but today the relational database is by far the most common. Here the fundamental model is one of tables of data in which each row represents a unique instance of some entity characterized by values in columns of data that make up the row. Collection, storage, manipulation, and access to these data is performed by computer programs, or by procedures stored in the database itself. SQL is an example of a data-driven language.</p>
+<h3>The Functional Paradigm</h3>
+<p>is built as a composition of functions enclosed in a top-level function. A computation is the evaluation of the top level and, subsequently, the enclosed functions while avoiding state and mutable (data that can be changed) data (common in procedural languages, for example). Pure functional programs have no side effects; consequently, their application to data is independent of evaluation order. Because such functions do not modify shared variables, they can be executed in parallel without interference. Functional languages include LISP, APL, and Scheme. Functional languages can work well in multi-threaded programs.</p>
+<h3>The Logical Paradigm</h3>
+<p><span class="keyterm">Logical programs</span> use logical expressions or statements for encapsulating the data and functions. These mathematical expressions are combined with proof procedures to define and then solve problems. As an example of such logical expressions, we can write the following problem or conjecture:</p>
+<blockquote>All men are honest. <br> Aristotle is a man. <br> Therefore, Aristotle is honest.</blockquote>
+<p>To prove the validity of such a set of statements (or, rather, to solve the problem of determining if Aristotle is honest), we begin by assuming that it is false. If we can show a contradiction, then the original conjecture (that the set of statements is false) must have been correct. The language Prolog is considered to implement the logical programming paradigm.</p>
+<h4>The Object-Based Paradigm</h4>
+<p>Some time in the late sixties and early seventies, computer scientists came up with the idea of putting some procedural intelligence together with the data describing a particular entity into something called an <span class="keyterm">object</span>. The formal term for wrapping data and functions together into an object is called <span class="keyterm">encapsulation</span>; it is the first of the big three object oriented (or OO) concepts (the others are <span class="italics">inheritance</span> and <span class="italics">polymorphism&nbsp;-&nbsp;</span>more about these later). Encapsulation helps software developers achieve something called <span class="keyterm">data hiding -&nbsp;</span>the notion that an object's data should only be manipulated by the object itself, and then only in clearly specified ways. With data hiding, when things go wrong and your credit card bill gets messed up, it's easy to decide who's to blame; it's that stupid object that has your name and purchase information encapsulated in it. Doesn't that make you feel better? I'm sure it makes the credit card company happy to know it's not their fault!</p>
+<p>This idea of one thing having data (attributes), and functions (behaviors), allows us to make a pretty long leap. It allows us to look at a problem and use a process of abstraction to identify things from the problem we would like to treat as independent, active, entities in our program. It allows us to specify what we want those things to be able to do, and to give them all the data and processes they need to do what we want. It also allows us to endow things in our program with an intelligence that they don't have in the real-world problem domain. For example, in the real world of the billing department, invoices don't know how to assemble, validate, and print themselves. In the world of objects, it is entirely reasonable to expect them to do so</p>
+<h3>The Object-Oriented Paradigm</h3>
+<p>The difference, at least in the name, between object-based and object-oriented, seems small. In fact, the difference is profound. With object-based programs, what we have is a sort of data on steroids, encapsulated together with some handy procedures for manipulating the data. Object-oriented programming adds two crucially important concepts and capabilities: <span class="italics">inheritance</span> and <span class="italics"> polymorphism</span></p>
+<h3>Summary</h3>
+<p>We'll explore development paradigms more later in the class when we design are programs. Particularly when we start defining our own types using C++ classes.</p>
+<h2>Automated testing with CppUnitLite</h2>
+<p>Every programming assignment you complete must provide automated unit tests using CppUnitLite. CppUnitLite is a simple yet powerful unit testing framework for C++. Download CppUnitLite from the main C++ Progamming class page. We may ask, <i>why do we need to use CppUnitLite</i>? There are a number of answers</p>
+<p><i>How do you know your code works correctly? </i>Many developers use a combination of trace statements and manual tests to verify new code works correctly. I'll argue that a better way is to write automated tests that not only document correct behavior but can be run later as regression tests to verify correct behavior after any code modification.</p>
+<p><i>How do you know the code you developed and manually tested last week, works this week after you add new functionality?</i> Do you rerun the manual tests from the previous development. How do you know what these manual tests were? What if another developer makes changes?</p>
+<p>Another benefit of automated unit tests is they provide documentation of the intended usage of the code under test. Developers can read the unit tests to learn explicit and implicit requirements of the code as well as learn how to use the code.</p>
+<p>How do you know if you are writing unit tests correctly? One of the qualitative metrics I use is whether I can grade most (if not all) of your assignment by reading the unit test code. I should be able to see your code implementations in use and see that they work correctly by reviewing the test checks.</p>
+<p>I recommend you write your tests before you write your implementation code. There is something about this process of writing the tests first that provides a number of benefits. You start looking at the API design from the perspective of the user of the API - this leads to a better API design. Right away, you write code that can be tested. Most development teams have a goal to write testable code. But often the code is designed and written to be testable, then the tests are (sometimes) added after the development work. This is when you find that the implemented code does not allow for automated unit testing. At this point it is too late to fix the code for testing.</p>
+<p>Another type of test that is often neglected is extremely easy to do within a unit test. This is testing boundary conditions. We most always remember to test the mainline data and usage scenarios. This is what is mostly tested for in manual verification tests. Now, within your unit tests stress your code. What happens when inputs are at the boundary of a valid input? If a function takes a pointer as input, what happens if nullptr, NULL or 0 is passed? What happens if the input is outside the boundary? Does your design make it easy to know when a boundary condition has been violated?</p>
+<p>It will take some practice to develop this skill of writing unit tests. We will work on this together throughout the class. Many of the code examples provided for the course will be in the format of a CppUnitLite unit test.</p>
+<p>CppUnitLite comes with a number of source files. You may use CppUnitLite in your assignments in a couple different ways.</p>
+<ol>
+<li>Copy the CppUnitLite source code into each assignment project. Compile and run the new code you write for the assignment with the CppUnitLite code. This is how I will provide assignment solutions as everything needed to compile the assignment is grouped together.</li>
+<li>Copy the CppUnitLite source into a single project. Compile the code into a LIB or DLL. Link to CppUnitLite library from your assignment projects. This is the method you would use on a production project as you would not mix the test code with the production code.</li>
+</ol>
+<p>When you look at the CppUnitLite source files you will notice a number of source files. You will not modify any of the files except the file with the name of XxxTest.cpp. This is the file in which you will create your tests. Rename Xxx to the capability being tested. For example, if you are testing stringstream, rename XxxTest.cpp to StringStreamTest.cpp. Inside XxxTest.cpp you will note the following code:</p>
+<pre>#include "TestHarness.h"
+// include the header file for the class you are testing.
+// each test function should be small and test a single capability
+// replace testName  with the name of the particular test. Replace ClassName with
+// the name of the class being tested
+TEST(testName, ClassName)
+{
+    CHECK(1 == 1);
+}
+</pre>
+<p>To write your first test, #include the .h files required to access the capability under test. In the TEST replace testName with the specific capability being tested, and replace ClassName with the general name of the capability under test. Write the code inside TEST that exercises the capability. There are a number of checks you can perform to validate the results. See the following TEST for examples of each:</p>
+<pre>#include "TestHarness.h"
+
+TEST(CheckExample, CppUnitLite)
+{
+    int actual = 5 + 3;
+    int expected = 8;
+    CHECK_EQUAL(expected, actual);
+    auto dActual = 100.0 / 3;
+    auto dExpected = 33.33;
+    // doubles and floats are inexact numeric representations. To check equality
+    // we must use a threshold value. If the values are equal within the range of the
+    // threshold the check passes.
+    CHECK_DOUBLES_EQUAL(dExpected, dActual, 0.01);
+    if (5 == 3)
+    {
+        // Use CHECK_FAIL when the test control flow gets to a statement
+        // that is invalid
+        CHECK_FAIL("5 does not equal 3");
+    }
+
+    // Use CHECK for validation checks that don't verify equality.
+    std::string name("Scott Meyer");
+    CHECK(!name.empty());
+
+    // Use CHECK_EQUAL to compare strings
+    std::string sActual("Hello");
+    std::string sExpected("Hello");
+    CHECK_EQUAL(sExpected, sActual);
+}</pre>
+<p>Remember to keep each test small and focused. It is better to write more smaller tests than fewer&nbsp;larger tests.</p>
+<p>If you are testing a number of different general capabilities, create new XxxTest.cpp files, one for each general capability.</p>
+<p>If you are intested in researching this topic more do a web search of <strong>Test Driven Development</strong></p>
+<h2>Code Standards and Styles</h2>
+<p>You are not required to use a particular coding style in the course. But you must select your own style and consistently use your style throughout your assignment code. Style includes such items as:</p>
+<ul>
+<li>Curly brace style</li>
+<li>Identifier naming style (e.g., camel casing or pascal casing)</li>
+<li>Indentation style</li>
+</ul>
+<p>Regardless of what style you choose - neatness counts. Your code must be nicely and consistently formatted and use the same style throughout. A good choice would be to use the same style as Stroustrup does in "The C++ Programming Language".</p>
+<h2>C++ Types and Declarations</h2>
+<p>Read the chapter on Types and Declarations from Stroustrup's book "The C++ Programming language for a full explanation of C++ Types and Declarations.</p>
+<h2>Shifting from C to C++</h2>
+<h3>C++ Comments</h3>
+<p>Although the C-style comment delimiters <code>/*</code> and <code>*/</code> still work, in C++ we can also use two forward slashes, <code>//</code>, to identify single-line comments. Any text following the two forward slashes on a line is treated as comment.</p>
+<h3>const and const variables</h3>
+<p>The <code>const</code> specifier is now a part of ANSI C, where it is used to declare or specify a constant. As we'll see, its use in C++ is much richer. In C, it's intended as a replacement for the <code>#define</code> statement. The major advantage of such a replacement is that <code>#define</code> statements are handled by the preprocessor&nbsp;-&nbsp;there is no type checking. The <code>const</code> specifier is interpreted by the compiler with all of the associated benefits of type checking and optimization.</p>
+<p>The <code>const</code> semantics give the programmer the means to specify that a particular object should not be changed. It provides the means to state explicitly to other programmers that a value should remain constant. The compiler will enforce the specified constraint. A <code>const</code> is declared and initialized in a single place. We must always assign a value at the time of definition.</p>
+<p>The declaration</p>
+<p><code>const int speed = 60;</code></p>
+<p>creates the symbolic constant speed. Now, after this declaration writing</p>
+<p><code>speed = 70</code>;</p>
+<p>is illegal.</p>
+<h3>const pointers</h3>
+<p>When we use <code>const</code> with a pointer, we have three alternative interpretations based upon placement of the keyword:</p>
+<ul>
+<li>The pointer is <code>const</code>. Value of the pointer cannot be changed. The pointer must be initialized at the time of declaration.</li>
+<li>The item pointed to is <code>const</code>. Value of the object cannot be changed.</li>
+<li>Both are <code>const</code>.</li>
+</ul>
+<pre>{
+    char hello[256] = "hello";
+    char* p = hello;
+    // p is not const in any way thus
+    p[0] = 'a'; // can change data being pointed at
+    char goodbye[256] = "goodbye";
+    p = goodbye; // can change to point at different data
+    const char* q = hello;
+    // q is const in that we can't modify the data being pointed at
+    q[0] = 'r'; // illegal
+    q = goodbye; // can change q to point at different data
+    char* const r = hello;
+    r[0] = 'x';  // fine - we can change the data being pointed at
+    // r is const in that we can't change it to point at different data
+    r = goodbye;  // illegal - can't change what is being pointed at
+    // s is const in both pointer senses - can't change what is being pointed at and can't
+    // change to point to something else
+    const char* const s = hello;
+    s[0] = 'l';   // illegal
+    s = goodbye;  // illegal
+}</pre>
+<p>When working with <code>const</code> and pointers, we can initialize a pointer to <code>const</code> with the address of a non-<code>const</code> object. The assignment states that we will not change an object that can legally change. We cannot assign the address of a <code>const</code> object to a pointer to a non-<code>const</code> object. The object may be changed through the pointer. We can cast the address of a <code>const object</code> to a pointer to a non-<code>const</code> object, but this can be dangerous: it's defeating the intent of the <code>const</code>.</p>
+<pre>const int a = 8;
+int* aPtr = &amp;a; // illegal</pre>
+<h3>Declarations within blocks</h3>
+<p>In C++, we can declare variables anywhere within a code block. This enhancement allows us to make declarations closer to where they'll actually be used. Such local declarations help to reduce the chance of errors.</p>
+<pre>int main ()
+{
+    int a;
+    ...
+    code
+    int b;
+    more code (using b)
+    char* c;
+    yet more code (using c)
+}</pre>
+<p>Local declarations also permit us to declare variables within a loop rather than at the top of a block.</p>
+<pre>// Each i is in the same scope as its for loop
+// The following declarations are equivalent to
+// int i = 0;
+// for (int i = 0; i &lt; 10; i++)
+// {
+for (int i = 0; i &lt; 10; i++)
+{
+    for (int i = 4; i &lt; 25; i++)
+    {
+        ...
+    }
+    // i from inner loop
+}
+i from outer loop
+...
+for (int i = 0; i &gt;20; i--)
+{
+}</pre>
+<p>Once a variable is declared, a second declaration at the same scope is an error. Although code such as that used in the previous example is legal, its use is highly discouraged. Local declarations are fine; just select a different and meaningful name for each variable. Examples as shown lead to errors and bugs that are difficult to find. Make things clear and obvious.</p>
+<h3>Use const and inline rather than #define</h3>
+<p>In C it is common to create and use C preprocessor macros for symbolic constants (i.e., #define). One of the problems with preprocessor macros is they are processed out of the source file before the compiler can see them. This can cause hard to solve source code compilations problems. Also, many debuggers are unable to see the symbolic constants defined via C macros. In C++ use const to define symbolic constants:</p>
+<pre>#define PI 3.14149 // retire this approach</pre>
+<pre>const double PI = 3.14159; // use this technique to define constants in C++</pre>
+<h3>Use &lt;iostream&gt; rather than &lt;stdio.h&gt;</h3>
+<p>The C++ standard library provides an object oriented interface to I/O. C++ I/O is provided by the declarations in &lt;iostream&gt; and is built around the idea of streaming data to an output device and from an input device. Streaming is better than the C I/O provided in &lt;stdio.h&gt; because it is easier to use correctly.</p>
+<p>Retire the &lt;stdio.h&gt; I/O functions and instead use the streaming functions in &lt;iostream&gt;.</p>
+<h3>Use new and delete instead of malloc and free</h3>
+<p>In C++ we have two choices to allocate dynamic memory. We can use a function from the C memory allocation family (i.e., malloc, calloc, and realloc) or we can use the C++ new operator. New has advantages over malloc and its siblings. When allocating memory for objects new will call the object constructor, malloc will not. New will also throw an exception if memory allocation fails. This makes memory allocation error detection code simpler and more robust. (We will cover the exceptions in C++ intermediate). When we allocate memory with new, we must deallocate it with delete. When we allocate memory with malloc, we must deallocate it with free. We cannot mix new with free or malloc with delete.</p>
+<p>Retire malloc and free and instead use new and delete.</p>
+<h4>The <code>new</code> Operator</h4>
+<p>usage: <code>new</code> type; // where type is the desired data type such as float, int, char, double</p>
+<p>On success <code>new</code> returns a valid address. The memory is <span class="bold"> not</span> initialized. Later when we cover classes (i.e., user defined types) we'll learn that new does call the class constructor. If new fails, it throws an exception. We'll cover exceptions later in the course.</p>
+<p>usage: <code>new type(aValue)</code></p>
+<p>Initializes the allocated storage to the value<code> aValue</code>. We cannot initialize an array or aggregate type such as a struct.</p>
+<p>usage for arrays: <code>new type[anAmount] </code></p>
+<p>Allocate storage sufficient to hold <code>anAmount</code> instances of the specifiedtype.</p>
+<p>To allocate sufficient storage to hold a single integer and assign the pointer to the storage to <code>myPtr</code>:</p>
+<pre>int* myPtr = new int;</pre>
+<p>To return the address of of the first element from an area of memory large enough to hold 35 integers:</p>
+<pre>char* myPtr = new char[35];</pre>
+<p>To the address of a newly allocated<code> int</code> initialized to 33:</p>
+<pre>new int(33);</pre>
+<h4>The <code>delete</code> Operator</h4>
+<p>The <code>delete</code> operator destroys an object created by <code>new</code> and has a return type of <code>void</code>. The syntax is as follows:</p>
+<pre>delete expression
+delete [] expression</pre>
+<p>In both cases, <code>expression</code> must be a pointer to memory allocated by <code>new</code>. The second syntax is specified to deleting array type structures. Do not use <code>delete</code> without the <code>[]</code> to free an array as the memory will not be correctly deallocated.</p>
+<p>The following applications of <code>delete</code> are undefined:</p>
+<ul>
+<li>applying the <code>delete</code> operator to an object not created by <code>new</code>;</li>
+<li>deleting a single object with <code>delete[]</code>;</li>
+<li>deleting an array with <code>delete</code>;</li>
+<li>the result of accessing a deleted object; and</li>
+<li>the result of applying <code>delete</code> more than once to the same object.</li>
+</ul>
+<p>In the following code we exercise new and delete:</p>
+<pre>const int* aPtr = new int[1024];
+delete aPtr;                  //  error - need to use delete []</pre>
+<p>If you allocate with <code>new[]</code>, you must delete it with <code>delete[]</code>.</p>
+<p>We'll develop our usage of new and delete to greater depth in the next several lessons and throughout each of the courses that follow this one. For now, let's see how we can use them.</p>
+<pre>#include &lt;iostream&gt;
+using namespace std;
+int main()
+{
+    const int maxMeas = 100;
+    double* theMeasurements = new double[maxMeas];
+    // initialize array
+    for (int i = 0; i &lt; maxMeas; ++i)
+    {
+        theMeasurements[i] = i;
+    }
+    delete [] theMeasurements;
+}</pre>
+<p>In practice we will not often need to new and delete memory for arrays. Instead we will use std::vector (see the rule below) instead of built in arrays. std::vector will perform the memory allocation and deallocation for us.</p>
+<h3>Use &lt;string&gt; instead of &lt;string.h&gt;</h3>
+<p>Use std::string and retire arrays of char, strcpy, strcmp and the other C string functions</p>
+<p>The C++ std::string is easier and safer to use than C style arrays of char. If you have a function that requires you to pass a const (i.e., read-only) you can still use std::string. To pass the string to the function as a char* use the handy std::string member function c_str(). This provides const access to the contents of the std::string as a char*.</p>
+<pre>TEST(practice, string)
+{
+    std::string name("Bjarne Stroustrup");
+    CHECK_EQUAL("Bjarne Stroustrup", name);
+    // Use .c_str() to pass std::string to legacy functions
+    // Note: retire use of strcmp - its only used for illustration
+    // Use std::string equality operator (i.e., ==)
+    CHECK_EQUAL(0, strcmp("Bjarne Stroustrup", name.c_str()));
+    // Illustrate use of string equality
+    CHECK("Bjarne Stroustrup" == name);
+}</pre>
+<h3>Deducing a type: auto</h3>
+<p>C++ provides the keyword auto to deduce an object type from its initializer.</p>
+<pre>TEST(auto, cplusplus)
+{
+    int i = 5;
+    float f = 45.6f; // the f suffix denotes a literal float constant
+    double d = 56.4; // no suffix denotes a literal double constant
+
+    auto ai = 5;
+    auto af = 45.6f;
+    auto ad = 56.4;
+
+    CHECK_EQUAL(i, ai);
+    CHECK_DOUBLES_EQUAL(f, af, 0.01);
+    CHECK_DOUBLES_EQUAL(d, ad, 0.01);
+}</pre>
+<p>If a variable is not initialized at declaration, then auto can not be used.</p>
+<h3>Use std::vector instead of built in arrays</h3>
+<p>The C++ std::vector is easier and safer to use than built in arrays. Here is a short example of std::vector.</p>
+<pre>TEST(addingElements, vector)
+{
+    // a vector is a C++ template. That means we need to tell it the type of element (e.g., int, double, float ...). We do that be providing 
+    // the type in angle brackets. You will learn more about templates later in the certificate program.
+    //
+    std::vector values; // a vector can contain items of any type. Here we specify the elements are int.
+    values.push_back(45);    // add an element to the vector
+    values.push_back(44);    // add an element to the vector
+    values.push_back(43);    // add an element to the vector
+    values.push_back(42);    // add an element to the vector
+    CHECK_EQUAL(4, values.size());
+    CHECK_EQUAL(45, values[0]);
+}
+
+TEST(initializerList, vector)
+{
+    // we can initialize container types (e.g., array, vector, other collections you will learn about later)
+    // with an initializer list
+    std::vector values = { 45, 44, 43, 42 };
+    CHECK_EQUAL(4, values.size());
+    CHECK_EQUAL(45, values[0]);
+}
+
+TEST(conventionalLoop, vector)
+{
+    std::vector values = { 45, 44, 43, 42 };
+    CHECK_EQUAL(4, values.size());
+    CHECK_EQUAL(45, values[0]);
+
+    // loop through the elements
+    // std::vector::size_type the type used to store the size of the vector. 
+    std::stringstream actual;
+    for (std::vector::size_type i = 0; i &lt; values.size(); ++i)
+    {
+        actual &lt;&lt; values[i] &lt;&lt; " ";
+    }
+
+    CHECK_EQUAL("45 44 43 42 ", actual.str());
+}
+
+TEST(iteratorLoop, vector)
+{
+    std::vector values = { 45, 44, 43, 42 };
+    CHECK_EQUAL(4, values.size());
+    CHECK_EQUAL(45, values[0]);
+
+    // loop through the elements
+    // Use iterators - an iterator has two main responsibilities
+    // 1) You can access an element in the vector via the iterator
+    // 2) You can increment the iterator to the next element
+    std::stringstream actual;
+    for (std::vector::iterator element = values.begin(); element != values.end(); ++element) // ++element increments the iterator to the next element
+    {
+        actual &lt;&lt; *element &lt;&lt; " ";  // dereference the iterator to get the current element value
+    }
+
+    CHECK_EQUAL("45 44 43 42 ", actual.str());
+}
+
+TEST(iteratorLoopWithAuto, vector)
+{
+    std::vector values = { 45, 44, 43, 42 };
+    CHECK_EQUAL(4, values.size());
+    CHECK_EQUAL(45, values[0]);
+
+    // We can simplify the declaration of the iterator using auto. The compiler will determine the type based on the inital value.
+    // In this case that the type of values.begin().
+    std::stringstream actual;
+    for (auto element = values.begin(); element != values.end(); ++element) // ++element increments the iterator to the next element
+    {
+        actual &lt;&lt; *element &lt;&lt; " ";  // dereference the iterator to get the current element value
+    }
+
+    CHECK_EQUAL("45 44 43 42 ", actual.str());
+}
+
+TEST(iteratorWithRangedBasedForLoop, vector)
+{
+    std::vector values = { 45, 44, 43, 42 };
+    CHECK_EQUAL(4, values.size());
+    CHECK_EQUAL(45, values[0]);
+
+    // we can also loop through every element using the ranged base for loop. This is preferred when looping through
+    // every element
+    std::stringstream actual;
+    for (auto value : values)
+    {
+        actual &lt;&lt; value &lt;&lt; " ";
+    }
+
+    CHECK_EQUAL("45 44 43 42 ", actual.str());
+}       </pre>
+<p>We will cover std::vector more in later lessons.</p>
+<h3>Use stringstream instead of atoi and sprintf</h3>
+<p>In C++ we have the &lt;sstream&gt; header file. &lt;sstream&gt; provides streaming functions to and from strings. These streaming functions provide the same function as atoi and its family of functions from the C standard library. That is, they convert data to or from a type such as int to or from a string. &lt;sstream&gt; provides std::stringstream to perform these conversions. stringstream makes it easy to convert to or from the correct type. stringstream also provides an easy method to find if a conversion worked.</p>
+<p>Here is an example that shows how to convert an int to a string as well as convert a string to an int. Note the use of CppUnitLite unit test to verify the behavior.</p>
+<pre>#include "TestHarness.h"
+#include &lt;iostream&gt;
+TEST(toInt, stringstream)
+{
+    std::stringstream sValue("34");
+    int value;
+    // an example of streaming. The C++ operator &gt;&gt; is used to stream from
+    // a stream source to a type.
+    sValue &gt;&gt; value;
+    // apply the not operator "!" to the stringstream after the conversion
+    // attempt. It will return true if the conversion failed.
+    if (!sValue)
+    {
+        CHECK_FAIL("conversion failed");
+    }
+    CHECK_EQUAL(34, value);
+}</pre>
+<pre>TEST(fromInt, stringstream)
+{
+    std::stringstream sValue;
+    // an example of streaming. The C++ operator &lt;&lt; is used to stream to
+    // a stream destination from a type.
+    sValue &lt;&lt; 55;
+    // apply the not operator "!" to the stringstream after the conversion
+    // attempt. It will return true if the conversion failed.
+    if (!sValue)
+    {
+        CHECK_FAIL("conversion failed");
+    }
+    // .str() returns the content of the stringstream as a std::string
+    CHECK_EQUAL("55", sValue.str());
+}</pre>
+</div>
+  
+</div>
+<div style=""><div class="module-sequence-padding"></div>
+<div class="module-sequence-footer" role="navigation" aria-label="Module Navigation">
+  <div class="module-sequence-footer-content">
+    
+      <a href="https://canvas.uw.edu/courses/1177926/modules/items/7889504" role="button" class="Button module-sequence-footer-button--previous" data-tooltip="right" data-html-tooltip-title="&lt;i class=&#39;icon-document&#39;&gt;&lt;/i&gt; Lesson 1 Overview and Materials" aria-describedby="msf0-previous-desc">
+        <i class="icon-mini-arrow-left"></i>Previous
+        <span id="msf0-previous-desc" class="hidden" hidden="">Previous: Lesson 1 Overview and Materials</span>
+      </a>
+    
+
+    
+      <span class="module-sequence-footer-button--next" data-tooltip="left" data-html-tooltip-title="&lt;i class=&#39;icon-download&#39;&gt;&lt;/i&gt; Week 1 Online Meeting Slides">
+        <a href="https://canvas.uw.edu/courses/1177926/modules/items/7889506" role="button" class="Button" aria-describedby="msf0-next-desc">
+          Next<i class="icon-mini-arrow-right"></i>
+          <span id="msf0-next-desc" class="hidden" hidden="">Next: Week 1 Online Meeting Slides</span>
+        </a>
+      </span>
+    
+  </div>
+</div>
+</div></div>
+
+          </div>
+        </div>
+        <div id="right-side-wrapper" class="ic-app-main-content__secondary">
+          <aside id="right-side" role="complementary">
+            
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <div style="display:none;"><!-- Everything inside of this should always stay hidden -->
+        <div id="page_view_id">75214017-bfc9-4e9e-8963-335ea5b53680</div>
+    </div>
+    
+<div id="cant_record_dialog" style="display: none;">
+  <div>
+    In order to create video or audio recordings your computer needs to be 
+    webcam-enabled.  If you don't have a webcam on your computer, you can still
+    record audio-only messages by first installing the Google Video Chat
+    plugin.
+  </div>
+  <div style="text-align: center; font-size: 1.5em; margin: 10px;">
+    <a href="http://www.google.com/chat/video" target="_blank" rel="noopener" class="btn">Install the Video Plugin</a>
+  </div>
+  <div class="links" style="text-align: right; font-size: 0.8em; display: none;">
+    <a href="https://canvas.uw.edu/courses/1177926/pages/lesson-1?module_item_id=7889505#" class="cant_record_link">Don't have a webcam?</a>
+  </div>
+</div>
+
+  <div id="aria_alerts" class="hide-text affix" role="alert" aria-live="assertive"></div>
+  <div id="StudentTray__Container"></div>
+  <script>
+  INST = {"environment":"production","allowMediaComments":true,"kalturaSettings":{"domain":"nv.instructuremedia.com","resource_domain":"nv.instructuremedia.com","rtmp_domain":"fms-prod.instructuremedia.com","partner_id":"9","subpartner_id":"0","player_ui_conf":"0","kcw_ui_conf":"0","upload_ui_conf":"0","max_file_size_bytes":534773760,"do_analytics":false,"hide_rte_button":false,"js_uploader":true},"googleAnalyticsAccount":"UA-9138420-1","disableScribdPreviews":true,"logPageViews":true,"maxVisibleEditorButtons":3,"editorButtons":[{"name":"","id":21130,"url":"https://uw.hosted.panopto.com/Panopto/Pages/Sessions/embeddedupload.aspx","icon_url":"https://uw.hosted.panopto.com/Panopto/images/panopto_logo_globe.png","canvas_icon_class":null,"width":900,"height":700},{"name":"Modalis","id":52765,"url":"https://uw.modalis.io/lti","icon_url":"https://uw.modalis.io/assets/richicon.png","canvas_icon_class":null,"width":800,"height":600}]};
+  ENV = {"ASSET_HOST":"https://du11hjcvx0uqb.cloudfront.net","active_brand_config_json_url":"https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/2b2842738c86c4f2032e430bd0445cfc/variables-750d72b9d3e5d522f965bf904110c132.json","url_to_what_gets_loaded_inside_the_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/2b2842738c86c4f2032e430bd0445cfc/variables-750d72b9d3e5d522f965bf904110c132.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_normal_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-bb4121d737.css"],"url_for_high_contrast_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/default/variables-high_contrast-750d72b9d3e5d522f965bf904110c132.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_high_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-b61a4bdaa8.css"],"current_user_id":"3757111","current_user":{"id":"3757111","display_name":"Clayton Wong","avatar_image_url":"https://canvas.uw.edu/images/thumbnails/46487823/mSs2TjTESYscSzrackhgoJvAT79xbNchamHPrSec","html_url":"https://canvas.uw.edu/about/3757111"},"current_user_roles":["user","student"],"current_user_disabled_inbox":false,"files_domain":"cluster10-files.instructure.com","DOMAIN_ROOT_ACCOUNT_ID":100000000083919,"k12":false,"use_responsive_layout":false,"help_link_name":"Help","help_link_icon":"help","use_high_contrast":false,"SETTINGS":{"open_registration":false,"eportfolios_enabled":true,"collapse_global_nav":true,"show_feedback_link":true,"enable_profiles":true},"page_view_update_url":"/page_views/75214017-bfc9-4e9e-8963-335ea5b53680?page_view_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpIjoiNzUyMTQwMTctYmZjOS00ZTllLTg5NjMtMzM1ZWE1YjUzNjgwIiwidSI6MTAwMDAwMDAzNzU3MTExLCJjIjoiMjAxOC0wMS0zMVQyMDo0NToxNi4xMVoifQ.RTeijYssdPBZgFNyQbUNJVptfZ6HdyVH5d1cxoCfmwE","context_asset_string":"course_1177926","ping_url":"https://canvas.uw.edu/api/v1/courses/1177926/ping","TIMEZONE":"America/Los_Angeles","CONTEXT_TIMEZONE":"America/Los_Angeles","GRAPHQL_ENABLED":true,"LOCALE":"en","BIGEASY_LOCALE":"en_US","FULLCALENDAR_LOCALE":"en","MOMENT_LOCALE":"en","WIKI_RIGHTS":{"read":true},"PAGE_RIGHTS":{"read":true},"DEFAULT_EDITING_ROLES":"teachers","WIKI_PAGES_PATH":"/courses/1177926/pages","WIKI_PAGE":{"title":"Lesson 1","created_at":"2017-10-18T21:04:14Z","url":"lesson-1","editing_roles":"teachers","page_id":"2573092","published":true,"hide_from_students":false,"front_page":false,"html_url":"https://canvas.uw.edu/courses/1177926/pages/lesson-1","updated_at":"2017-10-18T21:04:14Z","locked_for_user":false,"body":"\u003cdiv id=\"level2\"\u003e\r\n\u003ch2\u003e\n\u003cimg src=\"https://canvas.uw.edu/courses/1177926/files/44384333/preview\" alt=\"L01.png\" width=\"50\" height=\"50\" data-api-endpoint=\"https://canvas.uw.edu/api/v1/courses/1177926/files/44384333\" data-api-returntype=\"File\"\u003e C++ I/O, Types, Declarations, and CppUnitLite\u003c/h2\u003e\r\n\u003ch2\u003eC++ History and Programming Paradigms\u003c/h2\u003e\r\n\u003cp\u003eAs a prelude to exploring C++, let's begin by briefly looking at some of the commonly used programming languages and see how they differ. For our first step, we conclude that paradigm is simply a cool word - much cooler than simply saying model. It sounds impressive and is fun to say - although not like it's spelled. That done, we can move to the task de jour - it ain't soup yet.\u003c/p\u003e\r\n\u003cp\u003eIn the software world, we have data and the functions that operate on that data. We describe how we combine or group these two as a programming paradigm. Today, we can find several, including \u003cspan class=\"italics\"\u003eprocedural\u003c/span\u003e, \u003cspan class=\"italics\"\u003e data-driven\u003c/span\u003e, \u003cspan class=\"italics\"\u003efunctional\u003c/span\u003e, \u003cspan class=\"italics\"\u003elogical\u003c/span\u003e, \u003cspan class=\"italics\"\u003eobject-based\u003c/span\u003e, and \u003cspan class=\"italics\"\u003eobject-oriented\u003c/span\u003e. Let's spend some time looking at each.\u003c/p\u003e\r\n\u003ch3\u003eCompatibility with C\u003c/h3\u003e\r\n\u003cp\u003eLet's start with the \u003cspan class=\"keyterm\"\u003eprocedural paradigm\u003c/span\u003e. With such an approach, we decide what procedures, or \"algorithms\" are required to solve our problem. Next, we decompose these large and complex algorithms down into smaller and more manageable pieces (often called modules); collectively, these pieces are our program. When we run the program, it will perform the specified operations (functions) on our data to determine the answer to the original problem. We see that the data and the functions that operate on those data have been combined as procedures. The familiar languages such as C, Basic, Pascal, Fortran, or Cobol are examples of procedural languages.\u003c/p\u003e\r\n\u003ch3\u003eThe Data-Driven Paradigm\u003c/h3\u003e\r\n\u003cp\u003eIn many cases, the types and structure of data from the problem domain, and relationships between them, are more important than the procedures or algorithms themselves. In this case, the \u003cspan class=\"keyterm\"\u003edata-driven paradigm\u003c/span\u003e is often a better approach. This realization spawned the proliferation of database management programs that are still the foundation of many computer systems. Databases come in many varieties, but today the relational database is by far the most common. Here the fundamental model is one of tables of data in which each row represents a unique instance of some entity characterized by values in columns of data that make up the row. Collection, storage, manipulation, and access to these data is performed by computer programs, or by procedures stored in the database itself. SQL is an example of a data-driven language.\u003c/p\u003e\r\n\u003ch3\u003eThe Functional Paradigm\u003c/h3\u003e\r\n\u003cp\u003eis built as a composition of functions enclosed in a top-level function. A computation is the evaluation of the top level and, subsequently, the enclosed functions while avoiding state and mutable (data that can be changed) data (common in procedural languages, for example). Pure functional programs have no side effects; consequently, their application to data is independent of evaluation order. Because such functions do not modify shared variables, they can be executed in parallel without interference. Functional languages include LISP, APL, and Scheme. Functional languages can work well in multi-threaded programs.\u003c/p\u003e\r\n\u003ch3\u003eThe Logical Paradigm\u003c/h3\u003e\r\n\u003cp\u003e\u003cspan class=\"keyterm\"\u003eLogical programs\u003c/span\u003e use logical expressions or statements for encapsulating the data and functions. These mathematical expressions are combined with proof procedures to define and then solve problems. As an example of such logical expressions, we can write the following problem or conjecture:\u003c/p\u003e\r\n\u003cblockquote\u003eAll men are honest. \u003cbr\u003e Aristotle is a man. \u003cbr\u003e Therefore, Aristotle is honest.\u003c/blockquote\u003e\r\n\u003cp\u003eTo prove the validity of such a set of statements (or, rather, to solve the problem of determining if Aristotle is honest), we begin by assuming that it is false. If we can show a contradiction, then the original conjecture (that the set of statements is false) must have been correct. The language Prolog is considered to implement the logical programming paradigm.\u003c/p\u003e\r\n\u003ch4\u003eThe Object-Based Paradigm\u003c/h4\u003e\r\n\u003cp\u003eSome time in the late sixties and early seventies, computer scientists came up with the idea of putting some procedural intelligence together with the data describing a particular entity into something called an \u003cspan class=\"keyterm\"\u003eobject\u003c/span\u003e. The formal term for wrapping data and functions together into an object is called \u003cspan class=\"keyterm\"\u003eencapsulation\u003c/span\u003e; it is the first of the big three object oriented (or OO) concepts (the others are \u003cspan class=\"italics\"\u003einheritance\u003c/span\u003e and \u003cspan class=\"italics\"\u003epolymorphism - \u003c/span\u003emore about these later). Encapsulation helps software developers achieve something called \u003cspan class=\"keyterm\"\u003edata hiding - \u003c/span\u003ethe notion that an object's data should only be manipulated by the object itself, and then only in clearly specified ways. With data hiding, when things go wrong and your credit card bill gets messed up, it's easy to decide who's to blame; it's that stupid object that has your name and purchase information encapsulated in it. Doesn't that make you feel better? I'm sure it makes the credit card company happy to know it's not their fault!\u003c/p\u003e\r\n\u003cp\u003eThis idea of one thing having data (attributes), and functions (behaviors), allows us to make a pretty long leap. It allows us to look at a problem and use a process of abstraction to identify things from the problem we would like to treat as independent, active, entities in our program. It allows us to specify what we want those things to be able to do, and to give them all the data and processes they need to do what we want. It also allows us to endow things in our program with an intelligence that they don't have in the real-world problem domain. For example, in the real world of the billing department, invoices don't know how to assemble, validate, and print themselves. In the world of objects, it is entirely reasonable to expect them to do so\u003c/p\u003e\r\n\u003ch3\u003eThe Object-Oriented Paradigm\u003c/h3\u003e\r\n\u003cp\u003eThe difference, at least in the name, between object-based and object-oriented, seems small. In fact, the difference is profound. With object-based programs, what we have is a sort of data on steroids, encapsulated together with some handy procedures for manipulating the data. Object-oriented programming adds two crucially important concepts and capabilities: \u003cspan class=\"italics\"\u003einheritance\u003c/span\u003e and \u003cspan class=\"italics\"\u003e polymorphism\u003c/span\u003e\u003c/p\u003e\r\n\u003ch3\u003eSummary\u003c/h3\u003e\r\n\u003cp\u003eWe'll explore development paradigms more later in the class when we design are programs. Particularly when we start defining our own types using C++ classes.\u003c/p\u003e\r\n\u003ch2\u003eAutomated testing with CppUnitLite\u003c/h2\u003e\r\n\u003cp\u003eEvery programming assignment you complete must provide automated unit tests using CppUnitLite. CppUnitLite is a simple yet powerful unit testing framework for C++. Download CppUnitLite from the main C++ Progamming class page. We may ask, \u003ci\u003ewhy do we need to use CppUnitLite\u003c/i\u003e? There are a number of answers\u003c/p\u003e\r\n\u003cp\u003e\u003ci\u003eHow do you know your code works correctly? \u003c/i\u003eMany developers use a combination of trace statements and manual tests to verify new code works correctly. I'll argue that a better way is to write automated tests that not only document correct behavior but can be run later as regression tests to verify correct behavior after any code modification.\u003c/p\u003e\r\n\u003cp\u003e\u003ci\u003eHow do you know the code you developed and manually tested last week, works this week after you add new functionality?\u003c/i\u003e Do you rerun the manual tests from the previous development. How do you know what these manual tests were? What if another developer makes changes?\u003c/p\u003e\r\n\u003cp\u003eAnother benefit of automated unit tests is they provide documentation of the intended usage of the code under test. Developers can read the unit tests to learn explicit and implicit requirements of the code as well as learn how to use the code.\u003c/p\u003e\r\n\u003cp\u003eHow do you know if you are writing unit tests correctly? One of the qualitative metrics I use is whether I can grade most (if not all) of your assignment by reading the unit test code. I should be able to see your code implementations in use and see that they work correctly by reviewing the test checks.\u003c/p\u003e\r\n\u003cp\u003eI recommend you write your tests before you write your implementation code. There is something about this process of writing the tests first that provides a number of benefits. You start looking at the API design from the perspective of the user of the API - this leads to a better API design. Right away, you write code that can be tested. Most development teams have a goal to write testable code. But often the code is designed and written to be testable, then the tests are (sometimes) added after the development work. This is when you find that the implemented code does not allow for automated unit testing. At this point it is too late to fix the code for testing.\u003c/p\u003e\r\n\u003cp\u003eAnother type of test that is often neglected is extremely easy to do within a unit test. This is testing boundary conditions. We most always remember to test the mainline data and usage scenarios. This is what is mostly tested for in manual verification tests. Now, within your unit tests stress your code. What happens when inputs are at the boundary of a valid input? If a function takes a pointer as input, what happens if nullptr, NULL or 0 is passed? What happens if the input is outside the boundary? Does your design make it easy to know when a boundary condition has been violated?\u003c/p\u003e\r\n\u003cp\u003eIt will take some practice to develop this skill of writing unit tests. We will work on this together throughout the class. Many of the code examples provided for the course will be in the format of a CppUnitLite unit test.\u003c/p\u003e\r\n\u003cp\u003eCppUnitLite comes with a number of source files. You may use CppUnitLite in your assignments in a couple different ways.\u003c/p\u003e\r\n\u003col\u003e\r\n\u003cli\u003eCopy the CppUnitLite source code into each assignment project. Compile and run the new code you write for the assignment with the CppUnitLite code. This is how I will provide assignment solutions as everything needed to compile the assignment is grouped together.\u003c/li\u003e\r\n\u003cli\u003eCopy the CppUnitLite source into a single project. Compile the code into a LIB or DLL. Link to CppUnitLite library from your assignment projects. This is the method you would use on a production project as you would not mix the test code with the production code.\u003c/li\u003e\r\n\u003c/ol\u003e\r\n\u003cp\u003eWhen you look at the CppUnitLite source files you will notice a number of source files. You will not modify any of the files except the file with the name of XxxTest.cpp. This is the file in which you will create your tests. Rename Xxx to the capability being tested. For example, if you are testing stringstream, rename XxxTest.cpp to StringStreamTest.cpp. Inside XxxTest.cpp you will note the following code:\u003c/p\u003e\r\n\u003cpre\u003e#include \"TestHarness.h\"\r\n// include the header file for the class you are testing.\r\n// each test function should be small and test a single capability\r\n// replace testName  with the name of the particular test. Replace ClassName with\r\n// the name of the class being tested\r\nTEST(testName, ClassName)\r\n{\r\n    CHECK(1 == 1);\r\n}\r\n\u003c/pre\u003e\r\n\u003cp\u003eTo write your first test, #include the .h files required to access the capability under test. In the TEST replace testName with the specific capability being tested, and replace ClassName with the general name of the capability under test. Write the code inside TEST that exercises the capability. There are a number of checks you can perform to validate the results. See the following TEST for examples of each:\u003c/p\u003e\r\n\u003cpre\u003e#include \"TestHarness.h\"\r\n\r\nTEST(CheckExample, CppUnitLite)\r\n{\r\n    int actual = 5 + 3;\r\n    int expected = 8;\r\n    CHECK_EQUAL(expected, actual);\r\n    auto dActual = 100.0 / 3;\r\n    auto dExpected = 33.33;\r\n    // doubles and floats are inexact numeric representations. To check equality\r\n    // we must use a threshold value. If the values are equal within the range of the\r\n    // threshold the check passes.\r\n    CHECK_DOUBLES_EQUAL(dExpected, dActual, 0.01);\r\n    if (5 == 3)\r\n    {\r\n        // Use CHECK_FAIL when the test control flow gets to a statement\r\n        // that is invalid\r\n        CHECK_FAIL(\"5 does not equal 3\");\r\n    }\r\n\r\n    // Use CHECK for validation checks that don't verify equality.\r\n    std::string name(\"Scott Meyer\");\r\n    CHECK(!name.empty());\r\n\r\n    // Use CHECK_EQUAL to compare strings\r\n    std::string sActual(\"Hello\");\r\n    std::string sExpected(\"Hello\");\r\n    CHECK_EQUAL(sExpected, sActual);\r\n}\u003c/pre\u003e\r\n\u003cp\u003eRemember to keep each test small and focused. It is better to write more smaller tests than fewer larger tests.\u003c/p\u003e\r\n\u003cp\u003eIf you are testing a number of different general capabilities, create new XxxTest.cpp files, one for each general capability.\u003c/p\u003e\r\n\u003cp\u003eIf you are intested in researching this topic more do a web search of \u003cstrong\u003eTest Driven Development\u003c/strong\u003e\u003c/p\u003e\r\n\u003ch2\u003eCode Standards and Styles\u003c/h2\u003e\r\n\u003cp\u003eYou are not required to use a particular coding style in the course. But you must select your own style and consistently use your style throughout your assignment code. Style includes such items as:\u003c/p\u003e\r\n\u003cul\u003e\r\n\u003cli\u003eCurly brace style\u003c/li\u003e\r\n\u003cli\u003eIdentifier naming style (e.g., camel casing or pascal casing)\u003c/li\u003e\r\n\u003cli\u003eIndentation style\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003cp\u003eRegardless of what style you choose - neatness counts. Your code must be nicely and consistently formatted and use the same style throughout. A good choice would be to use the same style as Stroustrup does in \"The C++ Programming Language\".\u003c/p\u003e\r\n\u003ch2\u003eC++ Types and Declarations\u003c/h2\u003e\r\n\u003cp\u003eRead the chapter on Types and Declarations from Stroustrup's book \"The C++ Programming language for a full explanation of C++ Types and Declarations.\u003c/p\u003e\r\n\u003ch2\u003eShifting from C to C++\u003c/h2\u003e\r\n\u003ch3\u003eC++ Comments\u003c/h3\u003e\r\n\u003cp\u003eAlthough the C-style comment delimiters \u003ccode\u003e/*\u003c/code\u003e and \u003ccode\u003e*/\u003c/code\u003e still work, in C++ we can also use two forward slashes, \u003ccode\u003e//\u003c/code\u003e, to identify single-line comments. Any text following the two forward slashes on a line is treated as comment.\u003c/p\u003e\r\n\u003ch3\u003econst and const variables\u003c/h3\u003e\r\n\u003cp\u003eThe \u003ccode\u003econst\u003c/code\u003e specifier is now a part of ANSI C, where it is used to declare or specify a constant. As we'll see, its use in C++ is much richer. In C, it's intended as a replacement for the \u003ccode\u003e#define\u003c/code\u003e statement. The major advantage of such a replacement is that \u003ccode\u003e#define\u003c/code\u003e statements are handled by the preprocessor - there is no type checking. The \u003ccode\u003econst\u003c/code\u003e specifier is interpreted by the compiler with all of the associated benefits of type checking and optimization.\u003c/p\u003e\r\n\u003cp\u003eThe \u003ccode\u003econst\u003c/code\u003e semantics give the programmer the means to specify that a particular object should not be changed. It provides the means to state explicitly to other programmers that a value should remain constant. The compiler will enforce the specified constraint. A \u003ccode\u003econst\u003c/code\u003e is declared and initialized in a single place. We must always assign a value at the time of definition.\u003c/p\u003e\r\n\u003cp\u003eThe declaration\u003c/p\u003e\r\n\u003cp\u003e\u003ccode\u003econst int speed = 60;\u003c/code\u003e\u003c/p\u003e\r\n\u003cp\u003ecreates the symbolic constant speed. Now, after this declaration writing\u003c/p\u003e\r\n\u003cp\u003e\u003ccode\u003espeed = 70\u003c/code\u003e;\u003c/p\u003e\r\n\u003cp\u003eis illegal.\u003c/p\u003e\r\n\u003ch3\u003econst pointers\u003c/h3\u003e\r\n\u003cp\u003eWhen we use \u003ccode\u003econst\u003c/code\u003e with a pointer, we have three alternative interpretations based upon placement of the keyword:\u003c/p\u003e\r\n\u003cul\u003e\r\n\u003cli\u003eThe pointer is \u003ccode\u003econst\u003c/code\u003e. Value of the pointer cannot be changed. The pointer must be initialized at the time of declaration.\u003c/li\u003e\r\n\u003cli\u003eThe item pointed to is \u003ccode\u003econst\u003c/code\u003e. Value of the object cannot be changed.\u003c/li\u003e\r\n\u003cli\u003eBoth are \u003ccode\u003econst\u003c/code\u003e.\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003cpre\u003e{\r\n    char hello[256] = \"hello\";\r\n    char* p = hello;\r\n    // p is not const in any way thus\r\n    p[0] = 'a'; // can change data being pointed at\r\n    char goodbye[256] = \"goodbye\";\r\n    p = goodbye; // can change to point at different data\r\n    const char* q = hello;\r\n    // q is const in that we can't modify the data being pointed at\r\n    q[0] = 'r'; // illegal\r\n    q = goodbye; // can change q to point at different data\r\n    char* const r = hello;\r\n    r[0] = 'x';  // fine - we can change the data being pointed at\r\n    // r is const in that we can't change it to point at different data\r\n    r = goodbye;  // illegal - can't change what is being pointed at\r\n    // s is const in both pointer senses - can't change what is being pointed at and can't\r\n    // change to point to something else\r\n    const char* const s = hello;\r\n    s[0] = 'l';   // illegal\r\n    s = goodbye;  // illegal\r\n}\u003c/pre\u003e\r\n\u003cp\u003eWhen working with \u003ccode\u003econst\u003c/code\u003e and pointers, we can initialize a pointer to \u003ccode\u003econst\u003c/code\u003e with the address of a non-\u003ccode\u003econst\u003c/code\u003e object. The assignment states that we will not change an object that can legally change. We cannot assign the address of a \u003ccode\u003econst\u003c/code\u003e object to a pointer to a non-\u003ccode\u003econst\u003c/code\u003e object. The object may be changed through the pointer. We can cast the address of a \u003ccode\u003econst object\u003c/code\u003e to a pointer to a non-\u003ccode\u003econst\u003c/code\u003e object, but this can be dangerous: it's defeating the intent of the \u003ccode\u003econst\u003c/code\u003e.\u003c/p\u003e\r\n\u003cpre\u003econst int a = 8;\r\nint* aPtr = \u0026amp;a; // illegal\u003c/pre\u003e\r\n\u003ch3\u003eDeclarations within blocks\u003c/h3\u003e\r\n\u003cp\u003eIn C++, we can declare variables anywhere within a code block. This enhancement allows us to make declarations closer to where they'll actually be used. Such local declarations help to reduce the chance of errors.\u003c/p\u003e\r\n\u003cpre\u003eint main ()\r\n{\r\n    int a;\r\n    ...\r\n    code\r\n    int b;\r\n    more code (using b)\r\n    char* c;\r\n    yet more code (using c)\r\n}\u003c/pre\u003e\r\n\u003cp\u003eLocal declarations also permit us to declare variables within a loop rather than at the top of a block.\u003c/p\u003e\r\n\u003cpre\u003e// Each i is in the same scope as its for loop\r\n// The following declarations are equivalent to\r\n// int i = 0;\r\n// for (int i = 0; i \u0026lt; 10; i++)\r\n// {\r\nfor (int i = 0; i \u0026lt; 10; i++)\r\n{\r\n    for (int i = 4; i \u0026lt; 25; i++)\r\n    {\r\n        ...\r\n    }\r\n    // i from inner loop\r\n}\r\ni from outer loop\r\n...\r\nfor (int i = 0; i \u0026gt;20; i--)\r\n{\r\n}\u003c/pre\u003e\r\n\u003cp\u003eOnce a variable is declared, a second declaration at the same scope is an error. Although code such as that used in the previous example is legal, its use is highly discouraged. Local declarations are fine; just select a different and meaningful name for each variable. Examples as shown lead to errors and bugs that are difficult to find. Make things clear and obvious.\u003c/p\u003e\r\n\u003ch3\u003eUse const and inline rather than #define\u003c/h3\u003e\r\n\u003cp\u003eIn C it is common to create and use C preprocessor macros for symbolic constants (i.e., #define). One of the problems with preprocessor macros is they are processed out of the source file before the compiler can see them. This can cause hard to solve source code compilations problems. Also, many debuggers are unable to see the symbolic constants defined via C macros. In C++ use const to define symbolic constants:\u003c/p\u003e\r\n\u003cpre\u003e#define PI 3.14149 // retire this approach\u003c/pre\u003e\r\n\u003cpre\u003econst double PI = 3.14159; // use this technique to define constants in C++\u003c/pre\u003e\r\n\u003ch3\u003eUse \u0026lt;iostream\u0026gt; rather than \u0026lt;stdio.h\u0026gt;\u003c/h3\u003e\r\n\u003cp\u003eThe C++ standard library provides an object oriented interface to I/O. C++ I/O is provided by the declarations in \u0026lt;iostream\u0026gt; and is built around the idea of streaming data to an output device and from an input device. Streaming is better than the C I/O provided in \u0026lt;stdio.h\u0026gt; because it is easier to use correctly.\u003c/p\u003e\r\n\u003cp\u003eRetire the \u0026lt;stdio.h\u0026gt; I/O functions and instead use the streaming functions in \u0026lt;iostream\u0026gt;.\u003c/p\u003e\r\n\u003ch3\u003eUse new and delete instead of malloc and free\u003c/h3\u003e\r\n\u003cp\u003eIn C++ we have two choices to allocate dynamic memory. We can use a function from the C memory allocation family (i.e., malloc, calloc, and realloc) or we can use the C++ new operator. New has advantages over malloc and its siblings. When allocating memory for objects new will call the object constructor, malloc will not. New will also throw an exception if memory allocation fails. This makes memory allocation error detection code simpler and more robust. (We will cover the exceptions in C++ intermediate). When we allocate memory with new, we must deallocate it with delete. When we allocate memory with malloc, we must deallocate it with free. We cannot mix new with free or malloc with delete.\u003c/p\u003e\r\n\u003cp\u003eRetire malloc and free and instead use new and delete.\u003c/p\u003e\r\n\u003ch4\u003eThe \u003ccode\u003enew\u003c/code\u003e Operator\u003c/h4\u003e\r\n\u003cp\u003eusage: \u003ccode\u003enew\u003c/code\u003e type; // where type is the desired data type such as float, int, char, double\u003c/p\u003e\r\n\u003cp\u003eOn success \u003ccode\u003enew\u003c/code\u003e returns a valid address. The memory is \u003cspan class=\"bold\"\u003e not\u003c/span\u003e initialized. Later when we cover classes (i.e., user defined types) we'll learn that new does call the class constructor. If new fails, it throws an exception. We'll cover exceptions later in the course.\u003c/p\u003e\r\n\u003cp\u003eusage: \u003ccode\u003enew type(aValue)\u003c/code\u003e\u003c/p\u003e\r\n\u003cp\u003eInitializes the allocated storage to the value\u003ccode\u003e aValue\u003c/code\u003e. We cannot initialize an array or aggregate type such as a struct.\u003c/p\u003e\r\n\u003cp\u003eusage for arrays: \u003ccode\u003enew type[anAmount] \u003c/code\u003e\u003c/p\u003e\r\n\u003cp\u003eAllocate storage sufficient to hold \u003ccode\u003eanAmount\u003c/code\u003e instances of the specifiedtype.\u003c/p\u003e\r\n\u003cp\u003eTo allocate sufficient storage to hold a single integer and assign the pointer to the storage to \u003ccode\u003emyPtr\u003c/code\u003e:\u003c/p\u003e\r\n\u003cpre\u003eint* myPtr = new int;\u003c/pre\u003e\r\n\u003cp\u003eTo return the address of of the first element from an area of memory large enough to hold 35 integers:\u003c/p\u003e\r\n\u003cpre\u003echar* myPtr = new char[35];\u003c/pre\u003e\r\n\u003cp\u003eTo the address of a newly allocated\u003ccode\u003e int\u003c/code\u003e initialized to 33:\u003c/p\u003e\r\n\u003cpre\u003enew int(33);\u003c/pre\u003e\r\n\u003ch4\u003eThe \u003ccode\u003edelete\u003c/code\u003e Operator\u003c/h4\u003e\r\n\u003cp\u003eThe \u003ccode\u003edelete\u003c/code\u003e operator destroys an object created by \u003ccode\u003enew\u003c/code\u003e and has a return type of \u003ccode\u003evoid\u003c/code\u003e. The syntax is as follows:\u003c/p\u003e\r\n\u003cpre\u003edelete expression\r\ndelete [] expression\u003c/pre\u003e\r\n\u003cp\u003eIn both cases, \u003ccode\u003eexpression\u003c/code\u003e must be a pointer to memory allocated by \u003ccode\u003enew\u003c/code\u003e. The second syntax is specified to deleting array type structures. Do not use \u003ccode\u003edelete\u003c/code\u003e without the \u003ccode\u003e[]\u003c/code\u003e to free an array as the memory will not be correctly deallocated.\u003c/p\u003e\r\n\u003cp\u003eThe following applications of \u003ccode\u003edelete\u003c/code\u003e are undefined:\u003c/p\u003e\r\n\u003cul\u003e\r\n\u003cli\u003eapplying the \u003ccode\u003edelete\u003c/code\u003e operator to an object not created by \u003ccode\u003enew\u003c/code\u003e;\u003c/li\u003e\r\n\u003cli\u003edeleting a single object with \u003ccode\u003edelete[]\u003c/code\u003e;\u003c/li\u003e\r\n\u003cli\u003edeleting an array with \u003ccode\u003edelete\u003c/code\u003e;\u003c/li\u003e\r\n\u003cli\u003ethe result of accessing a deleted object; and\u003c/li\u003e\r\n\u003cli\u003ethe result of applying \u003ccode\u003edelete\u003c/code\u003e more than once to the same object.\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003cp\u003eIn the following code we exercise new and delete:\u003c/p\u003e\r\n\u003cpre\u003econst int* aPtr = new int[1024];\r\ndelete aPtr;                  //  error - need to use delete []\u003c/pre\u003e\r\n\u003cp\u003eIf you allocate with \u003ccode\u003enew[]\u003c/code\u003e, you must delete it with \u003ccode\u003edelete[]\u003c/code\u003e.\u003c/p\u003e\r\n\u003cp\u003eWe'll develop our usage of new and delete to greater depth in the next several lessons and throughout each of the courses that follow this one. For now, let's see how we can use them.\u003c/p\u003e\r\n\u003cpre\u003e#include \u0026lt;iostream\u0026gt;\r\nusing namespace std;\r\nint main()\r\n{\r\n    const int maxMeas = 100;\r\n    double* theMeasurements = new double[maxMeas];\r\n    // initialize array\r\n    for (int i = 0; i \u0026lt; maxMeas; ++i)\r\n    {\r\n        theMeasurements[i] = i;\r\n    }\r\n    delete [] theMeasurements;\r\n}\u003c/pre\u003e\r\n\u003cp\u003eIn practice we will not often need to new and delete memory for arrays. Instead we will use std::vector (see the rule below) instead of built in arrays. std::vector will perform the memory allocation and deallocation for us.\u003c/p\u003e\r\n\u003ch3\u003eUse \u0026lt;string\u0026gt; instead of \u0026lt;string.h\u0026gt;\u003c/h3\u003e\r\n\u003cp\u003eUse std::string and retire arrays of char, strcpy, strcmp and the other C string functions\u003c/p\u003e\r\n\u003cp\u003eThe C++ std::string is easier and safer to use than C style arrays of char. If you have a function that requires you to pass a const (i.e., read-only) you can still use std::string. To pass the string to the function as a char* use the handy std::string member function c_str(). This provides const access to the contents of the std::string as a char*.\u003c/p\u003e\r\n\u003cpre\u003eTEST(practice, string)\r\n{\r\n    std::string name(\"Bjarne Stroustrup\");\r\n    CHECK_EQUAL(\"Bjarne Stroustrup\", name);\r\n    // Use .c_str() to pass std::string to legacy functions\r\n    // Note: retire use of strcmp - its only used for illustration\r\n    // Use std::string equality operator (i.e., ==)\r\n    CHECK_EQUAL(0, strcmp(\"Bjarne Stroustrup\", name.c_str()));\r\n    // Illustrate use of string equality\r\n    CHECK(\"Bjarne Stroustrup\" == name);\r\n}\u003c/pre\u003e\r\n\u003ch3\u003eDeducing a type: auto\u003c/h3\u003e\r\n\u003cp\u003eC++ provides the keyword auto to deduce an object type from its initializer.\u003c/p\u003e\r\n\u003cpre\u003eTEST(auto, cplusplus)\r\n{\r\n    int i = 5;\r\n    float f = 45.6f; // the f suffix denotes a literal float constant\r\n    double d = 56.4; // no suffix denotes a literal double constant\r\n\r\n    auto ai = 5;\r\n    auto af = 45.6f;\r\n    auto ad = 56.4;\r\n\r\n    CHECK_EQUAL(i, ai);\r\n    CHECK_DOUBLES_EQUAL(f, af, 0.01);\r\n    CHECK_DOUBLES_EQUAL(d, ad, 0.01);\r\n}\u003c/pre\u003e\r\n\u003cp\u003eIf a variable is not initialized at declaration, then auto can not be used.\u003c/p\u003e\r\n\u003ch3\u003eUse std::vector instead of built in arrays\u003c/h3\u003e\r\n\u003cp\u003eThe C++ std::vector is easier and safer to use than built in arrays. Here is a short example of std::vector.\u003c/p\u003e\r\n\u003cpre\u003eTEST(addingElements, vector)\r\n{\r\n    // a vector is a C++ template. That means we need to tell it the type of element (e.g., int, double, float ...). We do that be providing \r\n    // the type in angle brackets. You will learn more about templates later in the certificate program.\r\n    //\r\n    std::vector values; // a vector can contain items of any type. Here we specify the elements are int.\r\n    values.push_back(45);    // add an element to the vector\r\n    values.push_back(44);    // add an element to the vector\r\n    values.push_back(43);    // add an element to the vector\r\n    values.push_back(42);    // add an element to the vector\r\n    CHECK_EQUAL(4, values.size());\r\n    CHECK_EQUAL(45, values[0]);\r\n}\r\n\r\nTEST(initializerList, vector)\r\n{\r\n    // we can initialize container types (e.g., array, vector, other collections you will learn about later)\r\n    // with an initializer list\r\n    std::vector values = { 45, 44, 43, 42 };\r\n    CHECK_EQUAL(4, values.size());\r\n    CHECK_EQUAL(45, values[0]);\r\n}\r\n\r\nTEST(conventionalLoop, vector)\r\n{\r\n    std::vector values = { 45, 44, 43, 42 };\r\n    CHECK_EQUAL(4, values.size());\r\n    CHECK_EQUAL(45, values[0]);\r\n\r\n    // loop through the elements\r\n    // std::vector::size_type the type used to store the size of the vector. \r\n    std::stringstream actual;\r\n    for (std::vector::size_type i = 0; i \u0026lt; values.size(); ++i)\r\n    {\r\n        actual \u0026lt;\u0026lt; values[i] \u0026lt;\u0026lt; \" \";\r\n    }\r\n\r\n    CHECK_EQUAL(\"45 44 43 42 \", actual.str());\r\n}\r\n\r\nTEST(iteratorLoop, vector)\r\n{\r\n    std::vector values = { 45, 44, 43, 42 };\r\n    CHECK_EQUAL(4, values.size());\r\n    CHECK_EQUAL(45, values[0]);\r\n\r\n    // loop through the elements\r\n    // Use iterators - an iterator has two main responsibilities\r\n    // 1) You can access an element in the vector via the iterator\r\n    // 2) You can increment the iterator to the next element\r\n    std::stringstream actual;\r\n    for (std::vector::iterator element = values.begin(); element != values.end(); ++element) // ++element increments the iterator to the next element\r\n    {\r\n        actual \u0026lt;\u0026lt; *element \u0026lt;\u0026lt; \" \";  // dereference the iterator to get the current element value\r\n    }\r\n\r\n    CHECK_EQUAL(\"45 44 43 42 \", actual.str());\r\n}\r\n\r\nTEST(iteratorLoopWithAuto, vector)\r\n{\r\n    std::vector values = { 45, 44, 43, 42 };\r\n    CHECK_EQUAL(4, values.size());\r\n    CHECK_EQUAL(45, values[0]);\r\n\r\n    // We can simplify the declaration of the iterator using auto. The compiler will determine the type based on the inital value.\r\n    // In this case that the type of values.begin().\r\n    std::stringstream actual;\r\n    for (auto element = values.begin(); element != values.end(); ++element) // ++element increments the iterator to the next element\r\n    {\r\n        actual \u0026lt;\u0026lt; *element \u0026lt;\u0026lt; \" \";  // dereference the iterator to get the current element value\r\n    }\r\n\r\n    CHECK_EQUAL(\"45 44 43 42 \", actual.str());\r\n}\r\n\r\nTEST(iteratorWithRangedBasedForLoop, vector)\r\n{\r\n    std::vector values = { 45, 44, 43, 42 };\r\n    CHECK_EQUAL(4, values.size());\r\n    CHECK_EQUAL(45, values[0]);\r\n\r\n    // we can also loop through every element using the ranged base for loop. This is preferred when looping through\r\n    // every element\r\n    std::stringstream actual;\r\n    for (auto value : values)\r\n    {\r\n        actual \u0026lt;\u0026lt; value \u0026lt;\u0026lt; \" \";\r\n    }\r\n\r\n    CHECK_EQUAL(\"45 44 43 42 \", actual.str());\r\n}       \u003c/pre\u003e\r\n\u003cp\u003eWe will cover std::vector more in later lessons.\u003c/p\u003e\r\n\u003ch3\u003eUse stringstream instead of atoi and sprintf\u003c/h3\u003e\r\n\u003cp\u003eIn C++ we have the \u0026lt;sstream\u0026gt; header file. \u0026lt;sstream\u0026gt; provides streaming functions to and from strings. These streaming functions provide the same function as atoi and its family of functions from the C standard library. That is, they convert data to or from a type such as int to or from a string. \u0026lt;sstream\u0026gt; provides std::stringstream to perform these conversions. stringstream makes it easy to convert to or from the correct type. stringstream also provides an easy method to find if a conversion worked.\u003c/p\u003e\r\n\u003cp\u003eHere is an example that shows how to convert an int to a string as well as convert a string to an int. Note the use of CppUnitLite unit test to verify the behavior.\u003c/p\u003e\r\n\u003cpre\u003e#include \"TestHarness.h\"\r\n#include \u0026lt;iostream\u0026gt;\r\nTEST(toInt, stringstream)\r\n{\r\n    std::stringstream sValue(\"34\");\r\n    int value;\r\n    // an example of streaming. The C++ operator \u0026gt;\u0026gt; is used to stream from\r\n    // a stream source to a type.\r\n    sValue \u0026gt;\u0026gt; value;\r\n    // apply the not operator \"!\" to the stringstream after the conversion\r\n    // attempt. It will return true if the conversion failed.\r\n    if (!sValue)\r\n    {\r\n        CHECK_FAIL(\"conversion failed\");\r\n    }\r\n    CHECK_EQUAL(34, value);\r\n}\u003c/pre\u003e\r\n\u003cpre\u003eTEST(fromInt, stringstream)\r\n{\r\n    std::stringstream sValue;\r\n    // an example of streaming. The C++ operator \u0026lt;\u0026lt; is used to stream to\r\n    // a stream destination from a type.\r\n    sValue \u0026lt;\u0026lt; 55;\r\n    // apply the not operator \"!\" to the stringstream after the conversion\r\n    // attempt. It will return true if the conversion failed.\r\n    if (!sValue)\r\n    {\r\n        CHECK_FAIL(\"conversion failed\");\r\n    }\r\n    // .str() returns the content of the stringstream as a std::string\r\n    CHECK_EQUAL(\"55\", sValue.str());\r\n}\u003c/pre\u003e\r\n\u003c/div\u003e"},"WIKI_PAGE_REVISION":"1","WIKI_PAGE_SHOW_PATH":"/courses/1177926/pages/lesson-1","WIKI_PAGE_EDIT_PATH":"/courses/1177926/pages/lesson-1/edit","WIKI_PAGE_HISTORY_PATH":"/courses/1177926/pages/lesson-1/revisions","COURSE_ID":"1177926","MODULES_PATH":"/courses/1177926/modules","wiki_page_menu_tools":[],"DISPLAY_SHOW_ALL_LINK":false,"badge_counts":{"submissions":0},"notices":[]};
+</script>
+
+<script src="./Lesson1_files/navigation_header.bundle-404806ff60.js.download" defer="defer"></script>
+<script src="./Lesson1_files/default.js.download" defer="defer"></script>
+<script src="./Lesson1_files/custom.js.download" defer="defer"></script>
+
+</div> <!-- #application -->
+
+
+<div class="ReactTrayPortal"><div data-reactid=".1"></div></div></body></html>
