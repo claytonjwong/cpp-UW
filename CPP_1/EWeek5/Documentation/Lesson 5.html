@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)https://canvas.uw.edu/courses/1177926/pages/lesson-5?module_item_id=7889538 -->
+<html class="lato-font-loaded" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Lesson 5: CPROGRM 711 A Wi 18: C++ Programming: Introduction</title>
+  <!--[if lte IE 9]> <meta http-equiv=refresh content="0; URL=/ie-9-is-not-supported.html" /> <![endif]-->
+  <link rel="shortcut icon" type="image/x-icon" href="https://instructure-uploads.s3.amazonaws.com/account_100000000083919/attachments/37312004/favicon.ico?AWSAccessKeyId=AKIAJFNFXH2V2O7RPCAA&amp;Expires=1939374366&amp;Signature=lNl7iuCda9spDgRONbwVvr490LM%3D&amp;response-cache-control=Cache-Control%3Amax-age%3D473364000.0%2C%20public&amp;response-expires=473364000.0">
+  <link rel="apple-touch-icon" href="https://instructure-uploads.s3.amazonaws.com/account_100000000083919/attachments/37312005/Canvas-MobileHome.png?AWSAccessKeyId=AKIAJFNFXH2V2O7RPCAA&amp;Expires=1939374366&amp;Signature=jwVDIJvM6uIaOoE%2FSW94uwVcHU0%3D&amp;response-cache-control=Cache-Control%3Amax-age%3D473364000.0%2C%20public&amp;response-expires=473364000.0">
+  
+  <link rel="stylesheet" media="all" href="./Lesson 5_files/variables-750d72b9d3e5d522f965bf904110c132.css">
+  <link rel="stylesheet" media="all" href="./Lesson 5_files/common-a1d8e38e78.css">
+  <script type="text/javascript" async="" src="./Lesson 5_files/ga.js.download"></script><script>
+//<![CDATA[
+
+!function(){
+  var o,s,v;
+  if (!(window.Promise && Object.assign && Object.values && [].find && [].includes && (o={},s=Symbol(),v={},o[s]=v,o[s]===v) && (function f(){}).bind().name==='bound f')) {
+    s = 's', document.write('<'+s+'cr'+'ipt src="https://du11hjcvx0uqb.cloudfront.net/dist/ie11-polyfill-eaf1bda494.js"></'+s+'c'+'ript>');
+  }
+}();
+      
+//]]>
+</script>
+  <script src="./Lesson 5_files/lato-fontfaceobserver-11a14bc0b6.js.download" async="async"></script>
+  
+  <meta name="apple-itunes-app" content="app-id=480883488">
+<link rel="manifest" href="https://canvas.uw.edu/web-app-manifest/manifest.json">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#008EE2">
+  <link rel="stylesheet" media="all" href="./Lesson 5_files/wiki_page-46e7e026f6.css">
+  
+  <link rel="stylesheet" media="all" href="./Lesson 5_files/custom.css">
+<link rel="stylesheet" media="all" href="./Lesson 5_files/custom(1).css">
+  <script>
+    function _earlyClick(e){
+      var c = e.target
+      while (c && c.ownerDocument) {
+        if (c.getAttribute('href') == '#' || c.getAttribute('data-method')) {
+          e.preventDefault()
+          (_earlyClick.clicks = _earlyClick.clicks || []).push(c)
+          break
+        }
+        c = c.parentNode
+      }
+    }
+    document.addEventListener('click', _earlyClick)
+  </script>
+  <script src="./Lesson 5_files/variables-750d72b9d3e5d522f965bf904110c132.js.download" defer="defer"></script>
+  <script src="./Lesson 5_files/vendor.bundle-18332a89dd.js.download" defer="defer"></script>
+<script src="./Lesson 5_files/Los_Angeles-78b0e93740.js.download" defer="defer"></script>
+<script src="./Lesson 5_files/en_US-80a0ce259b.js.download" defer="defer"></script>
+<script src="./Lesson 5_files/appBootstrap.bundle-2a9881e396.js.download" defer="defer"></script>
+<script src="./Lesson 5_files/common.bundle-5e5091ff1d.js.download" defer="defer"></script>
+<script src="./Lesson 5_files/wiki_page_show.bundle-e915c87a27.js.download" defer="defer"></script>
+<style type="text/css"></style></head>
+
+<body class="with-left-side course-menu-expanded padless-content pages primary-nav-transitions context-course_1177926 show webkit chrome touch">
+
+<noscript>
+  &lt;div role="alert" class="ic-flash-static ic-flash-error"&gt;
+    &lt;div class="ic-flash__icon" aria-hidden="true"&gt;
+      &lt;i class="icon-warning"&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;h1&gt;You need to have JavaScript enabled in order to access this site.&lt;/h1&gt;
+  &lt;/div&gt;
+</noscript>
+
+
+
+
+
+<ul id="flash_message_holder"></ul>
+<div id="flash_screenreader_holder" role="alert" aria-live="assertive" aria-relevant="additions" class="screenreader-only" aria-atomic="false"></div>
+
+<div id="application" class="ic-app">
+  
+  <header id="header" class="ic-app-header no-print ">
+    <a href="https://canvas.uw.edu/courses/1177926/pages/lesson-5?module_item_id=7889538#content" id="skip_navigation_link">Skip To Content</a>
+      <div role="region" class="ic-app-header__main-navigation" aria-label="Global Navigation">
+        <div class="ic-app-header__logomark-container">
+          <a href="https://canvas.uw.edu/" class="ic-app-header__logomark">
+            <span class="screenreader-only">Dashboard</span>
+          </a>
+        </div>
+        <ul id="menu" class="ic-app-header__menu-list">
+            <li class="menu-item ic-app-header__menu-list-item ">
+              <a id="global_nav_profile_link" href="https://canvas.uw.edu/profile" class="ic-app-header__menu-list-link">
+                <div class="menu-item-icon-container" aria-hidden="true">
+                  <div class="ic-avatar ">
+                    <img src="./Lesson 5_files/mSs2TjTESYscSzrackhgoJvAT79xbNchamHPrSec" alt="Clayton Wong">
+                  </div>
+                </div>
+                <div class="menu-item__text">
+                  Account
+                </div>
+              </a>
+            </li>
+          <li class="ic-app-header__menu-list-item ">
+            <a id="global_nav_dashboard_link" href="https://canvas.uw.edu/" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--dashboard" version="1.1" x="0" y="0" viewBox="0 0 280 200" enable-background="new 0 0 280 200" xml:space="preserve"><path d="M273.09,180.75H197.47V164.47h62.62A122.16,122.16,0,1,0,17.85,142a124,124,0,0,0,2,22.51H90.18v16.29H6.89l-1.5-6.22A138.51,138.51,0,0,1,1.57,142C1.57,65.64,63.67,3.53,140,3.53S278.43,65.64,278.43,142a137.67,137.67,0,0,1-3.84,32.57ZM66.49,87.63,50.24,71.38,61.75,59.86,78,76.12Zm147,0L202,76.12l16.25-16.25,11.51,11.51ZM131.85,53.82v-23h16.29v23Zm15.63,142.3a31.71,31.71,0,0,1-28-16.81c-6.4-12.08-15.73-72.29-17.54-84.25a8.15,8.15,0,0,1,13.58-7.2c8.88,8.21,53.48,49.72,59.88,61.81a31.61,31.61,0,0,1-27.9,46.45ZM121.81,116.2c4.17,24.56,9.23,50.21,12,55.49A15.35,15.35,0,1,0,161,157.3C158.18,152,139.79,133.44,121.81,116.2Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">Dashboard</div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ic-app-header__menu-list-item--active">
+            <a id="global_nav_courses_link" href="https://canvas.uw.edu/courses" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--courses" version="1.1" x="0" y="0" viewBox="0 0 280 259" enable-background="new 0 0 280 259" xml:space="preserve"><path d="M73.31,198c-11.93,0-22.22,8-24,18.73a26.67,26.67,0,0,0-.3,3.63v.3a22,22,0,0,0,5.44,14.65,22.47,22.47,0,0,0,17.22,8H200V228.19h-134V213.08H200V198Zm21-105.74h90.64V62H94.3ZM79.19,107.34V46.92H200v60.42Zm7.55,30.21V122.45H192.49v15.11ZM71.65,16.71A22.72,22.72,0,0,0,49,39.36V190.88a41.12,41.12,0,0,1,24.32-8h157V16.71ZM33.88,39.36A37.78,37.78,0,0,1,71.65,1.6H245.36V198H215.15v45.32h22.66V258.4H71.65a37.85,37.85,0,0,1-37.76-37.76Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Courses
+              </div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_calendar_link" href="https://canvas.uw.edu/calendar" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--calendar" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M197.07,213.38h16.31V197.07H197.07Zm-16.31,16.31V180.76h48.92v48.92Zm-48.92-16.31h16.31V197.07H131.85Zm-16.31,16.31V180.76h48.92v48.92ZM66.62,213.38H82.93V197.07H66.62ZM50.32,229.68V180.76H99.24v48.92Zm146.75-81.53h16.31V131.85H197.07Zm-16.31,16.31V115.54h48.92v48.92Zm-48.92-16.31h16.31V131.85H131.85Zm-16.31,16.31V115.54h48.92v48.92ZM66.62,148.15H82.93V131.85H66.62ZM50.32,164.46V115.54H99.24v48.92ZM34,262.29H246V82.93H34ZM246,66.62V42.16A8.17,8.17,0,0,0,237.84,34H213.38v8.15a8.15,8.15,0,1,1-16.31,0V34H82.93v8.15a8.15,8.15,0,0,1-16.31,0V34H42.16A8.17,8.17,0,0,0,34,42.16V66.62Zm-8.15-48.92a24.49,24.49,0,0,1,24.46,24.46V278.6H17.71V42.16A24.49,24.49,0,0,1,42.16,17.71H66.62V9.55a8.15,8.15,0,0,1,16.31,0v8.15H197.07V9.55a8.15,8.15,0,1,1,16.31,0v8.15Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Calendar
+              </div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_conversations_link" href="https://canvas.uw.edu/conversations" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--inbox" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M91.72,120.75h96.56V104.65H91.72Zm0,48.28h80.47V152.94H91.72Zm0-96.56h80.47V56.37H91.72Zm160.94,34.88H228.52V10.78h-177v96.56H27.34A24.17,24.17,0,0,0,3.2,131.48V244.14a24.17,24.17,0,0,0,24.14,24.14H252.66a24.17,24.17,0,0,0,24.14-24.14V131.48A24.17,24.17,0,0,0,252.66,107.34Zm0,16.09a8.06,8.06,0,0,1,8,8v51.77l-32.19,19.31V123.44ZM67.58,203.91v-177H212.42v177ZM27.34,123.44H51.48v79.13L19.29,183.26V131.48A8.06,8.06,0,0,1,27.34,123.44ZM252.66,252.19H27.34a8.06,8.06,0,0,1-8-8V202l30,18H230.75l30-18v42.12A8.06,8.06,0,0,1,252.66,252.19Z"></path></svg>
+
+                <span class="menu-item__badge" style="display: none">0</span>
+              </div>
+              <div class="menu-item__text">
+                Inbox
+              </div>
+            </a>
+          </li>
+            
+
+
+          <li class="ic-app-header__menu-list-item">
+           <a id="global_nav_help_link" class="ic-app-header__menu-list-link" data-track-category="help system" data-track-label="help button" href="http://help.instructure.com/">
+              <div class="menu-item-icon-container" role="presentation">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg menu-item__icon svg-icon-help" version="1.1" x="0" y="0" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve" fill="currentColor"><path d="M100,127.88A11.15,11.15,0,1,0,111.16,139,11.16,11.16,0,0,0,100,127.88Zm8.82-88.08a33.19,33.19,0,0,1,23.5,23.5,33.54,33.54,0,0,1-24,41.23,3.4,3.4,0,0,0-2.74,3.15v9.06H94.42v-9.06a14.57,14.57,0,0,1,11.13-14,22.43,22.43,0,0,0,13.66-10.27,22.73,22.73,0,0,0,2.31-17.37A21.92,21.92,0,0,0,106,50.59a22.67,22.67,0,0,0-19.68,3.88,22.18,22.18,0,0,0-8.65,17.64H66.54a33.25,33.25,0,0,1,13-26.47A33.72,33.72,0,0,1,108.82,39.8ZM100,5.2A94.8,94.8,0,1,0,194.8,100,94.91,94.91,0,0,0,100,5.2m0,178.45A83.65,83.65,0,1,1,183.65,100,83.73,83.73,0,0,1,100,183.65" transform="translate(-5.2 -5.2)"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Help
+              </div>
+</a>          </li>
+        </ul>
+      </div>
+      <div class="ic-app-header__secondary-navigation">
+        <ul class="ic-app-header__menu-list">
+          <li class="menu-item ic-app-header__menu-list-item">
+            <button id="primaryNavToggle" class="ic-app-header__menu-list-link ic-app-header__menu-list-link--nav-toggle" aria-label="
+                Expand global navigation
+                " title="
+                Expand global navigation
+                ">
+              <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--navtoggle" version="1.1" x="0" y="0" width="40" height="32" viewBox="0 0 40 32" xml:space="preserve">
+  <path d="M39.5,30.28V2.48H37.18v27.8Zm-4.93-13.9L22.17,4,20.53,5.61l9.61,9.61H.5v2.31H30.14l-9.61,9.61,1.64,1.64Z"></path>
+</svg>
+
+            </button>
+          </li>
+        </ul>
+      </div>
+    <div id="global_nav_tray_container"><noscript data-reactid=".0"></noscript></div>
+  </header>
+
+
+  <div id="instructure_ajax_error_box">
+    <div style="text-align: right; background-color: #fff;"><a href="https://canvas.uw.edu/courses/1177926/pages/lesson-5?module_item_id=7889538#" class="close_instructure_ajax_error_box_link">Close</a></div>
+    <iframe id="instructure_ajax_error_result" src="./Lesson 5_files/saved_resource.html" style="border: 0;" title="Error"></iframe>
+  </div>
+
+  
+
+  <div id="wrapper" class="ic-Layout-wrapper">
+      <div class="ic-app-nav-toggle-and-crumbs no-print">
+          <button type="button" id="courseMenuToggle" class="Button Button--link ic-app-course-nav-toggle" aria-live="polite" aria-label="Hide Courses Navigation Menu" title="Hide Courses Navigation Menu">
+            <i class="icon-hamburger" aria-hidden="true"></i>
+          </button>
+          <div class="ic-app-crumbs">
+        <nav id="breadcrumbs" role="navigation" aria-label="breadcrumbs"><ul><li class="home"><a href="https://canvas.uw.edu/"><span class="ellipsible">      <i class="icon-home" title="My Dashboard">
+        <span class="screenreader-only">My Dashboard</span>
+      </i>
+</span></a></li><li><a href="https://canvas.uw.edu/courses/1177926"><span class="ellipsible">CPROGRM 711 A</span></a></li><li><a href="https://canvas.uw.edu/courses/1177926/pages"><span class="ellipsible">Pages</span></a></li><li><span class="ellipsible">Lesson 5</span></li></ul></nav>
+        </div>
+      </div>
+    <div id="main" class="ic-Layout-columns">
+        <div class="ic-Layout-watermark"></div>
+        <div id="left-side" class="ic-app-course-menu list-view" style="display: block">
+              <span id="section-tabs-header-subtitle" class="ellipsis">Winter 2018</span>
+            <nav role="navigation" aria-label="Courses Navigation Menu"><ul id="section-tabs"><li class="section"><a href="https://canvas.uw.edu/courses/1177926" title="Home" class="home" tabindex="0">Home</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/announcements" title="Announcements" class="announcements" tabindex="0">Announcements</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/modules" title="Modules" class="modules" tabindex="0">Modules</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/discussion_topics" title="Discussions" class="discussions" tabindex="0">Discussions</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/grades" title="Grades" class="grades" tabindex="0">Grades</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/users" title="People" class="people" tabindex="0">People</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/external_tools/12299" title="UW Libraries" class="context_external_tool_12299" tabindex="0">UW Libraries</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/external_tools/57145" title="Info &amp; Help" class="context_external_tool_57145" tabindex="0">Info &amp; Help</a></li></ul></nav>
+        </div>
+      <div id="not_right_side" class="ic-app-main-content">
+        <div id="content-wrapper" class="ic-Layout-contentWrapper">
+            
+
+          <div id="content" class="ic-Layout-contentMain" role="main">
+            
+
+  
+
+<div id="wiki_page_show">
+<div class="header-bar-outer-container">
+  <div class="header-bar-container sticky-toolbar" data-sticky="">
+    <div class="header-bar flex-container">
+      <div class="header-bar-left header-left-flex">
+        
+          
+        
+      </div>
+      <div class="header-bar-right header-right-flex">
+        
+          
+          
+            
+          
+        
+        
+          
+        
+        
+      </div>
+    </div>
+    <div class="page-changed-alert" role="alert" aria-atomic="true" aria-live="polite"></div>
+  </div>
+</div>
+
+
+<div class="show-content user_content clearfix enhanced">
+  <h1 class="page-title">Lesson 5</h1>
+  
+    <div id="level2">
+<h2>
+<img src="./Lesson 5_files/preview" alt="L05.png" width="50" height="50" data-api-endpoint="https://canvas.uw.edu/api/v1/courses/1177926/files/44384335" data-api-returntype="File" style="max-width: 1102px;">&nbsp;C++ Classes and Structures</h2>
+<h3>Key Terms</h3>
+<ul>
+<li>access privileges</li>
+<li>data member</li>
+<li>function member</li>
+<li>method</li>
+<li>public</li>
+<li>protected</li>
+<li>private</li>
+<li>constructor</li>
+<li>default constructor</li>
+<li>init list</li>
+<li>destructor</li>
+<li>file scope</li>
+<li>local scope</li>
+<li>polymorphism</li>
+<li>manager function</li>
+<li>helper function</li>
+<li>access function</li>
+</ul>
+<h3>Enhanced Structures</h3>
+<p>In C, a structure is only permitted to have data members. Such a structure is an aggregation of data, and was introduced as part of the structured programming revolution of the 1970s. In C, however, the functions to operate on such data appeared elsewhere in the program. C++ allows data members and the functions using them to be encapsulated in a structure or class.</p>
+<p>In C++, a structure may have function members as well. Such an ability is at the root of the changes in C++. Now a common package combines data and the functions that operate on the data. The combination of data and functions are treated as single object. Here we have the encapsulation we discussed in Lesson 1.</p>
+<p>In C, a structure was written and used as shown in Example 5.1, with the one exception that we no longer need the keyword <code>struct</code> when declaring variables of a structure type.</p>
+<pre>// Using structs
+
+#include &lt;iostream&gt;
+
+using namespace std;
+
+struct Point
+{
+    int x;
+    int y;
+};
+
+int main()
+{
+    Point pnt1 = {3,4};
+    Point pnt2 = {5,6};
+    cout &lt;&lt; "The point values are: " &lt;&lt; pnt1.x &lt;&lt; ", " &lt;&lt; pnt1.y &lt;&lt; endl;
+    cout &lt;&lt; pnt2.x &lt;&lt; ", " &lt;&lt; pnt2.y &lt;&lt; endl;
+    return 0;
+}</pre>
+<p>In C++, we can now capture more of the real-world entity in a single data structure, as shown below.</p>
+<pre>// Structs with function members and nested structs
+#include &lt;iostream&gt;
+
+using namespace std;
+
+struct Point
+{
+    int x;
+    int y;
+};
+
+struct Rectangle
+{
+    Point pt1;
+    Point pt2;
+    int area()
+    {
+        return (pt2.x - pt1.x)*(pt2.y-pt1.y);
+    }
+    
+    int perimeter()
+    {
+        return 2*(pt2.x-pt1.x) + 2*(pt2.y-pt1.y);
+    }
+};
+
+int main()
+{
+    Point pnt1 = {3,4};
+    Point pnt2 = {5,6};
+    Rectangle r1;
+    r1.pt1 = pnt1;
+    r1.pt2 = pnt2;
+    
+    cout &lt;&lt; "The area and perimeter of the rectangle are: " &lt;&lt; r1.area() &lt;&lt; " "&lt;&lt; r1.perimeter() &lt;&lt; endl;
+}</pre>
+<p>In example above, notice that we included an instance of one structure within another. This ability is not new to structures. It enhances our ability to group associated elements.</p>
+<h3>C++ Classes</h3>
+<p>In C++, the <code>class</code> keyword is almost unnecessary, although it is a central element of the language. The behavior of classes is identical to structures in all ways except for what we call access privileges. In C++, the data and function members of a class are, by default, not visible to the outside world. Unless we alter their visibility by using an access specifier (the keyword <code>public</code>, <code>protected</code>, or <code>private</code>), members of a class are private and those of a structure are public. The concepts of <span class="italics">public</span> and <span class="italics">private</span> refer to the ability to access data or function members from outside of the object. We'll elaborate on this idea shortly.</p>
+<p>We access data and function members in a class in familiar ways. As with structures, we use the "dot" notation (for example, <code>myClass.myMember</code>) when working with an instance and the pointer notation (for example, <code>myClass-&gt;myMember</code>) when working with a pointer to an instance.</p>
+<p>Remember our first C program, the now famous "Hello World"? Well, we need a similar thing here—only we need something with class:</p>
+<pre>// C++ - Bonjour Mes Amis 1.0
+// Using ostream to write to cout
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+using namespace std;
+
+class BonJour
+{
+public:
+    // Note the use if the initializer list to initialize the myMessage member data
+    // You can initialize member data in the constructor body as well
+    // Prefer to use the initializer list as it is more efficient. 
+    BonJour()
+        : myMessage("Bonjour Mes Amis...!!! Je fais le C++ ?")
+    {
+    }
+    
+    void display()
+    {
+        cout &lt;&lt; myMessage &lt;&lt; " " &lt;&lt; "Bravo Moi !!!!!!" &lt;&lt; endl;
+    }
+    
+private:
+    std::string myMessage;
+};
+
+int main ()
+{
+    // Declare an instance of the class
+    BonJour myFirstClass;
+    // Declare and initialize a pointer to a class instance
+    BonJour *monPtr = &amp;myFirstClass;
+    
+    // Access the display member function
+
+    // use the dot notation
+    myFirstClass.display();
+    
+    // use the pointer notation
+    monPtr-&gt;display();
+}</pre>
+<h3>Class</h3>
+<p>The word <span class="keyterm">class</span> is used to describe a new data type. In an object-oriented language, a class is the means by which we implement information hiding, abstraction, and encapsulation. A class groups data and functions with common characteristics into objects. The name of the class serves as a type specifier.</p>
+<p>In C++, a class is a data type defined by the programmer. It is a collection of data elements called <span class="keyterm">data members</span> and a set of operations called <span class="keyterm">function members.</span> The function members provide the means by which other objects gain access to and operate on the data members. In Smalltalk, these are called <span class="keyterm">methods.</span> Using function members or methods, we can specify an object's response to a message.</p>
+<p>We begin with a declaration or definition of the form:</p>
+<pre>class Name { body; };</pre>
+<p>We can write</p>
+<pre>class Vehicle { ... };</pre>
+<p>then declare an instance of type Vehicle and a pointer of the same type:</p>
+<pre>Vehicle myVehicle;
+Vehicle* rentalVehicle = &amp;my Vehicle;</pre>
+<p><code>Name</code> identifies the class (and the type). It's written with an initial capital letter (that is, as <code>Name</code> rather than <code>name</code>) by convention. Such a practice distinguishes a class from a variable, constant, or instance. We should select a name that is meaningful (as we do with any other variables). We write the instance name in all lowercase letters. The class body is enclosed in curly braces ("<code>{}</code>"), contains the data and function members, and is terminated with a semicolon.</p>
+<p>We spoke earlier about information hiding. When we declare a class, we also specify the access privileges to the data and function members. In C++, we use access specifiers to segregate a class into public, protected, and private regions. These have the following meanings:</p>
+<ul>
+<li>
+<span class="keyterm">public</span>: Visible to the general public. Any function or class within the system has access to use or modify all data and function members that follow.</li>
+<li>
+<span class="keyterm">protected</span>: Visible to class members, classes and functions named as friends, and members of derived classes. The protected designation is important when talking about inheritance. All data and function members that follow are like private members to outsiders and public members to members and members of derived classes.</li>
+<li>
+<span class="keyterm">private</span>: Visible to class members and classes named as friends. The private designation is the most restrictive specifier; all data and function members that follow are hidden from everyone. No one can make any changes from outside the structure or class.</li>
+</ul>
+<p>Graphically, the class appears as shown in figure 5.1, below. Access becomes increasingly restricted as one moves from the public portion to the private.</p>
+<p class="title"><span class="bold">Figure 5.1—Class Access Restriction</span></p>
+<p class="title"><span class="bold"> <img src="./Lesson 5_files/preview(1)" alt="figure 5.1" width="253" height="113" data-api-endpoint="https://canvas.uw.edu/api/v1/courses/1177926/files/44384324" data-api-returntype="File" style="max-width: 1102px;"></span></p>
+<h3>The Public Interface</h3>
+<p>Using access specifiers, we can establish a well defined and persistent public interface. The public interface is how the outside world sees the class. It's the public interface that establishes the visible functionality. The notion of abstracting functionality is critical to a good solid design. By hiding the implementation of the object, we make change easier. The class internals, the private and protected members, can change, yet the functionality remains constant.</p>
+<h4>Class Declaration and Definition</h4>
+<p><strong>Declaration</strong></p>
+<p>When the access specifiers are included, the top level format for a class declaration now appears as follows:</p>
+<pre>class Name
+{
+    (private by default)
+    
+public:
+    ...
+    
+protected:
+    ...
+     
+private:
+    ... };</pre>
+<p>The access specifiers—<code>public</code>, <code>protected</code>, and <code>private</code>—can be placed in any order and can be repeated. Stroustrup established one convention for C++ of private first, then protected, then public, and uses it quite consistently throughout his work.</p>
+<p>An alternate approach makes the region at the top of the class the most public and that at the bottom the most restricted. This latter practice probably came from early Smalltalk work, where private methods are always at the bottom of the window in the class browser. Such a placement made them less visible, thereby emphasizing their private nature. I grew up with Smalltalk and prefer that approach, but what you use is up to you—just remember that you must be consistent. As we noted earlier, in a class, the region immediately inside the opening curly brace is private by default.</p>
+<p><strong>Definition and Instantiation</strong></p>
+<p>In C++, a class is interpreted as a collection of properties that are common to a group of objects. A class is a generalization—it's good for discussion, but not good for real work. To talk of all beers is fine; to talk of <span class="bold">my</span> beer is important. An instance is an embodiment of the properties and characteristics defined by a class. See the example below.</p>
+<pre>// Classes: Creation - Data Members and Data Only Classes 1.0
+
+#include &lt;iostream&gt;
+
+using namespace std;
+
+class SimpleClass
+{
+public:
+    int myValue;
+};
+
+int main()
+{
+    SimpleClass myClass;
+    myClass.myValue = 10;
+    
+    // Will print 10
+    cout &lt;&lt; myClass.myValue &lt;&lt; endl;
+    
+}</pre>
+<p>Observe that our class definition now takes the following form:</p>
+<pre>class Name
+{
+public:
+    function members
+    data members
+    
+protected:
+    function members
+    data members
+    
+private:
+    function members
+    data members };</pre>
+<p>It's important to note that each new instance of a class gets distinct copies of all data members, whereas the function members are shared among all instances. That's OK the state is stored in the data members.</p>
+<p>There are a variety of ways by which we can initialize class data members. We can declare an instance of the class and then assign values to the individual members. As we do with a structure, we can follow a declaration with a list of initializers. Initialization by aggregation works as long as all of the members are in a public access area.</p>
+<pre>// Classes: Creation - Data Members and Data Only
+
+#include &lt;iostream&gt;
+
+using namespace std;
+
+// Define a class
+class SimpleClass
+{
+public:
+     int myValue;
+};
+
+TEST(constructor, SimpleClass)
+{
+    // Declare an instance of the class
+    SimpleClass myClass;
+    
+    // Initialize the data member by assignment
+    myClass.myValue = 10;
+
+    // Declare another instance and initialize by aggregation
+    SimpleClass yourClass = {12};
+    
+    // Define a class then declare and initialize
+    // several instances by aggregation.
+    class DateClass
+    {
+    public:
+        int month;
+        int day;
+        int year;
+    } date1 = {12, 15, 2011}, date2 = {11, 18, 2012};
+    
+    // Verify the initialization
+    CHECK_EQUAL(myClass.myValue, yourClass.myValue);
+    CHECK_EQUAL(12, date1.month);
+    CHECK_EQUAL(15, date1.day);
+    CHECK_EQUAL(2011, date2.year);
+    CHECK_EQUAL(11, date2.month);
+    CHECK_EQUAL(18, date2.day);
+    CHECK_EQUAL(2012, date2.year);
+}</pre>
+<p>When the class data members are declared in the protected or private portions of the class, we cannot alter their values from the outside. The designer of the class must provide access functions. These provide another means by which we can initialize a class.</p>
+<pre>// Classes: Creation - Function Members
+#include &lt;iostream&gt;
+
+using namespace std;
+
+// Define a class class SimpleClass
+{
+public:
+    // These functions define the public interface to the class
+    void setMyValue(int aValue)
+    {
+        myValue = aValue;
+    }
+    
+    int getMyValue()
+    {
+        return myValue;
+    }
+    
+private:
+    int myValue;
+};
+
+TEST(constructor, SimpleClass)
+{
+    // Declare an instance...
+    SimpleClass myClass;
+    
+    // ...and use an access function to
+    // initialize the private data member.
+    myClass.setMyValue(20);
+    
+    // Confirm the initialization
+    CHECK_EQUAL(20, myClass.getMyValue());
+}</pre>
+<h4>Constructors and Destructors</h4>
+<p><strong>Constructors</strong></p>
+<p>All of the initialization schemes we've looked at have drawbacks. The best approach is to use a special member function designed for that purpose called the <span class="keyterm">constructor</span>. The constructor is a function that has the same name as the class and is assigned the responsibility for initializing class data members. It can be overloaded to have zero or more parameters. When defined with zero parameters, it's called the <span class="keyterm">default constructor</span>. If we choose not to define a constructor for our class, the compiler will create a default constructor for us. Note that the constructor has no return type or return value. Syntax is as follows:</p>
+<pre>className(&lt;arg0, arg1, ... argn&gt;)
+{
+    body
+}</pre>
+<p>(args are optional)</p>
+<p>The class constructor is called whenever a class object is declared. At that time, full type checking of the definition is applied. The constructor assumes the level of accessibility (public, protected, or private) of the section in which it is declared. Applying the <code>new</code> operator invokes the constructor for class instance—after storage is successfully allocated. If <code>new</code> fails, the constructor will not be invoked—there is no storage to initialize.</p>
+<p>Constructor parameters are used to specify initialization values for the class data members. Using the <span class="keyterm">init list</span>, we associate an input value with the corresponding data member. The init list appears, separated by a colon, following the constructor header and preceding the function body. The syntax is given as follows:</p>
+<pre>className(arg0, arg1, ... argn)
+    : dMem0(arg0),
+    ... dMemnargn)
+{
+    body
+}</pre>
+<p><code>dMemi</code> identifies the data member, and <code>argi</code> identifies the value to which the member is to be initialized.</p>
+<p>Because it is a function in its own right, a constructor may also be defined with default parameter values.</p>
+<pre>className (arg0 = val0, ... argn=valn) : dMe0(arg0), ... dMemn(argn) { body }</pre>
+<p>As we've seen with other functions, the default values are used when the constructor is invoked with fewer than the specified number of parameters. See the examples below.</p>
+<pre>// Classes: Creation - Class Constructors
+// Defining and using a parameterized and
+// a default constructor
+#include &lt;iostream&gt;
+
+using namespace std;
+
+// Define a class
+class SimpleClass
+{
+public:
+    // Define a default constructor and one with a single parameter
+    SimpleClass();
+    
+    SimpleClass(int aValue);
+    
+    // Define two access functions
+    void setValue(int aValue)
+    {
+        myValue = aValue;
+    }
+    
+    int getValue()
+    {
+        return myValue;
+    }
+    
+private:
+    int myValue;
+};
+
+// Define the default constructor
+SimpleClass::SimpleClass() : myValue(10)
+{
+};
+
+// Define another constructor
+SimpleClass::SimpleClass(int aValue)
+    : myValue(aValue)
+{
+};
+
+TEST(Constructors, SimpleClass
+{
+    // Declare a couple of class instances
+    
+    // Use the default constructor
+    SimpleClass yourClass;
+    
+    // Use the parameterized constructor
+    SimpleClass myClass(15);
+    
+    // Verify the initialization
+    CHECK_EQUAL(10, yourClass.getValue());
+    CHECK_EQUAL(15, myClass.getValue());
+}</pre>
+<pre>// Classes: Creation - Constructors and Default Values
+#include &lt;iostream&gt;
+
+using namespace std;
+
+class Date
+{
+public:
+    Date(int aDay=15, int aMonth=8, int aYear=1971);
+    
+    int getDay()
+    {
+        return day;
+    }
+    
+    int getMonth()
+    {
+        return month;
+    }
+    
+    int getYear()
+    {
+        return year;
+    }
+    
+    void showDate(std::ostream&amp; os);
+    
+private:
+    int day;
+    int month;
+    int year;
+};
+
+Date::Date(int aDay, int aMonth, int aYear)
+    : day(aDay),
+    month(aMonth),
+    year(aYear)
+    {
+    };
+    
+    void Date::showDate(std::ostream&amp; os)
+    {
+        os &lt;&lt; day &lt;&lt; '/'&lt;&lt; month &lt;&lt; '/' &lt;&lt; year;
+    };
+    
+int main()
+{
+    Date date1(25, 12, 53);
+
+    std::stringstream date1Actual;
+    date1.showDate(date1Actual);
+    CHECK_EQUAL("25/12/53", date1Actual.str());
+    
+    Date date2(19, 11);
+    std::stringstream date2Actual;
+    date2.showDate(date2Actual);
+    CHECK_EQUAL("19/11/1971", date2Actual.str());
+ 
+    Date date3;
+    std::stringstream date3Actual;
+    date3.showDate(date3Actual);
+    CHECK_EQUAL("15/8/1971", date3Actual.str());
+
+    // to print dates to cout call:
+    // date3.showDate(cout);
+}</pre>
+<p>The example below, presents an interesting use of a constructor. Rather than placing it in the public portion of the class where it is globally visible, we place it in the private portion. Such a placement prevents anyone from creating an instance of the class. At first, it may seem pointless to create a class that cannot be instantiated. Why would we want to do that? Our goal is to control (rather than prevent) who has permission to create class instances. We may have a number of reasons, such as security or privacy, for imposing such restrictions. We're hiding information.</p>
+<p>We selectively control access by designating specific classes as friends of our class. We'll discuss friends in greater detail in the next lesson. Here, we need the feature to illustrate a point.</p>
+<pre>// Classes: Creation - Using Private Constructors
+#include &lt;iostream&gt;
+
+// The constructor for Date is private and thus
+// can only be accessed by instances of the
+// class Holiday because Holiday is declared
+// to be a friend of the class Date
+class Date
+{
+    // Declare the class Holiday to be a friend...
+    friend class Holiday;
+    
+public:
+    int getDay()
+    {
+        return day;
+    }
+    
+    int getMonth()
+    {
+    return month;
+    }
+    
+    int getYear()
+    {
+        return year;
+    }
+    
+    void showDate(std::ostream&amp; os);
+    
+private:
+    Date(int aDay = 15, int aMonth = 8, int aYear = 1971);
+    
+    int day;
+    int month;
+    int year;
+};
+
+Date::Date(int aDay, int aMonth, int aYear)
+    : day(aDay),
+    month(aMonth),
+    year(aYear)
+{
+}
+
+void Date::showDate(std::ostream&amp; os)
+{
+    os &lt;&lt; day &lt;&lt; '/'&lt;&lt; month &lt;&lt; '/' &lt;&lt; year;
+}
+
+// The class Holiday is created to show how
+// one can limit access to a constructor.
+// Only instances of the class Holiday can
+// create instances of the class Date.
+
+class Holiday
+{
+public:
+    Holiday()
+    : myHoliday(0)
+    {
+    }
+
+    Date* createHoliday(int day, int month)
+    {
+        // Create an instance of the class Date
+        // We're using the private Date constructor
+        // to initialize the instance
+        myHoliday = new Date(day, month);
+
+        // This is poor practice...We've just
+        // returned a pointer to our private data...
+        // anyone can now change it.
+        // (We should be returning a copy.)
+        // Not only that, but we have just allocated
+        // a Date object using 'new' and now we never
+        // delete it. The next section, Destructors,
+        // will show how to fix this problem.
+        
+        return myHoliday;
+    }
+        
+    void getHoliday(std::ostream os)
+    {
+        myHoliday-&gt;showDate(os);
+    }
+
+private:
+    Date* myHoliday;
+};
+
+TEST(getHoliday, Holiday)
+{
+    // Create an instance of a Holiday then initialize it
+    Holiday date1;
+    date1.createHoliday(10,12);
+
+    std::stringstream holidayDate;
+    date1.getHoliday(holidayDate);
+    CHECK_EQUAL("10/12/1971", holidayDate.str());
+}</pre>
+<p><strong>Destructors</strong></p>
+<p>The <span class="keyterm">destructor</span> is a companion to constructor member functions. It's also a member function with the same name as the class. The destructor is distinguished from the constructor by a preceding tilde ("<code>~</code>"). The destructor provides means to deinitialize, not necessarily delete, class data members. It has no parameters and therefore cannot be overloaded. Like the constructor, we cannot specify a return type or value, and the compiler will create a destructor for us if one is not defined. We'll see later why we may not want this kind of help.</p>
+<p>The following is the destructor syntax:</p>
+<pre>~className() {body}</pre>
+<p>Observe that the destructor member takes no arguments.</p>
+<p>The destructor is automatically invoked in the following cases:</p>
+<ol start="1" type="1">
+<li>Whenever the delete operator is applied to a dynamically-allocated object. It's called by delete before freeing storage.</li>
+<li>Whenever a class object exits scope.</li>
+<li>Just before the program terminates, in the case of global objects.</li>
+</ol>
+<p>It's important to remember that the constructor initializes storage—it does not allocate it—and the destructor deinitializes storage—it does not delete it. The invocation sequence is</p>
+<p>new -&gt; constructor -&gt; destructor -&gt; delete</p>
+<p>Let's look at an example.</p>
+<pre>// Classes: Using destructors to deinitialize memory before object deallocation.
+// These are only necessary when clean up must precede deallocation
+#include &lt;iostream&gt;
+
+using namespace std;
+
+SimpleClass
+{
+public:
+    SimpleClass();
+    SimpleClass(int aValue);
+    
+    // Define the destructor
+    ~SimpleClass();
+    
+    // Define two access functions
+    void setValue(int aValue)
+    {
+        myValue = aValue;
+    }
+
+    int getValue()
+    {
+        return myValue;
+    }
+    
+private:
+    int myValue;
+};
+    
+SimpleClass::SimpleClass()
+    : myValue(10)
+    {
+    }
+
+SimpleClass::SimpleClass(int aValue)
+    : myValue(aValue)
+    {
+    }
+
+// Define the Destructor
+// In this program, the destructor will be called twice
+// as the 2 instances of SimpleClass go out of scope
+// when the function main exits
+    
+SimpleClass::~SimpleClass()
+{
+    cout &lt;&lt; "Cleaning up the mess you've made" &lt;&lt; endl;
+}
+    
+int main()
+{
+    SimpleClass myClass(15), yourClass;
+}</pre>
+<p>Like the C language, the C++ language supports both file and local scopes. In the object centered paradigm, class name scope is particularly important as well. Let's now see how that works.</p>
+<h3>C++ Scope</h3>
+<p>Before we can use a variable name, we must make the compiler aware of it. We must bring the name into namespace. As we learned in C, the visibility of a name within the program defines its scope. In C++, we have three kinds of scope: file, local, and class.</p>
+<p>There is a fourth type of scope associated with the keyword <code>namespace</code>. There may be any number of namespaces, and each defines and names a scope where global names may be placed. The names in the standard library, for example, are all defined within the <code>std</code> namespace. To use the names in the standard library, you can either individually qualify the operator name as <code>std::cout</code> or globally qualify all by writing</p>
+<pre>using namespace std;</pre>
+<p>We'll soon be creating our own header files (.h files) to declare our classes. In a header file always use the namespace qualifier style (i.e., std::cout). Do not place using declarations in .h files as this may cause a name collision (i.e., the same name used in two different namespaces) in any .cpp file that includes your header file. In .cpp files use whichever style you prefer.</p>
+<p>File scope is the portion of the program not contained within the definition of a function or class. It is the outermost scope of the program and encloses both local and class scopes. Local scope is the portion of the program (in general) contained within the definition of a function. Each function represents a distinct local scope. Within a function, each block (or compound statement) containing one or more declarations maintains an associated local scope. The declared variables are local to the enclosing scope. Local scopes can be nested. The argument list for a function or the declarations within a block are considered to be within local scope of the function or block.</p>
+<p>Each class also represents a distinct scope. Member functions and member data are treated as being within the scope of their class.</p>
+<p>Each class has a member named myValue. There is no name conflict because of the scope rules for classes. The fully scoped name for each version of myValue is MyClass::myValue and YourClass::myValue.</p>
+<pre>class MyClass
+{
+public:
+    MyClass()
+    : myValue(10)
+    {
+    }
+    
+    int getMyValue()
+    {
+        return myValue;
+    }
+    
+private:
+    int myValue;
+};
+
+
+class YourClass
+{
+public:
+    YourClass()
+    myValue(20)
+    {
+    }
+    
+    int getMyValue()
+    {
+        return myValue;
+    }
+    
+private:
+    int myValue;
+};
+
+TEST(Scoping, ClassMembers)
+{
+    MyClass mine;
+    YourClass yours;
+
+    CHECK_EQUAL(10, mine.getValue());
+    CHECK_EQUAL(20, yours.getValue());
+}</pre>
+<p>We can also use a pointer to access class members and still have no conflict.</p>
+<pre>class MyClass
+{
+public:
+    MyClass()
+    : myValue(10)
+    {
+    }
+    
+    int getValue()
+    {
+        return myValue;
+    }
+    
+private:
+    int myValue;
+};
+
+TEST(PointerAccess, MemberFunctions)
+{
+    MyClass mine;
+    MyClass* minePtr = &amp;mine;
+
+    CHECK_EQUAL(10, minePtr-&gt;getValue());
+}</pre>
+<h3>Overloading Member Functions</h3>
+<p>As we saw earlier, functions can use the same name within the same scope (file or local) if their signature (the number and type of their parameters) is unique. The signature of the function (which includes the function name) is used by the compiler to identify a function. The same holds true for functions defined within a class or within class scope. The same rules apply to identify a function. There is no magic, however; we must provide an implementation for each overloaded function.</p>
+<p>In this example, we define a class with three overloaded functions, each of which will print its argument to standard output. Although certainly not necessary for such simple printing, we illustrate several points. The same message, print, with three different arguments, is sent to the same class instance. Each is interpreted, inside the class hidden from the user, and the appropriate action is taken. The class has a common public interface in support of the three messages. We call this polymorphism.</p>
+<p>Notice also that the class has no constructor or data members. The sole purpose of the class it to implement the action, print. From the user's point of view, we have abstracted the action away from the underlying type of the data.</p>
+<pre>// Classes: Creation - Overloading Function Members
+// Instances of the class Printing can print integers
+// characters, or strings.
+#include &lt;iostream&gt;
+
+// Define a class with several overloaded functions
+class Printing
+{
+public:
+    // if no ostream passed in cout used
+    void print(int i, std::ostream&amp; os = std::cout)
+    {
+        os &lt;&lt; "Integer: " &lt;&lt; i;
+    }
+    
+    void print(char c, std::ostream&amp; os = std::cout)
+    {
+        os &lt;&lt; "Character: " &lt;&lt; c;
+    }
+    
+    void print(char *s, std::ostream&amp; os = std::cout)
+    {
+        os &lt;&lt; "String: " &lt;&lt; s;
+    }
+};
+
+TEST(OverloadedMemberFunctions, Printing)
+{
+    Printing myPrinter;
+    std::stringstream actual;
+    myPrinter.print(10, actual);
+    CHECK_EQUAL("Integer: 10", actual.str());
+
+    // clear the stringstream for next test
+    actual.str("");
+    myPrinter.print('a', actual);
+    CHECK_EQUAL("Character: a", actual.str());
+
+    actual.str("");
+    myPrinter.print("This is a string to print", actual);
+    CHECK_EQUAL("String: This is a string to print", actual.str());
+}</pre>
+<h3>Class Member Functions</h3>
+<p>Class member functions may be grouped into any of several different categories. In the following discussion, we suggest the identified categories as a guideline rather than a rigid classification. The classification criteria used here is the job each function is performing. Different designs may have different criteria. Here we identify four main categories:</p>
+<ul>
+<li>Manager</li>
+<li>Implementer</li>
+<li>Helper</li>
+<li>Access</li>
+</ul>
+<h4>Manager Functions</h4>
+<p><span class="keyterm">Manager functions</span> manage the class objects. These functions are responsible for initialization/deinitialization, assignment and copying (<em>instance a = instance b</em>), memory management, and type conversion. The constructor and destructor are familiar examples of such functions. Manager functions can be implicitly invoked by the compiler.</p>
+<h4>Implementor Functions</h4>
+<p><span class="keyterm">Implementor functions</span> define and provide the capabilities associated with class. These functions are explicitly invoked by the programmer and provide a significant portion of the public interface to the class.</p>
+<p>Consider the Stack class. We expect to see the following operations:</p>
+<pre>push(aValue) // Enter a value onto the stack pop // Return a value</pre>
+<p>These define a portion of the public interface of the Stack class.</p>
+<pre>class Stack
+{
+public:
+    Stack()
+    {
+        head = NULL;
+    }
+    
+    void push(Entry aValue)
+    {
+        // add aValue and set new head
+    }
+    
+    Entry pop()
+    {
+        // set new head and return value
+    }
+    
+private:
+    Entry* head;
+}</pre>
+<h4>Helper Functions</h4>
+<p>Helper functions carry out auxiliary tasks. These are not usually invoked explicitly by the class user. Helper functions are generally dependent upon the underlying data structure and are often declared private. We don't want the user directly accessing our member data or functions because the underlying data structure may have features not related to the function being implemented. For example, the Stack could be implemented as an Array or Linked List. The array has an indexing operation that is not appropriate to stacks. We really don't want people indexing into our stack. Once again, we're using information hiding.</p>
+<p>In our Stack class, the <code>push</code> or <code>pop</code> functions may use helper functions such as</p>
+<pre>push addToStack(Entry aValue) setNewHead()
+pop getCurrentHead() setNewHead()</pre>
+<h4>Access Functions</h4>
+<p>Access functions provide access to otherwise protected or private data. These are explicitly invoked by the programmer and provide the remaining component of the public interface.</p>
+<p>For the Stack class, the programmer may wish to see the top entry on stack yet may not want to <code>pop</code> the entry off; therefore, we provide that access with the peek function.</p>
+<p><code>peek()</code> returns the value of current top of stack without altering the stack.</p>
+<p>How the class member functions are specified and defined establishes the quality, robustness, and extensibility of the defined class. We must spend the time at the start of the design to think things through if we expect to have a quality product at the end of the day.</p>
+<h3>Summary</h3>
+<p>We began this lesson by looking at C++ enhanced structures and the class data type. We learned that in C++ the structure may have both data and function members and that the only difference between a structure and a class is the default access privileges. We then took a first look at the class constructor and destructor functions used to initialize or deinitialize a class instance.</p>
+<p>Next, we discussed name scope within the C++ language and have added class to the name scopes we studied in C. We then introduced simple polymorphism into the class through overloaded member functions. We then closed with an abstract view of member organization within a class structure.</p>
+<h3>Practice&nbsp;Questions</h3>
+<p>Let's briefly review to be sure we have everything. Check your answers with <a class="" title="Answers to Practice Questions for Lesson 5" href="https://canvas.uw.edu/courses/1177926/pages/answers-to-practice-questions-for-lesson-5" data-api-endpoint="https://canvas.uw.edu/api/v1/courses/1177926/pages/answers-to-practice-questions-for-lesson-5" data-api-returntype="Page">Answers to Practice Questions for Lesson 5</a>.</p>
+<ol>
+<li>What are the differences between C and C++ structures?</li>
+<li>What are the differences between C++ structures and C++ classes?</li>
+<li>What are access specifiers?</li>
+<li>What is the public interface to a class?</li>
+<li>How can you initialize the data members in a class?</li>
+<li>Does the destructor delete a class instance?</li>
+<li>What are the name scopes in C++?</li>
+<li>Can class member functions be overloaded?</li>
+</ol>
+</div>
+  
+</div>
+<div style=""><div class="module-sequence-padding"></div>
+<div class="module-sequence-footer" role="navigation" aria-label="Module Navigation">
+  <div class="module-sequence-footer-content">
+    
+      <a href="https://canvas.uw.edu/courses/1177926/modules/items/7889537" role="button" class="Button module-sequence-footer-button--previous" data-tooltip="right" data-html-tooltip-title="&lt;i class=&#39;icon-document&#39;&gt;&lt;/i&gt; Lesson 5 Overview and Materials" aria-describedby="msf0-previous-desc">
+        <i class="icon-mini-arrow-left"></i>Previous
+        <span id="msf0-previous-desc" class="hidden" hidden="">Previous: Lesson 5 Overview and Materials</span>
+      </a>
+    
+
+    
+      <span class="module-sequence-footer-button--next" data-tooltip="left" data-html-tooltip-title="&lt;i class=&#39;icon-assignment&#39;&gt;&lt;/i&gt; Assignment 5">
+        <a href="https://canvas.uw.edu/courses/1177926/modules/items/7889539" role="button" class="Button" aria-describedby="msf0-next-desc">
+          Next<i class="icon-mini-arrow-right"></i>
+          <span id="msf0-next-desc" class="hidden" hidden="">Next: Assignment 5</span>
+        </a>
+      </span>
+    
+  </div>
+</div>
+</div></div>
+
+          </div>
+        </div>
+        <div id="right-side-wrapper" class="ic-app-main-content__secondary">
+          <aside id="right-side" role="complementary">
+            
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <div style="display:none;"><!-- Everything inside of this should always stay hidden -->
+        <div id="page_view_id">67bca921-337b-4493-ab64-343e86900e47</div>
+    </div>
+    
+<div id="cant_record_dialog" style="display: none;">
+  <div>
+    In order to create video or audio recordings your computer needs to be 
+    webcam-enabled.  If you don't have a webcam on your computer, you can still
+    record audio-only messages by first installing the Google Video Chat
+    plugin.
+  </div>
+  <div style="text-align: center; font-size: 1.5em; margin: 10px;">
+    <a href="http://www.google.com/chat/video" target="_blank" rel="noopener" class="btn">Install the Video Plugin</a>
+  </div>
+  <div class="links" style="text-align: right; font-size: 0.8em; display: none;">
+    <a href="https://canvas.uw.edu/courses/1177926/pages/lesson-5?module_item_id=7889538#" class="cant_record_link">Don't have a webcam?</a>
+  </div>
+</div>
+
+  <div id="aria_alerts" class="hide-text affix" role="alert" aria-live="assertive"></div>
+  <div id="StudentTray__Container"></div>
+  
+
+<script>
+  INST = {"environment":"production","allowMediaComments":true,"kalturaSettings":{"domain":"nv.instructuremedia.com","resource_domain":"nv.instructuremedia.com","rtmp_domain":"fms-prod.instructuremedia.com","partner_id":"9","subpartner_id":"0","player_ui_conf":"0","kcw_ui_conf":"0","upload_ui_conf":"0","max_file_size_bytes":534773760,"do_analytics":false,"hide_rte_button":false,"js_uploader":true},"googleAnalyticsAccount":"UA-9138420-1","disableScribdPreviews":true,"logPageViews":true,"maxVisibleEditorButtons":3,"editorButtons":[{"name":"","id":21130,"url":"https://uw.hosted.panopto.com/Panopto/Pages/Sessions/embeddedupload.aspx","icon_url":"https://uw.hosted.panopto.com/Panopto/images/panopto_logo_globe.png","canvas_icon_class":null,"width":900,"height":700},{"name":"Modalis","id":52765,"url":"https://uw.modalis.io/lti","icon_url":"https://uw.modalis.io/assets/richicon.png","canvas_icon_class":null,"width":800,"height":600}]};
+  ENV = {"ASSET_HOST":"https://du11hjcvx0uqb.cloudfront.net","active_brand_config_json_url":"https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/2b2842738c86c4f2032e430bd0445cfc/variables-750d72b9d3e5d522f965bf904110c132.json","url_to_what_gets_loaded_inside_the_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/2b2842738c86c4f2032e430bd0445cfc/variables-750d72b9d3e5d522f965bf904110c132.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_normal_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-69b1ec0363.css"],"url_for_high_contrast_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/default/variables-high_contrast-750d72b9d3e5d522f965bf904110c132.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_high_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-8f3f624632.css"],"current_user_id":"3757111","current_user":{"id":"3757111","display_name":"Clayton Wong","avatar_image_url":"https://canvas.uw.edu/images/thumbnails/46487823/mSs2TjTESYscSzrackhgoJvAT79xbNchamHPrSec","html_url":"https://canvas.uw.edu/about/3757111"},"current_user_roles":["user","student"],"current_user_disabled_inbox":false,"files_domain":"cluster10-files.instructure.com","DOMAIN_ROOT_ACCOUNT_ID":100000000083919,"k12":false,"use_responsive_layout":false,"help_link_name":"Help","help_link_icon":"help","use_high_contrast":false,"LTI_LAUNCH_FRAME_ALLOWANCES":["geolocation *","microphone *","camera *","midi *","encrypted-media *"],"SETTINGS":{"open_registration":false,"eportfolios_enabled":true,"collapse_global_nav":true,"show_feedback_link":true,"enable_profiles":true},"page_view_update_url":"/page_views/67bca921-337b-4493-ab64-343e86900e47?page_view_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpIjoiNjdiY2E5MjEtMzM3Yi00NDkzLWFiNjQtMzQzZTg2OTAwZTQ3IiwidSI6MTAwMDAwMDAzNzU3MTExLCJjIjoiMjAxOC0wMi0yMlQyMTozNDo1MS43OFoifQ.BRl2-C0XmCzca6QCiS4g1iJhe0WhIY_i7w5aDuJ11z8","context_asset_string":"course_1177926","ping_url":"https://canvas.uw.edu/api/v1/courses/1177926/ping","TIMEZONE":"America/Los_Angeles","CONTEXT_TIMEZONE":"America/Los_Angeles","GRAPHQL_ENABLED":true,"LOCALE":"en","BIGEASY_LOCALE":"en_US","FULLCALENDAR_LOCALE":"en","MOMENT_LOCALE":"en","WIKI_RIGHTS":{"read":true},"PAGE_RIGHTS":{"read":true},"DEFAULT_EDITING_ROLES":"teachers","WIKI_PAGES_PATH":"/courses/1177926/pages","WIKI_PAGE":{"title":"Lesson 5","created_at":"2017-10-18T21:04:15Z","url":"lesson-5","editing_roles":"teachers","page_id":"2573096","published":true,"hide_from_students":false,"front_page":false,"html_url":"https://canvas.uw.edu/courses/1177926/pages/lesson-5","updated_at":"2017-10-18T21:04:15Z","locked_for_user":false,"body":"\u003cdiv id=\"level2\"\u003e\r\n\u003ch2\u003e\n\u003cimg src=\"https://canvas.uw.edu/courses/1177926/files/44384335/preview\" alt=\"L05.png\" width=\"50\" height=\"50\" data-api-endpoint=\"https://canvas.uw.edu/api/v1/courses/1177926/files/44384335\" data-api-returntype=\"File\"\u003e C++ Classes and Structures\u003c/h2\u003e\r\n\u003ch3\u003eKey Terms\u003c/h3\u003e\r\n\u003cul\u003e\n\u003cli\u003eaccess privileges\u003c/li\u003e\r\n\u003cli\u003edata member\u003c/li\u003e\r\n\u003cli\u003efunction member\u003c/li\u003e\r\n\u003cli\u003emethod\u003c/li\u003e\r\n\u003cli\u003epublic\u003c/li\u003e\r\n\u003cli\u003eprotected\u003c/li\u003e\r\n\u003cli\u003eprivate\u003c/li\u003e\r\n\u003cli\u003econstructor\u003c/li\u003e\r\n\u003cli\u003edefault constructor\u003c/li\u003e\r\n\u003cli\u003einit list\u003c/li\u003e\r\n\u003cli\u003edestructor\u003c/li\u003e\r\n\u003cli\u003efile scope\u003c/li\u003e\r\n\u003cli\u003elocal scope\u003c/li\u003e\r\n\u003cli\u003epolymorphism\u003c/li\u003e\r\n\u003cli\u003emanager function\u003c/li\u003e\r\n\u003cli\u003ehelper function\u003c/li\u003e\r\n\u003cli\u003eaccess function\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003ch3\u003eEnhanced Structures\u003c/h3\u003e\r\n\u003cp\u003eIn C, a structure is only permitted to have data members. Such a structure is an aggregation of data, and was introduced as part of the structured programming revolution of the 1970s. In C, however, the functions to operate on such data appeared elsewhere in the program. C++ allows data members and the functions using them to be encapsulated in a structure or class.\u003c/p\u003e\r\n\u003cp\u003eIn C++, a structure may have function members as well. Such an ability is at the root of the changes in C++. Now a common package combines data and the functions that operate on the data. The combination of data and functions are treated as single object. Here we have the encapsulation we discussed in Lesson 1.\u003c/p\u003e\r\n\u003cp\u003eIn C, a structure was written and used as shown in Example 5.1, with the one exception that we no longer need the keyword \u003ccode\u003estruct\u003c/code\u003e when declaring variables of a structure type.\u003c/p\u003e\r\n\u003cpre\u003e// Using structs\r\n\r\n#include \u0026lt;iostream\u0026gt;\r\n\r\nusing namespace std;\r\n\r\nstruct Point\r\n{\r\n    int x;\r\n    int y;\r\n};\r\n\r\nint main()\r\n{\r\n    Point pnt1 = {3,4};\r\n    Point pnt2 = {5,6};\r\n    cout \u0026lt;\u0026lt; \"The point values are: \" \u0026lt;\u0026lt; pnt1.x \u0026lt;\u0026lt; \", \" \u0026lt;\u0026lt; pnt1.y \u0026lt;\u0026lt; endl;\r\n    cout \u0026lt;\u0026lt; pnt2.x \u0026lt;\u0026lt; \", \" \u0026lt;\u0026lt; pnt2.y \u0026lt;\u0026lt; endl;\r\n    return 0;\r\n}\u003c/pre\u003e\r\n\u003cp\u003eIn C++, we can now capture more of the real-world entity in a single data structure, as shown below.\u003c/p\u003e\r\n\u003cpre\u003e// Structs with function members and nested structs\r\n#include \u0026lt;iostream\u0026gt;\r\n\r\nusing namespace std;\r\n\r\nstruct Point\r\n{\r\n    int x;\r\n    int y;\r\n};\r\n\r\nstruct Rectangle\r\n{\r\n    Point pt1;\r\n    Point pt2;\r\n    int area()\r\n    {\r\n        return (pt2.x - pt1.x)*(pt2.y-pt1.y);\r\n    }\r\n    \r\n    int perimeter()\r\n    {\r\n        return 2*(pt2.x-pt1.x) + 2*(pt2.y-pt1.y);\r\n    }\r\n};\r\n\r\nint main()\r\n{\r\n    Point pnt1 = {3,4};\r\n    Point pnt2 = {5,6};\r\n    Rectangle r1;\r\n    r1.pt1 = pnt1;\r\n    r1.pt2 = pnt2;\r\n    \r\n    cout \u0026lt;\u0026lt; \"The area and perimeter of the rectangle are: \" \u0026lt;\u0026lt; r1.area() \u0026lt;\u0026lt; \" \"\u0026lt;\u0026lt; r1.perimeter() \u0026lt;\u0026lt; endl;\r\n}\u003c/pre\u003e\r\n\u003cp\u003eIn example above, notice that we included an instance of one structure within another. This ability is not new to structures. It enhances our ability to group associated elements.\u003c/p\u003e\r\n\u003ch3\u003eC++ Classes\u003c/h3\u003e\r\n\u003cp\u003eIn C++, the \u003ccode\u003eclass\u003c/code\u003e keyword is almost unnecessary, although it is a central element of the language. The behavior of classes is identical to structures in all ways except for what we call access privileges. In C++, the data and function members of a class are, by default, not visible to the outside world. Unless we alter their visibility by using an access specifier (the keyword \u003ccode\u003epublic\u003c/code\u003e, \u003ccode\u003eprotected\u003c/code\u003e, or \u003ccode\u003eprivate\u003c/code\u003e), members of a class are private and those of a structure are public. The concepts of \u003cspan class=\"italics\"\u003epublic\u003c/span\u003e and \u003cspan class=\"italics\"\u003eprivate\u003c/span\u003e refer to the ability to access data or function members from outside of the object. We'll elaborate on this idea shortly.\u003c/p\u003e\r\n\u003cp\u003eWe access data and function members in a class in familiar ways. As with structures, we use the \"dot\" notation (for example, \u003ccode\u003emyClass.myMember\u003c/code\u003e) when working with an instance and the pointer notation (for example, \u003ccode\u003emyClass-\u0026gt;myMember\u003c/code\u003e) when working with a pointer to an instance.\u003c/p\u003e\r\n\u003cp\u003eRemember our first C program, the now famous \"Hello World\"? Well, we need a similar thing here—only we need something with class:\u003c/p\u003e\r\n\u003cpre\u003e// C++ - Bonjour Mes Amis 1.0\r\n// Using ostream to write to cout\r\n\r\n#include \u0026lt;iostream\u0026gt;\r\n#include \u0026lt;string\u0026gt;\r\n\r\nusing namespace std;\r\n\r\nclass BonJour\r\n{\r\npublic:\r\n    // Note the use if the initializer list to initialize the myMessage member data\r\n    // You can initialize member data in the constructor body as well\r\n    // Prefer to use the initializer list as it is more efficient. \r\n    BonJour()\r\n        : myMessage(\"Bonjour Mes Amis...!!! Je fais le C++ ?\")\r\n    {\r\n    }\r\n    \r\n    void display()\r\n    {\r\n        cout \u0026lt;\u0026lt; myMessage \u0026lt;\u0026lt; \" \" \u0026lt;\u0026lt; \"Bravo Moi !!!!!!\" \u0026lt;\u0026lt; endl;\r\n    }\r\n    \r\nprivate:\r\n    std::string myMessage;\r\n};\r\n\r\nint main ()\r\n{\r\n    // Declare an instance of the class\r\n    BonJour myFirstClass;\r\n    // Declare and initialize a pointer to a class instance\r\n    BonJour *monPtr = \u0026amp;myFirstClass;\r\n    \r\n    // Access the display member function\r\n\r\n    // use the dot notation\r\n    myFirstClass.display();\r\n    \r\n    // use the pointer notation\r\n    monPtr-\u0026gt;display();\r\n}\u003c/pre\u003e\r\n\u003ch3\u003eClass\u003c/h3\u003e\r\n\u003cp\u003eThe word \u003cspan class=\"keyterm\"\u003eclass\u003c/span\u003e is used to describe a new data type. In an object-oriented language, a class is the means by which we implement information hiding, abstraction, and encapsulation. A class groups data and functions with common characteristics into objects. The name of the class serves as a type specifier.\u003c/p\u003e\r\n\u003cp\u003eIn C++, a class is a data type defined by the programmer. It is a collection of data elements called \u003cspan class=\"keyterm\"\u003edata members\u003c/span\u003e and a set of operations called \u003cspan class=\"keyterm\"\u003efunction members.\u003c/span\u003e The function members provide the means by which other objects gain access to and operate on the data members. In Smalltalk, these are called \u003cspan class=\"keyterm\"\u003emethods.\u003c/span\u003e Using function members or methods, we can specify an object's response to a message.\u003c/p\u003e\r\n\u003cp\u003eWe begin with a declaration or definition of the form:\u003c/p\u003e\r\n\u003cpre\u003eclass Name { body; };\u003c/pre\u003e\r\n\u003cp\u003eWe can write\u003c/p\u003e\r\n\u003cpre\u003eclass Vehicle { ... };\u003c/pre\u003e\r\n\u003cp\u003ethen declare an instance of type Vehicle and a pointer of the same type:\u003c/p\u003e\r\n\u003cpre\u003eVehicle myVehicle;\r\nVehicle* rentalVehicle = \u0026amp;my Vehicle;\u003c/pre\u003e\r\n\u003cp\u003e\u003ccode\u003eName\u003c/code\u003e identifies the class (and the type). It's written with an initial capital letter (that is, as \u003ccode\u003eName\u003c/code\u003e rather than \u003ccode\u003ename\u003c/code\u003e) by convention. Such a practice distinguishes a class from a variable, constant, or instance. We should select a name that is meaningful (as we do with any other variables). We write the instance name in all lowercase letters. The class body is enclosed in curly braces (\"\u003ccode\u003e{}\u003c/code\u003e\"), contains the data and function members, and is terminated with a semicolon.\u003c/p\u003e\r\n\u003cp\u003eWe spoke earlier about information hiding. When we declare a class, we also specify the access privileges to the data and function members. In C++, we use access specifiers to segregate a class into public, protected, and private regions. These have the following meanings:\u003c/p\u003e\r\n\u003cul\u003e\n\u003cli\u003e\n\u003cspan class=\"keyterm\"\u003epublic\u003c/span\u003e: Visible to the general public. Any function or class within the system has access to use or modify all data and function members that follow.\u003c/li\u003e\r\n\u003cli\u003e\n\u003cspan class=\"keyterm\"\u003eprotected\u003c/span\u003e: Visible to class members, classes and functions named as friends, and members of derived classes. The protected designation is important when talking about inheritance. All data and function members that follow are like private members to outsiders and public members to members and members of derived classes.\u003c/li\u003e\r\n\u003cli\u003e\n\u003cspan class=\"keyterm\"\u003eprivate\u003c/span\u003e: Visible to class members and classes named as friends. The private designation is the most restrictive specifier; all data and function members that follow are hidden from everyone. No one can make any changes from outside the structure or class.\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003cp\u003eGraphically, the class appears as shown in figure 5.1, below. Access becomes increasingly restricted as one moves from the public portion to the private.\u003c/p\u003e\r\n\u003cp class=\"title\"\u003e\u003cspan class=\"bold\"\u003eFigure 5.1—Class Access Restriction\u003c/span\u003e\u003c/p\u003e\r\n\u003cp class=\"title\"\u003e\u003cspan class=\"bold\"\u003e \u003cimg src=\"https://canvas.uw.edu/courses/1177926/files/44384324/preview\" alt=\"figure 5.1\" width=\"253\" height=\"113\" data-api-endpoint=\"https://canvas.uw.edu/api/v1/courses/1177926/files/44384324\" data-api-returntype=\"File\"\u003e\u003c/span\u003e\u003c/p\u003e\r\n\u003ch3\u003eThe Public Interface\u003c/h3\u003e\r\n\u003cp\u003eUsing access specifiers, we can establish a well defined and persistent public interface. The public interface is how the outside world sees the class. It's the public interface that establishes the visible functionality. The notion of abstracting functionality is critical to a good solid design. By hiding the implementation of the object, we make change easier. The class internals, the private and protected members, can change, yet the functionality remains constant.\u003c/p\u003e\r\n\u003ch4\u003eClass Declaration and Definition\u003c/h4\u003e\r\n\u003cp\u003e\u003cstrong\u003eDeclaration\u003c/strong\u003e\u003c/p\u003e\r\n\u003cp\u003eWhen the access specifiers are included, the top level format for a class declaration now appears as follows:\u003c/p\u003e\r\n\u003cpre\u003eclass Name\r\n{\r\n    (private by default)\r\n    \r\npublic:\r\n    ...\r\n    \r\nprotected:\r\n    ...\r\n     \r\nprivate:\r\n    ... };\u003c/pre\u003e\r\n\u003cp\u003eThe access specifiers—\u003ccode\u003epublic\u003c/code\u003e, \u003ccode\u003eprotected\u003c/code\u003e, and \u003ccode\u003eprivate\u003c/code\u003e—can be placed in any order and can be repeated. Stroustrup established one convention for C++ of private first, then protected, then public, and uses it quite consistently throughout his work.\u003c/p\u003e\r\n\u003cp\u003eAn alternate approach makes the region at the top of the class the most public and that at the bottom the most restricted. This latter practice probably came from early Smalltalk work, where private methods are always at the bottom of the window in the class browser. Such a placement made them less visible, thereby emphasizing their private nature. I grew up with Smalltalk and prefer that approach, but what you use is up to you—just remember that you must be consistent. As we noted earlier, in a class, the region immediately inside the opening curly brace is private by default.\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003eDefinition and Instantiation\u003c/strong\u003e\u003c/p\u003e\r\n\u003cp\u003eIn C++, a class is interpreted as a collection of properties that are common to a group of objects. A class is a generalization—it's good for discussion, but not good for real work. To talk of all beers is fine; to talk of \u003cspan class=\"bold\"\u003emy\u003c/span\u003e beer is important. An instance is an embodiment of the properties and characteristics defined by a class. See the example below.\u003c/p\u003e\r\n\u003cpre\u003e// Classes: Creation - Data Members and Data Only Classes 1.0\r\n\r\n#include \u0026lt;iostream\u0026gt;\r\n\r\nusing namespace std;\r\n\r\nclass SimpleClass\r\n{\r\npublic:\r\n    int myValue;\r\n};\r\n\r\nint main()\r\n{\r\n    SimpleClass myClass;\r\n    myClass.myValue = 10;\r\n    \r\n    // Will print 10\r\n    cout \u0026lt;\u0026lt; myClass.myValue \u0026lt;\u0026lt; endl;\r\n    \r\n}\u003c/pre\u003e\r\n\u003cp\u003eObserve that our class definition now takes the following form:\u003c/p\u003e\r\n\u003cpre\u003eclass Name\r\n{\r\npublic:\r\n    function members\r\n    data members\r\n    \r\nprotected:\r\n    function members\r\n    data members\r\n    \r\nprivate:\r\n    function members\r\n    data members };\u003c/pre\u003e\r\n\u003cp\u003eIt's important to note that each new instance of a class gets distinct copies of all data members, whereas the function members are shared among all instances. That's OK the state is stored in the data members.\u003c/p\u003e\r\n\u003cp\u003eThere are a variety of ways by which we can initialize class data members. We can declare an instance of the class and then assign values to the individual members. As we do with a structure, we can follow a declaration with a list of initializers. Initialization by aggregation works as long as all of the members are in a public access area.\u003c/p\u003e\r\n\u003cpre\u003e// Classes: Creation - Data Members and Data Only\r\n\r\n#include \u0026lt;iostream\u0026gt;\r\n\r\nusing namespace std;\r\n\r\n// Define a class\r\nclass SimpleClass\r\n{\r\npublic:\r\n     int myValue;\r\n};\r\n\r\nTEST(constructor, SimpleClass)\r\n{\r\n    // Declare an instance of the class\r\n    SimpleClass myClass;\r\n    \r\n    // Initialize the data member by assignment\r\n    myClass.myValue = 10;\r\n\r\n    // Declare another instance and initialize by aggregation\r\n    SimpleClass yourClass = {12};\r\n    \r\n    // Define a class then declare and initialize\r\n    // several instances by aggregation.\r\n    class DateClass\r\n    {\r\n    public:\r\n        int month;\r\n        int day;\r\n        int year;\r\n    } date1 = {12, 15, 2011}, date2 = {11, 18, 2012};\r\n    \r\n    // Verify the initialization\r\n    CHECK_EQUAL(myClass.myValue, yourClass.myValue);\r\n    CHECK_EQUAL(12, date1.month);\r\n    CHECK_EQUAL(15, date1.day);\r\n    CHECK_EQUAL(2011, date2.year);\r\n    CHECK_EQUAL(11, date2.month);\r\n    CHECK_EQUAL(18, date2.day);\r\n    CHECK_EQUAL(2012, date2.year);\r\n}\u003c/pre\u003e\r\n\u003cp\u003eWhen the class data members are declared in the protected or private portions of the class, we cannot alter their values from the outside. The designer of the class must provide access functions. These provide another means by which we can initialize a class.\u003c/p\u003e\r\n\u003cpre\u003e// Classes: Creation - Function Members\r\n#include \u0026lt;iostream\u0026gt;\r\n\r\nusing namespace std;\r\n\r\n// Define a class class SimpleClass\r\n{\r\npublic:\r\n    // These functions define the public interface to the class\r\n    void setMyValue(int aValue)\r\n    {\r\n        myValue = aValue;\r\n    }\r\n    \r\n    int getMyValue()\r\n    {\r\n        return myValue;\r\n    }\r\n    \r\nprivate:\r\n    int myValue;\r\n};\r\n\r\nTEST(constructor, SimpleClass)\r\n{\r\n    // Declare an instance...\r\n    SimpleClass myClass;\r\n    \r\n    // ...and use an access function to\r\n    // initialize the private data member.\r\n    myClass.setMyValue(20);\r\n    \r\n    // Confirm the initialization\r\n    CHECK_EQUAL(20, myClass.getMyValue());\r\n}\u003c/pre\u003e\r\n\u003ch4\u003eConstructors and Destructors\u003c/h4\u003e\r\n\u003cp\u003e\u003cstrong\u003eConstructors\u003c/strong\u003e\u003c/p\u003e\r\n\u003cp\u003eAll of the initialization schemes we've looked at have drawbacks. The best approach is to use a special member function designed for that purpose called the \u003cspan class=\"keyterm\"\u003econstructor\u003c/span\u003e. The constructor is a function that has the same name as the class and is assigned the responsibility for initializing class data members. It can be overloaded to have zero or more parameters. When defined with zero parameters, it's called the \u003cspan class=\"keyterm\"\u003edefault constructor\u003c/span\u003e. If we choose not to define a constructor for our class, the compiler will create a default constructor for us. Note that the constructor has no return type or return value. Syntax is as follows:\u003c/p\u003e\r\n\u003cpre\u003eclassName(\u0026lt;arg0, arg1, ... argn\u0026gt;)\r\n{\r\n    body\r\n}\u003c/pre\u003e\r\n\u003cp\u003e(args are optional)\u003c/p\u003e\r\n\u003cp\u003eThe class constructor is called whenever a class object is declared. At that time, full type checking of the definition is applied. The constructor assumes the level of accessibility (public, protected, or private) of the section in which it is declared. Applying the \u003ccode\u003enew\u003c/code\u003e operator invokes the constructor for class instance—after storage is successfully allocated. If \u003ccode\u003enew\u003c/code\u003e fails, the constructor will not be invoked—there is no storage to initialize.\u003c/p\u003e\r\n\u003cp\u003eConstructor parameters are used to specify initialization values for the class data members. Using the \u003cspan class=\"keyterm\"\u003einit list\u003c/span\u003e, we associate an input value with the corresponding data member. The init list appears, separated by a colon, following the constructor header and preceding the function body. The syntax is given as follows:\u003c/p\u003e\r\n\u003cpre\u003eclassName(arg0, arg1, ... argn)\r\n    : dMem0(arg0),\r\n    ... dMemnargn)\r\n{\r\n    body\r\n}\u003c/pre\u003e\r\n\u003cp\u003e\u003ccode\u003edMemi\u003c/code\u003e identifies the data member, and \u003ccode\u003eargi\u003c/code\u003e identifies the value to which the member is to be initialized.\u003c/p\u003e\r\n\u003cp\u003eBecause it is a function in its own right, a constructor may also be defined with default parameter values.\u003c/p\u003e\r\n\u003cpre\u003eclassName (arg0 = val0, ... argn=valn) : dMe0(arg0), ... dMemn(argn) { body }\u003c/pre\u003e\r\n\u003cp\u003eAs we've seen with other functions, the default values are used when the constructor is invoked with fewer than the specified number of parameters. See the examples below.\u003c/p\u003e\r\n\u003cpre\u003e// Classes: Creation - Class Constructors\r\n// Defining and using a parameterized and\r\n// a default constructor\r\n#include \u0026lt;iostream\u0026gt;\r\n\r\nusing namespace std;\r\n\r\n// Define a class\r\nclass SimpleClass\r\n{\r\npublic:\r\n    // Define a default constructor and one with a single parameter\r\n    SimpleClass();\r\n    \r\n    SimpleClass(int aValue);\r\n    \r\n    // Define two access functions\r\n    void setValue(int aValue)\r\n    {\r\n        myValue = aValue;\r\n    }\r\n    \r\n    int getValue()\r\n    {\r\n        return myValue;\r\n    }\r\n    \r\nprivate:\r\n    int myValue;\r\n};\r\n\r\n// Define the default constructor\r\nSimpleClass::SimpleClass() : myValue(10)\r\n{\r\n};\r\n\r\n// Define another constructor\r\nSimpleClass::SimpleClass(int aValue)\r\n    : myValue(aValue)\r\n{\r\n};\r\n\r\nTEST(Constructors, SimpleClass\r\n{\r\n    // Declare a couple of class instances\r\n    \r\n    // Use the default constructor\r\n    SimpleClass yourClass;\r\n    \r\n    // Use the parameterized constructor\r\n    SimpleClass myClass(15);\r\n    \r\n    // Verify the initialization\r\n    CHECK_EQUAL(10, yourClass.getValue());\r\n    CHECK_EQUAL(15, myClass.getValue());\r\n}\u003c/pre\u003e\r\n\u003cpre\u003e// Classes: Creation - Constructors and Default Values\r\n#include \u0026lt;iostream\u0026gt;\r\n\r\nusing namespace std;\r\n\r\nclass Date\r\n{\r\npublic:\r\n    Date(int aDay=15, int aMonth=8, int aYear=1971);\r\n    \r\n    int getDay()\r\n    {\r\n        return day;\r\n    }\r\n    \r\n    int getMonth()\r\n    {\r\n        return month;\r\n    }\r\n    \r\n    int getYear()\r\n    {\r\n        return year;\r\n    }\r\n    \r\n    void showDate(std::ostream\u0026amp; os);\r\n    \r\nprivate:\r\n    int day;\r\n    int month;\r\n    int year;\r\n};\r\n\r\nDate::Date(int aDay, int aMonth, int aYear)\r\n    : day(aDay),\r\n    month(aMonth),\r\n    year(aYear)\r\n    {\r\n    };\r\n    \r\n    void Date::showDate(std::ostream\u0026amp; os)\r\n    {\r\n        os \u0026lt;\u0026lt; day \u0026lt;\u0026lt; '/'\u0026lt;\u0026lt; month \u0026lt;\u0026lt; '/' \u0026lt;\u0026lt; year;\r\n    };\r\n    \r\nint main()\r\n{\r\n    Date date1(25, 12, 53);\r\n\r\n    std::stringstream date1Actual;\r\n    date1.showDate(date1Actual);\r\n    CHECK_EQUAL(\"25/12/53\", date1Actual.str());\r\n    \r\n    Date date2(19, 11);\r\n    std::stringstream date2Actual;\r\n    date2.showDate(date2Actual);\r\n    CHECK_EQUAL(\"19/11/1971\", date2Actual.str());\r\n \r\n    Date date3;\r\n    std::stringstream date3Actual;\r\n    date3.showDate(date3Actual);\r\n    CHECK_EQUAL(\"15/8/1971\", date3Actual.str());\r\n\r\n    // to print dates to cout call:\r\n    // date3.showDate(cout);\r\n}\u003c/pre\u003e\r\n\u003cp\u003eThe example below, presents an interesting use of a constructor. Rather than placing it in the public portion of the class where it is globally visible, we place it in the private portion. Such a placement prevents anyone from creating an instance of the class. At first, it may seem pointless to create a class that cannot be instantiated. Why would we want to do that? Our goal is to control (rather than prevent) who has permission to create class instances. We may have a number of reasons, such as security or privacy, for imposing such restrictions. We're hiding information.\u003c/p\u003e\r\n\u003cp\u003eWe selectively control access by designating specific classes as friends of our class. We'll discuss friends in greater detail in the next lesson. Here, we need the feature to illustrate a point.\u003c/p\u003e\r\n\u003cpre\u003e// Classes: Creation - Using Private Constructors\r\n#include \u0026lt;iostream\u0026gt;\r\n\r\n// The constructor for Date is private and thus\r\n// can only be accessed by instances of the\r\n// class Holiday because Holiday is declared\r\n// to be a friend of the class Date\r\nclass Date\r\n{\r\n    // Declare the class Holiday to be a friend...\r\n    friend class Holiday;\r\n    \r\npublic:\r\n    int getDay()\r\n    {\r\n        return day;\r\n    }\r\n    \r\n    int getMonth()\r\n    {\r\n    return month;\r\n    }\r\n    \r\n    int getYear()\r\n    {\r\n        return year;\r\n    }\r\n    \r\n    void showDate(std::ostream\u0026amp; os);\r\n    \r\nprivate:\r\n    Date(int aDay = 15, int aMonth = 8, int aYear = 1971);\r\n    \r\n    int day;\r\n    int month;\r\n    int year;\r\n};\r\n\r\nDate::Date(int aDay, int aMonth, int aYear)\r\n    : day(aDay),\r\n    month(aMonth),\r\n    year(aYear)\r\n{\r\n}\r\n\r\nvoid Date::showDate(std::ostream\u0026amp; os)\r\n{\r\n    os \u0026lt;\u0026lt; day \u0026lt;\u0026lt; '/'\u0026lt;\u0026lt; month \u0026lt;\u0026lt; '/' \u0026lt;\u0026lt; year;\r\n}\r\n\r\n// The class Holiday is created to show how\r\n// one can limit access to a constructor.\r\n// Only instances of the class Holiday can\r\n// create instances of the class Date.\r\n\r\nclass Holiday\r\n{\r\npublic:\r\n    Holiday()\r\n    : myHoliday(0)\r\n    {\r\n    }\r\n\r\n    Date* createHoliday(int day, int month)\r\n    {\r\n        // Create an instance of the class Date\r\n        // We're using the private Date constructor\r\n        // to initialize the instance\r\n        myHoliday = new Date(day, month);\r\n\r\n        // This is poor practice...We've just\r\n        // returned a pointer to our private data...\r\n        // anyone can now change it.\r\n        // (We should be returning a copy.)\r\n        // Not only that, but we have just allocated\r\n        // a Date object using 'new' and now we never\r\n        // delete it. The next section, Destructors,\r\n        // will show how to fix this problem.\r\n        \r\n        return myHoliday;\r\n    }\r\n        \r\n    void getHoliday(std::ostream os)\r\n    {\r\n        myHoliday-\u0026gt;showDate(os);\r\n    }\r\n\r\nprivate:\r\n    Date* myHoliday;\r\n};\r\n\r\nTEST(getHoliday, Holiday)\r\n{\r\n    // Create an instance of a Holiday then initialize it\r\n    Holiday date1;\r\n    date1.createHoliday(10,12);\r\n\r\n    std::stringstream holidayDate;\r\n    date1.getHoliday(holidayDate);\r\n    CHECK_EQUAL(\"10/12/1971\", holidayDate.str());\r\n}\u003c/pre\u003e\r\n\u003cp\u003e\u003cstrong\u003eDestructors\u003c/strong\u003e\u003c/p\u003e\r\n\u003cp\u003eThe \u003cspan class=\"keyterm\"\u003edestructor\u003c/span\u003e is a companion to constructor member functions. It's also a member function with the same name as the class. The destructor is distinguished from the constructor by a preceding tilde (\"\u003ccode\u003e~\u003c/code\u003e\"). The destructor provides means to deinitialize, not necessarily delete, class data members. It has no parameters and therefore cannot be overloaded. Like the constructor, we cannot specify a return type or value, and the compiler will create a destructor for us if one is not defined. We'll see later why we may not want this kind of help.\u003c/p\u003e\r\n\u003cp\u003eThe following is the destructor syntax:\u003c/p\u003e\r\n\u003cpre\u003e~className() {body}\u003c/pre\u003e\r\n\u003cp\u003eObserve that the destructor member takes no arguments.\u003c/p\u003e\r\n\u003cp\u003eThe destructor is automatically invoked in the following cases:\u003c/p\u003e\r\n\u003col start=\"1\" type=\"1\"\u003e\n\u003cli\u003eWhenever the delete operator is applied to a dynamically-allocated object. It's called by delete before freeing storage.\u003c/li\u003e\r\n\u003cli\u003eWhenever a class object exits scope.\u003c/li\u003e\r\n\u003cli\u003eJust before the program terminates, in the case of global objects.\u003c/li\u003e\r\n\u003c/ol\u003e\n\u003cp\u003eIt's important to remember that the constructor initializes storage—it does not allocate it—and the destructor deinitializes storage—it does not delete it. The invocation sequence is\u003c/p\u003e\r\n\u003cp\u003enew -\u0026gt; constructor -\u0026gt; destructor -\u0026gt; delete\u003c/p\u003e\r\n\u003cp\u003eLet's look at an example.\u003c/p\u003e\r\n\u003cpre\u003e// Classes: Using destructors to deinitialize memory before object deallocation.\r\n// These are only necessary when clean up must precede deallocation\r\n#include \u0026lt;iostream\u0026gt;\r\n\r\nusing namespace std;\r\n\r\nSimpleClass\r\n{\r\npublic:\r\n    SimpleClass();\r\n    SimpleClass(int aValue);\r\n    \r\n    // Define the destructor\r\n    ~SimpleClass();\r\n    \r\n    // Define two access functions\r\n    void setValue(int aValue)\r\n    {\r\n        myValue = aValue;\r\n    }\r\n\r\n    int getValue()\r\n    {\r\n        return myValue;\r\n    }\r\n    \r\nprivate:\r\n    int myValue;\r\n};\r\n    \r\nSimpleClass::SimpleClass()\r\n    : myValue(10)\r\n    {\r\n    }\r\n\r\nSimpleClass::SimpleClass(int aValue)\r\n    : myValue(aValue)\r\n    {\r\n    }\r\n\r\n// Define the Destructor\r\n// In this program, the destructor will be called twice\r\n// as the 2 instances of SimpleClass go out of scope\r\n// when the function main exits\r\n    \r\nSimpleClass::~SimpleClass()\r\n{\r\n    cout \u0026lt;\u0026lt; \"Cleaning up the mess you've made\" \u0026lt;\u0026lt; endl;\r\n}\r\n    \r\nint main()\r\n{\r\n    SimpleClass myClass(15), yourClass;\r\n}\u003c/pre\u003e\r\n\u003cp\u003eLike the C language, the C++ language supports both file and local scopes. In the object centered paradigm, class name scope is particularly important as well. Let's now see how that works.\u003c/p\u003e\r\n\u003ch3\u003eC++ Scope\u003c/h3\u003e\r\n\u003cp\u003eBefore we can use a variable name, we must make the compiler aware of it. We must bring the name into namespace. As we learned in C, the visibility of a name within the program defines its scope. In C++, we have three kinds of scope: file, local, and class.\u003c/p\u003e\r\n\u003cp\u003eThere is a fourth type of scope associated with the keyword \u003ccode\u003enamespace\u003c/code\u003e. There may be any number of namespaces, and each defines and names a scope where global names may be placed. The names in the standard library, for example, are all defined within the \u003ccode\u003estd\u003c/code\u003e namespace. To use the names in the standard library, you can either individually qualify the operator name as \u003ccode\u003estd::cout\u003c/code\u003e or globally qualify all by writing\u003c/p\u003e\r\n\u003cpre\u003eusing namespace std;\u003c/pre\u003e\r\n\u003cp\u003eWe'll soon be creating our own header files (.h files) to declare our classes. In a header file always use the namespace qualifier style (i.e., std::cout). Do not place using declarations in .h files as this may cause a name collision (i.e., the same name used in two different namespaces) in any .cpp file that includes your header file. In .cpp files use whichever style you prefer.\u003c/p\u003e\r\n\u003cp\u003eFile scope is the portion of the program not contained within the definition of a function or class. It is the outermost scope of the program and encloses both local and class scopes. Local scope is the portion of the program (in general) contained within the definition of a function. Each function represents a distinct local scope. Within a function, each block (or compound statement) containing one or more declarations maintains an associated local scope. The declared variables are local to the enclosing scope. Local scopes can be nested. The argument list for a function or the declarations within a block are considered to be within local scope of the function or block.\u003c/p\u003e\r\n\u003cp\u003eEach class also represents a distinct scope. Member functions and member data are treated as being within the scope of their class.\u003c/p\u003e\r\n\u003cp\u003eEach class has a member named myValue. There is no name conflict because of the scope rules for classes. The fully scoped name for each version of myValue is MyClass::myValue and YourClass::myValue.\u003c/p\u003e\r\n\u003cpre\u003eclass MyClass\r\n{\r\npublic:\r\n    MyClass()\r\n    : myValue(10)\r\n    {\r\n    }\r\n    \r\n    int getMyValue()\r\n    {\r\n        return myValue;\r\n    }\r\n    \r\nprivate:\r\n    int myValue;\r\n};\r\n\r\n\r\nclass YourClass\r\n{\r\npublic:\r\n    YourClass()\r\n    myValue(20)\r\n    {\r\n    }\r\n    \r\n    int getMyValue()\r\n    {\r\n        return myValue;\r\n    }\r\n    \r\nprivate:\r\n    int myValue;\r\n};\r\n\r\nTEST(Scoping, ClassMembers)\r\n{\r\n    MyClass mine;\r\n    YourClass yours;\r\n\r\n    CHECK_EQUAL(10, mine.getValue());\r\n    CHECK_EQUAL(20, yours.getValue());\r\n}\u003c/pre\u003e\r\n\u003cp\u003eWe can also use a pointer to access class members and still have no conflict.\u003c/p\u003e\r\n\u003cpre\u003eclass MyClass\r\n{\r\npublic:\r\n    MyClass()\r\n    : myValue(10)\r\n    {\r\n    }\r\n    \r\n    int getValue()\r\n    {\r\n        return myValue;\r\n    }\r\n    \r\nprivate:\r\n    int myValue;\r\n};\r\n\r\nTEST(PointerAccess, MemberFunctions)\r\n{\r\n    MyClass mine;\r\n    MyClass* minePtr = \u0026amp;mine;\r\n\r\n    CHECK_EQUAL(10, minePtr-\u0026gt;getValue());\r\n}\u003c/pre\u003e\r\n\u003ch3\u003eOverloading Member Functions\u003c/h3\u003e\r\n\u003cp\u003eAs we saw earlier, functions can use the same name within the same scope (file or local) if their signature (the number and type of their parameters) is unique. The signature of the function (which includes the function name) is used by the compiler to identify a function. The same holds true for functions defined within a class or within class scope. The same rules apply to identify a function. There is no magic, however; we must provide an implementation for each overloaded function.\u003c/p\u003e\r\n\u003cp\u003eIn this example, we define a class with three overloaded functions, each of which will print its argument to standard output. Although certainly not necessary for such simple printing, we illustrate several points. The same message, print, with three different arguments, is sent to the same class instance. Each is interpreted, inside the class hidden from the user, and the appropriate action is taken. The class has a common public interface in support of the three messages. We call this polymorphism.\u003c/p\u003e\r\n\u003cp\u003eNotice also that the class has no constructor or data members. The sole purpose of the class it to implement the action, print. From the user's point of view, we have abstracted the action away from the underlying type of the data.\u003c/p\u003e\r\n\u003cpre\u003e// Classes: Creation - Overloading Function Members\r\n// Instances of the class Printing can print integers\r\n// characters, or strings.\r\n#include \u0026lt;iostream\u0026gt;\r\n\r\n// Define a class with several overloaded functions\r\nclass Printing\r\n{\r\npublic:\r\n    // if no ostream passed in cout used\r\n    void print(int i, std::ostream\u0026amp; os = std::cout)\r\n    {\r\n        os \u0026lt;\u0026lt; \"Integer: \" \u0026lt;\u0026lt; i;\r\n    }\r\n    \r\n    void print(char c, std::ostream\u0026amp; os = std::cout)\r\n    {\r\n        os \u0026lt;\u0026lt; \"Character: \" \u0026lt;\u0026lt; c;\r\n    }\r\n    \r\n    void print(char *s, std::ostream\u0026amp; os = std::cout)\r\n    {\r\n        os \u0026lt;\u0026lt; \"String: \" \u0026lt;\u0026lt; s;\r\n    }\r\n};\r\n\r\nTEST(OverloadedMemberFunctions, Printing)\r\n{\r\n    Printing myPrinter;\r\n    std::stringstream actual;\r\n    myPrinter.print(10, actual);\r\n    CHECK_EQUAL(\"Integer: 10\", actual.str());\r\n\r\n    // clear the stringstream for next test\r\n    actual.str(\"\");\r\n    myPrinter.print('a', actual);\r\n    CHECK_EQUAL(\"Character: a\", actual.str());\r\n\r\n    actual.str(\"\");\r\n    myPrinter.print(\"This is a string to print\", actual);\r\n    CHECK_EQUAL(\"String: This is a string to print\", actual.str());\r\n}\u003c/pre\u003e\r\n\u003ch3\u003eClass Member Functions\u003c/h3\u003e\r\n\u003cp\u003eClass member functions may be grouped into any of several different categories. In the following discussion, we suggest the identified categories as a guideline rather than a rigid classification. The classification criteria used here is the job each function is performing. Different designs may have different criteria. Here we identify four main categories:\u003c/p\u003e\r\n\u003cul\u003e\n\u003cli\u003eManager\u003c/li\u003e\r\n\u003cli\u003eImplementer\u003c/li\u003e\r\n\u003cli\u003eHelper\u003c/li\u003e\r\n\u003cli\u003eAccess\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003ch4\u003eManager Functions\u003c/h4\u003e\r\n\u003cp\u003e\u003cspan class=\"keyterm\"\u003eManager functions\u003c/span\u003e manage the class objects. These functions are responsible for initialization/deinitialization, assignment and copying (\u003cem\u003einstance a = instance b\u003c/em\u003e), memory management, and type conversion. The constructor and destructor are familiar examples of such functions. Manager functions can be implicitly invoked by the compiler.\u003c/p\u003e\r\n\u003ch4\u003eImplementor Functions\u003c/h4\u003e\r\n\u003cp\u003e\u003cspan class=\"keyterm\"\u003eImplementor functions\u003c/span\u003e define and provide the capabilities associated with class. These functions are explicitly invoked by the programmer and provide a significant portion of the public interface to the class.\u003c/p\u003e\r\n\u003cp\u003eConsider the Stack class. We expect to see the following operations:\u003c/p\u003e\r\n\u003cpre\u003epush(aValue) // Enter a value onto the stack pop // Return a value\u003c/pre\u003e\r\n\u003cp\u003eThese define a portion of the public interface of the Stack class.\u003c/p\u003e\r\n\u003cpre\u003eclass Stack\r\n{\r\npublic:\r\n    Stack()\r\n    {\r\n        head = NULL;\r\n    }\r\n    \r\n    void push(Entry aValue)\r\n    {\r\n        // add aValue and set new head\r\n    }\r\n    \r\n    Entry pop()\r\n    {\r\n        // set new head and return value\r\n    }\r\n    \r\nprivate:\r\n    Entry* head;\r\n}\u003c/pre\u003e\r\n\u003ch4\u003eHelper Functions\u003c/h4\u003e\r\n\u003cp\u003eHelper functions carry out auxiliary tasks. These are not usually invoked explicitly by the class user. Helper functions are generally dependent upon the underlying data structure and are often declared private. We don't want the user directly accessing our member data or functions because the underlying data structure may have features not related to the function being implemented. For example, the Stack could be implemented as an Array or Linked List. The array has an indexing operation that is not appropriate to stacks. We really don't want people indexing into our stack. Once again, we're using information hiding.\u003c/p\u003e\r\n\u003cp\u003eIn our Stack class, the \u003ccode\u003epush\u003c/code\u003e or \u003ccode\u003epop\u003c/code\u003e functions may use helper functions such as\u003c/p\u003e\r\n\u003cpre\u003epush addToStack(Entry aValue) setNewHead()\r\npop getCurrentHead() setNewHead()\u003c/pre\u003e\r\n\u003ch4\u003eAccess Functions\u003c/h4\u003e\r\n\u003cp\u003eAccess functions provide access to otherwise protected or private data. These are explicitly invoked by the programmer and provide the remaining component of the public interface.\u003c/p\u003e\r\n\u003cp\u003eFor the Stack class, the programmer may wish to see the top entry on stack yet may not want to \u003ccode\u003epop\u003c/code\u003e the entry off; therefore, we provide that access with the peek function.\u003c/p\u003e\r\n\u003cp\u003e\u003ccode\u003epeek()\u003c/code\u003e returns the value of current top of stack without altering the stack.\u003c/p\u003e\r\n\u003cp\u003eHow the class member functions are specified and defined establishes the quality, robustness, and extensibility of the defined class. We must spend the time at the start of the design to think things through if we expect to have a quality product at the end of the day.\u003c/p\u003e\r\n\u003ch3\u003eSummary\u003c/h3\u003e\r\n\u003cp\u003eWe began this lesson by looking at C++ enhanced structures and the class data type. We learned that in C++ the structure may have both data and function members and that the only difference between a structure and a class is the default access privileges. We then took a first look at the class constructor and destructor functions used to initialize or deinitialize a class instance.\u003c/p\u003e\r\n\u003cp\u003eNext, we discussed name scope within the C++ language and have added class to the name scopes we studied in C. We then introduced simple polymorphism into the class through overloaded member functions. We then closed with an abstract view of member organization within a class structure.\u003c/p\u003e\r\n\u003ch3\u003ePractice Questions\u003c/h3\u003e\r\n\u003cp\u003eLet's briefly review to be sure we have everything. Check your answers with \u003ca id=\"\" class=\"\" title=\"Answers to Practice Questions for Lesson 5\" href=\"https://canvas.uw.edu/courses/1177926/pages/answers-to-practice-questions-for-lesson-5\" data-api-endpoint=\"https://canvas.uw.edu/api/v1/courses/1177926/pages/answers-to-practice-questions-for-lesson-5\" data-api-returntype=\"Page\"\u003eAnswers to Practice Questions for Lesson 5\u003c/a\u003e.\u003c/p\u003e\r\n\u003col\u003e\n\u003cli\u003eWhat are the differences between C and C++ structures?\u003c/li\u003e\r\n\u003cli\u003eWhat are the differences between C++ structures and C++ classes?\u003c/li\u003e\r\n\u003cli\u003eWhat are access specifiers?\u003c/li\u003e\r\n\u003cli\u003eWhat is the public interface to a class?\u003c/li\u003e\r\n\u003cli\u003eHow can you initialize the data members in a class?\u003c/li\u003e\r\n\u003cli\u003eDoes the destructor delete a class instance?\u003c/li\u003e\r\n\u003cli\u003eWhat are the name scopes in C++?\u003c/li\u003e\r\n\u003cli\u003eCan class member functions be overloaded?\u003c/li\u003e\r\n\u003c/ol\u003e\n\u003c/div\u003e"},"WIKI_PAGE_REVISION":"1","WIKI_PAGE_SHOW_PATH":"/courses/1177926/pages/lesson-5","WIKI_PAGE_EDIT_PATH":"/courses/1177926/pages/lesson-5/edit","WIKI_PAGE_HISTORY_PATH":"/courses/1177926/pages/lesson-5/revisions","COURSE_ID":"1177926","MODULES_PATH":"/courses/1177926/modules","wiki_page_menu_tools":[],"DISPLAY_SHOW_ALL_LINK":false,"badge_counts":{"submissions":0},"notices":[]};
+</script>
+
+<script src="./Lesson 5_files/navigation_header.bundle-f83f1ff001.js.download" defer="defer"></script>
+<script src="./Lesson 5_files/default.js.download" defer="defer"></script>
+<script src="./Lesson 5_files/custom.js.download" defer="defer"></script>
+
+</div> <!-- #application -->
+
+
+<div class="ReactTrayPortal"><div data-reactid=".1"></div></div></body></html>
