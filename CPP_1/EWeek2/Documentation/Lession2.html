@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)https://canvas.uw.edu/courses/1177926/pages/lesson-2?module_item_id=7889514 -->
+<html class="lato-font-loaded" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Lesson 2: CPROGRM 711 A Wi 18: C++ Programming: Introduction</title>
+  <!--[if lte IE 9]> <meta http-equiv=refresh content="0; URL=/ie-9-is-not-supported.html" /> <![endif]-->
+  <link rel="shortcut icon" type="image/x-icon" href="https://instructure-uploads.s3.amazonaws.com/account_100000000083919/attachments/37312004/favicon.ico?AWSAccessKeyId=AKIAJFNFXH2V2O7RPCAA&amp;Expires=1939374366&amp;Signature=lNl7iuCda9spDgRONbwVvr490LM%3D&amp;response-cache-control=Cache-Control%3Amax-age%3D473364000.0%2C%20public&amp;response-expires=473364000.0">
+  <link rel="apple-touch-icon" href="https://instructure-uploads.s3.amazonaws.com/account_100000000083919/attachments/37312005/Canvas-MobileHome.png?AWSAccessKeyId=AKIAJFNFXH2V2O7RPCAA&amp;Expires=1939374366&amp;Signature=jwVDIJvM6uIaOoE%2FSW94uwVcHU0%3D&amp;response-cache-control=Cache-Control%3Amax-age%3D473364000.0%2C%20public&amp;response-expires=473364000.0">
+  
+  <link rel="stylesheet" media="all" href="./Lession2_files/variables-750d72b9d3e5d522f965bf904110c132.css">
+  <link rel="stylesheet" media="all" href="./Lession2_files/common-79b981d2d9.css">
+  <script type="text/javascript" async="" src="./Lession2_files/ga.js.download"></script><script>
+//<![CDATA[
+
+!function(){
+  var o,s,v;
+  if (!(window.Promise && Object.assign && Object.values && [].find && [].includes && (o={},s=Symbol(),v={},o[s]=v,o[s]===v) && (function f(){}).bind().name==='bound f')) {
+    s = 's', document.write('<'+s+'cr'+'ipt src="https://du11hjcvx0uqb.cloudfront.net/dist/ie11-polyfill-a0702bf7af.js"></'+s+'c'+'ript>');
+  }
+}();
+      
+//]]>
+</script>
+  <script src="./Lession2_files/lato-fontfaceobserver-11a14bc0b6.js.download" async="async"></script>
+  
+  <meta name="apple-itunes-app" content="app-id=480883488">
+<link rel="manifest" href="https://canvas.uw.edu/web-app-manifest/manifest.json">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#008EE2">
+  <link rel="stylesheet" media="all" href="./Lession2_files/wiki_page-46e7e026f6.css">
+  
+  <link rel="stylesheet" media="all" href="./Lession2_files/custom.css">
+<link rel="stylesheet" media="all" href="./Lession2_files/custom(1).css">
+  <script>
+    function _earlyClick(e){
+      var c = e.target
+      while (c && c.ownerDocument) {
+        if (c.getAttribute('href') == '#' || c.getAttribute('data-method')) {
+          e.preventDefault()
+          (_earlyClick.clicks = _earlyClick.clicks || []).push(c)
+          break
+        }
+        c = c.parentNode
+      }
+    }
+    document.addEventListener('click', _earlyClick)
+  </script>
+  <script src="./Lession2_files/variables-750d72b9d3e5d522f965bf904110c132.js.download" defer="defer"></script>
+  <script src="./Lession2_files/vendor.bundle-128d24e8f6.js.download" defer="defer"></script>
+<script src="./Lession2_files/Los_Angeles-78b0e93740.js.download" defer="defer"></script>
+<script src="./Lession2_files/en_US-80a0ce259b.js.download" defer="defer"></script>
+<script src="./Lession2_files/appBootstrap.bundle-659e6cb04a.js.download" defer="defer"></script>
+<script src="./Lession2_files/common.bundle-7a4babf662.js.download" defer="defer"></script>
+<script src="./Lession2_files/wiki_page_show.bundle-6cdff07d81.js.download" defer="defer"></script>
+<style type="text/css"></style></head>
+
+<body class="with-left-side course-menu-expanded padless-content pages primary-nav-transitions context-course_1177926 show webkit chrome touch">
+
+<noscript>
+  &lt;div role="alert" class="ic-flash-static ic-flash-error"&gt;
+    &lt;div class="ic-flash__icon" aria-hidden="true"&gt;
+      &lt;i class="icon-warning"&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;h1&gt;You need to have JavaScript enabled in order to access this site.&lt;/h1&gt;
+  &lt;/div&gt;
+</noscript>
+
+
+
+
+
+<ul id="flash_message_holder"></ul>
+<div id="flash_screenreader_holder" role="alert" aria-live="assertive" aria-relevant="additions" class="screenreader-only" aria-atomic="false"></div>
+
+<div id="application" class="ic-app">
+  
+  <header id="header" class="ic-app-header no-print ">
+    <a href="https://canvas.uw.edu/courses/1177926/pages/lesson-2?module_item_id=7889514#content" id="skip_navigation_link">Skip To Content</a>
+      <div role="region" class="ic-app-header__main-navigation" aria-label="Global Navigation">
+        <div class="ic-app-header__logomark-container">
+          <a href="https://canvas.uw.edu/" class="ic-app-header__logomark">
+            <span class="screenreader-only">Dashboard</span>
+          </a>
+        </div>
+        <ul id="menu" class="ic-app-header__menu-list">
+            <li class="menu-item ic-app-header__menu-list-item ">
+              <a id="global_nav_profile_link" href="https://canvas.uw.edu/profile" class="ic-app-header__menu-list-link">
+                <div class="menu-item-icon-container" aria-hidden="true">
+                  <div class="ic-avatar ">
+                    <img src="./Lession2_files/mSs2TjTESYscSzrackhgoJvAT79xbNchamHPrSec" alt="Clayton Wong">
+                  </div>
+                </div>
+                <div class="menu-item__text">
+                  Account
+                </div>
+              </a>
+            </li>
+          <li class="ic-app-header__menu-list-item ">
+            <a id="global_nav_dashboard_link" href="https://canvas.uw.edu/" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--dashboard" version="1.1" x="0" y="0" viewBox="0 0 280 200" enable-background="new 0 0 280 200" xml:space="preserve"><path d="M273.09,180.75H197.47V164.47h62.62A122.16,122.16,0,1,0,17.85,142a124,124,0,0,0,2,22.51H90.18v16.29H6.89l-1.5-6.22A138.51,138.51,0,0,1,1.57,142C1.57,65.64,63.67,3.53,140,3.53S278.43,65.64,278.43,142a137.67,137.67,0,0,1-3.84,32.57ZM66.49,87.63,50.24,71.38,61.75,59.86,78,76.12Zm147,0L202,76.12l16.25-16.25,11.51,11.51ZM131.85,53.82v-23h16.29v23Zm15.63,142.3a31.71,31.71,0,0,1-28-16.81c-6.4-12.08-15.73-72.29-17.54-84.25a8.15,8.15,0,0,1,13.58-7.2c8.88,8.21,53.48,49.72,59.88,61.81a31.61,31.61,0,0,1-27.9,46.45ZM121.81,116.2c4.17,24.56,9.23,50.21,12,55.49A15.35,15.35,0,1,0,161,157.3C158.18,152,139.79,133.44,121.81,116.2Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">Dashboard</div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ic-app-header__menu-list-item--active">
+            <a id="global_nav_courses_link" href="https://canvas.uw.edu/courses" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--courses" version="1.1" x="0" y="0" viewBox="0 0 280 259" enable-background="new 0 0 280 259" xml:space="preserve"><path d="M73.31,198c-11.93,0-22.22,8-24,18.73a26.67,26.67,0,0,0-.3,3.63v.3a22,22,0,0,0,5.44,14.65,22.47,22.47,0,0,0,17.22,8H200V228.19h-134V213.08H200V198Zm21-105.74h90.64V62H94.3ZM79.19,107.34V46.92H200v60.42Zm7.55,30.21V122.45H192.49v15.11ZM71.65,16.71A22.72,22.72,0,0,0,49,39.36V190.88a41.12,41.12,0,0,1,24.32-8h157V16.71ZM33.88,39.36A37.78,37.78,0,0,1,71.65,1.6H245.36V198H215.15v45.32h22.66V258.4H71.65a37.85,37.85,0,0,1-37.76-37.76Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Courses
+              </div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_calendar_link" href="https://canvas.uw.edu/calendar" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--calendar" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M197.07,213.38h16.31V197.07H197.07Zm-16.31,16.31V180.76h48.92v48.92Zm-48.92-16.31h16.31V197.07H131.85Zm-16.31,16.31V180.76h48.92v48.92ZM66.62,213.38H82.93V197.07H66.62ZM50.32,229.68V180.76H99.24v48.92Zm146.75-81.53h16.31V131.85H197.07Zm-16.31,16.31V115.54h48.92v48.92Zm-48.92-16.31h16.31V131.85H131.85Zm-16.31,16.31V115.54h48.92v48.92ZM66.62,148.15H82.93V131.85H66.62ZM50.32,164.46V115.54H99.24v48.92ZM34,262.29H246V82.93H34ZM246,66.62V42.16A8.17,8.17,0,0,0,237.84,34H213.38v8.15a8.15,8.15,0,1,1-16.31,0V34H82.93v8.15a8.15,8.15,0,0,1-16.31,0V34H42.16A8.17,8.17,0,0,0,34,42.16V66.62Zm-8.15-48.92a24.49,24.49,0,0,1,24.46,24.46V278.6H17.71V42.16A24.49,24.49,0,0,1,42.16,17.71H66.62V9.55a8.15,8.15,0,0,1,16.31,0v8.15H197.07V9.55a8.15,8.15,0,1,1,16.31,0v8.15Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Calendar
+              </div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_conversations_link" href="https://canvas.uw.edu/conversations" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--inbox" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M91.72,120.75h96.56V104.65H91.72Zm0,48.28h80.47V152.94H91.72Zm0-96.56h80.47V56.37H91.72Zm160.94,34.88H228.52V10.78h-177v96.56H27.34A24.17,24.17,0,0,0,3.2,131.48V244.14a24.17,24.17,0,0,0,24.14,24.14H252.66a24.17,24.17,0,0,0,24.14-24.14V131.48A24.17,24.17,0,0,0,252.66,107.34Zm0,16.09a8.06,8.06,0,0,1,8,8v51.77l-32.19,19.31V123.44ZM67.58,203.91v-177H212.42v177ZM27.34,123.44H51.48v79.13L19.29,183.26V131.48A8.06,8.06,0,0,1,27.34,123.44ZM252.66,252.19H27.34a8.06,8.06,0,0,1-8-8V202l30,18H230.75l30-18v42.12A8.06,8.06,0,0,1,252.66,252.19Z"></path></svg>
+
+                <span class="menu-item__badge" style="display: none">0</span>
+              </div>
+              <div class="menu-item__text">
+                Inbox
+              </div>
+            </a>
+          </li>
+            
+
+
+          <li class="ic-app-header__menu-list-item">
+           <a id="global_nav_help_link" class="ic-app-header__menu-list-link" data-track-category="help system" data-track-label="help button" href="http://help.instructure.com/">
+              <div class="menu-item-icon-container" role="presentation">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg menu-item__icon svg-icon-help" version="1.1" x="0" y="0" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve" fill="currentColor"><path d="M100,127.88A11.15,11.15,0,1,0,111.16,139,11.16,11.16,0,0,0,100,127.88Zm8.82-88.08a33.19,33.19,0,0,1,23.5,23.5,33.54,33.54,0,0,1-24,41.23,3.4,3.4,0,0,0-2.74,3.15v9.06H94.42v-9.06a14.57,14.57,0,0,1,11.13-14,22.43,22.43,0,0,0,13.66-10.27,22.73,22.73,0,0,0,2.31-17.37A21.92,21.92,0,0,0,106,50.59a22.67,22.67,0,0,0-19.68,3.88,22.18,22.18,0,0,0-8.65,17.64H66.54a33.25,33.25,0,0,1,13-26.47A33.72,33.72,0,0,1,108.82,39.8ZM100,5.2A94.8,94.8,0,1,0,194.8,100,94.91,94.91,0,0,0,100,5.2m0,178.45A83.65,83.65,0,1,1,183.65,100,83.73,83.73,0,0,1,100,183.65" transform="translate(-5.2 -5.2)"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Help
+              </div>
+</a>          </li>
+        </ul>
+      </div>
+      <div class="ic-app-header__secondary-navigation">
+        <ul class="ic-app-header__menu-list">
+          <li class="menu-item ic-app-header__menu-list-item">
+            <button id="primaryNavToggle" class="ic-app-header__menu-list-link ic-app-header__menu-list-link--nav-toggle" aria-label="
+                Expand global navigation
+                " title="
+                Expand global navigation
+                ">
+              <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--navtoggle" version="1.1" x="0" y="0" width="40" height="32" viewBox="0 0 40 32" xml:space="preserve">
+  <path d="M39.5,30.28V2.48H37.18v27.8Zm-4.93-13.9L22.17,4,20.53,5.61l9.61,9.61H.5v2.31H30.14l-9.61,9.61,1.64,1.64Z"></path>
+</svg>
+
+            </button>
+          </li>
+        </ul>
+      </div>
+    <div id="global_nav_tray_container"><noscript data-reactid=".0"></noscript></div>
+  </header>
+
+
+  <div id="instructure_ajax_error_box">
+    <div style="text-align: right; background-color: #fff;"><a href="https://canvas.uw.edu/courses/1177926/pages/lesson-2?module_item_id=7889514#" class="close_instructure_ajax_error_box_link">Close</a></div>
+    <iframe id="instructure_ajax_error_result" src="./Lession2_files/saved_resource.html" style="border: 0;" title="Error"></iframe>
+  </div>
+
+  
+
+  <div id="wrapper" class="ic-Layout-wrapper">
+      <div class="ic-app-nav-toggle-and-crumbs no-print">
+          <button type="button" id="courseMenuToggle" class="Button Button--link ic-app-course-nav-toggle" aria-live="polite" aria-label="Hide Courses Navigation Menu" title="Hide Courses Navigation Menu">
+            <i class="icon-hamburger" aria-hidden="true"></i>
+          </button>
+          <div class="ic-app-crumbs">
+        <nav id="breadcrumbs" role="navigation" aria-label="breadcrumbs"><ul><li class="home"><a href="https://canvas.uw.edu/"><span class="ellipsible">      <i class="icon-home" title="My Dashboard">
+        <span class="screenreader-only">My Dashboard</span>
+      </i>
+</span></a></li><li><a href="https://canvas.uw.edu/courses/1177926"><span class="ellipsible">CPROGRM 711 A</span></a></li><li><a href="https://canvas.uw.edu/courses/1177926/pages"><span class="ellipsible">Pages</span></a></li><li><span class="ellipsible">Lesson 2</span></li></ul></nav>
+        </div>
+      </div>
+    <div id="main" class="ic-Layout-columns">
+        <div class="ic-Layout-watermark"></div>
+        <div id="left-side" class="ic-app-course-menu list-view" style="display: block">
+              <span id="section-tabs-header-subtitle" class="ellipsis">Winter 2018</span>
+            <nav role="navigation" aria-label="Courses Navigation Menu"><ul id="section-tabs"><li class="section"><a href="https://canvas.uw.edu/courses/1177926" title="Home" class="home" tabindex="0">Home</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/announcements" title="Announcements" class="announcements" tabindex="0">Announcements</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/modules" title="Modules" class="modules" tabindex="0">Modules</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/discussion_topics" title="Discussions" class="discussions" tabindex="0">Discussions</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/grades" title="Grades" class="grades" tabindex="0">Grades</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/users" title="People" class="people" tabindex="0">People</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/external_tools/12299" title="UW Libraries" class="context_external_tool_12299" tabindex="0">UW Libraries</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/external_tools/57145" title="Info &amp; Help" class="context_external_tool_57145" tabindex="0">Info &amp; Help</a></li></ul></nav>
+        </div>
+      <div id="not_right_side" class="ic-app-main-content">
+        <div id="content-wrapper" class="ic-Layout-contentWrapper">
+            
+
+          <div id="content" class="ic-Layout-contentMain" role="main">
+            
+
+  
+
+<div id="wiki_page_show">
+<div class="header-bar-outer-container">
+  <div class="header-bar-container sticky-toolbar" data-sticky="">
+    <div class="header-bar flex-container">
+      <div class="header-bar-left header-left-flex">
+        
+          
+        
+      </div>
+      <div class="header-bar-right header-right-flex">
+        
+          
+          
+            
+          
+        
+        
+          
+        
+        
+      </div>
+    </div>
+    <div class="page-changed-alert" role="alert" aria-atomic="true" aria-live="polite"></div>
+  </div>
+</div>
+
+
+<div class="show-content user_content clearfix enhanced">
+  <h1 class="page-title">Lesson 2</h1>
+  
+    <h2><span><img src="./Lession2_files/preview" alt="L02.png" width="50" height="50" data-api-endpoint="https://canvas.uw.edu/api/v1/courses/1177926/files/44384320" data-api-returntype="File" style="max-width: 945px;">&nbsp;Pointers, Arrays, Structures, Expressions, and Statements</span></h2>
+<div id="level2">
+<h3>Ranged Base for Loops</h3>
+<p>C++ provides a number of methods for looping through each element of a collection such as an array. The following example first shows a conventional for loop as inherited from C. The second and third example show C++'s ranged base for loop which provides a concise syntax for looping through every element of a collection. The range based for loop works for arrays, vectors and all other collections provided with the C++ Standard Library (i.e., the STL).</p>
+<pre>TEST(rangedForLoop, Cpp11)
+{
+    int arr[] = { 2, 3, 4, 6 };
+    std::stringstream ss;
+
+    // conventional for loop
+    for (int i = 0; i &lt; 4; ++i)
+    {
+        // access each element
+        ss &lt;&lt; arr[i] &lt;&lt; " ";
+    }
+    
+    CHECK_EQUAL("2 3 4 6 ", ss.str());
+
+    // ranged base for loop
+    ss.str("");
+    for (int &amp;j : arr)
+    {
+        ss &lt;&lt; j &lt;&lt; " ";
+    }
+
+    CHECK_EQUAL("2 3 4 6 ", ss.str());
+
+    ss.str("");
+    // ranged base for loop using type deduction with auto
+    for (auto &amp;k : arr)
+    {
+        ss &lt;&lt; k &lt;&lt; " ";
+    }
+
+    CHECK_EQUAL("2 3 4 6 ", ss.str())
+}</pre>
+<h3>Null Pointers</h3>
+<p>It is often useful to have a known invalid pointer value to determine whether a pointer variable contains a legitimate address. This known invalid pointer value is called null. A pointer that has a null value is called a null pointer. C++ has 3 null pointer values.</p>
+<pre>char* ptr4 = NULL;    // C way
+char* ptr5 = 0;       // C++ way prior to C++11
+char* ptr6 = nullptr; // C++ 11 way (the preferred way)</pre>
+<p>Why 3 different ways to do the same thing? Simply that over time the language was improved. The language designers chose not to remove prior methods so existing code would not break. <strong>Prefer nullptr.</strong></p>
+<h3>Reference Types and Parameters</h3>
+<h4>Reference Types</h4>
+<p>Reference types are a new addition to C++; they serve as an alias or alternate name for an object. Like a <code>const</code>, a reference type must be initialized when it is declared. The syntax of such a declaration is as follows:</p>
+<p><strong>Type</strong><code>&amp;</code> name;</p>
+<p>Type is the data type (e.g., int) and name is the variable name.</p>
+<pre>int aValue = 10;
+int&amp; speed = aValue;</pre>
+<p>All operations on a reference act upon the object to which they refer.</p>
+<pre>int aValue = 10;
+int&amp; speed = aValue;
+	  
+speed += 10;
+// Adds 10 to aValue
+	  
+int&amp; speed = 10;  // illegal–a reference type must be 
+                  // initialized with an lvalue.</pre>
+<p>If you're not familiar with <span class="keyterm">lvalues</span> and <span class="keyterm">rvalues,</span> an lvalue is a something that can appear on the left side of an assignment statement, and an rvalue can appear on the right side. Literal constants may only be rvalues. Other values may be an lvalue or rvalue depending on context.</p>
+<pre>int a = 10;   //  a is an lvalue, 10 is an rvalue
+int b = a;    //  a can appear on either side of an assignment</pre>
+<pre>//
+//  C to C++ - Reference Types 1.0
+//  A First Look at Reference Types
+//
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    auto number = 10;
+    int&amp; refNumber = number;    //  refNumber is an 
+    int* ptrNumber;             //  alias for number
+
+    cout &lt;&lt; number &lt;&lt; endl;     //  Prints 10
+
+    cout &lt;&lt; refNumber &lt;&lt; endl;  //  Prints 10
+
+    refNumber = 5;              //  refNumber and number
+                                //  both assigned value 5
+
+    cout &lt;&lt; number &lt;&lt; endl;
+
+    ptrNumber = &amp;refNumber;     //  Assigning refNumber 
+                                //  to a pointer
+
+    cout &lt;&lt; *ptrNumber;         //  Prints 5
+
+    return 0;
+}</pre>
+<p>A reference type is similar to a pointer except a pointer need not be initialized. Also, a reference type does not have full pointer semantics. We'll see the consequences of such a restriction shortly.</p>
+<h3>Initialization of References</h3>
+<p>A reference type must be initialized when it is declar<span class="italics">ed.</span> It cannot be changed to refer to another object after initialization. This is true whether the reference is a <code>const</code> or whether the value being referred to can be modified:</p>
+<pre>int a = 10;
+int&amp; value = a;
+// value now refers to a
+</pre>
+<p>If the reference is a <code>const</code> it can be initialized by a literal constant or a variable. In the case of a literal constant the compiler creates a temporary object of type T and the reference refers to the temporary.</p>
+<pre>unsigned char  mine;
+int d1, d2;
+
+int&amp; a = 1024;           //  illegal: 1024 is not an lvalue
+char&amp; b = mine;          //  illegal: not exact type
+int&amp; c = d1 + d2;        //  illegal: not an lvalue
+
+const int&amp; a = 1024;     //  ok - temporary int variable created with the value 1024
+const char&amp; b = mine;    //  ok - temporary int variable created with the value of the char variable mine
+const int&amp; c = d1 + d2;  //  ok - temporary int variable created with the value of d1 + d2</pre>
+<p>References are often used as function parameters. We'll cover function parameters in detail later in the course.</p>
+<h3>References Versus Pointers</h3>
+<p>Although similar, references are not the same as pointers. References can not be used where the reference variable can not be initialized when it is declared. For example we cannot have an array of references.</p>
+<h3>Stack and Heap Memory</h3>
+<p>C++ programmers often talk of stack memory and heap memory. What's the difference? Why is it called stack memory? Why is it called heap memory?</p>
+<p>The stack is the memory set aside as scratch space for a thread of execution. When a function is called, a block is reserved on the top of the stack for local variables and some bookkeeping data. When that function returns, the block becomes unused and can be used the next time a function is called. The stack is always reserved in a LIFO order; the most recently reserved block is always the next block to be freed. This makes it really simple to keep track of the stack; freeing a block from the stack is nothing more than adjusting one pointer.</p>
+<h4>Attributes of the Stack:</h4>
+<ul>
+<li>Stored in computer RAM like the heap.</li>
+<li>Stack memory is reserved in a LIFO order, thus it operates as a stack data structure.</li>
+<li>Variables created on the stack will go out of scope and automatically deallocate.</li>
+<li>Much faster to allocate in comparison to variables on the heap</li>
+<li>Implemented with an actual stack data structure.</li>
+<li>Stores local data, return addresses, used for parameter passing</li>
+<li>Can have a stack overflow when too much of the stack is used. (mostly from inifinite (or too much) recursion, very large allocations)</li>
+<li>Data created on the stack can be used without pointers.</li>
+<li>You would use the stack if you know exactly how much data you need to allocate before compile time and it is not too big.</li>
+<li>Usually has a maximum size already determined when your program starts.</li>
+</ul>
+<p>The heap is memory set aside for dynamic allocation. Unlike the stack, there's no enforced pattern to the allocation and deallocation of blocks from the heap; you can allocate a block at any time and free it at any time. This makes it much more complex to keep track of which parts of the heap are allocated or free at any given time; there are many custom heap allocators available to tune heap performance for different usage patterns.</p>
+<h4>Attributes of the Heap:</h4>
+<ul>
+<li>Stored in computer RAM like the stack.</li>
+<li>Variables on the heap must be destroyed manually and never fall out of scope. The data is freed with delete, delete[] or free.</li>
+<li>Slower to allocate in comparison to variables on the stack.</li>
+<li>Used on demand to allocate a block of data for use by the program.</li>
+<li>Can have fragmentation when there are a lot of allocations and deallocations.</li>
+<li>In C++ data created on the heap will be pointed to by pointers and allocated with new or malloc.</li>
+<li>Can have allocation failures if too big of a buffer is requested to be allocated.</li>
+<li>You would use the heap if you don't know exactly how much data you will need at runtime or if you need to allocate a lot of data.</li>
+<li>If misused - responsible for memory leaks</li>
+</ul>
+<h4>Heap and Stack Example</h4>
+<pre>int foo()
+{
+  char *pBuffer; // --nothing allocated yet
+  {
+    // Create 500 bytes on the stack
+    char buffer[500];
+
+    // Create 500 bytes on the heap
+    pBuffer = new char[500];
+
+   }// -- buffer is deallocated here, pBuffer is not
+} // --- oops there's a memory leak, I should have called delete[] pBuffer;
+</pre>
+<h3>&nbsp;</h3>
+<p>Generally, space to hold variables is allocated at compile time when the program is built or at runtime when space to hold local variables is allocated on the stack. Global memory and that allocated to variables in main aside, local variables have a transient lifetime. They appear when we enter their context and disappear when we leave; for example, several of the variables in the last homework assignment. Their allocation and deallocation is managed by the system. Note that when local variables are deallocated, they are not morphed into some third dimension where they disappear forever; nor are they set to any particular value. They still exist, with their latest values, on the stack memory (use your debugger to see).</p>
+<p>Access and use of out of scope variables is never OK. What is an out of scope variable? The following example shows the classic example:</p>
+<pre>int* badFunction()
+{
+    // returns the address of a local heap variable - bad
+    int value = 45;
+    return &amp;value;
+}
+
+void usesBadFunction()
+{
+    int* x = badFunction();
+}</pre>
+<p>Senior developer: "You are using an out of scope variable - this is illegal and you need to change the code so it does not do this"</p>
+<p>Junior developer: "But, the code is working fine"</p>
+<p>The result of this out of scope code error is often an intermittent crash or exception. This is why the junior developer above might state the code is working fine (in his likely small sample tests). But sooner or later this program will seriously misbehave.</p>
+<p>Fortunately today many compilers today will issue a warning for such code.</p>
+<p>The reason the code appears to work fine is because the memory address for the variable still exists. But it won't work fine every time as the operating system is free to overwrite the value at any time. These are sometimes the most difficult to find bugs as they intermittently behave well, or not. The value at the memory address is likely unchanged (for awhile until the memory gets used by another part of your program, or by another program). You might ask why C/C++ does not clear the memory or give it special values after it is not used. The answer is simply performance. Programs would run slower if they did these extra steps.</p>
+<h4>An Overview of Dynamic (i.e., Heap) Memory</h4>
+<p>Dynamic memory is a scheme that gives the user control (and responsibility) for allocation and deallocation at runtime. Now the user says when the space for the variables is allocated and when it is deallocated. Like the local variables, when dynamically allocated memory is deallocated, it also is not morphed into some third dimension where it disappears forever; nor is it set to any particular value. It still exist, with its latest values, at the same address from which it was allocated. Dynamic memory (which is also called the heap) is no different from any other RAM (random access memory). It is RAM…same color, same size, same shape, same smell, same taste. Like the stack, there is a system level software driver that manages that piece of memory, just like that which manages the stack, to give it its behaviour.</p>
+<p>The C language provides the two operators malloc and free as the user interface to the heap. C++ replaces those with the operators new and delete. The new and delete operators come in two flavours. One flavor to handle single instance types and the other to handle arrays.</p>
+<pre>// for single instance
+new type;
+delete pointer;
+
+// for arrays
+new type [amount];
+delete[] pointer;</pre>
+<p>If the allocation succeeds, (i.e. if you have not run out of heap), the allocation operators will return a pointer to the piece of memory that has been allocated to you…don’t loose it or you will have a memory leak. If the allocation fails new throws a failure to allocate exception…which you must catch and handle.</p>
+<p>Don't worry now about heap allocation exceptions. We'll cover heap allocation exceptions later in the certificate program. For now, assume your allocations always succeed. (As they will unless you ask for terabytes of memory)</p>
+<p>When you dynamically allocate a piece of memory, the system sets aside that amount of memory for you…conceptually it puts your name on it…and returns the address of that piece to you. When you are allocating a block using the [], the same process occurs, however, the system also makes a note of the size of that block and stores that with your allocation. So, when you return the memory through the delete[] operator, it knows that it has to delete the appropriate amount. It then takes your name off the list as owning that piece of memory and it is returned to the heap.</p>
+<p>Note that the system does nothing to that memory than taking your name off of it. The values all remain. If you dereference it through the original pointer, you can still read those values. However, like writing beyond the end of a container, you do not own that memory. At some undetermined time, the system will overwrite that memory location.</p>
+</div>
+  
+</div>
+<div style=""><div class="module-sequence-padding"></div>
+<div class="module-sequence-footer" role="navigation" aria-label="Module Navigation">
+  <div class="module-sequence-footer-content">
+    
+      <a href="https://canvas.uw.edu/courses/1177926/modules/items/7889513" role="button" class="Button module-sequence-footer-button--previous" data-tooltip="right" data-html-tooltip-title="&lt;i class=&#39;icon-document&#39;&gt;&lt;/i&gt; Lesson 2 Overview and Materials" aria-describedby="msf0-previous-desc">
+        <i class="icon-mini-arrow-left"></i>Previous
+        <span id="msf0-previous-desc" class="hidden" hidden="">Previous: Lesson 2 Overview and Materials</span>
+      </a>
+    
+
+    
+      <span class="module-sequence-footer-button--next" data-tooltip="left" data-html-tooltip-title="&lt;i class=&#39;icon-assignment&#39;&gt;&lt;/i&gt; Assignment 2">
+        <a href="https://canvas.uw.edu/courses/1177926/modules/items/7889515" role="button" class="Button" aria-describedby="msf0-next-desc">
+          Next<i class="icon-mini-arrow-right"></i>
+          <span id="msf0-next-desc" class="hidden" hidden="">Next: Assignment 2</span>
+        </a>
+      </span>
+    
+  </div>
+</div>
+</div></div>
+
+          </div>
+        </div>
+        <div id="right-side-wrapper" class="ic-app-main-content__secondary">
+          <aside id="right-side" role="complementary">
+            
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <div style="display:none;"><!-- Everything inside of this should always stay hidden -->
+        <div id="page_view_id">724cd5d2-dd39-4342-ab7c-d8e76a766c96</div>
+    </div>
+    
+<div id="cant_record_dialog" style="display: none;">
+  <div>
+    In order to create video or audio recordings your computer needs to be 
+    webcam-enabled.  If you don't have a webcam on your computer, you can still
+    record audio-only messages by first installing the Google Video Chat
+    plugin.
+  </div>
+  <div style="text-align: center; font-size: 1.5em; margin: 10px;">
+    <a href="http://www.google.com/chat/video" target="_blank" rel="noopener" class="btn">Install the Video Plugin</a>
+  </div>
+  <div class="links" style="text-align: right; font-size: 0.8em; display: none;">
+    <a href="https://canvas.uw.edu/courses/1177926/pages/lesson-2?module_item_id=7889514#" class="cant_record_link">Don't have a webcam?</a>
+  </div>
+</div>
+
+  <div id="aria_alerts" class="hide-text affix" role="alert" aria-live="assertive"></div>
+  <div id="StudentTray__Container"></div>
+  <script>
+  INST = {"environment":"production","allowMediaComments":true,"kalturaSettings":{"domain":"nv.instructuremedia.com","resource_domain":"nv.instructuremedia.com","rtmp_domain":"fms-prod.instructuremedia.com","partner_id":"9","subpartner_id":"0","player_ui_conf":"0","kcw_ui_conf":"0","upload_ui_conf":"0","max_file_size_bytes":534773760,"do_analytics":false,"hide_rte_button":false,"js_uploader":true},"googleAnalyticsAccount":"UA-9138420-1","disableScribdPreviews":true,"logPageViews":true,"maxVisibleEditorButtons":3,"editorButtons":[{"name":"","id":21130,"url":"https://uw.hosted.panopto.com/Panopto/Pages/Sessions/embeddedupload.aspx","icon_url":"https://uw.hosted.panopto.com/Panopto/images/panopto_logo_globe.png","canvas_icon_class":null,"width":900,"height":700},{"name":"Modalis","id":52765,"url":"https://uw.modalis.io/lti","icon_url":"https://uw.modalis.io/assets/richicon.png","canvas_icon_class":null,"width":800,"height":600}]};
+  ENV = {"ASSET_HOST":"https://du11hjcvx0uqb.cloudfront.net","active_brand_config_json_url":"https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/2b2842738c86c4f2032e430bd0445cfc/variables-750d72b9d3e5d522f965bf904110c132.json","url_to_what_gets_loaded_inside_the_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/2b2842738c86c4f2032e430bd0445cfc/variables-750d72b9d3e5d522f965bf904110c132.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_normal_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-bb4121d737.css"],"url_for_high_contrast_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/default/variables-high_contrast-750d72b9d3e5d522f965bf904110c132.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_high_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-b61a4bdaa8.css"],"current_user_id":"3757111","current_user":{"id":"3757111","display_name":"Clayton Wong","avatar_image_url":"https://canvas.uw.edu/images/thumbnails/46487823/mSs2TjTESYscSzrackhgoJvAT79xbNchamHPrSec","html_url":"https://canvas.uw.edu/about/3757111"},"current_user_roles":["user","student"],"current_user_disabled_inbox":false,"files_domain":"cluster10-files.instructure.com","DOMAIN_ROOT_ACCOUNT_ID":100000000083919,"k12":false,"use_responsive_layout":false,"help_link_name":"Help","help_link_icon":"help","use_high_contrast":false,"SETTINGS":{"open_registration":false,"eportfolios_enabled":true,"collapse_global_nav":true,"show_feedback_link":true,"enable_profiles":true},"page_view_update_url":"/page_views/724cd5d2-dd39-4342-ab7c-d8e76a766c96?page_view_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpIjoiNzI0Y2Q1ZDItZGQzOS00MzQyLWFiN2MtZDhlNzZhNzY2Yzk2IiwidSI6MTAwMDAwMDAzNzU3MTExLCJjIjoiMjAxOC0wMS0zMVQyMDo0NDo1MS42NloifQ.-xRE58Jisbvdab1eJ7Y8ojBqXPrHi2vf0fWmNpx5oYw","context_asset_string":"course_1177926","ping_url":"https://canvas.uw.edu/api/v1/courses/1177926/ping","TIMEZONE":"America/Los_Angeles","CONTEXT_TIMEZONE":"America/Los_Angeles","GRAPHQL_ENABLED":true,"LOCALE":"en","BIGEASY_LOCALE":"en_US","FULLCALENDAR_LOCALE":"en","MOMENT_LOCALE":"en","WIKI_RIGHTS":{"read":true},"PAGE_RIGHTS":{"read":true},"DEFAULT_EDITING_ROLES":"teachers","WIKI_PAGES_PATH":"/courses/1177926/pages","WIKI_PAGE":{"title":"Lesson 2","created_at":"2017-10-18T21:04:14Z","url":"lesson-2","editing_roles":"teachers","page_id":"2573085","published":true,"hide_from_students":false,"front_page":false,"html_url":"https://canvas.uw.edu/courses/1177926/pages/lesson-2","updated_at":"2017-10-18T21:04:14Z","locked_for_user":false,"body":"\u003ch2\u003e\u003cspan\u003e\u003cimg src=\"https://canvas.uw.edu/courses/1177926/files/44384320/preview\" alt=\"L02.png\" width=\"50\" height=\"50\" data-api-endpoint=\"https://canvas.uw.edu/api/v1/courses/1177926/files/44384320\" data-api-returntype=\"File\"\u003e Pointers, Arrays, Structures, Expressions, and Statements\u003c/span\u003e\u003c/h2\u003e\r\n\u003cdiv id=\"level2\"\u003e\r\n\u003ch3\u003eRanged Base for Loops\u003c/h3\u003e\r\n\u003cp\u003eC++ provides a number of methods for looping through each element of a collection such as an array. The following example first shows a conventional for loop as inherited from C. The second and third example show C++'s ranged base for loop which provides a concise syntax for looping through every element of a collection. The range based for loop works for arrays, vectors and all other collections provided with the C++ Standard Library (i.e., the STL).\u003c/p\u003e\r\n\u003cpre\u003eTEST(rangedForLoop, Cpp11)\r\n{\r\n    int arr[] = { 2, 3, 4, 6 };\r\n    std::stringstream ss;\r\n\r\n    // conventional for loop\r\n    for (int i = 0; i \u0026lt; 4; ++i)\r\n    {\r\n        // access each element\r\n        ss \u0026lt;\u0026lt; arr[i] \u0026lt;\u0026lt; \" \";\r\n    }\r\n    \r\n    CHECK_EQUAL(\"2 3 4 6 \", ss.str());\r\n\r\n    // ranged base for loop\r\n    ss.str(\"\");\r\n    for (int \u0026amp;j : arr)\r\n    {\r\n        ss \u0026lt;\u0026lt; j \u0026lt;\u0026lt; \" \";\r\n    }\r\n\r\n    CHECK_EQUAL(\"2 3 4 6 \", ss.str());\r\n\r\n    ss.str(\"\");\r\n    // ranged base for loop using type deduction with auto\r\n    for (auto \u0026amp;k : arr)\r\n    {\r\n        ss \u0026lt;\u0026lt; k \u0026lt;\u0026lt; \" \";\r\n    }\r\n\r\n    CHECK_EQUAL(\"2 3 4 6 \", ss.str())\r\n}\u003c/pre\u003e\r\n\u003ch3\u003eNull Pointers\u003c/h3\u003e\r\n\u003cp\u003eIt is often useful to have a known invalid pointer value to determine whether a pointer variable contains a legitimate address. This known invalid pointer value is called null. A pointer that has a null value is called a null pointer. C++ has 3 null pointer values.\u003c/p\u003e\r\n\u003cpre\u003echar* ptr4 = NULL;    // C way\r\nchar* ptr5 = 0;       // C++ way prior to C++11\r\nchar* ptr6 = nullptr; // C++ 11 way (the preferred way)\u003c/pre\u003e\r\n\u003cp\u003eWhy 3 different ways to do the same thing? Simply that over time the language was improved. The language designers chose not to remove prior methods so existing code would not break. \u003cstrong\u003ePrefer nullptr.\u003c/strong\u003e\u003c/p\u003e\r\n\u003ch3\u003eReference Types and Parameters\u003c/h3\u003e\r\n\u003ch4\u003eReference Types\u003c/h4\u003e\r\n\u003cp\u003eReference types are a new addition to C++; they serve as an alias or alternate name for an object. Like a \u003ccode\u003econst\u003c/code\u003e, a reference type must be initialized when it is declared. The syntax of such a declaration is as follows:\u003c/p\u003e\r\n\u003cp\u003e\u003cstrong\u003eType\u003c/strong\u003e\u003ccode\u003e\u0026amp;\u003c/code\u003e name;\u003c/p\u003e\r\n\u003cp\u003eType is the data type (e.g., int) and name is the variable name.\u003c/p\u003e\r\n\u003cpre\u003eint aValue = 10;\r\nint\u0026amp; speed = aValue;\u003c/pre\u003e\r\n\u003cp\u003eAll operations on a reference act upon the object to which they refer.\u003c/p\u003e\r\n\u003cpre\u003eint aValue = 10;\r\nint\u0026amp; speed = aValue;\r\n\t  \r\nspeed += 10;\r\n// Adds 10 to aValue\r\n\t  \r\nint\u0026amp; speed = 10;  // illegal–a reference type must be \r\n                  // initialized with an lvalue.\u003c/pre\u003e\r\n\u003cp\u003eIf you're not familiar with \u003cspan class=\"keyterm\"\u003elvalues\u003c/span\u003e and \u003cspan class=\"keyterm\"\u003ervalues,\u003c/span\u003e an lvalue is a something that can appear on the left side of an assignment statement, and an rvalue can appear on the right side. Literal constants may only be rvalues. Other values may be an lvalue or rvalue depending on context.\u003c/p\u003e\r\n\u003cpre\u003eint a = 10;   //  a is an lvalue, 10 is an rvalue\r\nint b = a;    //  a can appear on either side of an assignment\u003c/pre\u003e\r\n\u003cpre\u003e//\r\n//  C to C++ - Reference Types 1.0\r\n//  A First Look at Reference Types\r\n//\r\n\r\n#include \u0026lt;iostream\u0026gt;\r\nusing namespace std;\r\n\r\nint main()\r\n{\r\n    auto number = 10;\r\n    int\u0026amp; refNumber = number;    //  refNumber is an \r\n    int* ptrNumber;             //  alias for number\r\n\r\n    cout \u0026lt;\u0026lt; number \u0026lt;\u0026lt; endl;     //  Prints 10\r\n\r\n    cout \u0026lt;\u0026lt; refNumber \u0026lt;\u0026lt; endl;  //  Prints 10\r\n\r\n    refNumber = 5;              //  refNumber and number\r\n                                //  both assigned value 5\r\n\r\n    cout \u0026lt;\u0026lt; number \u0026lt;\u0026lt; endl;\r\n\r\n    ptrNumber = \u0026amp;refNumber;     //  Assigning refNumber \r\n                                //  to a pointer\r\n\r\n    cout \u0026lt;\u0026lt; *ptrNumber;         //  Prints 5\r\n\r\n    return 0;\r\n}\u003c/pre\u003e\r\n\u003cp\u003eA reference type is similar to a pointer except a pointer need not be initialized. Also, a reference type does not have full pointer semantics. We'll see the consequences of such a restriction shortly.\u003c/p\u003e\r\n\u003ch3\u003eInitialization of References\u003c/h3\u003e\r\n\u003cp\u003eA reference type must be initialized when it is declar\u003cspan class=\"italics\"\u003eed.\u003c/span\u003e It cannot be changed to refer to another object after initialization. This is true whether the reference is a \u003ccode\u003econst\u003c/code\u003e or whether the value being referred to can be modified:\u003c/p\u003e\r\n\u003cpre\u003eint a = 10;\r\nint\u0026amp; value = a;\r\n// value now refers to a\r\n\u003c/pre\u003e\r\n\u003cp\u003eIf the reference is a \u003ccode\u003econst\u003c/code\u003e it can be initialized by a literal constant or a variable. In the case of a literal constant the compiler creates a temporary object of type T and the reference refers to the temporary.\u003c/p\u003e\r\n\u003cpre\u003eunsigned char  mine;\r\nint d1, d2;\r\n\r\nint\u0026amp; a = 1024;           //  illegal: 1024 is not an lvalue\r\nchar\u0026amp; b = mine;          //  illegal: not exact type\r\nint\u0026amp; c = d1 + d2;        //  illegal: not an lvalue\r\n\r\nconst int\u0026amp; a = 1024;     //  ok - temporary int variable created with the value 1024\r\nconst char\u0026amp; b = mine;    //  ok - temporary int variable created with the value of the char variable mine\r\nconst int\u0026amp; c = d1 + d2;  //  ok - temporary int variable created with the value of d1 + d2\u003c/pre\u003e\r\n\u003cp\u003eReferences are often used as function parameters. We'll cover function parameters in detail later in the course.\u003c/p\u003e\r\n\u003ch3\u003eReferences Versus Pointers\u003c/h3\u003e\r\n\u003cp\u003eAlthough similar, references are not the same as pointers. References can not be used where the reference variable can not be initialized when it is declared. For example we cannot have an array of references.\u003c/p\u003e\r\n\u003ch3\u003eStack and Heap Memory\u003c/h3\u003e\r\n\u003cp\u003eC++ programmers often talk of stack memory and heap memory. What's the difference? Why is it called stack memory? Why is it called heap memory?\u003c/p\u003e\r\n\u003cp\u003eThe stack is the memory set aside as scratch space for a thread of execution. When a function is called, a block is reserved on the top of the stack for local variables and some bookkeeping data. When that function returns, the block becomes unused and can be used the next time a function is called. The stack is always reserved in a LIFO order; the most recently reserved block is always the next block to be freed. This makes it really simple to keep track of the stack; freeing a block from the stack is nothing more than adjusting one pointer.\u003c/p\u003e\r\n\u003ch4\u003eAttributes of the Stack:\u003c/h4\u003e\r\n\u003cul\u003e\n\u003cli\u003eStored in computer RAM like the heap.\u003c/li\u003e\r\n\u003cli\u003eStack memory is reserved in a LIFO order, thus it operates as a stack data structure.\u003c/li\u003e\r\n\u003cli\u003eVariables created on the stack will go out of scope and automatically deallocate.\u003c/li\u003e\r\n\u003cli\u003eMuch faster to allocate in comparison to variables on the heap\u003c/li\u003e\r\n\u003cli\u003eImplemented with an actual stack data structure.\u003c/li\u003e\r\n\u003cli\u003eStores local data, return addresses, used for parameter passing\u003c/li\u003e\r\n\u003cli\u003eCan have a stack overflow when too much of the stack is used. (mostly from inifinite (or too much) recursion, very large allocations)\u003c/li\u003e\r\n\u003cli\u003eData created on the stack can be used without pointers.\u003c/li\u003e\r\n\u003cli\u003eYou would use the stack if you know exactly how much data you need to allocate before compile time and it is not too big.\u003c/li\u003e\r\n\u003cli\u003eUsually has a maximum size already determined when your program starts.\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003cp\u003eThe heap is memory set aside for dynamic allocation. Unlike the stack, there's no enforced pattern to the allocation and deallocation of blocks from the heap; you can allocate a block at any time and free it at any time. This makes it much more complex to keep track of which parts of the heap are allocated or free at any given time; there are many custom heap allocators available to tune heap performance for different usage patterns.\u003c/p\u003e\r\n\u003ch4\u003eAttributes of the Heap:\u003c/h4\u003e\r\n\u003cul\u003e\n\u003cli\u003eStored in computer RAM like the stack.\u003c/li\u003e\r\n\u003cli\u003eVariables on the heap must be destroyed manually and never fall out of scope. The data is freed with delete, delete[] or free.\u003c/li\u003e\r\n\u003cli\u003eSlower to allocate in comparison to variables on the stack.\u003c/li\u003e\r\n\u003cli\u003eUsed on demand to allocate a block of data for use by the program.\u003c/li\u003e\r\n\u003cli\u003eCan have fragmentation when there are a lot of allocations and deallocations.\u003c/li\u003e\r\n\u003cli\u003eIn C++ data created on the heap will be pointed to by pointers and allocated with new or malloc.\u003c/li\u003e\r\n\u003cli\u003eCan have allocation failures if too big of a buffer is requested to be allocated.\u003c/li\u003e\r\n\u003cli\u003eYou would use the heap if you don't know exactly how much data you will need at runtime or if you need to allocate a lot of data.\u003c/li\u003e\r\n\u003cli\u003eIf misused - responsible for memory leaks\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003ch4\u003eHeap and Stack Example\u003c/h4\u003e\r\n\u003cpre\u003eint foo()\r\n{\r\n  char *pBuffer; // --nothing allocated yet\r\n  {\r\n    // Create 500 bytes on the stack\r\n    char buffer[500];\r\n\r\n    // Create 500 bytes on the heap\r\n    pBuffer = new char[500];\r\n\r\n   }// -- buffer is deallocated here, pBuffer is not\r\n} // --- oops there's a memory leak, I should have called delete[] pBuffer;\r\n\u003c/pre\u003e\r\n\u003ch3\u003e \u003c/h3\u003e\r\n\u003cp\u003eGenerally, space to hold variables is allocated at compile time when the program is built or at runtime when space to hold local variables is allocated on the stack. Global memory and that allocated to variables in main aside, local variables have a transient lifetime. They appear when we enter their context and disappear when we leave; for example, several of the variables in the last homework assignment. Their allocation and deallocation is managed by the system. Note that when local variables are deallocated, they are not morphed into some third dimension where they disappear forever; nor are they set to any particular value. They still exist, with their latest values, on the stack memory (use your debugger to see).\u003c/p\u003e\r\n\u003cp\u003eAccess and use of out of scope variables is never OK. What is an out of scope variable? The following example shows the classic example:\u003c/p\u003e\r\n\u003cpre\u003eint* badFunction()\r\n{\r\n    // returns the address of a local heap variable - bad\r\n    int value = 45;\r\n    return \u0026amp;value;\r\n}\r\n\r\nvoid usesBadFunction()\r\n{\r\n    int* x = badFunction();\r\n}\u003c/pre\u003e\r\n\u003cp\u003eSenior developer: \"You are using an out of scope variable - this is illegal and you need to change the code so it does not do this\"\u003c/p\u003e\r\n\u003cp\u003eJunior developer: \"But, the code is working fine\"\u003c/p\u003e\r\n\u003cp\u003eThe result of this out of scope code error is often an intermittent crash or exception. This is why the junior developer above might state the code is working fine (in his likely small sample tests). But sooner or later this program will seriously misbehave.\u003c/p\u003e\r\n\u003cp\u003eFortunately today many compilers today will issue a warning for such code.\u003c/p\u003e\r\n\u003cp\u003eThe reason the code appears to work fine is because the memory address for the variable still exists. But it won't work fine every time as the operating system is free to overwrite the value at any time. These are sometimes the most difficult to find bugs as they intermittently behave well, or not. The value at the memory address is likely unchanged (for awhile until the memory gets used by another part of your program, or by another program). You might ask why C/C++ does not clear the memory or give it special values after it is not used. The answer is simply performance. Programs would run slower if they did these extra steps.\u003c/p\u003e\r\n\u003ch4\u003eAn Overview of Dynamic (i.e., Heap) Memory\u003c/h4\u003e\r\n\u003cp\u003eDynamic memory is a scheme that gives the user control (and responsibility) for allocation and deallocation at runtime. Now the user says when the space for the variables is allocated and when it is deallocated. Like the local variables, when dynamically allocated memory is deallocated, it also is not morphed into some third dimension where it disappears forever; nor is it set to any particular value. It still exist, with its latest values, at the same address from which it was allocated. Dynamic memory (which is also called the heap) is no different from any other RAM (random access memory). It is RAM…same color, same size, same shape, same smell, same taste. Like the stack, there is a system level software driver that manages that piece of memory, just like that which manages the stack, to give it its behaviour.\u003c/p\u003e\r\n\u003cp\u003eThe C language provides the two operators malloc and free as the user interface to the heap. C++ replaces those with the operators new and delete. The new and delete operators come in two flavours. One flavor to handle single instance types and the other to handle arrays.\u003c/p\u003e\r\n\u003cpre\u003e// for single instance\r\nnew type;\r\ndelete pointer;\r\n\r\n// for arrays\r\nnew type [amount];\r\ndelete[] pointer;\u003c/pre\u003e\r\n\u003cp\u003eIf the allocation succeeds, (i.e. if you have not run out of heap), the allocation operators will return a pointer to the piece of memory that has been allocated to you…don’t loose it or you will have a memory leak. If the allocation fails new throws a failure to allocate exception…which you must catch and handle.\u003c/p\u003e\r\n\u003cp\u003eDon't worry now about heap allocation exceptions. We'll cover heap allocation exceptions later in the certificate program. For now, assume your allocations always succeed. (As they will unless you ask for terabytes of memory)\u003c/p\u003e\r\n\u003cp\u003eWhen you dynamically allocate a piece of memory, the system sets aside that amount of memory for you…conceptually it puts your name on it…and returns the address of that piece to you. When you are allocating a block using the [], the same process occurs, however, the system also makes a note of the size of that block and stores that with your allocation. So, when you return the memory through the delete[] operator, it knows that it has to delete the appropriate amount. It then takes your name off the list as owning that piece of memory and it is returned to the heap.\u003c/p\u003e\r\n\u003cp\u003eNote that the system does nothing to that memory than taking your name off of it. The values all remain. If you dereference it through the original pointer, you can still read those values. However, like writing beyond the end of a container, you do not own that memory. At some undetermined time, the system will overwrite that memory location.\u003c/p\u003e\r\n\u003c/div\u003e"},"WIKI_PAGE_REVISION":"1","WIKI_PAGE_SHOW_PATH":"/courses/1177926/pages/lesson-2","WIKI_PAGE_EDIT_PATH":"/courses/1177926/pages/lesson-2/edit","WIKI_PAGE_HISTORY_PATH":"/courses/1177926/pages/lesson-2/revisions","COURSE_ID":"1177926","MODULES_PATH":"/courses/1177926/modules","wiki_page_menu_tools":[],"DISPLAY_SHOW_ALL_LINK":false,"badge_counts":{"submissions":0},"notices":[]};
+</script>
+
+<script src="./Lession2_files/navigation_header.bundle-404806ff60.js.download" defer="defer"></script>
+<script src="./Lession2_files/default.js.download" defer="defer"></script>
+<script src="./Lession2_files/custom.js.download" defer="defer"></script>
+
+</div> <!-- #application -->
+
+
+<div class="ReactTrayPortal"><div data-reactid=".1"></div></div></body></html>
