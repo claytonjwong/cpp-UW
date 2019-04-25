@@ -1,0 +1,10 @@
+I'd like to write a basic application in order to use the C++ skills
+which I've learned so far in this class, while also reminding myself
+how to properly write OOP code for a model-view-controller (MVC) design pattern.
+So I am proposing to create a MVC project which displays the recursive stack
+used for solving the Towers of Hanoi.  The user/controller can choose to step forward/backwards
+one step at a time, or allow the animation to continually step forward/backward automatically.
+The initial view/controller will be CLI based, and I will test my design decisions by integrating
+a C++ GUI library ( preferably cross platform ) which can be used for as the final view/controller.
+Changing the view/controller *should* in theory be a trivial task with proper design.  The model
+itself should remain unchanged regardless of the view/controller.

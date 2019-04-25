@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)https://canvas.uw.edu/courses/1177926/pages/lesson-7?module_item_id=7889552 -->
+<html class="lato-font-loaded" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Lesson 7: CPROGRM 711 A Wi 18: C++ Programming: Introduction</title>
+  <!--[if lte IE 9]> <meta http-equiv=refresh content="0; URL=/ie-9-is-not-supported.html" /> <![endif]-->
+  <link rel="shortcut icon" type="image/x-icon" href="https://instructure-uploads.s3.amazonaws.com/account_100000000083919/attachments/37312004/favicon.ico?AWSAccessKeyId=AKIAJFNFXH2V2O7RPCAA&amp;Expires=1939374366&amp;Signature=lNl7iuCda9spDgRONbwVvr490LM%3D&amp;response-cache-control=Cache-Control%3Amax-age%3D473364000.0%2C%20public&amp;response-expires=473364000.0">
+  <link rel="apple-touch-icon" href="https://instructure-uploads.s3.amazonaws.com/account_100000000083919/attachments/37312005/Canvas-MobileHome.png?AWSAccessKeyId=AKIAJFNFXH2V2O7RPCAA&amp;Expires=1939374366&amp;Signature=jwVDIJvM6uIaOoE%2FSW94uwVcHU0%3D&amp;response-cache-control=Cache-Control%3Amax-age%3D473364000.0%2C%20public&amp;response-expires=473364000.0">
+  
+  <link rel="stylesheet" media="all" href="./Lesson7_files/variables-750d72b9d3e5d522f965bf904110c132.css">
+  <link rel="stylesheet" media="all" href="./Lesson7_files/common-a1d8e38e78.css">
+  <script type="text/javascript" async="" src="./Lesson7_files/ga.js.download"></script><script>
+//<![CDATA[
+
+!function(){
+  var o,s,v;
+  if (!(window.Promise && Object.assign && Object.values && [].find && [].includes && (o={},s=Symbol(),v={},o[s]=v,o[s]===v) && (function f(){}).bind().name==='bound f')) {
+    s = 's', document.write('<'+s+'cr'+'ipt src="https://du11hjcvx0uqb.cloudfront.net/dist/ie11-polyfill-eaf1bda494.js"></'+s+'c'+'ript>');
+  }
+}();
+      
+//]]>
+</script>
+  <script src="./Lesson7_files/lato-fontfaceobserver-11a14bc0b6.js.download" async="async"></script>
+  
+  <meta name="apple-itunes-app" content="app-id=480883488">
+<link rel="manifest" href="https://canvas.uw.edu/web-app-manifest/manifest.json">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#008EE2">
+  <link rel="stylesheet" media="all" href="./Lesson7_files/wiki_page-46e7e026f6.css">
+  
+  <link rel="stylesheet" media="all" href="./Lesson7_files/custom.css">
+<link rel="stylesheet" media="all" href="./Lesson7_files/custom(1).css">
+  <script>
+    function _earlyClick(e){
+      var c = e.target
+      while (c && c.ownerDocument) {
+        if (c.getAttribute('href') == '#' || c.getAttribute('data-method')) {
+          e.preventDefault()
+          (_earlyClick.clicks = _earlyClick.clicks || []).push(c)
+          break
+        }
+        c = c.parentNode
+      }
+    }
+    document.addEventListener('click', _earlyClick)
+  </script>
+  <script src="./Lesson7_files/variables-750d72b9d3e5d522f965bf904110c132.js.download" defer="defer"></script>
+  <script src="./Lesson7_files/vendor.bundle-00af795117.js.download" defer="defer"></script>
+<script src="./Lesson7_files/Los_Angeles-78b0e93740.js.download" defer="defer"></script>
+<script src="./Lesson7_files/en_US-80a0ce259b.js.download" defer="defer"></script>
+<script src="./Lesson7_files/appBootstrap.bundle-2a9881e396.js.download" defer="defer"></script>
+<script src="./Lesson7_files/common.bundle-5e5091ff1d.js.download" defer="defer"></script>
+<script src="./Lesson7_files/wiki_page_show.bundle-e915c87a27.js.download" defer="defer"></script>
+<style type="text/css"></style></head>
+
+<body class="with-left-side course-menu-expanded padless-content pages primary-nav-transitions context-course_1177926 show webkit chrome touch">
+
+<noscript>
+  &lt;div role="alert" class="ic-flash-static ic-flash-error"&gt;
+    &lt;div class="ic-flash__icon" aria-hidden="true"&gt;
+      &lt;i class="icon-warning"&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;h1&gt;You need to have JavaScript enabled in order to access this site.&lt;/h1&gt;
+  &lt;/div&gt;
+</noscript>
+
+
+
+
+
+<ul id="flash_message_holder"></ul>
+<div id="flash_screenreader_holder" role="alert" aria-live="assertive" aria-relevant="additions" class="screenreader-only" aria-atomic="false"></div>
+
+<div id="application" class="ic-app">
+  
+  <header id="header" class="ic-app-header no-print ">
+    <a href="https://canvas.uw.edu/courses/1177926/pages/lesson-7?module_item_id=7889552#content" id="skip_navigation_link">Skip To Content</a>
+      <div role="region" class="ic-app-header__main-navigation" aria-label="Global Navigation">
+        <div class="ic-app-header__logomark-container">
+          <a href="https://canvas.uw.edu/" class="ic-app-header__logomark">
+            <span class="screenreader-only">Dashboard</span>
+          </a>
+        </div>
+        <ul id="menu" class="ic-app-header__menu-list">
+            <li class="menu-item ic-app-header__menu-list-item ">
+              <a id="global_nav_profile_link" href="https://canvas.uw.edu/profile" class="ic-app-header__menu-list-link">
+                <div class="menu-item-icon-container" aria-hidden="true">
+                  <div class="ic-avatar ">
+                    <img src="./Lesson7_files/mSs2TjTESYscSzrackhgoJvAT79xbNchamHPrSec" alt="Clayton Wong">
+                  </div>
+                </div>
+                <div class="menu-item__text">
+                  Account
+                </div>
+              </a>
+            </li>
+          <li class="ic-app-header__menu-list-item ">
+            <a id="global_nav_dashboard_link" href="https://canvas.uw.edu/" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--dashboard" version="1.1" x="0" y="0" viewBox="0 0 280 200" enable-background="new 0 0 280 200" xml:space="preserve"><path d="M273.09,180.75H197.47V164.47h62.62A122.16,122.16,0,1,0,17.85,142a124,124,0,0,0,2,22.51H90.18v16.29H6.89l-1.5-6.22A138.51,138.51,0,0,1,1.57,142C1.57,65.64,63.67,3.53,140,3.53S278.43,65.64,278.43,142a137.67,137.67,0,0,1-3.84,32.57ZM66.49,87.63,50.24,71.38,61.75,59.86,78,76.12Zm147,0L202,76.12l16.25-16.25,11.51,11.51ZM131.85,53.82v-23h16.29v23Zm15.63,142.3a31.71,31.71,0,0,1-28-16.81c-6.4-12.08-15.73-72.29-17.54-84.25a8.15,8.15,0,0,1,13.58-7.2c8.88,8.21,53.48,49.72,59.88,61.81a31.61,31.61,0,0,1-27.9,46.45ZM121.81,116.2c4.17,24.56,9.23,50.21,12,55.49A15.35,15.35,0,1,0,161,157.3C158.18,152,139.79,133.44,121.81,116.2Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">Dashboard</div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ic-app-header__menu-list-item--active">
+            <a id="global_nav_courses_link" href="https://canvas.uw.edu/courses" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--courses" version="1.1" x="0" y="0" viewBox="0 0 280 259" enable-background="new 0 0 280 259" xml:space="preserve"><path d="M73.31,198c-11.93,0-22.22,8-24,18.73a26.67,26.67,0,0,0-.3,3.63v.3a22,22,0,0,0,5.44,14.65,22.47,22.47,0,0,0,17.22,8H200V228.19h-134V213.08H200V198Zm21-105.74h90.64V62H94.3ZM79.19,107.34V46.92H200v60.42Zm7.55,30.21V122.45H192.49v15.11ZM71.65,16.71A22.72,22.72,0,0,0,49,39.36V190.88a41.12,41.12,0,0,1,24.32-8h157V16.71ZM33.88,39.36A37.78,37.78,0,0,1,71.65,1.6H245.36V198H215.15v45.32h22.66V258.4H71.65a37.85,37.85,0,0,1-37.76-37.76Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Courses
+              </div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_calendar_link" href="https://canvas.uw.edu/calendar" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--calendar" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M197.07,213.38h16.31V197.07H197.07Zm-16.31,16.31V180.76h48.92v48.92Zm-48.92-16.31h16.31V197.07H131.85Zm-16.31,16.31V180.76h48.92v48.92ZM66.62,213.38H82.93V197.07H66.62ZM50.32,229.68V180.76H99.24v48.92Zm146.75-81.53h16.31V131.85H197.07Zm-16.31,16.31V115.54h48.92v48.92Zm-48.92-16.31h16.31V131.85H131.85Zm-16.31,16.31V115.54h48.92v48.92ZM66.62,148.15H82.93V131.85H66.62ZM50.32,164.46V115.54H99.24v48.92ZM34,262.29H246V82.93H34ZM246,66.62V42.16A8.17,8.17,0,0,0,237.84,34H213.38v8.15a8.15,8.15,0,1,1-16.31,0V34H82.93v8.15a8.15,8.15,0,0,1-16.31,0V34H42.16A8.17,8.17,0,0,0,34,42.16V66.62Zm-8.15-48.92a24.49,24.49,0,0,1,24.46,24.46V278.6H17.71V42.16A24.49,24.49,0,0,1,42.16,17.71H66.62V9.55a8.15,8.15,0,0,1,16.31,0v8.15H197.07V9.55a8.15,8.15,0,1,1,16.31,0v8.15Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Calendar
+              </div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_conversations_link" href="https://canvas.uw.edu/conversations" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--inbox" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M91.72,120.75h96.56V104.65H91.72Zm0,48.28h80.47V152.94H91.72Zm0-96.56h80.47V56.37H91.72Zm160.94,34.88H228.52V10.78h-177v96.56H27.34A24.17,24.17,0,0,0,3.2,131.48V244.14a24.17,24.17,0,0,0,24.14,24.14H252.66a24.17,24.17,0,0,0,24.14-24.14V131.48A24.17,24.17,0,0,0,252.66,107.34Zm0,16.09a8.06,8.06,0,0,1,8,8v51.77l-32.19,19.31V123.44ZM67.58,203.91v-177H212.42v177ZM27.34,123.44H51.48v79.13L19.29,183.26V131.48A8.06,8.06,0,0,1,27.34,123.44ZM252.66,252.19H27.34a8.06,8.06,0,0,1-8-8V202l30,18H230.75l30-18v42.12A8.06,8.06,0,0,1,252.66,252.19Z"></path></svg>
+
+                <span class="menu-item__badge" style="display: none">0</span>
+              </div>
+              <div class="menu-item__text">
+                Inbox
+              </div>
+            </a>
+          </li>
+            
+
+
+          <li class="ic-app-header__menu-list-item">
+           <a id="global_nav_help_link" class="ic-app-header__menu-list-link" data-track-category="help system" data-track-label="help button" href="http://help.instructure.com/">
+              <div class="menu-item-icon-container" role="presentation">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg menu-item__icon svg-icon-help" version="1.1" x="0" y="0" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve" fill="currentColor"><path d="M100,127.88A11.15,11.15,0,1,0,111.16,139,11.16,11.16,0,0,0,100,127.88Zm8.82-88.08a33.19,33.19,0,0,1,23.5,23.5,33.54,33.54,0,0,1-24,41.23,3.4,3.4,0,0,0-2.74,3.15v9.06H94.42v-9.06a14.57,14.57,0,0,1,11.13-14,22.43,22.43,0,0,0,13.66-10.27,22.73,22.73,0,0,0,2.31-17.37A21.92,21.92,0,0,0,106,50.59a22.67,22.67,0,0,0-19.68,3.88,22.18,22.18,0,0,0-8.65,17.64H66.54a33.25,33.25,0,0,1,13-26.47A33.72,33.72,0,0,1,108.82,39.8ZM100,5.2A94.8,94.8,0,1,0,194.8,100,94.91,94.91,0,0,0,100,5.2m0,178.45A83.65,83.65,0,1,1,183.65,100,83.73,83.73,0,0,1,100,183.65" transform="translate(-5.2 -5.2)"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Help
+              </div>
+</a>          </li>
+        </ul>
+      </div>
+      <div class="ic-app-header__secondary-navigation">
+        <ul class="ic-app-header__menu-list">
+          <li class="menu-item ic-app-header__menu-list-item">
+            <button id="primaryNavToggle" class="ic-app-header__menu-list-link ic-app-header__menu-list-link--nav-toggle" aria-label="
+                Expand global navigation
+                " title="
+                Expand global navigation
+                ">
+              <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--navtoggle" version="1.1" x="0" y="0" width="40" height="32" viewBox="0 0 40 32" xml:space="preserve">
+  <path d="M39.5,30.28V2.48H37.18v27.8Zm-4.93-13.9L22.17,4,20.53,5.61l9.61,9.61H.5v2.31H30.14l-9.61,9.61,1.64,1.64Z"></path>
+</svg>
+
+            </button>
+          </li>
+        </ul>
+      </div>
+    <div id="global_nav_tray_container"><noscript data-reactid=".0"></noscript></div>
+  </header>
+
+
+  <div id="instructure_ajax_error_box">
+    <div style="text-align: right; background-color: #fff;"><a href="https://canvas.uw.edu/courses/1177926/pages/lesson-7?module_item_id=7889552#" class="close_instructure_ajax_error_box_link">Close</a></div>
+    <iframe id="instructure_ajax_error_result" src="./Lesson7_files/saved_resource.html" style="border: 0;" title="Error"></iframe>
+  </div>
+
+  
+
+  <div id="wrapper" class="ic-Layout-wrapper">
+      <div class="ic-app-nav-toggle-and-crumbs no-print">
+          <button type="button" id="courseMenuToggle" class="Button Button--link ic-app-course-nav-toggle" aria-live="polite" aria-label="Hide Courses Navigation Menu" title="Hide Courses Navigation Menu">
+            <i class="icon-hamburger" aria-hidden="true"></i>
+          </button>
+          <div class="ic-app-crumbs">
+        <nav id="breadcrumbs" role="navigation" aria-label="breadcrumbs"><ul><li class="home"><a href="https://canvas.uw.edu/"><span class="ellipsible">      <i class="icon-home" title="My Dashboard">
+        <span class="screenreader-only">My Dashboard</span>
+      </i>
+</span></a></li><li><a href="https://canvas.uw.edu/courses/1177926"><span class="ellipsible">CPROGRM 711 A</span></a></li><li><a href="https://canvas.uw.edu/courses/1177926/pages"><span class="ellipsible">Pages</span></a></li><li><span class="ellipsible">Lesson 7</span></li></ul></nav>
+        </div>
+      </div>
+    <div id="main" class="ic-Layout-columns">
+        <div class="ic-Layout-watermark"></div>
+        <div id="left-side" class="ic-app-course-menu list-view" style="display: block">
+              <span id="section-tabs-header-subtitle" class="ellipsis">Winter 2018</span>
+            <nav role="navigation" aria-label="Courses Navigation Menu"><ul id="section-tabs"><li class="section"><a href="https://canvas.uw.edu/courses/1177926" title="Home" class="home" tabindex="0">Home</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/announcements" title="Announcements" class="announcements" tabindex="0">Announcements</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/modules" title="Modules" class="modules" tabindex="0">Modules</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/discussion_topics" title="Discussions" class="discussions" tabindex="0">Discussions</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/grades" title="Grades" class="grades" tabindex="0">Grades</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/users" title="People" class="people" tabindex="0">People</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/external_tools/12299" title="UW Libraries" class="context_external_tool_12299" tabindex="0">UW Libraries</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1177926/external_tools/57145" title="Info &amp; Help" class="context_external_tool_57145" tabindex="0">Info &amp; Help</a></li></ul></nav>
+        </div>
+      <div id="not_right_side" class="ic-app-main-content">
+        <div id="content-wrapper" class="ic-Layout-contentWrapper">
+            
+
+          <div id="content" class="ic-Layout-contentMain" role="main">
+            
+
+  
+
+<div id="wiki_page_show">
+<div class="header-bar-outer-container">
+  <div class="header-bar-container sticky-toolbar" data-sticky="">
+    <div class="header-bar flex-container">
+      <div class="header-bar-left header-left-flex">
+        
+          
+        
+      </div>
+      <div class="header-bar-right header-right-flex">
+        
+          
+          
+            
+          
+        
+        
+          
+        
+        
+      </div>
+    </div>
+    <div class="page-changed-alert" role="alert" aria-atomic="true" aria-live="polite"></div>
+  </div>
+</div>
+
+
+<div class="show-content user_content clearfix enhanced">
+  <h1 class="page-title">Lesson 7</h1>
+  
+    <div id="level2">
+<h1>
+<img src="./Lesson7_files/preview" alt="L07.png" width="50" height="50" data-api-endpoint="https://canvas.uw.edu/api/v1/courses/1177926/files/44384295" data-api-returntype="File" style="max-width: 945px;">&nbsp;C++ Classes—Data and Member Functions—Part 2</h1>
+<h3>Overloading Functions</h3>
+<p>We've seen that C++ functions can be overloaded. That is, they can use the same name, in the same scope, if their signatures (number and types of parameters) are unique. Such information is used by the compiler to identify each function uniquely. Furthermore, we've learned that overloading is not restricted to non-member functions.</p>
+<p>Overloaded functions will be a part of our first look at polymorphism in C++. Let's begin by looking at a rather interesting set of such functions. They may be written either as member or non-member functions.</p>
+<h3>Operator Functions</h3>
+<p>A major goal of object-oriented programming is to create code that naturally represents problem space. The ability to provide operators that work in a natural and expected way with such objects makes the job easier. The C++ language supports such an ability by permitting built-in operators to be overloaded to work with class type operands.</p>
+<p>Overloaded operators are implemented as operator functions. Such a function can either be a class member function or a non-member function. In either case, an operator function must take at least one class type argument. The declaration and definition are syntactically the same as for other functions except the function name has the following form:</p>
+<pre>operatorX(args) { body }</pre>
+<p><code>X</code> is the operator symbol being overloaded <br><code>args</code>: as appropriate for implementation <br><code>body</code>: implements the function</p>
+<h3>Invocation</h3>
+<h4>Key Terms</h4>
+<ul>
+<li>smart pointer</li>
+<li>smart pointer operator</li>
+<li>friend</li>
+</ul>
+<p>Invocation of an operator function may take one of two forms:</p>
+<ul>
+<li>Infix expression syntax <br> If the <code>+</code> operator is overloaded,<br><code>A + B</code><br><code>A</code> and <code>B</code> can be member or non-member instances.</li>
+<li>Function call syntax <br> If the <code>+</code> operator is overloaded,<br><code>A.operator+ (B)</code><br> Note that <code>operator+</code> is the function name.</li>
+</ul>
+<h3>Rules</h3>
+<p>Because operator functions are invoked using the same syntax as the built-in functions, operator functions</p>
+<ul>
+<li>must have the same number of arguments as language defined versions;</li>
+<li>must have the same precedence as the built-in operators—this cannot be overridden;</li>
+<li>cannot have default parameters; and</li>
+<li>cannot override the predefined meaning.</li>
+</ul>
+<h3>Limitations</h3>
+<p>Of course, with rules, we need exceptions and limitations. Thus, because of the operator function syntax, the following caveats apply.</p>
+<h4>Certain User-Defined Operators Cannot Behave Analogously to Built-In Versions</h4>
+<p>The pre- and postfix operators (<code>++</code> and<code> --</code>) present a problem. We can easily tell <code>++i</code> from <code>i++</code>, and so can the compiler. Because of the syntax for the overloaded operators, however, neither of us can distinguish <code>operator++()</code> from <code>operator++()</code>. Which is prefix and which is postfix? We need a way to tell them apart.</p>
+<p>The designers of the language decided to distinguish the pre and post versions of these operators using the syntax that follows.</p>
+<p>Prefix version:</p>
+<pre>&nbsp;&nbsp;&nbsp; operator++() {}</pre>
+<p>Postfix version:</p>
+<pre>&nbsp;&nbsp;&nbsp; operator++(int) {}</pre>
+<p>This is clearly not what we would call good style—no, actually, let's put this another way: it's a hack to get around a problem. It's definitely not a good example of information hiding. The problem is directly in the public (inter)face.</p>
+<p>When we use the postfix version of such an operator, it is not necessary to provide some integer value as an argument. This syntax is merely a flag for the compiler to allow it to select the proper function when the operator is invoked.</p>
+<p>When the postfix version appears in code, the compiler says, "Ah-ha, I remember this thing, get the function with the int arg." (This is a direct quote, of course.)</p>
+<h4>Some Operators Cannot Be Overloaded.</h4>
+<p>The following operators cannot be overloaded:</p>
+<pre>.&nbsp;&nbsp;&nbsp; ?:&nbsp;&nbsp;&nbsp; ::&nbsp;&nbsp;&nbsp; *&nbsp;&nbsp;&nbsp; ,</pre>
+<p>We identify them respectively as the dot operator ("<code>.</code>"), the conditional operator ("<code>?:</code>"), the scope operator ("<code>::</code>"), the dereference operator ("<code>*</code>"), and the comma operator ("<code>,</code>").</p>
+<h4>Some Operators Must Be Member-Only Operators.</h4>
+<p>The following operators must be member-only operators:</p>
+<pre>=&nbsp;&nbsp;&nbsp; [ ]&nbsp;&nbsp;&nbsp; ( )&nbsp;&nbsp;&nbsp; -&gt;</pre>
+<p>We identify these respectively as the assignment operator ("<code>=</code>"), the index operator ("<code>[]</code>"), the function operator ("<code>()</code>"), and the member selector operator ("<code>-&gt;</code>").</p>
+<p>Let's now see how we can work such operators. We'll create the class Complex, the complex number class. When working with numbers, people expect to be able to perform various kinds of arithmetic operations on them. They also expect such operations to be applied in a familiar way. They expect to add two numbers by writing</p>
+<pre>C = A + B</pre>
+<p>not</p>
+<pre>comb(C,A,B)</pre>
+<p>which combines <code>A</code> and <code>B</code> and puts the answer into <code>C</code>.</p>
+<p>We want complex numbers to appear as the familiar reals. To be able to use complex numbers in the same way we do reals, we'll create a <code>+</code> operator that will take two complex numbers as operands so that we may add two complex numbers. We'll also define the pre- and postfix autoincrement operators that take a single complex operand. These latter two are interesting because of the associated semantics. The prefix operator must perform the increment operation, then return the operand. The postfix operator must do the opposite.</p>
+<p>A complex number has two parts: a real part and an imaginary part. We write these as</p>
+<pre>a + jb</pre>
+<p>Sorry, mathematicians. (They write "<code>a + ib</code>".) The variable <code>a</code> is the real part and <code>b</code> is the imaginary part. The <code>j</code> (or <code>i</code>) is the square root of -1; it identifies the imaginary part. (They always told us we couldn't take the square root of a negative number, but we can.)</p>
+<p>When we increment a real number in the lines</p>
+<pre>int z = 3;
+z++;</pre>
+<p>we expect z to have the value 4 (i.e., the autoincrement operator should add 1 to the value of z). What should we expect if z is complex? Since the number comprises a real and an imaginary part, it makes intuitive sense that the autoincrement and autodecrement operators would operate on both elements. This is the approach we've taken below.</p>
+<pre>// Classes Members - Operators Example
+
+class Complex
+{
+public:
+    Complex(int r = 0, int i =0 )
+        : myReal(r), myImaginary(i)
+    {
+    }
+
+    //Overload the + operator
+    Complex operator+(Complex a1)
+    {
+        return Complex(myReal + a1.myReal, myImaginary + a1.myImaginary);
+    }
+
+    //Overload the pre- and postfix
+    //  autoincrement operators
+
+    //Increment then return incremented value
+    Complex&amp; operator++(int)
+    {
+        myReal+=1, myImaginary+=1;
+        return *this;
+    }
+
+    //Increment then return a copy of
+    //  the original number
+    Complex operator++()
+    {
+        // not the best implementation
+        myReal+=1, myImaginary+=1;
+        return Complex(myReal-1, myImaginary-1);
+    }
+
+    int real()
+    {
+        return myReal;
+    }
+
+    int imaginary()
+    {
+        return myImaginary;
+    }
+
+private:
+    int myReal;
+    int myImaginary;
+};
+
+TEST(operatorOverloading, Class)
+{
+    Complex x(1,2), y(3);
+    Complex b;
+
+    // Use the function call syntax
+    Complex a = x.operator+(y);
+
+    CHECK_EQUAL(a.real(), 4);
+    CHECK_EQUAL(a.imaginary(), 2);
+
+    a++;
+
+    CHECK_EQUAL(a.real(), 5);
+    CHECK_EQUAL(a.imaginary(), 3);
+
+    b=++a;
+    CHECK_EQUAL(b.real(), 5);
+    CHECK_EQUAL(b.imaginary(), 3);
+
+    // Use the infix notation - the most common usage
+    b = x + y;
+    CHECK_EQUAL(b.real(), 4);
+    CHECK_EQUAL(b.imaginary(), 2);
+}</pre>
+<h3>Member versus Non-Member Implementation</h3>
+<p>We've mentioned several times that overloaded operator functions can be implemented either as member functions or non-member functions. The third limitation we listed constrains several of the operators to implementation as member-only functions. Other than flexibility, why should it make any difference?</p>
+<h3>Member Functions</h3>
+<p>With member implementation, one operand must be a member of the class overloading the operator. Specifically, that one must be the left operand. Because of the function call syntax, we can write</p>
+<pre>x.operator@();</pre>
+<p>Remember that each member function has a this pointer (which is of class type). If we try to apply the operator to an instance of a different class, we'll have a type mismatch. Beyond the type issue, the major advantage of member function operators is they can be invoked with one less operand, as follows:</p>
+<p><span class="bold">Unary</span></p>
+<pre>x.operator@()</pre>
+<blockquote>
+<code>x</code> is a class instance<br><code>@</code> is any arbitrary operator</blockquote>
+<span class="bold">Binary</span>
+<p><code>x.operator@(y)<br> x operator@ y</code></p>
+<blockquote>
+<code>x</code> is class instance <br><code>@</code> is any arbitrary operator</blockquote>
+<h3>Non-Member Functions</h3>
+<p>If the operator requires a left operand of a different type than the class overloading the operator, then we must use the non-member syntax and the operator function may need to be declared a friend if it requires access to protected or private data. We'll talk about friends shortly.</p>
+<p>The Stream class is one of the best examples of the need for non-member operator functions. When we overload the insertion (or extraction) operator, most of the time, the left operand is not a member of the overloading class, but rather a member of the Stream class—<code>cout</code>, for example. We may not think of it in such a way, but <code>cout</code> is an instance of a Stream class object.</p>
+<p><span class="bold">Unary</span></p>
+<pre>operator@(x)</pre>
+<p><span class="bold">Binary</span> <br> Function call syntax</p>
+<code>operator@(x,y)</code>
+<p><span class="bold">Infix syntax</span></p>
+<code>x operator@ y</code>
+<pre>// Classes Members - Operators Example
+// Member and Non Member Operators
+
+// Bring the names into namespace
+class Real;
+class Complex;
+
+// Define the operators using
+// non-member functions
+
+// Complex add
+Complex operator+(Real a1, Complex a2);
+
+class Real
+{
+public:
+    Real(int real = 0) : myReal(real)
+    {
+    }
+
+    Real operator+(Real a1)
+    {
+        return Real(myReal + a1.myReal);
+    }
+
+    // this cast overload allows Real to be used like an int
+    operator int() const
+    {
+        return myReal;
+    }
+
+    // friend declaration allow these global operator overload function
+    // to access Real's private data
+    friend Complex operator+(Complex a1, Real a2);
+    friend Real operator+(Real a1, int a2);
+
+private:
+    int myReal;
+};
+
+class Complex
+{
+public:
+    Complex(int real = 0, int imaginary = 0)
+        : myReal(real),
+        myImaginary(imaginary)
+    {
+    }
+
+    // Overload the pre- and postfix autoincrement operators
+    // Increment then return incremented value
+    Complex&amp; operator++(int)
+    {
+        myReal+=1, myImaginary+=1;
+        return *this;
+    }
+
+    //Increment then return a copy of the original number
+    Complex operator++ ()
+    {
+        myReal+=1, myImaginary+=1;
+        return Complex(myReal-1, myImaginary-1);
+    }
+
+    int real() const
+    {
+        return myReal;
+    }
+
+    int imaginary() const
+    {
+        return myImaginary;
+    }
+
+private:
+    // Declare the real and imaginary parts
+    int myImaginary;
+    int myReal;
+};
+
+TEST(MoreComplex, OperatorOverloading)
+{
+    // Declare some real numbers
+    Real a(10), b(17), c;
+
+    // Declare some complex numbers
+    Complex d(11, 25), e;
+
+    // Add two reals
+    c = b + 12;
+    CHECK_EQUAL(29, c);
+
+    //Add a real and a complex...instance a
+    //  is not a member of the Complex class,
+    //therefore we must have a non-member function
+    e = a + d;
+    CHECK_EQUAL(21, e.real());
+    CHECK_EQUAL(25, e.imaginary());
+
+    e = d + a;
+    CHECK_EQUAL(21, e.real());
+    CHECK_EQUAL(25, e.imaginary());
+}
+
+// Define the operator functions
+Complex operator+(Real a1, Complex a2)
+{
+    return Complex (a1 + a2.real(), a2.imaginary());
+}
+
+Complex operator+(Complex a1, Real a2)
+{
+    return Complex(a1.real() + a2.myReal, a1.imaginary());
+}
+
+Real operator+(Real a1, int a2)
+{
+    return Real(a1.myReal + a2);
+}</pre>
+<h2>Operators in Action</h2>
+<p>Let's now look at several different overloaded operators. We'll begin with what is often called the <span class="keyterm">smart pointer</span>. We use the smart pointer to add more control and richer semantics to the traditional built-in pointer.</p>
+<h3>The Smart Pointer: <code>operator-&gt;()</code>
+</h3>
+<p>A smart pointer is the overloaded operator function <code>operator-&gt;()</code>. Normally the <code>-&gt;</code> is a binary operator in which the left operand is a pointer and a class or structure member name is the right operand. When the left operand is an <span class="bold">object</span> rather than a <span class="bold">pointer to an object,</span> the notation invokes the unary member function <code>operator-&gt;()</code>. The expression <code>object -&gt; member</code> is interpreted as <code>(object.operator-&gt;()) -&gt; member</code>. The function <code>operator-&gt;() </code>must return a valid object pointer, object, or reference to an object that has an overloaded <code>-&gt;</code> operator so we can determine what is being pointed to.</p>
+<p>The expression <code>object -&gt;member</code> is often called the <span class="keyterm">smart pointer operator</span>. Like several other overloaded operators, smart pointers must be member functions. They are not really pointers; they simply have pointer-like semantics that allow us to provide a functionality that is more intelligent, richer, and more robust than built-in dumb pointers.</p>
+<p>You'll study smart pointers in much greater detail in the intermediate and advanced C++ courses. For now, let's see how they work. The syntax is simple:</p>
+<pre>ClassName* operator-&gt;()</pre>
+<p>In addition to containing the real pointer, the smart pointer will also overload operator-&gt; to handle dereferencing.</p>
+<pre>// Classes Members - Operators Example
+// Smart Pointers
+
+class Simple
+{
+public:
+    Simple(int aValue)
+        : myValue(aValue)
+    {
+    }
+
+    int getValue() const
+    {
+        return myValue;
+    }
+
+private:
+    int myValue;
+};
+
+// Declare a second class with a smart pointer
+class SimplePtr
+{
+public:
+    SimplePtr(Simple* aPtr = 0)
+        :sPtr(aPtr)
+    {
+    }
+
+    //The pointer function performs an operation
+    //then returns a pointer to aSimpler
+    Simple* operator-&gt;();
+
+private:
+    Simple* sPtr;
+};
+
+Simple* SimplePtr::operator-&gt;()
+{
+    // If the pointer is null - then we return a null.
+    // We could check for null and do something different.
+    // But, in this case  we want the same behavior as a raw pointer.
+    // That is, if the caller attempts to use the null pointer
+    // an access violation occurs.
+    return sPtr;
+}
+
+TEST(pointer, operatorOverload)
+{
+    SimplePtr aPtr;
+
+#if 0
+    // This is an access violation - dereferencing null pointer
+    aPtr-&gt;getValue();
+#endif
+
+    Simple b(30);
+
+    // Why does this work?
+    //
+    // We make use of the compiler generated assignment operator for SimplePtr.
+    // So we can assign the value of one instance of SimplePtr to another.
+    // 
+    // But, we are not done yet because &amp;b is not an instance of SimplePtr.
+    // Here the compiler helps us some more. It knows we have a (compiler generated)
+    // assignment operator for SimplePtr. The compiler then looks to see if it has
+    // a way to convert &amp;b to a SimplePtr. The compiler finds SimplePtr has
+    // a constructor that takes a single arg, that happens of type Simple*. &amp;b
+    // type is Simple*. So the compiler implicitly constructs a SimplePtr from
+    // using &amp;b as the constructor argument.
+    //
+    // If we don't want the compiler to implicitly construct instances for
+    // us, we can use the keyword explicit on the constructor. This prevents
+    // the compiler from implicit constructions. Note explicit is only
+    // meaningful for constructors with a single argument.
+    //
+    // In the SimplePtr class declaration try changing this line:
+    //    SimplePtr(Simple* aPtr = 0)
+    //
+    // to
+    //
+    //    explicit SimplePtr(Simple* aPtr = 0)
+    //
+    // then try to compile
+    //
+    aPtr = &amp;b;
+
+    CHECK_EQUAL(30, aPtr-&gt;getValue());
+}</pre>
+<h3>The Assignment Operator: <code>operator=()</code>
+</h3>
+<p>In addition to the constructor(s) and destructor, the assignment operator and the copy constructor (which we'll study next) are two members that should be in every class. The assignment operator is invoked when one initialized object is to be assigned to a second initialized object. When invoked, the operator must first check for assignment to self. If so, it must return itself. When implemented, the assignment operator must also serve as a destructor for the object being assigned to. That is, the object being assigned to already points to an initialized space, and before that pointer is overwritten, the space must be returned to the heap. If we fail to do so, we will lose the ability to address the old space and thereby potentially create some significant problems. Such problems, the least of which is a memory leak, may remain hidden for quite a while. The syntax is as follows:</p>
+<pre>ClassName&amp; operator=()</pre>
+<p>The operator can have a return value; the most common is <code>*this</code>. Such a return allows for assignments of the form</p>
+<pre>A = B = C...</pre>
+<p>The assignment operator is not called for the declarations such as</p>
+<pre>ClassName object1 = object2;</pre>
+<p>In this case, object 1 does not exist—it is being created.</p>
+<p>Let's look at an example. A familiar request in C and C++ is "can I assign one array to another?" The familiar answer is "no." Let's fix that.</p>
+<pre>// Classes Members - Operators Example
+// Assignment Operator
+
+// Define the class Array with an overloaded
+// assignment operator
+
+class Array
+{
+public:
+    Array(int nElements);
+    Array(const Array&amp; array);
+
+    Array::~Array()
+    {
+        delete[] myArray;
+
+        // You might be tempted to write:
+        // mySize = 0
+        // here.
+        // There is no need. Once the class is destroyed, there
+        // is no way to access the member data, thus no need to
+        // initialize any member data to 0.
+    }
+
+#if 0
+    Array&amp; operator=(const Array&amp; a);
+#else
+    Array&amp; operator=(Array a);
+#endif
+
+    // Since we're modeling an array - overload the indexing operators
+    // to support conventional element access
+
+    // This one is for const arrays
+    const int&amp; operator[](std::size_t position) const
+    {
+        // we could check the array bound here and protect against accessing past the array end
+        return myArray[position];
+    }
+
+    // this one is for non-const arrays
+    int&amp; operator[](std::size_t position)
+    {
+        // we could check the array bound here and protect against it
+        return myArray[position];
+    }
+
+    int getSize() const
+    {
+        return mySize;
+    }
+
+    void swap(Array&amp; x)
+    {
+        std::swap(mySize, x.mySize);
+        std::swap(myArray, x.myArray);
+    }
+
+private:
+    int mySize;
+    int* myArray;
+};
+
+Array::Array(int nElements)
+: myArray(new int[nElements])
+{
+    for (int i = 0; i &lt; nElements; i++)
+    {
+        myArray[i] = 0;
+    }
+
+    mySize = nElements;
+    return;
+}
+
+Array::Array(const Array&amp; src)
+    : myArray(new int[src.mySize])
+    {
+        for (int i = 0; i &lt; src.mySize; i++)
+        {
+            myArray[i] = src.myArray[i];
+        }
+
+        mySize = src.mySize;
+        return;
+    }
+
+#if 0
+// Conventional assignment operator implementation
+// Why is the argument to the function specified as const?
+Array&amp; Array::operator=(const Array&amp; a)
+{
+    //Check for assignment to self
+    if (&amp;a != this)
+    {
+        mySize = a.mySize;
+
+        // note the delete [] operator
+        delete[] myArray;
+
+        myArray = new int[mySize];
+
+        for (int i = 0; i &lt; mySize; i++)
+        {
+            myArray[i] = a.myArray[i];
+        }
+    }
+
+    return *this;
+}
+#else
+// Uses the copy and swap idiom - better assignment operator implementation
+// http://stackoverflow.com/questions/3279543/what-is-the-copy-and-swap-idiom
+Array&amp; Array::operator=(Array a)
+{
+    swap(a);
+    return *this;
+}
+#endif
+
+TEST(Assignment, Class)
+{
+    Array a1(4);
+    Array b1(5);
+
+    // Enter some values
+    for (int i = 0; i &lt; 4; i++)
+    {
+        a1[i] = i;
+        b1[i] = i + 1;
+    }
+
+    CHECK_EQUAL(4, a1.getSize());
+    CHECK_EQUAL(0, a1[0]);
+    CHECK_EQUAL(1, a1[1]);
+    CHECK_EQUAL(2, a1[2]);
+    CHECK_EQUAL(3, a1[3]);
+
+    b1[4] = 5;
+    CHECK_EQUAL(5, b1.getSize());
+    CHECK_EQUAL(1, b1[0]);
+    CHECK_EQUAL(2, b1[1]);
+    CHECK_EQUAL(3, b1[2]);
+    CHECK_EQUAL(4, b1[3]);
+    CHECK_EQUAL(5, b1[4]);
+
+    a1 = b1;
+    CHECK_EQUAL(5, a1.getSize());
+    CHECK_EQUAL(1, a1[0]);
+    CHECK_EQUAL(2, a1[1]);
+    CHECK_EQUAL(3, a1[2]);
+    CHECK_EQUAL(4, a1[3]);
+    CHECK_EQUAL(5, a1[4]);
+}</pre>
+<h2>The Copy Constructor</h2>
+<p>There are many occasions when a copy of an object is needed. For example, when an object is passed by value, as in</p>
+<p><code>x.func(y)</code></p>
+<p>a copy of <code>y</code> is made and passed. When an object is returned by value, as in the following,</p>
+<pre>int func(int y)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;do stuff to y
+&nbsp;&nbsp;&nbsp;&nbsp;return y;
+}</pre>
+<p>a copy of <code>y</code> is made and returned.</p>
+<p>When one object is initialized by another object, as in</p>
+<pre>x1 = x2</pre>
+<p>a copy of <code>x2</code> is made. If an object is assigned to another object, as in</p>
+<pre>x1 = x2</pre>
+<p><code>x2</code> is copied to <code>x1</code>, and <code>x1</code> is destroyed.</p>
+<p>Copying and initialization are handled in C++ using two functions, the copy constructor and the operator function <code>operator=()</code>. We've just talked about the latter; now we'll discuss the former. The syntax for the copy constructor is as follows:</p>
+<pre>class X(const class X&amp;);</pre>
+<p>Why is the argument <code>const</code>?</p>
+<p>The copy constructor is a special kind of constructor. It takes as an argument a reference to an object of the same class. It then performs initialization on the newly created object as constructors are supposed to do. The copy constructor is used by the compiler to copy objects by value, into a function or out of a function, when an object is returned by value.</p>
+<p>If a copy constructor is not defined, the compiler will create one for you. The compiler performs a shallow bitwise copy. In many cases the compiler generated copy constructor is fine. But, if an object to be copied owns any dynamic memory, the compiler simply creates a pointer to the memory chunk and places it in the copy. When the copy goes out of scope, the object (and the pointer . . . and the memory) is deleted. When the original now tries to reference non-existent memory . . . oops.</p>
+<p>If you need to define your own copy constructor, then you likely will need to define your own assignment operator. These two operators most always go together.</p>
+<p>Let's check out a copy constructor.</p>
+<pre>// Classes Membership - Operators Example
+// Copy Constructor
+
+class A
+{
+public:
+    A(int aValue)
+        : value(aValue)
+    {
+    }
+
+    // Define the copy constructor
+    // In this case the compiler generated copy constructor works as well as
+    // our hand coded copy constructor
+    A(const A&amp; a)
+    {
+        value = a.value;
+    }
+
+    int getValue() const
+    {
+        return value;
+    }
+
+private:
+    int value;
+};
+
+// The A instance is passed by value into funct. Then it is again returned by value
+A funct(A a)
+{
+    return a;
+}
+
+TEST(CopyConstructor, Class)
+{
+    A a(3);
+
+    // Pass it by value to the function
+    A aReturnedByValue = funct(a);
+
+    CHECK_EQUAL(3, aReturnedByValue.getValue());
+}</pre>
+<h2>Friends</h2>
+<p>As we've seen before a class definition provides three levels of access to data and function members: public, protected, and private. Using such access specifiers, we permit general, inhertiance, or no access to class members. By specifying such segregation, we can control access to function and data members. Should such restrictions be rigid? Are there times when we should permit more liberal access? These are good questions.</p>
+<p class="title"><span class="bold">Figure 7.1—Three Levels of Access</span></p>
+<p class="title"><span class="bold"> <img src="./Lesson7_files/preview(1)" alt="figure 7.1" width="217" height="72" data-api-endpoint="https://canvas.uw.edu/api/v1/courses/1177926/files/44384297" data-api-returntype="File" style="max-width: 945px;"></span></p>
+<p>We saw that overloaded operators, with non-member left operands, must be declared as non-member functions. Such functions will have a problem if they must access private data members of the operand.</p>
+<p>C++ provides a means for more liberal access to non-public members. Under a specified set of conditions, a non-member may be identified as a <span class="keyterm">friend</span> of the class. A class friend is designated by the keyword <code>friend</code> followed by the class name, as follows:</p>
+<pre>friend YourClass;</pre>
+<p>Note, the name of the friend is not in the scope of the class.</p>
+<p>The designation can occur anywhere in class definition; it is not affected by access specifier. Both convention and the goal of making the design intent clear and obvious suggest placing all friend designations in the front of the class. Once an object is designated as a friend, it has access to all non-public members as if they were public. Access is unidirectional, however. If <code>B</code> is designated as friend of <code>A</code>, <code>B</code> can access <code>A</code>'s non-public members, but <code>A</code> cannot access <code>B</code>'s.</p>
+<pre>// Classes Members - Friends Example
+// Classes as friends
+
+class Number
+{
+    // The class Adder is declared a friend
+    friend class Adder;
+
+public:
+    Number() {number = 10;}
+    int getNumber() {return number;}
+
+private:
+    int number;
+};
+
+class Adder
+{
+public:
+    // class Adder can access
+    // the private data of instances of number
+    //
+    // add is declared static is it does not access
+    // member data.
+    static int add(const Number&amp; aNumber)
+    {
+        return aNumber.number + 10;
+    }
+};
+
+TEST(friends, Class)
+{
+    Number n1;
+    CHECK_EQUAL(10, n1.getNumber());
+    CHECK_EQUAL(20, Adder::add(n1));
+}</pre>
+<h3>Who Can Be Your Friend?</h3>
+<p>A friend can be one of the following:</p>
+<ul>
+<li>Class—for example, <code>friend class X</code>
+</li>
+<li>A particular function—such as <code>friend int sub (int y);</code><br> The function <code>sub</code> will not be a function member of the class. If it has a <code>this</code> pointer, it is for the containing class. Such a designation is useful when defining operator functions.</li>
+<li>A particular class member—for example,<code>friend int Mult::get();</code>
+</li>
+</ul>
+<pre>// Functions as friends
+
+class AnotherNumber
+{
+    // The function add is declared to be a friend of
+    // the class AnotherNumber.
+    friend int add(const AnotherNumber&amp; aNumber);
+
+public:
+    AnotherNumber() : number(20)
+    {
+    }
+
+    int getNumber() const
+    {
+        return number;
+    }
+
+private:
+    int number;
+};
+
+int add(const AnotherNumber&amp; aNumber)
+{
+    // add has access to the private data of aNumber
+    return aNumber.number + 10;
+}
+
+TEST(MoreFriends, Class)
+{
+    AnotherNumber n1;
+
+    CHECK_EQUAL(20, n1.getNumber());
+    CHECK_EQUAL(30, add(n1));
+}</pre>
+<h3>Caveats and Problems</h3>
+<ul>
+<li>Friends can have access to everything. This defeats data hiding, so use them carefully.</li>
+<li>Friend declarations introduce extra coupling between classes.</li>
+<li>Friends permit changing of internal state from the outside. We should always use member functions, not friends, to change state.</li>
+</ul>
+<p>The major use of friends is to provide more efficient access to data members than the function call and to accommodate operator functions with arbitrary left operands. Friend should be rarely (if ever) used.</p>
+<h2>Summary</h2>
+<p>In this lesson, we concluded our second look inside the C++ class. We began with overloaded member functions and from these developed operator functions. We then studied two important member functions—the copy constructor and the assignment operator—and learned why they're necessary. We concluded with a look at the friend designator, a means to get around non-public access specifiers.</p>
+<h2>Practice&nbsp;Questions</h2>
+<p>Test your understanding of the concepts in Lesson 6 by working through the&nbsp;following practice questions, then check your answers with <a class="" title="Answers to Practice Questions for Lesson 7" href="https://canvas.uw.edu/courses/1177926/pages/answers-to-practice-questions-for-lesson-7" data-api-endpoint="https://canvas.uw.edu/api/v1/courses/1177926/pages/answers-to-practice-questions-for-lesson-7" data-api-returntype="Page">Answers to Practice Questions for Lesson 7</a>.</p>
+<ol>
+<li>Can we overload class function members?</li>
+<li>How do I overload a C++ operator?</li>
+<li>What's the difference between an operator overloaded as a class member function versus a non-member function?</li>
+<li>So, if you're so smart, what's a smart pointer?</li>
+<li>Do I really need a copy constructor?</li>
+<li>If I declare class A as a friend of my class, then I can just go and access its stuff any time I want to, right?</li>
+<li>By putting the friend declaration in the private section, that friend can only use my access functions to get to my private data members, right?</li>
+</ol>
+</div>
+  
+</div>
+<div style=""><div class="module-sequence-padding"></div>
+<div class="module-sequence-footer" role="navigation" aria-label="Module Navigation">
+  <div class="module-sequence-footer-content">
+    
+      <a href="https://canvas.uw.edu/courses/1177926/modules/items/7889551" role="button" class="Button module-sequence-footer-button--previous" data-tooltip="right" data-html-tooltip-title="&lt;i class=&#39;icon-document&#39;&gt;&lt;/i&gt; Lesson 7 Overview and Materials" aria-describedby="msf0-previous-desc">
+        <i class="icon-mini-arrow-left"></i>Previous
+        <span id="msf0-previous-desc" class="hidden" hidden="">Previous: Lesson 7 Overview and Materials</span>
+      </a>
+    
+
+    
+      <span class="module-sequence-footer-button--next" data-tooltip="left" data-html-tooltip-title="&lt;i class=&#39;icon-assignment&#39;&gt;&lt;/i&gt; Assignment 7">
+        <a href="https://canvas.uw.edu/courses/1177926/modules/items/7889553" role="button" class="Button" aria-describedby="msf0-next-desc">
+          Next<i class="icon-mini-arrow-right"></i>
+          <span id="msf0-next-desc" class="hidden" hidden="">Next: Assignment 7</span>
+        </a>
+      </span>
+    
+  </div>
+</div>
+</div></div>
+
+          </div>
+        </div>
+        <div id="right-side-wrapper" class="ic-app-main-content__secondary">
+          <aside id="right-side" role="complementary">
+            
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <div style="display:none;"><!-- Everything inside of this should always stay hidden -->
+        <div id="page_view_id">e7416357-d486-4f5c-86e4-378e64867488</div>
+    </div>
+    
+<div id="cant_record_dialog" style="display: none;">
+  <div>
+    In order to create video or audio recordings your computer needs to be 
+    webcam-enabled.  If you don't have a webcam on your computer, you can still
+    record audio-only messages by first installing the Google Video Chat
+    plugin.
+  </div>
+  <div style="text-align: center; font-size: 1.5em; margin: 10px;">
+    <a href="http://www.google.com/chat/video" target="_blank" rel="noopener" class="btn">Install the Video Plugin</a>
+  </div>
+  <div class="links" style="text-align: right; font-size: 0.8em; display: none;">
+    <a href="https://canvas.uw.edu/courses/1177926/pages/lesson-7?module_item_id=7889552#" class="cant_record_link">Don't have a webcam?</a>
+  </div>
+</div>
+
+  <div id="aria_alerts" class="hide-text affix" role="alert" aria-live="assertive"></div>
+  <div id="StudentTray__Container"></div>
+  
+
+<script>
+  INST = {"environment":"production","allowMediaComments":true,"kalturaSettings":{"domain":"nv.instructuremedia.com","resource_domain":"nv.instructuremedia.com","rtmp_domain":"fms-prod.instructuremedia.com","partner_id":"9","subpartner_id":"0","player_ui_conf":"0","kcw_ui_conf":"0","upload_ui_conf":"0","max_file_size_bytes":534773760,"do_analytics":false,"hide_rte_button":false,"js_uploader":true},"googleAnalyticsAccount":"UA-9138420-1","disableScribdPreviews":true,"logPageViews":true,"maxVisibleEditorButtons":3,"editorButtons":[{"name":"","id":21130,"url":"https://uw.hosted.panopto.com/Panopto/Pages/Sessions/embeddedupload.aspx","icon_url":"https://uw.hosted.panopto.com/Panopto/images/panopto_logo_globe.png","canvas_icon_class":null,"width":900,"height":700},{"name":"Modalis","id":52765,"url":"https://uw.modalis.io/lti","icon_url":"https://uw.modalis.io/assets/richicon.png","canvas_icon_class":null,"width":800,"height":600}]};
+  ENV = {"ASSET_HOST":"https://du11hjcvx0uqb.cloudfront.net","active_brand_config_json_url":"https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/2b2842738c86c4f2032e430bd0445cfc/variables-750d72b9d3e5d522f965bf904110c132.json","url_to_what_gets_loaded_inside_the_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/2b2842738c86c4f2032e430bd0445cfc/variables-750d72b9d3e5d522f965bf904110c132.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_normal_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-69b1ec0363.css"],"url_for_high_contrast_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/default/variables-high_contrast-750d72b9d3e5d522f965bf904110c132.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_high_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-8f3f624632.css"],"current_user_id":"3757111","current_user":{"id":"3757111","display_name":"Clayton Wong","avatar_image_url":"https://canvas.uw.edu/images/thumbnails/46487823/mSs2TjTESYscSzrackhgoJvAT79xbNchamHPrSec","html_url":"https://canvas.uw.edu/about/3757111"},"current_user_roles":["user","student"],"current_user_disabled_inbox":false,"files_domain":"cluster10-files.instructure.com","DOMAIN_ROOT_ACCOUNT_ID":100000000083919,"k12":false,"use_responsive_layout":false,"help_link_name":"Help","help_link_icon":"help","use_high_contrast":false,"LTI_LAUNCH_FRAME_ALLOWANCES":["geolocation *","microphone *","camera *","midi *","encrypted-media *"],"SETTINGS":{"open_registration":false,"eportfolios_enabled":true,"collapse_global_nav":true,"show_feedback_link":true,"enable_profiles":true},"page_view_update_url":"/page_views/e7416357-d486-4f5c-86e4-378e64867488?page_view_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpIjoiZTc0MTYzNTctZDQ4Ni00ZjVjLTg2ZTQtMzc4ZTY0ODY3NDg4IiwidSI6MTAwMDAwMDAzNzU3MTExLCJjIjoiMjAxOC0wMy0wOVQyMzoyMjoyNy4wNVoifQ.DR_8pkpvWlvhVkw5I7hL-xWhtpZKukK3sajHn_eCGc8","context_asset_string":"course_1177926","ping_url":"https://canvas.uw.edu/api/v1/courses/1177926/ping","TIMEZONE":"America/Los_Angeles","CONTEXT_TIMEZONE":"America/Los_Angeles","GRAPHQL_ENABLED":true,"LOCALE":"en","BIGEASY_LOCALE":"en_US","FULLCALENDAR_LOCALE":"en","MOMENT_LOCALE":"en","WIKI_RIGHTS":{"read":true},"PAGE_RIGHTS":{"read":true},"DEFAULT_EDITING_ROLES":"teachers","WIKI_PAGES_PATH":"/courses/1177926/pages","WIKI_PAGE":{"title":"Lesson 7","created_at":"2017-10-18T21:04:15Z","url":"lesson-7","editing_roles":"teachers","page_id":"2573103","published":true,"hide_from_students":false,"front_page":false,"html_url":"https://canvas.uw.edu/courses/1177926/pages/lesson-7","updated_at":"2017-10-18T21:04:15Z","locked_for_user":false,"body":"\u003cdiv id=\"level2\"\u003e\r\n\u003ch1\u003e\n\u003cimg src=\"https://canvas.uw.edu/courses/1177926/files/44384295/preview\" alt=\"L07.png\" width=\"50\" height=\"50\" data-api-endpoint=\"https://canvas.uw.edu/api/v1/courses/1177926/files/44384295\" data-api-returntype=\"File\"\u003e C++ Classes—Data and Member Functions—Part 2\u003c/h1\u003e\r\n\u003ch3\u003eOverloading Functions\u003c/h3\u003e\r\n\u003cp\u003eWe've seen that C++ functions can be overloaded. That is, they can use the same name, in the same scope, if their signatures (number and types of parameters) are unique. Such information is used by the compiler to identify each function uniquely. Furthermore, we've learned that overloading is not restricted to non-member functions.\u003c/p\u003e\r\n\u003cp\u003eOverloaded functions will be a part of our first look at polymorphism in C++. Let's begin by looking at a rather interesting set of such functions. They may be written either as member or non-member functions.\u003c/p\u003e\r\n\u003ch3\u003eOperator Functions\u003c/h3\u003e\r\n\u003cp\u003eA major goal of object-oriented programming is to create code that naturally represents problem space. The ability to provide operators that work in a natural and expected way with such objects makes the job easier. The C++ language supports such an ability by permitting built-in operators to be overloaded to work with class type operands.\u003c/p\u003e\r\n\u003cp\u003eOverloaded operators are implemented as operator functions. Such a function can either be a class member function or a non-member function. In either case, an operator function must take at least one class type argument. The declaration and definition are syntactically the same as for other functions except the function name has the following form:\u003c/p\u003e\r\n\u003cpre\u003eoperatorX(args) { body }\u003c/pre\u003e\r\n\u003cp\u003e\u003ccode\u003eX\u003c/code\u003e is the operator symbol being overloaded \u003cbr\u003e\u003ccode\u003eargs\u003c/code\u003e: as appropriate for implementation \u003cbr\u003e\u003ccode\u003ebody\u003c/code\u003e: implements the function\u003c/p\u003e\r\n\u003ch3\u003eInvocation\u003c/h3\u003e\r\n\u003ch4\u003eKey Terms\u003c/h4\u003e\r\n\u003cul\u003e\n\u003cli\u003esmart pointer\u003c/li\u003e\r\n\u003cli\u003esmart pointer operator\u003c/li\u003e\r\n\u003cli\u003efriend\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003cp\u003eInvocation of an operator function may take one of two forms:\u003c/p\u003e\r\n\u003cul\u003e\n\u003cli\u003eInfix expression syntax \u003cbr\u003e If the \u003ccode\u003e+\u003c/code\u003e operator is overloaded,\u003cbr\u003e\u003ccode\u003eA + B\u003c/code\u003e\u003cbr\u003e\u003ccode\u003eA\u003c/code\u003e and \u003ccode\u003eB\u003c/code\u003e can be member or non-member instances.\u003c/li\u003e\r\n\u003cli\u003eFunction call syntax \u003cbr\u003e If the \u003ccode\u003e+\u003c/code\u003e operator is overloaded,\u003cbr\u003e\u003ccode\u003eA.operator+ (B)\u003c/code\u003e\u003cbr\u003e Note that \u003ccode\u003eoperator+\u003c/code\u003e is the function name.\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003ch3\u003eRules\u003c/h3\u003e\r\n\u003cp\u003eBecause operator functions are invoked using the same syntax as the built-in functions, operator functions\u003c/p\u003e\r\n\u003cul\u003e\n\u003cli\u003emust have the same number of arguments as language defined versions;\u003c/li\u003e\r\n\u003cli\u003emust have the same precedence as the built-in operators—this cannot be overridden;\u003c/li\u003e\r\n\u003cli\u003ecannot have default parameters; and\u003c/li\u003e\r\n\u003cli\u003ecannot override the predefined meaning.\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003ch3\u003eLimitations\u003c/h3\u003e\r\n\u003cp\u003eOf course, with rules, we need exceptions and limitations. Thus, because of the operator function syntax, the following caveats apply.\u003c/p\u003e\r\n\u003ch4\u003eCertain User-Defined Operators Cannot Behave Analogously to Built-In Versions\u003c/h4\u003e\r\n\u003cp\u003eThe pre- and postfix operators (\u003ccode\u003e++\u003c/code\u003e and\u003ccode\u003e --\u003c/code\u003e) present a problem. We can easily tell \u003ccode\u003e++i\u003c/code\u003e from \u003ccode\u003ei++\u003c/code\u003e, and so can the compiler. Because of the syntax for the overloaded operators, however, neither of us can distinguish \u003ccode\u003eoperator++()\u003c/code\u003e from \u003ccode\u003eoperator++()\u003c/code\u003e. Which is prefix and which is postfix? We need a way to tell them apart.\u003c/p\u003e\r\n\u003cp\u003eThe designers of the language decided to distinguish the pre and post versions of these operators using the syntax that follows.\u003c/p\u003e\r\n\u003cp\u003ePrefix version:\u003c/p\u003e\r\n\u003cpre\u003e    operator++() {}\u003c/pre\u003e\r\n\u003cp\u003ePostfix version:\u003c/p\u003e\r\n\u003cpre\u003e    operator++(int) {}\u003c/pre\u003e\r\n\u003cp\u003eThis is clearly not what we would call good style—no, actually, let's put this another way: it's a hack to get around a problem. It's definitely not a good example of information hiding. The problem is directly in the public (inter)face.\u003c/p\u003e\r\n\u003cp\u003eWhen we use the postfix version of such an operator, it is not necessary to provide some integer value as an argument. This syntax is merely a flag for the compiler to allow it to select the proper function when the operator is invoked.\u003c/p\u003e\r\n\u003cp\u003eWhen the postfix version appears in code, the compiler says, \"Ah-ha, I remember this thing, get the function with the int arg.\" (This is a direct quote, of course.)\u003c/p\u003e\r\n\u003ch4\u003eSome Operators Cannot Be Overloaded.\u003c/h4\u003e\r\n\u003cp\u003eThe following operators cannot be overloaded:\u003c/p\u003e\r\n\u003cpre\u003e.    ?:    ::    *    ,\u003c/pre\u003e\r\n\u003cp\u003eWe identify them respectively as the dot operator (\"\u003ccode\u003e.\u003c/code\u003e\"), the conditional operator (\"\u003ccode\u003e?:\u003c/code\u003e\"), the scope operator (\"\u003ccode\u003e::\u003c/code\u003e\"), the dereference operator (\"\u003ccode\u003e*\u003c/code\u003e\"), and the comma operator (\"\u003ccode\u003e,\u003c/code\u003e\").\u003c/p\u003e\r\n\u003ch4\u003eSome Operators Must Be Member-Only Operators.\u003c/h4\u003e\r\n\u003cp\u003eThe following operators must be member-only operators:\u003c/p\u003e\r\n\u003cpre\u003e=    [ ]    ( )    -\u0026gt;\u003c/pre\u003e\r\n\u003cp\u003eWe identify these respectively as the assignment operator (\"\u003ccode\u003e=\u003c/code\u003e\"), the index operator (\"\u003ccode\u003e[]\u003c/code\u003e\"), the function operator (\"\u003ccode\u003e()\u003c/code\u003e\"), and the member selector operator (\"\u003ccode\u003e-\u0026gt;\u003c/code\u003e\").\u003c/p\u003e\r\n\u003cp\u003eLet's now see how we can work such operators. We'll create the class Complex, the complex number class. When working with numbers, people expect to be able to perform various kinds of arithmetic operations on them. They also expect such operations to be applied in a familiar way. They expect to add two numbers by writing\u003c/p\u003e\r\n\u003cpre\u003eC = A + B\u003c/pre\u003e\r\n\u003cp\u003enot\u003c/p\u003e\r\n\u003cpre\u003ecomb(C,A,B)\u003c/pre\u003e\r\n\u003cp\u003ewhich combines \u003ccode\u003eA\u003c/code\u003e and \u003ccode\u003eB\u003c/code\u003e and puts the answer into \u003ccode\u003eC\u003c/code\u003e.\u003c/p\u003e\r\n\u003cp\u003eWe want complex numbers to appear as the familiar reals. To be able to use complex numbers in the same way we do reals, we'll create a \u003ccode\u003e+\u003c/code\u003e operator that will take two complex numbers as operands so that we may add two complex numbers. We'll also define the pre- and postfix autoincrement operators that take a single complex operand. These latter two are interesting because of the associated semantics. The prefix operator must perform the increment operation, then return the operand. The postfix operator must do the opposite.\u003c/p\u003e\r\n\u003cp\u003eA complex number has two parts: a real part and an imaginary part. We write these as\u003c/p\u003e\r\n\u003cpre\u003ea + jb\u003c/pre\u003e\r\n\u003cp\u003eSorry, mathematicians. (They write \"\u003ccode\u003ea + ib\u003c/code\u003e\".) The variable \u003ccode\u003ea\u003c/code\u003e is the real part and \u003ccode\u003eb\u003c/code\u003e is the imaginary part. The \u003ccode\u003ej\u003c/code\u003e (or \u003ccode\u003ei\u003c/code\u003e) is the square root of -1; it identifies the imaginary part. (They always told us we couldn't take the square root of a negative number, but we can.)\u003c/p\u003e\r\n\u003cp\u003eWhen we increment a real number in the lines\u003c/p\u003e\r\n\u003cpre\u003eint z = 3;\r\nz++;\u003c/pre\u003e\r\n\u003cp\u003ewe expect z to have the value 4 (i.e., the autoincrement operator should add 1 to the value of z). What should we expect if z is complex? Since the number comprises a real and an imaginary part, it makes intuitive sense that the autoincrement and autodecrement operators would operate on both elements. This is the approach we've taken below.\u003c/p\u003e\r\n\u003cpre\u003e// Classes Members - Operators Example\r\n\r\nclass Complex\r\n{\r\npublic:\r\n    Complex(int r = 0, int i =0 )\r\n        : myReal(r), myImaginary(i)\r\n    {\r\n    }\r\n\r\n    //Overload the + operator\r\n    Complex operator+(Complex a1)\r\n    {\r\n        return Complex(myReal + a1.myReal, myImaginary + a1.myImaginary);\r\n    }\r\n\r\n    //Overload the pre- and postfix\r\n    //  autoincrement operators\r\n\r\n    //Increment then return incremented value\r\n    Complex\u0026amp; operator++(int)\r\n    {\r\n        myReal+=1, myImaginary+=1;\r\n        return *this;\r\n    }\r\n\r\n    //Increment then return a copy of\r\n    //  the original number\r\n    Complex operator++()\r\n    {\r\n        // not the best implementation\r\n        myReal+=1, myImaginary+=1;\r\n        return Complex(myReal-1, myImaginary-1);\r\n    }\r\n\r\n    int real()\r\n    {\r\n        return myReal;\r\n    }\r\n\r\n    int imaginary()\r\n    {\r\n        return myImaginary;\r\n    }\r\n\r\nprivate:\r\n    int myReal;\r\n    int myImaginary;\r\n};\r\n\r\nTEST(operatorOverloading, Class)\r\n{\r\n    Complex x(1,2), y(3);\r\n    Complex b;\r\n\r\n    // Use the function call syntax\r\n    Complex a = x.operator+(y);\r\n\r\n    CHECK_EQUAL(a.real(), 4);\r\n    CHECK_EQUAL(a.imaginary(), 2);\r\n\r\n    a++;\r\n\r\n    CHECK_EQUAL(a.real(), 5);\r\n    CHECK_EQUAL(a.imaginary(), 3);\r\n\r\n    b=++a;\r\n    CHECK_EQUAL(b.real(), 5);\r\n    CHECK_EQUAL(b.imaginary(), 3);\r\n\r\n    // Use the infix notation - the most common usage\r\n    b = x + y;\r\n    CHECK_EQUAL(b.real(), 4);\r\n    CHECK_EQUAL(b.imaginary(), 2);\r\n}\u003c/pre\u003e\r\n\u003ch3\u003eMember versus Non-Member Implementation\u003c/h3\u003e\r\n\u003cp\u003eWe've mentioned several times that overloaded operator functions can be implemented either as member functions or non-member functions. The third limitation we listed constrains several of the operators to implementation as member-only functions. Other than flexibility, why should it make any difference?\u003c/p\u003e\r\n\u003ch3\u003eMember Functions\u003c/h3\u003e\r\n\u003cp\u003eWith member implementation, one operand must be a member of the class overloading the operator. Specifically, that one must be the left operand. Because of the function call syntax, we can write\u003c/p\u003e\r\n\u003cpre\u003ex.operator@();\u003c/pre\u003e\r\n\u003cp\u003eRemember that each member function has a this pointer (which is of class type). If we try to apply the operator to an instance of a different class, we'll have a type mismatch. Beyond the type issue, the major advantage of member function operators is they can be invoked with one less operand, as follows:\u003c/p\u003e\r\n\u003cp\u003e\u003cspan class=\"bold\"\u003eUnary\u003c/span\u003e\u003c/p\u003e\r\n\u003cpre\u003ex.operator@()\u003c/pre\u003e\r\n\u003cblockquote\u003e\n\u003ccode\u003ex\u003c/code\u003e is a class instance\u003cbr\u003e\u003ccode\u003e@\u003c/code\u003e is any arbitrary operator\u003c/blockquote\u003e\r\n\u003cspan class=\"bold\"\u003eBinary\u003c/span\u003e\r\n\u003cp\u003e\u003ccode\u003ex.operator@(y)\u003cbr\u003e x operator@ y\u003c/code\u003e\u003c/p\u003e\r\n\u003cblockquote\u003e\n\u003ccode\u003ex\u003c/code\u003e is class instance \u003cbr\u003e\u003ccode\u003e@\u003c/code\u003e is any arbitrary operator\u003c/blockquote\u003e\r\n\u003ch3\u003eNon-Member Functions\u003c/h3\u003e\r\n\u003cp\u003eIf the operator requires a left operand of a different type than the class overloading the operator, then we must use the non-member syntax and the operator function may need to be declared a friend if it requires access to protected or private data. We'll talk about friends shortly.\u003c/p\u003e\r\n\u003cp\u003eThe Stream class is one of the best examples of the need for non-member operator functions. When we overload the insertion (or extraction) operator, most of the time, the left operand is not a member of the overloading class, but rather a member of the Stream class—\u003ccode\u003ecout\u003c/code\u003e, for example. We may not think of it in such a way, but \u003ccode\u003ecout\u003c/code\u003e is an instance of a Stream class object.\u003c/p\u003e\r\n\u003cp\u003e\u003cspan class=\"bold\"\u003eUnary\u003c/span\u003e\u003c/p\u003e\r\n\u003cpre\u003eoperator@(x)\u003c/pre\u003e\r\n\u003cp\u003e\u003cspan class=\"bold\"\u003eBinary\u003c/span\u003e \u003cbr\u003e Function call syntax\u003c/p\u003e\r\n\u003ccode\u003eoperator@(x,y)\u003c/code\u003e\r\n\u003cp\u003e\u003cspan class=\"bold\"\u003eInfix syntax\u003c/span\u003e\u003c/p\u003e\r\n\u003ccode\u003ex operator@ y\u003c/code\u003e\r\n\u003cpre\u003e// Classes Members - Operators Example\r\n// Member and Non Member Operators\r\n\r\n// Bring the names into namespace\r\nclass Real;\r\nclass Complex;\r\n\r\n// Define the operators using\r\n// non-member functions\r\n\r\n// Complex add\r\nComplex operator+(Real a1, Complex a2);\r\n\r\nclass Real\r\n{\r\npublic:\r\n    Real(int real = 0) : myReal(real)\r\n    {\r\n    }\r\n\r\n    Real operator+(Real a1)\r\n    {\r\n        return Real(myReal + a1.myReal);\r\n    }\r\n\r\n    // this cast overload allows Real to be used like an int\r\n    operator int() const\r\n    {\r\n        return myReal;\r\n    }\r\n\r\n    // friend declaration allow these global operator overload function\r\n    // to access Real's private data\r\n    friend Complex operator+(Complex a1, Real a2);\r\n    friend Real operator+(Real a1, int a2);\r\n\r\nprivate:\r\n    int myReal;\r\n};\r\n\r\nclass Complex\r\n{\r\npublic:\r\n    Complex(int real = 0, int imaginary = 0)\r\n        : myReal(real),\r\n        myImaginary(imaginary)\r\n    {\r\n    }\r\n\r\n    // Overload the pre- and postfix autoincrement operators\r\n    // Increment then return incremented value\r\n    Complex\u0026amp; operator++(int)\r\n    {\r\n        myReal+=1, myImaginary+=1;\r\n        return *this;\r\n    }\r\n\r\n    //Increment then return a copy of the original number\r\n    Complex operator++ ()\r\n    {\r\n        myReal+=1, myImaginary+=1;\r\n        return Complex(myReal-1, myImaginary-1);\r\n    }\r\n\r\n    int real() const\r\n    {\r\n        return myReal;\r\n    }\r\n\r\n    int imaginary() const\r\n    {\r\n        return myImaginary;\r\n    }\r\n\r\nprivate:\r\n    // Declare the real and imaginary parts\r\n    int myImaginary;\r\n    int myReal;\r\n};\r\n\r\nTEST(MoreComplex, OperatorOverloading)\r\n{\r\n    // Declare some real numbers\r\n    Real a(10), b(17), c;\r\n\r\n    // Declare some complex numbers\r\n    Complex d(11, 25), e;\r\n\r\n    // Add two reals\r\n    c = b + 12;\r\n    CHECK_EQUAL(29, c);\r\n\r\n    //Add a real and a complex...instance a\r\n    //  is not a member of the Complex class,\r\n    //therefore we must have a non-member function\r\n    e = a + d;\r\n    CHECK_EQUAL(21, e.real());\r\n    CHECK_EQUAL(25, e.imaginary());\r\n\r\n    e = d + a;\r\n    CHECK_EQUAL(21, e.real());\r\n    CHECK_EQUAL(25, e.imaginary());\r\n}\r\n\r\n// Define the operator functions\r\nComplex operator+(Real a1, Complex a2)\r\n{\r\n    return Complex (a1 + a2.real(), a2.imaginary());\r\n}\r\n\r\nComplex operator+(Complex a1, Real a2)\r\n{\r\n    return Complex(a1.real() + a2.myReal, a1.imaginary());\r\n}\r\n\r\nReal operator+(Real a1, int a2)\r\n{\r\n    return Real(a1.myReal + a2);\r\n}\u003c/pre\u003e\r\n\u003ch2\u003eOperators in Action\u003c/h2\u003e\r\n\u003cp\u003eLet's now look at several different overloaded operators. We'll begin with what is often called the \u003cspan class=\"keyterm\"\u003esmart pointer\u003c/span\u003e. We use the smart pointer to add more control and richer semantics to the traditional built-in pointer.\u003c/p\u003e\r\n\u003ch3\u003eThe Smart Pointer: \u003ccode\u003eoperator-\u0026gt;()\u003c/code\u003e\n\u003c/h3\u003e\r\n\u003cp\u003eA smart pointer is the overloaded operator function \u003ccode\u003eoperator-\u0026gt;()\u003c/code\u003e. Normally the \u003ccode\u003e-\u0026gt;\u003c/code\u003e is a binary operator in which the left operand is a pointer and a class or structure member name is the right operand. When the left operand is an \u003cspan class=\"bold\"\u003eobject\u003c/span\u003e rather than a \u003cspan class=\"bold\"\u003epointer to an object,\u003c/span\u003e the notation invokes the unary member function \u003ccode\u003eoperator-\u0026gt;()\u003c/code\u003e. The expression \u003ccode\u003eobject -\u0026gt; member\u003c/code\u003e is interpreted as \u003ccode\u003e(object.operator-\u0026gt;()) -\u0026gt; member\u003c/code\u003e. The function \u003ccode\u003eoperator-\u0026gt;() \u003c/code\u003emust return a valid object pointer, object, or reference to an object that has an overloaded \u003ccode\u003e-\u0026gt;\u003c/code\u003e operator so we can determine what is being pointed to.\u003c/p\u003e\r\n\u003cp\u003eThe expression \u003ccode\u003eobject -\u0026gt;member\u003c/code\u003e is often called the \u003cspan class=\"keyterm\"\u003esmart pointer operator\u003c/span\u003e. Like several other overloaded operators, smart pointers must be member functions. They are not really pointers; they simply have pointer-like semantics that allow us to provide a functionality that is more intelligent, richer, and more robust than built-in dumb pointers.\u003c/p\u003e\r\n\u003cp\u003eYou'll study smart pointers in much greater detail in the intermediate and advanced C++ courses. For now, let's see how they work. The syntax is simple:\u003c/p\u003e\r\n\u003cpre\u003eClassName* operator-\u0026gt;()\u003c/pre\u003e\r\n\u003cp\u003eIn addition to containing the real pointer, the smart pointer will also overload operator-\u0026gt; to handle dereferencing.\u003c/p\u003e\r\n\u003cpre\u003e// Classes Members - Operators Example\r\n// Smart Pointers\r\n\r\nclass Simple\r\n{\r\npublic:\r\n    Simple(int aValue)\r\n        : myValue(aValue)\r\n    {\r\n    }\r\n\r\n    int getValue() const\r\n    {\r\n        return myValue;\r\n    }\r\n\r\nprivate:\r\n    int myValue;\r\n};\r\n\r\n// Declare a second class with a smart pointer\r\nclass SimplePtr\r\n{\r\npublic:\r\n    SimplePtr(Simple* aPtr = 0)\r\n        :sPtr(aPtr)\r\n    {\r\n    }\r\n\r\n    //The pointer function performs an operation\r\n    //then returns a pointer to aSimpler\r\n    Simple* operator-\u0026gt;();\r\n\r\nprivate:\r\n    Simple* sPtr;\r\n};\r\n\r\nSimple* SimplePtr::operator-\u0026gt;()\r\n{\r\n    // If the pointer is null - then we return a null.\r\n    // We could check for null and do something different.\r\n    // But, in this case  we want the same behavior as a raw pointer.\r\n    // That is, if the caller attempts to use the null pointer\r\n    // an access violation occurs.\r\n    return sPtr;\r\n}\r\n\r\nTEST(pointer, operatorOverload)\r\n{\r\n    SimplePtr aPtr;\r\n\r\n#if 0\r\n    // This is an access violation - dereferencing null pointer\r\n    aPtr-\u0026gt;getValue();\r\n#endif\r\n\r\n    Simple b(30);\r\n\r\n    // Why does this work?\r\n    //\r\n    // We make use of the compiler generated assignment operator for SimplePtr.\r\n    // So we can assign the value of one instance of SimplePtr to another.\r\n    // \r\n    // But, we are not done yet because \u0026amp;b is not an instance of SimplePtr.\r\n    // Here the compiler helps us some more. It knows we have a (compiler generated)\r\n    // assignment operator for SimplePtr. The compiler then looks to see if it has\r\n    // a way to convert \u0026amp;b to a SimplePtr. The compiler finds SimplePtr has\r\n    // a constructor that takes a single arg, that happens of type Simple*. \u0026amp;b\r\n    // type is Simple*. So the compiler implicitly constructs a SimplePtr from\r\n    // using \u0026amp;b as the constructor argument.\r\n    //\r\n    // If we don't want the compiler to implicitly construct instances for\r\n    // us, we can use the keyword explicit on the constructor. This prevents\r\n    // the compiler from implicit constructions. Note explicit is only\r\n    // meaningful for constructors with a single argument.\r\n    //\r\n    // In the SimplePtr class declaration try changing this line:\r\n    //    SimplePtr(Simple* aPtr = 0)\r\n    //\r\n    // to\r\n    //\r\n    //    explicit SimplePtr(Simple* aPtr = 0)\r\n    //\r\n    // then try to compile\r\n    //\r\n    aPtr = \u0026amp;b;\r\n\r\n    CHECK_EQUAL(30, aPtr-\u0026gt;getValue());\r\n}\u003c/pre\u003e\r\n\u003ch3\u003eThe Assignment Operator: \u003ccode\u003eoperator=()\u003c/code\u003e\n\u003c/h3\u003e\r\n\u003cp\u003eIn addition to the constructor(s) and destructor, the assignment operator and the copy constructor (which we'll study next) are two members that should be in every class. The assignment operator is invoked when one initialized object is to be assigned to a second initialized object. When invoked, the operator must first check for assignment to self. If so, it must return itself. When implemented, the assignment operator must also serve as a destructor for the object being assigned to. That is, the object being assigned to already points to an initialized space, and before that pointer is overwritten, the space must be returned to the heap. If we fail to do so, we will lose the ability to address the old space and thereby potentially create some significant problems. Such problems, the least of which is a memory leak, may remain hidden for quite a while. The syntax is as follows:\u003c/p\u003e\r\n\u003cpre\u003eClassName\u0026amp; operator=()\u003c/pre\u003e\r\n\u003cp\u003eThe operator can have a return value; the most common is \u003ccode\u003e*this\u003c/code\u003e. Such a return allows for assignments of the form\u003c/p\u003e\r\n\u003cpre\u003eA = B = C...\u003c/pre\u003e\r\n\u003cp\u003eThe assignment operator is not called for the declarations such as\u003c/p\u003e\r\n\u003cpre\u003eClassName object1 = object2;\u003c/pre\u003e\r\n\u003cp\u003eIn this case, object 1 does not exist—it is being created.\u003c/p\u003e\r\n\u003cp\u003eLet's look at an example. A familiar request in C and C++ is \"can I assign one array to another?\" The familiar answer is \"no.\" Let's fix that.\u003c/p\u003e\r\n\u003cpre\u003e// Classes Members - Operators Example\r\n// Assignment Operator\r\n\r\n// Define the class Array with an overloaded\r\n// assignment operator\r\n\r\nclass Array\r\n{\r\npublic:\r\n    Array(int nElements);\r\n    Array(const Array\u0026amp; array);\r\n\r\n    Array::~Array()\r\n    {\r\n        delete[] myArray;\r\n\r\n        // You might be tempted to write:\r\n        // mySize = 0\r\n        // here.\r\n        // There is no need. Once the class is destroyed, there\r\n        // is no way to access the member data, thus no need to\r\n        // initialize any member data to 0.\r\n    }\r\n\r\n#if 0\r\n    Array\u0026amp; operator=(const Array\u0026amp; a);\r\n#else\r\n    Array\u0026amp; operator=(Array a);\r\n#endif\r\n\r\n    // Since we're modeling an array - overload the indexing operators\r\n    // to support conventional element access\r\n\r\n    // This one is for const arrays\r\n    const int\u0026amp; operator[](std::size_t position) const\r\n    {\r\n        // we could check the array bound here and protect against accessing past the array end\r\n        return myArray[position];\r\n    }\r\n\r\n    // this one is for non-const arrays\r\n    int\u0026amp; operator[](std::size_t position)\r\n    {\r\n        // we could check the array bound here and protect against it\r\n        return myArray[position];\r\n    }\r\n\r\n    int getSize() const\r\n    {\r\n        return mySize;\r\n    }\r\n\r\n    void swap(Array\u0026amp; x)\r\n    {\r\n        std::swap(mySize, x.mySize);\r\n        std::swap(myArray, x.myArray);\r\n    }\r\n\r\nprivate:\r\n    int mySize;\r\n    int* myArray;\r\n};\r\n\r\nArray::Array(int nElements)\r\n: myArray(new int[nElements])\r\n{\r\n    for (int i = 0; i \u0026lt; nElements; i++)\r\n    {\r\n        myArray[i] = 0;\r\n    }\r\n\r\n    mySize = nElements;\r\n    return;\r\n}\r\n\r\nArray::Array(const Array\u0026amp; src)\r\n    : myArray(new int[src.mySize])\r\n    {\r\n        for (int i = 0; i \u0026lt; src.mySize; i++)\r\n        {\r\n            myArray[i] = src.myArray[i];\r\n        }\r\n\r\n        mySize = src.mySize;\r\n        return;\r\n    }\r\n\r\n#if 0\r\n// Conventional assignment operator implementation\r\n// Why is the argument to the function specified as const?\r\nArray\u0026amp; Array::operator=(const Array\u0026amp; a)\r\n{\r\n    //Check for assignment to self\r\n    if (\u0026amp;a != this)\r\n    {\r\n        mySize = a.mySize;\r\n\r\n        // note the delete [] operator\r\n        delete[] myArray;\r\n\r\n        myArray = new int[mySize];\r\n\r\n        for (int i = 0; i \u0026lt; mySize; i++)\r\n        {\r\n            myArray[i] = a.myArray[i];\r\n        }\r\n    }\r\n\r\n    return *this;\r\n}\r\n#else\r\n// Uses the copy and swap idiom - better assignment operator implementation\r\n// http://stackoverflow.com/questions/3279543/what-is-the-copy-and-swap-idiom\r\nArray\u0026amp; Array::operator=(Array a)\r\n{\r\n    swap(a);\r\n    return *this;\r\n}\r\n#endif\r\n\r\nTEST(Assignment, Class)\r\n{\r\n    Array a1(4);\r\n    Array b1(5);\r\n\r\n    // Enter some values\r\n    for (int i = 0; i \u0026lt; 4; i++)\r\n    {\r\n        a1[i] = i;\r\n        b1[i] = i + 1;\r\n    }\r\n\r\n    CHECK_EQUAL(4, a1.getSize());\r\n    CHECK_EQUAL(0, a1[0]);\r\n    CHECK_EQUAL(1, a1[1]);\r\n    CHECK_EQUAL(2, a1[2]);\r\n    CHECK_EQUAL(3, a1[3]);\r\n\r\n    b1[4] = 5;\r\n    CHECK_EQUAL(5, b1.getSize());\r\n    CHECK_EQUAL(1, b1[0]);\r\n    CHECK_EQUAL(2, b1[1]);\r\n    CHECK_EQUAL(3, b1[2]);\r\n    CHECK_EQUAL(4, b1[3]);\r\n    CHECK_EQUAL(5, b1[4]);\r\n\r\n    a1 = b1;\r\n    CHECK_EQUAL(5, a1.getSize());\r\n    CHECK_EQUAL(1, a1[0]);\r\n    CHECK_EQUAL(2, a1[1]);\r\n    CHECK_EQUAL(3, a1[2]);\r\n    CHECK_EQUAL(4, a1[3]);\r\n    CHECK_EQUAL(5, a1[4]);\r\n}\u003c/pre\u003e\r\n\u003ch2\u003eThe Copy Constructor\u003c/h2\u003e\r\n\u003cp\u003eThere are many occasions when a copy of an object is needed. For example, when an object is passed by value, as in\u003c/p\u003e\r\n\u003cp\u003e\u003ccode\u003ex.func(y)\u003c/code\u003e\u003c/p\u003e\r\n\u003cp\u003ea copy of \u003ccode\u003ey\u003c/code\u003e is made and passed. When an object is returned by value, as in the following,\u003c/p\u003e\r\n\u003cpre\u003eint func(int y)\r\n{\r\n    do stuff to y\r\n    return y;\r\n}\u003c/pre\u003e\r\n\u003cp\u003ea copy of \u003ccode\u003ey\u003c/code\u003e is made and returned.\u003c/p\u003e\r\n\u003cp\u003eWhen one object is initialized by another object, as in\u003c/p\u003e\r\n\u003cpre\u003ex1 = x2\u003c/pre\u003e\r\n\u003cp\u003ea copy of \u003ccode\u003ex2\u003c/code\u003e is made. If an object is assigned to another object, as in\u003c/p\u003e\r\n\u003cpre\u003ex1 = x2\u003c/pre\u003e\r\n\u003cp\u003e\u003ccode\u003ex2\u003c/code\u003e is copied to \u003ccode\u003ex1\u003c/code\u003e, and \u003ccode\u003ex1\u003c/code\u003e is destroyed.\u003c/p\u003e\r\n\u003cp\u003eCopying and initialization are handled in C++ using two functions, the copy constructor and the operator function \u003ccode\u003eoperator=()\u003c/code\u003e. We've just talked about the latter; now we'll discuss the former. The syntax for the copy constructor is as follows:\u003c/p\u003e\r\n\u003cpre\u003eclass X(const class X\u0026amp;);\u003c/pre\u003e\r\n\u003cp\u003eWhy is the argument \u003ccode\u003econst\u003c/code\u003e?\u003c/p\u003e\r\n\u003cp\u003eThe copy constructor is a special kind of constructor. It takes as an argument a reference to an object of the same class. It then performs initialization on the newly created object as constructors are supposed to do. The copy constructor is used by the compiler to copy objects by value, into a function or out of a function, when an object is returned by value.\u003c/p\u003e\r\n\u003cp\u003eIf a copy constructor is not defined, the compiler will create one for you. The compiler performs a shallow bitwise copy. In many cases the compiler generated copy constructor is fine. But, if an object to be copied owns any dynamic memory, the compiler simply creates a pointer to the memory chunk and places it in the copy. When the copy goes out of scope, the object (and the pointer . . . and the memory) is deleted. When the original now tries to reference non-existent memory . . . oops.\u003c/p\u003e\r\n\u003cp\u003eIf you need to define your own copy constructor, then you likely will need to define your own assignment operator. These two operators most always go together.\u003c/p\u003e\r\n\u003cp\u003eLet's check out a copy constructor.\u003c/p\u003e\r\n\u003cpre\u003e// Classes Membership - Operators Example\r\n// Copy Constructor\r\n\r\nclass A\r\n{\r\npublic:\r\n    A(int aValue)\r\n        : value(aValue)\r\n    {\r\n    }\r\n\r\n    // Define the copy constructor\r\n    // In this case the compiler generated copy constructor works as well as\r\n    // our hand coded copy constructor\r\n    A(const A\u0026amp; a)\r\n    {\r\n        value = a.value;\r\n    }\r\n\r\n    int getValue() const\r\n    {\r\n        return value;\r\n    }\r\n\r\nprivate:\r\n    int value;\r\n};\r\n\r\n// The A instance is passed by value into funct. Then it is again returned by value\r\nA funct(A a)\r\n{\r\n    return a;\r\n}\r\n\r\nTEST(CopyConstructor, Class)\r\n{\r\n    A a(3);\r\n\r\n    // Pass it by value to the function\r\n    A aReturnedByValue = funct(a);\r\n\r\n    CHECK_EQUAL(3, aReturnedByValue.getValue());\r\n}\u003c/pre\u003e\r\n\u003ch2\u003eFriends\u003c/h2\u003e\r\n\u003cp\u003eAs we've seen before a class definition provides three levels of access to data and function members: public, protected, and private. Using such access specifiers, we permit general, inhertiance, or no access to class members. By specifying such segregation, we can control access to function and data members. Should such restrictions be rigid? Are there times when we should permit more liberal access? These are good questions.\u003c/p\u003e\r\n\u003cp class=\"title\"\u003e\u003cspan class=\"bold\"\u003eFigure 7.1—Three Levels of Access\u003c/span\u003e\u003c/p\u003e\r\n\u003cp class=\"title\"\u003e\u003cspan class=\"bold\"\u003e \u003cimg src=\"https://canvas.uw.edu/courses/1177926/files/44384297/preview\" alt=\"figure 7.1\" width=\"217\" height=\"72\" data-api-endpoint=\"https://canvas.uw.edu/api/v1/courses/1177926/files/44384297\" data-api-returntype=\"File\"\u003e\u003c/span\u003e\u003c/p\u003e\r\n\u003cp\u003eWe saw that overloaded operators, with non-member left operands, must be declared as non-member functions. Such functions will have a problem if they must access private data members of the operand.\u003c/p\u003e\r\n\u003cp\u003eC++ provides a means for more liberal access to non-public members. Under a specified set of conditions, a non-member may be identified as a \u003cspan class=\"keyterm\"\u003efriend\u003c/span\u003e of the class. A class friend is designated by the keyword \u003ccode\u003efriend\u003c/code\u003e followed by the class name, as follows:\u003c/p\u003e\r\n\u003cpre\u003efriend YourClass;\u003c/pre\u003e\r\n\u003cp\u003eNote, the name of the friend is not in the scope of the class.\u003c/p\u003e\r\n\u003cp\u003eThe designation can occur anywhere in class definition; it is not affected by access specifier. Both convention and the goal of making the design intent clear and obvious suggest placing all friend designations in the front of the class. Once an object is designated as a friend, it has access to all non-public members as if they were public. Access is unidirectional, however. If \u003ccode\u003eB\u003c/code\u003e is designated as friend of \u003ccode\u003eA\u003c/code\u003e, \u003ccode\u003eB\u003c/code\u003e can access \u003ccode\u003eA\u003c/code\u003e's non-public members, but \u003ccode\u003eA\u003c/code\u003e cannot access \u003ccode\u003eB\u003c/code\u003e's.\u003c/p\u003e\r\n\u003cpre\u003e// Classes Members - Friends Example\r\n// Classes as friends\r\n\r\nclass Number\r\n{\r\n    // The class Adder is declared a friend\r\n    friend class Adder;\r\n\r\npublic:\r\n    Number() {number = 10;}\r\n    int getNumber() {return number;}\r\n\r\nprivate:\r\n    int number;\r\n};\r\n\r\nclass Adder\r\n{\r\npublic:\r\n    // class Adder can access\r\n    // the private data of instances of number\r\n    //\r\n    // add is declared static is it does not access\r\n    // member data.\r\n    static int add(const Number\u0026amp; aNumber)\r\n    {\r\n        return aNumber.number + 10;\r\n    }\r\n};\r\n\r\nTEST(friends, Class)\r\n{\r\n    Number n1;\r\n    CHECK_EQUAL(10, n1.getNumber());\r\n    CHECK_EQUAL(20, Adder::add(n1));\r\n}\u003c/pre\u003e\r\n\u003ch3\u003eWho Can Be Your Friend?\u003c/h3\u003e\r\n\u003cp\u003eA friend can be one of the following:\u003c/p\u003e\r\n\u003cul\u003e\n\u003cli\u003eClass—for example, \u003ccode\u003efriend class X\u003c/code\u003e\n\u003c/li\u003e\r\n\u003cli\u003eA particular function—such as \u003ccode\u003efriend int sub (int y);\u003c/code\u003e\u003cbr\u003e The function \u003ccode\u003esub\u003c/code\u003e will not be a function member of the class. If it has a \u003ccode\u003ethis\u003c/code\u003e pointer, it is for the containing class. Such a designation is useful when defining operator functions.\u003c/li\u003e\r\n\u003cli\u003eA particular class member—for example,\u003ccode\u003efriend int Mult::get();\u003c/code\u003e\n\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003cpre\u003e// Functions as friends\r\n\r\nclass AnotherNumber\r\n{\r\n    // The function add is declared to be a friend of\r\n    // the class AnotherNumber.\r\n    friend int add(const AnotherNumber\u0026amp; aNumber);\r\n\r\npublic:\r\n    AnotherNumber() : number(20)\r\n    {\r\n    }\r\n\r\n    int getNumber() const\r\n    {\r\n        return number;\r\n    }\r\n\r\nprivate:\r\n    int number;\r\n};\r\n\r\nint add(const AnotherNumber\u0026amp; aNumber)\r\n{\r\n    // add has access to the private data of aNumber\r\n    return aNumber.number + 10;\r\n}\r\n\r\nTEST(MoreFriends, Class)\r\n{\r\n    AnotherNumber n1;\r\n\r\n    CHECK_EQUAL(20, n1.getNumber());\r\n    CHECK_EQUAL(30, add(n1));\r\n}\u003c/pre\u003e\r\n\u003ch3\u003eCaveats and Problems\u003c/h3\u003e\r\n\u003cul\u003e\n\u003cli\u003eFriends can have access to everything. This defeats data hiding, so use them carefully.\u003c/li\u003e\r\n\u003cli\u003eFriend declarations introduce extra coupling between classes.\u003c/li\u003e\r\n\u003cli\u003eFriends permit changing of internal state from the outside. We should always use member functions, not friends, to change state.\u003c/li\u003e\r\n\u003c/ul\u003e\n\u003cp\u003eThe major use of friends is to provide more efficient access to data members than the function call and to accommodate operator functions with arbitrary left operands. Friend should be rarely (if ever) used.\u003c/p\u003e\r\n\u003ch2\u003eSummary\u003c/h2\u003e\r\n\u003cp\u003eIn this lesson, we concluded our second look inside the C++ class. We began with overloaded member functions and from these developed operator functions. We then studied two important member functions—the copy constructor and the assignment operator—and learned why they're necessary. We concluded with a look at the friend designator, a means to get around non-public access specifiers.\u003c/p\u003e\r\n\u003ch2\u003ePractice Questions\u003c/h2\u003e\r\n\u003cp\u003eTest your understanding of the concepts in Lesson 6 by working through the following practice questions, then check your answers with \u003ca id=\"\" class=\"\" title=\"Answers to Practice Questions for Lesson 7\" href=\"https://canvas.uw.edu/courses/1177926/pages/answers-to-practice-questions-for-lesson-7\" data-api-endpoint=\"https://canvas.uw.edu/api/v1/courses/1177926/pages/answers-to-practice-questions-for-lesson-7\" data-api-returntype=\"Page\"\u003eAnswers to Practice Questions for Lesson 7\u003c/a\u003e.\u003c/p\u003e\r\n\u003col\u003e\n\u003cli\u003eCan we overload class function members?\u003c/li\u003e\r\n\u003cli\u003eHow do I overload a C++ operator?\u003c/li\u003e\r\n\u003cli\u003eWhat's the difference between an operator overloaded as a class member function versus a non-member function?\u003c/li\u003e\r\n\u003cli\u003eSo, if you're so smart, what's a smart pointer?\u003c/li\u003e\r\n\u003cli\u003eDo I really need a copy constructor?\u003c/li\u003e\r\n\u003cli\u003eIf I declare class A as a friend of my class, then I can just go and access its stuff any time I want to, right?\u003c/li\u003e\r\n\u003cli\u003eBy putting the friend declaration in the private section, that friend can only use my access functions to get to my private data members, right?\u003c/li\u003e\r\n\u003c/ol\u003e\n\u003c/div\u003e"},"WIKI_PAGE_REVISION":"1","WIKI_PAGE_SHOW_PATH":"/courses/1177926/pages/lesson-7","WIKI_PAGE_EDIT_PATH":"/courses/1177926/pages/lesson-7/edit","WIKI_PAGE_HISTORY_PATH":"/courses/1177926/pages/lesson-7/revisions","COURSE_ID":"1177926","MODULES_PATH":"/courses/1177926/modules","wiki_page_menu_tools":[],"DISPLAY_SHOW_ALL_LINK":false,"badge_counts":{"submissions":0},"notices":[]};
+</script>
+
+<script src="./Lesson7_files/navigation_header.bundle-f83f1ff001.js.download" defer="defer"></script>
+<script src="./Lesson7_files/default.js.download" defer="defer"></script>
+<script src="./Lesson7_files/custom.js.download" defer="defer"></script>
+
+</div> <!-- #application -->
+
+
+<div class="ReactTrayPortal"><div data-reactid=".1"></div></div></body></html>
