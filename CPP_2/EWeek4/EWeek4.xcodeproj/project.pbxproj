@@ -1,0 +1,341 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A95CACFF20B520F500F01C5F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A95CACFE20B520F500F01C5F /* main.cpp */; };
+		A9BBBF8B20B52162006DA1E0 /* Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9BBBF8420B52161006DA1E0 /* Test.cpp */; };
+		A9BBBF8C20B52162006DA1E0 /* Failure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9BBBF8620B52161006DA1E0 /* Failure.cpp */; };
+		A9BBBF8D20B52162006DA1E0 /* TestRegistry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9BBBF8920B52161006DA1E0 /* TestRegistry.cpp */; };
+		A9BBBF8E20B52162006DA1E0 /* TestResult.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9BBBF8A20B52162006DA1E0 /* TestResult.cpp */; };
+		A9BBBF9120B52578006DA1E0 /* BoardInitializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9BBBF8F20B52578006DA1E0 /* BoardInitializer.cpp */; };
+		A9BBBF9720B52848006DA1E0 /* WordGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9BBBF9520B52848006DA1E0 /* WordGame.cpp */; };
+		A9BBBF9920B5307A006DA1E0 /* WordGameTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9BBBF9820B5307A006DA1E0 /* WordGameTest.cpp */; };
+		A9BBBF9C20B5F02A006DA1E0 /* Dictionary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9BBBF9A20B5F02A006DA1E0 /* Dictionary.cpp */; };
+		A9BBBF9E20B5F503006DA1E0 /* DictionaryTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9BBBF9D20B5F503006DA1E0 /* DictionaryTest.cpp */; };
+		A9BBBFA120B5F99F006DA1E0 /* WordFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9BBBF9F20B5F99F006DA1E0 /* WordFinder.cpp */; };
+		A9BBBFA320B684EF006DA1E0 /* BoardInitializerTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9BBBFA220B684EF006DA1E0 /* BoardInitializerTest.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A95CACF920B520F500F01C5F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A95CACFB20B520F500F01C5F /* EWeek4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EWeek4; sourceTree = BUILT_PRODUCTS_DIR; };
+		A95CACFE20B520F500F01C5F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		A9BBBF8220B52160006DA1E0 /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		A9BBBF8320B52161006DA1E0 /* Failure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Failure.h; sourceTree = "<group>"; };
+		A9BBBF8420B52161006DA1E0 /* Test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Test.cpp; sourceTree = "<group>"; };
+		A9BBBF8520B52161006DA1E0 /* TestResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestResult.h; sourceTree = "<group>"; };
+		A9BBBF8620B52161006DA1E0 /* Failure.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Failure.cpp; sourceTree = "<group>"; };
+		A9BBBF8720B52161006DA1E0 /* TestRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestRegistry.h; sourceTree = "<group>"; };
+		A9BBBF8820B52161006DA1E0 /* TestHarness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestHarness.h; sourceTree = "<group>"; };
+		A9BBBF8920B52161006DA1E0 /* TestRegistry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestRegistry.cpp; sourceTree = "<group>"; };
+		A9BBBF8A20B52162006DA1E0 /* TestResult.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestResult.cpp; sourceTree = "<group>"; };
+		A9BBBF8F20B52578006DA1E0 /* BoardInitializer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BoardInitializer.cpp; sourceTree = "<group>"; };
+		A9BBBF9020B52578006DA1E0 /* BoardInitializer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BoardInitializer.hpp; sourceTree = "<group>"; };
+		A9BBBF9320B5261A006DA1E0 /* Board.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Board.hpp; sourceTree = "<group>"; };
+		A9BBBF9520B52848006DA1E0 /* WordGame.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = WordGame.cpp; sourceTree = "<group>"; };
+		A9BBBF9620B52848006DA1E0 /* WordGame.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = WordGame.hpp; sourceTree = "<group>"; };
+		A9BBBF9820B5307A006DA1E0 /* WordGameTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = WordGameTest.cpp; sourceTree = "<group>"; };
+		A9BBBF9A20B5F02A006DA1E0 /* Dictionary.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Dictionary.cpp; sourceTree = "<group>"; };
+		A9BBBF9B20B5F02A006DA1E0 /* Dictionary.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Dictionary.hpp; sourceTree = "<group>"; };
+		A9BBBF9D20B5F503006DA1E0 /* DictionaryTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DictionaryTest.cpp; sourceTree = "<group>"; };
+		A9BBBF9F20B5F99F006DA1E0 /* WordFinder.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = WordFinder.cpp; sourceTree = "<group>"; };
+		A9BBBFA020B5F99F006DA1E0 /* WordFinder.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = WordFinder.hpp; sourceTree = "<group>"; };
+		A9BBBFA220B684EF006DA1E0 /* BoardInitializerTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BoardInitializerTest.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A95CACF820B520F500F01C5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A95CACF220B520F500F01C5F = {
+			isa = PBXGroup;
+			children = (
+				A95CACFD20B520F500F01C5F /* EWeek4 */,
+				A95CACFC20B520F500F01C5F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A95CACFC20B520F500F01C5F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A95CACFB20B520F500F01C5F /* EWeek4 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A95CACFD20B520F500F01C5F /* EWeek4 */ = {
+			isa = PBXGroup;
+			children = (
+				A9BBBF9320B5261A006DA1E0 /* Board.hpp */,
+				A9BBBF8F20B52578006DA1E0 /* BoardInitializer.cpp */,
+				A9BBBF9020B52578006DA1E0 /* BoardInitializer.hpp */,
+				A9BBBFA220B684EF006DA1E0 /* BoardInitializerTest.cpp */,
+				A9BBBF9A20B5F02A006DA1E0 /* Dictionary.cpp */,
+				A9BBBF9B20B5F02A006DA1E0 /* Dictionary.hpp */,
+				A9BBBF9D20B5F503006DA1E0 /* DictionaryTest.cpp */,
+				A9BBBF8620B52161006DA1E0 /* Failure.cpp */,
+				A9BBBF8320B52161006DA1E0 /* Failure.h */,
+				A95CACFE20B520F500F01C5F /* main.cpp */,
+				A9BBBF8420B52161006DA1E0 /* Test.cpp */,
+				A9BBBF8220B52160006DA1E0 /* Test.h */,
+				A9BBBF8820B52161006DA1E0 /* TestHarness.h */,
+				A9BBBF8920B52161006DA1E0 /* TestRegistry.cpp */,
+				A9BBBF8720B52161006DA1E0 /* TestRegistry.h */,
+				A9BBBF8A20B52162006DA1E0 /* TestResult.cpp */,
+				A9BBBF8520B52161006DA1E0 /* TestResult.h */,
+				A9BBBF9F20B5F99F006DA1E0 /* WordFinder.cpp */,
+				A9BBBFA020B5F99F006DA1E0 /* WordFinder.hpp */,
+				A9BBBF9520B52848006DA1E0 /* WordGame.cpp */,
+				A9BBBF9620B52848006DA1E0 /* WordGame.hpp */,
+				A9BBBF9820B5307A006DA1E0 /* WordGameTest.cpp */,
+			);
+			path = EWeek4;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A95CACFA20B520F500F01C5F /* EWeek4 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A95CAD0220B520F500F01C5F /* Build configuration list for PBXNativeTarget "EWeek4" */;
+			buildPhases = (
+				A95CACF720B520F500F01C5F /* Sources */,
+				A95CACF820B520F500F01C5F /* Frameworks */,
+				A95CACF920B520F500F01C5F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EWeek4;
+			productName = EWeek4;
+			productReference = A95CACFB20B520F500F01C5F /* EWeek4 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A95CACF320B520F500F01C5F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Clayton Wong";
+				TargetAttributes = {
+					A95CACFA20B520F500F01C5F = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = A95CACF620B520F500F01C5F /* Build configuration list for PBXProject "EWeek4" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A95CACF220B520F500F01C5F;
+			productRefGroup = A95CACFC20B520F500F01C5F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A95CACFA20B520F500F01C5F /* EWeek4 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A95CACF720B520F500F01C5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9BBBF9920B5307A006DA1E0 /* WordGameTest.cpp in Sources */,
+				A9BBBF8C20B52162006DA1E0 /* Failure.cpp in Sources */,
+				A9BBBFA320B684EF006DA1E0 /* BoardInitializerTest.cpp in Sources */,
+				A9BBBFA120B5F99F006DA1E0 /* WordFinder.cpp in Sources */,
+				A9BBBF9C20B5F02A006DA1E0 /* Dictionary.cpp in Sources */,
+				A9BBBF9120B52578006DA1E0 /* BoardInitializer.cpp in Sources */,
+				A9BBBF9720B52848006DA1E0 /* WordGame.cpp in Sources */,
+				A95CACFF20B520F500F01C5F /* main.cpp in Sources */,
+				A9BBBF8D20B52162006DA1E0 /* TestRegistry.cpp in Sources */,
+				A9BBBF8B20B52162006DA1E0 /* Test.cpp in Sources */,
+				A9BBBF9E20B5F503006DA1E0 /* DictionaryTest.cpp in Sources */,
+				A9BBBF8E20B52162006DA1E0 /* TestResult.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A95CAD0020B520F500F01C5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A95CAD0120B520F500F01C5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A95CAD0320B520F500F01C5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A95CAD0420B520F500F01C5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A95CACF620B520F500F01C5F /* Build configuration list for PBXProject "EWeek4" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A95CAD0020B520F500F01C5F /* Debug */,
+				A95CAD0120B520F500F01C5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A95CAD0220B520F500F01C5F /* Build configuration list for PBXNativeTarget "EWeek4" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A95CAD0320B520F500F01C5F /* Debug */,
+				A95CAD0420B520F500F01C5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A95CACF320B520F500F01C5F /* Project object */;
+}

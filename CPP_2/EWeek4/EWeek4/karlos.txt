@@ -1,0 +1,75 @@
+3rd year SW dev major
+
+MS VS for IDE
+
+SW vs NW choice for schoolwork
+
+	==> enjoy solving problems
+	
+	Data structures and algorithms?? no
+	
+	tried to solve two sum solved in python using O(n^2) algo
+	inefficient, and could not provide a solution in psuedo code
+	
+	
+
+Internship @ consulting company for websites
+
+	test cases for android/ios
+	
+		==> what platform or tools were used to test?
+		
+	
+	webdev ( html, css )
+		
+		javascript experience?
+		
+		
+		
+	SQL ==>
+		
+		pretty basic udertanding of SQL
+		
+
+	sublime text 3?
+	
+
+	White board coding...
+	
+	
+#include <vector>
+#include <unordered_map>
+#include <unordered_set>
+
+using namespace std;
+
+using VI=vector<int>;
+class Solution {
+public:
+	VI twoSum(const VI& A, int T){
+		unordered_map<int,int> m;
+		for (int i=0,N=(int)A.size(); i<N; ++i){
+			int x=T-A[i];
+			if (m.find(x)!=m.end())
+				return {i,m[x]};
+		}
+		return {};
+	}
+}
+
+class Solution2 {
+public:
+	bool isPrime(int N){
+		if (i<=1)
+			return false;
+		vector<int> A(N+1,0);
+		unordered_set<int> V;
+		for (int i=2; i<=N; ++i)
+			A[i]=i;
+		for (int i=2; i<=ceil(sqrt(N)); ++i)
+			for (int j=i; j<=N; j+=i)
+				V.insert(i);
+		return V.find(N)==V.end();
+	}
+}
+
