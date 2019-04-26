@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<!-- saved from url=(0114)https://canvas.uw.edu/courses/1205169/pages/lesson-one-part-2-properties-of-vector-graphics?module_item_id=8253604 -->
+<html class="" dir="ltr" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Lesson One, Part 2: Properties of Vector Graphics: CPROGRM 713 A Su 18: C++ Programming: Advanced</title>
+  <!--[if lte IE 9]> <meta http-equiv=refresh content="0; URL=/ie-9-is-not-supported.html" /> <![endif]-->
+  <link rel="preload" href="https://du11hjcvx0uqb.cloudfront.net/dist/fonts/lato/latin/LatoLatin-Regular-3cd3657802.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="shortcut icon" type="image/x-icon" href="https://instructure-uploads.s3.amazonaws.com/account_100000000083919/attachments/37312004/favicon.ico?AWSAccessKeyId=AKIAJFNFXH2V2O7RPCAA&amp;Expires=1939374366&amp;Signature=lNl7iuCda9spDgRONbwVvr490LM%3D&amp;response-cache-control=Cache-Control%3Amax-age%3D473364000.0%2C%20public&amp;response-expires=473364000.0">
+  <link rel="apple-touch-icon" href="https://instructure-uploads.s3.amazonaws.com/account_100000000083919/attachments/37312005/Canvas-MobileHome.png?AWSAccessKeyId=AKIAJFNFXH2V2O7RPCAA&amp;Expires=1939374366&amp;Signature=jwVDIJvM6uIaOoE%2FSW94uwVcHU0%3D&amp;response-cache-control=Cache-Control%3Amax-age%3D473364000.0%2C%20public&amp;response-expires=473364000.0">
+  
+  <link rel="stylesheet" media="all" href="./Lesson 2 Properties of Vector Graphics_files/variables-750d72b9d3e5d522f965bf904110c132.css">
+  <link rel="stylesheet" media="all" href="./Lesson 2 Properties of Vector Graphics_files/common-0b903cdc9b.css">
+  <script type="text/javascript" async="" src="./Lesson 2 Properties of Vector Graphics_files/ga.js"></script><script>
+//<![CDATA[
+
+!function(){
+  function get(u){document.write('<scr'+'ipt src="'+ u +'"></sc'+'ript>')}
+  var o,s,v;
+  if (!(window.Promise && Object.assign && Object.values && [].find && [].includes && (o={},s=Symbol(),v={},o[s]=v,o[s]===v) && (function f(){}).bind().name==='bound f')) {
+    get("https://du11hjcvx0uqb.cloudfront.net/dist/ie11-polyfill-eaf1bda494.js");
+  }
+  window.fetch || get("https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.4/fetch.min.js");
+}();
+      
+//]]>
+</script>
+  <script src="./Lesson 2 Properties of Vector Graphics_files/lato-fontfaceobserver-ed903d58c4.js" async="async"></script>
+  
+  <meta name="apple-itunes-app" content="app-id=480883488">
+<link rel="manifest" href="https://canvas.uw.edu/web-app-manifest/manifest.json">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#008EE2">
+  <link rel="stylesheet" media="all" href="./Lesson 2 Properties of Vector Graphics_files/wiki_page-46e7e026f6.css">
+  
+  <link rel="stylesheet" media="all" href="./Lesson 2 Properties of Vector Graphics_files/custom.css">
+<link rel="stylesheet" media="all" href="./Lesson 2 Properties of Vector Graphics_files/custom(1).css">
+  <script>
+    function _earlyClick(e){
+      var c = e.target
+      while (c && c.ownerDocument) {
+        if (c.getAttribute('href') == '#' || c.getAttribute('data-method')) {
+          e.preventDefault()
+          (_earlyClick.clicks = _earlyClick.clicks || []).push(c)
+          break
+        }
+        c = c.parentNode
+      }
+    }
+    document.addEventListener('click', _earlyClick)
+  </script>
+  <script src="./Lesson 2 Properties of Vector Graphics_files/variables-750d72b9d3e5d522f965bf904110c132.js" defer="defer"></script>
+  <script src="./Lesson 2 Properties of Vector Graphics_files/vendor.bundle-24e68f82e5.js" defer="defer"></script>
+<script src="./Lesson 2 Properties of Vector Graphics_files/Los_Angeles-d9cac65c52.js" defer="defer"></script>
+<script src="./Lesson 2 Properties of Vector Graphics_files/en_US-80a0ce259b.js" defer="defer"></script>
+<script src="./Lesson 2 Properties of Vector Graphics_files/appBootstrap.bundle-d1dcd6b0ef.js" defer="defer"></script>
+<script src="./Lesson 2 Properties of Vector Graphics_files/common.bundle-99f5b94735.js" defer="defer"></script>
+<script src="./Lesson 2 Properties of Vector Graphics_files/wiki_page_show.bundle-f24ccc441e.js" defer="defer"></script>
+<style type="text/css"></style><style type="text/css">.mejs-offscreen{clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);clip-path:polygon(0px 0,0 0,0 0,0 0);position:absolute!important;height:1px;width:1px;overflow:hidden}.mejs-container{position:relative;background:#000;font-family:Helvetica,Arial,serif;text-align:left;vertical-align:top;text-indent:0}.mejs-fill-container,.mejs-fill-container .mejs-container{width:100%;height:100%}.mejs-fill-container{overflow:hidden}.mejs-container:focus{outline:0}.me-plugin{position:absolute}.mejs-embed,.mejs-embed body{width:100%;height:100%;margin:0;padding:0;background:#000;overflow:hidden}.mejs-fullscreen{overflow:hidden!important}.mejs-container-fullscreen{position:fixed;left:0;top:0;right:0;bottom:0;overflow:hidden;z-index:1000}.mejs-container-fullscreen .mejs-mediaelement,.mejs-container-fullscreen video{width:100%;height:100%}.mejs-clear{clear:both}.mejs-background{position:absolute;top:0;left:0}.mejs-mediaelement{position:absolute;top:0;left:0;width:100%;height:100%}.mejs-poster{position:absolute;top:0;left:0;background-size:contain;background-position:50% 50%;background-repeat:no-repeat}:root .mejs-poster img{display:none}.mejs-poster img{border:0;padding:0}.mejs-overlay{position:absolute;top:0;left:0}.mejs-overlay-play{cursor:pointer}.mejs-overlay-button{position:absolute;top:50%;left:50%;width:100px;height:100px;margin:-50px 0 0 -50px;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/746c3af7a145a09239a36e5ef61cfea0.svg) no-repeat}.no-svg .mejs-overlay-button{background-image:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/716436fb3df0d29e6b37dd62d952676a.png)}.mejs-overlay:hover .mejs-overlay-button{background-position:0 -100px}.mejs-overlay-loading{position:absolute;top:50%;left:50%;width:80px;height:80px;margin:-40px 0 0 -40px;background:#333;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(0,0,0,.9);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(50,50,50,.9)),to(rgba(0,0,0,.9)));background:-webkit-linear-gradient(top,rgba(50,50,50,.9),rgba(0,0,0,.9));background:-moz-linear-gradient(top,rgba(50,50,50,.9),rgba(0,0,0,.9));background:-o-linear-gradient(top,rgba(50,50,50,.9),rgba(0,0,0,.9));background:-ms-linear-gradient(top,rgba(50,50,50,.9),rgba(0,0,0,.9));background:linear-gradient(rgba(50,50,50,.9),rgba(0,0,0,.9))}.mejs-overlay-loading span{display:block;width:80px;height:80px;background:transparent url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/76b326f4d44222126fee21076595bef5.gif) 50% 50% no-repeat}.mejs-container .mejs-controls{position:absolute;list-style-type:none;margin:0;padding:0;bottom:0;left:0;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(0,0,0,.7);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(50,50,50,.7)),to(rgba(0,0,0,.7)));background:-webkit-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-moz-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-o-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-ms-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:linear-gradient(rgba(50,50,50,.7),rgba(0,0,0,.7));height:30px;width:100%}.mejs-container .mejs-controls div{list-style-type:none;background-image:none;display:block;float:left;margin:0;padding:0;width:26px;height:26px;font-size:11px;line-height:11px;font-family:Helvetica,Arial,serif;border:0}.mejs-controls .mejs-button button{cursor:pointer;display:block;font-size:0;line-height:0;text-decoration:none;margin:7px 5px;padding:0;position:absolute;height:16px;width:16px;border:0;background:transparent url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/40f56f5a736da4effeb790cedb8a52f0.svg) no-repeat}.no-svg .mejs-controls .mejs-button button{background-image:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/24a0227fbdd3acfd86ff03fc3fc6c8a4.png)}.mejs-controls .mejs-button button:focus{outline:dotted 1px #999}.mejs-container .mejs-controls .mejs-time{color:#fff;display:block;height:17px;width:auto;padding:10px 3px 0;overflow:hidden;text-align:center;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}.mejs-container .mejs-controls .mejs-time a{color:#fff;font-size:11px;line-height:12px;display:block;float:left;margin:1px 2px 0 0;width:auto}.mejs-controls .mejs-play button{background-position:0 0}.mejs-controls .mejs-pause button{background-position:0 -16px}.mejs-controls .mejs-stop button{background-position:-112px 0}.mejs-controls div.mejs-time-rail{direction:ltr;width:200px;padding-top:5px}.mejs-controls .mejs-time-rail span,.mejs-controls .mejs-time-rail a{display:block;position:absolute;width:180px;height:10px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;cursor:pointer}.mejs-controls .mejs-time-rail .mejs-time-total{margin:5px;background:#333;background:rgba(50,50,50,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(30,30,30,.8)),to(rgba(60,60,60,.8)));background:-webkit-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-moz-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-o-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-ms-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:linear-gradient(rgba(30,30,30,.8),rgba(60,60,60,.8))}.mejs-controls .mejs-time-rail .mejs-time-buffering{width:100%;background-image:-o-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:-webkit-gradient(linear,0 100%,100% 0,color-stop(0.25,rgba(255,255,255,.15)),color-stop(0.25,transparent),color-stop(0.5,transparent),color-stop(0.5,rgba(255,255,255,.15)),color-stop(0.75,rgba(255,255,255,.15)),color-stop(0.75,transparent),to(transparent));background-image:-webkit-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:-moz-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:-ms-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);-webkit-background-size:15px 15px;-moz-background-size:15px 15px;-o-background-size:15px 15px;background-size:15px 15px;-webkit-animation:buffering-stripes 2s linear infinite;-moz-animation:buffering-stripes 2s linear infinite;-ms-animation:buffering-stripes 2s linear infinite;-o-animation:buffering-stripes 2s linear infinite;animation:buffering-stripes 2s linear infinite}@-webkit-keyframes buffering-stripes{from{background-position:0 0}to{background-position:30px 0}}@-moz-keyframes buffering-stripes{from{background-position:0 0}to{background-position:30px 0}}@-ms-keyframes buffering-stripes{from{background-position:0 0}to{background-position:30px 0}}@-o-keyframes buffering-stripes{from{background-position:0 0}to{background-position:30px 0}}@keyframes buffering-stripes{from{background-position:0 0}to{background-position:30px 0}}.mejs-controls .mejs-time-rail .mejs-time-loaded{background:#3caac8;background:rgba(60,170,200,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(44,124,145,.8)),to(rgba(78,183,212,.8)));background:-webkit-linear-gradient(top,rgba(44,124,145,.8),rgba(78,183,212,.8));background:-moz-linear-gradient(top,rgba(44,124,145,.8),rgba(78,183,212,.8));background:-o-linear-gradient(top,rgba(44,124,145,.8),rgba(78,183,212,.8));background:-ms-linear-gradient(top,rgba(44,124,145,.8),rgba(78,183,212,.8));background:linear-gradient(rgba(44,124,145,.8),rgba(78,183,212,.8));width:0}.mejs-controls .mejs-time-rail .mejs-time-current{background:#fff;background:rgba(255,255,255,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(255,255,255,.9)),to(rgba(200,200,200,.8)));background:-webkit-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-moz-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-o-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-ms-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:linear-gradient(rgba(255,255,255,.9),rgba(200,200,200,.8));width:0}.mejs-controls .mejs-time-rail .mejs-time-handle{display:none;position:absolute;margin:0;width:10px;background:#fff;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;cursor:pointer;border:solid 2px #333;top:-2px;text-align:center}.mejs-controls .mejs-time-rail .mejs-time-float{position:absolute;display:none;background:#eee;width:36px;height:17px;border:solid 1px #333;top:-26px;margin-left:-18px;text-align:center;color:#111}.mejs-controls .mejs-time-rail .mejs-time-float-current{margin:2px;width:30px;display:block;text-align:center;left:0}.mejs-controls .mejs-time-rail .mejs-time-float-corner{position:absolute;display:block;width:0;height:0;line-height:0;border:solid 5px #eee;border-color:#eee transparent transparent;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;top:15px;left:13px}.mejs-long-video .mejs-controls .mejs-time-rail .mejs-time-float{width:48px}.mejs-long-video .mejs-controls .mejs-time-rail .mejs-time-float-current{width:44px}.mejs-long-video .mejs-controls .mejs-time-rail .mejs-time-float-corner{left:18px}.mejs-controls .mejs-fullscreen-button button{background-position:-32px 0}.mejs-controls .mejs-unfullscreen button{background-position:-32px -16px}.mejs-controls .mejs-volume-button{}.mejs-controls .mejs-mute button{background-position:-16px -16px}.mejs-controls .mejs-unmute button{background-position:-16px 0}.mejs-controls .mejs-volume-button{position:relative}.mejs-controls .mejs-volume-button .mejs-volume-slider{height:115px;width:25px;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;top:-115px;left:0;z-index:1;position:absolute;margin:0}.mejs-controls .mejs-volume-button:hover{-webkit-border-radius:0 0 4px 4px;-moz-border-radius:0 0 4px 4px;border-radius:0 0 4px 4px}.mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-total{position:absolute;left:11px;top:8px;width:2px;height:100px;background:#ddd;background:rgba(255,255,255,.5);margin:0}.mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-current{position:absolute;left:11px;top:8px;width:2px;height:100px;background:#ddd;background:rgba(255,255,255,.9);margin:0}.mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-handle{position:absolute;left:4px;top:-3px;width:16px;height:6px;background:#ddd;background:rgba(255,255,255,.9);cursor:N-resize;-webkit-border-radius:1px;-moz-border-radius:1px;border-radius:1px;margin:0}.mejs-controls a.mejs-horizontal-volume-slider{height:26px;width:56px;position:relative;display:block;float:left;vertical-align:middle}.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total{position:absolute;left:0;top:11px;width:50px;height:8px;margin:0;padding:0;font-size:1px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background:#333;background:rgba(50,50,50,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(30,30,30,.8)),to(rgba(60,60,60,.8)));background:-webkit-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-moz-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-o-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-ms-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:linear-gradient(rgba(30,30,30,.8),rgba(60,60,60,.8))}.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current{position:absolute;left:0;top:11px;width:50px;height:8px;margin:0;padding:0;font-size:1px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background:#fff;background:rgba(255,255,255,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(255,255,255,.9)),to(rgba(200,200,200,.8)));background:-webkit-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-moz-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-o-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-ms-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:linear-gradient(rgba(255,255,255,.9),rgba(200,200,200,.8))}.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-handle{display:none}.mejs-controls .mejs-captions-button{position:relative}.mejs-controls .mejs-captions-button button{background-position:-48px 0}.mejs-controls .mejs-captions-button .mejs-captions-selector{position:absolute;bottom:26px;right:-51px;width:85px;height:100px;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);border:solid 1px transparent;padding:10px 10px 0;overflow:hidden;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}.mejs-controls .mejs-captions-button .mejs-captions-selector ul{margin:0;padding:0;display:block;list-style-type:none!important;overflow:hidden}.mejs-controls .mejs-captions-button .mejs-captions-selector ul li{margin:0 0 6px;padding:0;list-style-type:none!important;display:block;color:#fff;overflow:hidden}.mejs-controls .mejs-captions-button .mejs-captions-selector ul li input{clear:both;float:left;margin:3px 3px 0 5px}.mejs-controls .mejs-captions-button .mejs-captions-selector ul li label{width:55px;float:left;padding:4px 0 0;line-height:15px;font-family:Helvetica,Arial,serif;font-size:10px}.mejs-controls .mejs-captions-button .mejs-captions-translations{font-size:10px;margin:0 0 5px}.mejs-chapters{position:absolute;top:0;left:0;border-right:solid 1px #fff;width:10000px;z-index:1}.mejs-chapters .mejs-chapter{position:absolute;float:left;background:#222;background:rgba(0,0,0,.7);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(50,50,50,.7)),to(rgba(0,0,0,.7)));background:-webkit-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-moz-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-o-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-ms-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:linear-gradient(rgba(50,50,50,.7),rgba(0,0,0,.7));filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr=#323232, endColorstr=#000000);overflow:hidden;border:0}.mejs-chapters .mejs-chapter .mejs-chapter-block{font-size:11px;color:#fff;padding:5px;display:block;border-right:solid 1px #333;border-bottom:solid 1px #333;cursor:pointer}.mejs-chapters .mejs-chapter .mejs-chapter-block-last{border-right:0}.mejs-chapters .mejs-chapter .mejs-chapter-block:hover{background:#666;background:rgba(102,102,102,.7);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(102,102,102,.7)),to(rgba(50,50,50,.6)));background:-webkit-linear-gradient(top,rgba(102,102,102,.7),rgba(50,50,50,.6));background:-moz-linear-gradient(top,rgba(102,102,102,.7),rgba(50,50,50,.6));background:-o-linear-gradient(top,rgba(102,102,102,.7),rgba(50,50,50,.6));background:-ms-linear-gradient(top,rgba(102,102,102,.7),rgba(50,50,50,.6));background:linear-gradient(rgba(102,102,102,.7),rgba(50,50,50,.6));filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr=#666666, endColorstr=#323232)}.mejs-chapters .mejs-chapter .mejs-chapter-block .ch-title{font-size:12px;font-weight:700;display:block;white-space:nowrap;text-overflow:ellipsis;margin:0 0 3px;line-height:12px}.mejs-chapters .mejs-chapter .mejs-chapter-block .ch-timespan{font-size:12px;line-height:12px;margin:3px 0 4px;display:block;white-space:nowrap;text-overflow:ellipsis}.mejs-captions-layer{position:absolute;bottom:0;left:0;text-align:center;line-height:20px;font-size:16px;color:#fff}.mejs-captions-layer a{color:#fff;text-decoration:underline}.mejs-captions-layer[lang=ar]{font-size:20px;font-weight:400}.mejs-captions-position{position:absolute;width:100%;bottom:15px;left:0}.mejs-captions-position-hover{bottom:35px}.mejs-captions-text,.mejs__captions-text *{padding:0;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(20,20,20,.5);white-space:pre-wrap;-webkit-box-shadow:5px 0 0 rgba(20,20,20,.5),-5px 0 0 rgba(20,20,20,.5);box-shadow:5px 0 0 rgba(20,20,20,.5),-5px 0 0 rgba(20,20,20,.5)}.me-cannotplay{}.me-cannotplay a{color:#fff;font-weight:700}.me-cannotplay span{padding:15px;display:block}.mejs-controls .mejs-loop-off button{background-position:-64px -16px}.mejs-controls .mejs-loop-on button{background-position:-64px 0}.mejs-controls .mejs-backlight-off button{background-position:-80px -16px}.mejs-controls .mejs-backlight-on button{background-position:-80px 0}.mejs-controls .mejs-picturecontrols-button{background-position:-96px 0}.mejs-contextmenu{position:absolute;width:150px;padding:10px;border-radius:4px;top:0;left:0;background:#fff;border:solid 1px #999;z-index:1001}.mejs-contextmenu .mejs-contextmenu-separator{height:1px;font-size:0;margin:5px 6px;background:#333}.mejs-contextmenu .mejs-contextmenu-item{font-family:Helvetica,Arial,serif;font-size:12px;padding:4px 6px;cursor:pointer;color:#333}.mejs-contextmenu .mejs-contextmenu-item:hover{background:#2C7C91;color:#fff}.mejs-controls .mejs-sourcechooser-button{position:relative}.mejs-controls .mejs-sourcechooser-button button{background-position:-128px 0}.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector{position:absolute;bottom:26px;right:-10px;width:130px;height:100px;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);border:solid 1px transparent;padding:10px;overflow:hidden;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul{margin:0;padding:0;display:block;list-style-type:none!important;overflow:hidden}.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul li{margin:0 0 6px;padding:0;list-style-type:none!important;display:block;color:#fff;overflow:hidden}.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul li input{clear:both;float:left;margin:3px 3px 0 5px}.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul li label{width:100px;float:left;padding:4px 0 0;line-height:15px;font-family:Helvetica,Arial,serif;font-size:10px}.mejs-postroll-layer{position:absolute;bottom:0;left:0;width:100%;height:100%;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);z-index:1000;overflow:hidden}.mejs-postroll-layer-content{width:100%;height:100%}.mejs-postroll-close{position:absolute;right:0;top:0;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);color:#fff;padding:4px;z-index:100;cursor:pointer}div.mejs-speed-button{width:46px!important;position:relative}.mejs-controls .mejs-button.mejs-speed-button button{background:transparent;width:36px;font-size:11px;line-height:normal;color:#fff}.mejs-controls .mejs-speed-button .mejs-speed-selector{position:absolute;top:-100px;left:-10px;width:60px;height:100px;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);border:solid 1px transparent;padding:0;overflow:hidden;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}.mejs-controls .mejs-speed-button .mejs-speed-selector ul li label.mejs-speed-selected{color:rgba(33,248,248,1)}.mejs-controls .mejs-speed-button .mejs-speed-selector ul{margin:0;padding:0;display:block;list-style-type:none!important;overflow:hidden}.mejs-controls .mejs-speed-button .mejs-speed-selector ul li{margin:0 0 6px;padding:0 10px;list-style-type:none!important;display:block;color:#fff;overflow:hidden}.mejs-controls .mejs-speed-button .mejs-speed-selector ul li input{clear:both;float:left;margin:3px 3px 0 5px}.mejs-controls .mejs-speed-button .mejs-speed-selector ul li label{width:60px;float:left;padding:4px 0 0;line-height:15px;font-family:Helvetica,Arial,serif;font-size:11px;color:#fff;margin-left:5px;cursor:pointer}.mejs-controls .mejs-speed-button .mejs-speed-selector ul li:hover{background-color:#c8c8c8!important;background-color:rgba(255,255,255,.4)!important}.mejs-controls .mejs-button.mejs-jump-forward-button{background:transparent url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/15e1ac8cbacc2efdf1ac2677de48a253.png) no-repeat 3px 3px}.mejs-controls .mejs-button.mejs-jump-forward-button button{background:transparent;font-size:9px;line-height:normal;color:#fff}.mejs-controls .mejs-button.mejs-skip-back-button{background:transparent url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/cd6dc830eb45b3a5a96bbc936ff54846.png) no-repeat 3px 3px}.mejs-controls .mejs-button.mejs-skip-back-button button{background:transparent;font-size:9px;line-height:normal;color:#fff}</style><style type="text/css">/*
+ * Copyright (C) 2014 - present Instructure, Inc.
+ *
+ * This file is part of Canvas.
+ *
+ * Canvas is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU Affero General Public License as published by the Free
+ * Software Foundation, version 3 of the License.
+ *
+ * Canvas is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+ * A PARTICULAR PURPOSE. See the GNU Affero General Public License for more
+ * details.
+ *
+ * You should have received a copy of the GNU Affero General Public License along
+ * with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/* customizations to mediaelementplayer css */
+
+/* good menu widths */
+.mejs-sourcechooser-selector {
+  width: 160px;
+}
+.mejs-sourcechooser-selector label {
+  width: 160px !important;
+}
+
+.mejs-captions-selector {
+  width: 105px;
+}
+.mejs-captions-selector label {
+  width: 70px !important;
+}
+
+/* Subtitile upload link */
+.mejs-captions-selector .upload-track {
+  color: white;
+  margin: 3px 0 5px 5px;
+  float: direction(left);
+}
+
+/* "x" button to remove a subtitle */
+.mejs-captions-selector a[data-remove] {
+  position: absolute;
+  top: 0; right: 0;
+  color: white;
+}
+
+
+/* style menu items without a radio button */
+.mejs-button [role="menu"] {
+  padding: 0 !important;
+}
+ /* compensate for above 0 padding */
+ .mejs-button [role="menu"] ul li {
+  position: relative;
+  padding: 0 10px !important;
+}
+/* add a hover effect */
+.mejs-button [role="menu"] ul li:hover {
+  background-color: #c8c8c8 !important;
+  background-color: rgba(255, 255, 255, 0.4) !important;
+}
+.mejs-button [role="menu"] ul li input {
+  border: 0;
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+.mejs-button [role="menu"] ul li label {
+  margin-left: 5px;
+  cursor: pointer;
+}
+.mejs-button [role="menu"] label.mejs-selected {
+  color: #21f8f8 !important;
+}
+</style><style type="text/css" data-glamor=""></style></head>
+
+<body class="with-left-side course-menu-expanded padless-content pages primary-nav-transitions context-course_1205169 lato-font-not-loaded-yet show webkit chrome no-touch">
+
+<noscript>
+  <div role="alert" class="ic-flash-static ic-flash-error">
+    <div class="ic-flash__icon" aria-hidden="true">
+      <i class="icon-warning"></i>
+    </div>
+    <h1>You need to have JavaScript enabled in order to access this site.</h1>
+  </div>
+</noscript>
+
+
+
+
+
+<ul id="flash_message_holder"></ul>
+<div id="flash_screenreader_holder" role="alert" aria-live="assertive" aria-relevant="additions" class="screenreader-only" aria-atomic="false"></div>
+
+<div id="application" class="ic-app">
+  
+  <header id="header" class="ic-app-header no-print ">
+    <a href="https://canvas.uw.edu/courses/1205169/pages/lesson-one-part-2-properties-of-vector-graphics?module_item_id=8253604#content" id="skip_navigation_link">Skip To Content</a>
+      <div role="region" class="ic-app-header__main-navigation" aria-label="Global Navigation">
+        <div class="ic-app-header__logomark-container">
+          <a href="https://canvas.uw.edu/" class="ic-app-header__logomark">
+            <span class="screenreader-only">Dashboard</span>
+          </a>
+        </div>
+        <ul id="menu" class="ic-app-header__menu-list">
+            <li class="menu-item ic-app-header__menu-list-item ">
+              <a id="global_nav_profile_link" href="https://canvas.uw.edu/profile" class="ic-app-header__menu-list-link">
+                <div class="menu-item-icon-container" aria-hidden="true">
+                  <div class="ic-avatar ">
+                    <img src="./Lesson 2 Properties of Vector Graphics_files/mSs2TjTESYscSzrackhgoJvAT79xbNchamHPrSec" alt="Clayton Wong">
+                  </div>
+                </div>
+                <div class="menu-item__text">
+                  Account
+                </div>
+              </a>
+            </li>
+          <li class="ic-app-header__menu-list-item ">
+            <a id="global_nav_dashboard_link" href="https://canvas.uw.edu/" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--dashboard" version="1.1" x="0" y="0" viewBox="0 0 280 200" enable-background="new 0 0 280 200" xml:space="preserve"><path d="M273.09,180.75H197.47V164.47h62.62A122.16,122.16,0,1,0,17.85,142a124,124,0,0,0,2,22.51H90.18v16.29H6.89l-1.5-6.22A138.51,138.51,0,0,1,1.57,142C1.57,65.64,63.67,3.53,140,3.53S278.43,65.64,278.43,142a137.67,137.67,0,0,1-3.84,32.57ZM66.49,87.63,50.24,71.38,61.75,59.86,78,76.12Zm147,0L202,76.12l16.25-16.25,11.51,11.51ZM131.85,53.82v-23h16.29v23Zm15.63,142.3a31.71,31.71,0,0,1-28-16.81c-6.4-12.08-15.73-72.29-17.54-84.25a8.15,8.15,0,0,1,13.58-7.2c8.88,8.21,53.48,49.72,59.88,61.81a31.61,31.61,0,0,1-27.9,46.45ZM121.81,116.2c4.17,24.56,9.23,50.21,12,55.49A15.35,15.35,0,1,0,161,157.3C158.18,152,139.79,133.44,121.81,116.2Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">Dashboard</div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ic-app-header__menu-list-item--active">
+            <a id="global_nav_courses_link" href="https://canvas.uw.edu/courses" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--courses" version="1.1" x="0" y="0" viewBox="0 0 280 259" enable-background="new 0 0 280 259" xml:space="preserve"><path d="M73.31,198c-11.93,0-22.22,8-24,18.73a26.67,26.67,0,0,0-.3,3.63v.3a22,22,0,0,0,5.44,14.65,22.47,22.47,0,0,0,17.22,8H200V228.19h-134V213.08H200V198Zm21-105.74h90.64V62H94.3ZM79.19,107.34V46.92H200v60.42Zm7.55,30.21V122.45H192.49v15.11ZM71.65,16.71A22.72,22.72,0,0,0,49,39.36V190.88a41.12,41.12,0,0,1,24.32-8h157V16.71ZM33.88,39.36A37.78,37.78,0,0,1,71.65,1.6H245.36V198H215.15v45.32h22.66V258.4H71.65a37.85,37.85,0,0,1-37.76-37.76Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Courses
+              </div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_calendar_link" href="https://canvas.uw.edu/calendar" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--calendar" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M197.07,213.38h16.31V197.07H197.07Zm-16.31,16.31V180.76h48.92v48.92Zm-48.92-16.31h16.31V197.07H131.85Zm-16.31,16.31V180.76h48.92v48.92ZM66.62,213.38H82.93V197.07H66.62ZM50.32,229.68V180.76H99.24v48.92Zm146.75-81.53h16.31V131.85H197.07Zm-16.31,16.31V115.54h48.92v48.92Zm-48.92-16.31h16.31V131.85H131.85Zm-16.31,16.31V115.54h48.92v48.92ZM66.62,148.15H82.93V131.85H66.62ZM50.32,164.46V115.54H99.24v48.92ZM34,262.29H246V82.93H34ZM246,66.62V42.16A8.17,8.17,0,0,0,237.84,34H213.38v8.15a8.15,8.15,0,1,1-16.31,0V34H82.93v8.15a8.15,8.15,0,0,1-16.31,0V34H42.16A8.17,8.17,0,0,0,34,42.16V66.62Zm-8.15-48.92a24.49,24.49,0,0,1,24.46,24.46V278.6H17.71V42.16A24.49,24.49,0,0,1,42.16,17.71H66.62V9.55a8.15,8.15,0,0,1,16.31,0v8.15H197.07V9.55a8.15,8.15,0,1,1,16.31,0v8.15Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Calendar
+              </div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_conversations_link" href="https://canvas.uw.edu/conversations" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--inbox" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M91.72,120.75h96.56V104.65H91.72Zm0,48.28h80.47V152.94H91.72Zm0-96.56h80.47V56.37H91.72Zm160.94,34.88H228.52V10.78h-177v96.56H27.34A24.17,24.17,0,0,0,3.2,131.48V244.14a24.17,24.17,0,0,0,24.14,24.14H252.66a24.17,24.17,0,0,0,24.14-24.14V131.48A24.17,24.17,0,0,0,252.66,107.34Zm0,16.09a8.06,8.06,0,0,1,8,8v51.77l-32.19,19.31V123.44ZM67.58,203.91v-177H212.42v177ZM27.34,123.44H51.48v79.13L19.29,183.26V131.48A8.06,8.06,0,0,1,27.34,123.44ZM252.66,252.19H27.34a8.06,8.06,0,0,1-8-8V202l30,18H230.75l30-18v42.12A8.06,8.06,0,0,1,252.66,252.19Z"></path></svg>
+
+                <span class="menu-item__badge" style="display: none">0</span>
+              </div>
+              <div class="menu-item__text">
+                Inbox
+              </div>
+            </a>
+          </li>
+            
+
+
+          <li class="ic-app-header__menu-list-item">
+           <a id="global_nav_help_link" class="ic-app-header__menu-list-link" data-track-category="help system" data-track-label="help button" href="http://help.instructure.com/">
+              <div class="menu-item-icon-container" role="presentation">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg menu-item__icon svg-icon-help" version="1.1" x="0" y="0" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve" fill="currentColor"><path d="M100,127.88A11.15,11.15,0,1,0,111.16,139,11.16,11.16,0,0,0,100,127.88Zm8.82-88.08a33.19,33.19,0,0,1,23.5,23.5,33.54,33.54,0,0,1-24,41.23,3.4,3.4,0,0,0-2.74,3.15v9.06H94.42v-9.06a14.57,14.57,0,0,1,11.13-14,22.43,22.43,0,0,0,13.66-10.27,22.73,22.73,0,0,0,2.31-17.37A21.92,21.92,0,0,0,106,50.59a22.67,22.67,0,0,0-19.68,3.88,22.18,22.18,0,0,0-8.65,17.64H66.54a33.25,33.25,0,0,1,13-26.47A33.72,33.72,0,0,1,108.82,39.8ZM100,5.2A94.8,94.8,0,1,0,194.8,100,94.91,94.91,0,0,0,100,5.2m0,178.45A83.65,83.65,0,1,1,183.65,100,83.73,83.73,0,0,1,100,183.65" transform="translate(-5.2 -5.2)"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Help
+              </div>
+</a>          </li>
+        </ul>
+      </div>
+      <div class="ic-app-header__secondary-navigation">
+        <ul class="ic-app-header__menu-list">
+          <li class="menu-item ic-app-header__menu-list-item">
+            <button id="primaryNavToggle" class="ic-app-header__menu-list-link ic-app-header__menu-list-link--nav-toggle" aria-label="Expand global navigation
+                " title="Expand global navigation
+                ">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--navtoggle" version="1.1" x="0" y="0" width="40" height="32" viewBox="0 0 40 32" xml:space="preserve">
+  <path d="M39.5,30.28V2.48H37.18v27.8Zm-4.93-13.9L22.17,4,20.53,5.61l9.61,9.61H.5v2.31H30.14l-9.61,9.61,1.64,1.64Z"></path>
+</svg>
+
+              </div>
+            </button>
+          </li>
+        </ul>
+      </div>
+    <div id="global_nav_tray_container"><noscript data-reactid=".0"></noscript></div>
+  </header>
+
+
+  <div id="instructure_ajax_error_box">
+    <div style="text-align: right; background-color: #fff;"><a href="https://canvas.uw.edu/courses/1205169/pages/lesson-one-part-2-properties-of-vector-graphics?module_item_id=8253604#" class="close_instructure_ajax_error_box_link">Close</a></div>
+    <iframe id="instructure_ajax_error_result" src="./Lesson 2 Properties of Vector Graphics_files/saved_resource.html" style="border: 0;" title="Error"></iframe>
+  </div>
+
+  
+
+  <div id="wrapper" class="ic-Layout-wrapper">
+      <div class="ic-app-nav-toggle-and-crumbs no-print">
+          <button type="button" id="courseMenuToggle" class="Button Button--link ic-app-course-nav-toggle" aria-live="polite" aria-label="Hide Courses Navigation Menu" title="Hide Courses Navigation Menu">
+            <i class="icon-hamburger" aria-hidden="true"></i>
+          </button>
+          <div class="ic-app-crumbs">
+        <nav id="breadcrumbs" role="navigation" aria-label="breadcrumbs"><ul><li class="home"><a href="https://canvas.uw.edu/"><span class="ellipsible">      <i class="icon-home" title="My Dashboard">
+        <span class="screenreader-only">My Dashboard</span>
+      </i>
+</span></a></li><li><a href="https://canvas.uw.edu/courses/1205169"><span class="ellipsible">CPROGRM 713 A</span></a></li><li><a href="https://canvas.uw.edu/courses/1205169/pages"><span class="ellipsible">Pages</span></a></li><li><span class="ellipsible">Lesson One, Part 2: Properties of Vector Graphics</span></li></ul></nav>
+        </div>
+      </div>
+    <div id="main" class="ic-Layout-columns">
+        <div class="ic-Layout-watermark"></div>
+        <div id="left-side" class="ic-app-course-menu list-view" style="display: block">
+              <span id="section-tabs-header-subtitle" class="ellipsis">Summer 2018</span>
+            <nav role="navigation" aria-label="Courses Navigation Menu"><ul id="section-tabs"><li class="section"><a href="https://canvas.uw.edu/courses/1205169" title="Home" class="home" tabindex="0">Home</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1205169/modules" title="Modules" class="modules" tabindex="0">Modules</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1205169/discussion_topics" title="Discussions" class="discussions" tabindex="0">Discussions</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1205169/grades" title="Grades" class="grades" tabindex="0">Grades</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1205169/users" title="People" class="people" tabindex="0">People</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1205169/external_tools/63603" title="Info &amp; Help" class="context_external_tool_63603" tabindex="0">Info &amp; Help</a></li></ul></nav>
+        </div>
+      <div id="not_right_side" class="ic-app-main-content">
+        <div id="content-wrapper" class="ic-Layout-contentWrapper">
+            
+
+          <div id="content" class="ic-Layout-contentMain" role="main">
+            
+
+  
+
+<div id="wiki_page_show">
+<div class="header-bar-outer-container">
+  <div class="header-bar-container sticky-toolbar sticky" data-sticky="">
+    <div class="header-bar flex-container">
+      <div class="header-bar-left header-left-flex">
+        
+          
+        
+      </div>
+      <div class="header-bar-right header-right-flex">
+        
+          
+          
+            
+          
+        
+        
+          
+        
+        
+      </div>
+    </div>
+    <div class="page-changed-alert" role="alert" aria-atomic="true" aria-live="polite"></div>
+  </div>
+</div>
+
+
+<div class="show-content user_content clearfix enhanced">
+  <h1 class="page-title">Lesson One, Part 2: Properties of Vector Graphics</h1>
+  
+    <p>You should now have a strong, high-level definition of vector graphics, and so it is time to discuss the properties of our particular system's view of a vector graphic. For our purposes, we can view vector graphics as a more distilled concept than the perhaps more permissive, high-level definition. For us, vector graphics and most (if not all) other vector graphics systems can be thought of as shapes (composed of curves and lines and potentially open or closed) and the way in which they are drawn (the fill and the stroke).</p>
+<h2>Curves, Lines, and Points</h2>
+<p>No matter how complex a (2D) geometrical shape we have, it can be described in terms of curves and lines—both of which rely on the concept of a point. Since curve drawing can be more complex (and thus might require a stronger math background) than line drawing, we'll exclude curve support in this course. But, being (hopefully) firm believers in reusability, we'll make sure that adding support for curves won't later require a massive redesign. To do this, some basic understanding of how one might support arbitrary curves will be required. This knowledge is necessary to understand the future of our system, not just the present. When creating software that you intend for reuse, you must think ahead. Even if you can't predict the future, you can often make room for it. In our case, we can't (at least without taking the time to research intensely—at which point we might as well implement) predict exactly how the curve drawing algorithm would be implemented, but we can understanding some simple ways of defining curves.</p>
+<p>In figure 1.1, a curve is described by two additional points at a given point. Since these two additional points only have value in their relation to the first, they are relative. We will visit relativity in detail in Lesson Two, but you can think for now of the additional points as being relative to an origin of the primary point. To differentiate these points from the primary point—the one that actually defines where the line passes through—we will call the relative points handles.</p>
+<p>With more analysis, you will see that these handles are quite interesting; but for our purposes, all we need to know is that just two relative points are all that's technically needed to give our shape the possibility of all sorts of curves. This places the responsibility of defining curves in an object that would represent a point plus any handles (a more refined and domain specific view of a point). The repercussions of this are that we can think of lines and curves uniformly, and that we can think of a shape as an ordered collection of points (meaning our point-plus-handles definition of points).</p>
+<p>We can simplify things down to points rather than curves or lines because the points lead the path along which the line will be drawn—only when we draw do we need to connect the points with curved and straight lines. The benefits of viewing a shape as an ordered collection of points might not be as clear as the problems created by trying to describe a shape as lines and curves. If a vector graphic were composed of lines, then it would be impossible to modify one line's ending point without modifying another line's beginning point. To make sure the lines stay synchronized you would likely end up coming right back to a view of the shape as an ordered collection of points.</p>
+<h2>Fill and Stroke</h2>
+<p>Vector graphics conventionally allow the modification of fill and stroke styles. Think of the stroke as the pen you use (and the way you use it) to draw the lines of a rectangle and fill as the color, pattern or texture with which you might fill the center of the rectangle. Stroke and fill will be covered in much more detail later in this course, for now, know that we'll need them in the long term in our system. For the moment, we'll focus on the geometrical side of things and ignore how things actually get drawn, which leaves the stroke and fill out of our scope.</p>
+<h2>Closed and Open Shapes</h2>
+<p>One thing that may not be apparent already is that there can be both closed and open shapes. Although we could simulate closed shapes by having an extra point—such as a rectangle with five points, the last and first both being the origin—this would not be conceptually (or geometrically) accurate.</p>
+<p>The rectangle example should sufficiently show why using another point is unnatural. Instead, we can use the concept of "closed" (and its converse, "open"), to describe some of the differences between a rectangle and a line that travels across four points. For the implementation, the difference will be trivial: closed draws an extra line from the last point to the first. The distinction between closed and open shapes is not a profound feature but merely a requirement.</p>
+<h2>Creating the VectorGraphic Class</h2>
+<p>In this lesson, we will ignore the actual drawing of vector graphics onto unstructured surfaces. This leaves us with a VectorGraphic class that will be fairly minimal, but even with its simple requirements, the VectorGraphic class still requires a good deal of thought (or experience on which to draw intuitions) to be implemented in C++. Some questions, like what standard collection implementation (if any) should be used, might already be surfacing in your mind. Others, like whether the point should be a reference or value object, might not.</p>
+<h2>Points: Reference or Value Objects?</h2>
+<p>Reference or value is a distinction that becomes an issue in C++, but not in most other object-oriented languages. In C++, value objects are generally simple, concrete classes that are used like primitive types (such as <code>int</code>, <code>char</code>, and <code>float</code>) and are often copied. A reference object, on the other hand, is always used by reference and never copied. C++ also allows all the gradients in between reference and value. In C++, an inexperienced developer might define a class that uses polymorphic methods but also overloads operators. This would be a serious error, since the overloaded operators cannot be polymorphic and thus, when the class in question is subclassed, the operators will work incorrectly. An example is in order.</p>
+<table style="width: 480px;" border="0" cellspacing="10" cellpadding="4">
+<tbody>
+<tr>
+<th>Code Example 1.1</th>
+</tr>
+<tr>
+<td>
+<pre>class Animal<br>{<br>public:<br>    virtual int getAge () const;<br>    virtual std::string const&amp; getSpeciesName() const;<br>    bool operator==(Animal const&amp; other) const<br>    {<br>        return (other.getAge() == getAge ()) &amp;&amp; (other.getSpeciesName () == getSpeciesName));<br>    }<br>};<br><br>class Mammal : public Animal<br>{<br>private:<br>    typedef Animal Super;<br><br>public:<br>    enum Gender { Male, Female };<br>    virtual Gender getGender () const;<br>    bool operator== (Mammal const&amp; other) const<br>    {<br>        return Super::operator==(other) &amp;&amp; other.getGender() == getGender());<br>    }<br>};<br><br>// ...<br>Animal* femaleCat = new FemaleCat();<br>Animal* maleCat = new MaleCat ();<br><br>if (*femaleCat == *maleCat) {<br>    // this will be true when it should be false. If we had created<br>    // an isEqualTo polymorphic method, we wouldn't have this particular problem.<br>    throw WeHaveASeriousProblemHere();<br>}</pre>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Example 1.1 might be a bit obfuscated, but the fact that it is possible is a testament to the complexity (otherwise known as freedom) of C++. To keep problems like the code in our example from arising, it's best to keep value objects extremely simple. Use them only when they will behave exactly like primitive types, including support of most standard operators (especially assignment), and do not attempt to mix paradigms by using inheritance or polymorphism in any way.</p>
+<p>By default, you should assume reference semantics. Most non-trivial objects will be reference objects, and many of the trivial ones will, over the life of a system, begin to require a more sophisticated approach that merits making them reference objects. Value objects are exceptions, not rules. A simple motive for preferring reference objects is that a value object provides no features that a reference object can't provide. You might lose the ability to make your object look like a primitive type, but this is merely a loss of syntactical (and subjective) convenience.</p>
+<div class="importantBox">
+<h6>Important</h6>
+<p>A class cannot preclude itself from being used as a reference object, but it can preclude itself from being used as a value object.</p>
+</div>
+<p>One more important property to remember when distinguishing value objects from reference objects is that the class cannot preclude itself from being used as a reference object, but it can preclude itself from being used as a value object. This is why we use the term "object" instead of "class" when speaking of their differences—the class itself is not always definitively going to only allow its instances to be used one way or the other. Regardless of whether you can restrict usage of your class, you can always make your intentions clear via interface and documentation.</p>
+<p>Back to our vector graphics system. The Point class could potentially be designed for instantiation as a value object, because its history is predictable and simple. It needn't be anything more than setters and getters to two attributes: an x coordinate and a y coordinate. Our choice of whether to design it with the express intention of reference semantics or not would be based only on what's more consistent or expected, not on what features we might need (or at least, that's how it seems at present).</p>
+<h2>Supporting Closed and Open Shapes</h2>
+<p>As discussed in our analysis, open and closed shapes must both be supported. Clearly, this can be implemented via an attribute (whether a boolean or an enumerated type), but what methods will the client call to open and close the shape? Although your first instinct might be to create accessors, this might not work well for <code>open</code> and <code>close</code>. To open the shape should you <code>setOpen (true)</code> or <code>setClosed (false)</code>? The first hint that both of these would be less than ideal for method names is that they don't have normal naming semantics: they aren't normal verb phrases. More specifically, open and closed are states of being, not fields, so to speak. Naming in this way will also reveal an implementation detail—your true requirement is simply to allow <code>open</code> and <code>close</code> requests, but by using accessors for a boolean you reveal that your implementation does this via a boolean attribute. Other implementations might wish to support opening and closing in some other way, so making this implementation detail public will be making the other implementations more awkward.</p>
+<p>For these reasons, separate <code>open</code> and <code>close</code> methods might make more sense. Of course, the terms <span class="italics">open</span> and<span class="italics"> close </span>are heavily overloaded, and some extra distinction like <code>openShape</code> and <code>closeShape</code> might be in order. With all of this discussion for a seemingly simple task of naming the method or methods that allow opening and closing of a shape, we're still not finished, because <code>openShape</code> and <code>closeShape</code> will give clients the impression that they should pass in a shape object as a single parameter (just like registerStudent implies at least a single parameter of a Student object to most developers). For now, we'll ignore this problem and move on.</p>
+<p>It may also be necessary for clients to determine whether a shape is open or closed. Here we can provide an <code>isOpen</code> method, an <code>isClosed</code> method or both. Although providing both might cause confusion, it also will make algorithms cleaner and more self-documenting, as <code>vectorGraphic.isClosed ()</code> is more clear than <code>!vectorGraphic.isOpen ()</code>.</p>
+<h2>Reporting Bounds</h2>
+<p>Reporting bounds will be a requirement for most non-trivial usages of vector graphics. A reality of many technologies is that they work with an idealized horizontally-aligned rectangular form for bounds. In other words, although bounds could be described quite simply as the shape itself, or perhaps as an arbitrarily-aligned rectangular approximation of the shape, they are instead described basically as a width and height.</p>
+<div class="keytermBox">
+<h6>Key Terms</h6>
+<ul>
+<li>horizontal alignment</li>
+</ul>
+</div>
+<p>We will revisit the idea of rectangular bounds and horizontal alignment in a future lesson when we look at skewing and scaling. But the term <em>horizontal alignment</em> might need some explanation. "Horizontal alignment" refers to the archetypal rectangle whose sides all have no slope or zero slope. A rectangle such as the one in figure 1.4-A is what most systems call a rectangle.</p>
+<p class="title"><span class="bold">Figure 1.4 A</span>—Archetypal Rectangle</p>
+<p><img src="./Lesson 2 Properties of Vector Graphics_files/CPP713s01_05.gif" alt="Archetypal Rectangle" width="100" height="49" data-api-returntype="File" data-api-endpoint="https://canvas.uw.edu/api/v1/courses/1205169/files/47698235" style="max-width: 962px;"></p>
+<p>The rectangle in figure 1.4 A can be described by a single upper left and lower right coordinate, or, if its points are relative to its own upper left, simply a lower right coordinate—or width and height. Be aware, though, that this is not the true-and-proper definition of a rectangle and that the rectangle shown in figure 1.4-B is just as much a rectangle as the archetypal one above.</p>
+<p class="title"><span class="bold">Figure 1.4-B</span>—Less Archetypal Rectangle</p>
+<p><img src="./Lesson 2 Properties of Vector Graphics_files/CPP713s01_06.gif" alt="Less Archetypal Rectangle" width="100" height="73" data-api-returntype="File" data-api-endpoint="https://canvas.uw.edu/api/v1/courses/1205169/files/47698295" style="max-width: 962px;"></p>
+<p>For this reason, we'll simplify our vector graphic and just report width and height—which comprises the essence of what most of our clients are looking for. For example, if they are allocating memory for drawing, they'll need to multiply the width times the height to create a buffer. Once they do this they can draw the vector graphic into that buffer. In this case, they also won't need an upper left and lower right, so much as simply the relative lower right (or, once again, width and height).</p>
+<h2>Choosing a Collection</h2>
+<p>Choosing the best collection for a particular application in C++ requires some basic knowledge data structures and algorithms. In Lesson Two, we'll look deeper into the decision-making process; but for now we'll keep things simple and just use an <span class="CCodeChar"><code>std::vector&lt;&gt;</code></span> for our points.</p>
+<h2>Summary of Choices</h2>
+<p>Applying all of our decisions, our basic knowledge of C++ collections and self-documenting naming practices, we now have a VectorGraphic that looks like example 1.3.</p>
+<table style="width: 480px;" border="0" cellspacing="10" cellpadding="4">
+<tbody>
+<tr>
+<th>Code Example 1.3</th>
+</tr>
+<tr>
+<td>
+<pre>using Points = std::vector&lt;Point&gt;;<br><br>class VectorGraphic<br>{<br>    public:<br>        VectorGraphic();<br>        ~VectorGraphic();<br><br>        void addPoint(const Point&amp; p);				<br>        void removePoint(const Point&amp; p);<br>        void erasePoint(int index);<br><br>        void openShape();<br>        void closeShape();<br><br>        bool isOpen() const;<br>        bool isClosed() const;<br><br>        int getWidth() const;<br>        int getHeight() const;<br><br>        int getPointCount() const;<br>        Point getPoint(int index) const;<br><br>    private:<br>        Points myPath;<br><br>        // ...<br>}</pre>
+</td>
+</tr>
+</tbody>
+</table>
+<p>In your assignment for this lesson, you will complete and test this implementation of VectorGraphic via loading and saving an XML-like definition of a VectorGraphic.</p>
+<h2>New in C++ 11</h2>
+<h3>lvalues, rvalues, and universal references</h3>
+<h4>lvalues</h4>
+<p>The fundamental objects in C++ that we're used to dealing with have “identity.” This means they occupy a specific address in memory that we can access, and we can use their address to distinguish one particular object from another when they might otherwise be identical (have the same value). These types of objects are called “lvalues”, because they can appear on the left-hand side of an assignment.</p>
+<h4>rvalues</h4>
+<p>C++ (and its ancestor C) have always had other types of objects with no “identity”. Typically these are temporary objects created by the compiler; things like the return value of a function, or a temporary copy of an object used as a function argument. We typically don’t know or care about the actual address of a temporary, and even if we did it’s not safe to store that address for use later on. These types of values are called “rvalues”, to contrast with the term “lvalue”. An rvalue is something you cannot assign to.</p>
+<p>C++11 leverages this concept of rvalues, and provides new syntax for us to work with them. The notation “&amp;&amp;” means “rvalue reference”: a reference to which we can bind an rvalue. C++11 takes advantage of the fact that an rvalue reference is a reference to something that nobody can assign to. That means its safe to “steal” its value… to move it somewhere else. Moving a value is typically cheaper than copying, usually avoiding the cost of constructing a new object to avoid compromising the original source object. This is referred to as “move semantics”. More about this later.</p>
+<h4>universal references</h4>
+<p>Actually, when you see the notation "&amp;&amp;", it doesn't *always* mean you're looking at an rvalue reference - it depends on the context. Sometimes "T&amp;&amp;" means "rvalue reference", but sometimes it means "either rvalue reference or lvalue reference" - what Meyers calls a "universal reference". It can bind to anything: rvalue or lvalue, const or non-const, volatile or non-volatile.</p>
+<p>There are two contexts in which T&amp;&amp; means "universal reference". The most common is function template parameters, like this:</p>
+<pre>    template  void f(T&amp;&amp; param); // param is a universal reference
+</pre>
+<p>The second context is in auto declarations, like this:</p>
+<pre>    auto&amp;&amp; var2 = var1; // var2 is a universal reference
+</pre>
+<p>(Examples taken directly from Scott Meyers' "Effective Modern C++".)</p>
+<p>In both of these contexts, the compiler must deduce the type. If type deduction results in T being an rvalue, T&amp;&amp; is an rvalue reference; if type deduction yields T as an lvalue, T&amp;&amp; is an lvalue reference. Continuing with Scott Meyers' example:</p>
+<pre>    template  void f(T&amp;&amp; param); // param is a universal reference
+
+    Widget w;
+
+    // lvalue passed to f; param's type is lvalue reference (Widget&amp;) f(w);
+
+    // rvalue passed to f; param's type is rvalue reference (Widget&amp;&amp;)
+    f(std::move(w));
+</pre>
+<h3>Function <i>parameters</i> vs. <i>arguments</i>
+</h3>
+<p>In C++11 it’s useful to emphasize the distinction between a function’s formal arguments — typically called “parameters” — and its actual arguments — usually called simply “arguments”.</p>
+<p>Function parameters are the variables you have inside the body of a function. Function arguments are the expressions evaluated at the location where the function is called.</p>
+<p>The distinction is important because function parameters are always lvalues — even though they may be declared in the function signature with “&amp;&amp;” (meaning its type is an rvalue reference). The arguments with which the function parameters are initialized may be lvalues or rvalues — impacting whether values are moved or copied into the parameters.</p>
+<p>&nbsp;</p>
+<h2>Move semantics: move constructor and move assignment</h2>
+<p>Taking advantage of move semantics to increase efficiency in our programs usually requires us to do a little more work when writing our own classes. We may need to write move assignment operators.</p>
+<p>We're used to seeing copy constructors and copy assignment operators:</p>
+<pre>    class Widget {
+    // ...
+
+        Widget(const Widget&amp; w);            // copy CTOR
+        Widget&amp; operator=(const Widget&amp; w); // copy assignment
+
+    //...
+    };
+</pre>
+<p>To allow the compiler move our objects when possible, we can provide move constructors and move assignment operators:</p>
+<pre>    class Widget {
+    // ...
+
+        Widget(const Widget&amp; w);            // copy CTOR
+        Widget&amp; operator=(const Widget&amp; w); // copy assignment
+
+    	Widget(Widget&amp;&amp; w);                 // move CTOR
+        Widget&amp; operator=(Widget&amp;&amp; w);      // move assignment
+
+    //...
+    };
+</pre>
+<p>Notice that, unlike the copy methods, the "move" methods take non-const arguments. That makes sense, because a move operation will remove the value from its argument.</p>
+<p>After a move, the moved-from object should be in a state that allows its destructor to be run safely.</p>
+<p>Let's say Widget is a "pimpl" (pointer-to-implementation) idiom class. A simple implementation for its move constructor might look something like this:</p>
+<pre>    Widget::Widget(Widget&amp;&amp; w) :
+        myImplP{w.myImplP}
+    {
+        w.myImplP = nullptr; // empty impl, safe to destroy
+    }
+</pre>
+<h2>Automatic generation of move operations</h2>
+<p>The compiler will automatically create move operations for you -- when needed -- only if three things are true:</p>
+<ol>
+<li>No copy operations are declared in the class</li>
+<li>No move operations are declared in the class</li>
+<li>No destructor is declared in the class</li>
+</ol>
+<p>There's an old C++ guideline called the "Rule of Three" that says: if you declare any of a copy constructor, copy assignment operator, or destructor, you should declare all three. It's based on the idea that if you need to override the default behavior of any of these, it's because you have special resource management needs. That would imply you probably need special behavior in all of those functions.</p>
+<p>C++11 extends this reasoning to include the move operations. If you declare any special copy or move operation yourself, it probably means you have special resource management needs, therefore the compiler should not create the default ones for you.</p>
+<p>If you really do want the compiler to create them for you anyway, you can use the new "= default" keyword, like this:</p>
+<pre>    class Widget {
+    public:
+        // user-declared DTOR
+        ~Widget();                           // user-declared DTOR
+	
+        // want the default copy operations anyway
+        Widget(const Widget&amp; w) = default;
+        Widget&amp; operator=(const Widget&amp; w) = default;
+
+        // and the default move operations
+        Widget(Widget&amp;&amp; w) = default;
+        Widget&amp; operator=(Widget&amp;&amp; w) = default;
+
+        //...
+    };
+</pre>
+<h2>std::move and std::forward</h2>
+<p>In spite of its name, <code>std::move</code> doesn't actually move anything. It's like a cast operation; it returns an rvalue reference to its argument so that it can be moved from. It doesn't do anything at runtime.</p>
+<p><code>std::forward</code> is very similar. While <code>std::move</code> performs an <em>unconditional</em> cast to an rvalue, <code>std::forward</code> performs a <em>conditional</em> cast. It will only cast its argument to an rvalue if that argument is bound to an rvalue. It's typically used in function templates to "forward" a universal reference parameter to another function.</p>
+<p>You should use <code>std::move</code> on rvalue references, <code>std::forward</code> on universal references (Meyers' rule #25).</p>
+<p>You may wonder why you shouldn't just use <code>std::forward</code> all the time, since it does the right thing regardless of the type of reference you use with it. There are a couple of good reasons:</p>
+<ol>
+<li>
+<code>std::move</code> is easier to use - it doesn't require a type argument (also eliminating the chance of providing an incorrect type argument); and</li>
+<li>it explicitly conveys your intent: you absolutely want that argument to be moved from - you don't want to just forward whatever type you happen to have to another function.</li>
+</ol>
+<p>&nbsp;</p>
+  
+</div>
+<div style=""><div class="module-sequence-padding"></div>
+<div class="module-sequence-footer" role="navigation" aria-label="Module Navigation">
+  <div class="module-sequence-footer-content">
+    
+      <a href="https://canvas.uw.edu/courses/1205169/modules/items/8253603" role="button" class="Button module-sequence-footer-button--previous" data-tooltip="right" data-html-tooltip-title="&lt;i class=&#39;icon-document&#39;&gt;&lt;/i&gt; Lesson One, Part 1: Defining a Vector Graphic" aria-describedby="msf0-previous-desc">
+        <i class="icon-mini-arrow-left"></i>Previous
+        <span id="msf0-previous-desc" class="hidden" hidden="">Previous: Lesson One, Part 1: Defining a Vector Graphic</span>
+      </a>
+    
+
+    
+      <span class="module-sequence-footer-button--next" data-tooltip="left" data-html-tooltip-title="&lt;i class=&#39;icon-document&#39;&gt;&lt;/i&gt; Lesson One, Part 3: Persistence, Serialization, and Files">
+        <a href="https://canvas.uw.edu/courses/1205169/modules/items/8253605" role="button" class="Button" aria-describedby="msf0-next-desc">
+          Next<i class="icon-mini-arrow-right"></i>
+          <span id="msf0-next-desc" class="hidden" hidden="">Next: Lesson One, Part 3: Persistence, Serialization, and Files</span>
+        </a>
+      </span>
+    
+  </div>
+</div>
+</div></div>
+
+          </div>
+        </div>
+        <div id="right-side-wrapper" class="ic-app-main-content__secondary">
+          <aside id="right-side" role="complementary">
+            
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <div style="display:none;"><!-- Everything inside of this should always stay hidden -->
+        <div id="page_view_id">55260523-2093-441a-8097-e8789441de35</div>
+    </div>
+  <div id="aria_alerts" class="hide-text affix" role="alert" aria-live="assertive"></div>
+  <div id="StudentTray__Container"></div>
+  
+
+<script>
+  INST = {"environment":"production","allowMediaComments":true,"kalturaSettings":{"domain":"nv.instructuremedia.com","resource_domain":"nv.instructuremedia.com","rtmp_domain":"fms-prod.instructuremedia.com","partner_id":"9","subpartner_id":"0","player_ui_conf":"0","kcw_ui_conf":"0","upload_ui_conf":"0","max_file_size_bytes":534773760,"do_analytics":false,"hide_rte_button":false,"js_uploader":true},"googleAnalyticsAccount":"UA-9138420-1","logPageViews":true,"maxVisibleEditorButtons":3,"editorButtons":[{"name":"","id":21130,"url":"https://uw.hosted.panopto.com/Panopto/Pages/Sessions/embeddedupload.aspx","icon_url":"https://uw.hosted.panopto.com/Panopto/images/panopto_logo_globe.png","canvas_icon_class":null,"width":900,"height":700},{"name":"Modalis","id":52765,"url":"https://uw.modalis.io/lti","icon_url":"https://uw.modalis.io/assets/richicon.png","canvas_icon_class":null,"width":800,"height":600}]};
+  ENV = {"ASSET_HOST":"https://du11hjcvx0uqb.cloudfront.net","active_brand_config_json_url":"https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/171115bc27094614cfdd1485c405a438/variables-750d72b9d3e5d522f965bf904110c132.json","url_to_what_gets_loaded_inside_the_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/171115bc27094614cfdd1485c405a438/variables-750d72b9d3e5d522f965bf904110c132.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_normal_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-53dac18d10.css"],"url_for_high_contrast_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/default/variables-high_contrast-750d72b9d3e5d522f965bf904110c132.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_high_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-b4d65fe883.css"],"current_user_id":"3757111","current_user_roles":["user","student"],"current_user_disabled_inbox":false,"files_domain":"cluster10-files.instructure.com","DOMAIN_ROOT_ACCOUNT_ID":100000000083919,"k12":false,"use_responsive_layout":false,"help_link_name":"Help","help_link_icon":"help","use_high_contrast":false,"LTI_LAUNCH_FRAME_ALLOWANCES":["geolocation *","microphone *","camera *","midi *","encrypted-media *"],"SETTINGS":{"open_registration":false,"eportfolios_enabled":true,"collapse_global_nav":true,"show_feedback_link":true,"enable_profiles":true},"current_user":{"id":"3757111","display_name":"Clayton Wong","avatar_image_url":"https://canvas.uw.edu/images/thumbnails/46487823/mSs2TjTESYscSzrackhgoJvAT79xbNchamHPrSec","html_url":"https://canvas.uw.edu/about/3757111"},"page_view_update_url":"/page_views/55260523-2093-441a-8097-e8789441de35?page_view_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpIjoiNTUyNjA1MjMtMjA5My00NDFhLTgwOTctZTg3ODk0NDFkZTM1IiwidSI6MTAwMDAwMDAzNzU3MTExLCJjIjoiMjAxOC0wNy0wOVQyMzozOToxOS44OFoifQ.MfbqZe2FR4bNhxLdmFrTkoZP2t24TwmFXTdyJFDp4wQ","context_asset_string":"course_1205169","ping_url":"https://canvas.uw.edu/api/v1/courses/1205169/ping","TIMEZONE":"America/Los_Angeles","CONTEXT_TIMEZONE":"America/Los_Angeles","LOCALE":"en","BIGEASY_LOCALE":"en_US","FULLCALENDAR_LOCALE":"en","MOMENT_LOCALE":"en","WIKI_RIGHTS":{"read":true},"PAGE_RIGHTS":{"read":true},"DEFAULT_EDITING_ROLES":"teachers","WIKI_PAGES_PATH":"/courses/1205169/pages","WIKI_PAGE":{"title":"Lesson One, Part 2: Properties of Vector Graphics","created_at":"2018-03-16T21:50:46Z","url":"lesson-one-part-2-properties-of-vector-graphics","editing_roles":"teachers","page_id":"2704797","published":true,"hide_from_students":false,"front_page":false,"html_url":"https://canvas.uw.edu/courses/1205169/pages/lesson-one-part-2-properties-of-vector-graphics","updated_at":"2018-03-16T21:50:46Z","locked_for_user":false,"body":"\u003cp\u003eYou should now have a strong, high-level definition of vector graphics, and so it is time to discuss the properties of our particular system's view of a vector graphic. For our purposes, we can view vector graphics as a more distilled concept than the perhaps more permissive, high-level definition. For us, vector graphics and most (if not all) other vector graphics systems can be thought of as shapes (composed of curves and lines and potentially open or closed) and the way in which they are drawn (the fill and the stroke).\u003c/p\u003e\r\n\u003ch2\u003eCurves, Lines, and Points\u003c/h2\u003e\r\n\u003cp\u003eNo matter how complex a (2D) geometrical shape we have, it can be described in terms of curves and lines—both of which rely on the concept of a point. Since curve drawing can be more complex (and thus might require a stronger math background) than line drawing, we'll exclude curve support in this course. But, being (hopefully) firm believers in reusability, we'll make sure that adding support for curves won't later require a massive redesign. To do this, some basic understanding of how one might support arbitrary curves will be required. This knowledge is necessary to understand the future of our system, not just the present. When creating software that you intend for reuse, you must think ahead. Even if you can't predict the future, you can often make room for it. In our case, we can't (at least without taking the time to research intensely—at which point we might as well implement) predict exactly how the curve drawing algorithm would be implemented, but we can understanding some simple ways of defining curves.\u003c/p\u003e\r\n\u003cp\u003eIn figure 1.1, a curve is described by two additional points at a given point. Since these two additional points only have value in their relation to the first, they are relative. We will visit relativity in detail in Lesson Two, but you can think for now of the additional points as being relative to an origin of the primary point. To differentiate these points from the primary point—the one that actually defines where the line passes through—we will call the relative points handles.\u003c/p\u003e\r\n\u003cp\u003eWith more analysis, you will see that these handles are quite interesting; but for our purposes, all we need to know is that just two relative points are all that's technically needed to give our shape the possibility of all sorts of curves. This places the responsibility of defining curves in an object that would represent a point plus any handles (a more refined and domain specific view of a point). The repercussions of this are that we can think of lines and curves uniformly, and that we can think of a shape as an ordered collection of points (meaning our point-plus-handles definition of points).\u003c/p\u003e\r\n\u003cp\u003eWe can simplify things down to points rather than curves or lines because the points lead the path along which the line will be drawn—only when we draw do we need to connect the points with curved and straight lines. The benefits of viewing a shape as an ordered collection of points might not be as clear as the problems created by trying to describe a shape as lines and curves. If a vector graphic were composed of lines, then it would be impossible to modify one line's ending point without modifying another line's beginning point. To make sure the lines stay synchronized you would likely end up coming right back to a view of the shape as an ordered collection of points.\u003c/p\u003e\r\n\u003ch2\u003eFill and Stroke\u003c/h2\u003e\r\n\u003cp\u003eVector graphics conventionally allow the modification of fill and stroke styles. Think of the stroke as the pen you use (and the way you use it) to draw the lines of a rectangle and fill as the color, pattern or texture with which you might fill the center of the rectangle. Stroke and fill will be covered in much more detail later in this course, for now, know that we'll need them in the long term in our system. For the moment, we'll focus on the geometrical side of things and ignore how things actually get drawn, which leaves the stroke and fill out of our scope.\u003c/p\u003e\r\n\u003ch2\u003eClosed and Open Shapes\u003c/h2\u003e\r\n\u003cp\u003eOne thing that may not be apparent already is that there can be both closed and open shapes. Although we could simulate closed shapes by having an extra point—such as a rectangle with five points, the last and first both being the origin—this would not be conceptually (or geometrically) accurate.\u003c/p\u003e\r\n\u003cp\u003eThe rectangle example should sufficiently show why using another point is unnatural. Instead, we can use the concept of \"closed\" (and its converse, \"open\"), to describe some of the differences between a rectangle and a line that travels across four points. For the implementation, the difference will be trivial: closed draws an extra line from the last point to the first. The distinction between closed and open shapes is not a profound feature but merely a requirement.\u003c/p\u003e\r\n\u003ch2\u003eCreating the VectorGraphic Class\u003c/h2\u003e\r\n\u003cp\u003eIn this lesson, we will ignore the actual drawing of vector graphics onto unstructured surfaces. This leaves us with a VectorGraphic class that will be fairly minimal, but even with its simple requirements, the VectorGraphic class still requires a good deal of thought (or experience on which to draw intuitions) to be implemented in C++. Some questions, like what standard collection implementation (if any) should be used, might already be surfacing in your mind. Others, like whether the point should be a reference or value object, might not.\u003c/p\u003e\r\n\u003ch2\u003ePoints: Reference or Value Objects?\u003c/h2\u003e\r\n\u003cp\u003eReference or value is a distinction that becomes an issue in C++, but not in most other object-oriented languages. In C++, value objects are generally simple, concrete classes that are used like primitive types (such as \u003ccode\u003eint\u003c/code\u003e, \u003ccode\u003echar\u003c/code\u003e, and \u003ccode\u003efloat\u003c/code\u003e) and are often copied. A reference object, on the other hand, is always used by reference and never copied. C++ also allows all the gradients in between reference and value. In C++, an inexperienced developer might define a class that uses polymorphic methods but also overloads operators. This would be a serious error, since the overloaded operators cannot be polymorphic and thus, when the class in question is subclassed, the operators will work incorrectly. An example is in order.\u003c/p\u003e\r\n\u003ctable style=\"width: 480px;\" border=\"0\" cellspacing=\"10\" cellpadding=\"4\"\u003e\r\n\u003ctbody\u003e\r\n\u003ctr\u003e\r\n\u003cth\u003eCode Example 1.1\u003c/th\u003e\r\n\u003c/tr\u003e\r\n\u003ctr\u003e\r\n\u003ctd\u003e\r\n\u003cpre\u003eclass Animal\u003cbr\u003e{\u003cbr\u003epublic:\u003cbr\u003e    virtual int getAge () const;\u003cbr\u003e    virtual std::string const\u0026amp; getSpeciesName() const;\u003cbr\u003e    bool operator==(Animal const\u0026amp; other) const\u003cbr\u003e    {\u003cbr\u003e        return (other.getAge() == getAge ()) \u0026amp;\u0026amp; (other.getSpeciesName () == getSpeciesName));\u003cbr\u003e    }\u003cbr\u003e};\u003cbr\u003e\u003cbr\u003eclass Mammal : public Animal\u003cbr\u003e{\u003cbr\u003eprivate:\u003cbr\u003e    typedef Animal Super;\u003cbr\u003e\u003cbr\u003epublic:\u003cbr\u003e    enum Gender { Male, Female };\u003cbr\u003e    virtual Gender getGender () const;\u003cbr\u003e    bool operator== (Mammal const\u0026amp; other) const\u003cbr\u003e    {\u003cbr\u003e        return Super::operator==(other) \u0026amp;\u0026amp; other.getGender() == getGender());\u003cbr\u003e    }\u003cbr\u003e};\u003cbr\u003e\u003cbr\u003e// ...\u003cbr\u003eAnimal* femaleCat = new FemaleCat();\u003cbr\u003eAnimal* maleCat = new MaleCat ();\u003cbr\u003e\u003cbr\u003eif (*femaleCat == *maleCat) {\u003cbr\u003e    // this will be true when it should be false. If we had created\u003cbr\u003e    // an isEqualTo polymorphic method, we wouldn't have this particular problem.\u003cbr\u003e    throw WeHaveASeriousProblemHere();\u003cbr\u003e}\u003c/pre\u003e\r\n\u003c/td\u003e\r\n\u003c/tr\u003e\r\n\u003c/tbody\u003e\r\n\u003c/table\u003e\r\n\u003cp\u003eExample 1.1 might be a bit obfuscated, but the fact that it is possible is a testament to the complexity (otherwise known as freedom) of C++. To keep problems like the code in our example from arising, it's best to keep value objects extremely simple. Use them only when they will behave exactly like primitive types, including support of most standard operators (especially assignment), and do not attempt to mix paradigms by using inheritance or polymorphism in any way.\u003c/p\u003e\r\n\u003cp\u003eBy default, you should assume reference semantics. Most non-trivial objects will be reference objects, and many of the trivial ones will, over the life of a system, begin to require a more sophisticated approach that merits making them reference objects. Value objects are exceptions, not rules. A simple motive for preferring reference objects is that a value object provides no features that a reference object can't provide. You might lose the ability to make your object look like a primitive type, but this is merely a loss of syntactical (and subjective) convenience.\u003c/p\u003e\r\n\u003cdiv class=\"importantBox\"\u003e\r\n\u003ch6\u003eImportant\u003c/h6\u003e\r\n\u003cp\u003eA class cannot preclude itself from being used as a reference object, but it can preclude itself from being used as a value object.\u003c/p\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eOne more important property to remember when distinguishing value objects from reference objects is that the class cannot preclude itself from being used as a reference object, but it can preclude itself from being used as a value object. This is why we use the term \"object\" instead of \"class\" when speaking of their differences—the class itself is not always definitively going to only allow its instances to be used one way or the other. Regardless of whether you can restrict usage of your class, you can always make your intentions clear via interface and documentation.\u003c/p\u003e\r\n\u003cp\u003eBack to our vector graphics system. The Point class could potentially be designed for instantiation as a value object, because its history is predictable and simple. It needn't be anything more than setters and getters to two attributes: an x coordinate and a y coordinate. Our choice of whether to design it with the express intention of reference semantics or not would be based only on what's more consistent or expected, not on what features we might need (or at least, that's how it seems at present).\u003c/p\u003e\r\n\u003ch2\u003eSupporting Closed and Open Shapes\u003c/h2\u003e\r\n\u003cp\u003eAs discussed in our analysis, open and closed shapes must both be supported. Clearly, this can be implemented via an attribute (whether a boolean or an enumerated type), but what methods will the client call to open and close the shape? Although your first instinct might be to create accessors, this might not work well for \u003ccode\u003eopen\u003c/code\u003e and \u003ccode\u003eclose\u003c/code\u003e. To open the shape should you \u003ccode\u003esetOpen (true)\u003c/code\u003e or \u003ccode\u003esetClosed (false)\u003c/code\u003e? The first hint that both of these would be less than ideal for method names is that they don't have normal naming semantics: they aren't normal verb phrases. More specifically, open and closed are states of being, not fields, so to speak. Naming in this way will also reveal an implementation detail—your true requirement is simply to allow \u003ccode\u003eopen\u003c/code\u003e and \u003ccode\u003eclose\u003c/code\u003e requests, but by using accessors for a boolean you reveal that your implementation does this via a boolean attribute. Other implementations might wish to support opening and closing in some other way, so making this implementation detail public will be making the other implementations more awkward.\u003c/p\u003e\r\n\u003cp\u003eFor these reasons, separate \u003ccode\u003eopen\u003c/code\u003e and \u003ccode\u003eclose\u003c/code\u003e methods might make more sense. Of course, the terms \u003cspan class=\"italics\"\u003eopen\u003c/span\u003e and\u003cspan class=\"italics\"\u003e close \u003c/span\u003eare heavily overloaded, and some extra distinction like \u003ccode\u003eopenShape\u003c/code\u003e and \u003ccode\u003ecloseShape\u003c/code\u003e might be in order. With all of this discussion for a seemingly simple task of naming the method or methods that allow opening and closing of a shape, we're still not finished, because \u003ccode\u003eopenShape\u003c/code\u003e and \u003ccode\u003ecloseShape\u003c/code\u003e will give clients the impression that they should pass in a shape object as a single parameter (just like registerStudent implies at least a single parameter of a Student object to most developers). For now, we'll ignore this problem and move on.\u003c/p\u003e\r\n\u003cp\u003eIt may also be necessary for clients to determine whether a shape is open or closed. Here we can provide an \u003ccode\u003eisOpen\u003c/code\u003e method, an \u003ccode\u003eisClosed\u003c/code\u003e method or both. Although providing both might cause confusion, it also will make algorithms cleaner and more self-documenting, as \u003ccode\u003evectorGraphic.isClosed ()\u003c/code\u003e is more clear than \u003ccode\u003e!vectorGraphic.isOpen ()\u003c/code\u003e.\u003c/p\u003e\r\n\u003ch2\u003eReporting Bounds\u003c/h2\u003e\r\n\u003cp\u003eReporting bounds will be a requirement for most non-trivial usages of vector graphics. A reality of many technologies is that they work with an idealized horizontally-aligned rectangular form for bounds. In other words, although bounds could be described quite simply as the shape itself, or perhaps as an arbitrarily-aligned rectangular approximation of the shape, they are instead described basically as a width and height.\u003c/p\u003e\r\n\u003cdiv class=\"keytermBox\"\u003e\r\n\u003ch6\u003eKey Terms\u003c/h6\u003e\r\n\u003cul\u003e\r\n\u003cli\u003ehorizontal alignment\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eWe will revisit the idea of rectangular bounds and horizontal alignment in a future lesson when we look at skewing and scaling. But the term \u003cem\u003ehorizontal alignment\u003c/em\u003e might need some explanation. \"Horizontal alignment\" refers to the archetypal rectangle whose sides all have no slope or zero slope. A rectangle such as the one in figure 1.4-A is what most systems call a rectangle.\u003c/p\u003e\r\n\u003cp class=\"title\"\u003e\u003cspan class=\"bold\"\u003eFigure 1.4 A\u003c/span\u003e—Archetypal Rectangle\u003c/p\u003e\r\n\u003cp\u003e\u003cimg src=\"https://canvas.uw.edu/courses/1205169/files/47698235/preview\" alt=\"Archetypal Rectangle\" width=\"100\" height=\"49\" data-api-returntype=\"File\" data-api-endpoint=\"https://canvas.uw.edu/api/v1/courses/1205169/files/47698235\"\u003e\u003c/p\u003e\r\n\u003cp\u003eThe rectangle in figure 1.4 A can be described by a single upper left and lower right coordinate, or, if its points are relative to its own upper left, simply a lower right coordinate—or width and height. Be aware, though, that this is not the true-and-proper definition of a rectangle and that the rectangle shown in figure 1.4-B is just as much a rectangle as the archetypal one above.\u003c/p\u003e\r\n\u003cp class=\"title\"\u003e\u003cspan class=\"bold\"\u003eFigure 1.4-B\u003c/span\u003e—Less Archetypal Rectangle\u003c/p\u003e\r\n\u003cp\u003e\u003cimg src=\"https://canvas.uw.edu/courses/1205169/files/47698295/preview\" alt=\"Less Archetypal Rectangle\" width=\"100\" height=\"73\" data-api-returntype=\"File\" data-api-endpoint=\"https://canvas.uw.edu/api/v1/courses/1205169/files/47698295\"\u003e\u003c/p\u003e\r\n\u003cp\u003eFor this reason, we'll simplify our vector graphic and just report width and height—which comprises the essence of what most of our clients are looking for. For example, if they are allocating memory for drawing, they'll need to multiply the width times the height to create a buffer. Once they do this they can draw the vector graphic into that buffer. In this case, they also won't need an upper left and lower right, so much as simply the relative lower right (or, once again, width and height).\u003c/p\u003e\r\n\u003ch2\u003eChoosing a Collection\u003c/h2\u003e\r\n\u003cp\u003eChoosing the best collection for a particular application in C++ requires some basic knowledge data structures and algorithms. In Lesson Two, we'll look deeper into the decision-making process; but for now we'll keep things simple and just use an \u003cspan class=\"CCodeChar\"\u003e\u003ccode\u003estd::vector\u0026lt;\u0026gt;\u003c/code\u003e\u003c/span\u003e for our points.\u003c/p\u003e\r\n\u003ch2\u003eSummary of Choices\u003c/h2\u003e\r\n\u003cp\u003eApplying all of our decisions, our basic knowledge of C++ collections and self-documenting naming practices, we now have a VectorGraphic that looks like example 1.3.\u003c/p\u003e\r\n\u003ctable style=\"width: 480px;\" border=\"0\" cellspacing=\"10\" cellpadding=\"4\"\u003e\r\n\u003ctbody\u003e\r\n\u003ctr\u003e\r\n\u003cth\u003eCode Example 1.3\u003c/th\u003e\r\n\u003c/tr\u003e\r\n\u003ctr\u003e\r\n\u003ctd\u003e\r\n\u003cpre\u003eusing Points = std::vector\u0026lt;Point\u0026gt;;\u003cbr\u003e\u003cbr\u003eclass VectorGraphic\u003cbr\u003e{\u003cbr\u003e    public:\u003cbr\u003e        VectorGraphic();\u003cbr\u003e        ~VectorGraphic();\u003cbr\u003e\u003cbr\u003e        void addPoint(const Point\u0026amp; p);\t\t\t\t\u003cbr\u003e        void removePoint(const Point\u0026amp; p);\u003cbr\u003e        void erasePoint(int index);\u003cbr\u003e\u003cbr\u003e        void openShape();\u003cbr\u003e        void closeShape();\u003cbr\u003e\u003cbr\u003e        bool isOpen() const;\u003cbr\u003e        bool isClosed() const;\u003cbr\u003e\u003cbr\u003e        int getWidth() const;\u003cbr\u003e        int getHeight() const;\u003cbr\u003e\u003cbr\u003e        int getPointCount() const;\u003cbr\u003e        Point getPoint(int index) const;\u003cbr\u003e\u003cbr\u003e    private:\u003cbr\u003e        Points myPath;\u003cbr\u003e\u003cbr\u003e        // ...\u003cbr\u003e}\u003c/pre\u003e\r\n\u003c/td\u003e\r\n\u003c/tr\u003e\r\n\u003c/tbody\u003e\r\n\u003c/table\u003e\r\n\u003cp\u003eIn your assignment for this lesson, you will complete and test this implementation of VectorGraphic via loading and saving an XML-like definition of a VectorGraphic.\u003c/p\u003e\r\n\u003ch2\u003eNew in C++ 11\u003c/h2\u003e\r\n\u003ch3\u003elvalues, rvalues, and universal references\u003c/h3\u003e\r\n\u003ch4\u003elvalues\u003c/h4\u003e\r\n\u003cp\u003eThe fundamental objects in C++ that we're used to dealing with have “identity.” This means they occupy a specific address in memory that we can access, and we can use their address to distinguish one particular object from another when they might otherwise be identical (have the same value). These types of objects are called “lvalues”, because they can appear on the left-hand side of an assignment.\u003c/p\u003e\r\n\u003ch4\u003ervalues\u003c/h4\u003e\r\n\u003cp\u003eC++ (and its ancestor C) have always had other types of objects with no “identity”. Typically these are temporary objects created by the compiler; things like the return value of a function, or a temporary copy of an object used as a function argument. We typically don’t know or care about the actual address of a temporary, and even if we did it’s not safe to store that address for use later on. These types of values are called “rvalues”, to contrast with the term “lvalue”. An rvalue is something you cannot assign to.\u003c/p\u003e\r\n\u003cp\u003eC++11 leverages this concept of rvalues, and provides new syntax for us to work with them. The notation “\u0026amp;\u0026amp;” means “rvalue reference”: a reference to which we can bind an rvalue. C++11 takes advantage of the fact that an rvalue reference is a reference to something that nobody can assign to. That means its safe to “steal” its value… to move it somewhere else. Moving a value is typically cheaper than copying, usually avoiding the cost of constructing a new object to avoid compromising the original source object. This is referred to as “move semantics”. More about this later.\u003c/p\u003e\r\n\u003ch4\u003euniversal references\u003c/h4\u003e\r\n\u003cp\u003eActually, when you see the notation \"\u0026amp;\u0026amp;\", it doesn't *always* mean you're looking at an rvalue reference - it depends on the context. Sometimes \"T\u0026amp;\u0026amp;\" means \"rvalue reference\", but sometimes it means \"either rvalue reference or lvalue reference\" - what Meyers calls a \"universal reference\". It can bind to anything: rvalue or lvalue, const or non-const, volatile or non-volatile.\u003c/p\u003e\r\n\u003cp\u003eThere are two contexts in which T\u0026amp;\u0026amp; means \"universal reference\". The most common is function template parameters, like this:\u003c/p\u003e\r\n\u003cpre\u003e    template  void f(T\u0026amp;\u0026amp; param); // param is a universal reference\r\n\u003c/pre\u003e\r\n\u003cp\u003eThe second context is in auto declarations, like this:\u003c/p\u003e\r\n\u003cpre\u003e    auto\u0026amp;\u0026amp; var2 = var1; // var2 is a universal reference\r\n\u003c/pre\u003e\r\n\u003cp\u003e(Examples taken directly from Scott Meyers' \"Effective Modern C++\".)\u003c/p\u003e\r\n\u003cp\u003eIn both of these contexts, the compiler must deduce the type. If type deduction results in T being an rvalue, T\u0026amp;\u0026amp; is an rvalue reference; if type deduction yields T as an lvalue, T\u0026amp;\u0026amp; is an lvalue reference. Continuing with Scott Meyers' example:\u003c/p\u003e\r\n\u003cpre\u003e    template  void f(T\u0026amp;\u0026amp; param); // param is a universal reference\r\n\r\n    Widget w;\r\n\r\n    // lvalue passed to f; param's type is lvalue reference (Widget\u0026amp;) f(w);\r\n\r\n    // rvalue passed to f; param's type is rvalue reference (Widget\u0026amp;\u0026amp;)\r\n    f(std::move(w));\r\n\u003c/pre\u003e\r\n\u003ch3\u003eFunction \u003ci\u003eparameters\u003c/i\u003e vs. \u003ci\u003earguments\u003c/i\u003e\n\u003c/h3\u003e\r\n\u003cp\u003eIn C++11 it’s useful to emphasize the distinction between a function’s formal arguments — typically called “parameters” — and its actual arguments — usually called simply “arguments”.\u003c/p\u003e\r\n\u003cp\u003eFunction parameters are the variables you have inside the body of a function. Function arguments are the expressions evaluated at the location where the function is called.\u003c/p\u003e\r\n\u003cp\u003eThe distinction is important because function parameters are always lvalues — even though they may be declared in the function signature with “\u0026amp;\u0026amp;” (meaning its type is an rvalue reference). The arguments with which the function parameters are initialized may be lvalues or rvalues — impacting whether values are moved or copied into the parameters.\u003c/p\u003e\r\n\u003cp\u003e \u003c/p\u003e\r\n\u003ch2\u003eMove semantics: move constructor and move assignment\u003c/h2\u003e\r\n\u003cp\u003eTaking advantage of move semantics to increase efficiency in our programs usually requires us to do a little more work when writing our own classes. We may need to write move assignment operators.\u003c/p\u003e\r\n\u003cp\u003eWe're used to seeing copy constructors and copy assignment operators:\u003c/p\u003e\r\n\u003cpre\u003e    class Widget {\r\n    // ...\r\n\r\n        Widget(const Widget\u0026amp; w);            // copy CTOR\r\n        Widget\u0026amp; operator=(const Widget\u0026amp; w); // copy assignment\r\n\r\n    //...\r\n    };\r\n\u003c/pre\u003e\r\n\u003cp\u003eTo allow the compiler move our objects when possible, we can provide move constructors and move assignment operators:\u003c/p\u003e\r\n\u003cpre\u003e    class Widget {\r\n    // ...\r\n\r\n        Widget(const Widget\u0026amp; w);            // copy CTOR\r\n        Widget\u0026amp; operator=(const Widget\u0026amp; w); // copy assignment\r\n\r\n    \tWidget(Widget\u0026amp;\u0026amp; w);                 // move CTOR\r\n        Widget\u0026amp; operator=(Widget\u0026amp;\u0026amp; w);      // move assignment\r\n\r\n    //...\r\n    };\r\n\u003c/pre\u003e\r\n\u003cp\u003eNotice that, unlike the copy methods, the \"move\" methods take non-const arguments. That makes sense, because a move operation will remove the value from its argument.\u003c/p\u003e\r\n\u003cp\u003eAfter a move, the moved-from object should be in a state that allows its destructor to be run safely.\u003c/p\u003e\r\n\u003cp\u003eLet's say Widget is a \"pimpl\" (pointer-to-implementation) idiom class. A simple implementation for its move constructor might look something like this:\u003c/p\u003e\r\n\u003cpre\u003e    Widget::Widget(Widget\u0026amp;\u0026amp; w) :\r\n        myImplP{w.myImplP}\r\n    {\r\n        w.myImplP = nullptr; // empty impl, safe to destroy\r\n    }\r\n\u003c/pre\u003e\r\n\u003ch2\u003eAutomatic generation of move operations\u003c/h2\u003e\r\n\u003cp\u003eThe compiler will automatically create move operations for you -- when needed -- only if three things are true:\u003c/p\u003e\r\n\u003col\u003e\r\n\u003cli\u003eNo copy operations are declared in the class\u003c/li\u003e\r\n\u003cli\u003eNo move operations are declared in the class\u003c/li\u003e\r\n\u003cli\u003eNo destructor is declared in the class\u003c/li\u003e\r\n\u003c/ol\u003e\r\n\u003cp\u003eThere's an old C++ guideline called the \"Rule of Three\" that says: if you declare any of a copy constructor, copy assignment operator, or destructor, you should declare all three. It's based on the idea that if you need to override the default behavior of any of these, it's because you have special resource management needs. That would imply you probably need special behavior in all of those functions.\u003c/p\u003e\r\n\u003cp\u003eC++11 extends this reasoning to include the move operations. If you declare any special copy or move operation yourself, it probably means you have special resource management needs, therefore the compiler should not create the default ones for you.\u003c/p\u003e\r\n\u003cp\u003eIf you really do want the compiler to create them for you anyway, you can use the new \"= default\" keyword, like this:\u003c/p\u003e\r\n\u003cpre\u003e    class Widget {\r\n    public:\r\n        // user-declared DTOR\r\n        ~Widget();                           // user-declared DTOR\r\n\t\r\n        // want the default copy operations anyway\r\n        Widget(const Widget\u0026amp; w) = default;\r\n        Widget\u0026amp; operator=(const Widget\u0026amp; w) = default;\r\n\r\n        // and the default move operations\r\n        Widget(Widget\u0026amp;\u0026amp; w) = default;\r\n        Widget\u0026amp; operator=(Widget\u0026amp;\u0026amp; w) = default;\r\n\r\n        //...\r\n    };\r\n\u003c/pre\u003e\r\n\u003ch2\u003estd::move and std::forward\u003c/h2\u003e\r\n\u003cp\u003eIn spite of its name, \u003ccode\u003estd::move\u003c/code\u003e doesn't actually move anything. It's like a cast operation; it returns an rvalue reference to its argument so that it can be moved from. It doesn't do anything at runtime.\u003c/p\u003e\r\n\u003cp\u003e\u003ccode\u003estd::forward\u003c/code\u003e is very similar. While \u003ccode\u003estd::move\u003c/code\u003e performs an \u003cem\u003eunconditional\u003c/em\u003e cast to an rvalue, \u003ccode\u003estd::forward\u003c/code\u003e performs a \u003cem\u003econditional\u003c/em\u003e cast. It will only cast its argument to an rvalue if that argument is bound to an rvalue. It's typically used in function templates to \"forward\" a universal reference parameter to another function.\u003c/p\u003e\r\n\u003cp\u003eYou should use \u003ccode\u003estd::move\u003c/code\u003e on rvalue references, \u003ccode\u003estd::forward\u003c/code\u003e on universal references (Meyers' rule #25).\u003c/p\u003e\r\n\u003cp\u003eYou may wonder why you shouldn't just use \u003ccode\u003estd::forward\u003c/code\u003e all the time, since it does the right thing regardless of the type of reference you use with it. There are a couple of good reasons:\u003c/p\u003e\r\n\u003col\u003e\r\n\u003cli\u003e\n\u003ccode\u003estd::move\u003c/code\u003e is easier to use - it doesn't require a type argument (also eliminating the chance of providing an incorrect type argument); and\u003c/li\u003e\r\n\u003cli\u003eit explicitly conveys your intent: you absolutely want that argument to be moved from - you don't want to just forward whatever type you happen to have to another function.\u003c/li\u003e\r\n\u003c/ol\u003e\r\n\u003cp\u003e \u003c/p\u003e"},"WIKI_PAGE_REVISION":"1","WIKI_PAGE_SHOW_PATH":"/courses/1205169/pages/lesson-one-part-2-properties-of-vector-graphics","WIKI_PAGE_EDIT_PATH":"/courses/1205169/pages/lesson-one-part-2-properties-of-vector-graphics/edit","WIKI_PAGE_HISTORY_PATH":"/courses/1205169/pages/lesson-one-part-2-properties-of-vector-graphics/revisions","COURSE_ID":"1205169","MODULES_PATH":"/courses/1205169/modules","wiki_page_menu_tools":[],"DISPLAY_SHOW_ALL_LINK":false,"badge_counts":{"submissions":0},"notices":[]};
+</script>
+
+<script src="./Lesson 2 Properties of Vector Graphics_files/navigation_header.bundle-b428ab9bf4.js" defer="defer"></script>
+<script src="./Lesson 2 Properties of Vector Graphics_files/default.js" defer="defer"></script>
+<script src="./Lesson 2 Properties of Vector Graphics_files/custom.js" defer="defer"></script>
+
+</div> <!-- #application -->
+
+
+<div id="nav-tray-portal" style="position: relative; z-index: 99;"></div></body></html>

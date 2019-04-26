@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<!-- saved from url=(0098)https://canvas.uw.edu/courses/1205169/pages/lesson-five-rendering-the-scene?module_item_id=8253629 -->
+<html class="" dir="ltr" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Lesson Five: Rendering the Scene: CPROGRM 713 A Su 18: C++ Programming: Advanced</title>
+  <!--[if lte IE 9]> <meta http-equiv=refresh content="0; URL=/ie-9-is-not-supported.html" /> <![endif]-->
+  <link rel="preload" href="https://du11hjcvx0uqb.cloudfront.net/dist/fonts/lato/latin/LatoLatin-Regular-3cd3657802.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="shortcut icon" type="image/x-icon" href="https://instructure-uploads.s3.amazonaws.com/account_100000000083919/attachments/37312004/favicon.ico?AWSAccessKeyId=AKIAJFNFXH2V2O7RPCAA&amp;Expires=1939374366&amp;Signature=lNl7iuCda9spDgRONbwVvr490LM%3D&amp;response-cache-control=Cache-Control%3Amax-age%3D473364000.0%2C%20public&amp;response-expires=473364000.0">
+  <link rel="apple-touch-icon" href="https://instructure-uploads.s3.amazonaws.com/account_100000000083919/attachments/37312005/Canvas-MobileHome.png?AWSAccessKeyId=AKIAJFNFXH2V2O7RPCAA&amp;Expires=1939374366&amp;Signature=jwVDIJvM6uIaOoE%2FSW94uwVcHU0%3D&amp;response-cache-control=Cache-Control%3Amax-age%3D473364000.0%2C%20public&amp;response-expires=473364000.0">
+  
+  <link rel="stylesheet" media="all" href="./Lesson Five_ Rendering the Scene_ CPROGRM 713 A Su 18_ C++ Programming_ Advanced_files/variables-750d72b9d3e5d522f965bf904110c132.css">
+  <link rel="stylesheet" media="all" href="./Lesson Five_ Rendering the Scene_ CPROGRM 713 A Su 18_ C++ Programming_ Advanced_files/common-e39c04a622.css">
+  <script type="text/javascript" async="" src="./Lesson Five_ Rendering the Scene_ CPROGRM 713 A Su 18_ C++ Programming_ Advanced_files/ga.js"></script><script>
+//<![CDATA[
+
+!function(){
+  function get(u){document.write('<scr'+'ipt src="'+ u +'"></sc'+'ript>')}
+  var o,s,v;
+  if (!(window.Promise && Object.assign && Object.values && [].find && [].includes && (o={},s=Symbol(),v={},o[s]=v,o[s]===v) && (function f(){}).bind().name==='bound f')) {
+    get("https://du11hjcvx0uqb.cloudfront.net/dist/ie11-polyfill-9f640d24ea.js");
+  }
+  window.fetch || get("https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.4/fetch.min.js");
+}();
+      
+//]]>
+</script>
+  <script src="./Lesson Five_ Rendering the Scene_ CPROGRM 713 A Su 18_ C++ Programming_ Advanced_files/lato-fontfaceobserver-ed903d58c4.js" async="async"></script>
+  
+  <meta name="apple-itunes-app" content="app-id=480883488">
+<link rel="manifest" href="https://canvas.uw.edu/web-app-manifest/manifest.json">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#008EE2">
+  <link rel="stylesheet" media="all" href="./Lesson Five_ Rendering the Scene_ CPROGRM 713 A Su 18_ C++ Programming_ Advanced_files/wiki_page-46e7e026f6.css">
+  
+  <link rel="stylesheet" media="all" href="./Lesson Five_ Rendering the Scene_ CPROGRM 713 A Su 18_ C++ Programming_ Advanced_files/custom.css">
+<link rel="stylesheet" media="all" href="./Lesson Five_ Rendering the Scene_ CPROGRM 713 A Su 18_ C++ Programming_ Advanced_files/custom(1).css">
+  <script>
+    function _earlyClick(e){
+      var c = e.target
+      while (c && c.ownerDocument) {
+        if (c.getAttribute('href') == '#' || c.getAttribute('data-method')) {
+          e.preventDefault()
+          (_earlyClick.clicks = _earlyClick.clicks || []).push(c)
+          break
+        }
+        c = c.parentNode
+      }
+    }
+    document.addEventListener('click', _earlyClick)
+  </script>
+  <script src="./Lesson Five_ Rendering the Scene_ CPROGRM 713 A Su 18_ C++ Programming_ Advanced_files/variables-750d72b9d3e5d522f965bf904110c132.js" defer="defer"></script>
+  <script src="./Lesson Five_ Rendering the Scene_ CPROGRM 713 A Su 18_ C++ Programming_ Advanced_files/vendor.bundle-0353da1dce.js" defer="defer"></script>
+<script src="./Lesson Five_ Rendering the Scene_ CPROGRM 713 A Su 18_ C++ Programming_ Advanced_files/Los_Angeles-d9cac65c52.js" defer="defer"></script>
+<script src="./Lesson Five_ Rendering the Scene_ CPROGRM 713 A Su 18_ C++ Programming_ Advanced_files/en_US-80a0ce259b.js" defer="defer"></script>
+<script src="./Lesson Five_ Rendering the Scene_ CPROGRM 713 A Su 18_ C++ Programming_ Advanced_files/appBootstrap.bundle-0661001892.js" defer="defer"></script>
+<script src="./Lesson Five_ Rendering the Scene_ CPROGRM 713 A Su 18_ C++ Programming_ Advanced_files/common.bundle-f89441110c.js" defer="defer"></script>
+<script src="./Lesson Five_ Rendering the Scene_ CPROGRM 713 A Su 18_ C++ Programming_ Advanced_files/wiki_page_show.bundle-65bf34ca48.js" defer="defer"></script>
+<style type="text/css"></style><style type="text/css">.mejs-offscreen{clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);clip-path:polygon(0px 0,0 0,0 0,0 0);position:absolute!important;height:1px;width:1px;overflow:hidden}.mejs-container{position:relative;background:#000;font-family:Helvetica,Arial,serif;text-align:left;vertical-align:top;text-indent:0}.mejs-fill-container,.mejs-fill-container .mejs-container{width:100%;height:100%}.mejs-fill-container{overflow:hidden}.mejs-container:focus{outline:0}.me-plugin{position:absolute}.mejs-embed,.mejs-embed body{width:100%;height:100%;margin:0;padding:0;background:#000;overflow:hidden}.mejs-fullscreen{overflow:hidden!important}.mejs-container-fullscreen{position:fixed;left:0;top:0;right:0;bottom:0;overflow:hidden;z-index:1000}.mejs-container-fullscreen .mejs-mediaelement,.mejs-container-fullscreen video{width:100%;height:100%}.mejs-clear{clear:both}.mejs-background{position:absolute;top:0;left:0}.mejs-mediaelement{position:absolute;top:0;left:0;width:100%;height:100%}.mejs-poster{position:absolute;top:0;left:0;background-size:contain;background-position:50% 50%;background-repeat:no-repeat}:root .mejs-poster img{display:none}.mejs-poster img{border:0;padding:0}.mejs-overlay{position:absolute;top:0;left:0}.mejs-overlay-play{cursor:pointer}.mejs-overlay-button{position:absolute;top:50%;left:50%;width:100px;height:100px;margin:-50px 0 0 -50px;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/746c3af7a145a09239a36e5ef61cfea0.svg) no-repeat}.no-svg .mejs-overlay-button{background-image:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/716436fb3df0d29e6b37dd62d952676a.png)}.mejs-overlay:hover .mejs-overlay-button{background-position:0 -100px}.mejs-overlay-loading{position:absolute;top:50%;left:50%;width:80px;height:80px;margin:-40px 0 0 -40px;background:#333;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(0,0,0,.9);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(50,50,50,.9)),to(rgba(0,0,0,.9)));background:-webkit-linear-gradient(top,rgba(50,50,50,.9),rgba(0,0,0,.9));background:-moz-linear-gradient(top,rgba(50,50,50,.9),rgba(0,0,0,.9));background:-o-linear-gradient(top,rgba(50,50,50,.9),rgba(0,0,0,.9));background:-ms-linear-gradient(top,rgba(50,50,50,.9),rgba(0,0,0,.9));background:linear-gradient(rgba(50,50,50,.9),rgba(0,0,0,.9))}.mejs-overlay-loading span{display:block;width:80px;height:80px;background:transparent url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/76b326f4d44222126fee21076595bef5.gif) 50% 50% no-repeat}.mejs-container .mejs-controls{position:absolute;list-style-type:none;margin:0;padding:0;bottom:0;left:0;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(0,0,0,.7);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(50,50,50,.7)),to(rgba(0,0,0,.7)));background:-webkit-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-moz-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-o-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-ms-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:linear-gradient(rgba(50,50,50,.7),rgba(0,0,0,.7));height:30px;width:100%}.mejs-container .mejs-controls div{list-style-type:none;background-image:none;display:block;float:left;margin:0;padding:0;width:26px;height:26px;font-size:11px;line-height:11px;font-family:Helvetica,Arial,serif;border:0}.mejs-controls .mejs-button button{cursor:pointer;display:block;font-size:0;line-height:0;text-decoration:none;margin:7px 5px;padding:0;position:absolute;height:16px;width:16px;border:0;background:transparent url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/40f56f5a736da4effeb790cedb8a52f0.svg) no-repeat}.no-svg .mejs-controls .mejs-button button{background-image:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/24a0227fbdd3acfd86ff03fc3fc6c8a4.png)}.mejs-controls .mejs-button button:focus{outline:dotted 1px #999}.mejs-container .mejs-controls .mejs-time{color:#fff;display:block;height:17px;width:auto;padding:10px 3px 0;overflow:hidden;text-align:center;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}.mejs-container .mejs-controls .mejs-time a{color:#fff;font-size:11px;line-height:12px;display:block;float:left;margin:1px 2px 0 0;width:auto}.mejs-controls .mejs-play button{background-position:0 0}.mejs-controls .mejs-pause button{background-position:0 -16px}.mejs-controls .mejs-stop button{background-position:-112px 0}.mejs-controls div.mejs-time-rail{direction:ltr;width:200px;padding-top:5px}.mejs-controls .mejs-time-rail span,.mejs-controls .mejs-time-rail a{display:block;position:absolute;width:180px;height:10px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;cursor:pointer}.mejs-controls .mejs-time-rail .mejs-time-total{margin:5px;background:#333;background:rgba(50,50,50,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(30,30,30,.8)),to(rgba(60,60,60,.8)));background:-webkit-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-moz-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-o-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-ms-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:linear-gradient(rgba(30,30,30,.8),rgba(60,60,60,.8))}.mejs-controls .mejs-time-rail .mejs-time-buffering{width:100%;background-image:-o-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:-webkit-gradient(linear,0 100%,100% 0,color-stop(0.25,rgba(255,255,255,.15)),color-stop(0.25,transparent),color-stop(0.5,transparent),color-stop(0.5,rgba(255,255,255,.15)),color-stop(0.75,rgba(255,255,255,.15)),color-stop(0.75,transparent),to(transparent));background-image:-webkit-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:-moz-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:-ms-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);-webkit-background-size:15px 15px;-moz-background-size:15px 15px;-o-background-size:15px 15px;background-size:15px 15px;-webkit-animation:buffering-stripes 2s linear infinite;-moz-animation:buffering-stripes 2s linear infinite;-ms-animation:buffering-stripes 2s linear infinite;-o-animation:buffering-stripes 2s linear infinite;animation:buffering-stripes 2s linear infinite}@-webkit-keyframes buffering-stripes{from{background-position:0 0}to{background-position:30px 0}}@-moz-keyframes buffering-stripes{from{background-position:0 0}to{background-position:30px 0}}@-ms-keyframes buffering-stripes{from{background-position:0 0}to{background-position:30px 0}}@-o-keyframes buffering-stripes{from{background-position:0 0}to{background-position:30px 0}}@keyframes buffering-stripes{from{background-position:0 0}to{background-position:30px 0}}.mejs-controls .mejs-time-rail .mejs-time-loaded{background:#3caac8;background:rgba(60,170,200,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(44,124,145,.8)),to(rgba(78,183,212,.8)));background:-webkit-linear-gradient(top,rgba(44,124,145,.8),rgba(78,183,212,.8));background:-moz-linear-gradient(top,rgba(44,124,145,.8),rgba(78,183,212,.8));background:-o-linear-gradient(top,rgba(44,124,145,.8),rgba(78,183,212,.8));background:-ms-linear-gradient(top,rgba(44,124,145,.8),rgba(78,183,212,.8));background:linear-gradient(rgba(44,124,145,.8),rgba(78,183,212,.8));width:0}.mejs-controls .mejs-time-rail .mejs-time-current{background:#fff;background:rgba(255,255,255,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(255,255,255,.9)),to(rgba(200,200,200,.8)));background:-webkit-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-moz-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-o-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-ms-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:linear-gradient(rgba(255,255,255,.9),rgba(200,200,200,.8));width:0}.mejs-controls .mejs-time-rail .mejs-time-handle{display:none;position:absolute;margin:0;width:10px;background:#fff;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;cursor:pointer;border:solid 2px #333;top:-2px;text-align:center}.mejs-controls .mejs-time-rail .mejs-time-float{position:absolute;display:none;background:#eee;width:36px;height:17px;border:solid 1px #333;top:-26px;margin-left:-18px;text-align:center;color:#111}.mejs-controls .mejs-time-rail .mejs-time-float-current{margin:2px;width:30px;display:block;text-align:center;left:0}.mejs-controls .mejs-time-rail .mejs-time-float-corner{position:absolute;display:block;width:0;height:0;line-height:0;border:solid 5px #eee;border-color:#eee transparent transparent;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;top:15px;left:13px}.mejs-long-video .mejs-controls .mejs-time-rail .mejs-time-float{width:48px}.mejs-long-video .mejs-controls .mejs-time-rail .mejs-time-float-current{width:44px}.mejs-long-video .mejs-controls .mejs-time-rail .mejs-time-float-corner{left:18px}.mejs-controls .mejs-fullscreen-button button{background-position:-32px 0}.mejs-controls .mejs-unfullscreen button{background-position:-32px -16px}.mejs-controls .mejs-volume-button{}.mejs-controls .mejs-mute button{background-position:-16px -16px}.mejs-controls .mejs-unmute button{background-position:-16px 0}.mejs-controls .mejs-volume-button{position:relative}.mejs-controls .mejs-volume-button .mejs-volume-slider{height:115px;width:25px;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;top:-115px;left:0;z-index:1;position:absolute;margin:0}.mejs-controls .mejs-volume-button:hover{-webkit-border-radius:0 0 4px 4px;-moz-border-radius:0 0 4px 4px;border-radius:0 0 4px 4px}.mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-total{position:absolute;left:11px;top:8px;width:2px;height:100px;background:#ddd;background:rgba(255,255,255,.5);margin:0}.mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-current{position:absolute;left:11px;top:8px;width:2px;height:100px;background:#ddd;background:rgba(255,255,255,.9);margin:0}.mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-handle{position:absolute;left:4px;top:-3px;width:16px;height:6px;background:#ddd;background:rgba(255,255,255,.9);cursor:N-resize;-webkit-border-radius:1px;-moz-border-radius:1px;border-radius:1px;margin:0}.mejs-controls a.mejs-horizontal-volume-slider{height:26px;width:56px;position:relative;display:block;float:left;vertical-align:middle}.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total{position:absolute;left:0;top:11px;width:50px;height:8px;margin:0;padding:0;font-size:1px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background:#333;background:rgba(50,50,50,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(30,30,30,.8)),to(rgba(60,60,60,.8)));background:-webkit-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-moz-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-o-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-ms-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:linear-gradient(rgba(30,30,30,.8),rgba(60,60,60,.8))}.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current{position:absolute;left:0;top:11px;width:50px;height:8px;margin:0;padding:0;font-size:1px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background:#fff;background:rgba(255,255,255,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(255,255,255,.9)),to(rgba(200,200,200,.8)));background:-webkit-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-moz-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-o-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-ms-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:linear-gradient(rgba(255,255,255,.9),rgba(200,200,200,.8))}.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-handle{display:none}.mejs-controls .mejs-captions-button{position:relative}.mejs-controls .mejs-captions-button button{background-position:-48px 0}.mejs-controls .mejs-captions-button .mejs-captions-selector{position:absolute;bottom:26px;right:-51px;width:85px;height:100px;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);border:solid 1px transparent;padding:10px 10px 0;overflow:hidden;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}.mejs-controls .mejs-captions-button .mejs-captions-selector ul{margin:0;padding:0;display:block;list-style-type:none!important;overflow:hidden}.mejs-controls .mejs-captions-button .mejs-captions-selector ul li{margin:0 0 6px;padding:0;list-style-type:none!important;display:block;color:#fff;overflow:hidden}.mejs-controls .mejs-captions-button .mejs-captions-selector ul li input{clear:both;float:left;margin:3px 3px 0 5px}.mejs-controls .mejs-captions-button .mejs-captions-selector ul li label{width:55px;float:left;padding:4px 0 0;line-height:15px;font-family:Helvetica,Arial,serif;font-size:10px}.mejs-controls .mejs-captions-button .mejs-captions-translations{font-size:10px;margin:0 0 5px}.mejs-chapters{position:absolute;top:0;left:0;border-right:solid 1px #fff;width:10000px;z-index:1}.mejs-chapters .mejs-chapter{position:absolute;float:left;background:#222;background:rgba(0,0,0,.7);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(50,50,50,.7)),to(rgba(0,0,0,.7)));background:-webkit-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-moz-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-o-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-ms-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:linear-gradient(rgba(50,50,50,.7),rgba(0,0,0,.7));filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr=#323232, endColorstr=#000000);overflow:hidden;border:0}.mejs-chapters .mejs-chapter .mejs-chapter-block{font-size:11px;color:#fff;padding:5px;display:block;border-right:solid 1px #333;border-bottom:solid 1px #333;cursor:pointer}.mejs-chapters .mejs-chapter .mejs-chapter-block-last{border-right:0}.mejs-chapters .mejs-chapter .mejs-chapter-block:hover{background:#666;background:rgba(102,102,102,.7);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(102,102,102,.7)),to(rgba(50,50,50,.6)));background:-webkit-linear-gradient(top,rgba(102,102,102,.7),rgba(50,50,50,.6));background:-moz-linear-gradient(top,rgba(102,102,102,.7),rgba(50,50,50,.6));background:-o-linear-gradient(top,rgba(102,102,102,.7),rgba(50,50,50,.6));background:-ms-linear-gradient(top,rgba(102,102,102,.7),rgba(50,50,50,.6));background:linear-gradient(rgba(102,102,102,.7),rgba(50,50,50,.6));filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr=#666666, endColorstr=#323232)}.mejs-chapters .mejs-chapter .mejs-chapter-block .ch-title{font-size:12px;font-weight:700;display:block;white-space:nowrap;text-overflow:ellipsis;margin:0 0 3px;line-height:12px}.mejs-chapters .mejs-chapter .mejs-chapter-block .ch-timespan{font-size:12px;line-height:12px;margin:3px 0 4px;display:block;white-space:nowrap;text-overflow:ellipsis}.mejs-captions-layer{position:absolute;bottom:0;left:0;text-align:center;line-height:20px;font-size:16px;color:#fff}.mejs-captions-layer a{color:#fff;text-decoration:underline}.mejs-captions-layer[lang=ar]{font-size:20px;font-weight:400}.mejs-captions-position{position:absolute;width:100%;bottom:15px;left:0}.mejs-captions-position-hover{bottom:35px}.mejs-captions-text,.mejs__captions-text *{padding:0;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(20,20,20,.5);white-space:pre-wrap;-webkit-box-shadow:5px 0 0 rgba(20,20,20,.5),-5px 0 0 rgba(20,20,20,.5);box-shadow:5px 0 0 rgba(20,20,20,.5),-5px 0 0 rgba(20,20,20,.5)}.me-cannotplay{}.me-cannotplay a{color:#fff;font-weight:700}.me-cannotplay span{padding:15px;display:block}.mejs-controls .mejs-loop-off button{background-position:-64px -16px}.mejs-controls .mejs-loop-on button{background-position:-64px 0}.mejs-controls .mejs-backlight-off button{background-position:-80px -16px}.mejs-controls .mejs-backlight-on button{background-position:-80px 0}.mejs-controls .mejs-picturecontrols-button{background-position:-96px 0}.mejs-contextmenu{position:absolute;width:150px;padding:10px;border-radius:4px;top:0;left:0;background:#fff;border:solid 1px #999;z-index:1001}.mejs-contextmenu .mejs-contextmenu-separator{height:1px;font-size:0;margin:5px 6px;background:#333}.mejs-contextmenu .mejs-contextmenu-item{font-family:Helvetica,Arial,serif;font-size:12px;padding:4px 6px;cursor:pointer;color:#333}.mejs-contextmenu .mejs-contextmenu-item:hover{background:#2C7C91;color:#fff}.mejs-controls .mejs-sourcechooser-button{position:relative}.mejs-controls .mejs-sourcechooser-button button{background-position:-128px 0}.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector{position:absolute;bottom:26px;right:-10px;width:130px;height:100px;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);border:solid 1px transparent;padding:10px;overflow:hidden;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul{margin:0;padding:0;display:block;list-style-type:none!important;overflow:hidden}.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul li{margin:0 0 6px;padding:0;list-style-type:none!important;display:block;color:#fff;overflow:hidden}.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul li input{clear:both;float:left;margin:3px 3px 0 5px}.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul li label{width:100px;float:left;padding:4px 0 0;line-height:15px;font-family:Helvetica,Arial,serif;font-size:10px}.mejs-postroll-layer{position:absolute;bottom:0;left:0;width:100%;height:100%;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);z-index:1000;overflow:hidden}.mejs-postroll-layer-content{width:100%;height:100%}.mejs-postroll-close{position:absolute;right:0;top:0;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);color:#fff;padding:4px;z-index:100;cursor:pointer}div.mejs-speed-button{width:46px!important;position:relative}.mejs-controls .mejs-button.mejs-speed-button button{background:transparent;width:36px;font-size:11px;line-height:normal;color:#fff}.mejs-controls .mejs-speed-button .mejs-speed-selector{position:absolute;top:-100px;left:-10px;width:60px;height:100px;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);border:solid 1px transparent;padding:0;overflow:hidden;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}.mejs-controls .mejs-speed-button .mejs-speed-selector ul li label.mejs-speed-selected{color:rgba(33,248,248,1)}.mejs-controls .mejs-speed-button .mejs-speed-selector ul{margin:0;padding:0;display:block;list-style-type:none!important;overflow:hidden}.mejs-controls .mejs-speed-button .mejs-speed-selector ul li{margin:0 0 6px;padding:0 10px;list-style-type:none!important;display:block;color:#fff;overflow:hidden}.mejs-controls .mejs-speed-button .mejs-speed-selector ul li input{clear:both;float:left;margin:3px 3px 0 5px}.mejs-controls .mejs-speed-button .mejs-speed-selector ul li label{width:60px;float:left;padding:4px 0 0;line-height:15px;font-family:Helvetica,Arial,serif;font-size:11px;color:#fff;margin-left:5px;cursor:pointer}.mejs-controls .mejs-speed-button .mejs-speed-selector ul li:hover{background-color:#c8c8c8!important;background-color:rgba(255,255,255,.4)!important}.mejs-controls .mejs-button.mejs-jump-forward-button{background:transparent url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/15e1ac8cbacc2efdf1ac2677de48a253.png) no-repeat 3px 3px}.mejs-controls .mejs-button.mejs-jump-forward-button button{background:transparent;font-size:9px;line-height:normal;color:#fff}.mejs-controls .mejs-button.mejs-skip-back-button{background:transparent url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/cd6dc830eb45b3a5a96bbc936ff54846.png) no-repeat 3px 3px}.mejs-controls .mejs-button.mejs-skip-back-button button{background:transparent;font-size:9px;line-height:normal;color:#fff}</style><style type="text/css">/*
+ * Copyright (C) 2014 - present Instructure, Inc.
+ *
+ * This file is part of Canvas.
+ *
+ * Canvas is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU Affero General Public License as published by the Free
+ * Software Foundation, version 3 of the License.
+ *
+ * Canvas is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+ * A PARTICULAR PURPOSE. See the GNU Affero General Public License for more
+ * details.
+ *
+ * You should have received a copy of the GNU Affero General Public License along
+ * with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/* customizations to mediaelementplayer css */
+
+/* good menu widths */
+.mejs-sourcechooser-selector {
+  width: 160px;
+}
+.mejs-sourcechooser-selector label {
+  width: 160px !important;
+}
+
+.mejs-captions-selector {
+  width: 105px;
+}
+.mejs-captions-selector label {
+  width: 70px !important;
+}
+
+/* Subtitile upload link */
+.mejs-captions-selector .upload-track {
+  color: white;
+  margin: 3px 0 5px 5px;
+  float: direction(left);
+}
+
+/* "x" button to remove a subtitle */
+.mejs-captions-selector a[data-remove] {
+  position: absolute;
+  top: 0; right: 0;
+  color: white;
+}
+
+
+/* style menu items without a radio button */
+.mejs-button [role="menu"] {
+  padding: 0 !important;
+}
+ /* compensate for above 0 padding */
+ .mejs-button [role="menu"] ul li {
+  position: relative;
+  padding: 0 10px !important;
+}
+/* add a hover effect */
+.mejs-button [role="menu"] ul li:hover {
+  background-color: #c8c8c8 !important;
+  background-color: rgba(255, 255, 255, 0.4) !important;
+}
+.mejs-button [role="menu"] ul li input {
+  border: 0;
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+.mejs-button [role="menu"] ul li label {
+  margin-left: 5px;
+  cursor: pointer;
+}
+.mejs-button [role="menu"] label.mejs-selected {
+  color: #21f8f8 !important;
+}
+</style><style type="text/css" data-glamor=""></style></head>
+
+<body class="with-left-side course-menu-expanded padless-content pages primary-nav-transitions context-course_1205169 lato-font-not-loaded-yet show webkit chrome no-touch">
+
+<noscript>
+  <div role="alert" class="ic-flash-static ic-flash-error">
+    <div class="ic-flash__icon" aria-hidden="true">
+      <i class="icon-warning"></i>
+    </div>
+    <h1>You need to have JavaScript enabled in order to access this site.</h1>
+  </div>
+</noscript>
+
+
+
+
+
+<ul id="flash_message_holder"></ul>
+<div id="flash_screenreader_holder" role="alert" aria-live="assertive" aria-relevant="additions" class="screenreader-only" aria-atomic="false"></div>
+
+<div id="application" class="ic-app">
+  
+  <header id="header" class="ic-app-header no-print ">
+    <a href="https://canvas.uw.edu/courses/1205169/pages/lesson-five-rendering-the-scene?module_item_id=8253629#content" id="skip_navigation_link">Skip To Content</a>
+      <div role="region" class="ic-app-header__main-navigation" aria-label="Global Navigation">
+        <div class="ic-app-header__logomark-container">
+          <a href="https://canvas.uw.edu/" class="ic-app-header__logomark">
+            <span class="screenreader-only">Dashboard</span>
+          </a>
+        </div>
+        <ul id="menu" class="ic-app-header__menu-list">
+            <li class="menu-item ic-app-header__menu-list-item ">
+              <a id="global_nav_profile_link" href="https://canvas.uw.edu/profile" class="ic-app-header__menu-list-link">
+                <div class="menu-item-icon-container" aria-hidden="true">
+                  <div class="ic-avatar ">
+                    <img src="./Lesson Five_ Rendering the Scene_ CPROGRM 713 A Su 18_ C++ Programming_ Advanced_files/mSs2TjTESYscSzrackhgoJvAT79xbNchamHPrSec" alt="Clayton Wong">
+                  </div>
+                </div>
+                <div class="menu-item__text">
+                  Account
+                </div>
+              </a>
+            </li>
+          <li class="ic-app-header__menu-list-item ">
+            <a id="global_nav_dashboard_link" href="https://canvas.uw.edu/" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--dashboard" version="1.1" x="0" y="0" viewBox="0 0 280 200" enable-background="new 0 0 280 200" xml:space="preserve"><path d="M273.09,180.75H197.47V164.47h62.62A122.16,122.16,0,1,0,17.85,142a124,124,0,0,0,2,22.51H90.18v16.29H6.89l-1.5-6.22A138.51,138.51,0,0,1,1.57,142C1.57,65.64,63.67,3.53,140,3.53S278.43,65.64,278.43,142a137.67,137.67,0,0,1-3.84,32.57ZM66.49,87.63,50.24,71.38,61.75,59.86,78,76.12Zm147,0L202,76.12l16.25-16.25,11.51,11.51ZM131.85,53.82v-23h16.29v23Zm15.63,142.3a31.71,31.71,0,0,1-28-16.81c-6.4-12.08-15.73-72.29-17.54-84.25a8.15,8.15,0,0,1,13.58-7.2c8.88,8.21,53.48,49.72,59.88,61.81a31.61,31.61,0,0,1-27.9,46.45ZM121.81,116.2c4.17,24.56,9.23,50.21,12,55.49A15.35,15.35,0,1,0,161,157.3C158.18,152,139.79,133.44,121.81,116.2Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">Dashboard</div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ic-app-header__menu-list-item--active">
+            <a id="global_nav_courses_link" href="https://canvas.uw.edu/courses" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--courses" version="1.1" x="0" y="0" viewBox="0 0 280 259" enable-background="new 0 0 280 259" xml:space="preserve"><path d="M73.31,198c-11.93,0-22.22,8-24,18.73a26.67,26.67,0,0,0-.3,3.63v.3a22,22,0,0,0,5.44,14.65,22.47,22.47,0,0,0,17.22,8H200V228.19h-134V213.08H200V198Zm21-105.74h90.64V62H94.3ZM79.19,107.34V46.92H200v60.42Zm7.55,30.21V122.45H192.49v15.11ZM71.65,16.71A22.72,22.72,0,0,0,49,39.36V190.88a41.12,41.12,0,0,1,24.32-8h157V16.71ZM33.88,39.36A37.78,37.78,0,0,1,71.65,1.6H245.36V198H215.15v45.32h22.66V258.4H71.65a37.85,37.85,0,0,1-37.76-37.76Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Courses
+              </div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_calendar_link" href="https://canvas.uw.edu/calendar" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--calendar" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M197.07,213.38h16.31V197.07H197.07Zm-16.31,16.31V180.76h48.92v48.92Zm-48.92-16.31h16.31V197.07H131.85Zm-16.31,16.31V180.76h48.92v48.92ZM66.62,213.38H82.93V197.07H66.62ZM50.32,229.68V180.76H99.24v48.92Zm146.75-81.53h16.31V131.85H197.07Zm-16.31,16.31V115.54h48.92v48.92Zm-48.92-16.31h16.31V131.85H131.85Zm-16.31,16.31V115.54h48.92v48.92ZM66.62,148.15H82.93V131.85H66.62ZM50.32,164.46V115.54H99.24v48.92ZM34,262.29H246V82.93H34ZM246,66.62V42.16A8.17,8.17,0,0,0,237.84,34H213.38v8.15a8.15,8.15,0,1,1-16.31,0V34H82.93v8.15a8.15,8.15,0,0,1-16.31,0V34H42.16A8.17,8.17,0,0,0,34,42.16V66.62Zm-8.15-48.92a24.49,24.49,0,0,1,24.46,24.46V278.6H17.71V42.16A24.49,24.49,0,0,1,42.16,17.71H66.62V9.55a8.15,8.15,0,0,1,16.31,0v8.15H197.07V9.55a8.15,8.15,0,1,1,16.31,0v8.15Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Calendar
+              </div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_conversations_link" href="https://canvas.uw.edu/conversations" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--inbox" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M91.72,120.75h96.56V104.65H91.72Zm0,48.28h80.47V152.94H91.72Zm0-96.56h80.47V56.37H91.72Zm160.94,34.88H228.52V10.78h-177v96.56H27.34A24.17,24.17,0,0,0,3.2,131.48V244.14a24.17,24.17,0,0,0,24.14,24.14H252.66a24.17,24.17,0,0,0,24.14-24.14V131.48A24.17,24.17,0,0,0,252.66,107.34Zm0,16.09a8.06,8.06,0,0,1,8,8v51.77l-32.19,19.31V123.44ZM67.58,203.91v-177H212.42v177ZM27.34,123.44H51.48v79.13L19.29,183.26V131.48A8.06,8.06,0,0,1,27.34,123.44ZM252.66,252.19H27.34a8.06,8.06,0,0,1-8-8V202l30,18H230.75l30-18v42.12A8.06,8.06,0,0,1,252.66,252.19Z"></path></svg>
+
+                <span class="menu-item__badge" style="display: none">0</span>
+              </div>
+              <div class="menu-item__text">
+                Inbox
+              </div>
+            </a>
+          </li>
+            
+
+
+          <li class="ic-app-header__menu-list-item">
+           <a id="global_nav_help_link" class="ic-app-header__menu-list-link" data-track-category="help system" data-track-label="help button" href="http://help.instructure.com/">
+              <div class="menu-item-icon-container" role="presentation">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg menu-item__icon svg-icon-help" version="1.1" x="0" y="0" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve" fill="currentColor"><path d="M100,127.88A11.15,11.15,0,1,0,111.16,139,11.16,11.16,0,0,0,100,127.88Zm8.82-88.08a33.19,33.19,0,0,1,23.5,23.5,33.54,33.54,0,0,1-24,41.23,3.4,3.4,0,0,0-2.74,3.15v9.06H94.42v-9.06a14.57,14.57,0,0,1,11.13-14,22.43,22.43,0,0,0,13.66-10.27,22.73,22.73,0,0,0,2.31-17.37A21.92,21.92,0,0,0,106,50.59a22.67,22.67,0,0,0-19.68,3.88,22.18,22.18,0,0,0-8.65,17.64H66.54a33.25,33.25,0,0,1,13-26.47A33.72,33.72,0,0,1,108.82,39.8ZM100,5.2A94.8,94.8,0,1,0,194.8,100,94.91,94.91,0,0,0,100,5.2m0,178.45A83.65,83.65,0,1,1,183.65,100,83.73,83.73,0,0,1,100,183.65" transform="translate(-5.2 -5.2)"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Help
+              </div>
+</a>          </li>
+        </ul>
+      </div>
+      <div class="ic-app-header__secondary-navigation">
+        <ul class="ic-app-header__menu-list">
+          <li class="menu-item ic-app-header__menu-list-item">
+            <button id="primaryNavToggle" class="ic-app-header__menu-list-link ic-app-header__menu-list-link--nav-toggle" aria-label="Expand global navigation
+                " title="Expand global navigation
+                ">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--navtoggle" version="1.1" x="0" y="0" width="40" height="32" viewBox="0 0 40 32" xml:space="preserve">
+  <path d="M39.5,30.28V2.48H37.18v27.8Zm-4.93-13.9L22.17,4,20.53,5.61l9.61,9.61H.5v2.31H30.14l-9.61,9.61,1.64,1.64Z"></path>
+</svg>
+
+              </div>
+            </button>
+          </li>
+        </ul>
+      </div>
+    <div id="global_nav_tray_container"><noscript data-reactid=".0"></noscript></div>
+  </header>
+
+
+  <div id="instructure_ajax_error_box">
+    <div style="text-align: right; background-color: #fff;"><a href="https://canvas.uw.edu/courses/1205169/pages/lesson-five-rendering-the-scene?module_item_id=8253629#" class="close_instructure_ajax_error_box_link">Close</a></div>
+    <iframe id="instructure_ajax_error_result" src="./Lesson Five_ Rendering the Scene_ CPROGRM 713 A Su 18_ C++ Programming_ Advanced_files/saved_resource.html" style="border: 0;" title="Error"></iframe>
+  </div>
+
+  
+
+  <div id="wrapper" class="ic-Layout-wrapper">
+      <div class="ic-app-nav-toggle-and-crumbs no-print">
+          <button type="button" id="courseMenuToggle" class="Button Button--link ic-app-course-nav-toggle" aria-live="polite" aria-label="Hide Courses Navigation Menu" title="Hide Courses Navigation Menu">
+            <i class="icon-hamburger" aria-hidden="true"></i>
+          </button>
+          <div class="ic-app-crumbs">
+        <nav id="breadcrumbs" role="navigation" aria-label="breadcrumbs"><ul><li class="home"><a href="https://canvas.uw.edu/"><span class="ellipsible">      <i class="icon-home" title="My Dashboard">
+        <span class="screenreader-only">My Dashboard</span>
+      </i>
+</span></a></li><li><a href="https://canvas.uw.edu/courses/1205169"><span class="ellipsible">CPROGRM 713 A</span></a></li><li><a href="https://canvas.uw.edu/courses/1205169/pages"><span class="ellipsible">Pages</span></a></li><li><span class="ellipsible">Lesson Five: Rendering the Scene</span></li></ul></nav>
+        </div>
+      </div>
+    <div id="main" class="ic-Layout-columns">
+        <div class="ic-Layout-watermark"></div>
+        <div id="left-side" class="ic-app-course-menu list-view" style="display: block">
+              <span id="section-tabs-header-subtitle" class="ellipsis">Summer 2018</span>
+            <nav role="navigation" aria-label="Courses Navigation Menu"><ul id="section-tabs"><li class="section"><a href="https://canvas.uw.edu/courses/1205169" title="Home" class="home" tabindex="0">Home</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1205169/announcements" title="Announcements" class="announcements" tabindex="0">Announcements</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1205169/modules" title="Modules" class="modules" tabindex="0">Modules</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1205169/discussion_topics" title="Discussions" class="discussions" tabindex="0">Discussions</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1205169/grades" title="Grades" class="grades" tabindex="0">Grades</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1205169/users" title="People" class="people" tabindex="0">People</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1205169/external_tools/63603" title="Info &amp; Help" class="context_external_tool_63603" tabindex="0">Info &amp; Help</a></li></ul></nav>
+        </div>
+      <div id="not_right_side" class="ic-app-main-content">
+        <div id="content-wrapper" class="ic-Layout-contentWrapper">
+            
+
+          <div id="content" class="ic-Layout-contentMain" role="main">
+            
+
+  
+
+<div id="wiki_page_show">
+<div class="header-bar-outer-container">
+  <div class="header-bar-container sticky-toolbar" data-sticky="">
+    <div class="header-bar flex-container">
+      <div class="header-bar-left header-left-flex">
+        
+          
+        
+      </div>
+      <div class="header-bar-right header-right-flex">
+        
+          
+          
+            
+          
+        
+        
+          
+        
+        
+      </div>
+    </div>
+    <div class="page-changed-alert" role="alert" aria-atomic="true" aria-live="polite"></div>
+  </div>
+</div>
+
+
+<div class="show-content user_content clearfix enhanced">
+  <h1 class="page-title">Lesson Five: Rendering the Scene</h1>
+  
+    
+  
+  
+    <div class="actionBox">
+<h6>Required Reading</h6>
+<p><em>The C++ Programming Language 4th edition:&nbsp;</em>Chapter 21 (Class Hierarchies)</p>
+</div>
+<h2>Lesson Objective</h2>
+<p>By the end of this lesson, you should be able to integrate the bitmap CODEC support from assignment 4 into the vector graphics system, and implement the new classes needed to render vector graphic scenes to a bitmap file.</p>
+<h2>Rendering to a Bitmap File</h2>
+<p>At this point, we're ready to integrate our bitmap support into our vector graphics framework. This will allow us to see the fruits of our labor from now on by rendering to a bitmap file. Our framework needs to be neutral about where exactly it renders to—or at least, how the rendering surface is implemented. In earlier lessons, the actual drawing or rendering was considered a flattening of information. No matter what, drawing will involve a bitmap-like concept somewhere in the system, but it should not necessarily involve the bitmap file format. <span class="bold">Remember that the bitmap file format and general notion of a bitmap are distinctly separate.</span></p>
+<div class="keytermBox">
+<h6>Key Term</h6>
+<ul>
+<li>double buffering</li>
+</ul>
+</div>
+<p>Our rendering will actually be a two-step process because of the need to work with a read-write surface before actually rendering. In other words, we'll want each graphic to draw itself onto a surface. Then we'll take that surface, iterate through it, and create a bitmap file from it, or put it on the screen if we have the libraries to support that. This practice is commonly called <span class="keyterm">double buffering</span>. Generally, you wish to create complete images before updating the screen, printing, or whatever may be done with the final image. This prevents the user from seeing the drawing as it happens. It also is simply a necessity in many cases, as you can only print linearly; files work best linearly as well.</p>
+<p>It should be clear that we need to differentiate these two concepts: one as the surface where the drawing happens, and another that does the rendering of the finished drawing to its final destination (which might be decoupled and beyond the bounds of software, such as a piece of paper; this is why we can't model the destination, just the means to get the image to the destination).</p>
+<p>For the first concept, we can use the non-technical term <code>Canvas</code> as an appropriate name for a work surface for drawing. For the second concept, we can use the term <code>Projector</code>, which emphasizes that we are projecting this finished image elsewhere—somewhere that might just not be part of the same system.</p>
+<p>Note that we can use the idea of "drawing" for canvases and "rendering" for projectors. Drawing has no connotations of being scan-line at a time or linear in any way, whereas rendering is slightly more in the direction of what our projector will actually be doing.</p>
+<p>Since a projector does an all-at-once rendering, it makes sense for it to receive a canvas with the request to project, rather than an iterator. Similarly, it wouldn't make very much sense for our projector to have much beyond this; the ability to set the colors of individual points doesn't work for an all-at-once rendering.</p>
+<p>For both canvases and projectors, we'll need to allow a great deal of implementation independence, which will require an interface-based approach. This way, we can provide implementations of projectors that might print, generate a bitmap file, or render to the screen. For our canvases, we might have implementations that are optimized for different platforms or video hardware.</p>
+<p>We should now have enough information to define our projector interface as follows.</p>
+<table style="width: 480px;" border="0">
+<tbody>
+<tr>
+<th>Code Example 5.1</th>
+</tr>
+<tr>
+<td>
+<pre><code>class IProjector
+{
+public:
+    virtual void projectCanvas (HCanvas const&amp; canvas) = 0;
+};</code></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Our canvas needs a bit more analysis, though. We know that the canvas will need to be able to provide an <code>IBitmapIterator</code>, since it will be storing flat, bitmapped information. But since the <code>IBitmapIterator</code> is a read-only iterator, we're still missing our actual means of writing to the canvas. We could use an iterator-based approach, but this is likely awkward. Generally, we want to draw to a canvas by actually saying at what point we want to set the color. We don't want to have to iterate through and keep track of the <code>x</code> and<code> y</code> ourselves until we get to the point we want, and then modify it. Instead, it would be preferable to have a higher level concept of setting the color at a given location, or getting the color at a given location. This will suit most of our drawing needs, whereas the <code>IBitmapIterator</code> will suit our final rendering needs. Our canvas interface is then as shown in example 5.2 below.</p>
+<table style="width: 480px;" border="0">
+<tbody>
+<tr>
+<th>Code Example 5.2</th>
+</tr>
+<tr>
+<td>
+<pre><code>class ICanvas
+{
+public:
+    virtual void setPixelColor (Point const&amp; location, Color const&amp; color) = 0;
+    virtual Color getPixelColor (Point const&amp; location) const = 0;
+    virtual int getWidth () const = 0;
+    virtual int getHeight () const = 0;
+    virtual HBitmapIterator createBitmapIterator () const = 0;
+};</code></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The addition of <code>getWidth</code> and <code>getHeight</code> operations should be self-explanatory: a canvas has to have a width and height. The reason the projector has no width and height is that it is taken from the canvas it is rendering.</p>
+<p>It might not be clear why <code>setWidth</code> and <code>setHeight</code> should not be provided—and this decision is subjective. The semantics of changing the canvas's width and height are very ill-defined, so much so that it will likely be safer and more appropriate for clients to create a second canvas and copy to it in the way they wish. Otherwise, it is unclear whether <code>setWidth</code> and <code>setHeight</code> will stretch the existing image; or if they do not, how they will align the image on the canvas (upper-left or centered, for example).</p>
+<p>Note that since we don't have a GUI client to drive our development, our design might be missing a few features. For example, if someone attempts to write to the canvas while it is still being projected (in a multi-threaded environment), they might get undesired results. Similarly, if someone attempted to create and work with more than one iterator to a decoder in the last assignment, a bug would most certainly be caused. These issues are important, but addressing them shouldn't change our design radically. We'll ignore many of these issues throughout this project, partially because we cannot support multi-threading and many important synchronization features that are platform-specific; but remember that, when you design a system, it is essential for you to have a deep understanding of your clients. You can read deeper into this advice by remembering that the term "clients," for us, means the applications that might sit on top of our vector graphics framework; but for the application, the term "clients" means the full spectrum of potential users. In the same way a vector-graphics application might fail for lack of research to determine what features graphic designers do and don't need, our vector-graphics framework could fail for lack of enough research about what the vector-graphics applications may and may not need.</p>
+<h2>Strokes</h2>
+<div class="keytermBox">
+<h6>Key Terms</h6>
+<ul>
+<li>stroke</li>
+<li>fill</li>
+</ul>
+</div>
+<p>In Lesson One, when we looked at the properties of a vector graphic, we failed to get into much depth on the stroke and fill. As we said then, think of the <span class="keyterm">stroke</span> as the pen you use (and the way you use it) to draw the lines of a rectangle and <span class="keyterm">fill</span> its center with color, pattern, or texture. Because filling algorithms can be relatively complex and are dependent somewhat on line algorithms, we'll continue to hold off on fill support until the next lesson. We can't really put off the stroke, on the other hand; we'll need it to render a scene properly—otherwise our vector graphics (with no stroke and no fill) won't have much to draw.</p>
+<p>It might help to think about a few of the potential strokes you can create. At the simplest level, you can vary the shape of the pen tip, so to speak. The figures below show the same square rendered with different pen tips.</p>
+<p class="title"><span class="bold">Figure 5.1-A</span>—Rotated Square Tip</p>
+<p><img src="./Lesson Five_ Rendering the Scene_ CPROGRM 713 A Su 18_ C++ Programming_ Advanced_files/CPP713s05_01.gif" alt="rotated square pen tip and square drawn with it" width="200" height="100" data-api-endpoint="https://canvas.uw.edu/api/v1/courses/1205169/files/47698292" data-api-returntype="File" style="max-width: 950px;"></p>
+<p class="title"><span class="bold">Figure 5.1-B</span>—Forward Slash Tip</p>
+<p><img src="./Lesson Five_ Rendering the Scene_ CPROGRM 713 A Su 18_ C++ Programming_ Advanced_files/CPP713s05_02.gif" alt="forward slash pen tip and square drawn with it" width="186" height="99" data-api-endpoint="https://canvas.uw.edu/api/v1/courses/1205169/files/47698260" data-api-returntype="File" style="max-width: 950px;"></p>
+<p>Not only can we vary the shape of the pen tip, but also its size and color. For the moment, we'll limit our support of strokes to these possibilities. Additional possibilities include pen pressure, texture (or pattern), and anti-aliasing, or softness.</p>
+<h2>Defining the Stroke and Pen Interfaces</h2>
+<p>Because strokes and pens will have a variety of implementations, we will use an interface-based approach again. Based on our analysis, our stroke interface should look as shown in example 5.3 below.</p>
+<table style="width: 480px;" border="0">
+<tbody>
+<tr>
+<th>Code Example 5.3</th>
+</tr>
+<tr>
+<td>
+<pre><code>class IStroke
+{
+public:
+    virtual void setSize (int size) = 0;
+    virtual int getSize () const = 0;
+    virtual void setColor (Color const&amp; color) = 0;
+    virtual Color getColor () const = 0;
+    virtual HPen createPen (HCanvas const&amp; canvas) = 0;
+};</code></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Our pen interface will be more minimal, as defined in example 5.4 below.</p>
+<table style="width: 480px;" border="0">
+<tbody>
+<tr>
+<th>Code Example 5.4</th>
+</tr>
+<tr>
+<td>
+<pre><code>class IPen
+{
+public:
+    virtual void drawPoint(Point const&amp; point) = 0;
+};</code></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<h2>Locating Strokes</h2>
+<p>For the moment, we can hard-code in our parsing the creation of different strokes defined by name in the XML. In other words when we encounter a tip of "square," we can simply create a new instance of a known stroke class called <code>SquareStroke</code>. In the long run we would need a means of creating libraries of user-defined strokes and, mainly, a way to locate strokes based on their name.</p>
+<p>In the XML, we can specify "stroke" for now as the required first child of the <code>VectorGraphic</code> element. We can define our stroke and its attributes as shown in example 5.5 below:</p>
+<table style="width: 480px;" border="0">
+<tbody>
+<tr>
+<th>Code Example 5.5</th>
+</tr>
+<tr>
+<td>
+<pre><code>&lt;VectorGraphic closed="false"&gt;
+    &lt;Stroke tip="square" size="5" color="00FF00" /&gt;
+    &lt;Point x="0" y="0" /&gt;
+    &lt;Point x="100" y="100" /&gt;
+&lt;/VectorGraphic&gt;</code></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Here, the color is in the form of hexadecimal RGB values, as is conventional in HTML and other technologies. The example color above would be green, based on <code>0xFF</code> ( 255 being the green value, and zero being the red and blue values).</p>
+<h2>Drawing the VectorGraphic</h2>
+<p>The drawing process would begin with a draw request to the <code>Scene</code> and flow eventually to each <code>VectorGraphic</code>. As discussed in the previous lessons, the vector graphics have relative coordinates, so their draw method, unlike the <code>Laye</code>r's and <code>Scene</code>'s draw method, would receive not only a canvas but a point describing their offset, as in example 5.6 below.</p>
+<table style="width: 480px;" border="0">
+<tbody>
+<tr>
+<th>Code Example 5.6</th>
+</tr>
+<tr>
+<td>
+<pre><code>void VectorGraphic::draw (Point const&amp; upperLeftOrigin, HCanvas const&amp; canvas);</code></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Upon a draw request, the <code>VectorGraphic</code> can create a <code>Pen</code> from its stroke and then simply trace along its lines with the pen. So how does this tracing happen? First, one of the pluses of our stroke design is that it will work regardless of how the vector graphic might trace itself. If we added support for curves, no matter what algorithms we used to draw them, our pen approach would work perfectly. The pen makes it so that our actual drawing is highly independent of the algorithms we use to calculate which points we draw.</p>
+<p>Of course, for the moment we only support straight lines, and up until this point we've only had to describe them geometrically in terms of their endpoints. During the process of the drawing, we determine each point we need to draw to generate the line between each end point. Since we need to reuse this code—and for conceptual simplicity—we can create a <code>LineIterator </code>class that allows us to iterate through each point in the line, and ask the pen to draw it. We can partially define this <code>LineIterator</code> class as shown in example 5.7 below.</p>
+<table style="width: 480px;" border="0">
+<tbody>
+<tr>
+<th>Code Example 5.7</th>
+</tr>
+<tr>
+<td>
+<pre><code>class LineIterator
+{
+public:
+    LineIterator(Point const&amp; beginPoint, Point const&amp; endPoint);
+    bool isEnd() const;
+    Point getBeginPoint() const;
+    Point getEndPoint() const;
+    Point getCurrentPoint() const;
+    void nextPoint();
+};</code></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<p>There are a great variety of line algorithms, many of which will generate slightly different lines, and not all of which are useful in implementing our <code>LineIterator</code>. In assignment 5, you will need to either determine your own algorithm or formulae for calculating the next point or find one that will work via research online.</p>
+<h2>Beyond Fundamental Collections</h2>
+<p>In your XML parsing and your <code>Canvas</code> and <code>Projector</code> implementation, you will be (or have been) using a few as-yet undisguised new standard library collections. Unlike the fundamental collections we covered in Lesson One, these collections are not of universal value, but have discrete usages. Some of these collections have no implied underlying implementation (or data structure), but allow you to parameterize which fundamental collection to use for this purpose. We will avoid trying to categorizing these, though they might be best thought of as domain-specific collections. Instead, we'll look at each, how they are sometimes categorized, and what practical role they play in software development.</p>
+<div class="keytermBox">
+<h6>Key Terms</h6>
+<ul>
+<li>queue</li>
+<li>stack</li>
+<li>priority queue</li>
+</ul>
+</div>
+<p>Queue, stack, and priority queue are often referred to as "collection adaptors" because they allow you to parameterize their underlying implementation. Each builds on top of the fundamental collections to implement its methods. This might be an unexpected design, since the fundamental collections have no well-defined underlying commonality. For this reason, the queue, stack, and priority queue use the lowest common denominator of collection features on the parameterized collection implementation.</p>
+<h2>Queue</h2>
+<p>A <span class="keyterm">queue</span> corresponds to the commonly-accepted notion of "queue" in the real world. Most service lines, as at a cafe cash register or an airline ticket counter, illustrate how a queue works: the first person who gets there is the first person who is served, and so forth. This idea is sometimes called "FIFO" for "First In, First Out."</p>
+<p>As you will see in the stack and priority queue, clients of this loose group of collections are most concerned with insertion and removal, which are termed "push" and "pop" respectively in computer-science lingo. All that usually matters in a line is getting in it, and not getting out of it. Finding out where in the line you are can be helpful at times, but it's not the essence or purpose of the structure. The client of a queue doesn't care about who's in line, just who is next.</p>
+<p>For this reason, a queue is particularly useful when we want to decouple the insertion and removal of elements while keeping them in the order in which they were inserted. This focuses us less on the elements in the collection and more on the queue itself. A good example of using a queue is the systems that maintain a "who's next" kind of list. Of course, it can be straining to try to think of a realistic example for this, as it's not an entirely common task (nor are the tasks we perform with a stack or priority queue). One example might be a queue of incoming connections to a game server. In this case, our queue might have a maximum waiting length. When someone connects and the queue is full, they simply must try again; but a limited number of people can remain in the queue until one of the current players leaves.</p>
+<h2>Stacks</h2>
+<p>There aren't many situations in our current system that could benefit from the use of a queue, but there is one that could use a <span class="keyterm">stack</span>. One thing we didn't mention during the last lesson is that the bitmap file format stores scan-lines from bottom to top, not top to bottom as you might expect. This wasn't an issue in the last assignment because the effects we applied would work the same even if the image was upside down (which it was while we were applying them). Now that we are creating our own scene, however, rather than reading in an image and modifying it, we'll certainly notice which way should be up and which way should be down.</p>
+<p>To fix this in the one place that currently requires it—the bitmap file projector you will implement in the assignment—we could use a stack. Once again, a stack works just like those situations that use the term "stack" in the real-world. With a stack of plates, for example, you take off the last plate you put on when you remove the next available plate. This is why stacks are referred to as "LIFO" for "Last In, First Out." Stacks are often used as a quick-and-simple means of reversing for this reason. In our case, if we put each scan line we read from the <code>IBitmapIterator</code> onto a stack and then proceed to write them to the bitmap file in the order we remove them, we will effectively reverse the scan line order.</p>
+<h2>Priority Queue</h2>
+<p>Continuing with the airline ticketing counter example for a queue, let's say business-class customers get precedence over coach customers, who get precedence over standby customers. Each group still gets first-come-first-serve priority, but only at their given priority level. This behavior is really not any different from creating three queues: one for business class, one for coach, and one for standby, and calling from each line first. If anything, in the real world, people would prefer separate lines to being asked "Are you business class or coach?" when they get to the front. This is why a <span class="keyterm">priority queue</span> would be one way of implementing this, but it might not be the cleanest.</p>
+<p>Priority queues work via comparators. Each element is compared against all other elements and placed in order. If two elements are equal, then they are in order of insertion. So, in this case, we'd have to create a comparator for our airline customers. There benefit of using the priority queue over three separate queues is that of ignorance: our code can be oblivious to who inserted and what the sorting criteria are and instead just say "Get me the next customer."</p>
+<h2>Set</h2>
+<div class="keytermBox">
+<h6>Key Term</h6>
+<ul>
+<li>set</li>
+</ul>
+</div>
+<p>The <span class="keyterm">set</span> provided by C++ is similar to the idea of a set in mathematics; but it does provide some operations that do not co-align with the math world's idea of a set. The one particularly useful thing the set does provide is an efficient comparator-based <code>find </code>method. This is useful only for classes that behave like primitive types (and sometimes, only for classes that are unsafe). An example is in order.</p>
+<p>Consider our list of attributes in the <code>XML::Element </code>class. When we need to look up a attribute's value in the interface, we'd like to efficiently locate which attribute we want based on its name. It would be nice if there were a simple, efficient way in the C++ standard library to optimize searching on a per-order basis on a variety of attributes or "fields" of classes. The problem is, the <code>find</code> method always takes an object of the <code>Element</code>'s type. So, in our case, when we do our lookup for the right attribute, we need to pass in a fully operational instance of the <code>Attribute</code> class. Since we only care to search by name, we have to construct a "dummy" attribute instance with an invalid value. We also have to define a comparator that ignores the values of attributes and instead only considers equality based on the name. The latter requirement is not unreasonable, but constructing a "dummy" object is never a good idea. Also, in many cases, we <span class="bold">can't</span> just create a "dummy" object. If we wanted to store a set of decoder or encoders, with the MIME type being the key for the comparator, we'd be out of luck. To call the <code>find</code> method, we'd need a handle to a decoder instance that had the same MIME type. The only way to do this would not be to just make a "dummy" instance, but a "dummy" class—an implementation of<code> IDecoder</code> that simply allowed us to set the MIME type and did nothing for the rest of its operations. Clearly, this would not be a good idea.</p>
+<p>Our list of attributes is reasonable enough to change to a set and optimize the<code> find</code>, but you should exercise caution in using sets. Often, a map might be a better alternative.</p>
+<p>There are a few features of a set that aren't obvious from our conversation. These are as follows.</p>
+<ul>
+<li>A set does not allow duplicate elements (elements that are equal, based on the comparator supplied or the <code>less-than</code> operator). This is one of its major features, although multiset (covered next), another "type" of set, does allow duplicate elements. This violates the mathematical definition of a set.</li>
+<li>All elements are automatically sorted on insertion.</li>
+<li>Lexicographical comparison operators (see the reading assignment for details) are used in very specific domains and are not of general value.</li>
+</ul>
+<p>The set is not easily categorizable. Traditional texts consider it an "associative collection," since its implementation is similar to these (it is always implemented as a binary tree, similar to the map) and it provides an optimized <code>find</code> method.</p>
+<h3>Multiset</h3>
+<div class="keytermBox">
+<h6>Key Terms</h6>
+<ul>
+<li>multiset</li>
+<li>map</li>
+<li>multimap</li>
+</ul>
+</div>
+<p>A <span class="keyterm">multiset</span> allows multiple instances of the same element (where similarity is determined based on the comparator). Therefore, it's really rather close to a list in behavior, with the exception of automatic sorting. It provides all the operations a set does, plus the following.</p>
+<ul>
+<li>Counting of equal elements. In other words, you can see how many instances of the same element there are.</li>
+<li>A <code>lower_bound</code> method that returns the first position where an element might be inserted.</li>
+<li>An <code>upper_bound</code> method that returns the last position where an element might be inserted.</li>
+<li>An <code>equal_range</code> method that returns a range (as pair) where an element might be inserted. This, like the <code>lower_bound</code> and <code>upper_bound</code> method, is introduced because, when you insert an element that is equal to existing elements, it might be placed anywhere in that range.</li>
+</ul>
+<p>Also, make note that a multiset's <code>find</code> method returns the first element, since there may be more than one.</p>
+<h2>Map</h2>
+<p>Most object-oriented systems do not rely heavily on the idea of "mapping" or "lookup." Since we don't need to use arbitrary tokens for information in object-oriented systems, maps don't provide the same value that they may once have. Continuing with our windows example, the more modern, object-oriented, form of windows programming simply uses a <code>window</code> object that has all its own attributes directly and allows navigability to other important information.</p>
+<p><span class="keyterm">Maps</span> in object-oriented systems usually are for one of the following specific purposes (though there are more, these are the most common). In Windows API there are "handles" to windows—a token with which you perform operations, which takes the place of an object in procedural languages. In UNIX, a file descriptor is a similar concept.</p>
+<ul>
+<li>When you need to map from one reality to another, a map is a natural solution. Although you can still create objects that would provide the equivalent, sometimes there's no clear concept that bridges the two worlds. For example, if you were mapping a tag name in XML (one reality) to the actual object that the tag represented (another reality), you might use a map of prototypes, as you did in <span class="italics">C++</span>:<span class="italics"> Intermediate</span>. This could not be done in this course's project because of the reasons we mentioned in Lesson One.</li>
+<li>When you need to optimize searching on a particular field, a set can be used, although, as we discussed, a map is often more straightforward. The downside to using the map is that we separate the field from the class in some ways. In other words, if we store attributes as a map, we have a second instance of the name, which is detached from our cohesive <code>Attribute</code> class and will cause a bit of confusion, especially if the names manage to become out of sync (easy to do). All in all, this can be why maps and sets are sometimes less preferable than a list. Sets and maps are best for objects that behave like primitive types. If we use a reference object in a map or set, we always run the risk that the reference object could change independently; for example, imagine if a decoder's MIME type changed dynamically. Although this situation is a bit contrived (it's the only map to a reference object that we have in our system), you can see how similar situations could cause problems when using a map or set and an optimized <code>find</code> with reference objects.</li>
+</ul>
+<p>Although it is often tempting, try to avoid using a map to relate two disparate objects. Generally, if you need to do this, it should be a hint that you need a new first-class concept in your model. For example, consider a command console in which there are strings that represent commands and <span class="italics">functors</span> (objects, like comparators, that behave like a function) for the action that should be taken. Although a map could be used to relate these, having a set of <code>Command</code> objects would be more appropriate. Clearly, there is an idea of a "Command" in this model that would have the command's name as well as its action, and maybe help information and other important attributes. For our basic canvas implementation in assignment 6, we could use a map of <code>Point</code> to <code>Color</code> instead of a map or set of <code>Pixels</code> (which might have a location and color attribute) in our basic canvas implementation. Similarly, we could have (and may have initially) used a map of string to string for our attributes in the <code>XML::Element</code> class.</p>
+<p>A map relates two concepts: a "key" and a "value." These can be (and usually are) separate types, as in our examples above. The optimized <code>find </code>method in a map searches based on key. The map's iterators are unique in that their underlying element is actually an <code>std::pair&lt;key, value&gt;</code>, since you might need either.</p>
+<p>The map also provides an array indexing operator, which allows simplified semantics of lookup, but should be used with caution. When we set <span class="bold">or</span> get a value via the indexing operator, if the key that's used as the index does not already exist, it will be created. This is why you should avoid ever using the indexing operator for looking up values, but instead use the <code>find</code> method to do so.</p>
+<p>There are a couple of important notes about maps that might not be obvious from their interface:</p>
+<ul>
+<li>You may not change the key of an element because it will disturb ordering; you have to remove it and reinsert.</li>
+<li>For this reason, when iterating, the key will be constant.</li>
+</ul>
+<h3>Multimap</h3>
+<p>A <span class="keyterm">multimap</span> is mostly identical to a map, with one difference: multiple values per key. The uses for multimaps are few and far between. Consult your texts for information on multimaps if you find yourself in a situation that merits using them.</p>
+  
+</div>
+<div style=""><div class="module-sequence-padding"></div>
+<div class="module-sequence-footer" role="navigation" aria-label="Module Navigation">
+  <div class="module-sequence-footer-content">
+    
+      <a href="https://canvas.uw.edu/courses/1205169/modules/items/8253628" role="button" class="Button module-sequence-footer-button--previous" data-tooltip="right" data-html-tooltip-title="&lt;i class=&#39;icon-document&#39;&gt;&lt;/i&gt; Lesson Five Materials" aria-describedby="msf0-previous-desc">
+        <i class="icon-mini-arrow-left"></i>Previous
+        <span id="msf0-previous-desc" class="hidden" hidden="">Previous: Lesson Five Materials</span>
+      </a>
+    
+
+    
+      <span class="module-sequence-footer-button--next" data-tooltip="left" data-html-tooltip-title="&lt;i class=&#39;icon-discussion&#39;&gt;&lt;/i&gt; Discussion of Lesson 5 and Assignment 5">
+        <a href="https://canvas.uw.edu/courses/1205169/modules/items/8253630" role="button" class="Button" aria-describedby="msf0-next-desc">
+          Next<i class="icon-mini-arrow-right"></i>
+          <span id="msf0-next-desc" class="hidden" hidden="">Next: Discussion of Lesson 5 and Assignment 5</span>
+        </a>
+      </span>
+    
+  </div>
+</div>
+</div></div>
+
+          </div>
+        </div>
+        <div id="right-side-wrapper" class="ic-app-main-content__secondary">
+          <aside id="right-side" role="complementary">
+            
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <div style="display:none;"><!-- Everything inside of this should always stay hidden -->
+        <div id="page_view_id">2490b6d7-ca2e-4d2f-965a-e2f3b754d9c5</div>
+    </div>
+  <div id="aria_alerts" class="hide-text affix" role="alert" aria-live="assertive"></div>
+  <div id="StudentTray__Container"></div>
+  
+
+<script>
+  INST = {"environment":"production","allowMediaComments":true,"kalturaSettings":{"domain":"nv.instructuremedia.com","resource_domain":"nv.instructuremedia.com","rtmp_domain":"fms-prod.instructuremedia.com","partner_id":"9","subpartner_id":"0","player_ui_conf":"0","kcw_ui_conf":"0","upload_ui_conf":"0","max_file_size_bytes":534773760,"do_analytics":false,"hide_rte_button":false,"js_uploader":true},"googleAnalyticsAccount":"UA-9138420-1","logPageViews":true,"maxVisibleEditorButtons":3,"editorButtons":[{"name":"","id":21130,"url":"https://uw.hosted.panopto.com/Panopto/Pages/Sessions/embeddedupload.aspx","icon_url":"https://uw.hosted.panopto.com/Panopto/images/panopto_logo_globe.png","canvas_icon_class":null,"width":900,"height":700},{"name":"Modalis","id":52765,"url":"https://uw.modalis.io/lti","icon_url":"https://uw.modalis.io/assets/richicon.png","canvas_icon_class":null,"width":800,"height":600}]};
+  ENV = {"ASSET_HOST":"https://du11hjcvx0uqb.cloudfront.net","active_brand_config_json_url":"https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/171115bc27094614cfdd1485c405a438/variables-750d72b9d3e5d522f965bf904110c132.json","url_to_what_gets_loaded_inside_the_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/171115bc27094614cfdd1485c405a438/variables-750d72b9d3e5d522f965bf904110c132.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_normal_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-53dac18d10.css"],"url_for_high_contrast_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/default/variables-high_contrast-750d72b9d3e5d522f965bf904110c132.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_high_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-b4d65fe883.css"],"current_user_id":"3757111","current_user_roles":["user","student"],"current_user_disabled_inbox":false,"files_domain":"cluster10-files.instructure.com","DOMAIN_ROOT_ACCOUNT_ID":100000000083919,"k12":false,"use_responsive_layout":false,"help_link_name":"Help","help_link_icon":"help","use_high_contrast":false,"LTI_LAUNCH_FRAME_ALLOWANCES":["geolocation *","microphone *","camera *","midi *","encrypted-media *"],"SETTINGS":{"open_registration":false,"eportfolios_enabled":true,"collapse_global_nav":true,"show_feedback_link":true,"enable_profiles":true},"current_user":{"id":"3757111","display_name":"Clayton Wong","avatar_image_url":"https://canvas.uw.edu/images/thumbnails/46487823/mSs2TjTESYscSzrackhgoJvAT79xbNchamHPrSec","html_url":"https://canvas.uw.edu/about/3757111"},"page_view_update_url":"/page_views/2490b6d7-ca2e-4d2f-965a-e2f3b754d9c5?page_view_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpIjoiMjQ5MGI2ZDctY2EyZS00ZDJmLTk2NWEtZTJmM2I3NTRkOWM1IiwidSI6MTAwMDAwMDAzNzU3MTExLCJjIjoiMjAxOC0wOS0wNFQyMzoyNzozNy42N1oifQ.G032Wkx4NiluMf4FQco9AAu0kbmKzEWsejKUXo25n1o","context_asset_string":"course_1205169","ping_url":"https://canvas.uw.edu/api/v1/courses/1205169/ping","TIMEZONE":"America/Los_Angeles","CONTEXT_TIMEZONE":"America/Los_Angeles","LOCALE":"en","BIGEASY_LOCALE":"en_US","FULLCALENDAR_LOCALE":"en","MOMENT_LOCALE":"en","WIKI_RIGHTS":{"read":true},"PAGE_RIGHTS":{"read":true},"DEFAULT_EDITING_ROLES":"teachers","WIKI_PAGES_PATH":"/courses/1205169/pages","WIKI_PAGE":{"title":"Lesson Five: Rendering the Scene","created_at":"2018-03-16T21:50:46Z","url":"lesson-five-rendering-the-scene","editing_roles":"teachers","page_id":"2704799","published":true,"hide_from_students":false,"front_page":false,"html_url":"https://canvas.uw.edu/courses/1205169/pages/lesson-five-rendering-the-scene","todo_date":null,"updated_at":"2018-03-16T21:50:46Z","locked_for_user":false,"body":"\u003cdiv class=\"actionBox\"\u003e\r\n\u003ch6\u003eRequired Reading\u003c/h6\u003e\r\n\u003cp\u003e\u003cem\u003eThe C++ Programming Language 4th edition: \u003c/em\u003eChapter 21 (Class Hierarchies)\u003c/p\u003e\r\n\u003c/div\u003e\r\n\u003ch2\u003eLesson Objective\u003c/h2\u003e\r\n\u003cp\u003eBy the end of this lesson, you should be able to integrate the bitmap CODEC support from assignment 4 into the vector graphics system, and implement the new classes needed to render vector graphic scenes to a bitmap file.\u003c/p\u003e\r\n\u003ch2\u003eRendering to a Bitmap File\u003c/h2\u003e\r\n\u003cp\u003eAt this point, we're ready to integrate our bitmap support into our vector graphics framework. This will allow us to see the fruits of our labor from now on by rendering to a bitmap file. Our framework needs to be neutral about where exactly it renders to—or at least, how the rendering surface is implemented. In earlier lessons, the actual drawing or rendering was considered a flattening of information. No matter what, drawing will involve a bitmap-like concept somewhere in the system, but it should not necessarily involve the bitmap file format. \u003cspan class=\"bold\"\u003eRemember that the bitmap file format and general notion of a bitmap are distinctly separate.\u003c/span\u003e\u003c/p\u003e\r\n\u003cdiv class=\"keytermBox\"\u003e\r\n\u003ch6\u003eKey Term\u003c/h6\u003e\r\n\u003cul\u003e\r\n\u003cli\u003edouble buffering\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eOur rendering will actually be a two-step process because of the need to work with a read-write surface before actually rendering. In other words, we'll want each graphic to draw itself onto a surface. Then we'll take that surface, iterate through it, and create a bitmap file from it, or put it on the screen if we have the libraries to support that. This practice is commonly called \u003cspan class=\"keyterm\"\u003edouble buffering\u003c/span\u003e. Generally, you wish to create complete images before updating the screen, printing, or whatever may be done with the final image. This prevents the user from seeing the drawing as it happens. It also is simply a necessity in many cases, as you can only print linearly; files work best linearly as well.\u003c/p\u003e\r\n\u003cp\u003eIt should be clear that we need to differentiate these two concepts: one as the surface where the drawing happens, and another that does the rendering of the finished drawing to its final destination (which might be decoupled and beyond the bounds of software, such as a piece of paper; this is why we can't model the destination, just the means to get the image to the destination).\u003c/p\u003e\r\n\u003cp\u003eFor the first concept, we can use the non-technical term \u003ccode\u003eCanvas\u003c/code\u003e as an appropriate name for a work surface for drawing. For the second concept, we can use the term \u003ccode\u003eProjector\u003c/code\u003e, which emphasizes that we are projecting this finished image elsewhere—somewhere that might just not be part of the same system.\u003c/p\u003e\r\n\u003cp\u003eNote that we can use the idea of \"drawing\" for canvases and \"rendering\" for projectors. Drawing has no connotations of being scan-line at a time or linear in any way, whereas rendering is slightly more in the direction of what our projector will actually be doing.\u003c/p\u003e\r\n\u003cp\u003eSince a projector does an all-at-once rendering, it makes sense for it to receive a canvas with the request to project, rather than an iterator. Similarly, it wouldn't make very much sense for our projector to have much beyond this; the ability to set the colors of individual points doesn't work for an all-at-once rendering.\u003c/p\u003e\r\n\u003cp\u003eFor both canvases and projectors, we'll need to allow a great deal of implementation independence, which will require an interface-based approach. This way, we can provide implementations of projectors that might print, generate a bitmap file, or render to the screen. For our canvases, we might have implementations that are optimized for different platforms or video hardware.\u003c/p\u003e\r\n\u003cp\u003eWe should now have enough information to define our projector interface as follows.\u003c/p\u003e\r\n\u003ctable style=\"width: 480px;\" border=\"0\"\u003e\r\n\u003ctbody\u003e\r\n\u003ctr\u003e\r\n\u003cth\u003eCode Example 5.1\u003c/th\u003e\r\n\u003c/tr\u003e\r\n\u003ctr\u003e\r\n\u003ctd\u003e\r\n\u003cpre\u003e\u003ccode\u003eclass IProjector\r\n{\r\npublic:\r\n    virtual void projectCanvas (HCanvas const\u0026amp; canvas) = 0;\r\n};\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/td\u003e\r\n\u003c/tr\u003e\r\n\u003c/tbody\u003e\r\n\u003c/table\u003e\r\n\u003cp\u003eOur canvas needs a bit more analysis, though. We know that the canvas will need to be able to provide an \u003ccode\u003eIBitmapIterator\u003c/code\u003e, since it will be storing flat, bitmapped information. But since the \u003ccode\u003eIBitmapIterator\u003c/code\u003e is a read-only iterator, we're still missing our actual means of writing to the canvas. We could use an iterator-based approach, but this is likely awkward. Generally, we want to draw to a canvas by actually saying at what point we want to set the color. We don't want to have to iterate through and keep track of the \u003ccode\u003ex\u003c/code\u003e and\u003ccode\u003e y\u003c/code\u003e ourselves until we get to the point we want, and then modify it. Instead, it would be preferable to have a higher level concept of setting the color at a given location, or getting the color at a given location. This will suit most of our drawing needs, whereas the \u003ccode\u003eIBitmapIterator\u003c/code\u003e will suit our final rendering needs. Our canvas interface is then as shown in example 5.2 below.\u003c/p\u003e\r\n\u003ctable style=\"width: 480px;\" border=\"0\"\u003e\r\n\u003ctbody\u003e\r\n\u003ctr\u003e\r\n\u003cth\u003eCode Example 5.2\u003c/th\u003e\r\n\u003c/tr\u003e\r\n\u003ctr\u003e\r\n\u003ctd\u003e\r\n\u003cpre\u003e\u003ccode\u003eclass ICanvas\r\n{\r\npublic:\r\n    virtual void setPixelColor (Point const\u0026amp; location, Color const\u0026amp; color) = 0;\r\n    virtual Color getPixelColor (Point const\u0026amp; location) const = 0;\r\n    virtual int getWidth () const = 0;\r\n    virtual int getHeight () const = 0;\r\n    virtual HBitmapIterator createBitmapIterator () const = 0;\r\n};\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/td\u003e\r\n\u003c/tr\u003e\r\n\u003c/tbody\u003e\r\n\u003c/table\u003e\r\n\u003cp\u003eThe addition of \u003ccode\u003egetWidth\u003c/code\u003e and \u003ccode\u003egetHeight\u003c/code\u003e operations should be self-explanatory: a canvas has to have a width and height. The reason the projector has no width and height is that it is taken from the canvas it is rendering.\u003c/p\u003e\r\n\u003cp\u003eIt might not be clear why \u003ccode\u003esetWidth\u003c/code\u003e and \u003ccode\u003esetHeight\u003c/code\u003e should not be provided—and this decision is subjective. The semantics of changing the canvas's width and height are very ill-defined, so much so that it will likely be safer and more appropriate for clients to create a second canvas and copy to it in the way they wish. Otherwise, it is unclear whether \u003ccode\u003esetWidth\u003c/code\u003e and \u003ccode\u003esetHeight\u003c/code\u003e will stretch the existing image; or if they do not, how they will align the image on the canvas (upper-left or centered, for example).\u003c/p\u003e\r\n\u003cp\u003eNote that since we don't have a GUI client to drive our development, our design might be missing a few features. For example, if someone attempts to write to the canvas while it is still being projected (in a multi-threaded environment), they might get undesired results. Similarly, if someone attempted to create and work with more than one iterator to a decoder in the last assignment, a bug would most certainly be caused. These issues are important, but addressing them shouldn't change our design radically. We'll ignore many of these issues throughout this project, partially because we cannot support multi-threading and many important synchronization features that are platform-specific; but remember that, when you design a system, it is essential for you to have a deep understanding of your clients. You can read deeper into this advice by remembering that the term \"clients,\" for us, means the applications that might sit on top of our vector graphics framework; but for the application, the term \"clients\" means the full spectrum of potential users. In the same way a vector-graphics application might fail for lack of research to determine what features graphic designers do and don't need, our vector-graphics framework could fail for lack of enough research about what the vector-graphics applications may and may not need.\u003c/p\u003e\r\n\u003ch2\u003eStrokes\u003c/h2\u003e\r\n\u003cdiv class=\"keytermBox\"\u003e\r\n\u003ch6\u003eKey Terms\u003c/h6\u003e\r\n\u003cul\u003e\r\n\u003cli\u003estroke\u003c/li\u003e\r\n\u003cli\u003efill\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eIn Lesson One, when we looked at the properties of a vector graphic, we failed to get into much depth on the stroke and fill. As we said then, think of the \u003cspan class=\"keyterm\"\u003estroke\u003c/span\u003e as the pen you use (and the way you use it) to draw the lines of a rectangle and \u003cspan class=\"keyterm\"\u003efill\u003c/span\u003e its center with color, pattern, or texture. Because filling algorithms can be relatively complex and are dependent somewhat on line algorithms, we'll continue to hold off on fill support until the next lesson. We can't really put off the stroke, on the other hand; we'll need it to render a scene properly—otherwise our vector graphics (with no stroke and no fill) won't have much to draw.\u003c/p\u003e\r\n\u003cp\u003eIt might help to think about a few of the potential strokes you can create. At the simplest level, you can vary the shape of the pen tip, so to speak. The figures below show the same square rendered with different pen tips.\u003c/p\u003e\r\n\u003cp class=\"title\"\u003e\u003cspan class=\"bold\"\u003eFigure 5.1-A\u003c/span\u003e—Rotated Square Tip\u003c/p\u003e\r\n\u003cp\u003e\u003cimg src=\"https://canvas.uw.edu/courses/1205169/files/47698292/preview\" alt=\"rotated square pen tip and square drawn with it\" width=\"200\" height=\"100\" data-api-endpoint=\"https://canvas.uw.edu/api/v1/courses/1205169/files/47698292\" data-api-returntype=\"File\"\u003e\u003c/p\u003e\r\n\u003cp class=\"title\"\u003e\u003cspan class=\"bold\"\u003eFigure 5.1-B\u003c/span\u003e—Forward Slash Tip\u003c/p\u003e\r\n\u003cp\u003e\u003cimg src=\"https://canvas.uw.edu/courses/1205169/files/47698260/preview\" alt=\"forward slash pen tip and square drawn with it\" width=\"186\" height=\"99\" data-api-endpoint=\"https://canvas.uw.edu/api/v1/courses/1205169/files/47698260\" data-api-returntype=\"File\"\u003e\u003c/p\u003e\r\n\u003cp\u003eNot only can we vary the shape of the pen tip, but also its size and color. For the moment, we'll limit our support of strokes to these possibilities. Additional possibilities include pen pressure, texture (or pattern), and anti-aliasing, or softness.\u003c/p\u003e\r\n\u003ch2\u003eDefining the Stroke and Pen Interfaces\u003c/h2\u003e\r\n\u003cp\u003eBecause strokes and pens will have a variety of implementations, we will use an interface-based approach again. Based on our analysis, our stroke interface should look as shown in example 5.3 below.\u003c/p\u003e\r\n\u003ctable style=\"width: 480px;\" border=\"0\"\u003e\r\n\u003ctbody\u003e\r\n\u003ctr\u003e\r\n\u003cth\u003eCode Example 5.3\u003c/th\u003e\r\n\u003c/tr\u003e\r\n\u003ctr\u003e\r\n\u003ctd\u003e\r\n\u003cpre\u003e\u003ccode\u003eclass IStroke\r\n{\r\npublic:\r\n    virtual void setSize (int size) = 0;\r\n    virtual int getSize () const = 0;\r\n    virtual void setColor (Color const\u0026amp; color) = 0;\r\n    virtual Color getColor () const = 0;\r\n    virtual HPen createPen (HCanvas const\u0026amp; canvas) = 0;\r\n};\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/td\u003e\r\n\u003c/tr\u003e\r\n\u003c/tbody\u003e\r\n\u003c/table\u003e\r\n\u003cp\u003eOur pen interface will be more minimal, as defined in example 5.4 below.\u003c/p\u003e\r\n\u003ctable style=\"width: 480px;\" border=\"0\"\u003e\r\n\u003ctbody\u003e\r\n\u003ctr\u003e\r\n\u003cth\u003eCode Example 5.4\u003c/th\u003e\r\n\u003c/tr\u003e\r\n\u003ctr\u003e\r\n\u003ctd\u003e\r\n\u003cpre\u003e\u003ccode\u003eclass IPen\r\n{\r\npublic:\r\n    virtual void drawPoint(Point const\u0026amp; point) = 0;\r\n};\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/td\u003e\r\n\u003c/tr\u003e\r\n\u003c/tbody\u003e\r\n\u003c/table\u003e\r\n\u003ch2\u003eLocating Strokes\u003c/h2\u003e\r\n\u003cp\u003eFor the moment, we can hard-code in our parsing the creation of different strokes defined by name in the XML. In other words when we encounter a tip of \"square,\" we can simply create a new instance of a known stroke class called \u003ccode\u003eSquareStroke\u003c/code\u003e. In the long run we would need a means of creating libraries of user-defined strokes and, mainly, a way to locate strokes based on their name.\u003c/p\u003e\r\n\u003cp\u003eIn the XML, we can specify \"stroke\" for now as the required first child of the \u003ccode\u003eVectorGraphic\u003c/code\u003e element. We can define our stroke and its attributes as shown in example 5.5 below:\u003c/p\u003e\r\n\u003ctable style=\"width: 480px;\" border=\"0\"\u003e\r\n\u003ctbody\u003e\r\n\u003ctr\u003e\r\n\u003cth\u003eCode Example 5.5\u003c/th\u003e\r\n\u003c/tr\u003e\r\n\u003ctr\u003e\r\n\u003ctd\u003e\r\n\u003cpre\u003e\u003ccode\u003e\u0026lt;VectorGraphic closed=\"false\"\u0026gt;\r\n    \u0026lt;Stroke tip=\"square\" size=\"5\" color=\"00FF00\" /\u0026gt;\r\n    \u0026lt;Point x=\"0\" y=\"0\" /\u0026gt;\r\n    \u0026lt;Point x=\"100\" y=\"100\" /\u0026gt;\r\n\u0026lt;/VectorGraphic\u0026gt;\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/td\u003e\r\n\u003c/tr\u003e\r\n\u003c/tbody\u003e\r\n\u003c/table\u003e\r\n\u003cp\u003eHere, the color is in the form of hexadecimal RGB values, as is conventional in HTML and other technologies. The example color above would be green, based on \u003ccode\u003e0xFF\u003c/code\u003e ( 255 being the green value, and zero being the red and blue values).\u003c/p\u003e\r\n\u003ch2\u003eDrawing the VectorGraphic\u003c/h2\u003e\r\n\u003cp\u003eThe drawing process would begin with a draw request to the \u003ccode\u003eScene\u003c/code\u003e and flow eventually to each \u003ccode\u003eVectorGraphic\u003c/code\u003e. As discussed in the previous lessons, the vector graphics have relative coordinates, so their draw method, unlike the \u003ccode\u003eLaye\u003c/code\u003er's and \u003ccode\u003eScene\u003c/code\u003e's draw method, would receive not only a canvas but a point describing their offset, as in example 5.6 below.\u003c/p\u003e\r\n\u003ctable style=\"width: 480px;\" border=\"0\"\u003e\r\n\u003ctbody\u003e\r\n\u003ctr\u003e\r\n\u003cth\u003eCode Example 5.6\u003c/th\u003e\r\n\u003c/tr\u003e\r\n\u003ctr\u003e\r\n\u003ctd\u003e\r\n\u003cpre\u003e\u003ccode\u003evoid VectorGraphic::draw (Point const\u0026amp; upperLeftOrigin, HCanvas const\u0026amp; canvas);\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/td\u003e\r\n\u003c/tr\u003e\r\n\u003c/tbody\u003e\r\n\u003c/table\u003e\r\n\u003cp\u003eUpon a draw request, the \u003ccode\u003eVectorGraphic\u003c/code\u003e can create a \u003ccode\u003ePen\u003c/code\u003e from its stroke and then simply trace along its lines with the pen. So how does this tracing happen? First, one of the pluses of our stroke design is that it will work regardless of how the vector graphic might trace itself. If we added support for curves, no matter what algorithms we used to draw them, our pen approach would work perfectly. The pen makes it so that our actual drawing is highly independent of the algorithms we use to calculate which points we draw.\u003c/p\u003e\r\n\u003cp\u003eOf course, for the moment we only support straight lines, and up until this point we've only had to describe them geometrically in terms of their endpoints. During the process of the drawing, we determine each point we need to draw to generate the line between each end point. Since we need to reuse this code—and for conceptual simplicity—we can create a \u003ccode\u003eLineIterator \u003c/code\u003eclass that allows us to iterate through each point in the line, and ask the pen to draw it. We can partially define this \u003ccode\u003eLineIterator\u003c/code\u003e class as shown in example 5.7 below.\u003c/p\u003e\r\n\u003ctable style=\"width: 480px;\" border=\"0\"\u003e\r\n\u003ctbody\u003e\r\n\u003ctr\u003e\r\n\u003cth\u003eCode Example 5.7\u003c/th\u003e\r\n\u003c/tr\u003e\r\n\u003ctr\u003e\r\n\u003ctd\u003e\r\n\u003cpre\u003e\u003ccode\u003eclass LineIterator\r\n{\r\npublic:\r\n    LineIterator(Point const\u0026amp; beginPoint, Point const\u0026amp; endPoint);\r\n    bool isEnd() const;\r\n    Point getBeginPoint() const;\r\n    Point getEndPoint() const;\r\n    Point getCurrentPoint() const;\r\n    void nextPoint();\r\n};\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/td\u003e\r\n\u003c/tr\u003e\r\n\u003c/tbody\u003e\r\n\u003c/table\u003e\r\n\u003cp\u003eThere are a great variety of line algorithms, many of which will generate slightly different lines, and not all of which are useful in implementing our \u003ccode\u003eLineIterator\u003c/code\u003e. In assignment 5, you will need to either determine your own algorithm or formulae for calculating the next point or find one that will work via research online.\u003c/p\u003e\r\n\u003ch2\u003eBeyond Fundamental Collections\u003c/h2\u003e\r\n\u003cp\u003eIn your XML parsing and your \u003ccode\u003eCanvas\u003c/code\u003e and \u003ccode\u003eProjector\u003c/code\u003e implementation, you will be (or have been) using a few as-yet undisguised new standard library collections. Unlike the fundamental collections we covered in Lesson One, these collections are not of universal value, but have discrete usages. Some of these collections have no implied underlying implementation (or data structure), but allow you to parameterize which fundamental collection to use for this purpose. We will avoid trying to categorizing these, though they might be best thought of as domain-specific collections. Instead, we'll look at each, how they are sometimes categorized, and what practical role they play in software development.\u003c/p\u003e\r\n\u003cdiv class=\"keytermBox\"\u003e\r\n\u003ch6\u003eKey Terms\u003c/h6\u003e\r\n\u003cul\u003e\r\n\u003cli\u003equeue\u003c/li\u003e\r\n\u003cli\u003estack\u003c/li\u003e\r\n\u003cli\u003epriority queue\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eQueue, stack, and priority queue are often referred to as \"collection adaptors\" because they allow you to parameterize their underlying implementation. Each builds on top of the fundamental collections to implement its methods. This might be an unexpected design, since the fundamental collections have no well-defined underlying commonality. For this reason, the queue, stack, and priority queue use the lowest common denominator of collection features on the parameterized collection implementation.\u003c/p\u003e\r\n\u003ch2\u003eQueue\u003c/h2\u003e\r\n\u003cp\u003eA \u003cspan class=\"keyterm\"\u003equeue\u003c/span\u003e corresponds to the commonly-accepted notion of \"queue\" in the real world. Most service lines, as at a cafe cash register or an airline ticket counter, illustrate how a queue works: the first person who gets there is the first person who is served, and so forth. This idea is sometimes called \"FIFO\" for \"First In, First Out.\"\u003c/p\u003e\r\n\u003cp\u003eAs you will see in the stack and priority queue, clients of this loose group of collections are most concerned with insertion and removal, which are termed \"push\" and \"pop\" respectively in computer-science lingo. All that usually matters in a line is getting in it, and not getting out of it. Finding out where in the line you are can be helpful at times, but it's not the essence or purpose of the structure. The client of a queue doesn't care about who's in line, just who is next.\u003c/p\u003e\r\n\u003cp\u003eFor this reason, a queue is particularly useful when we want to decouple the insertion and removal of elements while keeping them in the order in which they were inserted. This focuses us less on the elements in the collection and more on the queue itself. A good example of using a queue is the systems that maintain a \"who's next\" kind of list. Of course, it can be straining to try to think of a realistic example for this, as it's not an entirely common task (nor are the tasks we perform with a stack or priority queue). One example might be a queue of incoming connections to a game server. In this case, our queue might have a maximum waiting length. When someone connects and the queue is full, they simply must try again; but a limited number of people can remain in the queue until one of the current players leaves.\u003c/p\u003e\r\n\u003ch2\u003eStacks\u003c/h2\u003e\r\n\u003cp\u003eThere aren't many situations in our current system that could benefit from the use of a queue, but there is one that could use a \u003cspan class=\"keyterm\"\u003estack\u003c/span\u003e. One thing we didn't mention during the last lesson is that the bitmap file format stores scan-lines from bottom to top, not top to bottom as you might expect. This wasn't an issue in the last assignment because the effects we applied would work the same even if the image was upside down (which it was while we were applying them). Now that we are creating our own scene, however, rather than reading in an image and modifying it, we'll certainly notice which way should be up and which way should be down.\u003c/p\u003e\r\n\u003cp\u003eTo fix this in the one place that currently requires it—the bitmap file projector you will implement in the assignment—we could use a stack. Once again, a stack works just like those situations that use the term \"stack\" in the real-world. With a stack of plates, for example, you take off the last plate you put on when you remove the next available plate. This is why stacks are referred to as \"LIFO\" for \"Last In, First Out.\" Stacks are often used as a quick-and-simple means of reversing for this reason. In our case, if we put each scan line we read from the \u003ccode\u003eIBitmapIterator\u003c/code\u003e onto a stack and then proceed to write them to the bitmap file in the order we remove them, we will effectively reverse the scan line order.\u003c/p\u003e\r\n\u003ch2\u003ePriority Queue\u003c/h2\u003e\r\n\u003cp\u003eContinuing with the airline ticketing counter example for a queue, let's say business-class customers get precedence over coach customers, who get precedence over standby customers. Each group still gets first-come-first-serve priority, but only at their given priority level. This behavior is really not any different from creating three queues: one for business class, one for coach, and one for standby, and calling from each line first. If anything, in the real world, people would prefer separate lines to being asked \"Are you business class or coach?\" when they get to the front. This is why a \u003cspan class=\"keyterm\"\u003epriority queue\u003c/span\u003e would be one way of implementing this, but it might not be the cleanest.\u003c/p\u003e\r\n\u003cp\u003ePriority queues work via comparators. Each element is compared against all other elements and placed in order. If two elements are equal, then they are in order of insertion. So, in this case, we'd have to create a comparator for our airline customers. There benefit of using the priority queue over three separate queues is that of ignorance: our code can be oblivious to who inserted and what the sorting criteria are and instead just say \"Get me the next customer.\"\u003c/p\u003e\r\n\u003ch2\u003eSet\u003c/h2\u003e\r\n\u003cdiv class=\"keytermBox\"\u003e\r\n\u003ch6\u003eKey Term\u003c/h6\u003e\r\n\u003cul\u003e\r\n\u003cli\u003eset\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eThe \u003cspan class=\"keyterm\"\u003eset\u003c/span\u003e provided by C++ is similar to the idea of a set in mathematics; but it does provide some operations that do not co-align with the math world's idea of a set. The one particularly useful thing the set does provide is an efficient comparator-based \u003ccode\u003efind \u003c/code\u003emethod. This is useful only for classes that behave like primitive types (and sometimes, only for classes that are unsafe). An example is in order.\u003c/p\u003e\r\n\u003cp\u003eConsider our list of attributes in the \u003ccode\u003eXML::Element \u003c/code\u003eclass. When we need to look up a attribute's value in the interface, we'd like to efficiently locate which attribute we want based on its name. It would be nice if there were a simple, efficient way in the C++ standard library to optimize searching on a per-order basis on a variety of attributes or \"fields\" of classes. The problem is, the \u003ccode\u003efind\u003c/code\u003e method always takes an object of the \u003ccode\u003eElement\u003c/code\u003e's type. So, in our case, when we do our lookup for the right attribute, we need to pass in a fully operational instance of the \u003ccode\u003eAttribute\u003c/code\u003e class. Since we only care to search by name, we have to construct a \"dummy\" attribute instance with an invalid value. We also have to define a comparator that ignores the values of attributes and instead only considers equality based on the name. The latter requirement is not unreasonable, but constructing a \"dummy\" object is never a good idea. Also, in many cases, we \u003cspan class=\"bold\"\u003ecan't\u003c/span\u003e just create a \"dummy\" object. If we wanted to store a set of decoder or encoders, with the MIME type being the key for the comparator, we'd be out of luck. To call the \u003ccode\u003efind\u003c/code\u003e method, we'd need a handle to a decoder instance that had the same MIME type. The only way to do this would not be to just make a \"dummy\" instance, but a \"dummy\" class—an implementation of\u003ccode\u003e IDecoder\u003c/code\u003e that simply allowed us to set the MIME type and did nothing for the rest of its operations. Clearly, this would not be a good idea.\u003c/p\u003e\r\n\u003cp\u003eOur list of attributes is reasonable enough to change to a set and optimize the\u003ccode\u003e find\u003c/code\u003e, but you should exercise caution in using sets. Often, a map might be a better alternative.\u003c/p\u003e\r\n\u003cp\u003eThere are a few features of a set that aren't obvious from our conversation. These are as follows.\u003c/p\u003e\r\n\u003cul\u003e\r\n\u003cli\u003eA set does not allow duplicate elements (elements that are equal, based on the comparator supplied or the \u003ccode\u003eless-than\u003c/code\u003e operator). This is one of its major features, although multiset (covered next), another \"type\" of set, does allow duplicate elements. This violates the mathematical definition of a set.\u003c/li\u003e\r\n\u003cli\u003eAll elements are automatically sorted on insertion.\u003c/li\u003e\r\n\u003cli\u003eLexicographical comparison operators (see the reading assignment for details) are used in very specific domains and are not of general value.\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003cp\u003eThe set is not easily categorizable. Traditional texts consider it an \"associative collection,\" since its implementation is similar to these (it is always implemented as a binary tree, similar to the map) and it provides an optimized \u003ccode\u003efind\u003c/code\u003e method.\u003c/p\u003e\r\n\u003ch3\u003eMultiset\u003c/h3\u003e\r\n\u003cdiv class=\"keytermBox\"\u003e\r\n\u003ch6\u003eKey Terms\u003c/h6\u003e\r\n\u003cul\u003e\r\n\u003cli\u003emultiset\u003c/li\u003e\r\n\u003cli\u003emap\u003c/li\u003e\r\n\u003cli\u003emultimap\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eA \u003cspan class=\"keyterm\"\u003emultiset\u003c/span\u003e allows multiple instances of the same element (where similarity is determined based on the comparator). Therefore, it's really rather close to a list in behavior, with the exception of automatic sorting. It provides all the operations a set does, plus the following.\u003c/p\u003e\r\n\u003cul\u003e\r\n\u003cli\u003eCounting of equal elements. In other words, you can see how many instances of the same element there are.\u003c/li\u003e\r\n\u003cli\u003eA \u003ccode\u003elower_bound\u003c/code\u003e method that returns the first position where an element might be inserted.\u003c/li\u003e\r\n\u003cli\u003eAn \u003ccode\u003eupper_bound\u003c/code\u003e method that returns the last position where an element might be inserted.\u003c/li\u003e\r\n\u003cli\u003eAn \u003ccode\u003eequal_range\u003c/code\u003e method that returns a range (as pair) where an element might be inserted. This, like the \u003ccode\u003elower_bound\u003c/code\u003e and \u003ccode\u003eupper_bound\u003c/code\u003e method, is introduced because, when you insert an element that is equal to existing elements, it might be placed anywhere in that range.\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003cp\u003eAlso, make note that a multiset's \u003ccode\u003efind\u003c/code\u003e method returns the first element, since there may be more than one.\u003c/p\u003e\r\n\u003ch2\u003eMap\u003c/h2\u003e\r\n\u003cp\u003eMost object-oriented systems do not rely heavily on the idea of \"mapping\" or \"lookup.\" Since we don't need to use arbitrary tokens for information in object-oriented systems, maps don't provide the same value that they may once have. Continuing with our windows example, the more modern, object-oriented, form of windows programming simply uses a \u003ccode\u003ewindow\u003c/code\u003e object that has all its own attributes directly and allows navigability to other important information.\u003c/p\u003e\r\n\u003cp\u003e\u003cspan class=\"keyterm\"\u003eMaps\u003c/span\u003e in object-oriented systems usually are for one of the following specific purposes (though there are more, these are the most common). In Windows API there are \"handles\" to windows—a token with which you perform operations, which takes the place of an object in procedural languages. In UNIX, a file descriptor is a similar concept.\u003c/p\u003e\r\n\u003cul\u003e\r\n\u003cli\u003eWhen you need to map from one reality to another, a map is a natural solution. Although you can still create objects that would provide the equivalent, sometimes there's no clear concept that bridges the two worlds. For example, if you were mapping a tag name in XML (one reality) to the actual object that the tag represented (another reality), you might use a map of prototypes, as you did in \u003cspan class=\"italics\"\u003eC++\u003c/span\u003e:\u003cspan class=\"italics\"\u003e Intermediate\u003c/span\u003e. This could not be done in this course's project because of the reasons we mentioned in Lesson One.\u003c/li\u003e\r\n\u003cli\u003eWhen you need to optimize searching on a particular field, a set can be used, although, as we discussed, a map is often more straightforward. The downside to using the map is that we separate the field from the class in some ways. In other words, if we store attributes as a map, we have a second instance of the name, which is detached from our cohesive \u003ccode\u003eAttribute\u003c/code\u003e class and will cause a bit of confusion, especially if the names manage to become out of sync (easy to do). All in all, this can be why maps and sets are sometimes less preferable than a list. Sets and maps are best for objects that behave like primitive types. If we use a reference object in a map or set, we always run the risk that the reference object could change independently; for example, imagine if a decoder's MIME type changed dynamically. Although this situation is a bit contrived (it's the only map to a reference object that we have in our system), you can see how similar situations could cause problems when using a map or set and an optimized \u003ccode\u003efind\u003c/code\u003e with reference objects.\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003cp\u003eAlthough it is often tempting, try to avoid using a map to relate two disparate objects. Generally, if you need to do this, it should be a hint that you need a new first-class concept in your model. For example, consider a command console in which there are strings that represent commands and \u003cspan class=\"italics\"\u003efunctors\u003c/span\u003e (objects, like comparators, that behave like a function) for the action that should be taken. Although a map could be used to relate these, having a set of \u003ccode\u003eCommand\u003c/code\u003e objects would be more appropriate. Clearly, there is an idea of a \"Command\" in this model that would have the command's name as well as its action, and maybe help information and other important attributes. For our basic canvas implementation in assignment 6, we could use a map of \u003ccode\u003ePoint\u003c/code\u003e to \u003ccode\u003eColor\u003c/code\u003e instead of a map or set of \u003ccode\u003ePixels\u003c/code\u003e (which might have a location and color attribute) in our basic canvas implementation. Similarly, we could have (and may have initially) used a map of string to string for our attributes in the \u003ccode\u003eXML::Element\u003c/code\u003e class.\u003c/p\u003e\r\n\u003cp\u003eA map relates two concepts: a \"key\" and a \"value.\" These can be (and usually are) separate types, as in our examples above. The optimized \u003ccode\u003efind \u003c/code\u003emethod in a map searches based on key. The map's iterators are unique in that their underlying element is actually an \u003ccode\u003estd::pair\u0026lt;key, value\u0026gt;\u003c/code\u003e, since you might need either.\u003c/p\u003e\r\n\u003cp\u003eThe map also provides an array indexing operator, which allows simplified semantics of lookup, but should be used with caution. When we set \u003cspan class=\"bold\"\u003eor\u003c/span\u003e get a value via the indexing operator, if the key that's used as the index does not already exist, it will be created. This is why you should avoid ever using the indexing operator for looking up values, but instead use the \u003ccode\u003efind\u003c/code\u003e method to do so.\u003c/p\u003e\r\n\u003cp\u003eThere are a couple of important notes about maps that might not be obvious from their interface:\u003c/p\u003e\r\n\u003cul\u003e\r\n\u003cli\u003eYou may not change the key of an element because it will disturb ordering; you have to remove it and reinsert.\u003c/li\u003e\r\n\u003cli\u003eFor this reason, when iterating, the key will be constant.\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003ch3\u003eMultimap\u003c/h3\u003e\r\n\u003cp\u003eA \u003cspan class=\"keyterm\"\u003emultimap\u003c/span\u003e is mostly identical to a map, with one difference: multiple values per key. The uses for multimaps are few and far between. Consult your texts for information on multimaps if you find yourself in a situation that merits using them.\u003c/p\u003e"},"WIKI_PAGE_REVISION":"1","WIKI_PAGE_SHOW_PATH":"/courses/1205169/pages/lesson-five-rendering-the-scene","WIKI_PAGE_EDIT_PATH":"/courses/1205169/pages/lesson-five-rendering-the-scene/edit","WIKI_PAGE_HISTORY_PATH":"/courses/1205169/pages/lesson-five-rendering-the-scene/revisions","COURSE_ID":"1205169","MODULES_PATH":"/courses/1205169/modules","wiki_page_menu_tools":[],"DISPLAY_SHOW_ALL_LINK":false,"STUDENT_PLANNER_ENABLED":true,"badge_counts":{"submissions":0},"notices":[]};
+</script>
+
+<script src="./Lesson Five_ Rendering the Scene_ CPROGRM 713 A Su 18_ C++ Programming_ Advanced_files/navigation_header.bundle-549b1681b9.js" defer="defer"></script>
+<script src="./Lesson Five_ Rendering the Scene_ CPROGRM 713 A Su 18_ C++ Programming_ Advanced_files/default.js" defer="defer"></script>
+<script src="./Lesson Five_ Rendering the Scene_ CPROGRM 713 A Su 18_ C++ Programming_ Advanced_files/custom.js" defer="defer"></script>
+
+</div> <!-- #application -->
+
+
+<div id="nav-tray-portal" style="position: relative; z-index: 99;"></div></body></html>

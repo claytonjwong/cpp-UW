@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A9D61798212A22E3001F7665 /* VectorGraphicStreamer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9D61767212A22DD001F7665 /* VectorGraphicStreamer.cpp */; };
+		A9D61799212A22E3001F7665 /* ParseTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9D61769212A22DD001F7665 /* ParseTest.cpp */; };
+		A9D6179A212A22E3001F7665 /* XmlWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9D6176A212A22DD001F7665 /* XmlWriter.cpp */; };
+		A9D6179B212A22E3001F7665 /* PlacedGraphicTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9D6176C212A22DD001F7665 /* PlacedGraphicTest.cpp */; };
+		A9D6179C212A22E3001F7665 /* SceneReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9D6176D212A22DD001F7665 /* SceneReader.cpp */; };
+		A9D6179D212A22E3001F7665 /* SceneWriterTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9D6176F212A22DE001F7665 /* SceneWriterTest.cpp */; };
+		A9D6179E212A22E3001F7665 /* Element.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9D61770212A22DE001F7665 /* Element.cpp */; };
+		A9D6179F212A22E3001F7665 /* Parse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9D61772212A22DE001F7665 /* Parse.cpp */; };
+		A9D617A0212A22E3001F7665 /* SceneWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9D61775212A22DE001F7665 /* SceneWriter.cpp */; };
+		A9D617A1212A22E3001F7665 /* PlacedGraphic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9D61776212A22DF001F7665 /* PlacedGraphic.cpp */; };
+		A9D617A2212A22E3001F7665 /* VectorGraphicTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9D61777212A22DF001F7665 /* VectorGraphicTest.cpp */; };
+		A9D617A3212A22E3001F7665 /* SceneReaderTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9D61778212A22DF001F7665 /* SceneReaderTest.cpp */; };
+		A9D617A4212A22E3001F7665 /* XmlFactories.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9D6177A212A22DF001F7665 /* XmlFactories.cpp */; };
+		A9D617A5212A22E3001F7665 /* XmlReaderTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9D6177C212A22DF001F7665 /* XmlReaderTest.cpp */; };
+		A9D617A6212A22E3001F7665 /* Point.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9D6177F212A22E0001F7665 /* Point.cpp */; };
+		A9D617A7212A22E3001F7665 /* XmlReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9D61780212A22E0001F7665 /* XmlReader.cpp */; };
+		A9D617A8212A22E3001F7665 /* SceneTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9D61781212A22E0001F7665 /* SceneTest.cpp */; };
+		A9D617AA212A22E3001F7665 /* Failure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9D61785212A22E1001F7665 /* Failure.cpp */; };
+		A9D617AB212A22E3001F7665 /* Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9D61787212A22E1001F7665 /* Test.cpp */; };
+		A9D617AC212A22E3001F7665 /* TestResult.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9D6178A212A22E1001F7665 /* TestResult.cpp */; };
+		A9D617AD212A22E3001F7665 /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9D6178C212A22E1001F7665 /* Main.cpp */; };
+		A9D617AE212A22E3001F7665 /* TestRegistry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9D6178D212A22E1001F7665 /* TestRegistry.cpp */; };
+		A9D617AF212A22E3001F7665 /* VectorGraphic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9D6178F212A22E1001F7665 /* VectorGraphic.cpp */; };
+		A9D617B0212A22E3001F7665 /* LayerTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9D61790212A22E1001F7665 /* LayerTest.cpp */; };
+		A9D617B1212A22E3001F7665 /* XmlWriterTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9D61791212A22E1001F7665 /* XmlWriterTest.cpp */; };
+		A9D617B2212A22E3001F7665 /* Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9D61793212A22E2001F7665 /* Layer.cpp */; };
+		A9D617B3212A22E3001F7665 /* tinyxml2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9D61794212A22E2001F7665 /* tinyxml2.cpp */; };
+		A9D617B4212A22E3001F7665 /* PointTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9D61795212A22E2001F7665 /* PointTest.cpp */; };
+		A9D617B5212A22E3001F7665 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9D61796212A22E2001F7665 /* Scene.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A98797C0212A224200BF7DCE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A98797C2212A224200BF7DCE /* EWeek2_Solution2018 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EWeek2_Solution2018; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9D61765212A22DC001F7665 /* XmlFactories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlFactories.h; sourceTree = "<group>"; };
+		A9D61766212A22DD001F7665 /* tinyxml2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinyxml2.h; sourceTree = "<group>"; };
+		A9D61767212A22DD001F7665 /* VectorGraphicStreamer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VectorGraphicStreamer.cpp; sourceTree = "<group>"; };
+		A9D61768212A22DD001F7665 /* VectorGraphicStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VectorGraphicStreamer.h; sourceTree = "<group>"; };
+		A9D61769212A22DD001F7665 /* ParseTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParseTest.cpp; sourceTree = "<group>"; };
+		A9D6176A212A22DD001F7665 /* XmlWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XmlWriter.cpp; sourceTree = "<group>"; };
+		A9D6176B212A22DD001F7665 /* PlacedGraphic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlacedGraphic.h; sourceTree = "<group>"; };
+		A9D6176C212A22DD001F7665 /* PlacedGraphicTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlacedGraphicTest.cpp; sourceTree = "<group>"; };
+		A9D6176D212A22DD001F7665 /* SceneReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneReader.cpp; sourceTree = "<group>"; };
+		A9D6176E212A22DD001F7665 /* VectorGraphic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VectorGraphic.h; sourceTree = "<group>"; };
+		A9D6176F212A22DE001F7665 /* SceneWriterTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneWriterTest.cpp; sourceTree = "<group>"; };
+		A9D61770212A22DE001F7665 /* Element.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Element.cpp; sourceTree = "<group>"; };
+		A9D61771212A22DE001F7665 /* SceneWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneWriter.h; sourceTree = "<group>"; };
+		A9D61772212A22DE001F7665 /* Parse.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Parse.cpp; sourceTree = "<group>"; };
+		A9D61773212A22DE001F7665 /* Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parse.h; sourceTree = "<group>"; };
+		A9D61774212A22DE001F7665 /* Element.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Element.h; sourceTree = "<group>"; };
+		A9D61775212A22DE001F7665 /* SceneWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneWriter.cpp; sourceTree = "<group>"; };
+		A9D61776212A22DF001F7665 /* PlacedGraphic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlacedGraphic.cpp; sourceTree = "<group>"; };
+		A9D61777212A22DF001F7665 /* VectorGraphicTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VectorGraphicTest.cpp; sourceTree = "<group>"; };
+		A9D61778212A22DF001F7665 /* SceneReaderTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneReaderTest.cpp; sourceTree = "<group>"; };
+		A9D61779212A22DF001F7665 /* XmlInterfaces.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlInterfaces.h; sourceTree = "<group>"; };
+		A9D6177A212A22DF001F7665 /* XmlFactories.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XmlFactories.cpp; sourceTree = "<group>"; };
+		A9D6177B212A22DF001F7665 /* XmlReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlReader.h; sourceTree = "<group>"; };
+		A9D6177C212A22DF001F7665 /* XmlReaderTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XmlReaderTest.cpp; sourceTree = "<group>"; };
+		A9D6177D212A22E0001F7665 /* XmlWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlWriter.h; sourceTree = "<group>"; };
+		A9D6177E212A22E0001F7665 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		A9D6177F212A22E0001F7665 /* Point.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Point.cpp; sourceTree = "<group>"; };
+		A9D61780212A22E0001F7665 /* XmlReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XmlReader.cpp; sourceTree = "<group>"; };
+		A9D61781212A22E0001F7665 /* SceneTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneTest.cpp; sourceTree = "<group>"; };
+		A9D61784212A22E1001F7665 /* TestRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestRegistry.h; sourceTree = "<group>"; };
+		A9D61785212A22E1001F7665 /* Failure.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Failure.cpp; sourceTree = "<group>"; };
+		A9D61786212A22E1001F7665 /* TestHarness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestHarness.h; sourceTree = "<group>"; };
+		A9D61787212A22E1001F7665 /* Test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Test.cpp; sourceTree = "<group>"; };
+		A9D61788212A22E1001F7665 /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		A9D61789212A22E1001F7665 /* TestResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestResult.h; sourceTree = "<group>"; };
+		A9D6178A212A22E1001F7665 /* TestResult.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestResult.cpp; sourceTree = "<group>"; };
+		A9D6178B212A22E1001F7665 /* Failure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Failure.h; sourceTree = "<group>"; };
+		A9D6178C212A22E1001F7665 /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
+		A9D6178D212A22E1001F7665 /* TestRegistry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestRegistry.cpp; sourceTree = "<group>"; };
+		A9D6178E212A22E1001F7665 /* Point.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Point.h; sourceTree = "<group>"; };
+		A9D6178F212A22E1001F7665 /* VectorGraphic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VectorGraphic.cpp; sourceTree = "<group>"; };
+		A9D61790212A22E1001F7665 /* LayerTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LayerTest.cpp; sourceTree = "<group>"; };
+		A9D61791212A22E1001F7665 /* XmlWriterTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XmlWriterTest.cpp; sourceTree = "<group>"; };
+		A9D61792212A22E2001F7665 /* Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Layer.h; sourceTree = "<group>"; };
+		A9D61793212A22E2001F7665 /* Layer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Layer.cpp; sourceTree = "<group>"; };
+		A9D61794212A22E2001F7665 /* tinyxml2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml2.cpp; sourceTree = "<group>"; };
+		A9D61795212A22E2001F7665 /* PointTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PointTest.cpp; sourceTree = "<group>"; };
+		A9D61796212A22E2001F7665 /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
+		A9D61797212A22E2001F7665 /* SceneReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneReader.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A98797BF212A224200BF7DCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A98797B9212A224200BF7DCE = {
+			isa = PBXGroup;
+			children = (
+				A9D61770212A22DE001F7665 /* Element.cpp */,
+				A9D61774212A22DE001F7665 /* Element.h */,
+				A9D61793212A22E2001F7665 /* Layer.cpp */,
+				A9D61792212A22E2001F7665 /* Layer.h */,
+				A9D61790212A22E1001F7665 /* LayerTest.cpp */,
+				A9D61772212A22DE001F7665 /* Parse.cpp */,
+				A9D61773212A22DE001F7665 /* Parse.h */,
+				A9D61769212A22DD001F7665 /* ParseTest.cpp */,
+				A9D61776212A22DF001F7665 /* PlacedGraphic.cpp */,
+				A9D6176B212A22DD001F7665 /* PlacedGraphic.h */,
+				A9D6176C212A22DD001F7665 /* PlacedGraphicTest.cpp */,
+				A9D6177F212A22E0001F7665 /* Point.cpp */,
+				A9D6178E212A22E1001F7665 /* Point.h */,
+				A9D61795212A22E2001F7665 /* PointTest.cpp */,
+				A9D61796212A22E2001F7665 /* Scene.cpp */,
+				A9D6177E212A22E0001F7665 /* Scene.h */,
+				A9D6176D212A22DD001F7665 /* SceneReader.cpp */,
+				A9D61797212A22E2001F7665 /* SceneReader.h */,
+				A9D61778212A22DF001F7665 /* SceneReaderTest.cpp */,
+				A9D61781212A22E0001F7665 /* SceneTest.cpp */,
+				A9D61775212A22DE001F7665 /* SceneWriter.cpp */,
+				A9D61771212A22DE001F7665 /* SceneWriter.h */,
+				A9D6176F212A22DE001F7665 /* SceneWriterTest.cpp */,
+				A9D61794212A22E2001F7665 /* tinyxml2.cpp */,
+				A9D61766212A22DD001F7665 /* tinyxml2.h */,
+				A9D61783212A22E1001F7665 /* UnitTest_Framework */,
+				A9D6178F212A22E1001F7665 /* VectorGraphic.cpp */,
+				A9D6176E212A22DD001F7665 /* VectorGraphic.h */,
+				A9D61767212A22DD001F7665 /* VectorGraphicStreamer.cpp */,
+				A9D61768212A22DD001F7665 /* VectorGraphicStreamer.h */,
+				A9D61777212A22DF001F7665 /* VectorGraphicTest.cpp */,
+				A9D6177A212A22DF001F7665 /* XmlFactories.cpp */,
+				A9D61765212A22DC001F7665 /* XmlFactories.h */,
+				A9D61779212A22DF001F7665 /* XmlInterfaces.h */,
+				A9D61780212A22E0001F7665 /* XmlReader.cpp */,
+				A9D6177B212A22DF001F7665 /* XmlReader.h */,
+				A9D6177C212A22DF001F7665 /* XmlReaderTest.cpp */,
+				A9D6176A212A22DD001F7665 /* XmlWriter.cpp */,
+				A9D6177D212A22E0001F7665 /* XmlWriter.h */,
+				A9D61791212A22E1001F7665 /* XmlWriterTest.cpp */,
+				A98797C3212A224200BF7DCE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A98797C3212A224200BF7DCE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A98797C2212A224200BF7DCE /* EWeek2_Solution2018 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A9D61783212A22E1001F7665 /* UnitTest_Framework */ = {
+			isa = PBXGroup;
+			children = (
+				A9D61784212A22E1001F7665 /* TestRegistry.h */,
+				A9D61785212A22E1001F7665 /* Failure.cpp */,
+				A9D61786212A22E1001F7665 /* TestHarness.h */,
+				A9D61787212A22E1001F7665 /* Test.cpp */,
+				A9D61788212A22E1001F7665 /* Test.h */,
+				A9D61789212A22E1001F7665 /* TestResult.h */,
+				A9D6178A212A22E1001F7665 /* TestResult.cpp */,
+				A9D6178B212A22E1001F7665 /* Failure.h */,
+				A9D6178C212A22E1001F7665 /* Main.cpp */,
+				A9D6178D212A22E1001F7665 /* TestRegistry.cpp */,
+			);
+			path = UnitTest_Framework;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A98797C1212A224200BF7DCE /* EWeek2_Solution2018 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A98797C9212A224200BF7DCE /* Build configuration list for PBXNativeTarget "EWeek2_Solution2018" */;
+			buildPhases = (
+				A98797BE212A224200BF7DCE /* Sources */,
+				A98797BF212A224200BF7DCE /* Frameworks */,
+				A98797C0212A224200BF7DCE /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EWeek2_Solution2018;
+			productName = EWeek2_Solution2018;
+			productReference = A98797C2212A224200BF7DCE /* EWeek2_Solution2018 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A98797BA212A224200BF7DCE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Clayton Wong";
+				TargetAttributes = {
+					A98797C1212A224200BF7DCE = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = A98797BD212A224200BF7DCE /* Build configuration list for PBXProject "EWeek2_Solution2018" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A98797B9212A224200BF7DCE;
+			productRefGroup = A98797C3212A224200BF7DCE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A98797C1212A224200BF7DCE /* EWeek2_Solution2018 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A98797BE212A224200BF7DCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9D617B2212A22E3001F7665 /* Layer.cpp in Sources */,
+				A9D617B4212A22E3001F7665 /* PointTest.cpp in Sources */,
+				A9D617AC212A22E3001F7665 /* TestResult.cpp in Sources */,
+				A9D6179C212A22E3001F7665 /* SceneReader.cpp in Sources */,
+				A9D617A4212A22E3001F7665 /* XmlFactories.cpp in Sources */,
+				A9D617A7212A22E3001F7665 /* XmlReader.cpp in Sources */,
+				A9D617A5212A22E3001F7665 /* XmlReaderTest.cpp in Sources */,
+				A9D617AE212A22E3001F7665 /* TestRegistry.cpp in Sources */,
+				A9D617AD212A22E3001F7665 /* Main.cpp in Sources */,
+				A9D617A0212A22E3001F7665 /* SceneWriter.cpp in Sources */,
+				A9D61798212A22E3001F7665 /* VectorGraphicStreamer.cpp in Sources */,
+				A9D6179B212A22E3001F7665 /* PlacedGraphicTest.cpp in Sources */,
+				A9D617AF212A22E3001F7665 /* VectorGraphic.cpp in Sources */,
+				A9D6179E212A22E3001F7665 /* Element.cpp in Sources */,
+				A9D617AB212A22E3001F7665 /* Test.cpp in Sources */,
+				A9D617A3212A22E3001F7665 /* SceneReaderTest.cpp in Sources */,
+				A9D617A2212A22E3001F7665 /* VectorGraphicTest.cpp in Sources */,
+				A9D617B5212A22E3001F7665 /* Scene.cpp in Sources */,
+				A9D6179A212A22E3001F7665 /* XmlWriter.cpp in Sources */,
+				A9D6179F212A22E3001F7665 /* Parse.cpp in Sources */,
+				A9D617B1212A22E3001F7665 /* XmlWriterTest.cpp in Sources */,
+				A9D617B3212A22E3001F7665 /* tinyxml2.cpp in Sources */,
+				A9D617AA212A22E3001F7665 /* Failure.cpp in Sources */,
+				A9D617B0212A22E3001F7665 /* LayerTest.cpp in Sources */,
+				A9D61799212A22E3001F7665 /* ParseTest.cpp in Sources */,
+				A9D617A8212A22E3001F7665 /* SceneTest.cpp in Sources */,
+				A9D617A6212A22E3001F7665 /* Point.cpp in Sources */,
+				A9D6179D212A22E3001F7665 /* SceneWriterTest.cpp in Sources */,
+				A9D617A1212A22E3001F7665 /* PlacedGraphic.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A98797C7212A224200BF7DCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A98797C8212A224200BF7DCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A98797CA212A224200BF7DCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A98797CB212A224200BF7DCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A98797BD212A224200BF7DCE /* Build configuration list for PBXProject "EWeek2_Solution2018" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A98797C7212A224200BF7DCE /* Debug */,
+				A98797C8212A224200BF7DCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A98797C9212A224200BF7DCE /* Build configuration list for PBXNativeTarget "EWeek2_Solution2018" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A98797CA212A224200BF7DCE /* Debug */,
+				A98797CB212A224200BF7DCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A98797BA212A224200BF7DCE /* Project object */;
+}

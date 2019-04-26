@@ -1,0 +1,116 @@
+////////////////////////////////////////////////////////////////////////////////
+
+Graded comment1: * Prefer const lvalue references to values for returns. The latter forces a copy while the former allows the caller to decide whether they want a reference or a copy. This is especially important here considering you are dealing with large objects (containers) that don't always require a copy.
+* VG::Point: Prefer returning by const lvalue reference over value. See reasoning above.
+
+
+Question 1: How does return value of const lvalue reference work?  Don't the functions from Element return a temp var from the stack?  I was counting on RVO to kick in instead of returning copies?  Maybe I'm way off here?
+
+Question 2: How does the caller decide if they want a reference or a copy?
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+Graded comment2: * PlacedGraphic - rvalue reference constructor: You are not calling std::move on the argument, therefore resulting in a copy.
+
+
+Question 1: I'm not sure which constructor should invoke std::move.  I thought = default would take care of this?...  "PlacedGraphic ( PlacedGraphic&& src ) = default;" ?
+
+
+Question 2: Otherwise, if its the following constructor referred to:
+
+    PlacedGraphic::PlacedGraphic() :
+    myPlacementPoint{ Point{0,0} },
+    myGraphic{ make_shared<VectorGraphic>() }
+    {
+    }
+
+When I change this to use std::move, I get a compiler warning: "Moving a local object in a return statement prevents copy elision"
+
+    PlacedGraphic::PlacedGraphic() :
+    myPlacementPoint{ std::move(Point{0,0}) }, // compiler warning: Moving a local object in a return statement prevents copy elision
+    myGraphic{ make_shared<VectorGraphic>() }
+    {
+    }
+
+
+
+Question 3: In general, I avoided returning std::move, since I was explicitly told NOT to do this in C++ Intermediate.  Can you please confirm
+this is proper code?  I get compiler warnings for each of these return statements:
+
+AttributeMap TinyElement::getAttributes() const noexcept
+{
+	...
+
+	return std::move(attrs); // compiler warning: Moving a local object in a return statement prevents copy elision
+}
+
+ElementCollection TinyElement::getChildElements() const noexcept
+{
+	...
+
+	return std::move(nodes); // compiler warning: Moving a local object in a return statement prevents copy elision
+}
+
+
+
+Question 4: Should I have used std::move below?  In the solution posted, I don't see a r-value overload for these methods, maybe they are overkill?
+How to determine when its appropriate to have only lvalue, and when rvalue should be included as well?
+
+witout std::move:
+
+    void PlacedGraphic::setPlacementPoint ( Point&& placement ) noexcept
+    {
+        myPlacementPoint = placement;
+    }
+    void PlacedGraphic::setGraphic ( HVectorGraphic&& graphic ) noexcept
+    {
+        myGraphic = graphic;
+    }
+
+with std::move:
+
+    void PlacedGraphic::setPlacementPoint ( Point&& placement ) noexcept
+    {
+        myPlacementPoint = std::move( placement );
+    }
+    void PlacedGraphic::setGraphic ( HVectorGraphic&& graphic ) noexcept
+    {
+        myGraphic = std::move( graphic );
+    }
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+Graded comment 3: * getGraphic: Prefer returning the std::shared_ptr next time instead of the internal pointer. This is why you use smart pointers in the first place; to ensure and enforce ownership of a pointer. By dereferencing a pointer and returning a referece to the caller, the caller is free to abuse it. Also, the caller loses any notion of ownership. The only time you should dereference a smart pointer is when you absolute need to and as a last resort (maybe because you need to interface with a C-style API, etc).
+
+
+Question 1: this completely makes sense, the only reason I returned the raw internal pointer is to pass the unit test provided.  The unit test provided was depreciated and has been updated along with the solution for 2018.  Had I been provided with the proper unit test from the 2018 solution, I would have written this completely differently.  This doesn't seem fair to deduct a point for this code.  Can I please have a point back?
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+Graded comment 4: Scene * Missing rule-of-5.
+
+Question 1: both solutions posted for this assignment are also missing the rule-of-5 for the Scene class.  Why is this not included either of the solutions posted?  Am I missing something?  Maybe I'm way off here?
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+Graded comment 5: SceneReader * Good implementation but try to be conscious about what is implementation-detail (and needs to be marked private) and what isn't.
+
+Question 1: there's quite a few places in my code where I could have made methods private.  How would I perform unit tests though?  Should the unit test be part of the class itself?   Or is there a simplier way to use UnitTestLite TEST macros to somehow be a friend of the class under test?
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+Graded comment 6: UML Diagram * XmlReader, SceneReader, and Element are not connected components. * Missing components (such as SceneWriter/XmlWriter)
+
+
+Question 1: can you please provide the UML diagram for the posted solutions?  I'd like to use it as reference for proper UML.
+
+

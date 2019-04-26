@@ -1,0 +1,7 @@
+<VectorGraphic closed="true">
+    <Point x="1" y="2" />
+    <!-- Comment -->
+    <Point x="3" y="4" />
+    <Point x="5" y="6" />
+    <Point x="6" y="9" />
+</VectorGraphic>

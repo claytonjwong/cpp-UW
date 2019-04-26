@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Bitmap.cpp">
+      <Filter>SourceFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="Color.cpp">
+      <Filter>SourceFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsBitmapHeader.cpp">
+      <Filter>SourceFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\UnitTest\BinaryTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\UnitTest\BitmapTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\UnitTest\ColorTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\UnitTest\Main.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\UnitTest\VerifyEqualityTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\UnitTest\WindowsBitmapHeaderTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="binary_ostream_iterator.h">
+      <Filter>SourceFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="Bitmap.h">
+      <Filter>SourceFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="Color.h">
+      <Filter>SourceFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="VerifyEquality.h">
+      <Filter>SourceFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsBitmapHeader.h">
+      <Filter>SourceFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="SizedWord.h">
+      <Filter>SourceFiles</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="SourceFiles">
+      <UniqueIdentifier>{5ce94307-b162-43e9-ab16-eb8c0a087237}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests">
+      <UniqueIdentifier>{98091dd6-147f-4efa-b928-959c2883d004}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,3 @@
+XmlReader/XmlWriter translates between HElements.and.TinyXml
+The SceneReader/Writer translates between HElements.and.[Scene/Layer/Graphics]
+SceneReader/Writer has no direct knowledge of TinyXml2 and viceversa.

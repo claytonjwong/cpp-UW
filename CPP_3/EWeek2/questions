@@ -1,0 +1,54 @@
+
+Scene questions:
+
+
+Q1: Why are Scene's parameters references?  "const int&"  Wouldn't "const int" be preferred for integral type?
+
+Scene(const int& width, const int& height);
+
+
+Q2: I created an additional pushBack method which takes a r-value which is forwarded to emplace_back(),
+however in the solution, only pushBack ( Layer& layer ) is defined.  What are your thoughts on this?
+
+void Scene::pushBack ( Layer&& layer ) noexcept
+{
+    myLayers.emplace_back(  std::forward<Layer>( layer )  );
+}
+
+
+General questions:
+
+Which is preferred and why...
+
+	function1()
+	{
+        if (  << expected >> )
+        {
+            << do stuff >>
+        }
+        else
+        {
+            << throw execption >>
+        }
+    }
+
+	function2()
+	{
+        if ( ! << expected >> )
+        {
+            << throw execption >>
+        }
+        
+        << do stuff >>
+    }
+
+
+Element / overall strategy for storing the XML info
+
+I stored one copy of the xmlDocument in the root Element, then created shared pointers
+towards different sub-roots of the xmlDocument.  This creates a high-coupling between Element
+and the XMLDocument API for getting the nodes.
+
+TODO: instead create elements and link them up like XML nodes, no need to store the xmlDocument in this case then
+simply parse XML nodes and create the HElement structure accordingly... duh!
+

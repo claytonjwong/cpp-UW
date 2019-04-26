@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A9802882212499A600898581 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9802881212499A600898581 /* main.cpp */; };
+		A98028B0212499ED00898581 /* XmlFactories.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9802888212499E500898581 /* XmlFactories.cpp */; };
+		A98028B1212499ED00898581 /* Point.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9802889212499E600898581 /* Point.cpp */; };
+		A98028B2212499ED00898581 /* XmlReaderTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A980288A212499E600898581 /* XmlReaderTest.cpp */; };
+		A98028B3212499ED00898581 /* Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A980288D212499E600898581 /* Layer.cpp */; };
+		A98028B4212499ED00898581 /* VectorGraphicStreamer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A980288F212499E600898581 /* VectorGraphicStreamer.cpp */; };
+		A98028B5212499ED00898581 /* XmlReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9802890212499E600898581 /* XmlReader.cpp */; };
+		A98028B6212499ED00898581 /* XmlWriterTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9802891212499E700898581 /* XmlWriterTest.cpp */; };
+		A98028B7212499ED00898581 /* SceneReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9802893212499E700898581 /* SceneReader.cpp */; };
+		A98028B8212499ED00898581 /* tinyxml2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9802894212499E700898581 /* tinyxml2.cpp */; };
+		A98028B9212499ED00898581 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9802897212499E700898581 /* Scene.cpp */; };
+		A98028BA212499ED00898581 /* ParseTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9802899212499E800898581 /* ParseTest.cpp */; };
+		A98028BB212499ED00898581 /* VectorGraphicTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A980289B212499E800898581 /* VectorGraphicTest.cpp */; };
+		A98028BC212499ED00898581 /* XmlWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A980289C212499E800898581 /* XmlWriter.cpp */; };
+		A98028BD212499ED00898581 /* PlacedGraphic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A980289D212499E900898581 /* PlacedGraphic.cpp */; };
+		A98028BE212499ED00898581 /* SceneWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A980289E212499E900898581 /* SceneWriter.cpp */; };
+		A98028BF212499ED00898581 /* Parse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A980289F212499E900898581 /* Parse.cpp */; };
+		A98028C0212499ED00898581 /* SceneWriterTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A98028A0212499E900898581 /* SceneWriterTest.cpp */; };
+		A98028C1212499ED00898581 /* Element.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A98028A2212499EA00898581 /* Element.cpp */; };
+		A98028C2212499ED00898581 /* LayerTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A98028A3212499EA00898581 /* LayerTest.cpp */; };
+		A98028C4212499ED00898581 /* PointTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A98028A7212499EB00898581 /* PointTest.cpp */; };
+		A98028C5212499ED00898581 /* PlacedGraphicTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A98028A9212499EC00898581 /* PlacedGraphicTest.cpp */; };
+		A98028C6212499ED00898581 /* SceneTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A98028AB212499EC00898581 /* SceneTest.cpp */; };
+		A98028C7212499ED00898581 /* VectorGraphic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A98028AC212499EC00898581 /* VectorGraphic.cpp */; };
+		A98028C8212499ED00898581 /* SceneReaderTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A98028AE212499ED00898581 /* SceneReaderTest.cpp */; };
+		A98028D221249B7100898581 /* Failure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A98028C921249B6E00898581 /* Failure.cpp */; };
+		A98028D321249B7100898581 /* TestResult.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A98028CC21249B6F00898581 /* TestResult.cpp */; };
+		A98028D421249B7100898581 /* Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A98028CF21249B7000898581 /* Test.cpp */; };
+		A98028D521249B7100898581 /* TestRegistry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A98028D021249B7000898581 /* TestRegistry.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A980287C212499A600898581 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A980287E212499A600898581 /* EWeek2_Solution2018 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EWeek2_Solution2018; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9802881212499A600898581 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		A9802888212499E500898581 /* XmlFactories.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XmlFactories.cpp; sourceTree = "<group>"; };
+		A9802889212499E600898581 /* Point.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Point.cpp; sourceTree = "<group>"; };
+		A980288A212499E600898581 /* XmlReaderTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XmlReaderTest.cpp; sourceTree = "<group>"; };
+		A980288B212499E600898581 /* Element.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Element.h; sourceTree = "<group>"; };
+		A980288C212499E600898581 /* VectorGraphic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VectorGraphic.h; sourceTree = "<group>"; };
+		A980288D212499E600898581 /* Layer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Layer.cpp; sourceTree = "<group>"; };
+		A980288E212499E600898581 /* Point.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Point.h; sourceTree = "<group>"; };
+		A980288F212499E600898581 /* VectorGraphicStreamer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VectorGraphicStreamer.cpp; sourceTree = "<group>"; };
+		A9802890212499E600898581 /* XmlReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XmlReader.cpp; sourceTree = "<group>"; };
+		A9802891212499E700898581 /* XmlWriterTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XmlWriterTest.cpp; sourceTree = "<group>"; };
+		A9802892212499E700898581 /* XmlReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlReader.h; sourceTree = "<group>"; };
+		A9802893212499E700898581 /* SceneReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneReader.cpp; sourceTree = "<group>"; };
+		A9802894212499E700898581 /* tinyxml2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml2.cpp; sourceTree = "<group>"; };
+		A9802895212499E700898581 /* Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parse.h; sourceTree = "<group>"; };
+		A9802896212499E700898581 /* Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Layer.h; sourceTree = "<group>"; };
+		A9802897212499E700898581 /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
+		A9802898212499E800898581 /* tinyxml2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinyxml2.h; sourceTree = "<group>"; };
+		A9802899212499E800898581 /* ParseTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParseTest.cpp; sourceTree = "<group>"; };
+		A980289A212499E800898581 /* VectorGraphicStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VectorGraphicStreamer.h; sourceTree = "<group>"; };
+		A980289B212499E800898581 /* VectorGraphicTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VectorGraphicTest.cpp; sourceTree = "<group>"; };
+		A980289C212499E800898581 /* XmlWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XmlWriter.cpp; sourceTree = "<group>"; };
+		A980289D212499E900898581 /* PlacedGraphic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlacedGraphic.cpp; sourceTree = "<group>"; };
+		A980289E212499E900898581 /* SceneWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneWriter.cpp; sourceTree = "<group>"; };
+		A980289F212499E900898581 /* Parse.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Parse.cpp; sourceTree = "<group>"; };
+		A98028A0212499E900898581 /* SceneWriterTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneWriterTest.cpp; sourceTree = "<group>"; };
+		A98028A1212499E900898581 /* XmlWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlWriter.h; sourceTree = "<group>"; };
+		A98028A2212499EA00898581 /* Element.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Element.cpp; sourceTree = "<group>"; };
+		A98028A3212499EA00898581 /* LayerTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LayerTest.cpp; sourceTree = "<group>"; };
+		A98028A4212499EA00898581 /* SceneReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneReader.h; sourceTree = "<group>"; };
+		A98028A5212499EA00898581 /* SceneWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneWriter.h; sourceTree = "<group>"; };
+		A98028A7212499EB00898581 /* PointTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PointTest.cpp; sourceTree = "<group>"; };
+		A98028A8212499EB00898581 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		A98028A9212499EC00898581 /* PlacedGraphicTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlacedGraphicTest.cpp; sourceTree = "<group>"; };
+		A98028AA212499EC00898581 /* PlacedGraphic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlacedGraphic.h; sourceTree = "<group>"; };
+		A98028AB212499EC00898581 /* SceneTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneTest.cpp; sourceTree = "<group>"; };
+		A98028AC212499EC00898581 /* VectorGraphic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VectorGraphic.cpp; sourceTree = "<group>"; };
+		A98028AD212499EC00898581 /* XmlFactories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlFactories.h; sourceTree = "<group>"; };
+		A98028AE212499ED00898581 /* SceneReaderTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneReaderTest.cpp; sourceTree = "<group>"; };
+		A98028AF212499ED00898581 /* XmlInterfaces.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlInterfaces.h; sourceTree = "<group>"; };
+		A98028C921249B6E00898581 /* Failure.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Failure.cpp; sourceTree = "<group>"; };
+		A98028CA21249B6F00898581 /* TestHarness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestHarness.h; sourceTree = "<group>"; };
+		A98028CB21249B6F00898581 /* Failure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Failure.h; sourceTree = "<group>"; };
+		A98028CC21249B6F00898581 /* TestResult.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestResult.cpp; sourceTree = "<group>"; };
+		A98028CD21249B7000898581 /* TestRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestRegistry.h; sourceTree = "<group>"; };
+		A98028CE21249B7000898581 /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		A98028CF21249B7000898581 /* Test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Test.cpp; sourceTree = "<group>"; };
+		A98028D021249B7000898581 /* TestRegistry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestRegistry.cpp; sourceTree = "<group>"; };
+		A98028D121249B7100898581 /* TestResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestResult.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A980287B212499A600898581 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A9802875212499A600898581 = {
+			isa = PBXGroup;
+			children = (
+				A9802880212499A600898581 /* EWeek2_Solution2018 */,
+				A980287F212499A600898581 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A980287F212499A600898581 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A980287E212499A600898581 /* EWeek2_Solution2018 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A9802880212499A600898581 /* EWeek2_Solution2018 */ = {
+			isa = PBXGroup;
+			children = (
+				A98028C921249B6E00898581 /* Failure.cpp */,
+				A98028CB21249B6F00898581 /* Failure.h */,
+				A98028CF21249B7000898581 /* Test.cpp */,
+				A98028CE21249B7000898581 /* Test.h */,
+				A98028CA21249B6F00898581 /* TestHarness.h */,
+				A98028D021249B7000898581 /* TestRegistry.cpp */,
+				A98028CD21249B7000898581 /* TestRegistry.h */,
+				A98028CC21249B6F00898581 /* TestResult.cpp */,
+				A98028D121249B7100898581 /* TestResult.h */,
+				A98028A2212499EA00898581 /* Element.cpp */,
+				A980288B212499E600898581 /* Element.h */,
+				A980288D212499E600898581 /* Layer.cpp */,
+				A9802896212499E700898581 /* Layer.h */,
+				A98028A3212499EA00898581 /* LayerTest.cpp */,
+				A980289F212499E900898581 /* Parse.cpp */,
+				A9802895212499E700898581 /* Parse.h */,
+				A9802899212499E800898581 /* ParseTest.cpp */,
+				A980289D212499E900898581 /* PlacedGraphic.cpp */,
+				A98028AA212499EC00898581 /* PlacedGraphic.h */,
+				A98028A9212499EC00898581 /* PlacedGraphicTest.cpp */,
+				A9802889212499E600898581 /* Point.cpp */,
+				A980288E212499E600898581 /* Point.h */,
+				A98028A7212499EB00898581 /* PointTest.cpp */,
+				A9802897212499E700898581 /* Scene.cpp */,
+				A98028A8212499EB00898581 /* Scene.h */,
+				A9802893212499E700898581 /* SceneReader.cpp */,
+				A98028A4212499EA00898581 /* SceneReader.h */,
+				A98028AE212499ED00898581 /* SceneReaderTest.cpp */,
+				A98028AB212499EC00898581 /* SceneTest.cpp */,
+				A980289E212499E900898581 /* SceneWriter.cpp */,
+				A98028A5212499EA00898581 /* SceneWriter.h */,
+				A98028A0212499E900898581 /* SceneWriterTest.cpp */,
+				A9802894212499E700898581 /* tinyxml2.cpp */,
+				A9802898212499E800898581 /* tinyxml2.h */,
+				A98028AC212499EC00898581 /* VectorGraphic.cpp */,
+				A980288C212499E600898581 /* VectorGraphic.h */,
+				A980288F212499E600898581 /* VectorGraphicStreamer.cpp */,
+				A980289A212499E800898581 /* VectorGraphicStreamer.h */,
+				A980289B212499E800898581 /* VectorGraphicTest.cpp */,
+				A9802888212499E500898581 /* XmlFactories.cpp */,
+				A98028AD212499EC00898581 /* XmlFactories.h */,
+				A98028AF212499ED00898581 /* XmlInterfaces.h */,
+				A9802890212499E600898581 /* XmlReader.cpp */,
+				A9802892212499E700898581 /* XmlReader.h */,
+				A980288A212499E600898581 /* XmlReaderTest.cpp */,
+				A980289C212499E800898581 /* XmlWriter.cpp */,
+				A98028A1212499E900898581 /* XmlWriter.h */,
+				A9802891212499E700898581 /* XmlWriterTest.cpp */,
+				A9802881212499A600898581 /* main.cpp */,
+			);
+			path = EWeek2_Solution2018;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A980287D212499A600898581 /* EWeek2_Solution2018 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9802885212499A600898581 /* Build configuration list for PBXNativeTarget "EWeek2_Solution2018" */;
+			buildPhases = (
+				A980287A212499A600898581 /* Sources */,
+				A980287B212499A600898581 /* Frameworks */,
+				A980287C212499A600898581 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EWeek2_Solution2018;
+			productName = EWeek2_Solution2018;
+			productReference = A980287E212499A600898581 /* EWeek2_Solution2018 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A9802876212499A600898581 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Clayton Wong";
+				TargetAttributes = {
+					A980287D212499A600898581 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = A9802879212499A600898581 /* Build configuration list for PBXProject "EWeek2_Solution2018" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A9802875212499A600898581;
+			productRefGroup = A980287F212499A600898581 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A980287D212499A600898581 /* EWeek2_Solution2018 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A980287A212499A600898581 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A98028BC212499ED00898581 /* XmlWriter.cpp in Sources */,
+				A98028D521249B7100898581 /* TestRegistry.cpp in Sources */,
+				A98028C1212499ED00898581 /* Element.cpp in Sources */,
+				A98028C4212499ED00898581 /* PointTest.cpp in Sources */,
+				A98028C8212499ED00898581 /* SceneReaderTest.cpp in Sources */,
+				A98028B6212499ED00898581 /* XmlWriterTest.cpp in Sources */,
+				A98028BB212499ED00898581 /* VectorGraphicTest.cpp in Sources */,
+				A98028D321249B7100898581 /* TestResult.cpp in Sources */,
+				A98028C5212499ED00898581 /* PlacedGraphicTest.cpp in Sources */,
+				A98028BA212499ED00898581 /* ParseTest.cpp in Sources */,
+				A98028D421249B7100898581 /* Test.cpp in Sources */,
+				A98028BD212499ED00898581 /* PlacedGraphic.cpp in Sources */,
+				A98028BF212499ED00898581 /* Parse.cpp in Sources */,
+				A98028B1212499ED00898581 /* Point.cpp in Sources */,
+				A98028B0212499ED00898581 /* XmlFactories.cpp in Sources */,
+				A98028C7212499ED00898581 /* VectorGraphic.cpp in Sources */,
+				A98028B7212499ED00898581 /* SceneReader.cpp in Sources */,
+				A98028B8212499ED00898581 /* tinyxml2.cpp in Sources */,
+				A98028B4212499ED00898581 /* VectorGraphicStreamer.cpp in Sources */,
+				A98028B9212499ED00898581 /* Scene.cpp in Sources */,
+				A98028BE212499ED00898581 /* SceneWriter.cpp in Sources */,
+				A98028D221249B7100898581 /* Failure.cpp in Sources */,
+				A98028B5212499ED00898581 /* XmlReader.cpp in Sources */,
+				A98028B2212499ED00898581 /* XmlReaderTest.cpp in Sources */,
+				A9802882212499A600898581 /* main.cpp in Sources */,
+				A98028B3212499ED00898581 /* Layer.cpp in Sources */,
+				A98028C0212499ED00898581 /* SceneWriterTest.cpp in Sources */,
+				A98028C2212499ED00898581 /* LayerTest.cpp in Sources */,
+				A98028C6212499ED00898581 /* SceneTest.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A9802883212499A600898581 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A9802884212499A600898581 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A9802886212499A600898581 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EWeek2_Solution2018",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A9802887212499A600898581 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EWeek2_Solution2018",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A9802879212499A600898581 /* Build configuration list for PBXProject "EWeek2_Solution2018" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9802883212499A600898581 /* Debug */,
+				A9802884212499A600898581 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9802885212499A600898581 /* Build configuration list for PBXNativeTarget "EWeek2_Solution2018" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9802886212499A600898581 /* Debug */,
+				A9802887212499A600898581 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A9802876212499A600898581 /* Project object */;
+}

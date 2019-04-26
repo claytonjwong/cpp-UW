@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<!-- saved from url=(0111)https://canvas.uw.edu/courses/1205169/pages/lesson-four-supporting-encoders-and-decoders?module_item_id=8253624 -->
+<html class="" dir="ltr" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Lesson Four: Supporting Encoders and Decoders: CPROGRM 713 A Su 18: C++ Programming: Advanced</title>
+  <!--[if lte IE 9]> <meta http-equiv=refresh content="0; URL=/ie-9-is-not-supported.html" /> <![endif]-->
+  <link rel="preload" href="https://du11hjcvx0uqb.cloudfront.net/dist/fonts/lato/latin/LatoLatin-Regular-3cd3657802.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="shortcut icon" type="image/x-icon" href="https://instructure-uploads.s3.amazonaws.com/account_100000000083919/attachments/37312004/favicon.ico?AWSAccessKeyId=AKIAJFNFXH2V2O7RPCAA&amp;Expires=1939374366&amp;Signature=lNl7iuCda9spDgRONbwVvr490LM%3D&amp;response-cache-control=Cache-Control%3Amax-age%3D473364000.0%2C%20public&amp;response-expires=473364000.0">
+  <link rel="apple-touch-icon" href="https://instructure-uploads.s3.amazonaws.com/account_100000000083919/attachments/37312005/Canvas-MobileHome.png?AWSAccessKeyId=AKIAJFNFXH2V2O7RPCAA&amp;Expires=1939374366&amp;Signature=jwVDIJvM6uIaOoE%2FSW94uwVcHU0%3D&amp;response-cache-control=Cache-Control%3Amax-age%3D473364000.0%2C%20public&amp;response-expires=473364000.0">
+  
+  <link rel="stylesheet" media="all" href="./Supporting Encoders and Decoders_files/variables-750d72b9d3e5d522f965bf904110c132.css">
+  <link rel="stylesheet" media="all" href="./Supporting Encoders and Decoders_files/common-d446d06ede.css">
+  <script type="text/javascript" async="" src="./Supporting Encoders and Decoders_files/ga.js"></script><script>
+//<![CDATA[
+
+!function(){
+  function get(u){document.write('<scr'+'ipt src="'+ u +'"></sc'+'ript>')}
+  var o,s,v;
+  if (!(window.Promise && Object.assign && Object.values && [].find && [].includes && (o={},s=Symbol(),v={},o[s]=v,o[s]===v) && (function f(){}).bind().name==='bound f')) {
+    get("https://du11hjcvx0uqb.cloudfront.net/dist/ie11-polyfill-9f640d24ea.js");
+  }
+  window.fetch || get("https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.4/fetch.min.js");
+}();
+      
+//]]>
+</script>
+  <script src="./Supporting Encoders and Decoders_files/lato-fontfaceobserver-ed903d58c4.js" async="async"></script>
+  
+  <meta name="apple-itunes-app" content="app-id=480883488">
+<link rel="manifest" href="https://canvas.uw.edu/web-app-manifest/manifest.json">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#008EE2">
+  <link rel="stylesheet" media="all" href="./Supporting Encoders and Decoders_files/wiki_page-46e7e026f6.css">
+  
+  <link rel="stylesheet" media="all" href="./Supporting Encoders and Decoders_files/custom.css">
+<link rel="stylesheet" media="all" href="./Supporting Encoders and Decoders_files/custom(1).css">
+  <script>
+    function _earlyClick(e){
+      var c = e.target
+      while (c && c.ownerDocument) {
+        if (c.getAttribute('href') == '#' || c.getAttribute('data-method')) {
+          e.preventDefault()
+          (_earlyClick.clicks = _earlyClick.clicks || []).push(c)
+          break
+        }
+        c = c.parentNode
+      }
+    }
+    document.addEventListener('click', _earlyClick)
+  </script>
+  <script src="./Supporting Encoders and Decoders_files/variables-750d72b9d3e5d522f965bf904110c132.js" defer="defer"></script>
+  <script src="./Supporting Encoders and Decoders_files/vendor.bundle-e87d116ea9.js" defer="defer"></script>
+<script src="./Supporting Encoders and Decoders_files/Los_Angeles-d9cac65c52.js" defer="defer"></script>
+<script src="./Supporting Encoders and Decoders_files/en_US-80a0ce259b.js" defer="defer"></script>
+<script src="./Supporting Encoders and Decoders_files/appBootstrap.bundle-0661001892.js" defer="defer"></script>
+<script src="./Supporting Encoders and Decoders_files/common.bundle-f89441110c.js" defer="defer"></script>
+<script src="./Supporting Encoders and Decoders_files/wiki_page_show.bundle-230f977ba8.js" defer="defer"></script>
+<style type="text/css"></style><style type="text/css">.mejs-offscreen{clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);clip-path:polygon(0px 0,0 0,0 0,0 0);position:absolute!important;height:1px;width:1px;overflow:hidden}.mejs-container{position:relative;background:#000;font-family:Helvetica,Arial,serif;text-align:left;vertical-align:top;text-indent:0}.mejs-fill-container,.mejs-fill-container .mejs-container{width:100%;height:100%}.mejs-fill-container{overflow:hidden}.mejs-container:focus{outline:0}.me-plugin{position:absolute}.mejs-embed,.mejs-embed body{width:100%;height:100%;margin:0;padding:0;background:#000;overflow:hidden}.mejs-fullscreen{overflow:hidden!important}.mejs-container-fullscreen{position:fixed;left:0;top:0;right:0;bottom:0;overflow:hidden;z-index:1000}.mejs-container-fullscreen .mejs-mediaelement,.mejs-container-fullscreen video{width:100%;height:100%}.mejs-clear{clear:both}.mejs-background{position:absolute;top:0;left:0}.mejs-mediaelement{position:absolute;top:0;left:0;width:100%;height:100%}.mejs-poster{position:absolute;top:0;left:0;background-size:contain;background-position:50% 50%;background-repeat:no-repeat}:root .mejs-poster img{display:none}.mejs-poster img{border:0;padding:0}.mejs-overlay{position:absolute;top:0;left:0}.mejs-overlay-play{cursor:pointer}.mejs-overlay-button{position:absolute;top:50%;left:50%;width:100px;height:100px;margin:-50px 0 0 -50px;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/746c3af7a145a09239a36e5ef61cfea0.svg) no-repeat}.no-svg .mejs-overlay-button{background-image:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/716436fb3df0d29e6b37dd62d952676a.png)}.mejs-overlay:hover .mejs-overlay-button{background-position:0 -100px}.mejs-overlay-loading{position:absolute;top:50%;left:50%;width:80px;height:80px;margin:-40px 0 0 -40px;background:#333;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(0,0,0,.9);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(50,50,50,.9)),to(rgba(0,0,0,.9)));background:-webkit-linear-gradient(top,rgba(50,50,50,.9),rgba(0,0,0,.9));background:-moz-linear-gradient(top,rgba(50,50,50,.9),rgba(0,0,0,.9));background:-o-linear-gradient(top,rgba(50,50,50,.9),rgba(0,0,0,.9));background:-ms-linear-gradient(top,rgba(50,50,50,.9),rgba(0,0,0,.9));background:linear-gradient(rgba(50,50,50,.9),rgba(0,0,0,.9))}.mejs-overlay-loading span{display:block;width:80px;height:80px;background:transparent url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/76b326f4d44222126fee21076595bef5.gif) 50% 50% no-repeat}.mejs-container .mejs-controls{position:absolute;list-style-type:none;margin:0;padding:0;bottom:0;left:0;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(0,0,0,.7);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(50,50,50,.7)),to(rgba(0,0,0,.7)));background:-webkit-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-moz-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-o-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-ms-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:linear-gradient(rgba(50,50,50,.7),rgba(0,0,0,.7));height:30px;width:100%}.mejs-container .mejs-controls div{list-style-type:none;background-image:none;display:block;float:left;margin:0;padding:0;width:26px;height:26px;font-size:11px;line-height:11px;font-family:Helvetica,Arial,serif;border:0}.mejs-controls .mejs-button button{cursor:pointer;display:block;font-size:0;line-height:0;text-decoration:none;margin:7px 5px;padding:0;position:absolute;height:16px;width:16px;border:0;background:transparent url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/40f56f5a736da4effeb790cedb8a52f0.svg) no-repeat}.no-svg .mejs-controls .mejs-button button{background-image:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/24a0227fbdd3acfd86ff03fc3fc6c8a4.png)}.mejs-controls .mejs-button button:focus{outline:dotted 1px #999}.mejs-container .mejs-controls .mejs-time{color:#fff;display:block;height:17px;width:auto;padding:10px 3px 0;overflow:hidden;text-align:center;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}.mejs-container .mejs-controls .mejs-time a{color:#fff;font-size:11px;line-height:12px;display:block;float:left;margin:1px 2px 0 0;width:auto}.mejs-controls .mejs-play button{background-position:0 0}.mejs-controls .mejs-pause button{background-position:0 -16px}.mejs-controls .mejs-stop button{background-position:-112px 0}.mejs-controls div.mejs-time-rail{direction:ltr;width:200px;padding-top:5px}.mejs-controls .mejs-time-rail span,.mejs-controls .mejs-time-rail a{display:block;position:absolute;width:180px;height:10px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;cursor:pointer}.mejs-controls .mejs-time-rail .mejs-time-total{margin:5px;background:#333;background:rgba(50,50,50,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(30,30,30,.8)),to(rgba(60,60,60,.8)));background:-webkit-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-moz-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-o-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-ms-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:linear-gradient(rgba(30,30,30,.8),rgba(60,60,60,.8))}.mejs-controls .mejs-time-rail .mejs-time-buffering{width:100%;background-image:-o-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:-webkit-gradient(linear,0 100%,100% 0,color-stop(0.25,rgba(255,255,255,.15)),color-stop(0.25,transparent),color-stop(0.5,transparent),color-stop(0.5,rgba(255,255,255,.15)),color-stop(0.75,rgba(255,255,255,.15)),color-stop(0.75,transparent),to(transparent));background-image:-webkit-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:-moz-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:-ms-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);-webkit-background-size:15px 15px;-moz-background-size:15px 15px;-o-background-size:15px 15px;background-size:15px 15px;-webkit-animation:buffering-stripes 2s linear infinite;-moz-animation:buffering-stripes 2s linear infinite;-ms-animation:buffering-stripes 2s linear infinite;-o-animation:buffering-stripes 2s linear infinite;animation:buffering-stripes 2s linear infinite}@-webkit-keyframes buffering-stripes{from{background-position:0 0}to{background-position:30px 0}}@-moz-keyframes buffering-stripes{from{background-position:0 0}to{background-position:30px 0}}@-ms-keyframes buffering-stripes{from{background-position:0 0}to{background-position:30px 0}}@-o-keyframes buffering-stripes{from{background-position:0 0}to{background-position:30px 0}}@keyframes buffering-stripes{from{background-position:0 0}to{background-position:30px 0}}.mejs-controls .mejs-time-rail .mejs-time-loaded{background:#3caac8;background:rgba(60,170,200,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(44,124,145,.8)),to(rgba(78,183,212,.8)));background:-webkit-linear-gradient(top,rgba(44,124,145,.8),rgba(78,183,212,.8));background:-moz-linear-gradient(top,rgba(44,124,145,.8),rgba(78,183,212,.8));background:-o-linear-gradient(top,rgba(44,124,145,.8),rgba(78,183,212,.8));background:-ms-linear-gradient(top,rgba(44,124,145,.8),rgba(78,183,212,.8));background:linear-gradient(rgba(44,124,145,.8),rgba(78,183,212,.8));width:0}.mejs-controls .mejs-time-rail .mejs-time-current{background:#fff;background:rgba(255,255,255,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(255,255,255,.9)),to(rgba(200,200,200,.8)));background:-webkit-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-moz-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-o-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-ms-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:linear-gradient(rgba(255,255,255,.9),rgba(200,200,200,.8));width:0}.mejs-controls .mejs-time-rail .mejs-time-handle{display:none;position:absolute;margin:0;width:10px;background:#fff;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;cursor:pointer;border:solid 2px #333;top:-2px;text-align:center}.mejs-controls .mejs-time-rail .mejs-time-float{position:absolute;display:none;background:#eee;width:36px;height:17px;border:solid 1px #333;top:-26px;margin-left:-18px;text-align:center;color:#111}.mejs-controls .mejs-time-rail .mejs-time-float-current{margin:2px;width:30px;display:block;text-align:center;left:0}.mejs-controls .mejs-time-rail .mejs-time-float-corner{position:absolute;display:block;width:0;height:0;line-height:0;border:solid 5px #eee;border-color:#eee transparent transparent;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;top:15px;left:13px}.mejs-long-video .mejs-controls .mejs-time-rail .mejs-time-float{width:48px}.mejs-long-video .mejs-controls .mejs-time-rail .mejs-time-float-current{width:44px}.mejs-long-video .mejs-controls .mejs-time-rail .mejs-time-float-corner{left:18px}.mejs-controls .mejs-fullscreen-button button{background-position:-32px 0}.mejs-controls .mejs-unfullscreen button{background-position:-32px -16px}.mejs-controls .mejs-volume-button{}.mejs-controls .mejs-mute button{background-position:-16px -16px}.mejs-controls .mejs-unmute button{background-position:-16px 0}.mejs-controls .mejs-volume-button{position:relative}.mejs-controls .mejs-volume-button .mejs-volume-slider{height:115px;width:25px;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;top:-115px;left:0;z-index:1;position:absolute;margin:0}.mejs-controls .mejs-volume-button:hover{-webkit-border-radius:0 0 4px 4px;-moz-border-radius:0 0 4px 4px;border-radius:0 0 4px 4px}.mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-total{position:absolute;left:11px;top:8px;width:2px;height:100px;background:#ddd;background:rgba(255,255,255,.5);margin:0}.mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-current{position:absolute;left:11px;top:8px;width:2px;height:100px;background:#ddd;background:rgba(255,255,255,.9);margin:0}.mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-handle{position:absolute;left:4px;top:-3px;width:16px;height:6px;background:#ddd;background:rgba(255,255,255,.9);cursor:N-resize;-webkit-border-radius:1px;-moz-border-radius:1px;border-radius:1px;margin:0}.mejs-controls a.mejs-horizontal-volume-slider{height:26px;width:56px;position:relative;display:block;float:left;vertical-align:middle}.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total{position:absolute;left:0;top:11px;width:50px;height:8px;margin:0;padding:0;font-size:1px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background:#333;background:rgba(50,50,50,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(30,30,30,.8)),to(rgba(60,60,60,.8)));background:-webkit-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-moz-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-o-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-ms-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:linear-gradient(rgba(30,30,30,.8),rgba(60,60,60,.8))}.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current{position:absolute;left:0;top:11px;width:50px;height:8px;margin:0;padding:0;font-size:1px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background:#fff;background:rgba(255,255,255,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(255,255,255,.9)),to(rgba(200,200,200,.8)));background:-webkit-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-moz-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-o-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-ms-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:linear-gradient(rgba(255,255,255,.9),rgba(200,200,200,.8))}.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-handle{display:none}.mejs-controls .mejs-captions-button{position:relative}.mejs-controls .mejs-captions-button button{background-position:-48px 0}.mejs-controls .mejs-captions-button .mejs-captions-selector{position:absolute;bottom:26px;right:-51px;width:85px;height:100px;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);border:solid 1px transparent;padding:10px 10px 0;overflow:hidden;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}.mejs-controls .mejs-captions-button .mejs-captions-selector ul{margin:0;padding:0;display:block;list-style-type:none!important;overflow:hidden}.mejs-controls .mejs-captions-button .mejs-captions-selector ul li{margin:0 0 6px;padding:0;list-style-type:none!important;display:block;color:#fff;overflow:hidden}.mejs-controls .mejs-captions-button .mejs-captions-selector ul li input{clear:both;float:left;margin:3px 3px 0 5px}.mejs-controls .mejs-captions-button .mejs-captions-selector ul li label{width:55px;float:left;padding:4px 0 0;line-height:15px;font-family:Helvetica,Arial,serif;font-size:10px}.mejs-controls .mejs-captions-button .mejs-captions-translations{font-size:10px;margin:0 0 5px}.mejs-chapters{position:absolute;top:0;left:0;border-right:solid 1px #fff;width:10000px;z-index:1}.mejs-chapters .mejs-chapter{position:absolute;float:left;background:#222;background:rgba(0,0,0,.7);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(50,50,50,.7)),to(rgba(0,0,0,.7)));background:-webkit-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-moz-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-o-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-ms-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:linear-gradient(rgba(50,50,50,.7),rgba(0,0,0,.7));filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr=#323232, endColorstr=#000000);overflow:hidden;border:0}.mejs-chapters .mejs-chapter .mejs-chapter-block{font-size:11px;color:#fff;padding:5px;display:block;border-right:solid 1px #333;border-bottom:solid 1px #333;cursor:pointer}.mejs-chapters .mejs-chapter .mejs-chapter-block-last{border-right:0}.mejs-chapters .mejs-chapter .mejs-chapter-block:hover{background:#666;background:rgba(102,102,102,.7);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(102,102,102,.7)),to(rgba(50,50,50,.6)));background:-webkit-linear-gradient(top,rgba(102,102,102,.7),rgba(50,50,50,.6));background:-moz-linear-gradient(top,rgba(102,102,102,.7),rgba(50,50,50,.6));background:-o-linear-gradient(top,rgba(102,102,102,.7),rgba(50,50,50,.6));background:-ms-linear-gradient(top,rgba(102,102,102,.7),rgba(50,50,50,.6));background:linear-gradient(rgba(102,102,102,.7),rgba(50,50,50,.6));filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr=#666666, endColorstr=#323232)}.mejs-chapters .mejs-chapter .mejs-chapter-block .ch-title{font-size:12px;font-weight:700;display:block;white-space:nowrap;text-overflow:ellipsis;margin:0 0 3px;line-height:12px}.mejs-chapters .mejs-chapter .mejs-chapter-block .ch-timespan{font-size:12px;line-height:12px;margin:3px 0 4px;display:block;white-space:nowrap;text-overflow:ellipsis}.mejs-captions-layer{position:absolute;bottom:0;left:0;text-align:center;line-height:20px;font-size:16px;color:#fff}.mejs-captions-layer a{color:#fff;text-decoration:underline}.mejs-captions-layer[lang=ar]{font-size:20px;font-weight:400}.mejs-captions-position{position:absolute;width:100%;bottom:15px;left:0}.mejs-captions-position-hover{bottom:35px}.mejs-captions-text,.mejs__captions-text *{padding:0;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(20,20,20,.5);white-space:pre-wrap;-webkit-box-shadow:5px 0 0 rgba(20,20,20,.5),-5px 0 0 rgba(20,20,20,.5);box-shadow:5px 0 0 rgba(20,20,20,.5),-5px 0 0 rgba(20,20,20,.5)}.me-cannotplay{}.me-cannotplay a{color:#fff;font-weight:700}.me-cannotplay span{padding:15px;display:block}.mejs-controls .mejs-loop-off button{background-position:-64px -16px}.mejs-controls .mejs-loop-on button{background-position:-64px 0}.mejs-controls .mejs-backlight-off button{background-position:-80px -16px}.mejs-controls .mejs-backlight-on button{background-position:-80px 0}.mejs-controls .mejs-picturecontrols-button{background-position:-96px 0}.mejs-contextmenu{position:absolute;width:150px;padding:10px;border-radius:4px;top:0;left:0;background:#fff;border:solid 1px #999;z-index:1001}.mejs-contextmenu .mejs-contextmenu-separator{height:1px;font-size:0;margin:5px 6px;background:#333}.mejs-contextmenu .mejs-contextmenu-item{font-family:Helvetica,Arial,serif;font-size:12px;padding:4px 6px;cursor:pointer;color:#333}.mejs-contextmenu .mejs-contextmenu-item:hover{background:#2C7C91;color:#fff}.mejs-controls .mejs-sourcechooser-button{position:relative}.mejs-controls .mejs-sourcechooser-button button{background-position:-128px 0}.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector{position:absolute;bottom:26px;right:-10px;width:130px;height:100px;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);border:solid 1px transparent;padding:10px;overflow:hidden;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul{margin:0;padding:0;display:block;list-style-type:none!important;overflow:hidden}.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul li{margin:0 0 6px;padding:0;list-style-type:none!important;display:block;color:#fff;overflow:hidden}.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul li input{clear:both;float:left;margin:3px 3px 0 5px}.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul li label{width:100px;float:left;padding:4px 0 0;line-height:15px;font-family:Helvetica,Arial,serif;font-size:10px}.mejs-postroll-layer{position:absolute;bottom:0;left:0;width:100%;height:100%;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);z-index:1000;overflow:hidden}.mejs-postroll-layer-content{width:100%;height:100%}.mejs-postroll-close{position:absolute;right:0;top:0;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);color:#fff;padding:4px;z-index:100;cursor:pointer}div.mejs-speed-button{width:46px!important;position:relative}.mejs-controls .mejs-button.mejs-speed-button button{background:transparent;width:36px;font-size:11px;line-height:normal;color:#fff}.mejs-controls .mejs-speed-button .mejs-speed-selector{position:absolute;top:-100px;left:-10px;width:60px;height:100px;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);border:solid 1px transparent;padding:0;overflow:hidden;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}.mejs-controls .mejs-speed-button .mejs-speed-selector ul li label.mejs-speed-selected{color:rgba(33,248,248,1)}.mejs-controls .mejs-speed-button .mejs-speed-selector ul{margin:0;padding:0;display:block;list-style-type:none!important;overflow:hidden}.mejs-controls .mejs-speed-button .mejs-speed-selector ul li{margin:0 0 6px;padding:0 10px;list-style-type:none!important;display:block;color:#fff;overflow:hidden}.mejs-controls .mejs-speed-button .mejs-speed-selector ul li input{clear:both;float:left;margin:3px 3px 0 5px}.mejs-controls .mejs-speed-button .mejs-speed-selector ul li label{width:60px;float:left;padding:4px 0 0;line-height:15px;font-family:Helvetica,Arial,serif;font-size:11px;color:#fff;margin-left:5px;cursor:pointer}.mejs-controls .mejs-speed-button .mejs-speed-selector ul li:hover{background-color:#c8c8c8!important;background-color:rgba(255,255,255,.4)!important}.mejs-controls .mejs-button.mejs-jump-forward-button{background:transparent url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/15e1ac8cbacc2efdf1ac2677de48a253.png) no-repeat 3px 3px}.mejs-controls .mejs-button.mejs-jump-forward-button button{background:transparent;font-size:9px;line-height:normal;color:#fff}.mejs-controls .mejs-button.mejs-skip-back-button{background:transparent url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/cd6dc830eb45b3a5a96bbc936ff54846.png) no-repeat 3px 3px}.mejs-controls .mejs-button.mejs-skip-back-button button{background:transparent;font-size:9px;line-height:normal;color:#fff}</style><style type="text/css">/*
+ * Copyright (C) 2014 - present Instructure, Inc.
+ *
+ * This file is part of Canvas.
+ *
+ * Canvas is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU Affero General Public License as published by the Free
+ * Software Foundation, version 3 of the License.
+ *
+ * Canvas is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+ * A PARTICULAR PURPOSE. See the GNU Affero General Public License for more
+ * details.
+ *
+ * You should have received a copy of the GNU Affero General Public License along
+ * with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/* customizations to mediaelementplayer css */
+
+/* good menu widths */
+.mejs-sourcechooser-selector {
+  width: 160px;
+}
+.mejs-sourcechooser-selector label {
+  width: 160px !important;
+}
+
+.mejs-captions-selector {
+  width: 105px;
+}
+.mejs-captions-selector label {
+  width: 70px !important;
+}
+
+/* Subtitile upload link */
+.mejs-captions-selector .upload-track {
+  color: white;
+  margin: 3px 0 5px 5px;
+  float: direction(left);
+}
+
+/* "x" button to remove a subtitle */
+.mejs-captions-selector a[data-remove] {
+  position: absolute;
+  top: 0; right: 0;
+  color: white;
+}
+
+
+/* style menu items without a radio button */
+.mejs-button [role="menu"] {
+  padding: 0 !important;
+}
+ /* compensate for above 0 padding */
+ .mejs-button [role="menu"] ul li {
+  position: relative;
+  padding: 0 10px !important;
+}
+/* add a hover effect */
+.mejs-button [role="menu"] ul li:hover {
+  background-color: #c8c8c8 !important;
+  background-color: rgba(255, 255, 255, 0.4) !important;
+}
+.mejs-button [role="menu"] ul li input {
+  border: 0;
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+.mejs-button [role="menu"] ul li label {
+  margin-left: 5px;
+  cursor: pointer;
+}
+.mejs-button [role="menu"] label.mejs-selected {
+  color: #21f8f8 !important;
+}
+</style><style type="text/css" data-glamor=""></style></head>
+
+<body class="with-left-side course-menu-expanded padless-content pages primary-nav-transitions context-course_1205169 lato-font-not-loaded-yet show webkit chrome no-touch">
+
+<noscript>
+  <div role="alert" class="ic-flash-static ic-flash-error">
+    <div class="ic-flash__icon" aria-hidden="true">
+      <i class="icon-warning"></i>
+    </div>
+    <h1>You need to have JavaScript enabled in order to access this site.</h1>
+  </div>
+</noscript>
+
+
+
+
+
+<ul id="flash_message_holder"></ul>
+<div id="flash_screenreader_holder" role="alert" aria-live="assertive" aria-relevant="additions" class="screenreader-only" aria-atomic="false"></div>
+
+<div id="application" class="ic-app">
+  
+  <header id="header" class="ic-app-header no-print ">
+    <a href="https://canvas.uw.edu/courses/1205169/pages/lesson-four-supporting-encoders-and-decoders?module_item_id=8253624#content" id="skip_navigation_link">Skip To Content</a>
+      <div role="region" class="ic-app-header__main-navigation" aria-label="Global Navigation">
+        <div class="ic-app-header__logomark-container">
+          <a href="https://canvas.uw.edu/" class="ic-app-header__logomark">
+            <span class="screenreader-only">Dashboard</span>
+          </a>
+        </div>
+        <ul id="menu" class="ic-app-header__menu-list">
+            <li class="menu-item ic-app-header__menu-list-item ">
+              <a id="global_nav_profile_link" href="https://canvas.uw.edu/profile" class="ic-app-header__menu-list-link">
+                <div class="menu-item-icon-container" aria-hidden="true">
+                  <div class="ic-avatar ">
+                    <img src="./Supporting Encoders and Decoders_files/mSs2TjTESYscSzrackhgoJvAT79xbNchamHPrSec" alt="Clayton Wong">
+                  </div>
+                </div>
+                <div class="menu-item__text">
+                  Account
+                </div>
+              </a>
+            </li>
+          <li class="ic-app-header__menu-list-item ">
+            <a id="global_nav_dashboard_link" href="https://canvas.uw.edu/" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--dashboard" version="1.1" x="0" y="0" viewBox="0 0 280 200" enable-background="new 0 0 280 200" xml:space="preserve"><path d="M273.09,180.75H197.47V164.47h62.62A122.16,122.16,0,1,0,17.85,142a124,124,0,0,0,2,22.51H90.18v16.29H6.89l-1.5-6.22A138.51,138.51,0,0,1,1.57,142C1.57,65.64,63.67,3.53,140,3.53S278.43,65.64,278.43,142a137.67,137.67,0,0,1-3.84,32.57ZM66.49,87.63,50.24,71.38,61.75,59.86,78,76.12Zm147,0L202,76.12l16.25-16.25,11.51,11.51ZM131.85,53.82v-23h16.29v23Zm15.63,142.3a31.71,31.71,0,0,1-28-16.81c-6.4-12.08-15.73-72.29-17.54-84.25a8.15,8.15,0,0,1,13.58-7.2c8.88,8.21,53.48,49.72,59.88,61.81a31.61,31.61,0,0,1-27.9,46.45ZM121.81,116.2c4.17,24.56,9.23,50.21,12,55.49A15.35,15.35,0,1,0,161,157.3C158.18,152,139.79,133.44,121.81,116.2Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">Dashboard</div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ic-app-header__menu-list-item--active">
+            <a id="global_nav_courses_link" href="https://canvas.uw.edu/courses" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--courses" version="1.1" x="0" y="0" viewBox="0 0 280 259" enable-background="new 0 0 280 259" xml:space="preserve"><path d="M73.31,198c-11.93,0-22.22,8-24,18.73a26.67,26.67,0,0,0-.3,3.63v.3a22,22,0,0,0,5.44,14.65,22.47,22.47,0,0,0,17.22,8H200V228.19h-134V213.08H200V198Zm21-105.74h90.64V62H94.3ZM79.19,107.34V46.92H200v60.42Zm7.55,30.21V122.45H192.49v15.11ZM71.65,16.71A22.72,22.72,0,0,0,49,39.36V190.88a41.12,41.12,0,0,1,24.32-8h157V16.71ZM33.88,39.36A37.78,37.78,0,0,1,71.65,1.6H245.36V198H215.15v45.32h22.66V258.4H71.65a37.85,37.85,0,0,1-37.76-37.76Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Courses
+              </div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_calendar_link" href="https://canvas.uw.edu/calendar" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--calendar" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M197.07,213.38h16.31V197.07H197.07Zm-16.31,16.31V180.76h48.92v48.92Zm-48.92-16.31h16.31V197.07H131.85Zm-16.31,16.31V180.76h48.92v48.92ZM66.62,213.38H82.93V197.07H66.62ZM50.32,229.68V180.76H99.24v48.92Zm146.75-81.53h16.31V131.85H197.07Zm-16.31,16.31V115.54h48.92v48.92Zm-48.92-16.31h16.31V131.85H131.85Zm-16.31,16.31V115.54h48.92v48.92ZM66.62,148.15H82.93V131.85H66.62ZM50.32,164.46V115.54H99.24v48.92ZM34,262.29H246V82.93H34ZM246,66.62V42.16A8.17,8.17,0,0,0,237.84,34H213.38v8.15a8.15,8.15,0,1,1-16.31,0V34H82.93v8.15a8.15,8.15,0,0,1-16.31,0V34H42.16A8.17,8.17,0,0,0,34,42.16V66.62Zm-8.15-48.92a24.49,24.49,0,0,1,24.46,24.46V278.6H17.71V42.16A24.49,24.49,0,0,1,42.16,17.71H66.62V9.55a8.15,8.15,0,0,1,16.31,0v8.15H197.07V9.55a8.15,8.15,0,1,1,16.31,0v8.15Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Calendar
+              </div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_conversations_link" href="https://canvas.uw.edu/conversations" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--inbox" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M91.72,120.75h96.56V104.65H91.72Zm0,48.28h80.47V152.94H91.72Zm0-96.56h80.47V56.37H91.72Zm160.94,34.88H228.52V10.78h-177v96.56H27.34A24.17,24.17,0,0,0,3.2,131.48V244.14a24.17,24.17,0,0,0,24.14,24.14H252.66a24.17,24.17,0,0,0,24.14-24.14V131.48A24.17,24.17,0,0,0,252.66,107.34Zm0,16.09a8.06,8.06,0,0,1,8,8v51.77l-32.19,19.31V123.44ZM67.58,203.91v-177H212.42v177ZM27.34,123.44H51.48v79.13L19.29,183.26V131.48A8.06,8.06,0,0,1,27.34,123.44ZM252.66,252.19H27.34a8.06,8.06,0,0,1-8-8V202l30,18H230.75l30-18v42.12A8.06,8.06,0,0,1,252.66,252.19Z"></path></svg>
+
+                <span class="menu-item__badge" style="display: none">0</span>
+              </div>
+              <div class="menu-item__text">
+                Inbox
+              </div>
+            </a>
+          </li>
+            
+
+
+          <li class="ic-app-header__menu-list-item">
+           <a id="global_nav_help_link" class="ic-app-header__menu-list-link" data-track-category="help system" data-track-label="help button" href="http://help.instructure.com/">
+              <div class="menu-item-icon-container" role="presentation">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg menu-item__icon svg-icon-help" version="1.1" x="0" y="0" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve" fill="currentColor"><path d="M100,127.88A11.15,11.15,0,1,0,111.16,139,11.16,11.16,0,0,0,100,127.88Zm8.82-88.08a33.19,33.19,0,0,1,23.5,23.5,33.54,33.54,0,0,1-24,41.23,3.4,3.4,0,0,0-2.74,3.15v9.06H94.42v-9.06a14.57,14.57,0,0,1,11.13-14,22.43,22.43,0,0,0,13.66-10.27,22.73,22.73,0,0,0,2.31-17.37A21.92,21.92,0,0,0,106,50.59a22.67,22.67,0,0,0-19.68,3.88,22.18,22.18,0,0,0-8.65,17.64H66.54a33.25,33.25,0,0,1,13-26.47A33.72,33.72,0,0,1,108.82,39.8ZM100,5.2A94.8,94.8,0,1,0,194.8,100,94.91,94.91,0,0,0,100,5.2m0,178.45A83.65,83.65,0,1,1,183.65,100,83.73,83.73,0,0,1,100,183.65" transform="translate(-5.2 -5.2)"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Help
+              </div>
+</a>          </li>
+        </ul>
+      </div>
+      <div class="ic-app-header__secondary-navigation">
+        <ul class="ic-app-header__menu-list">
+          <li class="menu-item ic-app-header__menu-list-item">
+            <button id="primaryNavToggle" class="ic-app-header__menu-list-link ic-app-header__menu-list-link--nav-toggle" aria-label="Expand global navigation
+                " title="Expand global navigation
+                ">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--navtoggle" version="1.1" x="0" y="0" width="40" height="32" viewBox="0 0 40 32" xml:space="preserve">
+  <path d="M39.5,30.28V2.48H37.18v27.8Zm-4.93-13.9L22.17,4,20.53,5.61l9.61,9.61H.5v2.31H30.14l-9.61,9.61,1.64,1.64Z"></path>
+</svg>
+
+              </div>
+            </button>
+          </li>
+        </ul>
+      </div>
+    <div id="global_nav_tray_container"><noscript data-reactid=".0"></noscript></div>
+  </header>
+
+
+  <div id="instructure_ajax_error_box">
+    <div style="text-align: right; background-color: #fff;"><a href="https://canvas.uw.edu/courses/1205169/pages/lesson-four-supporting-encoders-and-decoders?module_item_id=8253624#" class="close_instructure_ajax_error_box_link">Close</a></div>
+    <iframe id="instructure_ajax_error_result" src="./Supporting Encoders and Decoders_files/saved_resource.html" style="border: 0;" title="Error"></iframe>
+  </div>
+
+  
+
+  <div id="wrapper" class="ic-Layout-wrapper">
+      <div class="ic-app-nav-toggle-and-crumbs no-print">
+          <button type="button" id="courseMenuToggle" class="Button Button--link ic-app-course-nav-toggle" aria-live="polite" aria-label="Hide Courses Navigation Menu" title="Hide Courses Navigation Menu">
+            <i class="icon-hamburger" aria-hidden="true"></i>
+          </button>
+          <div class="ic-app-crumbs">
+        <nav id="breadcrumbs" role="navigation" aria-label="breadcrumbs"><ul><li class="home"><a href="https://canvas.uw.edu/"><span class="ellipsible">      <i class="icon-home" title="My Dashboard">
+        <span class="screenreader-only">My Dashboard</span>
+      </i>
+</span></a></li><li><a href="https://canvas.uw.edu/courses/1205169"><span class="ellipsible">CPROGRM 713 A</span></a></li><li><a href="https://canvas.uw.edu/courses/1205169/pages"><span class="ellipsible">Pages</span></a></li><li><span class="ellipsible">Lesson Four: Supporting Encoders and Decoders</span></li></ul></nav>
+        </div>
+      </div>
+    <div id="main" class="ic-Layout-columns">
+        <div class="ic-Layout-watermark"></div>
+        <div id="left-side" class="ic-app-course-menu list-view" style="display: block">
+              <span id="section-tabs-header-subtitle" class="ellipsis">Summer 2018</span>
+            <nav role="navigation" aria-label="Courses Navigation Menu"><ul id="section-tabs"><li class="section"><a href="https://canvas.uw.edu/courses/1205169" title="Home" class="home" tabindex="0">Home</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1205169/announcements" title="Announcements" class="announcements" tabindex="0">Announcements</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1205169/modules" title="Modules" class="modules" tabindex="0">Modules</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1205169/discussion_topics" title="Discussions" class="discussions" tabindex="0">Discussions</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1205169/grades" title="Grades" class="grades" tabindex="0">Grades</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1205169/users" title="People" class="people" tabindex="0">People</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1205169/external_tools/63603" title="Info &amp; Help" class="context_external_tool_63603" tabindex="0">Info &amp; Help</a></li></ul></nav>
+        </div>
+      <div id="not_right_side" class="ic-app-main-content">
+        <div id="content-wrapper" class="ic-Layout-contentWrapper">
+            
+
+          <div id="content" class="ic-Layout-contentMain" role="main">
+            
+
+  
+
+<div id="wiki_page_show">
+<div class="header-bar-outer-container">
+  <div class="header-bar-container sticky-toolbar" data-sticky="">
+    <div class="header-bar flex-container">
+      <div class="header-bar-left header-left-flex">
+        
+          
+        
+      </div>
+      <div class="header-bar-right header-right-flex">
+        
+          
+          
+            
+          
+        
+        
+          
+        
+        
+      </div>
+    </div>
+    <div class="page-changed-alert" role="alert" aria-atomic="true" aria-live="polite"></div>
+  </div>
+</div>
+
+
+<div class="show-content user_content clearfix enhanced">
+  <h1 class="page-title">Lesson Four: Supporting Encoders and Decoders</h1>
+  
+    
+  
+  
+    <div class="actionBox">
+<h6>Required Reading</h6>
+<ul>
+<li>
+<cite>Design Patterns: Element of Reusable Object-Oriented Software</cite>: The Decorator (175), Prototype (117) and Iterator (257) Patterns.</li>
+</ul>
+</div>
+<p>The assignment that concludes this lesson will have mostly the same inputs and outputs as assignment 3. What varies is that we'll now be using a much more sophisticated means of decoding and encoding bitmap graphics. At the end of this lesson, our bitmap handling will support the following.</p>
+<ul>
+<li>Client defined file format support for both decoding (reading) and coding or encoding&nbsp;(writing).</li>
+<li>File extension independent decoder determination for maximum flexibility and resilience.</li>
+<li>Object-oriented iterators for implementation independence and run-time decoration.</li>
+<li>Support for deferred loading and decoding. This allows us to load and decode bitmaps on their first use, which can be convenient for remote images and slow formats that are slow to decompress.</li>
+<li>Flexible, iterator-based encoding and decoding.</li>
+</ul>
+<p>In designing and implementing our more robust bitmap support, we will find limited reuse from the last lesson. This is because our design this time will be far more thorough and more object-oriented overall. For the most part, our last design followed the basic paradigm of development that the C++ standard library uses. This paradigm tends to push most things into compile time and to work primarily with simple, concrete classes. This works as a primitive layer on which to build more sophisticated things in many cases, but it's rare that this sort of design mentality survives the requirements of realistic full-scale systems (which, for example, often need to support many file formats). The difference between these two paradigms will become apparent throughout this lesson.</p>
+<p>At the end of the lesson, you should reflect on the application built in Lesson Three that performs an almost identical task (for our test), and appreciate the many improvements we've made. Our new system is designed for the future. With not much more work, the new system could be a stable infrastructure for encoding and decoding a variety of bitmap image file formats (such as GIF, TIFF and JPG) for many years.</p>
+<h2>Lesson Objective</h2>
+<p>By the end of this lesson, you will be able to implement the CODEC support and the new Bitmap class.</p>
+<h2>The Design and Role of CODECs in Modern Systems</h2>
+<div class="keytermBox">
+<h6>Key Term</h6>
+<ul>
+<li>CODEC</li>
+</ul>
+</div>
+<p>The industry term <span class="keyterm">CODEC</span> comes from "code/decode" (similar to <span class="italics">MODEM</span> which comes from "Modulator/Demodulator"). Both are extremely generic terms. A CODEC facilitates the conversion of information to and from a different format. You may have seen CODECs mentioned when working with audio, video, file compression, or any of a wide variety of applications.</p>
+<p>Most modern systems allow CODECs to be dynamically added. New CODECs can be dropped into many multimedia applications, such as Windows Media Player, without having to get a new version of the application, and often without even having to restart the application. The applications (and in some cases the OS) maintain a registry of CODECs that is used to look up the appropriate CODEC for incoming information. This has certainly simplified the variety of formats that are out there. In the earlier days of computing, file formats were more deeply rooted in applications. Now some applications and operating systems even support automatic location and installation of new CODECs via the Web when an unknown file is opened.</p>
+<p>One of the important properties of the design of most systems that work with CODECs is that they are not dependent on the concept of a file or file extension. Most systems (including the Windows OS) look up the appropriate CODEC based on the raw incoming information. This is why the newer versions of Microsoft Windows can load a Windows Bitmap Format image, even if it is renamed to have a JPG extension. Instead of determining the CODEC to use by extension, it determines based on header information.</p>
+<p>We won't delve too deeply into the existing technologies, but will write our own, based on the overall idea and intention of drop-in file format support. This is because this course is limited to the C++ Standard Library and can't reap the benefits of what's available in the industry.</p>
+<h2>Defining the Decoder</h2>
+<p>We'll separate encoders and decoders for obvious reasons: they each will have dramatically different implementations. Their only arguable codependence is at the conceptual level and perhaps the sharing of a few constants. Having each reuse the WindowsBitmapHeader class will simplify things to the point where the only remaining constant would be the double word alignment value—which you can make efforts to share by creating a constant in a shared namespace or simply redefine as a frozen class attribute (since this would be less exposed, it might be a better idea).</p>
+<div class="infoBox">
+<p>In reality, we'd probably end up creating a more object-oriented (and interface based) stream to support true independence of location. Clients are sure to be able to implement any possible stream and would not be bound to iostream's implementation choices if we took an interface-based approach.</p>
+</div>
+<p>For the decoder's genericity, it will need to work with streams instead of files, of course. Certainly, we'd like to be able to support a future that includes HTTP stream of a bitmap located on a server. We'll also need our decoders to report whether or not they will be able to support a given format. To do this, we can pass in the first chunk of the incoming information to the decoder. For our bitmap decoder, it needs only to read the first two bytes of this chunk to determine whether it can support the format. Our decoder needs a way to get the converted information to the client. An iterator should do just the trick, allowing the client to iterate through the converted information—though this doesn't imply that we'll have to convert the information before the iteration starts. We can actually defer the decoding until the iteration, and only decode pixel by pixel as the client iterates across scan lines. When a client requests to increment to the next scan line, we simply read any double word alignment bytes; when a client requests to increment to the next pixel, we simply read in the next RGB color value.</p>
+<p>One other issue that both decoders and encoders will have to address is reporting which MIME type they support. A MIME type is a string, such as "text/html," that is a standardized way of referring to a particular format. Windows Bitmaps use "image/x-ms-bmp" as their mime type, so our WindowsBitmapDecoder implementation (clearly the decoder will be an interface) will have to report that as its MIME type.</p>
+<p>One of the more complicated aspects of implementing our decoders will be the ability for a decoder to report whether or not it supports a chunk of information. We can create a documented standard that all bitmaps will be given a 100-byte chunk of the incoming information (or the total file size if it is less than 100 bytes) to determine whether or not they can support it. This is actually a common approach. Most, if not all, file formats are recognizable within the first 100 bytes.</p>
+<p>Unfortunately, the decoder cannot be passed a stream for support determination because streams lose information as you read it, so the next decoder in the list would get a partially-eaten stream. Instead, we'll have to give the first chunk to the stream as a string. Once a decoder reports that it supports the information in the string, the entire stream can be handed to it.</p>
+<h2>Defining the Encoder</h2>
+<p>The encoder is for the most part identical to the decoder—just inversed. The only major difference is a simplification: it needn't be able to determine support for incoming information, because there is no incoming information, only outgoing. For the actual writing out to a stream, the encoder will need an iterator. This is precisely the inverse of the decoder. It also implies that—rather than a <code>createIterator</code> method—the encoder would have an <code>encodeToStream</code> method. Where the decoder is created with a stream and produces an iterator, the encoder is created with an iterator and produces (or rather, encodes to) a stream.</p>
+<h2>Creating the CODEC Library</h2>
+<p>Up till this point we have ignored how, exactly, the decoders and encoders are created. Based on the conversation, the decoders and encoders are tightly bound to a stream and a single bitmap to decode. So it is clear that upon creation, the decoder will need a reference to a stream. But how exactly does this creation occur?</p>
+<p>(Recall from the <span class="italics">C++</span>:&nbsp;<span class="italics">Intermediate </span>course that in factory-like situations we can use the prototype pattern when we need to allow clients to dynamically define and parameterize implementations or subtypes to create in factory-like situations.) In <span class="italics">C++</span>:&nbsp;<span class="italics">Intermediate</span>, we used a registry of prototypes that could be searched based on the tag they claimed to support. With our CODECs, we have a similar situation.</p>
+<p>If we use the prototype pattern, we'll end up with a CodecLibrary class that allows us at least to look up the appropriate encoder and decoder for a MIME type. Of course, we generally don't want to look up decoders by MIME type, but instead, by their support determination method. Also, both decoders and encoders are tightly coupled to their incoming data; the decoder should be created along with a stream when it is found, and the encoder should be created along with an iterator when it is found. All of this information leads to the class definition shown in example 4.1.</p>
+<table style="width: 480px;" border="0">
+<tbody>
+<tr>
+<th>Code Example 4.1</th>
+</tr>
+<tr>
+<td>
+<pre><code>class CodecLibrary {
+	public:
+		void registerEncoder (HBitmapEncoder const&amp; decoder);
+		void registerDecoder (HBitmapDecoder const&amp; decoder);
+	
+		// provide a mime type version and an
+		// auto determination version of createDecoder
+		HBitmapDecoder createDecoder (std::istream&amp; sourceStream);
+		HBitmapDecoder createDecoder (std::string const&amp; mimeType,
+			std::istream&amp; sourceStream);
+
+		HBitmapEncoder createEncoder (std::string const&amp; mimeType,
+			HBitmapIterator const&amp; bitmapIterator);
+};</code></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Note that <code>create</code> was used rather than <code>find</code> or <code>get</code> because it emphasizes that the object being returned will be new each time, and that the parameters you're passing in are parameters to its creation.</p>
+<p>The repercussions of the decoders creation means that the CODEC Library can be responsible for getting the first chunk from the file. This shouldn't be complicated, but the fact that the first chunk will be removed from the stream will make the clone method need to take the form of <code>clone (std::string const&amp; firstChunk, std::istream&amp; sourceStream)</code>. It will also make implementing the decoder a bit tricky, as it will need to work initially from a string, then secondly from a stream. Of course, for our WindowsBitmapDecoder, the entire header can be read before this distinction need be made, since its size is only 54 bytes. After that, it can provide a <code>getNextByte</code> method to abstract itself from when and how the switching between the string and the stream occurs. Note that stringstreams would have to be used to achieve all this cleanly, particularly since the WindowsBitmapHeader you are creating will require a stream, not a string.</p>
+<h2>Creating the Bitmap Iterator</h2>
+<p>We still have yet to rigorously define our bitmap iterator. We know that it should be scan-line based, and we know that we'd ideally like it in one class, not a separate pixel and scan-line iterator (since the scan-line iterator is fairly useless outside of a means to get to new pixel iterators). Making a single iterator will require more distinction in the method names. We'll also have to create an interface for this iterator, since different encoders will provide different implementations.</p>
+<table style="width: 480px;">
+<tbody>
+<tr>
+<th>Code Example 4.2</th>
+</tr>
+<tr>
+<td>
+<pre><code>class IBitmapIterator {
+   public:
+		virtual void nextScanLine () = 0;
+		virtual bool isEndOfImage () const = 0;
+		virtual void nextPixel () = 0;
+		virtual bool isEndOfScanLine () const = 0;
+
+		virtual Color getColor () const = 0;
+
+		virtual int getBitmapWidth () const = 0;
+		virtual int getBitmapHeight () const = 0;
+};</code></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<p>As you can see, we've effectively removed the need for an "end" iterator. Although it would be possible to provide an end iterator, it would have to be a different implementation of the interface, and employ some trickery. The semantics would also be especially confusing because of the need to differentiate between the end of the scan line and the end of the image as a whole. The iterator we've provided is much closer to those in the examples in <cite>Design Patterns: Elements of Reusable-Object Oriented Software</cite> and, not coincidentally, those provided in the Java standard libraries. The idea of an "end" iterator is not common or suggested with most object-oriented systems. The "end" iterator comes from thinking of iterators more like pointers (as covered in the last lesson) or being overly oriented towards objects that behave like primitive types.</p>
+<p>It may not be apparent to you why the bitmaps width and height are reported by the iterator. First, the information is a constant throughout the life of an iterator. If it changed from scan line to scan line, it would not be a valid bitmap. Second, reporting the width and height in the iterator allows us to potentially create a stretching decorator for the iterator, as will be apparent in the next section. The width and height will also be required by most things that work with the color information. For example, our encoder would require the width and height to be passed to it along with the iterator upon creation otherwise.</p>
+<p>It will be your job in assignment 4 to provide the various necessary implementations of iterators. These will, of course, be internal iterators—though no client will be aware of anything beyond the basic IBitmapIterator interface.</p>
+<h2>Creating Bitmap Iterator Decorators</h2>
+<p>It is possible to apply effects on the fly by decorating an iterator. For example, we can create a brightness-effect decorator, or an invert-color decorator. As you learned in the past with the decorator pattern, it is possible to repeat decorations and arbitrarily layer them—all the while still making the original decorated object still seem the same.</p>
+<p>As an example, consider a brightness decorator. For brightness, all we need to do is increase or decrease each color component (red, green, and blue) an equal amount. When a color component reaches a threshold point (0 or 255), we can no longer increment it, and the color as a whole will become closer to black-and-white (which occurs when the red, green, and blue all have the same value). Our brightness decorator can be defined as shown in example 4.3.</p>
+<table style="width: 480px;" border="0">
+<tbody>
+<tr>
+<th>Code Example 4.3</th>
+</tr>
+<tr>
+<td>
+<pre><code>class BrightnessDecorator : public IBitmapIterator {
+	public:
+		BrightnessDecorator (HBitmapIterator const&amp; originalIterator)
+			: originalIterator (originalIterator), brightnessAdjustment (0) {
+		}
+
+		void setBrightnessAdjustment (int brightnessAdjustment) {
+			this-&gt;brightnessAdjustment = brightnessAdjustment;
+		}
+
+		int getBrightnessAdjustment () const {
+			return this-&gt;brightnessAdjustment;
+		}
+
+		void nextScanLine () {
+			originalIterator-&gt;nextScanLine ();
+		}
+
+		bool isEndOfImage () const {
+			return originalIterator-&gt;isEndOfImage ();
+		}
+
+		void nextPixel () {
+			originalIterator-&gt;nextPixel ();
+		}
+
+		bool isEndOfScanLine () const {
+			return originalIterator-&gt;isEndOfScanLine ();
+		}
+
+		Color getColor () const {
+			Color const oldColor = originalIterator-&gt;getColor ();
+			int red = oldColor.getRed () + brightnessAdjustment;
+			if (red &gt; 255) {
+				red = 255;
+			} else if (red &lt; 0) {
+				red = 0;
+			}
+
+			int green = oldColor.getGreen () + brightnessAdjustment;
+			if (green &gt; 255) {
+				green = 255;
+			} else if (green &lt; 0) {
+				red = 0;
+			}
+			int blue = oldColor.getBlue () + brightnessAdjustment;
+			if (blue &gt; 255) {
+				blue = 255;
+			} else if (blue &lt; 0) {
+				blue = 0;
+			}
+
+			return Color (red, green, blue);
+		}
+
+	private:
+		int brightnessAdjustment;
+		HBitmapIterator originalIterator;
+};</code></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Of course, there's an error in the code in example 4.3. Since the adjustment of the red, green, and blue components is complicated and redundant—resulting in a high likelihood of error—the <code>else if (green &lt; 0)</code> statement incorrectly adjusts red. This is just the sort of error that would be likely to happen, and just the reason to prefer idiomatic code. If we replace the <code> if</code> statements (which you probably copied and pasted) with an <code>adjustColorComponent </code>method, we'd gain a bit more isolation and readability of code, as in example 4.4 below.</p>
+<table style="width: 480px;" border="0">
+<tbody>
+<tr>
+<th>Code Example 4.4</th>
+</tr>
+<tr>
+<td>
+<pre><code>class BrightnessDecorator : public IBitmapIterator {
+	public:
+		// ...
+
+		Color getColor () const {
+			Color adjustedColor = bitmapIterator-&gt;getColor ();
+			adjustedColor.setRedLevel (
+				adjustColorcomponent (adjustedColor.getRed ());
+			adjustedColor.setGreenLevel (
+				adjustColorcomponent (adjustedColor.getGreen ());
+			adjustedColor.setBlueLevel (
+				adjustColorcomponent (adjustedColor.getBlue ());
+
+			return adjustedColor;
+		}		
+
+	private:
+		static int adjustColorComponent (int colorComponent) {
+			int adjustedColorComponent = colorComponent +
+				brightnessAdjustment;
+			if (adjustedColorComponent &gt; 255) {
+				adjustedColorComponent = 255;
+			} else if (adjustedColorComponent &lt; 0) {
+				adjustedColorComponent = 0;
+			}
+		}		
+};</code></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Of course, this same sort of operation is bound to come up again. It's not that uncommon to need to increment or decrement a value while keeping it restricted by a specified range. This is just the sort of thing generic algorithms specialize in. If we create a generic rangedAdd algorithm, we can make sure we only ever have to write this code once. Since specifying many parameters in the function call can be awkward and complicated, we can pass the range in as template parameters.</p>
+<table style="width: 480px;" border="0">
+<tbody>
+<tr>
+<th>Code Example 4.5</th>
+</tr>
+<tr>
+<td>
+<pre><code>template &lt;class Number, Number lowerLimit, Number upperLimit&gt;
+Number rangedAdd (Number firstNumber, Number secondNumber) {
+	Number result = firstNumber + secondNumber;
+	if (result &gt; upperLimit) {
+		result = upperLimit;
+	} else if (result &lt; lowerLimit) {
+		result = lowerLimit;
+	}
+
+	return result;
+}
+
+class BrightnessDecorator : public IBitmapIterator {
+	public:
+		// ...
+
+	private:
+		static int adjustColorComponent (int colorComponent) {
+			return rangedAdd&lt;int, 0, 255&gt; (colorComponent +
+				brightnessAdjustment);
+		}
+};</code></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Of course, there's more than one solution. Another, safer method would be to create a <code>ranged_number</code> template class that allowed us to work with a ranged number exactly as we worked with normal numbers, but with automatic range enforcement. If we did this, we'd have the choice of specifying the range in the template parameters or as constructor parameters. The former way is preferable because it allows us to think of the range as part of the type itself, not on a per-object basis. This also allows us to be more idiomatic and<code> typedef</code> a properly named class from the parameterized template, as in example 4.6, below.</p>
+<table style="width: 480px;" border="0">
+<tbody>
+<tr>
+<th>Code Example 4.6</th>
+</tr>
+<tr>
+<td>
+<pre><code>template &lt;class Number, Number lowerLimit, Number upperLimit&gt;
+class ranged_number {
+	public:
+		// operators and methods to make the class behave
+		// just like an actual number, with the addition of
+		// restricting the range.
+
+	private:
+		Number number;
+};
+
+class BrightnessDecorator {
+	public:
+		// ...
+
+		Color getColor () const {
+			Color const oldColor = BitmapIterator-&gt;getColor ();
+
+			ColorComponent const red = oldColor.getRedLevel () +
+				brightnessAdjustment;
+			
+			ColorComponent const green = oldColor.getGreenLevel () +
+				brightnessAdjustment;
+
+			ColorComponent const blue = oldColor.getBlueLevel () +
+				brightnessAdjustment;
+
+			return Color (red, green, blue);			
+		}
+
+	private:
+		typedef ranged_number &lt;int, 0, 255&gt; ColorComponent;
+		
+		// ...
+};</code></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<p>These examples should clearly show the path of improvement towards terse, expressive, and safe code. The path can always end simply by making all subtle concepts first-class, but this isn't always possible in the language and time constraints. It also can be unrealistic if you can't get the entire world to switch over to your ranged number class or even smaller classes, like a <code>ColorComponent</code> class. If a class is not used ubiquitously, but only on your side of the equation, you have to constantly translate between two different views of the system. This can be worthwhile in some cases, but simply a burden in others. It all depends on how much gain you get. If you use the ranged number class to implement the red, green, and blue attributes of the <code>Color</code> class, it might not be appropriate to make clients aware of this fact—especially if you anticipate changing the <code>ranged_number</code> class to make it better fit your needs over time. If you use it merely in the implementation but accept an integer, you still allow ranged numbers to be passed in, as they will automatically be converted to plain integers.</p>
+<p>Of course, this will never be as clean and simple as if you could require all clients to use your <code>typedef</code> of ranged numbers directly; but, as we said, you can't always expect your fine-grained first-class concepts. Few clients would want to buy into a framework that made them commit to using your ranged number class in any and all cases of ranged numbers. They might even have their own solution for such problems, or when they combine your framework with several others in creating a product, they'd have a mess of confusion. Making sure you don't always expose your reinventions or perfections of the wheel to the outside helps your framework be conceptually compatible with the rest of the frameworks out there. This doesn't mean you should always take a lowest-common denominator approach, but it does caution you to exercise a bit of pragmatism in what you require from your client.</p>
+<p>One final note on the ranged number class: You might think we could just have created an unsigned character. This approach would not have guaranteed our range at all; certain automatic conversion rules might actually translate negative numbers to positive numbers. Storustrup explicitly cautions against using unsigned numbers as a means of restricting ranges, as follows:</p>
+<blockquote>The unsigned integer types are ideas for uses that treat storage as a bit array. Using an unsigned instead of an<code> int </code>to gain one more bit to represent positive integers is almost never a good idea. Attempts to ensure that some values are positive by declaring variables unsigned will typically be defeated by implicit conversion rules.<br>—<cite>The C++ Programming Language</cite>, 3rd edition, page 73</blockquote>
+<p>In assignment 4, you will finish the<code> random_number </code>class and create several <code>IBitmapIterator</code> decorators to achieve brightening and inverting effects. You will then be able to decorate an iterator from the bitmap class (which we will discuss in the next section) before giving it to an encoder.</p>
+<h2>Creating the Bitmap Class</h2>
+<p>We still needn't spend too much time on the Bitmap class, especially since we haven't yet fitted it to a domain. Right now our essential concerns revolve around our CODEC system, and our Bitmap itself is not a true graphic so much as a collection. We won't be able to reuse our old Bitmap class completely, but that's okay because the actual loading is now done in the decoder—leaving our new Bitmap class simpler (in terms of implementation). For clarity, we'll want to remove the support for our standard library style bidirectional iterators from the interface. This shouldn't be a problem since our clients only need read-only access currently.</p>
+<p>The only decision we need to make is how to implement copying from the iterator to our scan line collection. Other than that, the BitmapIterator of which we'll have to provide an implementation should pose few problems. In the last lesson, you used the copy standard algorithm to perform this kind of task. But, in our system we have an iterator that works based on polymorphism; for this reason, and due to naming improvements, it does not use the increment, decrement, dereference, and assignment operators. This alone is not what prevents us from using it, though. Additionally, our iterator has a different design philosophy. There is no "end" iterator. Instead, ending is checked for by the <code>isEndOfScanLine</code> and <code>isEndOfImage</code> methods. Trying to incorporate an "end" iterator instead would have been complex—not only for the implementation but for the client.</p>
+<p>It would be possible to create adapters for our iterator to make it work with standard algorithms if we had strong cases for using many standard algorithms, but the essence of our read-only bitmap iterator limits what algorithms we can use on it. Obviously we can't transform, and primarily we'd only be copying. So, if we still want to maintain idiomatic code we can simply name our isolated method that copies appropriately.</p>
+<p>The bitmap class will remain simple until we fix it in a domain. In Lesson Five, we will use it for rendering vector graphics scenes, which will only stress the encoding side of things. In Lesson Six, though, we will introduce basic bitmap graphics support into our vector graphics framework, which will stress this class and make the case for a new BitmapGraphic class.</p>
+  
+</div>
+<div style=""><div class="module-sequence-padding"></div>
+<div class="module-sequence-footer" role="navigation" aria-label="Module Navigation">
+  <div class="module-sequence-footer-content">
+    
+      <a href="https://canvas.uw.edu/courses/1205169/modules/items/8253623" role="button" class="Button module-sequence-footer-button--previous" data-tooltip="right" data-html-tooltip-title="&lt;i class=&#39;icon-document&#39;&gt;&lt;/i&gt; Lesson Four Materials" aria-describedby="msf0-previous-desc">
+        <i class="icon-mini-arrow-left"></i>Previous
+        <span id="msf0-previous-desc" class="hidden" hidden="">Previous: Lesson Four Materials</span>
+      </a>
+    
+
+    
+      <span class="module-sequence-footer-button--next" data-tooltip="left" data-html-tooltip-title="&lt;i class=&#39;icon-discussion&#39;&gt;&lt;/i&gt; Discussion of Lesson 4 and Assignment 4">
+        <a href="https://canvas.uw.edu/courses/1205169/modules/items/8253625" role="button" class="Button" aria-describedby="msf0-next-desc">
+          Next<i class="icon-mini-arrow-right"></i>
+          <span id="msf0-next-desc" class="hidden" hidden="">Next: Discussion of Lesson 4 and Assignment 4</span>
+        </a>
+      </span>
+    
+  </div>
+</div>
+</div></div>
+
+          </div>
+        </div>
+        <div id="right-side-wrapper" class="ic-app-main-content__secondary">
+          <aside id="right-side" role="complementary">
+            
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <div style="display:none;"><!-- Everything inside of this should always stay hidden -->
+        <div id="page_view_id">e5257c0d-01b4-491d-8958-d1c09fd2ecb7</div>
+    </div>
+  <div id="aria_alerts" class="hide-text affix" role="alert" aria-live="assertive"></div>
+  <div id="StudentTray__Container"></div>
+  
+
+<script>
+  INST = {"environment":"production","allowMediaComments":true,"kalturaSettings":{"domain":"nv.instructuremedia.com","resource_domain":"nv.instructuremedia.com","rtmp_domain":"fms-prod.instructuremedia.com","partner_id":"9","subpartner_id":"0","player_ui_conf":"0","kcw_ui_conf":"0","upload_ui_conf":"0","max_file_size_bytes":534773760,"do_analytics":false,"hide_rte_button":false,"js_uploader":true},"googleAnalyticsAccount":"UA-9138420-1","logPageViews":true,"maxVisibleEditorButtons":3,"editorButtons":[{"name":"","id":21130,"url":"https://uw.hosted.panopto.com/Panopto/Pages/Sessions/embeddedupload.aspx","icon_url":"https://uw.hosted.panopto.com/Panopto/images/panopto_logo_globe.png","canvas_icon_class":null,"width":900,"height":700},{"name":"Modalis","id":52765,"url":"https://uw.modalis.io/lti","icon_url":"https://uw.modalis.io/assets/richicon.png","canvas_icon_class":null,"width":800,"height":600}]};
+  ENV = {"ASSET_HOST":"https://du11hjcvx0uqb.cloudfront.net","active_brand_config_json_url":"https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/171115bc27094614cfdd1485c405a438/variables-750d72b9d3e5d522f965bf904110c132.json","url_to_what_gets_loaded_inside_the_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/171115bc27094614cfdd1485c405a438/variables-750d72b9d3e5d522f965bf904110c132.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_normal_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-53dac18d10.css"],"url_for_high_contrast_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/default/variables-high_contrast-750d72b9d3e5d522f965bf904110c132.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_high_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-b4d65fe883.css"],"current_user_id":"3757111","current_user_roles":["user","student"],"current_user_disabled_inbox":false,"files_domain":"cluster10-files.instructure.com","DOMAIN_ROOT_ACCOUNT_ID":100000000083919,"k12":false,"use_responsive_layout":false,"help_link_name":"Help","help_link_icon":"help","use_high_contrast":false,"LTI_LAUNCH_FRAME_ALLOWANCES":["geolocation *","microphone *","camera *","midi *","encrypted-media *"],"SETTINGS":{"open_registration":false,"eportfolios_enabled":true,"collapse_global_nav":true,"show_feedback_link":true,"enable_profiles":true},"current_user":{"id":"3757111","display_name":"Clayton Wong","avatar_image_url":"https://canvas.uw.edu/images/thumbnails/46487823/mSs2TjTESYscSzrackhgoJvAT79xbNchamHPrSec","html_url":"https://canvas.uw.edu/about/3757111"},"page_view_update_url":"/page_views/e5257c0d-01b4-491d-8958-d1c09fd2ecb7?page_view_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpIjoiZTUyNTdjMGQtMDFiNC00OTFkLTg5NTgtZDFjMDlmZDJlY2I3IiwidSI6MTAwMDAwMDAzNzU3MTExLCJjIjoiMjAxOC0wOC0xM1QyMjo0NTozMy4xN1oifQ.wWt07aovwWSXgBfEN_f5WkUYDeV5wARMQznAhCSJj8c","context_asset_string":"course_1205169","ping_url":"https://canvas.uw.edu/api/v1/courses/1205169/ping","TIMEZONE":"America/Los_Angeles","CONTEXT_TIMEZONE":"America/Los_Angeles","LOCALE":"en","BIGEASY_LOCALE":"en_US","FULLCALENDAR_LOCALE":"en","MOMENT_LOCALE":"en","WIKI_RIGHTS":{"read":true},"PAGE_RIGHTS":{"read":true},"DEFAULT_EDITING_ROLES":"teachers","WIKI_PAGES_PATH":"/courses/1205169/pages","WIKI_PAGE":{"title":"Lesson Four: Supporting Encoders and Decoders","created_at":"2018-03-16T21:50:45Z","url":"lesson-four-supporting-encoders-and-decoders","editing_roles":"teachers","page_id":"2704783","published":true,"hide_from_students":false,"front_page":false,"html_url":"https://canvas.uw.edu/courses/1205169/pages/lesson-four-supporting-encoders-and-decoders","todo_date":null,"updated_at":"2018-03-16T21:50:45Z","locked_for_user":false,"body":"\u003cdiv class=\"actionBox\"\u003e\r\n\u003ch6\u003eRequired Reading\u003c/h6\u003e\r\n\u003cul\u003e\r\n\u003cli\u003e\n\u003ccite\u003eDesign Patterns: Element of Reusable Object-Oriented Software\u003c/cite\u003e: The Decorator (175), Prototype (117) and Iterator (257) Patterns.\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eThe assignment that concludes this lesson will have mostly the same inputs and outputs as assignment 3. What varies is that we'll now be using a much more sophisticated means of decoding and encoding bitmap graphics. At the end of this lesson, our bitmap handling will support the following.\u003c/p\u003e\r\n\u003cul\u003e\r\n\u003cli\u003eClient defined file format support for both decoding (reading) and coding or encoding (writing).\u003c/li\u003e\r\n\u003cli\u003eFile extension independent decoder determination for maximum flexibility and resilience.\u003c/li\u003e\r\n\u003cli\u003eObject-oriented iterators for implementation independence and run-time decoration.\u003c/li\u003e\r\n\u003cli\u003eSupport for deferred loading and decoding. This allows us to load and decode bitmaps on their first use, which can be convenient for remote images and slow formats that are slow to decompress.\u003c/li\u003e\r\n\u003cli\u003eFlexible, iterator-based encoding and decoding.\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003cp\u003eIn designing and implementing our more robust bitmap support, we will find limited reuse from the last lesson. This is because our design this time will be far more thorough and more object-oriented overall. For the most part, our last design followed the basic paradigm of development that the C++ standard library uses. This paradigm tends to push most things into compile time and to work primarily with simple, concrete classes. This works as a primitive layer on which to build more sophisticated things in many cases, but it's rare that this sort of design mentality survives the requirements of realistic full-scale systems (which, for example, often need to support many file formats). The difference between these two paradigms will become apparent throughout this lesson.\u003c/p\u003e\r\n\u003cp\u003eAt the end of the lesson, you should reflect on the application built in Lesson Three that performs an almost identical task (for our test), and appreciate the many improvements we've made. Our new system is designed for the future. With not much more work, the new system could be a stable infrastructure for encoding and decoding a variety of bitmap image file formats (such as GIF, TIFF and JPG) for many years.\u003c/p\u003e\r\n\u003ch2\u003eLesson Objective\u003c/h2\u003e\r\n\u003cp\u003eBy the end of this lesson, you will be able to implement the CODEC support and the new Bitmap class.\u003c/p\u003e\r\n\u003ch2\u003eThe Design and Role of CODECs in Modern Systems\u003c/h2\u003e\r\n\u003cdiv class=\"keytermBox\"\u003e\r\n\u003ch6\u003eKey Term\u003c/h6\u003e\r\n\u003cul\u003e\r\n\u003cli\u003eCODEC\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eThe industry term \u003cspan class=\"keyterm\"\u003eCODEC\u003c/span\u003e comes from \"code/decode\" (similar to \u003cspan class=\"italics\"\u003eMODEM\u003c/span\u003e which comes from \"Modulator/Demodulator\"). Both are extremely generic terms. A CODEC facilitates the conversion of information to and from a different format. You may have seen CODECs mentioned when working with audio, video, file compression, or any of a wide variety of applications.\u003c/p\u003e\r\n\u003cp\u003eMost modern systems allow CODECs to be dynamically added. New CODECs can be dropped into many multimedia applications, such as Windows Media Player, without having to get a new version of the application, and often without even having to restart the application. The applications (and in some cases the OS) maintain a registry of CODECs that is used to look up the appropriate CODEC for incoming information. This has certainly simplified the variety of formats that are out there. In the earlier days of computing, file formats were more deeply rooted in applications. Now some applications and operating systems even support automatic location and installation of new CODECs via the Web when an unknown file is opened.\u003c/p\u003e\r\n\u003cp\u003eOne of the important properties of the design of most systems that work with CODECs is that they are not dependent on the concept of a file or file extension. Most systems (including the Windows OS) look up the appropriate CODEC based on the raw incoming information. This is why the newer versions of Microsoft Windows can load a Windows Bitmap Format image, even if it is renamed to have a JPG extension. Instead of determining the CODEC to use by extension, it determines based on header information.\u003c/p\u003e\r\n\u003cp\u003eWe won't delve too deeply into the existing technologies, but will write our own, based on the overall idea and intention of drop-in file format support. This is because this course is limited to the C++ Standard Library and can't reap the benefits of what's available in the industry.\u003c/p\u003e\r\n\u003ch2\u003eDefining the Decoder\u003c/h2\u003e\r\n\u003cp\u003eWe'll separate encoders and decoders for obvious reasons: they each will have dramatically different implementations. Their only arguable codependence is at the conceptual level and perhaps the sharing of a few constants. Having each reuse the WindowsBitmapHeader class will simplify things to the point where the only remaining constant would be the double word alignment value—which you can make efforts to share by creating a constant in a shared namespace or simply redefine as a frozen class attribute (since this would be less exposed, it might be a better idea).\u003c/p\u003e\r\n\u003cdiv class=\"infoBox\"\u003e\r\n\u003cp\u003eIn reality, we'd probably end up creating a more object-oriented (and interface based) stream to support true independence of location. Clients are sure to be able to implement any possible stream and would not be bound to iostream's implementation choices if we took an interface-based approach.\u003c/p\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eFor the decoder's genericity, it will need to work with streams instead of files, of course. Certainly, we'd like to be able to support a future that includes HTTP stream of a bitmap located on a server. We'll also need our decoders to report whether or not they will be able to support a given format. To do this, we can pass in the first chunk of the incoming information to the decoder. For our bitmap decoder, it needs only to read the first two bytes of this chunk to determine whether it can support the format. Our decoder needs a way to get the converted information to the client. An iterator should do just the trick, allowing the client to iterate through the converted information—though this doesn't imply that we'll have to convert the information before the iteration starts. We can actually defer the decoding until the iteration, and only decode pixel by pixel as the client iterates across scan lines. When a client requests to increment to the next scan line, we simply read any double word alignment bytes; when a client requests to increment to the next pixel, we simply read in the next RGB color value.\u003c/p\u003e\r\n\u003cp\u003eOne other issue that both decoders and encoders will have to address is reporting which MIME type they support. A MIME type is a string, such as \"text/html,\" that is a standardized way of referring to a particular format. Windows Bitmaps use \"image/x-ms-bmp\" as their mime type, so our WindowsBitmapDecoder implementation (clearly the decoder will be an interface) will have to report that as its MIME type.\u003c/p\u003e\r\n\u003cp\u003eOne of the more complicated aspects of implementing our decoders will be the ability for a decoder to report whether or not it supports a chunk of information. We can create a documented standard that all bitmaps will be given a 100-byte chunk of the incoming information (or the total file size if it is less than 100 bytes) to determine whether or not they can support it. This is actually a common approach. Most, if not all, file formats are recognizable within the first 100 bytes.\u003c/p\u003e\r\n\u003cp\u003eUnfortunately, the decoder cannot be passed a stream for support determination because streams lose information as you read it, so the next decoder in the list would get a partially-eaten stream. Instead, we'll have to give the first chunk to the stream as a string. Once a decoder reports that it supports the information in the string, the entire stream can be handed to it.\u003c/p\u003e\r\n\u003ch2\u003eDefining the Encoder\u003c/h2\u003e\r\n\u003cp\u003eThe encoder is for the most part identical to the decoder—just inversed. The only major difference is a simplification: it needn't be able to determine support for incoming information, because there is no incoming information, only outgoing. For the actual writing out to a stream, the encoder will need an iterator. This is precisely the inverse of the decoder. It also implies that—rather than a \u003ccode\u003ecreateIterator\u003c/code\u003e method—the encoder would have an \u003ccode\u003eencodeToStream\u003c/code\u003e method. Where the decoder is created with a stream and produces an iterator, the encoder is created with an iterator and produces (or rather, encodes to) a stream.\u003c/p\u003e\r\n\u003ch2\u003eCreating the CODEC Library\u003c/h2\u003e\r\n\u003cp\u003eUp till this point we have ignored how, exactly, the decoders and encoders are created. Based on the conversation, the decoders and encoders are tightly bound to a stream and a single bitmap to decode. So it is clear that upon creation, the decoder will need a reference to a stream. But how exactly does this creation occur?\u003c/p\u003e\r\n\u003cp\u003e(Recall from the \u003cspan class=\"italics\"\u003eC++\u003c/span\u003e: \u003cspan class=\"italics\"\u003eIntermediate \u003c/span\u003ecourse that in factory-like situations we can use the prototype pattern when we need to allow clients to dynamically define and parameterize implementations or subtypes to create in factory-like situations.) In \u003cspan class=\"italics\"\u003eC++\u003c/span\u003e: \u003cspan class=\"italics\"\u003eIntermediate\u003c/span\u003e, we used a registry of prototypes that could be searched based on the tag they claimed to support. With our CODECs, we have a similar situation.\u003c/p\u003e\r\n\u003cp\u003eIf we use the prototype pattern, we'll end up with a CodecLibrary class that allows us at least to look up the appropriate encoder and decoder for a MIME type. Of course, we generally don't want to look up decoders by MIME type, but instead, by their support determination method. Also, both decoders and encoders are tightly coupled to their incoming data; the decoder should be created along with a stream when it is found, and the encoder should be created along with an iterator when it is found. All of this information leads to the class definition shown in example 4.1.\u003c/p\u003e\r\n\u003ctable style=\"width: 480px;\" border=\"0\"\u003e\r\n\u003ctbody\u003e\r\n\u003ctr\u003e\r\n\u003cth\u003eCode Example 4.1\u003c/th\u003e\r\n\u003c/tr\u003e\r\n\u003ctr\u003e\r\n\u003ctd\u003e\r\n\u003cpre\u003e\u003ccode\u003eclass CodecLibrary {\r\n\tpublic:\r\n\t\tvoid registerEncoder (HBitmapEncoder const\u0026amp; decoder);\r\n\t\tvoid registerDecoder (HBitmapDecoder const\u0026amp; decoder);\r\n\t\r\n\t\t// provide a mime type version and an\r\n\t\t// auto determination version of createDecoder\r\n\t\tHBitmapDecoder createDecoder (std::istream\u0026amp; sourceStream);\r\n\t\tHBitmapDecoder createDecoder (std::string const\u0026amp; mimeType,\r\n\t\t\tstd::istream\u0026amp; sourceStream);\r\n\r\n\t\tHBitmapEncoder createEncoder (std::string const\u0026amp; mimeType,\r\n\t\t\tHBitmapIterator const\u0026amp; bitmapIterator);\r\n};\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/td\u003e\r\n\u003c/tr\u003e\r\n\u003c/tbody\u003e\r\n\u003c/table\u003e\r\n\u003cp\u003eNote that \u003ccode\u003ecreate\u003c/code\u003e was used rather than \u003ccode\u003efind\u003c/code\u003e or \u003ccode\u003eget\u003c/code\u003e because it emphasizes that the object being returned will be new each time, and that the parameters you're passing in are parameters to its creation.\u003c/p\u003e\r\n\u003cp\u003eThe repercussions of the decoders creation means that the CODEC Library can be responsible for getting the first chunk from the file. This shouldn't be complicated, but the fact that the first chunk will be removed from the stream will make the clone method need to take the form of \u003ccode\u003eclone (std::string const\u0026amp; firstChunk, std::istream\u0026amp; sourceStream)\u003c/code\u003e. It will also make implementing the decoder a bit tricky, as it will need to work initially from a string, then secondly from a stream. Of course, for our WindowsBitmapDecoder, the entire header can be read before this distinction need be made, since its size is only 54 bytes. After that, it can provide a \u003ccode\u003egetNextByte\u003c/code\u003e method to abstract itself from when and how the switching between the string and the stream occurs. Note that stringstreams would have to be used to achieve all this cleanly, particularly since the WindowsBitmapHeader you are creating will require a stream, not a string.\u003c/p\u003e\r\n\u003ch2\u003eCreating the Bitmap Iterator\u003c/h2\u003e\r\n\u003cp\u003eWe still have yet to rigorously define our bitmap iterator. We know that it should be scan-line based, and we know that we'd ideally like it in one class, not a separate pixel and scan-line iterator (since the scan-line iterator is fairly useless outside of a means to get to new pixel iterators). Making a single iterator will require more distinction in the method names. We'll also have to create an interface for this iterator, since different encoders will provide different implementations.\u003c/p\u003e\r\n\u003ctable style=\"width: 480px;\"\u003e\r\n\u003ctbody\u003e\r\n\u003ctr\u003e\r\n\u003cth\u003eCode Example 4.2\u003c/th\u003e\r\n\u003c/tr\u003e\r\n\u003ctr\u003e\r\n\u003ctd\u003e\r\n\u003cpre\u003e\u003ccode\u003eclass IBitmapIterator {\r\n   public:\r\n\t\tvirtual void nextScanLine () = 0;\r\n\t\tvirtual bool isEndOfImage () const = 0;\r\n\t\tvirtual void nextPixel () = 0;\r\n\t\tvirtual bool isEndOfScanLine () const = 0;\r\n\r\n\t\tvirtual Color getColor () const = 0;\r\n\r\n\t\tvirtual int getBitmapWidth () const = 0;\r\n\t\tvirtual int getBitmapHeight () const = 0;\r\n};\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/td\u003e\r\n\u003c/tr\u003e\r\n\u003c/tbody\u003e\r\n\u003c/table\u003e\r\n\u003cp\u003eAs you can see, we've effectively removed the need for an \"end\" iterator. Although it would be possible to provide an end iterator, it would have to be a different implementation of the interface, and employ some trickery. The semantics would also be especially confusing because of the need to differentiate between the end of the scan line and the end of the image as a whole. The iterator we've provided is much closer to those in the examples in \u003ccite\u003eDesign Patterns: Elements of Reusable-Object Oriented Software\u003c/cite\u003e and, not coincidentally, those provided in the Java standard libraries. The idea of an \"end\" iterator is not common or suggested with most object-oriented systems. The \"end\" iterator comes from thinking of iterators more like pointers (as covered in the last lesson) or being overly oriented towards objects that behave like primitive types.\u003c/p\u003e\r\n\u003cp\u003eIt may not be apparent to you why the bitmaps width and height are reported by the iterator. First, the information is a constant throughout the life of an iterator. If it changed from scan line to scan line, it would not be a valid bitmap. Second, reporting the width and height in the iterator allows us to potentially create a stretching decorator for the iterator, as will be apparent in the next section. The width and height will also be required by most things that work with the color information. For example, our encoder would require the width and height to be passed to it along with the iterator upon creation otherwise.\u003c/p\u003e\r\n\u003cp\u003eIt will be your job in assignment 4 to provide the various necessary implementations of iterators. These will, of course, be internal iterators—though no client will be aware of anything beyond the basic IBitmapIterator interface.\u003c/p\u003e\r\n\u003ch2\u003eCreating Bitmap Iterator Decorators\u003c/h2\u003e\r\n\u003cp\u003eIt is possible to apply effects on the fly by decorating an iterator. For example, we can create a brightness-effect decorator, or an invert-color decorator. As you learned in the past with the decorator pattern, it is possible to repeat decorations and arbitrarily layer them—all the while still making the original decorated object still seem the same.\u003c/p\u003e\r\n\u003cp\u003eAs an example, consider a brightness decorator. For brightness, all we need to do is increase or decrease each color component (red, green, and blue) an equal amount. When a color component reaches a threshold point (0 or 255), we can no longer increment it, and the color as a whole will become closer to black-and-white (which occurs when the red, green, and blue all have the same value). Our brightness decorator can be defined as shown in example 4.3.\u003c/p\u003e\r\n\u003ctable style=\"width: 480px;\" border=\"0\"\u003e\r\n\u003ctbody\u003e\r\n\u003ctr\u003e\r\n\u003cth\u003eCode Example 4.3\u003c/th\u003e\r\n\u003c/tr\u003e\r\n\u003ctr\u003e\r\n\u003ctd\u003e\r\n\u003cpre\u003e\u003ccode\u003eclass BrightnessDecorator : public IBitmapIterator {\r\n\tpublic:\r\n\t\tBrightnessDecorator (HBitmapIterator const\u0026amp; originalIterator)\r\n\t\t\t: originalIterator (originalIterator), brightnessAdjustment (0) {\r\n\t\t}\r\n\r\n\t\tvoid setBrightnessAdjustment (int brightnessAdjustment) {\r\n\t\t\tthis-\u0026gt;brightnessAdjustment = brightnessAdjustment;\r\n\t\t}\r\n\r\n\t\tint getBrightnessAdjustment () const {\r\n\t\t\treturn this-\u0026gt;brightnessAdjustment;\r\n\t\t}\r\n\r\n\t\tvoid nextScanLine () {\r\n\t\t\toriginalIterator-\u0026gt;nextScanLine ();\r\n\t\t}\r\n\r\n\t\tbool isEndOfImage () const {\r\n\t\t\treturn originalIterator-\u0026gt;isEndOfImage ();\r\n\t\t}\r\n\r\n\t\tvoid nextPixel () {\r\n\t\t\toriginalIterator-\u0026gt;nextPixel ();\r\n\t\t}\r\n\r\n\t\tbool isEndOfScanLine () const {\r\n\t\t\treturn originalIterator-\u0026gt;isEndOfScanLine ();\r\n\t\t}\r\n\r\n\t\tColor getColor () const {\r\n\t\t\tColor const oldColor = originalIterator-\u0026gt;getColor ();\r\n\t\t\tint red = oldColor.getRed () + brightnessAdjustment;\r\n\t\t\tif (red \u0026gt; 255) {\r\n\t\t\t\tred = 255;\r\n\t\t\t} else if (red \u0026lt; 0) {\r\n\t\t\t\tred = 0;\r\n\t\t\t}\r\n\r\n\t\t\tint green = oldColor.getGreen () + brightnessAdjustment;\r\n\t\t\tif (green \u0026gt; 255) {\r\n\t\t\t\tgreen = 255;\r\n\t\t\t} else if (green \u0026lt; 0) {\r\n\t\t\t\tred = 0;\r\n\t\t\t}\r\n\t\t\tint blue = oldColor.getBlue () + brightnessAdjustment;\r\n\t\t\tif (blue \u0026gt; 255) {\r\n\t\t\t\tblue = 255;\r\n\t\t\t} else if (blue \u0026lt; 0) {\r\n\t\t\t\tblue = 0;\r\n\t\t\t}\r\n\r\n\t\t\treturn Color (red, green, blue);\r\n\t\t}\r\n\r\n\tprivate:\r\n\t\tint brightnessAdjustment;\r\n\t\tHBitmapIterator originalIterator;\r\n};\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/td\u003e\r\n\u003c/tr\u003e\r\n\u003c/tbody\u003e\r\n\u003c/table\u003e\r\n\u003cp\u003eOf course, there's an error in the code in example 4.3. Since the adjustment of the red, green, and blue components is complicated and redundant—resulting in a high likelihood of error—the \u003ccode\u003eelse if (green \u0026lt; 0)\u003c/code\u003e statement incorrectly adjusts red. This is just the sort of error that would be likely to happen, and just the reason to prefer idiomatic code. If we replace the \u003ccode\u003e if\u003c/code\u003e statements (which you probably copied and pasted) with an \u003ccode\u003eadjustColorComponent \u003c/code\u003emethod, we'd gain a bit more isolation and readability of code, as in example 4.4 below.\u003c/p\u003e\r\n\u003ctable style=\"width: 480px;\" border=\"0\"\u003e\r\n\u003ctbody\u003e\r\n\u003ctr\u003e\r\n\u003cth\u003eCode Example 4.4\u003c/th\u003e\r\n\u003c/tr\u003e\r\n\u003ctr\u003e\r\n\u003ctd\u003e\r\n\u003cpre\u003e\u003ccode\u003eclass BrightnessDecorator : public IBitmapIterator {\r\n\tpublic:\r\n\t\t// ...\r\n\r\n\t\tColor getColor () const {\r\n\t\t\tColor adjustedColor = bitmapIterator-\u0026gt;getColor ();\r\n\t\t\tadjustedColor.setRedLevel (\r\n\t\t\t\tadjustColorcomponent (adjustedColor.getRed ());\r\n\t\t\tadjustedColor.setGreenLevel (\r\n\t\t\t\tadjustColorcomponent (adjustedColor.getGreen ());\r\n\t\t\tadjustedColor.setBlueLevel (\r\n\t\t\t\tadjustColorcomponent (adjustedColor.getBlue ());\r\n\r\n\t\t\treturn adjustedColor;\r\n\t\t}\t\t\r\n\r\n\tprivate:\r\n\t\tstatic int adjustColorComponent (int colorComponent) {\r\n\t\t\tint adjustedColorComponent = colorComponent +\r\n\t\t\t\tbrightnessAdjustment;\r\n\t\t\tif (adjustedColorComponent \u0026gt; 255) {\r\n\t\t\t\tadjustedColorComponent = 255;\r\n\t\t\t} else if (adjustedColorComponent \u0026lt; 0) {\r\n\t\t\t\tadjustedColorComponent = 0;\r\n\t\t\t}\r\n\t\t}\t\t\r\n};\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/td\u003e\r\n\u003c/tr\u003e\r\n\u003c/tbody\u003e\r\n\u003c/table\u003e\r\n\u003cp\u003eOf course, this same sort of operation is bound to come up again. It's not that uncommon to need to increment or decrement a value while keeping it restricted by a specified range. This is just the sort of thing generic algorithms specialize in. If we create a generic rangedAdd algorithm, we can make sure we only ever have to write this code once. Since specifying many parameters in the function call can be awkward and complicated, we can pass the range in as template parameters.\u003c/p\u003e\r\n\u003ctable style=\"width: 480px;\" border=\"0\"\u003e\r\n\u003ctbody\u003e\r\n\u003ctr\u003e\r\n\u003cth\u003eCode Example 4.5\u003c/th\u003e\r\n\u003c/tr\u003e\r\n\u003ctr\u003e\r\n\u003ctd\u003e\r\n\u003cpre\u003e\u003ccode\u003etemplate \u0026lt;class Number, Number lowerLimit, Number upperLimit\u0026gt;\r\nNumber rangedAdd (Number firstNumber, Number secondNumber) {\r\n\tNumber result = firstNumber + secondNumber;\r\n\tif (result \u0026gt; upperLimit) {\r\n\t\tresult = upperLimit;\r\n\t} else if (result \u0026lt; lowerLimit) {\r\n\t\tresult = lowerLimit;\r\n\t}\r\n\r\n\treturn result;\r\n}\r\n\r\nclass BrightnessDecorator : public IBitmapIterator {\r\n\tpublic:\r\n\t\t// ...\r\n\r\n\tprivate:\r\n\t\tstatic int adjustColorComponent (int colorComponent) {\r\n\t\t\treturn rangedAdd\u0026lt;int, 0, 255\u0026gt; (colorComponent +\r\n\t\t\t\tbrightnessAdjustment);\r\n\t\t}\r\n};\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/td\u003e\r\n\u003c/tr\u003e\r\n\u003c/tbody\u003e\r\n\u003c/table\u003e\r\n\u003cp\u003eOf course, there's more than one solution. Another, safer method would be to create a \u003ccode\u003eranged_number\u003c/code\u003e template class that allowed us to work with a ranged number exactly as we worked with normal numbers, but with automatic range enforcement. If we did this, we'd have the choice of specifying the range in the template parameters or as constructor parameters. The former way is preferable because it allows us to think of the range as part of the type itself, not on a per-object basis. This also allows us to be more idiomatic and\u003ccode\u003e typedef\u003c/code\u003e a properly named class from the parameterized template, as in example 4.6, below.\u003c/p\u003e\r\n\u003ctable style=\"width: 480px;\" border=\"0\"\u003e\r\n\u003ctbody\u003e\r\n\u003ctr\u003e\r\n\u003cth\u003eCode Example 4.6\u003c/th\u003e\r\n\u003c/tr\u003e\r\n\u003ctr\u003e\r\n\u003ctd\u003e\r\n\u003cpre\u003e\u003ccode\u003etemplate \u0026lt;class Number, Number lowerLimit, Number upperLimit\u0026gt;\r\nclass ranged_number {\r\n\tpublic:\r\n\t\t// operators and methods to make the class behave\r\n\t\t// just like an actual number, with the addition of\r\n\t\t// restricting the range.\r\n\r\n\tprivate:\r\n\t\tNumber number;\r\n};\r\n\r\nclass BrightnessDecorator {\r\n\tpublic:\r\n\t\t// ...\r\n\r\n\t\tColor getColor () const {\r\n\t\t\tColor const oldColor = BitmapIterator-\u0026gt;getColor ();\r\n\r\n\t\t\tColorComponent const red = oldColor.getRedLevel () +\r\n\t\t\t\tbrightnessAdjustment;\r\n\t\t\t\r\n\t\t\tColorComponent const green = oldColor.getGreenLevel () +\r\n\t\t\t\tbrightnessAdjustment;\r\n\r\n\t\t\tColorComponent const blue = oldColor.getBlueLevel () +\r\n\t\t\t\tbrightnessAdjustment;\r\n\r\n\t\t\treturn Color (red, green, blue);\t\t\t\r\n\t\t}\r\n\r\n\tprivate:\r\n\t\ttypedef ranged_number \u0026lt;int, 0, 255\u0026gt; ColorComponent;\r\n\t\t\r\n\t\t// ...\r\n};\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/td\u003e\r\n\u003c/tr\u003e\r\n\u003c/tbody\u003e\r\n\u003c/table\u003e\r\n\u003cp\u003eThese examples should clearly show the path of improvement towards terse, expressive, and safe code. The path can always end simply by making all subtle concepts first-class, but this isn't always possible in the language and time constraints. It also can be unrealistic if you can't get the entire world to switch over to your ranged number class or even smaller classes, like a \u003ccode\u003eColorComponent\u003c/code\u003e class. If a class is not used ubiquitously, but only on your side of the equation, you have to constantly translate between two different views of the system. This can be worthwhile in some cases, but simply a burden in others. It all depends on how much gain you get. If you use the ranged number class to implement the red, green, and blue attributes of the \u003ccode\u003eColor\u003c/code\u003e class, it might not be appropriate to make clients aware of this fact—especially if you anticipate changing the \u003ccode\u003eranged_number\u003c/code\u003e class to make it better fit your needs over time. If you use it merely in the implementation but accept an integer, you still allow ranged numbers to be passed in, as they will automatically be converted to plain integers.\u003c/p\u003e\r\n\u003cp\u003eOf course, this will never be as clean and simple as if you could require all clients to use your \u003ccode\u003etypedef\u003c/code\u003e of ranged numbers directly; but, as we said, you can't always expect your fine-grained first-class concepts. Few clients would want to buy into a framework that made them commit to using your ranged number class in any and all cases of ranged numbers. They might even have their own solution for such problems, or when they combine your framework with several others in creating a product, they'd have a mess of confusion. Making sure you don't always expose your reinventions or perfections of the wheel to the outside helps your framework be conceptually compatible with the rest of the frameworks out there. This doesn't mean you should always take a lowest-common denominator approach, but it does caution you to exercise a bit of pragmatism in what you require from your client.\u003c/p\u003e\r\n\u003cp\u003eOne final note on the ranged number class: You might think we could just have created an unsigned character. This approach would not have guaranteed our range at all; certain automatic conversion rules might actually translate negative numbers to positive numbers. Storustrup explicitly cautions against using unsigned numbers as a means of restricting ranges, as follows:\u003c/p\u003e\r\n\u003cblockquote\u003eThe unsigned integer types are ideas for uses that treat storage as a bit array. Using an unsigned instead of an\u003ccode\u003e int \u003c/code\u003eto gain one more bit to represent positive integers is almost never a good idea. Attempts to ensure that some values are positive by declaring variables unsigned will typically be defeated by implicit conversion rules.\u003cbr\u003e—\u003ccite\u003eThe C++ Programming Language\u003c/cite\u003e, 3rd edition, page 73\u003c/blockquote\u003e\r\n\u003cp\u003eIn assignment 4, you will finish the\u003ccode\u003e random_number \u003c/code\u003eclass and create several \u003ccode\u003eIBitmapIterator\u003c/code\u003e decorators to achieve brightening and inverting effects. You will then be able to decorate an iterator from the bitmap class (which we will discuss in the next section) before giving it to an encoder.\u003c/p\u003e\r\n\u003ch2\u003eCreating the Bitmap Class\u003c/h2\u003e\r\n\u003cp\u003eWe still needn't spend too much time on the Bitmap class, especially since we haven't yet fitted it to a domain. Right now our essential concerns revolve around our CODEC system, and our Bitmap itself is not a true graphic so much as a collection. We won't be able to reuse our old Bitmap class completely, but that's okay because the actual loading is now done in the decoder—leaving our new Bitmap class simpler (in terms of implementation). For clarity, we'll want to remove the support for our standard library style bidirectional iterators from the interface. This shouldn't be a problem since our clients only need read-only access currently.\u003c/p\u003e\r\n\u003cp\u003eThe only decision we need to make is how to implement copying from the iterator to our scan line collection. Other than that, the BitmapIterator of which we'll have to provide an implementation should pose few problems. In the last lesson, you used the copy standard algorithm to perform this kind of task. But, in our system we have an iterator that works based on polymorphism; for this reason, and due to naming improvements, it does not use the increment, decrement, dereference, and assignment operators. This alone is not what prevents us from using it, though. Additionally, our iterator has a different design philosophy. There is no \"end\" iterator. Instead, ending is checked for by the \u003ccode\u003eisEndOfScanLine\u003c/code\u003e and \u003ccode\u003eisEndOfImage\u003c/code\u003e methods. Trying to incorporate an \"end\" iterator instead would have been complex—not only for the implementation but for the client.\u003c/p\u003e\r\n\u003cp\u003eIt would be possible to create adapters for our iterator to make it work with standard algorithms if we had strong cases for using many standard algorithms, but the essence of our read-only bitmap iterator limits what algorithms we can use on it. Obviously we can't transform, and primarily we'd only be copying. So, if we still want to maintain idiomatic code we can simply name our isolated method that copies appropriately.\u003c/p\u003e\r\n\u003cp\u003eThe bitmap class will remain simple until we fix it in a domain. In Lesson Five, we will use it for rendering vector graphics scenes, which will only stress the encoding side of things. In Lesson Six, though, we will introduce basic bitmap graphics support into our vector graphics framework, which will stress this class and make the case for a new BitmapGraphic class.\u003c/p\u003e"},"WIKI_PAGE_REVISION":"1","WIKI_PAGE_SHOW_PATH":"/courses/1205169/pages/lesson-four-supporting-encoders-and-decoders","WIKI_PAGE_EDIT_PATH":"/courses/1205169/pages/lesson-four-supporting-encoders-and-decoders/edit","WIKI_PAGE_HISTORY_PATH":"/courses/1205169/pages/lesson-four-supporting-encoders-and-decoders/revisions","COURSE_ID":"1205169","MODULES_PATH":"/courses/1205169/modules","wiki_page_menu_tools":[],"DISPLAY_SHOW_ALL_LINK":false,"STUDENT_PLANNER_ENABLED":true,"badge_counts":{"submissions":0},"notices":[]};
+</script>
+
+<script src="./Supporting Encoders and Decoders_files/navigation_header.bundle-549b1681b9.js" defer="defer"></script>
+<script src="./Supporting Encoders and Decoders_files/default.js" defer="defer"></script>
+<script src="./Supporting Encoders and Decoders_files/custom.js" defer="defer"></script>
+
+</div> <!-- #application -->
+
+
+<div id="nav-tray-portal" style="position: relative; z-index: 99;"></div></body></html>

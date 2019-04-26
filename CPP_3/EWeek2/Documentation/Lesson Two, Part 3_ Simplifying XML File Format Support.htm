@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<!-- saved from url=(0120)https://canvas.uw.edu/courses/1205169/pages/lesson-two-part-3-simplifying-xml-file-format-support?module_item_id=8253613 -->
+<html class="" dir="ltr" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Lesson Two, Part 3: Simplifying XML File Format Support: CPROGRM 713 A Su 18: C++ Programming: Advanced</title>
+  <!--[if lte IE 9]> <meta http-equiv=refresh content="0; URL=/ie-9-is-not-supported.html" /> <![endif]-->
+  <link rel="preload" href="https://du11hjcvx0uqb.cloudfront.net/dist/fonts/lato/latin/LatoLatin-Regular-3cd3657802.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="shortcut icon" type="image/x-icon" href="https://instructure-uploads.s3.amazonaws.com/account_100000000083919/attachments/37312004/favicon.ico?AWSAccessKeyId=AKIAJFNFXH2V2O7RPCAA&amp;Expires=1939374366&amp;Signature=lNl7iuCda9spDgRONbwVvr490LM%3D&amp;response-cache-control=Cache-Control%3Amax-age%3D473364000.0%2C%20public&amp;response-expires=473364000.0">
+  <link rel="apple-touch-icon" href="https://instructure-uploads.s3.amazonaws.com/account_100000000083919/attachments/37312005/Canvas-MobileHome.png?AWSAccessKeyId=AKIAJFNFXH2V2O7RPCAA&amp;Expires=1939374366&amp;Signature=jwVDIJvM6uIaOoE%2FSW94uwVcHU0%3D&amp;response-cache-control=Cache-Control%3Amax-age%3D473364000.0%2C%20public&amp;response-expires=473364000.0">
+  
+  <link rel="stylesheet" media="all" href="./Lesson Two, Part 3_ Simplifying XML File Format Support_files/variables-750d72b9d3e5d522f965bf904110c132.css">
+  <link rel="stylesheet" media="all" href="./Lesson Two, Part 3_ Simplifying XML File Format Support_files/common-5f496bd1d1.css">
+  <script type="text/javascript" async="" src="./Lesson Two, Part 3_ Simplifying XML File Format Support_files/ga.js"></script><script>
+//<![CDATA[
+
+!function(){
+  function get(u){document.write('<scr'+'ipt src="'+ u +'"></sc'+'ript>')}
+  var o,s,v;
+  if (!(window.Promise && Object.assign && Object.values && [].find && [].includes && (o={},s=Symbol(),v={},o[s]=v,o[s]===v) && (function f(){}).bind().name==='bound f')) {
+    get("https://du11hjcvx0uqb.cloudfront.net/dist/ie11-polyfill-df7331dbc5.js");
+  }
+  window.fetch || get("https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.4/fetch.min.js");
+}();
+      
+//]]>
+</script>
+  <script src="./Lesson Two, Part 3_ Simplifying XML File Format Support_files/lato-fontfaceobserver-ed903d58c4.js" async="async"></script>
+  
+  <meta name="apple-itunes-app" content="app-id=480883488">
+<link rel="manifest" href="https://canvas.uw.edu/web-app-manifest/manifest.json">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#008EE2">
+  <link rel="stylesheet" media="all" href="./Lesson Two, Part 3_ Simplifying XML File Format Support_files/wiki_page-46e7e026f6.css">
+  
+  <link rel="stylesheet" media="all" href="./Lesson Two, Part 3_ Simplifying XML File Format Support_files/custom.css">
+<link rel="stylesheet" media="all" href="./Lesson Two, Part 3_ Simplifying XML File Format Support_files/custom(1).css">
+  <script>
+    function _earlyClick(e){
+      var c = e.target
+      while (c && c.ownerDocument) {
+        if (c.getAttribute('href') == '#' || c.getAttribute('data-method')) {
+          e.preventDefault()
+          (_earlyClick.clicks = _earlyClick.clicks || []).push(c)
+          break
+        }
+        c = c.parentNode
+      }
+    }
+    document.addEventListener('click', _earlyClick)
+  </script>
+  <script src="./Lesson Two, Part 3_ Simplifying XML File Format Support_files/variables-750d72b9d3e5d522f965bf904110c132.js" defer="defer"></script>
+  <script src="./Lesson Two, Part 3_ Simplifying XML File Format Support_files/vendor.bundle-5e1b2371d9.js" defer="defer"></script>
+<script src="./Lesson Two, Part 3_ Simplifying XML File Format Support_files/Los_Angeles-d9cac65c52.js" defer="defer"></script>
+<script src="./Lesson Two, Part 3_ Simplifying XML File Format Support_files/en_US-80a0ce259b.js" defer="defer"></script>
+<script src="./Lesson Two, Part 3_ Simplifying XML File Format Support_files/appBootstrap.bundle-d28bad749f.js" defer="defer"></script>
+<script src="./Lesson Two, Part 3_ Simplifying XML File Format Support_files/common.bundle-db82690f34.js" defer="defer"></script>
+<script src="./Lesson Two, Part 3_ Simplifying XML File Format Support_files/wiki_page_show.bundle-ea33dc7710.js" defer="defer"></script>
+<style type="text/css"></style><style type="text/css">.mejs-offscreen{clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);clip-path:polygon(0px 0,0 0,0 0,0 0);position:absolute!important;height:1px;width:1px;overflow:hidden}.mejs-container{position:relative;background:#000;font-family:Helvetica,Arial,serif;text-align:left;vertical-align:top;text-indent:0}.mejs-fill-container,.mejs-fill-container .mejs-container{width:100%;height:100%}.mejs-fill-container{overflow:hidden}.mejs-container:focus{outline:0}.me-plugin{position:absolute}.mejs-embed,.mejs-embed body{width:100%;height:100%;margin:0;padding:0;background:#000;overflow:hidden}.mejs-fullscreen{overflow:hidden!important}.mejs-container-fullscreen{position:fixed;left:0;top:0;right:0;bottom:0;overflow:hidden;z-index:1000}.mejs-container-fullscreen .mejs-mediaelement,.mejs-container-fullscreen video{width:100%;height:100%}.mejs-clear{clear:both}.mejs-background{position:absolute;top:0;left:0}.mejs-mediaelement{position:absolute;top:0;left:0;width:100%;height:100%}.mejs-poster{position:absolute;top:0;left:0;background-size:contain;background-position:50% 50%;background-repeat:no-repeat}:root .mejs-poster img{display:none}.mejs-poster img{border:0;padding:0}.mejs-overlay{position:absolute;top:0;left:0}.mejs-overlay-play{cursor:pointer}.mejs-overlay-button{position:absolute;top:50%;left:50%;width:100px;height:100px;margin:-50px 0 0 -50px;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/746c3af7a145a09239a36e5ef61cfea0.svg) no-repeat}.no-svg .mejs-overlay-button{background-image:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/716436fb3df0d29e6b37dd62d952676a.png)}.mejs-overlay:hover .mejs-overlay-button{background-position:0 -100px}.mejs-overlay-loading{position:absolute;top:50%;left:50%;width:80px;height:80px;margin:-40px 0 0 -40px;background:#333;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(0,0,0,.9);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(50,50,50,.9)),to(rgba(0,0,0,.9)));background:-webkit-linear-gradient(top,rgba(50,50,50,.9),rgba(0,0,0,.9));background:-moz-linear-gradient(top,rgba(50,50,50,.9),rgba(0,0,0,.9));background:-o-linear-gradient(top,rgba(50,50,50,.9),rgba(0,0,0,.9));background:-ms-linear-gradient(top,rgba(50,50,50,.9),rgba(0,0,0,.9));background:linear-gradient(rgba(50,50,50,.9),rgba(0,0,0,.9))}.mejs-overlay-loading span{display:block;width:80px;height:80px;background:transparent url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/76b326f4d44222126fee21076595bef5.gif) 50% 50% no-repeat}.mejs-container .mejs-controls{position:absolute;list-style-type:none;margin:0;padding:0;bottom:0;left:0;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(0,0,0,.7);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(50,50,50,.7)),to(rgba(0,0,0,.7)));background:-webkit-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-moz-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-o-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-ms-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:linear-gradient(rgba(50,50,50,.7),rgba(0,0,0,.7));height:30px;width:100%}.mejs-container .mejs-controls div{list-style-type:none;background-image:none;display:block;float:left;margin:0;padding:0;width:26px;height:26px;font-size:11px;line-height:11px;font-family:Helvetica,Arial,serif;border:0}.mejs-controls .mejs-button button{cursor:pointer;display:block;font-size:0;line-height:0;text-decoration:none;margin:7px 5px;padding:0;position:absolute;height:16px;width:16px;border:0;background:transparent url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/40f56f5a736da4effeb790cedb8a52f0.svg) no-repeat}.no-svg .mejs-controls .mejs-button button{background-image:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/24a0227fbdd3acfd86ff03fc3fc6c8a4.png)}.mejs-controls .mejs-button button:focus{outline:dotted 1px #999}.mejs-container .mejs-controls .mejs-time{color:#fff;display:block;height:17px;width:auto;padding:10px 3px 0;overflow:hidden;text-align:center;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}.mejs-container .mejs-controls .mejs-time a{color:#fff;font-size:11px;line-height:12px;display:block;float:left;margin:1px 2px 0 0;width:auto}.mejs-controls .mejs-play button{background-position:0 0}.mejs-controls .mejs-pause button{background-position:0 -16px}.mejs-controls .mejs-stop button{background-position:-112px 0}.mejs-controls div.mejs-time-rail{direction:ltr;width:200px;padding-top:5px}.mejs-controls .mejs-time-rail span,.mejs-controls .mejs-time-rail a{display:block;position:absolute;width:180px;height:10px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;cursor:pointer}.mejs-controls .mejs-time-rail .mejs-time-total{margin:5px;background:#333;background:rgba(50,50,50,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(30,30,30,.8)),to(rgba(60,60,60,.8)));background:-webkit-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-moz-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-o-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-ms-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:linear-gradient(rgba(30,30,30,.8),rgba(60,60,60,.8))}.mejs-controls .mejs-time-rail .mejs-time-buffering{width:100%;background-image:-o-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:-webkit-gradient(linear,0 100%,100% 0,color-stop(0.25,rgba(255,255,255,.15)),color-stop(0.25,transparent),color-stop(0.5,transparent),color-stop(0.5,rgba(255,255,255,.15)),color-stop(0.75,rgba(255,255,255,.15)),color-stop(0.75,transparent),to(transparent));background-image:-webkit-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:-moz-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:-ms-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);-webkit-background-size:15px 15px;-moz-background-size:15px 15px;-o-background-size:15px 15px;background-size:15px 15px;-webkit-animation:buffering-stripes 2s linear infinite;-moz-animation:buffering-stripes 2s linear infinite;-ms-animation:buffering-stripes 2s linear infinite;-o-animation:buffering-stripes 2s linear infinite;animation:buffering-stripes 2s linear infinite}@-webkit-keyframes buffering-stripes{from{background-position:0 0}to{background-position:30px 0}}@-moz-keyframes buffering-stripes{from{background-position:0 0}to{background-position:30px 0}}@-ms-keyframes buffering-stripes{from{background-position:0 0}to{background-position:30px 0}}@-o-keyframes buffering-stripes{from{background-position:0 0}to{background-position:30px 0}}@keyframes buffering-stripes{from{background-position:0 0}to{background-position:30px 0}}.mejs-controls .mejs-time-rail .mejs-time-loaded{background:#3caac8;background:rgba(60,170,200,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(44,124,145,.8)),to(rgba(78,183,212,.8)));background:-webkit-linear-gradient(top,rgba(44,124,145,.8),rgba(78,183,212,.8));background:-moz-linear-gradient(top,rgba(44,124,145,.8),rgba(78,183,212,.8));background:-o-linear-gradient(top,rgba(44,124,145,.8),rgba(78,183,212,.8));background:-ms-linear-gradient(top,rgba(44,124,145,.8),rgba(78,183,212,.8));background:linear-gradient(rgba(44,124,145,.8),rgba(78,183,212,.8));width:0}.mejs-controls .mejs-time-rail .mejs-time-current{background:#fff;background:rgba(255,255,255,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(255,255,255,.9)),to(rgba(200,200,200,.8)));background:-webkit-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-moz-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-o-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-ms-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:linear-gradient(rgba(255,255,255,.9),rgba(200,200,200,.8));width:0}.mejs-controls .mejs-time-rail .mejs-time-handle{display:none;position:absolute;margin:0;width:10px;background:#fff;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;cursor:pointer;border:solid 2px #333;top:-2px;text-align:center}.mejs-controls .mejs-time-rail .mejs-time-float{position:absolute;display:none;background:#eee;width:36px;height:17px;border:solid 1px #333;top:-26px;margin-left:-18px;text-align:center;color:#111}.mejs-controls .mejs-time-rail .mejs-time-float-current{margin:2px;width:30px;display:block;text-align:center;left:0}.mejs-controls .mejs-time-rail .mejs-time-float-corner{position:absolute;display:block;width:0;height:0;line-height:0;border:solid 5px #eee;border-color:#eee transparent transparent;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;top:15px;left:13px}.mejs-long-video .mejs-controls .mejs-time-rail .mejs-time-float{width:48px}.mejs-long-video .mejs-controls .mejs-time-rail .mejs-time-float-current{width:44px}.mejs-long-video .mejs-controls .mejs-time-rail .mejs-time-float-corner{left:18px}.mejs-controls .mejs-fullscreen-button button{background-position:-32px 0}.mejs-controls .mejs-unfullscreen button{background-position:-32px -16px}.mejs-controls .mejs-volume-button{}.mejs-controls .mejs-mute button{background-position:-16px -16px}.mejs-controls .mejs-unmute button{background-position:-16px 0}.mejs-controls .mejs-volume-button{position:relative}.mejs-controls .mejs-volume-button .mejs-volume-slider{height:115px;width:25px;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;top:-115px;left:0;z-index:1;position:absolute;margin:0}.mejs-controls .mejs-volume-button:hover{-webkit-border-radius:0 0 4px 4px;-moz-border-radius:0 0 4px 4px;border-radius:0 0 4px 4px}.mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-total{position:absolute;left:11px;top:8px;width:2px;height:100px;background:#ddd;background:rgba(255,255,255,.5);margin:0}.mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-current{position:absolute;left:11px;top:8px;width:2px;height:100px;background:#ddd;background:rgba(255,255,255,.9);margin:0}.mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-handle{position:absolute;left:4px;top:-3px;width:16px;height:6px;background:#ddd;background:rgba(255,255,255,.9);cursor:N-resize;-webkit-border-radius:1px;-moz-border-radius:1px;border-radius:1px;margin:0}.mejs-controls a.mejs-horizontal-volume-slider{height:26px;width:56px;position:relative;display:block;float:left;vertical-align:middle}.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total{position:absolute;left:0;top:11px;width:50px;height:8px;margin:0;padding:0;font-size:1px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background:#333;background:rgba(50,50,50,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(30,30,30,.8)),to(rgba(60,60,60,.8)));background:-webkit-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-moz-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-o-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-ms-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:linear-gradient(rgba(30,30,30,.8),rgba(60,60,60,.8))}.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current{position:absolute;left:0;top:11px;width:50px;height:8px;margin:0;padding:0;font-size:1px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background:#fff;background:rgba(255,255,255,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(255,255,255,.9)),to(rgba(200,200,200,.8)));background:-webkit-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-moz-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-o-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-ms-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:linear-gradient(rgba(255,255,255,.9),rgba(200,200,200,.8))}.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-handle{display:none}.mejs-controls .mejs-captions-button{position:relative}.mejs-controls .mejs-captions-button button{background-position:-48px 0}.mejs-controls .mejs-captions-button .mejs-captions-selector{position:absolute;bottom:26px;right:-51px;width:85px;height:100px;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);border:solid 1px transparent;padding:10px 10px 0;overflow:hidden;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}.mejs-controls .mejs-captions-button .mejs-captions-selector ul{margin:0;padding:0;display:block;list-style-type:none!important;overflow:hidden}.mejs-controls .mejs-captions-button .mejs-captions-selector ul li{margin:0 0 6px;padding:0;list-style-type:none!important;display:block;color:#fff;overflow:hidden}.mejs-controls .mejs-captions-button .mejs-captions-selector ul li input{clear:both;float:left;margin:3px 3px 0 5px}.mejs-controls .mejs-captions-button .mejs-captions-selector ul li label{width:55px;float:left;padding:4px 0 0;line-height:15px;font-family:Helvetica,Arial,serif;font-size:10px}.mejs-controls .mejs-captions-button .mejs-captions-translations{font-size:10px;margin:0 0 5px}.mejs-chapters{position:absolute;top:0;left:0;border-right:solid 1px #fff;width:10000px;z-index:1}.mejs-chapters .mejs-chapter{position:absolute;float:left;background:#222;background:rgba(0,0,0,.7);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(50,50,50,.7)),to(rgba(0,0,0,.7)));background:-webkit-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-moz-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-o-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-ms-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:linear-gradient(rgba(50,50,50,.7),rgba(0,0,0,.7));filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr=#323232, endColorstr=#000000);overflow:hidden;border:0}.mejs-chapters .mejs-chapter .mejs-chapter-block{font-size:11px;color:#fff;padding:5px;display:block;border-right:solid 1px #333;border-bottom:solid 1px #333;cursor:pointer}.mejs-chapters .mejs-chapter .mejs-chapter-block-last{border-right:0}.mejs-chapters .mejs-chapter .mejs-chapter-block:hover{background:#666;background:rgba(102,102,102,.7);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(102,102,102,.7)),to(rgba(50,50,50,.6)));background:-webkit-linear-gradient(top,rgba(102,102,102,.7),rgba(50,50,50,.6));background:-moz-linear-gradient(top,rgba(102,102,102,.7),rgba(50,50,50,.6));background:-o-linear-gradient(top,rgba(102,102,102,.7),rgba(50,50,50,.6));background:-ms-linear-gradient(top,rgba(102,102,102,.7),rgba(50,50,50,.6));background:linear-gradient(rgba(102,102,102,.7),rgba(50,50,50,.6));filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr=#666666, endColorstr=#323232)}.mejs-chapters .mejs-chapter .mejs-chapter-block .ch-title{font-size:12px;font-weight:700;display:block;white-space:nowrap;text-overflow:ellipsis;margin:0 0 3px;line-height:12px}.mejs-chapters .mejs-chapter .mejs-chapter-block .ch-timespan{font-size:12px;line-height:12px;margin:3px 0 4px;display:block;white-space:nowrap;text-overflow:ellipsis}.mejs-captions-layer{position:absolute;bottom:0;left:0;text-align:center;line-height:20px;font-size:16px;color:#fff}.mejs-captions-layer a{color:#fff;text-decoration:underline}.mejs-captions-layer[lang=ar]{font-size:20px;font-weight:400}.mejs-captions-position{position:absolute;width:100%;bottom:15px;left:0}.mejs-captions-position-hover{bottom:35px}.mejs-captions-text,.mejs__captions-text *{padding:0;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(20,20,20,.5);white-space:pre-wrap;-webkit-box-shadow:5px 0 0 rgba(20,20,20,.5),-5px 0 0 rgba(20,20,20,.5);box-shadow:5px 0 0 rgba(20,20,20,.5),-5px 0 0 rgba(20,20,20,.5)}.me-cannotplay{}.me-cannotplay a{color:#fff;font-weight:700}.me-cannotplay span{padding:15px;display:block}.mejs-controls .mejs-loop-off button{background-position:-64px -16px}.mejs-controls .mejs-loop-on button{background-position:-64px 0}.mejs-controls .mejs-backlight-off button{background-position:-80px -16px}.mejs-controls .mejs-backlight-on button{background-position:-80px 0}.mejs-controls .mejs-picturecontrols-button{background-position:-96px 0}.mejs-contextmenu{position:absolute;width:150px;padding:10px;border-radius:4px;top:0;left:0;background:#fff;border:solid 1px #999;z-index:1001}.mejs-contextmenu .mejs-contextmenu-separator{height:1px;font-size:0;margin:5px 6px;background:#333}.mejs-contextmenu .mejs-contextmenu-item{font-family:Helvetica,Arial,serif;font-size:12px;padding:4px 6px;cursor:pointer;color:#333}.mejs-contextmenu .mejs-contextmenu-item:hover{background:#2C7C91;color:#fff}.mejs-controls .mejs-sourcechooser-button{position:relative}.mejs-controls .mejs-sourcechooser-button button{background-position:-128px 0}.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector{position:absolute;bottom:26px;right:-10px;width:130px;height:100px;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);border:solid 1px transparent;padding:10px;overflow:hidden;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul{margin:0;padding:0;display:block;list-style-type:none!important;overflow:hidden}.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul li{margin:0 0 6px;padding:0;list-style-type:none!important;display:block;color:#fff;overflow:hidden}.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul li input{clear:both;float:left;margin:3px 3px 0 5px}.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul li label{width:100px;float:left;padding:4px 0 0;line-height:15px;font-family:Helvetica,Arial,serif;font-size:10px}.mejs-postroll-layer{position:absolute;bottom:0;left:0;width:100%;height:100%;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);z-index:1000;overflow:hidden}.mejs-postroll-layer-content{width:100%;height:100%}.mejs-postroll-close{position:absolute;right:0;top:0;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);color:#fff;padding:4px;z-index:100;cursor:pointer}div.mejs-speed-button{width:46px!important;position:relative}.mejs-controls .mejs-button.mejs-speed-button button{background:transparent;width:36px;font-size:11px;line-height:normal;color:#fff}.mejs-controls .mejs-speed-button .mejs-speed-selector{position:absolute;top:-100px;left:-10px;width:60px;height:100px;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);border:solid 1px transparent;padding:0;overflow:hidden;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}.mejs-controls .mejs-speed-button .mejs-speed-selector ul li label.mejs-speed-selected{color:rgba(33,248,248,1)}.mejs-controls .mejs-speed-button .mejs-speed-selector ul{margin:0;padding:0;display:block;list-style-type:none!important;overflow:hidden}.mejs-controls .mejs-speed-button .mejs-speed-selector ul li{margin:0 0 6px;padding:0 10px;list-style-type:none!important;display:block;color:#fff;overflow:hidden}.mejs-controls .mejs-speed-button .mejs-speed-selector ul li input{clear:both;float:left;margin:3px 3px 0 5px}.mejs-controls .mejs-speed-button .mejs-speed-selector ul li label{width:60px;float:left;padding:4px 0 0;line-height:15px;font-family:Helvetica,Arial,serif;font-size:11px;color:#fff;margin-left:5px;cursor:pointer}.mejs-controls .mejs-speed-button .mejs-speed-selector ul li:hover{background-color:#c8c8c8!important;background-color:rgba(255,255,255,.4)!important}.mejs-controls .mejs-button.mejs-jump-forward-button{background:transparent url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/15e1ac8cbacc2efdf1ac2677de48a253.png) no-repeat 3px 3px}.mejs-controls .mejs-button.mejs-jump-forward-button button{background:transparent;font-size:9px;line-height:normal;color:#fff}.mejs-controls .mejs-button.mejs-skip-back-button{background:transparent url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/cd6dc830eb45b3a5a96bbc936ff54846.png) no-repeat 3px 3px}.mejs-controls .mejs-button.mejs-skip-back-button button{background:transparent;font-size:9px;line-height:normal;color:#fff}</style><style type="text/css">/*
+ * Copyright (C) 2014 - present Instructure, Inc.
+ *
+ * This file is part of Canvas.
+ *
+ * Canvas is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU Affero General Public License as published by the Free
+ * Software Foundation, version 3 of the License.
+ *
+ * Canvas is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+ * A PARTICULAR PURPOSE. See the GNU Affero General Public License for more
+ * details.
+ *
+ * You should have received a copy of the GNU Affero General Public License along
+ * with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/* customizations to mediaelementplayer css */
+
+/* good menu widths */
+.mejs-sourcechooser-selector {
+  width: 160px;
+}
+.mejs-sourcechooser-selector label {
+  width: 160px !important;
+}
+
+.mejs-captions-selector {
+  width: 105px;
+}
+.mejs-captions-selector label {
+  width: 70px !important;
+}
+
+/* Subtitile upload link */
+.mejs-captions-selector .upload-track {
+  color: white;
+  margin: 3px 0 5px 5px;
+  float: direction(left);
+}
+
+/* "x" button to remove a subtitle */
+.mejs-captions-selector a[data-remove] {
+  position: absolute;
+  top: 0; right: 0;
+  color: white;
+}
+
+
+/* style menu items without a radio button */
+.mejs-button [role="menu"] {
+  padding: 0 !important;
+}
+ /* compensate for above 0 padding */
+ .mejs-button [role="menu"] ul li {
+  position: relative;
+  padding: 0 10px !important;
+}
+/* add a hover effect */
+.mejs-button [role="menu"] ul li:hover {
+  background-color: #c8c8c8 !important;
+  background-color: rgba(255, 255, 255, 0.4) !important;
+}
+.mejs-button [role="menu"] ul li input {
+  border: 0;
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+.mejs-button [role="menu"] ul li label {
+  margin-left: 5px;
+  cursor: pointer;
+}
+.mejs-button [role="menu"] label.mejs-selected {
+  color: #21f8f8 !important;
+}
+</style><style type="text/css" data-glamor=""></style></head>
+
+<body class="with-left-side course-menu-expanded padless-content pages primary-nav-transitions context-course_1205169 lato-font-not-loaded-yet show webkit chrome no-touch">
+
+<noscript>
+  <div role="alert" class="ic-flash-static ic-flash-error">
+    <div class="ic-flash__icon" aria-hidden="true">
+      <i class="icon-warning"></i>
+    </div>
+    <h1>You need to have JavaScript enabled in order to access this site.</h1>
+  </div>
+</noscript>
+
+
+
+
+
+<ul id="flash_message_holder"></ul>
+<div id="flash_screenreader_holder" role="alert" aria-live="assertive" aria-relevant="additions" class="screenreader-only" aria-atomic="false"></div>
+
+<div id="application" class="ic-app">
+  
+  <header id="header" class="ic-app-header no-print ">
+    <a href="https://canvas.uw.edu/courses/1205169/pages/lesson-two-part-3-simplifying-xml-file-format-support?module_item_id=8253613#content" id="skip_navigation_link">Skip To Content</a>
+      <div role="region" class="ic-app-header__main-navigation" aria-label="Global Navigation">
+        <div class="ic-app-header__logomark-container">
+          <a href="https://canvas.uw.edu/" class="ic-app-header__logomark">
+            <span class="screenreader-only">Dashboard</span>
+          </a>
+        </div>
+        <ul id="menu" class="ic-app-header__menu-list">
+            <li class="menu-item ic-app-header__menu-list-item ">
+              <a id="global_nav_profile_link" href="https://canvas.uw.edu/profile" class="ic-app-header__menu-list-link">
+                <div class="menu-item-icon-container" aria-hidden="true">
+                  <div class="ic-avatar ">
+                    <img src="./Lesson Two, Part 3_ Simplifying XML File Format Support_files/mSs2TjTESYscSzrackhgoJvAT79xbNchamHPrSec" alt="Clayton Wong">
+                  </div>
+                </div>
+                <div class="menu-item__text">
+                  Account
+                </div>
+              </a>
+            </li>
+          <li class="ic-app-header__menu-list-item ">
+            <a id="global_nav_dashboard_link" href="https://canvas.uw.edu/" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--dashboard" version="1.1" x="0" y="0" viewBox="0 0 280 200" enable-background="new 0 0 280 200" xml:space="preserve"><path d="M273.09,180.75H197.47V164.47h62.62A122.16,122.16,0,1,0,17.85,142a124,124,0,0,0,2,22.51H90.18v16.29H6.89l-1.5-6.22A138.51,138.51,0,0,1,1.57,142C1.57,65.64,63.67,3.53,140,3.53S278.43,65.64,278.43,142a137.67,137.67,0,0,1-3.84,32.57ZM66.49,87.63,50.24,71.38,61.75,59.86,78,76.12Zm147,0L202,76.12l16.25-16.25,11.51,11.51ZM131.85,53.82v-23h16.29v23Zm15.63,142.3a31.71,31.71,0,0,1-28-16.81c-6.4-12.08-15.73-72.29-17.54-84.25a8.15,8.15,0,0,1,13.58-7.2c8.88,8.21,53.48,49.72,59.88,61.81a31.61,31.61,0,0,1-27.9,46.45ZM121.81,116.2c4.17,24.56,9.23,50.21,12,55.49A15.35,15.35,0,1,0,161,157.3C158.18,152,139.79,133.44,121.81,116.2Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">Dashboard</div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ic-app-header__menu-list-item--active">
+            <a id="global_nav_courses_link" href="https://canvas.uw.edu/courses" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--courses" version="1.1" x="0" y="0" viewBox="0 0 280 259" enable-background="new 0 0 280 259" xml:space="preserve"><path d="M73.31,198c-11.93,0-22.22,8-24,18.73a26.67,26.67,0,0,0-.3,3.63v.3a22,22,0,0,0,5.44,14.65,22.47,22.47,0,0,0,17.22,8H200V228.19h-134V213.08H200V198Zm21-105.74h90.64V62H94.3ZM79.19,107.34V46.92H200v60.42Zm7.55,30.21V122.45H192.49v15.11ZM71.65,16.71A22.72,22.72,0,0,0,49,39.36V190.88a41.12,41.12,0,0,1,24.32-8h157V16.71ZM33.88,39.36A37.78,37.78,0,0,1,71.65,1.6H245.36V198H215.15v45.32h22.66V258.4H71.65a37.85,37.85,0,0,1-37.76-37.76Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Courses
+              </div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_calendar_link" href="https://canvas.uw.edu/calendar" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--calendar" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M197.07,213.38h16.31V197.07H197.07Zm-16.31,16.31V180.76h48.92v48.92Zm-48.92-16.31h16.31V197.07H131.85Zm-16.31,16.31V180.76h48.92v48.92ZM66.62,213.38H82.93V197.07H66.62ZM50.32,229.68V180.76H99.24v48.92Zm146.75-81.53h16.31V131.85H197.07Zm-16.31,16.31V115.54h48.92v48.92Zm-48.92-16.31h16.31V131.85H131.85Zm-16.31,16.31V115.54h48.92v48.92ZM66.62,148.15H82.93V131.85H66.62ZM50.32,164.46V115.54H99.24v48.92ZM34,262.29H246V82.93H34ZM246,66.62V42.16A8.17,8.17,0,0,0,237.84,34H213.38v8.15a8.15,8.15,0,1,1-16.31,0V34H82.93v8.15a8.15,8.15,0,0,1-16.31,0V34H42.16A8.17,8.17,0,0,0,34,42.16V66.62Zm-8.15-48.92a24.49,24.49,0,0,1,24.46,24.46V278.6H17.71V42.16A24.49,24.49,0,0,1,42.16,17.71H66.62V9.55a8.15,8.15,0,0,1,16.31,0v8.15H197.07V9.55a8.15,8.15,0,1,1,16.31,0v8.15Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Calendar
+              </div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_conversations_link" href="https://canvas.uw.edu/conversations" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--inbox" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M91.72,120.75h96.56V104.65H91.72Zm0,48.28h80.47V152.94H91.72Zm0-96.56h80.47V56.37H91.72Zm160.94,34.88H228.52V10.78h-177v96.56H27.34A24.17,24.17,0,0,0,3.2,131.48V244.14a24.17,24.17,0,0,0,24.14,24.14H252.66a24.17,24.17,0,0,0,24.14-24.14V131.48A24.17,24.17,0,0,0,252.66,107.34Zm0,16.09a8.06,8.06,0,0,1,8,8v51.77l-32.19,19.31V123.44ZM67.58,203.91v-177H212.42v177ZM27.34,123.44H51.48v79.13L19.29,183.26V131.48A8.06,8.06,0,0,1,27.34,123.44ZM252.66,252.19H27.34a8.06,8.06,0,0,1-8-8V202l30,18H230.75l30-18v42.12A8.06,8.06,0,0,1,252.66,252.19Z"></path></svg>
+
+                <span class="menu-item__badge" style="display: none">0</span>
+              </div>
+              <div class="menu-item__text">
+                Inbox
+              </div>
+            </a>
+          </li>
+            
+
+
+          <li class="ic-app-header__menu-list-item">
+           <a id="global_nav_help_link" class="ic-app-header__menu-list-link" data-track-category="help system" data-track-label="help button" href="http://help.instructure.com/">
+              <div class="menu-item-icon-container" role="presentation">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg menu-item__icon svg-icon-help" version="1.1" x="0" y="0" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve" fill="currentColor"><path d="M100,127.88A11.15,11.15,0,1,0,111.16,139,11.16,11.16,0,0,0,100,127.88Zm8.82-88.08a33.19,33.19,0,0,1,23.5,23.5,33.54,33.54,0,0,1-24,41.23,3.4,3.4,0,0,0-2.74,3.15v9.06H94.42v-9.06a14.57,14.57,0,0,1,11.13-14,22.43,22.43,0,0,0,13.66-10.27,22.73,22.73,0,0,0,2.31-17.37A21.92,21.92,0,0,0,106,50.59a22.67,22.67,0,0,0-19.68,3.88,22.18,22.18,0,0,0-8.65,17.64H66.54a33.25,33.25,0,0,1,13-26.47A33.72,33.72,0,0,1,108.82,39.8ZM100,5.2A94.8,94.8,0,1,0,194.8,100,94.91,94.91,0,0,0,100,5.2m0,178.45A83.65,83.65,0,1,1,183.65,100,83.73,83.73,0,0,1,100,183.65" transform="translate(-5.2 -5.2)"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Help
+              </div>
+</a>          </li>
+        </ul>
+      </div>
+      <div class="ic-app-header__secondary-navigation">
+        <ul class="ic-app-header__menu-list">
+          <li class="menu-item ic-app-header__menu-list-item">
+            <button id="primaryNavToggle" class="ic-app-header__menu-list-link ic-app-header__menu-list-link--nav-toggle" aria-label="Expand global navigation
+                " title="Expand global navigation
+                ">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--navtoggle" version="1.1" x="0" y="0" width="40" height="32" viewBox="0 0 40 32" xml:space="preserve">
+  <path d="M39.5,30.28V2.48H37.18v27.8Zm-4.93-13.9L22.17,4,20.53,5.61l9.61,9.61H.5v2.31H30.14l-9.61,9.61,1.64,1.64Z"></path>
+</svg>
+
+              </div>
+            </button>
+          </li>
+        </ul>
+      </div>
+    <div id="global_nav_tray_container"><noscript data-reactid=".0"></noscript></div>
+  </header>
+
+
+  <div id="instructure_ajax_error_box">
+    <div style="text-align: right; background-color: #fff;"><a href="https://canvas.uw.edu/courses/1205169/pages/lesson-two-part-3-simplifying-xml-file-format-support?module_item_id=8253613#" class="close_instructure_ajax_error_box_link">Close</a></div>
+    <iframe id="instructure_ajax_error_result" src="./Lesson Two, Part 3_ Simplifying XML File Format Support_files/saved_resource.html" style="border: 0;" title="Error"></iframe>
+  </div>
+
+  
+
+  <div id="wrapper" class="ic-Layout-wrapper">
+      <div class="ic-app-nav-toggle-and-crumbs no-print">
+          <button type="button" id="courseMenuToggle" class="Button Button--link ic-app-course-nav-toggle" aria-live="polite" aria-label="Hide Courses Navigation Menu" title="Hide Courses Navigation Menu">
+            <i class="icon-hamburger" aria-hidden="true"></i>
+          </button>
+          <div class="ic-app-crumbs">
+        <nav id="breadcrumbs" role="navigation" aria-label="breadcrumbs"><ul><li class="home"><a href="https://canvas.uw.edu/"><span class="ellipsible">      <i class="icon-home" title="My Dashboard">
+        <span class="screenreader-only">My Dashboard</span>
+      </i>
+</span></a></li><li><a href="https://canvas.uw.edu/courses/1205169"><span class="ellipsible">CPROGRM 713 A</span></a></li><li><a href="https://canvas.uw.edu/courses/1205169/pages"><span class="ellipsible">Pages</span></a></li><li><span class="ellipsible">Lesson Two, Part 3: Simplifying XML File Format Support</span></li></ul></nav>
+        </div>
+      </div>
+    <div id="main" class="ic-Layout-columns">
+        <div class="ic-Layout-watermark"></div>
+        <div id="left-side" class="ic-app-course-menu list-view" style="display: block">
+              <span id="section-tabs-header-subtitle" class="ellipsis">Summer 2018</span>
+            <nav role="navigation" aria-label="Courses Navigation Menu"><ul id="section-tabs"><li class="section"><a href="https://canvas.uw.edu/courses/1205169" title="Home" class="home" tabindex="0">Home</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1205169/announcements" title="Announcements" class="announcements" tabindex="0">Announcements</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1205169/modules" title="Modules" class="modules" tabindex="0">Modules</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1205169/discussion_topics" title="Discussions" class="discussions" tabindex="0">Discussions</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1205169/grades" title="Grades" class="grades" tabindex="0">Grades</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1205169/users" title="People" class="people" tabindex="0">People</a></li><li class="section"><a href="https://canvas.uw.edu/courses/1205169/external_tools/63603" title="Info &amp; Help" class="context_external_tool_63603" tabindex="0">Info &amp; Help</a></li></ul></nav>
+        </div>
+      <div id="not_right_side" class="ic-app-main-content">
+        <div id="content-wrapper" class="ic-Layout-contentWrapper">
+            
+
+          <div id="content" class="ic-Layout-contentMain" role="main">
+            
+
+  
+
+<div id="wiki_page_show">
+<div class="header-bar-outer-container">
+  <div class="header-bar-container sticky-toolbar" data-sticky="">
+    <div class="header-bar flex-container">
+      <div class="header-bar-left header-left-flex">
+        
+          
+        
+      </div>
+      <div class="header-bar-right header-right-flex">
+        
+          
+          
+            
+          
+        
+        
+          
+        
+        
+      </div>
+    </div>
+    <div class="page-changed-alert" role="alert" aria-atomic="true" aria-live="polite"></div>
+  </div>
+</div>
+
+
+<div class="show-content user_content clearfix enhanced">
+  <h1 class="page-title">Lesson Two, Part 3: Simplifying XML File Format Support</h1>
+  
+    <p>In Lesson One, we failed to look in much detail at the design of our XML file format support. Though we did examine some implementation tools, particularly the <code>eat</code> and <code>trim</code> algorithms, the design was mostly left open. However you chose to support the XML file format in Lesson One's assignment, there are probably a few major improvements you can make by recognizing a few first-class concepts you may have missed, and making your code more idiomatic.</p>
+<h2>Recognizing Missing First-Class Concepts</h2>
+<div class="keytermBox">
+<h6>Key Terms</h6>
+<ul>
+<li>first-class concept</li>
+<li>second-class concept</li>
+</ul>
+</div>
+<p>A <span class="keyterm">first-class concept</span> is a concept that is represented in a system in a well-defined manner—basically, represented as a class. <span class="keyterm">Second-class concepts </span>are those that pervade in a system but are never defined or not consistently used. For example, if you had a system that referred to the concept<span class="italics"> TIME </span> often, with methods such as <code>getTime</code> that returned a string, "TIME" would be a second-class concept. If the system created a <code>Time</code> class and <code>getTime</code> returned an instance of that class, "TIME" would be a first class concept.</p>
+<p>Time classes are the norm in most C++ courses, so the difference between using and not using a class to represent time might not seem that clear. If we fail to use a <code>Time</code> class, then we flatten the structured concept of time (hours, minutes, seconds, and so forth) into, perhaps, nothing more than a string. This means that clients of our class that returns time as a string might have to introduce complicated parsing code to get the information they want—as they may want only the hour or the time in European format. This might sound similar to our discussion in Lesson One about translation and making software that's closer to the way we think; in many ways, it's the same fundamental issue.</p>
+<p>Missing first-class concepts are not always minor concepts; in some cases, they can be paramount. In many cases, the missing first-class concepts are at the extremes: the most minor and most major of concepts are those that are most often missed. Those in between tend to somehow be more prominent. I will share with you a personal story about a missing first-class concept in a large project. This project was an application (and the frameworks that formed over time beneath it) in the scientific domain that worked with external hardware to perform precise temperature measurement. It also had the change case to eventually deal with control systems (for example, controlling the temperature or humidity in an experimental chamber).</p>
+<p>Most of the issues in the development of the application seemed to revolve in and around what behavior the client expected and what features were needed for plotting, logging, and overall keeping track of temperatures, humidity, and so forth over a period of time. These plots and logs had to be able to be started and stopped, configured, and saved. On top of this, the hardware often had to be configured before many of the plots and logs would be started. For example, if someone were to perform an experiment that used only three of sixteen temperature sensors and needed absolute precision over speed, they'd configure the hardware, start the plotting and logging, go perform their experiment while watching the live plotting, and return to the console to stop things.</p>
+<p>The system ended up having a lot of autonomous features that needed synchronization, which made it complex to use. Yet, everyone, including the users and the client, seemed to agree the design was fine and there was little to be improved upon. The application performed the tasks it needed to, and in a way that was still far better than some of the applications that existed at the time.</p>
+<p>What changed the application to be truly innovative was that the developers realized at one point that Experiment was completely unrepresented. Not only was there no <code>Experiment</code> class, there was no mention of an experiment in most of the documentation and in the user interface. How could the developers, client, and users have missed such a concept? It seemed the whole application should have been built upon the idea of an experiment from the beginning—maybe even calling the workspace a "laboratory." The list of benefits seemed to be endless; and as soon as the concept was introduced, a thousand puzzle pieces just seemed to fall into place. Suddenly, the application changed to be experiment-oriented; users both authored and ran experiments—two separate processes. We realized that experiments could even be scripted in a manner that allowed us to run them like an interactive movie, telling us what to do next and waiting for our response that we had finished that step before moving on to the next scene.</p>
+<p>This story is an excellent case of a missing major first-class concept and its later recognition. What's interesting here is that it's not uncommon to miss the fundamental concept that binds the entire system. Since the experience of the missing <code>Experiment </code>class, I've seen many similar situations, especially as systems evolve. In the beginning they might perform a few discreet and useful tasks, but as they grow, there's usually something more central than autonomous tasks—some goal in mind.</p>
+<p>Whether your design is missing something as simple as a <code>Time</code> class or as involved as an <code>Experiment</code> class, taking the time to make more concepts first-class is usually an easy way to improve any design. Because of time constraints and limitations of focus, you can't always take this advice to the extreme. Keeping notes on what could be changed, and then changing and re-analyzing when a convenient time arises is an excellent habit.</p>
+<p>Since our XML parsing in Lesson One was effectively without a design, no matter how you implemented it you might have missed a few concepts that should be first-class. The first of these is the concept of an Element. Certainly, if you did not create this class, probably somewhere in your code you refer to the concept of an element, and maybe even have a method like <code>getElementChildren</code> or some other method with Element in the name. Any concept consistently named in methods but without a class should raise a red flag for you.</p>
+<p>One of the other potentially missed concepts is that of an attribute. This one is nearly always missed because the concept is so common and natural that few people would think to make a class for it (a <code>Weight</code> class is another often missed class). Instead, you may have used loosely associated strings for <code>attributeName</code> and <code>attributeValue</code>. Making attribute a class provides a good location to centralize all attribute parsing and, in the future, value conversion code. It also might one day have more sophisticated features of type checking—to ensure, for example, that only integers are given for the <code>x</code> attribute in our <code>Point</code> element.</p>
+<h2>Creating the XML Element Class</h2>
+<p>The<code>&nbsp;Attribute</code>&nbsp;class is trivially defined, but the&nbsp;<code>Element</code> class might require a little more analysis. For our purposes, we can map the XML concept of an element fairly directly. This means an element can have any number of child elements and any number of attributes. The element also could be said to have a name (such as "VectorGraphic"), which defines what its begin and (if applicable) end tags will look like.</p>
+<p>The primary variance between different implementations of a class such as <code>Element</code> will be the choice of whether its implication should be as a value object or reference object, and the semantics of creating instances from a stream and persisting instances to a stream. The first of these methods is clearly a responsibility of the class, not the instance.</p>
+<p>Since the elements' children will also be instances of the <code>Element </code>class, it might seem like we have the composite pattern here. This is not the composite pattern, though, as we only have one class, <code>Element</code>, which inherently allows children. The composite pattern revolves around working with both composites and primitives, whereas, in our case, we only have composites.</p>
+<p>It's important to note that the XML Element is working from a low-level view. It allows fairly free insertion of attributes, children, and so forth, and doesn't attempt to check whether this is valid in your particular XML scheme. It's important when developing frameworks that you keep in mind your level of abstraction. Low-level frameworks can be as useful as high-level ones—it's just the lower-level frameworks are primarily used by the higher-level ones, and only the highest-level ones ever reach the user or most developers. What's important in developing any layer or framework is that you don't violate your level of abstraction. Pick a level and stick with it. When you have a new concept that would be useful that's at another level, put it in the proper framework for that level and make sure it fits with the overall design of that level. This describes the layered approach to software development, which is in use fairly ubiquitously, as it tends to naturally occur over time.</p>
+<h2>Following Appropriate Naming Guidelines</h2>
+<p>In this course and in <span class="italics">C++</span>:<span class="italics"> Intermediate,</span> we use a consistent naming style. At its foundation is the UML standard, which specifies that objects and methods should be of the form "alternatingCase," whereas classes should be of the form "UpperCase." We suggest you follow this standard, with the addition of using "lower_case" for incomplete classes (templates). The repercussions of these guidelines are outlined in the list below.</p>
+<ul>
+<li>Classes (Types)—Use <code>ClassName</code>. View C++ as a purely object-oriented language in this respect. An enum is no different than a class, and should not be named differently. Doing so reveals implementation details, as it's completely feasible to use classes to implement the equivalent of an <code>enum</code>. In C++, this naming style will be inconsistent in the isolated case of primitive types (which will already be lowercase), but no conflicts should arise from this problem.</li>
+<li>Objects—Use <code>objectName</code>, and remember that all entities in your code are classes, objects, or methods. To continue with our<code> enum</code> example, the "values" of an <code>enum</code> are objects (instances of the <code>enum</code> class).</li>
+<li>Methods (and Functions)—use <code>methodName</code>. These use the same naming syntax as objects, for consistency. Objects and methods with the same name will not conflict because it is suggested that methods are always verb phrases. Even if verb phrases are not used, objects and methods with the same name will not conflict as easily as objects and classes or methods and classes with the same names. A class followed by parenthesis can even be confused for a method if verb phrases are not used. C++ has several instances of just this problem (<code>mem_fun</code> is a method, whereas <code>mem_fun_t</code> is a class, which is inconsistent with other classes that are named without the affixed <code>t</code>, such as <code>istream</code>) that could have been resolved by making all classes <code>UpperCase</code>.</li>
+<li>Incomplete Classes (Templates)—use <code>incomplete_class_name</code>. Also, try always to complete template classes via a typedef before using, as in the examples throughout this course. When you complete an incomplete class, it becomes <code>UpperCase</code>, of course.</li>
+</ul>
+<p>Besides the UML guidelines, here are a few other guidelines.</p>
+<div class="infoBox">
+<p>"Hungarian syntax" was developed by Charles Simonyi from Microsoft and was named by him and/or others at Microsoft as "hungarian notation" or "hungarian syntax." It has been published and termed that in numerous books.</p>
+</div>
+<ul>
+<li>Make methods verb phrases, and objects and classes noun phrases.</li>
+<li>Avoid generic suffixes such as <code>Device</code>, <code>Object</code>, <code>Class</code>, <code>Type</code>, and <code>Manager</code>. These give little or no information about the entity in question.</li>
+<li>Avoid naming objects as "anObject" or "theObject." In most cases, the article (a/an/the) provides no additional information over just "object."</li>
+<li>Avoid catch-all names such as "new," "temp," and "in."</li>
+<li>Avoid overly generic names. For example, "size" could mean length, width, or weight.</li>
+<li>Avoid encoding type information in objects. This is commonly referred to as "hungarian syntax," and has been proven to be a large maintenance burden because it reveals unnecessary information. For example, calling an end-of-line character constant <code>ccEndOfLine</code> to indicate "constant character" is discouraged.</li>
+<li>Avoid using two similar concepts, when possible. For example, using the terms <code>Environment</code> and <code>Habitat</code> in the same system might be confusing to users, especially if the differences between the two are not clear and consistent.</li>
+<li>Avoid redundancies between attributes, methods, and their respective classes. This can be referred to as the <code>Car::carTire</code> syndrome; in a <code>Car</code> class, it's completely obvious we're referring to a car tire and not a tractor tire if we have an attribute named "tire." This problem can also create issues with future subtyping. Consider a <code>List::getListSize </code>method. If we later subtype this class, <code>getListSize</code> might be a less appropriate name than <code>getSize</code>.</li>
+<li>Only use abbreviations when absolutely necessary. Widely accepted acronyms, such as "HTML" and "RGB" are reasonable. Creating your own acronyms such as "EVN" for "Employee Verification Number" are not reasonable (once again, unless they're widely accepted in the domain). Non-acronym abbreviations are less-commonly acceptable; "emp" for employee or "str" for string are harder to maintain and understand than "employee" and "string" (the latter probably being too generic in most cases).</li>
+<li>Avoid single-letter names. In a point class, "x" is certainly reasonable, but "h" for hour in a <code>Time</code> class is not. Don't forget about this rule when working with template parameters, which are unfortunately often named as single characters in older template libraries (though this is rapidly changing in newer standard library implementations).</li>
+<li>Avoid creating names that reveal implementation details.</li>
+<li>Make sure your names are accurate. For example, do not create a copy constructor with a signature such as (<code>"Employee Employee const&amp; copy."</code>) What we really mean in this case is <code>"Employee (Employee const&amp; original)."</code>
+</li>
+<li>Create constants for number, character, and string literals. Comments are neither sufficient nor maintainable in documenting the origin of a number in 99 percent of cases. For example, prefer <code>"int const daysInYear = 365;"</code> to <code>"365"</code> polluting the entire code. (Note that this is more of a case of writing self-documenting code).</li>
+<li>Distinguish the various roles of classes (but not objects) by role-based type prefixes, as covered in <span class="italics">C++</span>:<span class="italics"> Intermediate </span>and reviewed below:</li>
+</ul>
+<p>In chapter 24 of <cite>The C++ Programming Language</cite>, some of the more common roles of classes are described in detail. These are the roles of <code>interface</code>,<code> abstract</code>, <code>concrete</code>, <code>operation</code>, and <code>handle</code>. A role-based type naming syntax simply encodes the role information as the first character, as in the examples below.</p>
+<ul>
+<li>
+<code>ICar</code>—the pure interface for a car.</li>
+<li>
+<code>ACar</code>—an abstract "base implementation" of a car that provides some implementation, but is neither complete nor instantiable.</li>
+<li>
+<code>CCivic</code>—a concrete Civic class, which is instantiable. Often, for the sake of brevity, it's advisable to make <code>C</code> be the default if no type prefix is specified.</li>
+<li>
+<code>OCompare</code>—a comparator class that overloads the function call operator.</li>
+<li>
+<code>HStudent</code>—a handle to a student pointer (sometimes referred to as a smart pointer).</li>
+</ul>
+<h2>Writing Self-Documenting Code</h2>
+<p>Using appropriate naming, writing self-documenting code, and making efforts to spot missing first-class concepts will greatly improve the quality and maintainability of your code. All of these practices are interrelated, and so you will certainly see patterns emerge in this advice.</p>
+<p>Comments were especially necessary back in the days of languages like FORTRAN because it wasn't possible to write self-documenting code. In FORTRAN, all variables had to be only two characters, so comments were necessary even in the simplest of programs. Despite the greater expressiveness of modern languages, some older schools of thought still emphasize the importance of extensive documentation in the source files .</p>
+<p>What these schools of thought can be missing is that <span class="bold">the code is the language</span>. It is a means of communication with the reader just as much as it is a means of communication with the computer. The newest of code-centric development paradigms, Extreme Programming (XP) has embraced this idea. The XP paradigm might be at the forefront of comment-free code, but many other modern texts preach similar approaches, to varying degrees. The XP paradigm takes the view that documentation is an indication that the code is incomplete, incorrect, or less than ideal in one way or another. The goal, then, is to use as little documentation as possible.</p>
+<p>The keyword here is "possible." What this advice assumes is that you have the good taste to know when code is incomplete or unclear without comments. At this point in your C++ career, you should have just this ability. To refine it, practice using self-documenting code and removing all redundant or unnecessary comment in your submissions.</p>
+<p>Let's take a look at the changes possible in code from simply not stating what doesn't need to be stated and stating what does need to be stated in code, not documentation. In the example 2.7-A below, unnecessary comments abound and even unnecessary methods are defined.</p>
+<table style="width: 480px;" border="0" cellspacing="10" cellpadding="4">
+<tbody>
+<tr>
+<th>Code Example 2.7-A—Comment Documented Code</th>
+</tr>
+<tr>
+<td>
+<pre><code>class Potato {
+   public:
+      // Constructor
+      explicit Potato (double weight) : weight (weight) {
+      }
+
+      // Copy constructor
+      Potato (Potato const&amp; original)
+         : weight (original.weight) {
+      }
+
+      // Destructor
+      ~Potato () {
+      }
+
+      // Assignment operator
+      Potato&amp; operator= (Potato const&amp; original) {
+         if (this != &amp;original) {
+            setWeight (original.getWeight ());
+         }
+         return *this;
+      }
+
+      // Get weight (in ounces)
+      double getWeight () const {
+         return weight;
+      }
+
+      // Set weight (in ounces)
+      void setWeight (double weight) {
+         this-&gt;weight = weight;
+      }
+
+   private:
+      double weight;
+};
+</code></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<table style="width: 480px;" border="0" cellspacing="10" cellpadding="4">
+<tbody>
+<tr>
+<th>Code Example 2.7-B—Self-Documenting Code</th>
+</tr>
+<tr>
+<td>
+<pre><code>class Potato {
+   public:
+      explicit Potato (double weightInOunces)
+		    : weight (weightInOunces) {
+      }
+
+      double getWeightInOunces () const {
+         return weightInOunces;
+      }
+
+      void setWeight (double weightInOunces) {
+         this-&gt;weightInOunces = weightInOunces;
+      }
+
+   private:
+      double weightInOunces;
+};</code></pre>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Example 2.2-A is not particularly bad code; it's just less effective and expressive than it could be. It's also harder to maintain than the counter example in example 2.2-B. If your code looks like 2.2-A, it might be that you're following a rote method too much. It's far too easy to write code like a machine—not actively questioning things, but writing them the same every time. The unnecessary constructors, destructor, and operator are an excellent example of this practice. Don't write code like a machine; let the machine on which you write code do that. Remember that the compiler itself will generate default implementations of the copy constructor, default constructor, assignment operator, and destructor, so you needn't define them unless you have special needs.</p>
+<p>You'll notice in example 2.2-B that a first-class concept is missing. When you don't have time to spend on the analysis needed to create a first-class concept, at least document clearly the concepts that are not first-class. This is especially important with flat information like a string for the time, a double for weight, or an integer for length. All of these can have their formatting information clearly encoded in the name, as in the <code>weightInOunces</code> attribute in example 2.2-B. Note, of course, that in the long term a <code>Weight</code> class that could convert to and from many units would be best.</p>
+<p>Remember that documenting in code rather than comments is not an issue of preference, but of safety. Not only can comments be misread (or not read at all), but you can't always place them in every possible place that needs disambiguation. A client who decides to call the <code>getWeight</code> method in example 2.7-A will not necessarily see the comment in the header. On the client's end, there should be a comment right above the call to<code> getWeight,</code>stating that the weight will be in ounces. By encoding the units into the name, you document the value returned from <code>getWeight</code> absolutely.</p>
+<p>&nbsp;</p>
+<h2>A note about garbage collection (C++11)</h2>
+<h3>Garbage collection interface</h3>
+<p>"Garbage collection" (GC) refers to the automatic recycling of unreferenced regions of memory. One point people mention as a negative about C++ in comparison to other languages (e.g., C#) is the lack of GC and the effort required to manage memory yourself.</p>
+<p>Garbage collection, though, comes with its own issues. For one thing, it only frees up memory. Other types of resources can also be leaked: file handles, thread handles, locks, etc. -- so you still have to manage those somehow. There's also uncertainty about exactly when the collector will run and when will memory be freed.</p>
+<p>The standard library provides many tools that will manage memory and other resources for you: std::string (instead of raw character arrays), container classes like std::vector, and -- particularly in C++ -- the smart pointers std::unique_ptr and std::shared_ptr. Using these tools correctly will prevent resource leaks and eliminate the need for GC.</p>
+<p>Maybe, though, you find yourself dealing with a large amount of legacy code that uses normal unadorned C++ pointers, and potentially leaks memory. There are GC implementations available for C and C++ (free and commercial) that can be used to detect leaks and/or reclaim unreferenced memory, but they are not widely used -- in part because they have lacked support in the language standard. C++11 begins to address this by defining an Application Binary Interface (ABI) and some rules for what a collector can do if one is used.</p>
+<p>The C++ philosophy is really to prevent leaks rather than clean up after them, so for that reason garbage collection is entirely optional. No GC will run unless it is explicitly installed and activated, and a collector is not a required part of a standard C++ implementation.</p>
+  
+</div>
+<div style=""><div class="module-sequence-padding"></div>
+<div class="module-sequence-footer" role="navigation" aria-label="Module Navigation">
+  <div class="module-sequence-footer-content">
+    
+      <a href="https://canvas.uw.edu/courses/1205169/modules/items/8253612" role="button" class="Button module-sequence-footer-button--previous" data-tooltip="right" data-html-tooltip-title="&lt;i class=&#39;icon-document&#39;&gt;&lt;/i&gt; Lesson Two, Part 2: Choosing a Collection That Fits" aria-describedby="msf0-previous-desc">
+        <i class="icon-mini-arrow-left"></i>Previous
+        <span id="msf0-previous-desc" class="hidden" hidden="">Previous: Lesson Two, Part 2: Choosing a Collection That Fits</span>
+      </a>
+    
+
+    
+      <span class="module-sequence-footer-button--next" data-tooltip="left" data-html-tooltip-title="&lt;i class=&#39;icon-discussion&#39;&gt;&lt;/i&gt; Discussion of Lesson 2 and Assignment 2">
+        <a href="https://canvas.uw.edu/courses/1205169/modules/items/8253614" role="button" class="Button" aria-describedby="msf0-next-desc">
+          Next<i class="icon-mini-arrow-right"></i>
+          <span id="msf0-next-desc" class="hidden" hidden="">Next: Discussion of Lesson 2 and Assignment 2</span>
+        </a>
+      </span>
+    
+  </div>
+</div>
+</div></div>
+
+          </div>
+        </div>
+        <div id="right-side-wrapper" class="ic-app-main-content__secondary">
+          <aside id="right-side" role="complementary">
+            
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <div style="display:none;"><!-- Everything inside of this should always stay hidden -->
+        <div id="page_view_id">de8ac3cd-52e2-41e8-8419-7dabd7184911</div>
+    </div>
+  <div id="aria_alerts" class="hide-text affix" role="alert" aria-live="assertive"></div>
+  <div id="StudentTray__Container"></div>
+  
+
+<script>
+  INST = {"environment":"production","allowMediaComments":true,"kalturaSettings":{"domain":"nv.instructuremedia.com","resource_domain":"nv.instructuremedia.com","rtmp_domain":"fms-prod.instructuremedia.com","partner_id":"9","subpartner_id":"0","player_ui_conf":"0","kcw_ui_conf":"0","upload_ui_conf":"0","max_file_size_bytes":534773760,"do_analytics":false,"hide_rte_button":false,"js_uploader":true},"googleAnalyticsAccount":"UA-9138420-1","logPageViews":true,"maxVisibleEditorButtons":3,"editorButtons":[{"name":"","id":21130,"url":"https://uw.hosted.panopto.com/Panopto/Pages/Sessions/embeddedupload.aspx","icon_url":"https://uw.hosted.panopto.com/Panopto/images/panopto_logo_globe.png","canvas_icon_class":null,"width":900,"height":700},{"name":"Modalis","id":52765,"url":"https://uw.modalis.io/lti","icon_url":"https://uw.modalis.io/assets/richicon.png","canvas_icon_class":null,"width":800,"height":600}]};
+  ENV = {"ASSET_HOST":"https://du11hjcvx0uqb.cloudfront.net","active_brand_config_json_url":"https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/171115bc27094614cfdd1485c405a438/variables-750d72b9d3e5d522f965bf904110c132.json","url_to_what_gets_loaded_inside_the_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/171115bc27094614cfdd1485c405a438/variables-750d72b9d3e5d522f965bf904110c132.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_normal_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-302920e513.css"],"url_for_high_contrast_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/default/variables-high_contrast-750d72b9d3e5d522f965bf904110c132.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_high_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-cc24cb95a6.css"],"current_user_id":"3757111","current_user_roles":["user","student"],"current_user_disabled_inbox":false,"files_domain":"cluster10-files.instructure.com","DOMAIN_ROOT_ACCOUNT_ID":100000000083919,"k12":false,"use_responsive_layout":false,"help_link_name":"Help","help_link_icon":"help","use_high_contrast":false,"LTI_LAUNCH_FRAME_ALLOWANCES":["geolocation *","microphone *","camera *","midi *","encrypted-media *"],"SETTINGS":{"open_registration":false,"eportfolios_enabled":true,"collapse_global_nav":true,"show_feedback_link":true,"enable_profiles":true},"current_user":{"id":"3757111","display_name":"Clayton Wong","avatar_image_url":"https://canvas.uw.edu/images/thumbnails/46487823/mSs2TjTESYscSzrackhgoJvAT79xbNchamHPrSec","html_url":"https://canvas.uw.edu/about/3757111"},"page_view_update_url":"/page_views/de8ac3cd-52e2-41e8-8419-7dabd7184911?page_view_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpIjoiZGU4YWMzY2QtNTJlMi00MWU4LTg0MTktN2RhYmQ3MTg0OTExIiwidSI6MTAwMDAwMDAzNzU3MTExLCJjIjoiMjAxOC0wNy0zMFQyMjoyMzoxMS4wMloifQ.TXOCbSsS7hERE7mB27lOut1IxS4jfh5xSRLm_47fUHw","context_asset_string":"course_1205169","ping_url":"https://canvas.uw.edu/api/v1/courses/1205169/ping","TIMEZONE":"America/Los_Angeles","CONTEXT_TIMEZONE":"America/Los_Angeles","LOCALE":"en","BIGEASY_LOCALE":"en_US","FULLCALENDAR_LOCALE":"en","MOMENT_LOCALE":"en","WIKI_RIGHTS":{"read":true},"PAGE_RIGHTS":{"read":true},"DEFAULT_EDITING_ROLES":"teachers","WIKI_PAGES_PATH":"/courses/1205169/pages","WIKI_PAGE":{"title":"Lesson Two, Part 3: Simplifying XML File Format Support","created_at":"2018-03-16T21:50:45Z","url":"lesson-two-part-3-simplifying-xml-file-format-support","editing_roles":"teachers","page_id":"2704790","published":true,"hide_from_students":false,"front_page":false,"html_url":"https://canvas.uw.edu/courses/1205169/pages/lesson-two-part-3-simplifying-xml-file-format-support","updated_at":"2018-03-16T21:50:45Z","locked_for_user":false,"body":"\u003cp\u003eIn Lesson One, we failed to look in much detail at the design of our XML file format support. Though we did examine some implementation tools, particularly the \u003ccode\u003eeat\u003c/code\u003e and \u003ccode\u003etrim\u003c/code\u003e algorithms, the design was mostly left open. However you chose to support the XML file format in Lesson One's assignment, there are probably a few major improvements you can make by recognizing a few first-class concepts you may have missed, and making your code more idiomatic.\u003c/p\u003e\r\n\u003ch2\u003eRecognizing Missing First-Class Concepts\u003c/h2\u003e\r\n\u003cdiv class=\"keytermBox\"\u003e\r\n\u003ch6\u003eKey Terms\u003c/h6\u003e\r\n\u003cul\u003e\r\n\u003cli\u003efirst-class concept\u003c/li\u003e\r\n\u003cli\u003esecond-class concept\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003c/div\u003e\r\n\u003cp\u003eA \u003cspan class=\"keyterm\"\u003efirst-class concept\u003c/span\u003e is a concept that is represented in a system in a well-defined manner—basically, represented as a class. \u003cspan class=\"keyterm\"\u003eSecond-class concepts \u003c/span\u003eare those that pervade in a system but are never defined or not consistently used. For example, if you had a system that referred to the concept\u003cspan class=\"italics\"\u003e TIME \u003c/span\u003e often, with methods such as \u003ccode\u003egetTime\u003c/code\u003e that returned a string, \"TIME\" would be a second-class concept. If the system created a \u003ccode\u003eTime\u003c/code\u003e class and \u003ccode\u003egetTime\u003c/code\u003e returned an instance of that class, \"TIME\" would be a first class concept.\u003c/p\u003e\r\n\u003cp\u003eTime classes are the norm in most C++ courses, so the difference between using and not using a class to represent time might not seem that clear. If we fail to use a \u003ccode\u003eTime\u003c/code\u003e class, then we flatten the structured concept of time (hours, minutes, seconds, and so forth) into, perhaps, nothing more than a string. This means that clients of our class that returns time as a string might have to introduce complicated parsing code to get the information they want—as they may want only the hour or the time in European format. This might sound similar to our discussion in Lesson One about translation and making software that's closer to the way we think; in many ways, it's the same fundamental issue.\u003c/p\u003e\r\n\u003cp\u003eMissing first-class concepts are not always minor concepts; in some cases, they can be paramount. In many cases, the missing first-class concepts are at the extremes: the most minor and most major of concepts are those that are most often missed. Those in between tend to somehow be more prominent. I will share with you a personal story about a missing first-class concept in a large project. This project was an application (and the frameworks that formed over time beneath it) in the scientific domain that worked with external hardware to perform precise temperature measurement. It also had the change case to eventually deal with control systems (for example, controlling the temperature or humidity in an experimental chamber).\u003c/p\u003e\r\n\u003cp\u003eMost of the issues in the development of the application seemed to revolve in and around what behavior the client expected and what features were needed for plotting, logging, and overall keeping track of temperatures, humidity, and so forth over a period of time. These plots and logs had to be able to be started and stopped, configured, and saved. On top of this, the hardware often had to be configured before many of the plots and logs would be started. For example, if someone were to perform an experiment that used only three of sixteen temperature sensors and needed absolute precision over speed, they'd configure the hardware, start the plotting and logging, go perform their experiment while watching the live plotting, and return to the console to stop things.\u003c/p\u003e\r\n\u003cp\u003eThe system ended up having a lot of autonomous features that needed synchronization, which made it complex to use. Yet, everyone, including the users and the client, seemed to agree the design was fine and there was little to be improved upon. The application performed the tasks it needed to, and in a way that was still far better than some of the applications that existed at the time.\u003c/p\u003e\r\n\u003cp\u003eWhat changed the application to be truly innovative was that the developers realized at one point that Experiment was completely unrepresented. Not only was there no \u003ccode\u003eExperiment\u003c/code\u003e class, there was no mention of an experiment in most of the documentation and in the user interface. How could the developers, client, and users have missed such a concept? It seemed the whole application should have been built upon the idea of an experiment from the beginning—maybe even calling the workspace a \"laboratory.\" The list of benefits seemed to be endless; and as soon as the concept was introduced, a thousand puzzle pieces just seemed to fall into place. Suddenly, the application changed to be experiment-oriented; users both authored and ran experiments—two separate processes. We realized that experiments could even be scripted in a manner that allowed us to run them like an interactive movie, telling us what to do next and waiting for our response that we had finished that step before moving on to the next scene.\u003c/p\u003e\r\n\u003cp\u003eThis story is an excellent case of a missing major first-class concept and its later recognition. What's interesting here is that it's not uncommon to miss the fundamental concept that binds the entire system. Since the experience of the missing \u003ccode\u003eExperiment \u003c/code\u003eclass, I've seen many similar situations, especially as systems evolve. In the beginning they might perform a few discreet and useful tasks, but as they grow, there's usually something more central than autonomous tasks—some goal in mind.\u003c/p\u003e\r\n\u003cp\u003eWhether your design is missing something as simple as a \u003ccode\u003eTime\u003c/code\u003e class or as involved as an \u003ccode\u003eExperiment\u003c/code\u003e class, taking the time to make more concepts first-class is usually an easy way to improve any design. Because of time constraints and limitations of focus, you can't always take this advice to the extreme. Keeping notes on what could be changed, and then changing and re-analyzing when a convenient time arises is an excellent habit.\u003c/p\u003e\r\n\u003cp\u003eSince our XML parsing in Lesson One was effectively without a design, no matter how you implemented it you might have missed a few concepts that should be first-class. The first of these is the concept of an Element. Certainly, if you did not create this class, probably somewhere in your code you refer to the concept of an element, and maybe even have a method like \u003ccode\u003egetElementChildren\u003c/code\u003e or some other method with Element in the name. Any concept consistently named in methods but without a class should raise a red flag for you.\u003c/p\u003e\r\n\u003cp\u003eOne of the other potentially missed concepts is that of an attribute. This one is nearly always missed because the concept is so common and natural that few people would think to make a class for it (a \u003ccode\u003eWeight\u003c/code\u003e class is another often missed class). Instead, you may have used loosely associated strings for \u003ccode\u003eattributeName\u003c/code\u003e and \u003ccode\u003eattributeValue\u003c/code\u003e. Making attribute a class provides a good location to centralize all attribute parsing and, in the future, value conversion code. It also might one day have more sophisticated features of type checking—to ensure, for example, that only integers are given for the \u003ccode\u003ex\u003c/code\u003e attribute in our \u003ccode\u003ePoint\u003c/code\u003e element.\u003c/p\u003e\r\n\u003ch2\u003eCreating the XML Element Class\u003c/h2\u003e\r\n\u003cp\u003eThe\u003ccode\u003e Attribute\u003c/code\u003e class is trivially defined, but the \u003ccode\u003eElement\u003c/code\u003e class might require a little more analysis. For our purposes, we can map the XML concept of an element fairly directly. This means an element can have any number of child elements and any number of attributes. The element also could be said to have a name (such as \"VectorGraphic\"), which defines what its begin and (if applicable) end tags will look like.\u003c/p\u003e\r\n\u003cp\u003eThe primary variance between different implementations of a class such as \u003ccode\u003eElement\u003c/code\u003e will be the choice of whether its implication should be as a value object or reference object, and the semantics of creating instances from a stream and persisting instances to a stream. The first of these methods is clearly a responsibility of the class, not the instance.\u003c/p\u003e\r\n\u003cp\u003eSince the elements' children will also be instances of the \u003ccode\u003eElement \u003c/code\u003eclass, it might seem like we have the composite pattern here. This is not the composite pattern, though, as we only have one class, \u003ccode\u003eElement\u003c/code\u003e, which inherently allows children. The composite pattern revolves around working with both composites and primitives, whereas, in our case, we only have composites.\u003c/p\u003e\r\n\u003cp\u003eIt's important to note that the XML Element is working from a low-level view. It allows fairly free insertion of attributes, children, and so forth, and doesn't attempt to check whether this is valid in your particular XML scheme. It's important when developing frameworks that you keep in mind your level of abstraction. Low-level frameworks can be as useful as high-level ones—it's just the lower-level frameworks are primarily used by the higher-level ones, and only the highest-level ones ever reach the user or most developers. What's important in developing any layer or framework is that you don't violate your level of abstraction. Pick a level and stick with it. When you have a new concept that would be useful that's at another level, put it in the proper framework for that level and make sure it fits with the overall design of that level. This describes the layered approach to software development, which is in use fairly ubiquitously, as it tends to naturally occur over time.\u003c/p\u003e\r\n\u003ch2\u003eFollowing Appropriate Naming Guidelines\u003c/h2\u003e\r\n\u003cp\u003eIn this course and in \u003cspan class=\"italics\"\u003eC++\u003c/span\u003e:\u003cspan class=\"italics\"\u003e Intermediate,\u003c/span\u003e we use a consistent naming style. At its foundation is the UML standard, which specifies that objects and methods should be of the form \"alternatingCase,\" whereas classes should be of the form \"UpperCase.\" We suggest you follow this standard, with the addition of using \"lower_case\" for incomplete classes (templates). The repercussions of these guidelines are outlined in the list below.\u003c/p\u003e\r\n\u003cul\u003e\r\n\u003cli\u003eClasses (Types)—Use \u003ccode\u003eClassName\u003c/code\u003e. View C++ as a purely object-oriented language in this respect. An enum is no different than a class, and should not be named differently. Doing so reveals implementation details, as it's completely feasible to use classes to implement the equivalent of an \u003ccode\u003eenum\u003c/code\u003e. In C++, this naming style will be inconsistent in the isolated case of primitive types (which will already be lowercase), but no conflicts should arise from this problem.\u003c/li\u003e\r\n\u003cli\u003eObjects—Use \u003ccode\u003eobjectName\u003c/code\u003e, and remember that all entities in your code are classes, objects, or methods. To continue with our\u003ccode\u003e enum\u003c/code\u003e example, the \"values\" of an \u003ccode\u003eenum\u003c/code\u003e are objects (instances of the \u003ccode\u003eenum\u003c/code\u003e class).\u003c/li\u003e\r\n\u003cli\u003eMethods (and Functions)—use \u003ccode\u003emethodName\u003c/code\u003e. These use the same naming syntax as objects, for consistency. Objects and methods with the same name will not conflict because it is suggested that methods are always verb phrases. Even if verb phrases are not used, objects and methods with the same name will not conflict as easily as objects and classes or methods and classes with the same names. A class followed by parenthesis can even be confused for a method if verb phrases are not used. C++ has several instances of just this problem (\u003ccode\u003emem_fun\u003c/code\u003e is a method, whereas \u003ccode\u003emem_fun_t\u003c/code\u003e is a class, which is inconsistent with other classes that are named without the affixed \u003ccode\u003et\u003c/code\u003e, such as \u003ccode\u003eistream\u003c/code\u003e) that could have been resolved by making all classes \u003ccode\u003eUpperCase\u003c/code\u003e.\u003c/li\u003e\r\n\u003cli\u003eIncomplete Classes (Templates)—use \u003ccode\u003eincomplete_class_name\u003c/code\u003e. Also, try always to complete template classes via a typedef before using, as in the examples throughout this course. When you complete an incomplete class, it becomes \u003ccode\u003eUpperCase\u003c/code\u003e, of course.\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003cp\u003eBesides the UML guidelines, here are a few other guidelines.\u003c/p\u003e\r\n\u003cdiv class=\"infoBox\"\u003e\r\n\u003cp\u003e\"Hungarian syntax\" was developed by Charles Simonyi from Microsoft and was named by him and/or others at Microsoft as \"hungarian notation\" or \"hungarian syntax.\" It has been published and termed that in numerous books.\u003c/p\u003e\r\n\u003c/div\u003e\r\n\u003cul\u003e\r\n\u003cli\u003eMake methods verb phrases, and objects and classes noun phrases.\u003c/li\u003e\r\n\u003cli\u003eAvoid generic suffixes such as \u003ccode\u003eDevice\u003c/code\u003e, \u003ccode\u003eObject\u003c/code\u003e, \u003ccode\u003eClass\u003c/code\u003e, \u003ccode\u003eType\u003c/code\u003e, and \u003ccode\u003eManager\u003c/code\u003e. These give little or no information about the entity in question.\u003c/li\u003e\r\n\u003cli\u003eAvoid naming objects as \"anObject\" or \"theObject.\" In most cases, the article (a/an/the) provides no additional information over just \"object.\"\u003c/li\u003e\r\n\u003cli\u003eAvoid catch-all names such as \"new,\" \"temp,\" and \"in.\"\u003c/li\u003e\r\n\u003cli\u003eAvoid overly generic names. For example, \"size\" could mean length, width, or weight.\u003c/li\u003e\r\n\u003cli\u003eAvoid encoding type information in objects. This is commonly referred to as \"hungarian syntax,\" and has been proven to be a large maintenance burden because it reveals unnecessary information. For example, calling an end-of-line character constant \u003ccode\u003eccEndOfLine\u003c/code\u003e to indicate \"constant character\" is discouraged.\u003c/li\u003e\r\n\u003cli\u003eAvoid using two similar concepts, when possible. For example, using the terms \u003ccode\u003eEnvironment\u003c/code\u003e and \u003ccode\u003eHabitat\u003c/code\u003e in the same system might be confusing to users, especially if the differences between the two are not clear and consistent.\u003c/li\u003e\r\n\u003cli\u003eAvoid redundancies between attributes, methods, and their respective classes. This can be referred to as the \u003ccode\u003eCar::carTire\u003c/code\u003e syndrome; in a \u003ccode\u003eCar\u003c/code\u003e class, it's completely obvious we're referring to a car tire and not a tractor tire if we have an attribute named \"tire.\" This problem can also create issues with future subtyping. Consider a \u003ccode\u003eList::getListSize \u003c/code\u003emethod. If we later subtype this class, \u003ccode\u003egetListSize\u003c/code\u003e might be a less appropriate name than \u003ccode\u003egetSize\u003c/code\u003e.\u003c/li\u003e\r\n\u003cli\u003eOnly use abbreviations when absolutely necessary. Widely accepted acronyms, such as \"HTML\" and \"RGB\" are reasonable. Creating your own acronyms such as \"EVN\" for \"Employee Verification Number\" are not reasonable (once again, unless they're widely accepted in the domain). Non-acronym abbreviations are less-commonly acceptable; \"emp\" for employee or \"str\" for string are harder to maintain and understand than \"employee\" and \"string\" (the latter probably being too generic in most cases).\u003c/li\u003e\r\n\u003cli\u003eAvoid single-letter names. In a point class, \"x\" is certainly reasonable, but \"h\" for hour in a \u003ccode\u003eTime\u003c/code\u003e class is not. Don't forget about this rule when working with template parameters, which are unfortunately often named as single characters in older template libraries (though this is rapidly changing in newer standard library implementations).\u003c/li\u003e\r\n\u003cli\u003eAvoid creating names that reveal implementation details.\u003c/li\u003e\r\n\u003cli\u003eMake sure your names are accurate. For example, do not create a copy constructor with a signature such as (\u003ccode\u003e\"Employee Employee const\u0026amp; copy.\"\u003c/code\u003e) What we really mean in this case is \u003ccode\u003e\"Employee (Employee const\u0026amp; original).\"\u003c/code\u003e\n\u003c/li\u003e\r\n\u003cli\u003eCreate constants for number, character, and string literals. Comments are neither sufficient nor maintainable in documenting the origin of a number in 99 percent of cases. For example, prefer \u003ccode\u003e\"int const daysInYear = 365;\"\u003c/code\u003e to \u003ccode\u003e\"365\"\u003c/code\u003e polluting the entire code. (Note that this is more of a case of writing self-documenting code).\u003c/li\u003e\r\n\u003cli\u003eDistinguish the various roles of classes (but not objects) by role-based type prefixes, as covered in \u003cspan class=\"italics\"\u003eC++\u003c/span\u003e:\u003cspan class=\"italics\"\u003e Intermediate \u003c/span\u003eand reviewed below:\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003cp\u003eIn chapter 24 of \u003ccite\u003eThe C++ Programming Language\u003c/cite\u003e, some of the more common roles of classes are described in detail. These are the roles of \u003ccode\u003einterface\u003c/code\u003e,\u003ccode\u003e abstract\u003c/code\u003e, \u003ccode\u003econcrete\u003c/code\u003e, \u003ccode\u003eoperation\u003c/code\u003e, and \u003ccode\u003ehandle\u003c/code\u003e. A role-based type naming syntax simply encodes the role information as the first character, as in the examples below.\u003c/p\u003e\r\n\u003cul\u003e\r\n\u003cli\u003e\n\u003ccode\u003eICar\u003c/code\u003e—the pure interface for a car.\u003c/li\u003e\r\n\u003cli\u003e\n\u003ccode\u003eACar\u003c/code\u003e—an abstract \"base implementation\" of a car that provides some implementation, but is neither complete nor instantiable.\u003c/li\u003e\r\n\u003cli\u003e\n\u003ccode\u003eCCivic\u003c/code\u003e—a concrete Civic class, which is instantiable. Often, for the sake of brevity, it's advisable to make \u003ccode\u003eC\u003c/code\u003e be the default if no type prefix is specified.\u003c/li\u003e\r\n\u003cli\u003e\n\u003ccode\u003eOCompare\u003c/code\u003e—a comparator class that overloads the function call operator.\u003c/li\u003e\r\n\u003cli\u003e\n\u003ccode\u003eHStudent\u003c/code\u003e—a handle to a student pointer (sometimes referred to as a smart pointer).\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003ch2\u003eWriting Self-Documenting Code\u003c/h2\u003e\r\n\u003cp\u003eUsing appropriate naming, writing self-documenting code, and making efforts to spot missing first-class concepts will greatly improve the quality and maintainability of your code. All of these practices are interrelated, and so you will certainly see patterns emerge in this advice.\u003c/p\u003e\r\n\u003cp\u003eComments were especially necessary back in the days of languages like FORTRAN because it wasn't possible to write self-documenting code. In FORTRAN, all variables had to be only two characters, so comments were necessary even in the simplest of programs. Despite the greater expressiveness of modern languages, some older schools of thought still emphasize the importance of extensive documentation in the source files .\u003c/p\u003e\r\n\u003cp\u003eWhat these schools of thought can be missing is that \u003cspan class=\"bold\"\u003ethe code is the language\u003c/span\u003e. It is a means of communication with the reader just as much as it is a means of communication with the computer. The newest of code-centric development paradigms, Extreme Programming (XP) has embraced this idea. The XP paradigm might be at the forefront of comment-free code, but many other modern texts preach similar approaches, to varying degrees. The XP paradigm takes the view that documentation is an indication that the code is incomplete, incorrect, or less than ideal in one way or another. The goal, then, is to use as little documentation as possible.\u003c/p\u003e\r\n\u003cp\u003eThe keyword here is \"possible.\" What this advice assumes is that you have the good taste to know when code is incomplete or unclear without comments. At this point in your C++ career, you should have just this ability. To refine it, practice using self-documenting code and removing all redundant or unnecessary comment in your submissions.\u003c/p\u003e\r\n\u003cp\u003eLet's take a look at the changes possible in code from simply not stating what doesn't need to be stated and stating what does need to be stated in code, not documentation. In the example 2.7-A below, unnecessary comments abound and even unnecessary methods are defined.\u003c/p\u003e\r\n\u003ctable style=\"width: 480px;\" border=\"0\" cellspacing=\"10\" cellpadding=\"4\"\u003e\r\n\u003ctbody\u003e\r\n\u003ctr\u003e\r\n\u003cth\u003eCode Example 2.7-A—Comment Documented Code\u003c/th\u003e\r\n\u003c/tr\u003e\r\n\u003ctr\u003e\r\n\u003ctd\u003e\r\n\u003cpre\u003e\u003ccode\u003eclass Potato {\r\n   public:\r\n      // Constructor\r\n      explicit Potato (double weight) : weight (weight) {\r\n      }\r\n\r\n      // Copy constructor\r\n      Potato (Potato const\u0026amp; original)\r\n         : weight (original.weight) {\r\n      }\r\n\r\n      // Destructor\r\n      ~Potato () {\r\n      }\r\n\r\n      // Assignment operator\r\n      Potato\u0026amp; operator= (Potato const\u0026amp; original) {\r\n         if (this != \u0026amp;original) {\r\n            setWeight (original.getWeight ());\r\n         }\r\n         return *this;\r\n      }\r\n\r\n      // Get weight (in ounces)\r\n      double getWeight () const {\r\n         return weight;\r\n      }\r\n\r\n      // Set weight (in ounces)\r\n      void setWeight (double weight) {\r\n         this-\u0026gt;weight = weight;\r\n      }\r\n\r\n   private:\r\n      double weight;\r\n};\r\n\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/td\u003e\r\n\u003c/tr\u003e\r\n\u003c/tbody\u003e\r\n\u003c/table\u003e\r\n\u003ctable style=\"width: 480px;\" border=\"0\" cellspacing=\"10\" cellpadding=\"4\"\u003e\r\n\u003ctbody\u003e\r\n\u003ctr\u003e\r\n\u003cth\u003eCode Example 2.7-B—Self-Documenting Code\u003c/th\u003e\r\n\u003c/tr\u003e\r\n\u003ctr\u003e\r\n\u003ctd\u003e\r\n\u003cpre\u003e\u003ccode\u003eclass Potato {\r\n   public:\r\n      explicit Potato (double weightInOunces)\r\n\t\t    : weight (weightInOunces) {\r\n      }\r\n\r\n      double getWeightInOunces () const {\r\n         return weightInOunces;\r\n      }\r\n\r\n      void setWeight (double weightInOunces) {\r\n         this-\u0026gt;weightInOunces = weightInOunces;\r\n      }\r\n\r\n   private:\r\n      double weightInOunces;\r\n};\u003c/code\u003e\u003c/pre\u003e\r\n\u003c/td\u003e\r\n\u003c/tr\u003e\r\n\u003c/tbody\u003e\r\n\u003c/table\u003e\r\n\u003cp\u003eExample 2.2-A is not particularly bad code; it's just less effective and expressive than it could be. It's also harder to maintain than the counter example in example 2.2-B. If your code looks like 2.2-A, it might be that you're following a rote method too much. It's far too easy to write code like a machine—not actively questioning things, but writing them the same every time. The unnecessary constructors, destructor, and operator are an excellent example of this practice. Don't write code like a machine; let the machine on which you write code do that. Remember that the compiler itself will generate default implementations of the copy constructor, default constructor, assignment operator, and destructor, so you needn't define them unless you have special needs.\u003c/p\u003e\r\n\u003cp\u003eYou'll notice in example 2.2-B that a first-class concept is missing. When you don't have time to spend on the analysis needed to create a first-class concept, at least document clearly the concepts that are not first-class. This is especially important with flat information like a string for the time, a double for weight, or an integer for length. All of these can have their formatting information clearly encoded in the name, as in the \u003ccode\u003eweightInOunces\u003c/code\u003e attribute in example 2.2-B. Note, of course, that in the long term a \u003ccode\u003eWeight\u003c/code\u003e class that could convert to and from many units would be best.\u003c/p\u003e\r\n\u003cp\u003eRemember that documenting in code rather than comments is not an issue of preference, but of safety. Not only can comments be misread (or not read at all), but you can't always place them in every possible place that needs disambiguation. A client who decides to call the \u003ccode\u003egetWeight\u003c/code\u003e method in example 2.7-A will not necessarily see the comment in the header. On the client's end, there should be a comment right above the call to\u003ccode\u003e getWeight,\u003c/code\u003estating that the weight will be in ounces. By encoding the units into the name, you document the value returned from \u003ccode\u003egetWeight\u003c/code\u003e absolutely.\u003c/p\u003e\r\n\u003cp\u003e \u003c/p\u003e\r\n\u003ch2\u003eA note about garbage collection (C++11)\u003c/h2\u003e\r\n\u003ch3\u003eGarbage collection interface\u003c/h3\u003e\r\n\u003cp\u003e\"Garbage collection\" (GC) refers to the automatic recycling of unreferenced regions of memory. One point people mention as a negative about C++ in comparison to other languages (e.g., C#) is the lack of GC and the effort required to manage memory yourself.\u003c/p\u003e\r\n\u003cp\u003eGarbage collection, though, comes with its own issues. For one thing, it only frees up memory. Other types of resources can also be leaked: file handles, thread handles, locks, etc. -- so you still have to manage those somehow. There's also uncertainty about exactly when the collector will run and when will memory be freed.\u003c/p\u003e\r\n\u003cp\u003eThe standard library provides many tools that will manage memory and other resources for you: std::string (instead of raw character arrays), container classes like std::vector, and -- particularly in C++ -- the smart pointers std::unique_ptr and std::shared_ptr. Using these tools correctly will prevent resource leaks and eliminate the need for GC.\u003c/p\u003e\r\n\u003cp\u003eMaybe, though, you find yourself dealing with a large amount of legacy code that uses normal unadorned C++ pointers, and potentially leaks memory. There are GC implementations available for C and C++ (free and commercial) that can be used to detect leaks and/or reclaim unreferenced memory, but they are not widely used -- in part because they have lacked support in the language standard. C++11 begins to address this by defining an Application Binary Interface (ABI) and some rules for what a collector can do if one is used.\u003c/p\u003e\r\n\u003cp\u003eThe C++ philosophy is really to prevent leaks rather than clean up after them, so for that reason garbage collection is entirely optional. No GC will run unless it is explicitly installed and activated, and a collector is not a required part of a standard C++ implementation.\u003c/p\u003e"},"WIKI_PAGE_REVISION":"1","WIKI_PAGE_SHOW_PATH":"/courses/1205169/pages/lesson-two-part-3-simplifying-xml-file-format-support","WIKI_PAGE_EDIT_PATH":"/courses/1205169/pages/lesson-two-part-3-simplifying-xml-file-format-support/edit","WIKI_PAGE_HISTORY_PATH":"/courses/1205169/pages/lesson-two-part-3-simplifying-xml-file-format-support/revisions","COURSE_ID":"1205169","MODULES_PATH":"/courses/1205169/modules","wiki_page_menu_tools":[],"DISPLAY_SHOW_ALL_LINK":false,"badge_counts":{"submissions":0},"notices":[]};
+</script>
+
+<script src="./Lesson Two, Part 3_ Simplifying XML File Format Support_files/navigation_header.bundle-d10139d096.js" defer="defer"></script>
+<script src="./Lesson Two, Part 3_ Simplifying XML File Format Support_files/default.js" defer="defer"></script>
+<script src="./Lesson Two, Part 3_ Simplifying XML File Format Support_files/custom.js" defer="defer"></script>
+
+</div> <!-- #application -->
+
+
+<div id="nav-tray-portal" style="position: relative; z-index: 99;"></div></body></html>

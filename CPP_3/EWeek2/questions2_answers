@@ -1,0 +1,122 @@
+re-Submit some basic changes....  I went through your solution.  Awesome code!  I know I need to significantly refactor my solution.  Mainly SceneWriter, XmlWriter, and Element classes need major changes.  My Element class has multiple responsibilities and high-coupling with TinyXML2.  I'm hoping you could help to provide some advice for how to begin refactoring efforts, and if there is a strategy way that I can make piecemeal changes?  Or am I better off the scraping entire modules and start over from scratch?  In general I realize all the mistakes I made, now I'm hoping to get advice for how to fix it in an effective manner.  Thanks!!
+Clayton Wong , Aug 7 at 2:47pm
+
+
+
+
+Element
+-------
+* Large amount of public functions. If you wanted to treat this class as a structure, then there is way too much in here. If you wanted this class to parse (beyond structure), which is what you did, then you needed more units to segregate out the public methods you are defining. Overall, this could have been encapsulated into different units, or simplified internally into more private parts. I suspect the make_ functions could have been privatized.
+* You don't need to return const types. The caller is free to assign the return value of a function to a mutable type. Therefore, const returns don't have value.
+* Prefer const lvalue references to values for returns. The latter forces a copy while the former allows the caller to decide whether they want a reference or a copy. This is especially important here considering you are dealing with large objects (containers) that don't always require a copy.
+* make_HElement - line 99: Don't declare variables inside loop control blocks.
+* make_HElement - line 99: Use descriptive variables instead of 'i'.
+* getName - line 119: You don't have to create a temporary std::string and return it, you can simply return the char pointer as it will bind to an std::string.
+
+-- Design input -- not part of the grade --
+* getAttributes: Every call to this function will have you iterate through the XML structure and create the map. This is really expensive and could have been avoid if you create the map once and reference a const lvalue reference to it. The only time you should have iterated through the XML structure (to update the map) is performs when there was a modification to it which you needed to reflect.
+* getChildElements: Similar as above. In my opinion, your structure should have been created and filled once and the XML structure should only have been iterated through once. Re-iteration would have occured on updates.
+
+Layer
+-----
+* Missing rule-of-5.
+* addGraphic: could have benefited from an rvalue reference overload.
+
+PlacedGraphic
+-------------
+* PlacedGraphic - rvalue reference constructor: You are not calling std::move on the argument, therefore resulting in a copy.
+* setGraphic - rvalue reference overload: You are not calling std::move on the argument, therefore resulting in a copy.
+* setPlacementPoint - You are not calling std::move on the argument, therefore resulting in a copy.
+* VG::Point: Prefer returning by const lvalue reference over value. See reasoning above.
+* getGraphic: Prefer returning the std::shared_ptr next time instead of the internal pointer. This is why you use smart pointers in the first place; to ensure and enforce ownership of a pointer. By dereferencing a pointer and returning a referece to the caller, the caller is free to abuse it. Also, the caller loses any notion of ownership. The only time you should dereference a smart pointer is when you absolute need to and as a last resort (maybe because you need to interface with a C-style API, etc).
+
+Scene
+-----
+* Missing rule-of-5.
+* pushBack - rvalue reference: This "works" however there are technical and semantical issues. std::forward should only be used for universal (templated) references. You do not use templates, therefore this is the wrong tool. You should have called std::move because you know you are dealing with rvalue references. On the technical side, std::forward has additional logical complexity embedded into compared to std::move because it needs to conditionally cast as opposed to unconditionally cast. This is a heavier solution for a problem you didn't have.
+* remove: could have been implemented in one-line just by calling std::list::remove.
+
+SceneReader
+-----------
+* Good implementation but try to be conscious about what is implementation-detail (and needs to be marked private) and what isn't.
+
+XmlReader
+---------
+* Clean, simple implementation.
+
+SceneWriter
+-----------
+* Good implementation.
+
+XmlWriter
+---------
+* std::setw() would have been a better choice for formatting the stream than writeLeadingWhitespace(). The implementation is also cryptic and uses magic numbers that needed to be described or stored in constants. Either way, avoid.
+* writeXmlNodeHead - line 38: Prefer structured binding (C++17).
+
+UML Diagram
+-----------
+* Please provide a computer-generated image next time. There are many free tools that will do this for you. See plantUML for example (there are others).
+* XmlReader, SceneReader, and Element are not connected components.
+* Missing components (such as SceneWriter/XmlWriter)
+
+Tests
+-----
+* Missing XMLWriter automated tests.
+* Added some test for the structural classes but missing important ones regard Element parsing and the rest of the XML persistence set of classes.
+Daniel Sebastian Iliescu , Aug 14 at 6:04pm
+
+
+
+
+
+I graded your first submission. Your second submission was late by a really long time and you had a chance to look at the solution. If the instructor wants to give you points for that submission but take off a few for being late, that is up to him.
+Daniel Sebastian Iliescu , Aug 14 at 6:08pm
+
+
+
+
+
+Graded question 1: Return by const lvalue reference
+Answer: This comment was mostly intended for your methods that did return a copy of your member variables (see PlacedGraphic::getPlacementPoint). This could have been a const lvalue reference. With regards to Element, you are correct that this isn't applicable since you are depending on RVO with stack objects. Feel free to ignore that comment. When I made it, I graded the header first and made assumptions and forgot to re-visit them. The point still stands for PlacedGraphic.
+
+Regarding your second question, at the caller site, the caller decides if they want a reference or a copy during assignment.
+
+For example, given the following:
+
+const T& get();
+
+The caller would assign it as follow: auto value = get()
+
+In this case value will be of type T. Therefore, a new T object gets created with the const lvalue reference copy assignment operator.
+
+If the caller wants a reference: const auto& value = get()
+
+Here, we don't create a new T and as a result we don't need to call the copy assignment operator. A reference gets stored into a reference. It is important to note that auto will deduce pointers but not references.
+
+Graded question 2: Both your constructor and member functions are incorrect. Namely, the third constructor, PlacedGraphic::setPlacementPoint and PlacedGraphic::setGraphic. When you have these types of arguments, you need to still call std::move on them. Although you have used rvalue-reference *semantics* in your arguments (that is, you passed rvalues to these functions), by the time they make their way into the function, they become lvalues. Anything that has a name (storage) is an lvalue. For example, given:
+
+void process(Type&& argument)
+{
+    Type value_by_copy = argument;
+    Type value_by_copy_again = argument;
+    Type value_by_move = std::move(argument);
+    Type do_not_use_me_again = argument; // Run-time error
+}
+
+The type of argument is an rvalue reference to a "Type". However, "argument" itself is an lvalue of that type. This is why you can do the things you can in the function defined above.
+
+Graded question 3/4: I'm not sure I understand. The guideline is simply: Avoid returning an rvalue reference unless your return type is an rvalue reference. Maybe if you rephrase your question, I could better answer it.
+Daniel Sebastian Iliescu , Aug 16 at 11:33am
+
+
+
+
+After re-reading your question 3 and 4, I able to provide answers.
+
+Graded question 3: I did not remove a point for the derefencing of the shared_ptr. I actually left many comments that did not lead to point removal. I left nitpicky comments that I didn't deduct points for. If you look at the rubric, you got 2/2 for the usage of smart pointers.
+
+Graded question 4: As far as I am aware, the grading of the assignments for students is independent of whatever hypothetical grade the solution would have received. I will let the instructor clarify this if need be but the solution also needed the rule-of-5 if that was missing.
+
+Graded question 5: You don't make private methods or implementation-detail methods public for the purpose of unit test. Don't declare friend classes either. Only test the public interface. The public interface calls your private methods, so you shouldn't need to test those independently. If you feel like you need more granularity in testing, then the class should have been split in separate units (and those unit's public interfaces should have been tested).
+
+Graded question 6: I didn't write the solution. I will delegate this question to the instructor.

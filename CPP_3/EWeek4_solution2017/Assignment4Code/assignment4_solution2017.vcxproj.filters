@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Bitmap.cpp" />
+    <ClCompile Include="BitmapIterator.cpp" />
+    <ClCompile Include="BitmapIteratorDecorator.cpp" />
+    <ClCompile Include="BrightnessDecorator.cpp" />
+    <ClCompile Include="CodecLibrary.cpp" />
+    <ClCompile Include="Color.cpp" />
+    <ClCompile Include="ColorInversionDecorator.cpp" />
+    <ClCompile Include="MandelbrotFractalBitmapIterator.cpp" />
+    <ClCompile Include="MandlebrotFractalDecoder.cpp" />
+    <ClCompile Include="WindowsBitmapDecoder.cpp" />
+    <ClCompile Include="WindowsBitmapEncoder.cpp" />
+    <ClCompile Include="WindowsBitmapHeader.cpp" />
+    <ClCompile Include="..\UnitTest\BitmapEncodeDecodeTests.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\UnitTest\CodecLibraryTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\UnitTest\ColorTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\UnitTest\Main.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\UnitTest\narrow_castTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\UnitTest\ranged_numberTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\UnitTest\VerifyEqualityTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\UnitTest\WindowsBitmapHeaderTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="binary_ostream_iterator.h" />
+    <ClInclude Include="Bitmap.h" />
+    <ClInclude Include="BitmapIterator.h" />
+    <ClInclude Include="BitmapIteratorDecorator.h" />
+    <ClInclude Include="BrightnessDecorator.h" />
+    <ClInclude Include="Byte.h" />
+    <ClInclude Include="CodecLibrary.h" />
+    <ClInclude Include="Color.h" />
+    <ClInclude Include="ColorInversionDecorator.h" />
+    <ClInclude Include="DoubleWord.h" />
+    <ClInclude Include="IBitmapDecoder.h" />
+    <ClInclude Include="IBitmapEncoder.h" />
+    <ClInclude Include="IBitmapIterator.h" />
+    <ClInclude Include="MandelbrotFractalBitmapIterator.h" />
+    <ClInclude Include="MandelbrotFractalDecoder.h" />
+    <ClInclude Include="narrow_cast.h" />
+    <ClInclude Include="ranged_number.h" />
+    <ClInclude Include="SizedWord.h" />
+    <ClInclude Include="VerifyEquality.h" />
+    <ClInclude Include="WindowsBitmapCommon.h" />
+    <ClInclude Include="WindowsBitmapDecoder.h" />
+    <ClInclude Include="WindowsBitmapEncoder.h" />
+    <ClInclude Include="WindowsBitmapHeader.h" />
+    <ClInclude Include="Word.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Tests">
+      <UniqueIdentifier>{c6221eae-6469-45a2-8973-9dc8c9d1fb44}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
